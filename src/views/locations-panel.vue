@@ -1,5 +1,5 @@
 <template lang="pug">
-nn-scroll-area(color="royal-purple")
+.capsule
   nn-row.row-block
     nn-column(size="100%")
       legend {{ $t('canvas.section.map.panel.locations.legend') }}
@@ -25,7 +25,7 @@ nn-scroll-area(color="royal-purple")
 
 <script lang="ts">
 import Vue from "vue";
-import {locationsDBList} from "../modules/format-db";
+import { locationsDBList } from "../modules/format-db";
 
 export default Vue.extend({
   data: () => ({

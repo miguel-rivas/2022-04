@@ -1,6 +1,6 @@
 <template lang="pug">
 nn-scroll-area(color="royal-purple")
-  nn-container(size="1450")
+  nn-container(size="1450", spacing="4")
     article.nano-box
       h1 {{ $t('projects.section.statistics.workarea.yearlyAverage') }}
       br

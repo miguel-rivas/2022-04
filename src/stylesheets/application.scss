@@ -172,14 +172,6 @@ main {
 
 .nano-app {
   .btn.flat.btn {
-    &-react {
-      &,
-      &:hover {
-        background-color: hsl(200deg 50% 50%);
-        color: hsl(200deg 50% 10%);
-        box-shadow: 0px 3px 0 hsl(200deg 50% 25%);
-      }
-    }
     &-vue {
       &,
       &:hover {
@@ -212,7 +204,7 @@ main {
 
 /*------------------------*/
 
-.nano-row {
+nn-row {
   &.palette {
     .shade {
       height: 35px;
@@ -226,7 +218,7 @@ main {
         opacity: 0.8;
       }
     }
-    .column {
+    nn-column {
       padding: 0.25rem;
     }
   }
@@ -234,17 +226,17 @@ main {
 
 /*------------------------*/
 
-.nano-row {
+nn-row {
   &.nano-slider.nano-group.integrated {
     border: transparent;
-    > .column {
+    > nn-column {
       > input[type="range"] {
         padding: 0.5rem;
         width: 100%;
         background: var(--color-background-input);
       }
     }
-    > .column:last-child {
+    > nn-column:last-child {
       > input {
         padding-right: 0.25rem;
         text-align: center;
@@ -254,7 +246,7 @@ main {
 
   &.nano-slider-alt.nano-group {
     border: transparent;
-    > .column {
+    > nn-column {
       > input[type="range"] {
         padding: 0.5rem;
         width: 100%;
@@ -273,7 +265,7 @@ main {
 
 /*------------------------*/
 
-.nano-row {
+nn-row {
   &.list-palette {
     border: 1px solid var(--color-border) !important;
     .input-label {

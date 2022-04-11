@@ -7,7 +7,6 @@
       <nn-column
         class="panel"
         :size="panel ? panelSize[0] : '0'"
-        :class="{ 'hide-panel': !panel }"
       >
         <router-view name="panel" />
       </nn-column>

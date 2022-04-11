@@ -1,5 +1,5 @@
 <template lang="pug">
-div
+.capsule
   nn-row.row-block
     nn-column(size="100%")
       legend {{ $t('three.panel.controller.legend') }}

@@ -1,6 +1,6 @@
 <template>
   <div class="gallery" v-if="database.length > 0">
-    <nn-container size="1450">
+    <nn-container size="1450" spacing="4">
       <template v-for="(project, projectIndex) in database">
         <article v-bind:key="projectIndex" class="nano-box">
           <nn-row :spacing="100" breakpoint="lg">

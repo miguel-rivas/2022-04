@@ -1,5 +1,5 @@
 <template lang="pug">
-nn-scroll-area(color="royal-purple")
+.capsule
   nn-row.row-block
     nn-column(size="100%")
       legend {{ $t('galleries.section.images.panel.controller.legend') }}

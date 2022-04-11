@@ -36,11 +36,11 @@
       height: 100%;
     }
 
-    .scroll-area {
+    nn-scroll-area {
       height: 100%;
     }
 
-    .column:last-child {
+    nn-column:last-child {
       > .btn.flat {
         &:last-child {
           margin-bottom: 0;
@@ -50,7 +50,7 @@
   }
 
   .router-area {
-    > .column {
+    > nn-column {
       height: 100vh;
     }
   }
@@ -60,18 +60,15 @@
     background: var(--color-panel-details-background);
     border-right: 1px solid var(--color-panel-border-separator);
 
-    .scroll-area {
+    nn-scroll-area {
       padding-top: 1rem;
       padding-bottom: 1rem;
       overflow-x: hidden;
     }
 
-    fieldset {
+    .row-block {
       border-radius: 5px;
       border: 1px solid var(--color-border);
-    }
-
-    .row-block {
       opacity: 1;
       margin: 0 1rem 1rem;
       padding: 1rem;
@@ -110,7 +107,7 @@
       width: 100%;
     }
 
-    &.hide-panel {
+    &.w0 {
       border-right: 0;
     }
   }

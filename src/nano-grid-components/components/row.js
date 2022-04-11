@@ -23,14 +23,13 @@ export default class Row extends HTMLElement {
     const spacing = this.getAttribute('spacing') ? validateSpacing(this.getAttribute('spacing')) : '';
 
     const classes = prepairClasses([
-      'nano-row',
       group,
       breakpoint,
       spacing,
       integrated,
       vertical,
       grid,
-      this.className,
+      this.className || '',
     ]);
     this.className = classes;
 

@@ -30,7 +30,7 @@
 .table {
   > .table-head,
   > .table-body {
-    > .nano-row {
+    > nn-row {
       &:last-child {
         margin-bottom: 0;
       }
@@ -38,8 +38,8 @@
   }
 
   > .table-head {
-    > .nano-row {
-      > .column {
+    > nn-row {
+      > nn-column {
         text-transform: uppercase;
         font-weight: 300;
         padding: 0.25rem 1rem;
@@ -48,13 +48,13 @@
     }
   }
   > .table-body {
-    > .nano-row {
+    > nn-row {
       background-color: var(--color-table-background);
       transition: background-color ease-in-out 200ms;
       &:hover {
         background-color: var(--color-table-background-hover);
       }
-      > .column {
+      > nn-column {
         padding: 0.5rem 1rem;
         
         &.controllers {

@@ -1,5 +1,5 @@
 <template lang="pug">
-div
+.capsule
   nn-row.row-block.row-block(
     v-if="selection.currentLink.src === ''",
   )

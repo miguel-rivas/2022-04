@@ -6,11 +6,12 @@ export default class Container extends HTMLElement {
   }
 
   connectedCallback() {
-    const computedClasses = this.hasAttribute('size') ? `sz${this.getAttribute('size')}` : undefined;
+    const size = this.hasAttribute('size') ? `sz${this.getAttribute('size')}` : undefined;
+    const spacing = this.hasAttribute('spacing') ? `sp${+this.getAttribute('spacing') * 100}` : undefined;
 
     const classes = prepairClasses([
-      'container',
-      computedClasses,
+      size,
+      spacing,
       this.className,
     ]);
 

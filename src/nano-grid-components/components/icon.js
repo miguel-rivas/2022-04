@@ -11,7 +11,6 @@ export default class Icon extends HTMLElement {
     const direction = this.hasAttribute('direction') ? this.getAttribute('direction') : 'down';
 
     const classes = prepairClasses([
-      'icon',
       color,
       glyph,
       direction,

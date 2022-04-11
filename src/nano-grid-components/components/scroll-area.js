@@ -11,7 +11,6 @@ export default class ScrollArea extends HTMLElement {
     let horizontal = this.getAttribute('horizontal') === 'false' ? 'no-horizontal' : '';
 
     let classes = prepairClasses([
-      'scroll-area',
       color,
       vertical,
       horizontal,

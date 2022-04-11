@@ -1,5 +1,5 @@
 <template lang="pug">
-nn-scroll-area(color="royal-purple")
+.capsule
   nn-container
     ul.img-gallery
       template(v-for="(item, itemIndex) in videosDB")
