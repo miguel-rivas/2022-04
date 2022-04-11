@@ -1,25 +1,26 @@
 <template lang="pug">
 nn-scroll-area(color="royal-purple")
   nn-container
-    .img-gallery
+    ul.img-gallery
       template(v-for="(item, itemIndex) in videosDB")
-        nn-row.item(vertical, v-bind:key="`gallery${itemIndex}`")
-          nn-column
-            video(:width="item.width", :height="item.height", controls)
-              source(:src="item.url", type="video/mp4")
-              | Your browser does not support the video tag.
-          nn-column
-            .nano-shade-box
-              toggle-row.toggle-input(breakpoint="lg")
-                template(v-slot:header)
-                  nn-column(size="100%-35")
-                    h2 {{ item.title }}
-                template(v-slot:more)
-                  nn-column(size="100%", table-element)
-                    ul.skills
-                      template(v-for="(skill, skillIndex) in item.skills")
-                        li(v-bind:key="`gallerySkill${itemIndex}${skillIndex}`") {{ skill }}
-              p: small Soundtrack: {{ item.soundtrack.artist }} - {{ item.soundtrack.song }}
+        li.item(v-bind:key="`gallery${itemIndex}`")
+          nn-row(vertical)
+            nn-column
+              video(:width="item.width", :height="item.height", controls)
+                source(:src="item.url", type="video/mp4")
+                | Your browser does not support the video tag.
+            nn-column
+              .nano-shade-box
+                toggle-row.toggle-input(breakpoint="lg")
+                  template(v-slot:header)
+                    nn-column(size="100%-35")
+                      h2 {{ item.title }}
+                  template(v-slot:more)
+                    nn-column(size="100%", table-element)
+                      ul.skills
+                        template(v-for="(skill, skillIndex) in item.skills")
+                          li(v-bind:key="`gallerySkill${itemIndex}${skillIndex}`") {{ skill }}
+                p: small Soundtrack: {{ item.soundtrack.artist }} - {{ item.soundtrack.song }}
 </template>
 
 <script lang="ts">
