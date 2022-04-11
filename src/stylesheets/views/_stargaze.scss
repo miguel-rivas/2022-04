@@ -1,0 +1,90 @@
+main.section-stargazer {
+  .nano-app {
+    .cover,
+    .three-scene {
+      position: absolute;
+    }
+    .three-scene {
+      z-index: 1;
+    }
+    .stargaze {
+      height: 100%;
+      position: relative;
+      background-image: url("../img/stars.svg");
+      background-repeat: repeat;
+      background-position-x: center;
+      background-position-y: 0;
+      animation: stargaze linear 10s infinite;
+    }
+    footer {
+      position: absolute;
+      bottom: 1rem;
+      text-align: center;
+      width: 100%;
+      p {
+        font-size: 10px;
+        letter-spacing: 1px;
+        font-weight: 600;
+        a {
+          color: #41b883;
+          text-decoration: none;
+        }
+      }
+    }
+    .cover {
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 40vh;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-flow: column;
+      text-align: center;
+      overflow: hidden;
+
+      h1 {
+        font-size: 70px;
+        font-weight: 300;
+      }
+      
+      h2 {
+        font-size: 25px;
+        font-weight: 400;
+      }
+      
+      h1,
+      h2 {
+        line-height: 1;
+        color: #fff;
+        text-transform: uppercase;
+        margin: 0;
+      }
+    }
+    svg {
+      min-width: 100%;
+      position: fixed;
+      bottom: 0;
+
+      g {
+        transform: translate(0, -675px);
+
+        path {
+          transition: 600ms ease transform;
+        }
+      }
+    }
+  }
+}
+
+@keyframes stargaze {
+  from {
+    background-position-y: 500px;
+    background-position-x: 0;
+  }
+  to {
+    background-position-y: 0;
+    background-position-x: 500px;
+  }
+}
