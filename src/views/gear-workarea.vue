@@ -1,5 +1,5 @@
 <template lang="pug">
-scroll-area(color="royal-purple")
+nn-scroll-area(color="royal-purple")
   canvas.animation-rotate(ref="gear", width="400", height="400")
     | no canvas
 </template>

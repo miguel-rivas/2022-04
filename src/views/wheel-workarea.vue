@@ -1,5 +1,5 @@
 <template lang="pug">
-scroll-area(color="royal-purple")
+nn-scroll-area(color="royal-purple")
   pie-chart(:chart-data="selection.colors")
 </template>
 

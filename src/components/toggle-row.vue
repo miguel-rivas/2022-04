@@ -1,7 +1,7 @@
 <template>
-  <t-row :breakpoint="breakpoint">
+  <nn-row table-element :breakpoint="breakpoint">
     <slot name="header"/>
-    <t-column size="35" class="controllers">
+    <nn-column table-element size="35" class="controllers">
       <btn
         glyph="chevron"
         :direction="showData ? 'up' : 'down'"
@@ -11,11 +11,11 @@
         title="Toggle row button"
         tag="a"
       />
-    </t-column>
+    </nn-column>
     <template v-if="showData">
       <slot name="more"/>
     </template>
-  </t-row>
+  </nn-row>
 </template>
 
 <script lang="ts">

@@ -1,11 +1,11 @@
 <template>
-  <row>
-    <column size="100%" v-if="label">
+  <nn-row>
+    <nn-column size="100%" v-if="label">
       <label v-html="label" />
-    </column>
-    <column size="100%">
-      <row group>
-        <column mode="prefix" size="35">
+    </nn-column>
+    <nn-column size="100%">
+      <nn-row group>
+        <nn-column mode="prefix" size="35">
           <btn
             @click="decrease()"
             size="md"
@@ -13,11 +13,11 @@
             color="gravel"
             title="Decrease button"
           />
-        </column>
-        <column size="100%-35*2">
+        </nn-column>
+        <nn-column size="100%-35*2">
           <p class="input-label" v-html="val" />
-        </column>
-        <column mode="suffix" size="35">
+        </nn-column>
+        <nn-column mode="suffix" size="35">
           <btn
             @click="increase()"
             size="md"
@@ -25,10 +25,10 @@
             color="gravel"
             title="Increase button"
           />
-        </column>
-      </row>
-    </column>
-  </row>
+        </nn-column>
+      </nn-row>
+    </nn-column>
+  </nn-row>
 </template>
 
 <script>

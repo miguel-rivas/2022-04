@@ -1,9 +1,9 @@
 <template lang="pug">
-row.alert.fixed(:class="alert.status", v-if="alert.message !== ''")
-  column(size="100%-35") {{ alert.message }}
-  column(size="35")
+nn-row.alert.fixed(:class="alert.status", v-if="alert.message !== ''")
+  nn-column(size="100%-35") {{ alert.message }}
+  nn-column(size="35")
     button.close-btn(@click="closeAlert()")
-      icon(glyph="close")
+      nn-icon(glyph="close")
 </template>
 
 <script lang="ts">

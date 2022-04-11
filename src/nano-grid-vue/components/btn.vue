@@ -8,7 +8,7 @@
     :title="computedLabel"
     @click.passive="$emit('click', $event)"
   >
-    <icon v-if="glyph !== ''" :glyph="glyph" :direction="iconDirection" />
+    <nn-icon v-if="glyph !== ''" :glyph="glyph" :direction="iconDirection" />
     <span class="caption" v-if="text">
       {{ text }}
     </span>
@@ -17,11 +17,9 @@
 
 <script lang="ts">
 import Vue from "vue";
-import Icon from "./icon.vue";
 import { colorsType, directionsType } from "../modules/types.js";
 
 export default Vue.extend({
-  components: { Icon },
   props: {
     tag: {
       type: String,

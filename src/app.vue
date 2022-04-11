@@ -1,18 +1,18 @@
 <template>
   <main class="vue-theme" :class="classes">
     <alert />
-    <row class="nano-app">
+    <nn-row class="nano-app">
       <panel-navigation />
 
-      <column
+      <nn-column
         class="panel"
         :size="panel ? panelSize[0] : '0'"
         :class="{ 'hide-panel': !panel }"
       >
         <router-view name="panel" />
-      </column>
+      </nn-column>
 
-      <column size="0" class="panel-bar">
+      <nn-column size="0" class="panel-bar">
         <btn
           class="panel-ctrl"
           title="Toggle panel button"
@@ -20,12 +20,12 @@
           :direction="panel ? 'left' : 'right'"
           @click="toggleValue('panel'), playSound()"
         />
-      </column>
+      </nn-column>
 
-      <column :size="panel ? panelSize[1] : '100%-50'" class="workarea">
+      <nn-column :size="panel ? panelSize[1] : '100%-50'" class="workarea">
         <router-view name="workarea" />
-      </column>
-    </row>
+      </nn-column>
+    </nn-row>
   </main>
 </template>
 

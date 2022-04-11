@@ -1,12 +1,12 @@
 <template lang="pug">
-scroll-area(color="royal-purple")
-  container(size="900")
+nn-scroll-area(color="royal-purple")
+  nn-container(size="900")
     section.nano-box
       h1 {{ $t('ui.section.gridGallery.workarea.fractions') }}
       template(v-for="(columns, indexRow) in rowsFractions")
-        row(v-bind:key="`indexRowF${indexRow}`")
+        nn-row(v-bind:key="`indexRowF${indexRow}`")
           template(v-for="(column, indexColumn) in columns")
-            column(
+            nn-column(
               :size="column",
               v-bind:key="`indexColumnF${indexRow}-${indexColumn}`"
             )
@@ -17,12 +17,12 @@ scroll-area(color="royal-purple")
               )
     section.nano-box
       h1 {{ $t('ui.section.gridGallery.workarea.percents') }}
-      row.alert.warning
-        column(size="100%") {{ $t('ui.section.gridGallery.workarea.percentsAlert') }}
+      nn-row.alert.warning
+        nn-column(size="100%") {{ $t('ui.section.gridGallery.workarea.percentsAlert') }}
       template(v-for="(columns, indexRow) in rowsPercents")
-        row(v-bind:key="`indexRowP${indexRow}`")
+        nn-row(v-bind:key="`indexRowP${indexRow}`")
           template(v-for="(column, indexColumn) in columns")
-            column(
+            nn-column(
               :size="column",
               v-bind:key="`indexColumnP${indexRow}-${indexColumn}`"
             )
@@ -34,12 +34,12 @@ scroll-area(color="royal-purple")
 
     section.nano-box
       h1 {{ $t('ui.section.gridGallery.workarea.absolutes') }}
-      row.alert.warning
-        column(size="100%") {{ $t('ui.section.gridGallery.workarea.absolutesAlert') }}
+      nn-row.alert.warning
+        nn-column(size="100%") {{ $t('ui.section.gridGallery.workarea.absolutesAlert') }}
       template(v-for="(columns, indexRow) in rowsAbsolutes")
-        row(v-bind:key="`indexRowA${indexRow}`")
+        nn-row(v-bind:key="`indexRowA${indexRow}`")
           template(v-for="(column, indexColumn) in columns")
-            column(
+            nn-column(
               :size="column",
               v-bind:key="`indexColumnA${indexRow}-${indexColumn}`"
             )
@@ -51,12 +51,12 @@ scroll-area(color="royal-purple")
 
     section.nano-box
       h1 {{ $t('ui.section.gridGallery.workarea.formulas') }}
-      row.alert.warning
-        column(size="100%") {{ $t('ui.section.gridGallery.workarea.formulasAlert') }}
+      nn-row.alert.warning
+        nn-column(size="100%") {{ $t('ui.section.gridGallery.workarea.formulasAlert') }}
       template(v-for="(columns, indexRow) in formulas")
-        row(v-bind:key="`indexRowFx${indexRow}`")
+        nn-row(v-bind:key="`indexRowFx${indexRow}`")
           template(v-for="(column, indexColumn) in columns")
-            column(
+            nn-column(
               :size="column",
               v-bind:key="`indexColumnFx${indexRow}-${indexColumn}`"
             )
@@ -68,14 +68,14 @@ scroll-area(color="royal-purple")
 
     section.nano-box
       h1 {{ $t('ui.section.gridGallery.workarea.heightFractions') }}
-      row.alert.warning
-        column(size="100%") {{ $t('ui.section.gridGallery.workarea.heightFractionsAlert') }}
-      row(grid)
+      nn-row.alert.warning
+        nn-column(size="100%") {{ $t('ui.section.gridGallery.workarea.heightFractionsAlert') }}
+      nn-row(grid)
         template(v-for="(columns, indexRow) in rowsHeightVH")
-          column.fheight(size="1/5")
-            row(v-bind:key="`indexRowHF${indexRow}`")
+          nn-column.fheight(size="1/5")
+            nn-row(v-bind:key="`indexRowHF${indexRow}`")
               template(v-for="(column, indexColumn) in columns")
-                column(
+                nn-column(
                   :size="column",
                   v-bind:key="`indexColumnHF${indexRow}-${indexColumn}`"
                 )
@@ -87,14 +87,14 @@ scroll-area(color="royal-purple")
 
     section.nano-box
       h1 {{ $t('ui.section.gridGallery.workarea.heightPercents') }}
-      row.alert.warning
-        column(size="100%") {{ $t('ui.section.gridGallery.workarea.heightPercentsAlert') }}
-      row(grid)
+      nn-row.alert.warning
+        nn-column(size="100%") {{ $t('ui.section.gridGallery.workarea.heightPercentsAlert') }}
+      nn-row(grid)
         template(v-for="(columns, indexRow) in rowsHeightPercents")
-          column.fheight(size="1/5")
-            row(v-bind:key="`indexRowHF${indexRow}`")
+          nn-column.fheight(size="1/5")
+            nn-row(v-bind:key="`indexRowHF${indexRow}`")
               template(v-for="(column, indexColumn) in columns")
-                column(
+                nn-column(
                   :size="column",
                   v-bind:key="`indexColumnHF${indexRow}-${indexColumn}`"
                 )
@@ -106,14 +106,14 @@ scroll-area(color="royal-purple")
 
     section.nano-box
       h1 {{ $t('ui.section.gridGallery.workarea.heightAbsolute') }}
-      row.alert.warning
-        column(size="100%") {{ $t('ui.section.gridGallery.workarea.heightAbsoluteAlert') }}
-      row(grid)
+      nn-row.alert.warning
+        nn-column(size="100%") {{ $t('ui.section.gridGallery.workarea.heightAbsoluteAlert') }}
+      nn-row(grid)
         template(v-for="(columns, indexRow) in rowsHeightAbsolutes")
-          column.fheight(size="1/5")
-            row(v-bind:key="`indexRowHF${indexRow}`")
+          nn-column.fheight(size="1/5")
+            nn-row(v-bind:key="`indexRowHF${indexRow}`")
               template(v-for="(column, indexColumn) in columns")
-                column(
+                nn-column(
                   :size="column",
                   v-bind:key="`indexColumnHF${indexRow}-${indexColumn}`"
                 )

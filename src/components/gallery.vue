@@ -1,10 +1,10 @@
 <template>
   <div class="gallery" v-if="database.length > 0">
-    <container size="1450">
+    <nn-container size="1450">
       <template v-for="(project, projectIndex) in database">
         <article v-bind:key="projectIndex" class="nano-box">
-          <row :spacing="100" breakpoint="lg">
-            <column size="60%">
+          <nn-row :spacing="100" breakpoint="lg">
+            <nn-column size="60%">
               <template>
                 <img
                   width="1050"
@@ -13,9 +13,9 @@
                   :alt="`${project.clients.join(' & ')} ${project.turingDate}`"
                 />
               </template>
-            </column>
-            <column size="40%">
-              <scroll-area color="royal-purple">
+            </nn-column>
+            <nn-column size="40%">
+              <nn-scroll-area color="royal-purple">
                 <h1 v-html="project.clients.join(' & ')" />
                 <ul class="summary">
                   <template v-if="project.group">
@@ -72,15 +72,15 @@
                     </ul>
                   </li>
                 </ul>
-              </scroll-area>
-            </column>
-          </row>
+              </nn-scroll-area>
+            </nn-column>
+          </nn-row>
         </article>
       </template>
-    </container>
+    </nn-container>
   </div>
   <div v-else class="loading">
-    <icon glyph="duck" />
+    <nn-icon glyph="duck" />
     <p v-html="'Loading Projects'" />
   </div>
 </template>

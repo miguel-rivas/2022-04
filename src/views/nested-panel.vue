@@ -1,15 +1,15 @@
 <template lang="pug">
-scroll-area(color="royal-purple")
-  row.row-block(tag="fieldset")
-    column(size="100%")
+nn-scroll-area(color="royal-purple")
+  nn-row.row-block
+    nn-column(size="100%")
       legend {{$t(panelTitle)}}
-      row
-        column(size="100%")
+      nn-row
+        nn-column(size="100%")
           ul.summary
             template(v-for="(route, routeIndex) in links")
               li(v-bind:key="routeIndex")
-                row
-                  column(size="35")
+                nn-row
+                  nn-column(size="35")
                     btn(
                       tag="span",
                       mode="flat"
@@ -17,7 +17,7 @@ scroll-area(color="royal-purple")
                       :glyph="route.icon",
                       :to="route"
                     )
-                  column(size="100%-35")
+                  nn-column(size="100%-35")
                     btn(
                       tag="span",
                       color="gravel"

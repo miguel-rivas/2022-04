@@ -1,6 +1,6 @@
 <template>
-  <row tag="fieldset" class="row-block">
-    <column size="100%">
+  <nn-row class="row-block">
+    <nn-column size="100%">
       <legend>
         {{
           getColumnSize({
@@ -33,14 +33,14 @@
         </small>
       </legend>
 
-      <row>
-        <column size="100%">
+      <nn-row>
+        <nn-column size="100%">
           <label class="btn flat charcoal" :class="{ active: absoluteWidth }">
             {{ $t("ui.section.gridBuilder.panel.columnStyle.absoluteWidth") }}
             <input type="checkbox" v-model="absoluteWidth" />
           </label>
-        </column>
-      </row>
+        </nn-column>
+      </nn-row>
 
       <slider
         v-if="absoluteWidth"
@@ -54,15 +54,15 @@
       />
 
       <template v-else>
-        <row>
-          <column size="100%">
+        <nn-row>
+          <nn-column size="100%">
             <label :for="`id-${name}-width`">{{
               $t("ui.section.gridBuilder.panel.columnStyle.width")
             }}</label>
-          </column>
-          <column size="100%">
-            <row class="nano-slider-alt" group>
-              <column size="100%">
+          </nn-column>
+          <nn-column size="100%">
+            <nn-row class="nano-slider-alt" group>
+              <nn-column size="100%">
                 <input
                   :id="`id-${name}-width`"
                   type="range"
@@ -72,8 +72,8 @@
                   step="1"
                   v-model="selection.columns[index].width"
                 />
-              </column>
-              <column size="55%">
+              </nn-column>
+              <nn-column size="55%">
                 <p class="input-label">
                   {{ getWidth(selection.columns[index].width).fraction }}
                   <span v-if="getWidth(selection.columns[index].width).percent">
@@ -82,10 +82,10 @@
                     }}
                   </span>
                 </p>
-              </column>
-            </row>
-          </column>
-        </row>
+              </nn-column>
+            </nn-row>
+          </nn-column>
+        </nn-row>
 
         <slider
           :id="`id-${name}-subtraction`"
@@ -100,14 +100,14 @@
         />
       </template>
 
-      <row>
-        <column size="100%">
+      <nn-row>
+        <nn-column size="100%">
           <label class="btn flat charcoal" :class="{ active: absoluteHeight }">
             {{ $t("ui.section.gridBuilder.panel.columnStyle.absoluteHeight") }}
             <input type="checkbox" v-model="absoluteHeight" />
           </label>
-        </column>
-      </row>
+        </nn-column>
+      </nn-row>
 
       <slider
         v-if="absoluteHeight"
@@ -120,15 +120,15 @@
         :value="selection.columns[index].height"
       />
 
-      <row v-else>
-        <column size="100%">
+      <nn-row v-else>
+        <nn-column size="100%">
           <label :for="`id-${name}-height`">{{
             $t("ui.section.gridBuilder.panel.columnStyle.height")
           }}</label>
-        </column>
-        <column size="100%">
-          <row class="nano-slider-alt" group>
-            <column size="100%">
+        </nn-column>
+        <nn-column size="100%">
+          <nn-row class="nano-slider-alt" group>
+            <nn-column size="100%">
               <input
                 :id="`id-${name}-height`"
                 type="range"
@@ -138,8 +138,8 @@
                 step="1"
                 v-model="selection.columns[index].height"
               />
-            </column>
-            <column size="55%">
+            </nn-column>
+            <nn-column size="55%">
               <p class="input-label">
                 {{ getHeight(selection.columns[index].height).fraction }}
                 <span v-if="getHeight(selection.columns[index].height).percent">
@@ -148,22 +148,22 @@
                   }}
                 </span>
               </p>
-            </column>
-          </row>
-        </column>
-      </row>
+            </nn-column>
+          </nn-row>
+        </nn-column>
+      </nn-row>
 
-      <row>
-        <column size="100%">
+      <nn-row>
+        <nn-column size="100%">
           <btn
             color="persian-red"
             :text="$t('ui.section.gridBuilder.panel.columnStyle.removeCTA')"
             @click="removeBlock()"
           />
-        </column>
-      </row>
-    </column>
-  </row>
+        </nn-column>
+      </nn-row>
+    </nn-column>
+  </nn-row>
 </template>
 
 <script lang="ts">

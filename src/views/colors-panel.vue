@@ -1,10 +1,10 @@
 <template lang="pug">
-scroll-area(color="royal-purple")
-  row.row-block(tag="fieldset")
-    column(size="100%")
+nn-scroll-area(color="royal-purple")
+  nn-row.row-block
+    nn-column(size="100%")
       legend {{ $t('ui.section.colors.panel.buttons.legend') }}
-      row
-        column(size="100%")
+      nn-row
+        nn-column(size="100%")
           ul.buttons
             template(v-for="(color, colorIndex) in gColorsDB")
               li(v-bind:key="colorIndex")

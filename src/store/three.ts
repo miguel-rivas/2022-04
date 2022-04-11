@@ -1,7 +1,7 @@
 export const threeState = {
-  grid: true,
+  grid: false,//true,
   sceneRotation: 3,
-  pause: false,
+  pause: true,//false,
   lines: false,
   bookletOpening: 0.25,
 };

@@ -1,8 +1,8 @@
 <template lang="pug">
-scroll-area(color="royal-purple")
-  container(size="900")
+nn-scroll-area(color="royal-purple")
+  nn-container(size="900")
     .builder-container
-      row(
+      nn-row(
         :group="selection.group",
         :integrated="computedIntegrated",
         :spacing="computedSpacing",
@@ -26,29 +26,29 @@ scroll-area(color="royal-purple")
 
     hr
 
-    row
-      column(size="1/1")
+    nn-row
+      nn-column(size="1/1")
         spirit(:text="htmlVue")
         textarea(ref="textareaHtml").vue-code {{ htmlVue }}
-      column(size="1/1")
+      nn-column(size="1/1")
         btn.fsz(glyph="html", :text="$t('ui.section.gridBuilder.workarea.html')", color="shamrock", @click="copyCode('textareaHtml')")
 
     br
 
-    row
-      column(size="1/1")
+    nn-row
+      nn-column(size="1/1")
         spirit(:text="hamlVue", lang="haml")
         textarea(ref="textareaHaml").vue-code {{ hamlVue }}
-      column(size="1/1")
+      nn-column(size="1/1")
         btn.fsz(glyph="haml", :text="$t('ui.section.gridBuilder.workarea.haml')", color="shamrock", @click="copyCode('textareaHaml')")
 
     br
 
-    row
-      column(size="1/1")
+    nn-row
+      nn-column(size="1/1")
         spirit(:text="pugVue", lang="pug")
         textarea(ref="textareaHaml").vue-code {{ pugVue }}
-      column(size="1/1")
+      nn-column(size="1/1")
         btn.fsz(glyph="pug", :text="$t('ui.section.gridBuilder.workarea.pug')", color="shamrock", @click="copyCode('textareaPug')")
 </template>
 
@@ -77,7 +77,7 @@ export default Vue.extend({
           columnSize.columnClass && columnSize.columnStyle ? " - " : ""
         }${columnSize.columnStyle}"/>\n  </${column.block}>\n`;
       });
-      let row = `<row${this.selection.group ? " nano-group" : ""}${
+      let row = `<nn-row${this.selection.group ? " nano-group" : ""}${
         this.computedvertical ? " vertical" : ""
       }${this.computedIntegrated ? " integrated" : ""}${
         this.computedBreakpoint !== ""
@@ -85,7 +85,7 @@ export default Vue.extend({
           : ""
       }${
         this.computedSpacing ? ' spacing="' + this.computedSpacing + '"' : ""
-      }>\n${columns}</row>`;
+      }>\n${columns}</nn-row>`;
       return row;
     },
     pugVue() {
@@ -104,7 +104,7 @@ export default Vue.extend({
           columnSize.columnClass && columnSize.columnStyle ? " - " : ""
         }${columnSize.columnStyle}")\n`;
       });
-      let row = `row(${this.selection.group ? "nano-group," : ""}${
+      let row = `nn-row(${this.selection.group ? "nano-group," : ""}${
         this.computedvertical ? "vertical," : ""
       }${this.computedIntegrated ? "integrated," : ""}${
         this.computedBreakpoint !== ""
@@ -131,7 +131,7 @@ export default Vue.extend({
           columnSize.columnClass && columnSize.columnStyle ? " - " : ""
         }${columnSize.columnStyle}"}\n`;
       });
-      let row = `%row{${this.selection.group ? "nano-group," : ""}${
+      let row = `%nn-row{${this.selection.group ? "nano-group," : ""}${
         this.computedvertical ? "vertical," : ""
       }${this.computedIntegrated ? "integrated," : ""}${
         this.computedBreakpoint !== ""

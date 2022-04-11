@@ -1,7 +1,7 @@
 <template lang="pug">
-scroll-area(color="royal-purple")
-  row.row-block(tag="fieldset")
-    column(size="100%")
+nn-scroll-area(color="royal-purple")
+  nn-row.row-block
+    nn-column(size="100%")
       legend {{ $t('stargaze.panel.controller.legend') }}
 
       slider#hue(

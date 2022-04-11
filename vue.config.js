@@ -6,7 +6,7 @@ module.exports = {
     port: 8022
   },
 
-  publicPath: process.env.NODE_ENV === 'production' ? '/2022/' : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/2022-04/' : '/',
 
   pluginOptions: {
     i18n: {

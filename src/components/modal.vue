@@ -6,18 +6,18 @@
         v-bind:style="{ width: `${width}px`, maxWidth: `100%` }"
       >
         <div class="modal-header">
-          <row>
-            <column size="100%-35">
+          <nn-row>
+            <nn-column size="100%-35">
               <slot name="header" />
-            </column>
-            <column size="35">
+            </nn-column>
+            <nn-column size="35">
               <btn color="persian-red" glyph="close" @click="closeModal" />
-            </column>
-          </row>
+            </nn-column>
+          </nn-row>
         </div>
-        <scroll-area color="royal-purple">
+        <nn-scroll-area color="royal-purple">
           <slot name="body" />
-        </scroll-area>
+        </nn-scroll-area>
         <div class="modal-footer">
           <btn color="gold-tips" :text="ctaCaption" @click="closeModal" />
         </div>

@@ -1,12 +1,12 @@
 <template lang="pug">
-scroll-area(color="royal-purple")
-  container
-    ul.img-gallery
+nn-scroll-area(color="royal-purple")
+  nn-container
+    .img-gallery
       template(v-for="(icon, iconIndex) in iconsDB")
-        row.icon-item.item(tag="li", v-bind:key="iconIndex")
-          column(size="100%, 150")
-            icon(:glyph="icon")
-          column(size="100%")
+        nn-row.icon-item.item(v-bind:key="iconIndex")
+          nn-column(size="100%, 150")
+            nn-icon(:glyph="icon")
+          nn-column(size="100%")
             h1(v-html="icon")
 </template>
 

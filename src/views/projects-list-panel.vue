@@ -1,17 +1,16 @@
 <template lang="pug">
 div
-  row.row-block.row-block(
+  nn-row.row-block.row-block(
     v-if="selection.currentLink.src === ''",
-    tag="fieldset"
   )
-    column(size="100%")
+    nn-column(size="100%")
       legend {{ $t('projects.section.list.panel.filter.legend') }}
 
-      row
-        column(size="100%")
+      nn-row
+        nn-column(size="100%")
           ul.summary
-            li: row
-              column(size="100%")
+            li: nn-row
+              nn-column(size="100%")
                 label.btn.flat.charcoal(
                   :class="{ active: selection.filterData == 'all' }"
                 )
@@ -23,8 +22,8 @@ div
                     v-model="selection.filterData"
                   )
 
-            li: row
-              column(size="100%")
+            li: nn-row
+              nn-column(size="100%")
                 label.btn.flat.charcoal(
                   :class="{ active: selection.filterData == 'companies' }"
                 )
@@ -36,8 +35,8 @@ div
                     v-model="selection.filterData"
                   )
 
-            li: row
-              column(size="100%")
+            li: nn-row
+              nn-column(size="100%")
                 label.btn.flat.charcoal(
                   :class="{ active: selection.filterData == 'projects' }"
                 )
@@ -49,8 +48,8 @@ div
                     v-model="selection.filterData"
                   )
 
-            li: row
-              column(size="100%")
+            li: nn-row
+              nn-column(size="100%")
                 label.btn.flat.charcoal(
                   :class="{ active: selection.filterData == 'experiments' }"
                 )
@@ -62,8 +61,8 @@ div
                     v-model="selection.filterData"
                   )
 
-            li: row
-              column(size="100%")
+            li: nn-row
+              nn-column(size="100%")
                 label.btn.flat.charcoal(
                   :class="{ active: selection.filterData == 'homework' }"
                 )
@@ -75,8 +74,8 @@ div
                     v-model="selection.filterData"
                   )
 
-  row.row-block(v-else, tag="fieldset")
-    column(size="100%")
+  nn-row.row-block(v-else)
+    nn-column(size="100%")
       btn(@click="closeProject()", color="persian-red", text="Close Project")
 </template>
 

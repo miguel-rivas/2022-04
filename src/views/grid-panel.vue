@@ -1,18 +1,18 @@
 <template lang="pug">
-scroll-area(color="royal-purple")
-  row.row-block(tag="fieldset")
-    column(size="100%")
+nn-scroll-area(color="royal-purple")
+  nn-row.row-block
+    nn-column(size="100%")
       legend {{ $t('ui.section.gridBuilder.panel.rowStyle.legend') }}
 
-      row
-        column(size="100%")
+      nn-row
+        nn-column(size="100%")
           label.btn.flat.charcoal(:class="{ active: selection.group }")
             | {{ $t('ui.section.gridBuilder.panel.rowStyle.group') }}
             input(type="checkbox", v-model="selection.group")
 
       template(v-if="!selection.group")
-        row
-          column(size="100%")
+        nn-row
+          nn-column(size="100%")
             label.btn.flat.charcoal(:class="{ active: selection.vertical }")
               | {{ $t('ui.section.gridBuilder.panel.rowStyle.vertical') }}
               input(type="checkbox", v-model="selection.vertical")
@@ -26,10 +26,10 @@ scroll-area(color="royal-purple")
           :value="selection.spacing"
         )
 
-        row
-          column(size="100%")
+        nn-row
+          nn-column(size="100%")
             label(for="breakpoint") {{ $t('ui.section.gridBuilder.panel.rowStyle.breakpoint') }}
-          column(size="100%")
+          nn-column(size="100%")
             select#breakpoint(v-model="selection.breakpoint")
               option(
                 v-for="option in breakpoint",
@@ -38,8 +38,8 @@ scroll-area(color="royal-purple")
                 v-html="option"
               )
       template(v-else)
-        row
-          column(size="100%")
+        nn-row
+          nn-column(size="100%")
             label.btn.flat.charcoal(:class="{ active: selection.integrated }")
               | {{ $t('ui.section.gridBuilder.panel.rowStyle.integrated') }}
               input(
@@ -48,8 +48,8 @@ scroll-area(color="royal-purple")
                 v-model="selection.integrated"
               )
 
-  row.row-block
-    column(size="100%")
+  nn-row.row-block
+    nn-column(size="100%")
       btn(
         color="gold-tips",
         @click="addColumn()",

@@ -4,14 +4,14 @@
       <toggle-row>
         <template v-slot:header>
           <template v-if="!allDBObj[project].group">
-            <t-column size="100%-35" v-html="allDBObj[project].title" />
+            <nn-column table-element size="100%-35" v-html="allDBObj[project].title" />
           </template>
           <template v-else>
-            <t-column size="100%-35" v-html="'Summary'" />
+            <nn-column table-element size="100%-35" v-html="'Summary'" />
           </template>
         </template>
         <template v-slot:more>
-          <t-column size="100%" v-if="allDBObj[project]">
+          <nn-column table-element size="100%" v-if="allDBObj[project]">
             <h2 v-html="allDBObj[project].clients.join(' & ')" />
             <h3
               v-if="!allDBObj[project].group"
@@ -59,10 +59,10 @@
                 </li>
               </template>
             </ul>
-          </t-column>
-          <t-column size="100%" v-if="hasSlots">
+          </nn-column>
+          <nn-column table-element size="100%" v-if="hasSlots">
             <slot />
-          </t-column>
+          </nn-column>
         </template>
       </toggle-row>
     </div>

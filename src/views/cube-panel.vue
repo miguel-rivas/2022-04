@@ -1,7 +1,7 @@
 <template lang="pug">
 div
-  row.row-block(tag="fieldset")
-    column(size="100%")
+  nn-row.row-block
+    nn-column(size="100%")
       legend {{ $t('three.panel.controller.legend') }}
 
       slider#rotation(
@@ -13,20 +13,20 @@ div
         :value="selection.sceneRotation"
       )
 
-      row
-        column(size="100%")
+      nn-row
+        nn-column(size="100%")
           label.btn.flat.charcoal(:class="{ active: selection.grid }")
             | {{ $t('three.panel.controller.grid') }}
             input(type="checkbox", v-model="selection.grid")
 
-      row
-        column(size="100%")
+      nn-row
+        nn-column(size="100%")
           label.btn.flat.charcoal(:class="{ active: selection.pause }")
             | {{ $t('three.panel.controller.pause') }}
             input(type="checkbox", v-model="selection.pause")
 
-      row
-        column(size="100%")
+      nn-row
+        nn-column(size="100%")
           label.btn.flat.charcoal(:class="{ active: selection.lines }")
             | {{ $t('three.panel.controller.lines') }}
             input(type="checkbox", v-model="selection.lines")

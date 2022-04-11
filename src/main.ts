@@ -4,9 +4,11 @@ import router from "./modules/router";
 import { store } from "./modules/store";
 import "./stylesheets/application.scss";
 import "./modules/commons";
-import "./nano-grid-vue/modules/tooltip";
-import "./nano-grid-vue/modules/nano";
+import "@/nano-grid-vue/modules/tooltip";
+import "@/nano-grid-vue/modules/nano";
 import VueKonva from "vue-konva";
+
+import '@/nano-grid-components';
 
 //-- db
 
@@ -23,7 +25,7 @@ store.commit("addColumn",
     width: 0,
     height: 0,
     subtraction: 100,
-    block: "column",
+    block: "nn-column",
   }
 );
 

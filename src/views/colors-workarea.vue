@@ -1,14 +1,14 @@
 <template lang="pug">
-scroll-area(color="royal-purple")
-  container
-    ul.img-gallery
+nn-scroll-area(color="royal-purple")
+  nn-container
+    .img-gallery
       template(v-for="(color, colorIndex) in gColorsDB")
-        row.swatch.item(tag="li", v-bind:key="colorIndex")
-          column.color(
+        nn-row.swatch.item(v-bind:key="colorIndex")
+          nn-column.color(
             size="100%, 250",
             :style="`background-color: ${color.hex}`"
           )
-          column(size="100%")
+          nn-column(size="100%")
             h1 {{ color.titleCase }}
             p {{ color.hex }}
 </template>

@@ -9,7 +9,7 @@
     :webkitallowfullscreen="selection.currentLink.allowfullscreen"
   )
 
-scroll-area(color="royal-purple", v-else, :horizontal="false")
+nn-scroll-area(color="royal-purple", v-else, :horizontal="false")
   gallery(:db="projectsDB")
 </template>
 

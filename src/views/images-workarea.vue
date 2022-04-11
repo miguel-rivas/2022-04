@@ -1,6 +1,6 @@
 <template lang="pug">
-scroll-area(color="royal-purple")
-  container
+nn-scroll-area(color="royal-purple")
+  nn-container
     ul.img-gallery
       template(v-for="(item, itemIndex) in database")
         li(v-bind:key="`gallery${itemIndex}`")

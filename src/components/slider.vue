@@ -1,10 +1,10 @@
 <template lang="pug">
-row
-  column(size="100%", v-if="label")
+nn-row
+  nn-column(size="100%", v-if="label")
     label(:for="$attrs.id", v-html="label")
-  column(size="100%")
-    row.nano-slider(group, integrated)
-      column(size="100%-40")
+  nn-column(size="100%")
+    nn-row.nano-slider(group, integrated)
+      nn-column(size="100%-40")
         input(
           :class="color",
           v-bind="$attrs",
@@ -12,7 +12,7 @@ row
           v-model="val",
           @change="updateValue()"
         )
-      column(size="40")
+      nn-column(size="40")
         input(
           type="number",
           :min="$attrs.min",

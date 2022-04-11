@@ -1,6 +1,6 @@
 <template lang="pug">
-scroll-area(color="royal-purple")
-  container(size="1450")
+nn-scroll-area(color="royal-purple")
+  nn-container(size="1450")
     article.nano-box
       h1 {{ $t('projects.section.statistics.workarea.yearlyAverage') }}
       br
@@ -17,24 +17,24 @@ scroll-area(color="royal-purple")
 
       .table(role="table")
         .table-head(role="rowgroup")
-          row(breakpoint="lg", table-element)
-            column(size="40%", table-element) {{ $t('projects.section.statistics.workarea.table.name') }}
-            column(size="20%", table-element) {{ $t('projects.section.statistics.workarea.table.type') }}
-            column(size="20%", table-element) {{ $t('projects.section.statistics.workarea.table.date') }}
-            column(size="20-35%", table-element) {{ $t('projects.section.statistics.workarea.table.client') }}
-            column(size="35")
+          nn-row(breakpoint="lg", table-element)
+            nn-column(size="40%", table-element) {{ $t('projects.section.statistics.workarea.table.name') }}
+            nn-column(size="20%", table-element) {{ $t('projects.section.statistics.workarea.table.type') }}
+            nn-column(size="20%", table-element) {{ $t('projects.section.statistics.workarea.table.date') }}
+            nn-column(size="20-35%", table-element) {{ $t('projects.section.statistics.workarea.table.client') }}
+            nn-column(size="35")
 
         .table-body(role="rowgroup")
           template(v-for="(project, projectIndex) in projectsDBList")
             toggle-row(breakpoint="lg", v-bind:key="projectIndex")
               template(v-slot:header)
-                t-column(size="40%") {{ project.title }}
-                t-column(size="20%") {{ $t(project.types) }}
-                t-column(size="20%") {{ project.turingDate }}
-                t-column(size="20%-35") {{ project.clients.join(' & ') }}
+                nn-column(table-element, size="40%") {{ project.title }}
+                nn-column(table-element, size="20%") {{ $t(project.types) }}
+                nn-column(table-element, size="20%") {{ project.turingDate }}
+                nn-column(table-element, size="20%-35") {{ project.clients.join(' & ') }}
 
               template(v-slot:more)
-                t-column(size="200")
+                nn-column(table-element, size="200")
                   template(v-if="project.links && project.links[0]")
                     btn(
                       tag="a",
@@ -51,7 +51,7 @@ scroll-area(color="royal-purple")
                       color="persian-red",
                       text="No Link"
                     )
-                t-column(size="100%-200")
+                nn-column(table-element, size="100%-200")
                   .pill-container
                     template(v-for="(tool, toolIndex) in project.tools")
                       span.pill(v-bind:key="toolIndex", v-html="tool")

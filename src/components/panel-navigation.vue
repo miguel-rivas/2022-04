@@ -1,9 +1,9 @@
 <template>
-  <column size="50" class="main-panel">
-    <scroll-area color="royal-purple" :horizontal="false">
-      <container>
-        <row vertical>
-          <column tag="nav">
+  <nn-column size="50" class="main-panel">
+    <nn-scroll-area color="royal-purple" :horizontal="false">
+      <nn-container>
+        <nn-row vertical>
+          <nn-column>
             <template v-for="nav in navigation">
               <template v-if="!nav.route.includes($route.name)">
                 <btn
@@ -134,11 +134,11 @@
               @click="toggleValue('theme'), playSound()"
               :active="theme"
             />
-          </column>
-        </row>
-      </container>
-    </scroll-area>
-  </column>
+          </nn-column>
+        </nn-row>
+      </nn-container>
+    </nn-scroll-area>
+  </nn-column>
 </template>
 
 <script lang="ts">
