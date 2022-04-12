@@ -10,8 +10,7 @@ nn-scroll-area(color="royal-purple")
         :vertical="computedvertical"
       )
         template(v-for="(column, index) in selection.columns")
-          component(
-            v-bind:is="column.block",
+          nn-column(
             v-bind:key="index",
             :size="getColumnSize({ width: column.width, height: column.height, widthSubtraction: column.subtraction, absoluteHeight: column.absoluteHeight, absoluteWidth: column.absoluteWidth }).computedSize"
           )
@@ -71,11 +70,11 @@ export default Vue.extend({
           absoluteHeight: column.absoluteHeight,
           absoluteWidth: column.absoluteWidth,
         });
-        columns += `  <${column.block} size="${
+        columns += `  <nn-column size="${
           columnSize.computedSize
         }">\n    <btn text="${columnSize.columnClass}${
           columnSize.columnClass && columnSize.columnStyle ? " - " : ""
-        }${columnSize.columnStyle}"/>\n  </${column.block}>\n`;
+        }${columnSize.columnStyle}"/>\n  </nn-column>\n`;
       });
       let row = `<nn-row${this.selection.group ? " nano-group" : ""}${
         this.computedvertical ? " vertical" : ""
@@ -98,7 +97,7 @@ export default Vue.extend({
           absoluteHeight: column.absoluteHeight,
           absoluteWidth: column.absoluteWidth,
         });
-        columns += `  ${column.block}(size="${
+        columns += `  nn-column(size="${
           columnSize.computedSize
         }")\n    btn(text="${columnSize.columnClass}${
           columnSize.columnClass && columnSize.columnStyle ? " - " : ""
@@ -125,7 +124,7 @@ export default Vue.extend({
           absoluteHeight: column.absoluteHeight,
           absoluteWidth: column.absoluteWidth,
         });
-        columns += `  %${column.block}{size: "${
+        columns += `  %nn-column{size: "${
           columnSize.computedSize
         }"}\n    %btn{text: "${columnSize.columnClass}${
           columnSize.columnClass && columnSize.columnStyle ? " - " : ""

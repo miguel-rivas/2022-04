@@ -26,3 +26,9 @@ export function prepairClasses(classes) {
     ...new Set(classes.map(item => item ? item.split(' ') : '').flat())
   ].join(' ').replace(/\s+/g, " ").trim();
 }
+
+export function cleanNano(classes, newSize) {
+  return [
+    ...new Set(classes.map(item => item ? item.split(' ') : '').flat().filter(item => item.substr(0,3) !== "nn-")), newSize
+  ].join(' ').replace(/\s+/g, " ").trim();
+}

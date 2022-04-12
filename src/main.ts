@@ -25,7 +25,6 @@ store.commit("addColumn",
     width: 0,
     height: 0,
     subtraction: 100,
-    block: "nn-column",
   }
 );
 

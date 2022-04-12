@@ -89,7 +89,6 @@ export default Vue.extend({
         width: 0,
         height: 0,
         subtraction: 100,
-        block: "column",
       });
       this.selection = this.$store.getters.getGridSelection;
     },
