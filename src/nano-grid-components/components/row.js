@@ -1,6 +1,7 @@
 import { prepairClasses } from "../modules/helpers";
 import { validateSpacing } from "nano-grid/modules/columns-manager";
 
+const nano = 'nn-';
 export default class Row extends HTMLElement {
   constructor() {
     super();
@@ -19,8 +20,8 @@ export default class Row extends HTMLElement {
       }
     }
 
-    const breakpoint = this.getAttribute('breakpoint');
-    const spacing = this.getAttribute('spacing') ? validateSpacing(this.getAttribute('spacing')) : '';
+    const breakpoint = this.hasAttribute('breakpoint') ? nano + this.getAttribute('breakpoint') : '';
+    const spacing = this.hasAttribute('spacing') ? validateSpacing(this.getAttribute('spacing')) : '';
 
     const classes = prepairClasses([
       group,
