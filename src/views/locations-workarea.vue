@@ -219,7 +219,6 @@ export default Vue.extend({
       });
     },
     openModal(filter) {
-      document.querySelector("aside.modal .scroll-area").scrollTo(0, 0);
       this.modal.data = locationsDBList.find(
         (item) => item.clients[0] === filter
       );
