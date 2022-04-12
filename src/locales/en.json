@@ -45,6 +45,9 @@
           }
         }
       },
+      "github": {
+        "title": "Github"
+      },
       "statistics": {
         "title": "Statistics",
         "workarea": {

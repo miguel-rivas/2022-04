@@ -6,6 +6,7 @@ import NestedPanelView from '../views/nested-panel.vue';
 import ProjectsListWorkareaView from '../views/projects-list-workarea.vue';
 import ProjectsListPanelView from '../views/projects-list-panel.vue';
 import StatisticsWorkareaView from '../views/statistics-workarea.vue';
+import GithubWorkareaView from '../views/github-workarea.vue';
 
 
 export default {
@@ -15,7 +16,7 @@ export default {
     workarea: Vue.extend({
       props: {
         defaultRoute: {
-          default: "list"
+          default: "github"
         },
       },
       extends: NestedWorkareaView,
@@ -27,6 +28,11 @@ export default {
         },
         links: {
           default: () => ([
+            {
+              text: "projects.section.github.title",
+              name: "github",
+              icon: "github",
+            },
             {
               text: "projects.section.list.title",
               name: "list",
@@ -44,6 +50,13 @@ export default {
     }),
   },
   children: [
+    {
+      name: 'github',
+      path: '/github',
+      components: {
+        workarea2: GithubWorkareaView,
+      },
+    },
     {
       name: 'list',
       path: '/list',

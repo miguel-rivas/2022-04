@@ -70,28 +70,6 @@
               glyph="linkedin"
               target="_blank"
             />
-            <btn
-              tag="a"
-              :href="linkGithub"
-              mode="transparent"
-              color="royal-purple"
-              size="md"
-              title="Github button"
-              v-nano-tooltip.right="'Github'"
-              glyph="github"
-              target="_blank"
-            />
-            <btn
-              tag="a"
-              href="https://github.com/miguel-rivas"
-              mode="transparent"
-              color="royal-purple"
-              size="md"
-              title="Github button"
-              v-nano-tooltip.right="$t('githubOrg')"
-              glyph="github"
-              target="_blank"
-            />
             <hr />
             <btn
               color="gold-tips"
@@ -159,7 +137,7 @@ export default Vue.extend({
       {
         tooltip: i18n.t("projects.navTitle"),
         icon: "duck",
-        route: ["projects", "list", "statistics"],
+        route: ["projects", "list", "statistics", "github"],
       },
       {
         tooltip: i18n.t("galleries.navTitle"),

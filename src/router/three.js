@@ -20,7 +20,7 @@ export default {
     workarea: Vue.extend({
       props: {
         defaultRoute: {
-          default: "carrousel"
+          default: "cube"
         },
       },
       extends: NestedWorkareaView,
@@ -67,11 +67,11 @@ export default {
               name: "audio2",
               icon: "book",
             },
-            {
-              text: "three.section.carrousel.title",
-              name: "carrousel",
-              icon: "",
-            },
+            // {
+            //   text: "three.section.carrousel.title",
+            //   name: "carrousel",
+            //   icon: "",
+            // },
           ])
         }
       },

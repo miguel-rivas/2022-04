@@ -44,6 +44,7 @@ export const tool = {
   stellar: "stellarJS",
   animate: "Animate CSS",
   snapSVG: "snapSVG",
+  svelte: "Svelte",
   chartJS: "ChartJS",
   wordpress: "Wordpress",
   kotlin: "Kotlin",

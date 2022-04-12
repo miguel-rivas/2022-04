@@ -1627,10 +1627,8 @@ const projects = [
       client.miguelRivas,
     ],
     tools: [
-      tool.pug,
+      tool.svelte,
       tool.scss,
-      tool.jQuery,
-      tool.php,
       tool.git,
     ],
     links: [
@@ -1659,10 +1657,8 @@ const projects = [
       client.miguelRivas,
     ],
     tools: [
-      tool.pug,
-      tool.scss,
-      tool.jQuery,
-      tool.php,
+      tool.react,
+      tool.sass,
       tool.git,
     ],
     links: [
@@ -1817,7 +1813,8 @@ const projects = [
       tool.vue,
       tool.scss,
       tool.git,
-      tool.typescript,
+      tool.javascript,
+      tool.gulp,
     ],
     disabled: true,
     links: [
