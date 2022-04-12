@@ -23,7 +23,7 @@
                     )
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 import { locationsDBList } from "../modules/format-db";
 

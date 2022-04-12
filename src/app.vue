@@ -28,7 +28,7 @@
   </main>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 import PanelNavigation from "./components/panel-navigation.vue";
 import Alert from "./components/alert.vue";

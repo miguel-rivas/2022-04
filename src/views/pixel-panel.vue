@@ -150,7 +150,7 @@
                       )
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 import { pixelColors, wikiColors, allColors } from "../db/wiki-colors";
 import { wikiColorEnum } from "../enums/wikicolors";

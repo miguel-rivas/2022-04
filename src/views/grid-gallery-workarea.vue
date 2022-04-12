@@ -124,7 +124,7 @@ nn-scroll-area(color="royal-purple")
                   )
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 
 export default Vue.extend({

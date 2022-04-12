@@ -3,14 +3,14 @@
   code(ref="code", v-html="textFormat")
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 
-const spirit = (word: string, klaso: string) => {
+const spirit = (word, klaso) => {
   return `<span class='sp-${klaso}'>${word}</span>`;
 };
 
-const spiritBegin = (klaso: string) => {
+const spiritBegin = (klaso) => {
   return `<span class='sp-${klaso}'>`;
 };
 

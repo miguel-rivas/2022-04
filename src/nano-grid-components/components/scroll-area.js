@@ -1,4 +1,4 @@
-import { prepairClasses } from "../modules/helpers.js";
+import { prepairClasses } from "../modules/helpers";
 
 export default class ScrollArea extends HTMLElement {
   constructor() {

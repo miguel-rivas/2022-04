@@ -1,5 +1,5 @@
-import { prepairClasses } from "../modules/helpers.js";
-import { validateSize } from "nano-grid/modules/columns-manager.js";
+import { prepairClasses } from "../modules/helpers";
+import { validateSize } from "nano-grid/modules/columns-manager";
 
 export default class Column extends HTMLElement {
   constructor() {

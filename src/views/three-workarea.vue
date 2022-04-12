@@ -2,9 +2,9 @@
 .three-scene(ref="threeScene")
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import ThreeScene from "../mixins/three-scene";
 import StudioLight from "../mixins/three-studio-light";
 import h from "../modules/helpers";

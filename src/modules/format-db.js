@@ -2,13 +2,6 @@ import helpers from "../modules/helpers";
 import { projectsDB as rawDB } from "../db/projects";
 import { groupsDB as rawGroupsDB } from "../db/groups";
 
-// ---------------- Enums
-
-import { tool, toolEnum } from "../enums/tools";
-import { type, typeEnum } from "../enums/types";
-import { client, clientEnum } from "../enums/clients";
-
-
 export function sortByDate(a, b) {
   return helpers.dateToNumber(b.date) - helpers.dateToNumber(a.date);
 }
@@ -22,15 +15,11 @@ function uncompressProjectsDBtoJSON(db) {
     const disabled = entry.disabled ? true : false;
     const children = entry.children || [];
 
-    const tools = entry.tools.sort().map(
-      item => tool[toolEnum[item]]
-    );
+    const tools = entry.tools;
 
-    const clients = entry.clients.sort().map(
-      item => client[clientEnum[item]]
-    );
+    const clients = entry.clients;
 
-    const types = type[typeEnum[entry.types]];
+    const types = entry.types;
 
     let links = [];
     if (entry.links?.length > 0) {
@@ -81,22 +70,14 @@ function uncompressGroupsDBtoJSON(groups) {
   const result = {};
   groups.forEach(group => {
     let position = { lat: '', lng: '' };
-
+    
     if (group.location) {
       position = group.position;
     }
 
-    const tools = group.tools.map(
-      item => tool[toolEnum[item]]
-    );
-
-    const clients = group.clients.map(
-      item => client[clientEnum[item]]
-    );
-
     const project = {
-      "title": clients[0],
-      "clients": clients,
+      "title": group.clients[0],
+      "clients": group.clients,
       "date": group.date,
       "turingDate": helpers.turingDate(group.date),
       "types": undefined,
@@ -104,7 +85,7 @@ function uncompressGroupsDBtoJSON(groups) {
       "location": group.location,
       "links": [],
       "disabled": group.disabled,
-      "tools": tools,
+      "tools": group.tools,
       "children": group.children,
       "image": "",
       "position": position,

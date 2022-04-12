@@ -32,7 +32,7 @@
           carrousel(v-bind:key="`mapCarrousel${index}`", :item="item")
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 import { mapGetters } from "vuex";
 import Modal from "../components/modal.vue";

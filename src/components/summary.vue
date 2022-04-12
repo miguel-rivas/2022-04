@@ -69,7 +69,7 @@
   </li>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 import toggleRow from "./toggle-row.vue";
 import { allDBObj } from "../modules/format-db";

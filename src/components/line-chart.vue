@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 import { Line } from "vue-chartjs";
 
 export default {
@@ -27,7 +27,7 @@ export default {
     },
   }),
   methods: {
-    render(): void {
+    render() {
       const orgData = this.chartData.sort((a, b) => {
         let ca = a.date;
         let cb = b.date;
@@ -53,14 +53,14 @@ export default {
     },
   },
   watch: {
-    chartData: function (): void {
+    chartData: function () {
       this.render();
     },
   },
-  mounted(): void {
+  mounted() {
     this.render();
   },
-  beforeDestroy(): void {
+  beforeDestroy() {
     this.render = () => {
       // remove render loop
     };

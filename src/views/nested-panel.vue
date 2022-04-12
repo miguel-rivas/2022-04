@@ -29,7 +29,7 @@ nn-scroll-area(color="royal-purple")
   router-view(name="panel2")
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 
 export default Vue.extend({

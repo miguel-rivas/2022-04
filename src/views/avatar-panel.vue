@@ -461,7 +461,7 @@
               )
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 import ColorPicker from "mr-vue-color/src/components/Simple.vue";
 import ToggleRow from "../components/toggle-row.vue";

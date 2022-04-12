@@ -64,7 +64,7 @@
     )
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 import panelBlockColumn from "../components/panel-block-column.vue";
 import Slider from "../mixins/slider";

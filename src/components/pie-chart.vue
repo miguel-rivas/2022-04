@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 import { Pie } from "vue-chartjs";
 
 export default {
@@ -37,7 +37,7 @@ export default {
     },
   },
   methods: {
-    createColor(index: number, max_color_amount: number) {
+    createColor(index, max_color_amount) {
       var hue, difference, filter_max_color, filter_min_color;
       filter_max_color = max_color_amount > 359 ? 359 : max_color_amount;
       filter_min_color = filter_max_color < 3 ? 3 : filter_max_color;

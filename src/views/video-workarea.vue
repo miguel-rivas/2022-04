@@ -23,7 +23,7 @@
                 p: small Soundtrack: {{ item.soundtrack.artist }} - {{ item.soundtrack.song }}
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 import { videos } from "../db/videos";
 import ToggleRow from "../components/toggle-row.vue";

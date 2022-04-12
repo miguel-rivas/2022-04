@@ -38,7 +38,7 @@
   </v-group>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 import h from "../modules/helpers";
 

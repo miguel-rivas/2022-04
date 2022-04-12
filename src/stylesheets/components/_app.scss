@@ -11,14 +11,13 @@
   }
 
   .panel-bar {
-    max-width: 0 !important;
     display: flex;
 
     button.btn {
       box-shadow: none !important;
       background-color: hsl(240deg 6% 14% / 68%) !important;
-      max-width: 20px;
-      min-width: 20px;
+      width: 20px;
+      height: 100%;
 
       &:hover {
         background-color: hsl(240deg 6% 14% / 80%) !important;
@@ -61,8 +60,7 @@
     border-right: 1px solid var(--color-panel-border-separator);
 
     nn-scroll-area {
-      padding-top: 1rem;
-      padding-bottom: 1rem;
+      padding-block: 1rem;
       overflow-x: hidden;
     }
 
@@ -101,6 +99,7 @@
     }
 
     button,
+    .btn,
     label,
     select,
     input[type="text"] {

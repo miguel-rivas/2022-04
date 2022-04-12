@@ -14,7 +14,7 @@ nn-scroll-area(color="royal-purple")
               p {{ color.hex }}
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 import { allColors } from "../db/wiki-colors";
 

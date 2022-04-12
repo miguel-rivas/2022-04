@@ -11,7 +11,7 @@ nn-scroll-area(color="royal-purple")
           )
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 import { gallery3d } from "../db/gallery3d";
 import carrousel from "../components/carrousel.vue";

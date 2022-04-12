@@ -6,7 +6,7 @@ nn-row.alert.fixed(:class="alert.status", v-if="alert.message !== ''")
       nn-icon(glyph="close")
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 import { mapGetters } from "vuex";
 

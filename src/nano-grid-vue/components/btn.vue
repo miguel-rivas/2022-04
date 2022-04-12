@@ -15,9 +15,9 @@
   </component>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
-import { colorsType, directionsType } from "../modules/types.js";
+import { colorsType, directionsType } from "../modules/types";
 
 export default Vue.extend({
   props: {

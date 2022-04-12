@@ -1,7 +1,7 @@
 import Vue from 'vue';
 
 const tooltipdirective = {
-  bind: function (el, binding): void {
+  bind: function (el, binding) {
     const value = binding.value;
 
     el.tooltipMount = () => {
@@ -56,7 +56,7 @@ const tooltipdirective = {
 
 const tooltip = {
   el: undefined,
-  init: function (): void {
+  init: function () {
     const parent = document.body;
     const node = document.createElement("aside");
     parent.appendChild(node);

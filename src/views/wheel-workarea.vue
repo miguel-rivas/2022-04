@@ -3,7 +3,7 @@ nn-scroll-area(color="royal-purple")
   pie-chart(:chart-data="selection.colors")
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 import PieChart from "../components/pie-chart.vue";
 

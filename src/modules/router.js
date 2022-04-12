@@ -15,7 +15,7 @@ import UiRouter from '../router/ui';
 
 Vue.use(VueRouter);
 
-const routes: Array<RouteConfig> = [
+const routes = [
   {
     path: '/',
     redirect: '/stargazer',

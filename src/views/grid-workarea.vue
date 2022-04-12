@@ -52,7 +52,7 @@ nn-scroll-area(color="royal-purple")
         btn.fsz(glyph="pug", :text="$t('ui.section.gridBuilder.workarea.pug')", color="shamrock", @click="copyCode('textareaPug')")
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 import GridMixin from "../mixins/grid";
 import spirit from "../components/spirit.vue";
@@ -142,7 +142,7 @@ export default Vue.extend({
       }}\n${columns}`;
       return row;
     },
-    computedSpacing(): number {
+    computedSpacing() {
       return !this.selection.group ? this.selection.spacing : 0;
     },
     computedBreakpoint() {
@@ -152,15 +152,15 @@ export default Vue.extend({
         return "";
       }
     },
-    computedIntegrated(): boolean {
+    computedIntegrated() {
       return this.selection.group ? this.selection.integrated : false;
     },
-    computedvertical(): boolean {
+    computedvertical() {
       return !this.selection.group ? this.selection.vertical : false;
     },
   },
   methods: {
-    createColor(index: number, max_color_amount: number) {
+    createColor(index, max_color_amount) {
       var hue, difference, filter_max_color, filter_min_color;
       filter_max_color = max_color_amount > 359 ? 359 : max_color_amount;
       filter_min_color = filter_max_color < 3 ? 3 : filter_max_color;

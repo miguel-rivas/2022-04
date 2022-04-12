@@ -1,10 +1,10 @@
 import h from "./helpers";
 
 export class gColor {
-  label: string;
-  hex: string;
+  label;
+  hex;
 
-  constructor(label: string, hex: string) {
+  constructor(label, hex) {
     this.label = label;
     this.hex = hex;
   }

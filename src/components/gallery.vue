@@ -85,7 +85,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 import summaryRow from "./summary.vue";
 import helpers from "../modules/helpers";

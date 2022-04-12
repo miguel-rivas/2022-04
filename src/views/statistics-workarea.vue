@@ -57,7 +57,7 @@ nn-scroll-area(color="royal-purple")
                       span.pill(v-bind:key="toolIndex", v-html="tool")
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 import LineChart from "../components/line-chart.vue";
 import BarChart from "../components/bar-chart.vue";

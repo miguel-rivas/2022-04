@@ -1,4 +1,4 @@
-import { createNode, prepairClasses } from "../modules/helpers.js";
+import { createNode, prepairClasses } from "../modules/helpers";
 
 export default class Btn extends HTMLElement {
   constructor() {

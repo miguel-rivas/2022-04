@@ -13,7 +13,7 @@ nn-scroll-area(color="royal-purple", v-else, :horizontal="false")
   gallery(:db="projectsDB")
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 import Gallery from "../components/gallery.vue";
 import { client } from "../enums/clients";

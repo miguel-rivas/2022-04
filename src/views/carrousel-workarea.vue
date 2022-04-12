@@ -2,7 +2,7 @@
 .three-scene(ref="threeScene")
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 import ThreeScene from "../mixins/three-scene";
 import StudioLight from "../mixins/three-studio-light";

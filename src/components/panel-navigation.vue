@@ -141,7 +141,7 @@
   </nn-column>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 import { mapGetters, mapMutations } from "vuex";
 import { linkGithub, linkLinkedin } from "../db/user";

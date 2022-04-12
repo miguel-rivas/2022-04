@@ -1,5 +1,5 @@
-import { prepairClasses } from "../modules/helpers.js";
-import { validateSpacing } from "nano-grid/modules/columns-manager.js";
+import { prepairClasses } from "../modules/helpers";
+import { validateSpacing } from "nano-grid/modules/columns-manager";
 
 export default class Row extends HTMLElement {
   constructor() {

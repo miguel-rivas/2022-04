@@ -1,8 +1,8 @@
 import Vue from 'vue';
-import { reduceFraction, roundUpNumber } from "nano-grid/modules/columns-manager.js";
+import { reduceFraction, roundUpNumber } from "nano-grid/modules/columns-manager";
 
 const nanoDirective = {
-  bind: function (el, binding): void {
+  bind: function (el, binding) {
     const properties = Object.keys(binding.modifiers);
     let numerator, denominator;
     let value = binding.value;
@@ -45,7 +45,7 @@ const nanoDirective = {
 
 const nano = {
   el: undefined,
-  init: function (): void {
+  init: function () {
     const parent = document.body;
     const node = document.createElement("aside");
     parent.appendChild(node);

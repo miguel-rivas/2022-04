@@ -1,9 +1,9 @@
-import Btn from "./components/btn.js";
-import ScrollArea from "./components/scroll-area.js";
-import Column from "./components/column.js";
-import Row from "./components/row.js";
-import Icon from "./components/icon.js";
-import Container from "./components/container.js"
+import Btn from "./components/btn";
+import ScrollArea from "./components/scroll-area";
+import Column from "./components/column";
+import Row from "./components/row";
+import Icon from "./components/icon";
+import Container from "./components/container"
 
 window.customElements.define('nn-icon', Icon);
 window.customElements.define('nn-btn', Btn);

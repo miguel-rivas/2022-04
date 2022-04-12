@@ -153,14 +153,14 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 import { mapGetters } from "vuex";
 import { allColors } from "../db/wiki-colors";
 import ctrl from "../components/pixel-controller.vue";
 import { wikiColorEnum } from "../enums/wikicolors";
 import h from "../modules/helpers";
-import goose from "../json/goose.js";
+import goose from "../json/goose";
 
 export default Vue.extend({
   components: { ctrl },

@@ -4,7 +4,7 @@ nn-scroll-area(color="royal-purple")
     | no canvas
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 
 export default Vue.extend({

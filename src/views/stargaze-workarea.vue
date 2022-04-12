@@ -12,7 +12,7 @@
     )
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 import { mapGetters } from "vuex";
 import mountains from "../components/mountains.vue";

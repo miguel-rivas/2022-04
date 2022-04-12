@@ -11,7 +11,7 @@ nn-scroll-area(color="royal-purple")
               h1(v-html="icon")
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 import { icons } from "../db/icons";
 

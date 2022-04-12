@@ -15,7 +15,7 @@
                 )
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 import { gColorsDB } from "../db/colors";
 

@@ -79,7 +79,7 @@
       btn(@click="closeProject()", color="persian-red", text="Close Project")
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 
 export default Vue.extend({

@@ -2,7 +2,7 @@
 .three-scene(ref="threeScene")
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 import * as THREE from "three";
 import {wikiColors} from "../db/wiki-colors";

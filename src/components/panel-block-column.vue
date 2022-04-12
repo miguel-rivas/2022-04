@@ -166,7 +166,7 @@
   </nn-row>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 import Slider from "../mixins/slider";
 import GridMixin from "../mixins/grid";
