@@ -9,6 +9,8 @@
 @import "nano-grid/scss/scroll-area";
 @import "nano-grid/scss/tooltip";
 @import "nano-grid/scss/range-slider";
+@import "nano-grid/scss/container";
+@import "nano-grid/scss/icon";
 
 * {
   box-sizing: border-box;
@@ -87,7 +89,6 @@ main {
 
 @import "components/app";
 @import "components/table";
-@import "components/container";
 @import "components/img-gallery";
 @import "components/listings";
 @import "components/radio-select";

@@ -9,6 +9,7 @@ import "@/nano-grid-vue/modules/nano";
 import VueKonva from "vue-konva";
 
 import '@/nano-grid-components';
+import 'nano-grid/components';
 
 //-- db
 
