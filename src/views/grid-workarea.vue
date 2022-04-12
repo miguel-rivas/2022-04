@@ -31,7 +31,7 @@ nn-scroll-area(color="royal-purple")
         spirit(:text="htmlVue")
         textarea(ref="textareaHtml").vue-code {{ htmlVue }}
       nn-column(size="1/1")
-        btn.fsz(glyph="html", :text="$t('ui.section.gridBuilder.workarea.html')", color="shamrock", @click="copyCode('textareaHtml')")
+        btn(glyph="html", :text="$t('ui.section.gridBuilder.workarea.html')", color="shamrock", @click="copyCode('textareaHtml')")
 
     br
 
@@ -40,7 +40,7 @@ nn-scroll-area(color="royal-purple")
         spirit(:text="hamlVue", lang="haml")
         textarea(ref="textareaHaml").vue-code {{ hamlVue }}
       nn-column(size="1/1")
-        btn.fsz(glyph="haml", :text="$t('ui.section.gridBuilder.workarea.haml')", color="shamrock", @click="copyCode('textareaHaml')")
+        btn(glyph="haml", :text="$t('ui.section.gridBuilder.workarea.haml')", color="shamrock", @click="copyCode('textareaHaml')")
 
     br
 
@@ -49,7 +49,7 @@ nn-scroll-area(color="royal-purple")
         spirit(:text="pugVue", lang="pug")
         textarea(ref="textareaHaml").vue-code {{ pugVue }}
       nn-column(size="1/1")
-        btn.fsz(glyph="pug", :text="$t('ui.section.gridBuilder.workarea.pug')", color="shamrock", @click="copyCode('textareaPug')")
+        btn(glyph="pug", :text="$t('ui.section.gridBuilder.workarea.pug')", color="shamrock", @click="copyCode('textareaPug')")
 </template>
 
 <script>

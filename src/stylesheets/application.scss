@@ -124,14 +124,11 @@ main {
 
 /*------------------------*/
 
-.btn.flat {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  &.fsz {
-    width: 100%;
-  }
+button,
+label,
+select,
+input[type="text"] {
+  width: 100%;
 }
 
 /*------------------------*/

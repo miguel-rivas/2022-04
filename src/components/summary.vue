@@ -43,7 +43,6 @@
                     v-if="projectLink.self"
                     size="md"
                     color="gold-tips"
-                    class="fsz"
                     :text="projectLink.text"
                     @click="sentToProjector(projectLink.url)"
                   />
