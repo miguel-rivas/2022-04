@@ -42,15 +42,18 @@
                 <li v-bind:key="themeIndex">
                   <nn-row>
                     <nn-column size="35">
-                      <btn
-                        color="burn-orange"
-                        :glyph="theme.icon"
-                      />
+                      <btn color="burn-orange" :glyph="theme.icon" />
                     </nn-column>
                     <nn-column size="100%-35">
                       <btn
                         color="gold-tips"
                         :text="theme.text"
+                        @click="
+                          $store.commit('setValue', {
+                            name: 'theme2',
+                            value: theme.name,
+                          })
+                        "
                       />
                     </nn-column>
                   </nn-row>
@@ -66,7 +69,7 @@
 
 <script>
 import Vue from "vue";
-// import { mapGetters } from "vuex";
+import { mapMutations } from "vuex";
 
 export default Vue.extend({
   components: {},
@@ -122,5 +125,8 @@ export default Vue.extend({
       },
     ],
   }),
+  methods: {
+    ...mapMutations(["setValue"]),
+  },
 });
 </script>

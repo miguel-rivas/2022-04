@@ -1,73 +1,99 @@
 <template>
-    <section class="contact">
-      <div class="monitor">
-        <nn-container>
-          <h1 v-html="contentDB[contentIndex].header"/>
-          <template v-if="contentDB[contentIndex].content">
-            <p v-html="contentDB[contentIndex].content"/>
-          </template>
+  <section class="contact">
+    <div class="form-container">
+      <img src="/img/2014/form-header.png" alt="" class="form-header" />
+      <form>
+        <input type="text" name="name" placeholder="Name" />
+        <input type="email" name="email" placeholder="Email" />
+        <textarea name="topic" cols="30" rows="10" placeholder="Message" />
+        <btn color="emerald" text="Send" mode="flat" />
+      </form>
 
-          <button class="scrn_btn prev" @click="movePage(-1)">
-            <nn-icon direction="left" glyph="chevron" />
-          </button>
-          <button class="scrn_btn next" @click="movePage(1)">
-            <nn-icon direction="right" glyph="chevron" />
-          </button>
+      <web-star
+        :x="-mX * 0.008"
+        :y="mX * 0.005"
+        class="st4 left"
+        translation="500, 180"
+      />
+      <web-star
+        :x="mX * 0.008"
+        :y="mX * 0.005"
+        class="st4 right"
+        translation="500, 180"
+      />
 
-          <web-gear
-            side-perforation-radius="5"
-            side-perforation-distance="32"
-            side-perforation-amount="7"
-            width="180"
-            className="rtr g1"
-          />
-          <web-gear
-            axis-radius="10"
-            side-perforation-radius="8"
-            side-perforation-amount="3"
-            width="160"
-            class="rtr g2"
-          />
-          <web-gear
-            teeth-amount="25"
-            axis-radius="15"
-            side-perforation-radius="8"
-            side-perforation-amount="0"
-            width="52"
-            class="rtl g3"
-          />
-          <web-gear teeth-amount="25" width="100" class="rtl g4" />
-          <web-gear
-            teeth-amount="30"
-            axis-radius="8"
-            side-perforation-radius="3"
-            side-perforation-distance="35"
-            side-perforation-amount="10"
-            width="180"
-            class="rtr g5"
-          />
-          <web-gear
-            axis-radius="3"
-            side-perforation-radius="8"
-            side-perforation-amount="5"
-            width="165"
-            class="rtl g6"
-          />
-        </nn-container>
-        <div class="screen-container">
-          <div class="bone">
-            <web-gear
-              teeth-amount="25"
-              axis-radius="15"
-              side-perforation-radius="8"
-              side-perforation-amount="0"
-              width="52"
-            />
-            <div class="screen" />
-          </div>
-        </div>
-      </div>
-    </section>
+      <web-star
+        :x="-mX * 0.004"
+        :y="-mY * 0.006"
+        class="st3 left"
+        translation="350, 350"
+      />
+      <web-star
+        :x="mX * 0.004"
+        :y="-mY * 0.006"
+        class="st3 right"
+        translation="350, 350"
+      />
+
+      <web-star
+        :x="-mY * 0.005"
+        :y="mX * 0.002"
+        class="st2 left"
+        translation="470, 300"
+      />
+      <web-star
+        :x="mY * 0.005"
+        :y="mX * 0.002"
+        class="st2 right"
+        translation="470, 300"
+      />
+
+      <web-star
+        :x="-mX * 0.006"
+        :y="mY * 0.005"
+        class="st5 left"
+        translation="400, 30"
+        star-radius="70"
+        inner-radius="35"
+      />
+      <web-star
+        :x="mX * 0.006"
+        :y="mY * 0.005"
+        class="st5 right"
+        translation="400, 30"
+        star-radius="70"
+        inner-radius="35"
+      />
+      <web-star
+        :x="-mY * 0.002"
+        :y="mX * 0.003"
+        class="st1 left"
+        translation="350, 200"
+        star-radius="40"
+        inner-radius="20"
+      />
+      <web-star
+        :x="mY * 0.002"
+        :y="mX * 0.003"
+        class="st1 right"
+        translation="350, 200"
+        star-radius="40"
+        inner-radius="20"
+      />
+    </div>
+    <div
+      class="bird b1"
+      :style="`transform: translate(${mX * -0.005}px, ${mY * -0.007}px)`"
+    />
+    <div
+      class="bird b2"
+      :style="`transform: translate(${mY * -0.003}px, ${mX * 0.002}px)`"
+    />
+    <div
+      class="bird b3"
+      :style="`transform: translate(${mX * 0.009}px, ${mY * -0.008}px)`"
+    />
+  </section>
 </template>
 
 <script>
@@ -76,33 +102,20 @@ import Vue from "vue";
 export default Vue.extend({
   components: {},
   data: () => ({
-    selection: {},
-    contentIndex: 0,
-    contentDB: [
-      {
-        header: `Hi! My name is Miguel Rivas`,
-        content: `I'm a Frontend Developer living in Santo Domingo.`,
-      },
-      {
-        header: `Why Me?`,
-        content: `I work with HTML/JADE/HAML, CSS/SASS/LESS, and the Adobe Suite (Illustrator, Photoshop, Indesign, Flash and Premiere). I also love git and have been known to roll up my sleeves and work with basic Ruby on Rails and PHP.`,
-      },
-      {
-        header: `Experience in the area`,
-        content: `I've work as Front-End Developer for <strong>Cerveza Presidente</strong> in the web app <strong>Destapa El Coro</strong> and in the page of <strong>Carnaval Presidente 2015</strong>. also I worked with other brand as Orange, Pepsi and Outback.`,
-      },
-    ],
+    mX: 1,
+    mY: 1,
   }),
   methods: {
-    movePage(movement) {
-      if (this.contentIndex + movement > this.contentDB.length - 1) {
-        this.contentIndex = 0;
-      } else if (this.contentIndex + movement < 0) {
-        this.contentIndex = this.contentDB.length - 1;
-      } else {
-        this.contentIndex += movement;
-      }
+    moveObjects(event) {
+      this.mX = parseInt(event.clientX) || 1;
+      this.mY = parseInt(event.clientY) || 1;
     },
+  },
+  mounted() {
+    window.addEventListener("mousemove", this.moveObjects);
+  },
+  beforeDestroy() {
+    window.removeEventListener("mousemove", this.moveObjects);
   },
 });
 </script>

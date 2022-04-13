@@ -1,5 +1,5 @@
 <template>
-  <div class="nested-app p2014" :class="[theme2, 'section-home']">
+  <div class="nested-app p2014" :class="[theme2, sectionName]">
     <router-view name="workarea3" />
 
     <div class="bk-ornament" />
@@ -39,6 +39,9 @@ export default Vue.extend({
     ...mapGetters({
       theme2: "getTheme2",
     }),
+    sectionName() {
+      return `section-${this.$route.name}`;
+    },
   },
   created() {
     if (this.$route.name !== '2014-home') {

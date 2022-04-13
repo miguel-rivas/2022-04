@@ -41,7 +41,7 @@ section.contact {
 		}
 	}
 
-	.star {
+	web-star {
 		position: absolute;
 		z-index: -1;
 		&.right {
@@ -52,7 +52,6 @@ section.contact {
 	.bird {
 		position: absolute;
 		z-index: -2;
-
 		background-repeat: no-repeat;
 		&.b1 {
 			@include size(125px, x, 103px, x);
