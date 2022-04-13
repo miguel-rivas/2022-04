@@ -1,5 +1,11 @@
 <template>
-  <h1>2014</h1>
+  <web-gear
+    axis-radius="3"
+    side-perforation-radius="8"
+    side-perforation-amount="5"
+    width="165"
+    class="rtl g6"
+  />
 </template>
 
 <script>
@@ -20,9 +26,7 @@ export default Vue.extend({
   created() {
     // this.selection = this.$store.getters.getAvatarSelection;
   },
-  mounted() {
-  },
-  methods: {
-  },
+  mounted() {},
+  methods: {},
 });
 </script>
