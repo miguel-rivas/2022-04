@@ -42,7 +42,7 @@ export default Vue.extend({
 
       (function (scene) {
         loader.load(
-          `3d/${mesh}.glb`,
+          `https://miguel-rivas.github.io/zapp/3d/${mesh}.glb`,
           function (gltf) {
             scene.add(gltf.scene);
           },

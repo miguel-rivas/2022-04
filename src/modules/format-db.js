@@ -49,17 +49,11 @@ function uncompressProjectsDBtoJSON(db) {
       "children": children,
       "group": false,
       "location": false,
-      "image": "",
+      "image": entry.image,
     };
 
     const id = helpers.getNewID(project.clients[0], project.date);
-
-    try {
-      project.image = `https://miguel-rivas.github.io/zapp/img/preview-wide/${id}.jpg`;
-    }
-    catch {
-      project.image = require(`@/img/miguelrivas.jpg`);
-    }
+    
     result[id] = project;
   });
 
@@ -91,16 +85,11 @@ function uncompressGroupsDBtoJSON(groups) {
       "position": position,
       "description": group.description,
       "list": group.list,
+      "image": group.image,
     };
 
     const id = helpers.getNewID(project.clients[0], project.date);
 
-    try {
-      project.image = `https://miguel-rivas.github.io/zapp/img/preview-wide/${id}.jpg`;
-    }
-    catch {
-      project.image = require(`@/img/miguelrivas.jpg`);
-    }
     result[id + "_group"] = project;
   });
 

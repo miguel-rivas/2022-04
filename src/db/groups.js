@@ -7,6 +7,7 @@ const groups = [
   {
     date: "2004/09/20",
     disabled: false,
+    image: h.preview("itesa"),
     clients: [
       client.itesa,
     ],
@@ -83,6 +84,7 @@ const groups = [
   },
   {
     date: "2009/09/01",
+    image: h.preview("itla"),
     disabled: false,
     description: 'canvas.section.map.modal.itla.position',
     list: 'canvas.section.map.modal.itla.summary',
@@ -136,6 +138,7 @@ const groups = [
   },
   {
     date: "2013/01/01",
+    image: h.preview("several"),
     disabled: true,
     description: 'canvas.section.map.modal.several.position',
     location: true,
@@ -155,6 +158,7 @@ const groups = [
   },
   {
     date: "2013/05/01",
+    image: h.preview("social-network"),
     disabled: false,
     description: 'canvas.section.map.modal.social.position',
     list: 'canvas.section.map.modal.social.summary',
@@ -183,6 +187,7 @@ const groups = [
   },
   {
     date: "2014/06/01",
+    image: h.preview("presidente"),
     disabled: false,
     group: true,
     clients: [
@@ -210,6 +215,7 @@ const groups = [
   },
   {
     date: "2014/05/01",
+    image: h.preview("capital"),
     disabled: false,
     description: 'canvas.section.map.modal.capital.position',
     list: 'canvas.section.map.modal.capital.summary',
@@ -252,6 +258,7 @@ const groups = [
   },
   {
     date: "2016/01/01",
+    image: h.preview("pixel"),
     disabled: false,
     description: 'canvas.section.map.modal.pixel.position',
     list: 'canvas.section.map.modal.pixel.summary',
@@ -287,6 +294,7 @@ const groups = [
   },
   {
     date: "2013/07/15",
+    image: h.preview("avante"),
     disabled: false,
     description: 'canvas.section.map.modal.avante.position',
     list: 'canvas.section.map.modal.avante.summary',
@@ -317,6 +325,7 @@ const groups = [
   },
   {
     date: "2017/07/01",
+    image: h.preview("plant-therapy"),
     disabled: false,
     description: 'canvas.section.map.modal.plantTherapy.position',
     list: 'canvas.section.map.modal.plantTherapy.summary',
@@ -377,6 +386,7 @@ const groups = [
   // },
   {
     date: "2018/04/01",
+    image: h.preview("enovational"),
     disabled: false,
     description: 'canvas.section.map.modal.enovational.position',
     list: 'canvas.section.map.modal.enovational.summary',

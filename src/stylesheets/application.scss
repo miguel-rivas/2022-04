@@ -12,6 +12,9 @@
 @import "nano-grid/scss/container";
 @import "nano-grid/scss/icon";
 
+
+// @import "https://miguel-rivas.github.io/zapp/fonts/icomoon/icomoon";
+
 * {
   box-sizing: border-box;
 }
@@ -125,7 +128,7 @@ main {
 
 /*------------------------*/
 
-button,
+.btn,
 label,
 select,
 input[type="text"] {

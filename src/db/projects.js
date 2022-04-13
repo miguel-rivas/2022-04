@@ -11,7 +11,6 @@ const linkCodepen = (item) => `https://codepen.io/${user.media.codepen.user}/pen
 const linkVimeo = (id) => `https://player.vimeo.com/video/${id}`;
 
 const projects = [
-
   {
     date: "2022/04/11",
     title: "Portfolio 2022-04",
@@ -32,7 +31,7 @@ const projects = [
       tool.i18n,
       tool.webComponents,
     ],
-    disabled: true,
+    image: h.preview("2022"),
     links: [
       {
         url: linkWeb("2022-04"),
@@ -69,6 +68,7 @@ const projects = [
   {
     date: "2021/12/20",
     title: "Portfolio 2022",
+    image: h.preview("2022"),
     types: type.app,
     clients: [
       client.miguelRivas,
@@ -1211,6 +1211,7 @@ const projects = [
   {
     date: "2012/10/26",
     title: "Print Portfolio",
+    image: h.preview("2012"),
     types: type.document,
     clients: [
       client.miguelRivas,
@@ -1290,6 +1291,7 @@ const projects = [
   {
     date: "2015/01/03",
     title: "Mainfront",
+    image: h.preview("mainfront"),
     types: type.app,
     clients: [
       client.miguelRivas,
@@ -1319,6 +1321,7 @@ const projects = [
   {
     date: "2015/04/19",
     title: "CSS Study",
+    image: h.preview("css-study"),
     types: type.app,
     clients: [
       client.miguelRivas,
@@ -1347,6 +1350,7 @@ const projects = [
   {
     date: "2021/03/24",
     title: "Hello",
+    image: h.preview("hello"),
     types: type.app,
     disabled: true,
     clients: [
@@ -1399,6 +1403,7 @@ const projects = [
   {
     date: "2015/04/26",
     title: "Evolution of the Web",
+    image: h.preview("evolution"),
     types: type.app,
     clients: [
       client.miguelRivas,
@@ -1446,6 +1451,7 @@ const projects = [
   {
     date: "2015/05/23",
     title: "Minivan",
+    image: h.preview("minivan"),
     types: type.prototype,
     clients: [
       client.miguelRivas,
@@ -1458,7 +1464,8 @@ const projects = [
   },
   {
     date: "2015/05/25",
-    title: "Windows Form",
+    title: "Window Form",
+    image: h.preview("window"),
     types: type.prototype,
     disabled: true,
     clients: [
@@ -1473,6 +1480,7 @@ const projects = [
   {
     date: "2015/05/28",
     title: "Gear Builder",
+    image: h.preview("gear"),
     types: type.prototype,
     clients: [
       client.miguelRivas,
@@ -1490,6 +1498,7 @@ const projects = [
   {
     date: "2015/12/07",
     title: "SVG 101",
+    image: h.preview("svg-101"),
     types: type.prototype,
     clients: [
       client.miguelRivas,
@@ -1518,6 +1527,7 @@ const projects = [
   {
     date: "2015/12/22",
     title: "Tetravex",
+    image: h.preview("tetravex"),
     types: type.app,
     clients: [
       client.miguelRivas,
@@ -1562,6 +1572,7 @@ const projects = [
   {
     date: "2010/07/07",
     title: "French Toast",
+    image: h.preview("french-toast"),
     disabled: true,
     types: type.motionGraphics,
     clients: [
@@ -1581,6 +1592,7 @@ const projects = [
   {
     date: "2012/07/24",
     title: "La Guerra de Vectores",
+    image: h.preview("vectores"),
     types: type.motionGraphics,
     disabled: true,
     clients: [
@@ -1600,6 +1612,7 @@ const projects = [
   {
     date: "2016/11/21",
     title: "Wurlex",
+    image: h.preview("wurlex"),
     types: type.animation3D,
     clients: [
       client.miguelRivas,
@@ -1622,6 +1635,7 @@ const projects = [
   {
     date: "2014/02/09",
     title: "Screens Portfolio",
+    image: h.preview("2014"),
     types: type.app,
     clients: [
       client.miguelRivas,
@@ -1652,6 +1666,7 @@ const projects = [
   {
     date: "2016/08/11",
     title: "Spirit Portfolio",
+    image: h.preview("2016"),
     types: type.app,
     clients: [
       client.miguelRivas,
@@ -1677,6 +1692,7 @@ const projects = [
   {
     date: "2021/08/12",
     title: "Portfolio 2021",
+    image: h.preview("2021"),
     types: type.app,
     clients: [
       client.miguelRivas,
@@ -1720,6 +1736,7 @@ const projects = [
   {
     date: "2018/01/01",
     title: "Grid Portfolio",
+    image: h.preview("2018"),
     types: type.app,
     clients: [
       client.miguelRivas,
@@ -1730,46 +1747,46 @@ const projects = [
       tool.git,
     ],
     links: [
-      {
-        url: linkWeb("2018"),
-        text: "Home",
-        self: false,
-      },
-      {
-        url: linkWeb("2018/drlogic.html"),
-        text: "DrLogic",
-        self: false,
-      },
-      {
-        url: linkWeb("2018/apap.html"),
-        text: "Apap",
-        self: false,
-      },
-      {
-        url: linkWeb("2018/bpr.html"),
-        text: "BPR Bank",
-        self: false,
-      },
-      {
-        url: linkWeb("2018/presidente.html"),
-        text: "Presidente",
-        self: false,
-      },
-      {
-        url: linkWeb("2018/tests.html"),
-        text: "Tests",
-        self: false,
-      },
-      {
-        url: linkVimeo("260621089"),
-        text: "Video",
-        self: false,
-      },
-      {
-        url: linkGithub("2018"),
-        text: "Github",
-        self: false,
-      },
+      // {
+      //   url: linkWeb("2018"),
+      //   text: "Home",
+      //   self: false,
+      // },
+      // {
+      //   url: linkWeb("2018/drlogic.html"),
+      //   text: "DrLogic",
+      //   self: false,
+      // },
+      // {
+      //   url: linkWeb("2018/apap.html"),
+      //   text: "Apap",
+      //   self: false,
+      // },
+      // {
+      //   url: linkWeb("2018/bpr.html"),
+      //   text: "BPR Bank",
+      //   self: false,
+      // },
+      // {
+      //   url: linkWeb("2018/presidente.html"),
+      //   text: "Presidente",
+      //   self: false,
+      // },
+      // {
+      //   url: linkWeb("2018/tests.html"),
+      //   text: "Tests",
+      //   self: false,
+      // },
+      // {
+      //   url: linkVimeo("260621089"),
+      //   text: "Video",
+      //   self: false,
+      // },
+      // {
+      //   url: linkGithub("2018"),
+      //   text: "Github",
+      //   self: false,
+      // },
     ],
     children: [
       h.getNewID(client.miguelRivas, "2021/03/24"),
@@ -1778,6 +1795,7 @@ const projects = [
   {
     date: "2016/01/11",
     title: "HTML/LOVE",
+    image: h.preview("html-love"),
     types: type.landingPage,
     clients: [
       client.miguelRivas,
@@ -1903,6 +1921,7 @@ const projects = [
   {
     date: "2021/03/26",
     title: "3D Viewer",
+    image: h.preview("2021-react"),
     types: type.app,
     clients: [
       client.miguelRivas,
@@ -2131,6 +2150,7 @@ const projects = [
   {
     date: "2012/11/06",
     title: "Drakkar",
+    image: h.preview("drakkar"),
     types: type.animation3D,
     disabled: true,
     clients: [
@@ -2264,6 +2284,7 @@ const projects = [
   {
     date: "2011/07/06",
     title: "X-wing",
+    image: h.preview("x-wing"),
     types: type.animation3D,
     disabled: true,
     clients: [
@@ -2330,6 +2351,7 @@ const projects = [
   {
     date: "2015/03/24",
     title: "BigPapi Selfie",
+    image: h.preview("pepsi"),
     types: type.motionGraphics,
     clients: [
       client.pepsi,
@@ -2349,6 +2371,7 @@ const projects = [
   {
     date: "2015/04/18",
     title: "Carnaval Presidente 2015",
+    image: h.preview("carnaval-presidente"),
     types: type.landingPage,
     disabled: true,
     clients: [
@@ -2383,6 +2406,7 @@ const projects = [
   {
     date: "2015/05/20",
     title: "Recarga Con RedRock",
+    image: h.preview("redrock"),
     types: type.motionGraphics,
     disabled: true,
     clients: [
@@ -2402,6 +2426,7 @@ const projects = [
   {
     date: "2015/10/23",
     title: "Retrobrindis",
+    image: h.preview("retro-brindis"),
     types: type.app,
     disabled: true,
     clients: [
@@ -2430,6 +2455,7 @@ const projects = [
   {
     date: "2015/11/12",
     title: "Mineriza a tu Familia",
+    image: h.preview("apap"),
     types: type.app,
     clients: [
       client.apap,
@@ -2511,6 +2537,7 @@ const projects = [
   {
     date: "2016/02/22",
     title: "Website",
+    image: h.preview("drlogic"),
     types: type.app,
     clients: [
       client.drLogic,
@@ -2594,6 +2621,7 @@ const projects = [
   {
     date: "2016/06/16",
     title: "Server Prompt",
+    image: h.preview("pixel-404"),
     types: type.prototype,
     clients: [
       client.pixelPerfectTree,
@@ -2627,6 +2655,7 @@ const projects = [
   {
     date: "2016/06/30",
     title: "Animated Header",
+    image: h.preview("voxel"),
     types: type.prototype,
     clients: [
       client.voxel,
@@ -2655,6 +2684,7 @@ const projects = [
   {
     date: "2015/05/27",
     title: "Orange Reel",
+    image: h.preview("orange"),
     types: type.motionGraphics,
     clients: [
       client.orange,
@@ -2834,6 +2864,7 @@ const projects = [
   {
     date: "2020/05/05",
     title: "Popkern",
+    image: h.preview("popkern"),
     types: type.module,
     clients: [
       client.enovational,
@@ -3037,6 +3068,7 @@ const projects = [
   {
     date: "2018/06/25",
     title: "Maryland Onestop",
+    image: h.preview("onestop"),
     types: type.app,
     disabled: true,
     clients: [
@@ -3056,6 +3088,7 @@ const projects = [
   {
     date: "2018/09/04",
     title: "Formability",
+    image: h.preview("formability"),
     types: type.app,
     disabled: true,
     clients: [
@@ -3168,6 +3201,7 @@ const projects = [
   {
     date: "2021/12/21",
     title: "Kaspar Island",
+    image: h.preview("kaspar"),
     types: type.animation3D,
     disabled: true,
     clients: [
@@ -3181,6 +3215,7 @@ const projects = [
   {
     date: "2021/12/30",
     title: "Iqra Island",
+    image: h.preview("iqra"),
     types: type.animation3D,
     disabled: true,
     clients: [
@@ -3194,6 +3229,7 @@ const projects = [
   {
     date: "2021/12/10",
     title: "Goose",
+    image: h.preview("goose"),
     types: type.animation3D,
     disabled: true,
     clients: [
@@ -3207,6 +3243,7 @@ const projects = [
   {
     date: "2022/01/05",
     title: "MR Universe",
+    image: h.preview("mr-universe"),
     types: type.animation3D,
     disabled: true,
     clients: [
