@@ -45,6 +45,9 @@
           }
         }
       },
+      "github": {
+        "title": "Github"
+      },
       "statistics": {
         "title": "Estadísticas",
         "workarea": {
@@ -75,6 +78,23 @@
       },
       "videos": {
         "title": "Vídeos"
+      }
+    }
+  },
+  "timeline": {
+    "navTitle": "Máquina del Tiempo",
+    "section": {
+      "2014": {
+        "title": "2014"
+      },
+      "2016": {
+        "title": "2016"
+      },
+      "2018": {
+        "title": "2018"
+      },
+      "2022": {
+        "title": "2022"
       }
     }
   },

@@ -149,6 +149,11 @@ export default Vue.extend({
         icon: "color",
         route: ["ui", "colors", "icons", "grid", "grid-gallery"],
       },
+      {
+        tooltip: i18n.t("timeline.navTitle"),
+        icon: "",
+        route: ["timeline", "2014", "2016", "2018", "2022"],
+      },
     ],
     navigationBuilder: [
       {
