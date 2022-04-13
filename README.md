@@ -1,6 +1,6 @@
 ## Add upstream
 ```sh
-git remote add upstream git@github.com:miguel-rivas/2022.git
+git remote add upstream git@github.com:miguel-rivas/2022-04.git
 ```
 
 ## Project setup

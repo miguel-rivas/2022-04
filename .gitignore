@@ -1,9 +1,6 @@
 .DS_Store
 node_modules
 /dist
-firebase-db.ts
-firebase.ts
-google-maps.ts
 
 # local env files
 .env.local
