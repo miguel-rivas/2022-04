@@ -1,0 +1,23 @@
+$layers: (
+  //----Bottom
+  '&.clock .bk-ornament',
+  '&.underwater .bk-ornament',
+  '&.dragon .bk-ornament',
+  '&.dragon-night .bk-ornament',
+  '&.night .bk-ornament',
+  '&.sunset .bk-ornament',
+  '.clouds',
+  '.mountains',
+  '.city',
+
+  '> section',
+  //----Front
+);
+
+$index: -1;
+@each $layer in $layers {
+  $index: $index + 1;
+  #{$layer} {
+    z-index: $index;
+  }
+}

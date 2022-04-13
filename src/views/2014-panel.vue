@@ -75,17 +75,17 @@ export default Vue.extend({
       {
         icon: "avo",
         text: "Home",
-        path: "home",
+        path: "2014-home",
       },
       {
         icon: "duck",
         text: "Projects",
-        path: "home",
+        path: "2014-projects",
       },
       {
         icon: "paper-plane",
         text: "Contact",
-        path: "home",
+        path: "2014-contact",
       },
     ],
 

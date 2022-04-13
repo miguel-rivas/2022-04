@@ -79,6 +79,7 @@ main {
 @import "core/layers";
 @import "core/shortcuts";
 @import "core/inputs";
+@import "core/mixins";
 
 @import "views/stargaze";
 @import "views/grid";
@@ -89,6 +90,7 @@ main {
 @import "views/css";
 @import "views/avatar";
 @import "views/pixel";
+@import "views/2014";
 
 @import "components/app";
 @import "components/table";

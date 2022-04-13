@@ -1,0 +1,51 @@
+.nested-app.p2014 {
+  @import "2014/general/layers";
+  @import "2014/general/fonts";
+
+  @import "2014/general/footer";
+
+  @import "2014/desktop/home";
+  @import "2014/desktop/portfolio";
+  @import "2014/desktop/contacts";
+
+  @import "2014/skins/clock";
+  @import "2014/skins/dragon-night";
+  @import "2014/skins/dragon";
+  @import "2014/skins/night";
+  @import "2014/skins/sunset";
+  @import "2014/skins/underwater";
+
+  &,
+  > section {
+    position: relative;
+    height: 100%;
+  }
+
+  .nano-box {
+    border-radius: 5px;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    background-color: rgb(0 0 0 / 50%);
+
+    li,
+    p {
+      color: #fff;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    li {
+      text-transform: uppercase;
+    }
+
+    &.inline {
+      padding: 0.5rem;
+      margin-bottom: 0;
+    }
+  }
+}

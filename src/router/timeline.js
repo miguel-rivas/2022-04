@@ -3,8 +3,13 @@ import Vue from 'vue';
 import NestedWorkareaView from '../views/nested-workarea.vue';
 import NestedPanelView from '../views/nested-panel.vue';
 
+import P2014HomeView from '../views/2014-home.vue';
+import P2014ProjectsView from '../views/2014-projects.vue';
+import P2014ContactView from '../views/2014-contact.vue';
+
 import P2014WorkareaView from '../views/2014-workarea.vue';
 import P2014PanelView from '../views/2014-panel.vue';
+
 import P2016WorkareaView from '../views/2016-workarea.vue';
 import P2016PanelView from '../views/2016-panel.vue';
 import P2018WorkareaView from '../views/2018-workarea.vue';
@@ -65,7 +70,31 @@ export default {
         workarea2: P2014WorkareaView,
         panel2: P2014PanelView,
       },
+      children: [
+        {
+          name: '2014-home',
+          path: '/2014-home',
+          components: {
+            workarea3: P2014HomeView,
+          },
+        },
+        {
+          name: '2014-projects',
+          path: '/2014-projects',
+          components: {
+            workarea3: P2014ProjectsView,
+          },
+        },
+        {
+          name: '2014-contact',
+          path: '/2014-contact',
+          components: {
+            workarea3: P2014ContactView,
+          },
+        },
+      ]
     },
+    
     {
       name: '2016',
       path: '/2016',

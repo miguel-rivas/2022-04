@@ -1,0 +1,82 @@
+section.contact {
+	display: flex;
+
+	.form-container {
+		position: relative;
+		max-width: 300px;
+		margin: auto;
+		text-align: center;
+
+		.form-header {
+			margin-bottom: -1.8rem;
+			margin-top: -1.8rem;
+		}
+
+		form {
+			background-color: #3b2313;
+			border-radius: 25px;
+			padding: 1.8rem;
+		}
+
+		textarea {
+			resize: none;
+		}
+
+		input,
+		textarea {
+			background-color: #d7df21;
+			color: #000;
+			border: 0;
+			font-family: "Montserrat", Helvetica, Arial, Tahoma, sans-serif;
+			font-size: 14px;
+			margin-bottom: 1rem;
+			padding: 0.5rem;
+		}
+
+		input,
+		textarea,
+		button {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	.star {
+		position: absolute;
+		z-index: -1;
+		&.right {
+			transform: rotateY(180deg);
+		}
+	}
+
+	.bird {
+		position: absolute;
+		z-index: -2;
+
+		background-repeat: no-repeat;
+		&.b1 {
+			@include size(125px, x, 103px, x);
+			@include position(150px, x, x, 10%);
+			background-image: url("/img/2014/sprites-04.png");
+			background-position: -4px -144px;
+		}
+
+		&.b2 {
+			@include size(60px, x, 50px, x);
+			@include position(500px, 10%, x, x);
+			background-image: url("/img/2014/sprites-04.png");
+			background-position: -4px -255px;
+
+			@media screen and (max-height: 700px) {
+				display: none;
+			}
+		}
+
+		&.b3 {
+			@include size(140px, x, 140px, x);
+			@include position(150px, 12%, x, x);
+			background-image: url("/img/2014/sprites-04.png");
+			background-position: -4px -1px;
+		}
+	}
+}

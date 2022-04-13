@@ -152,7 +152,7 @@ export default Vue.extend({
       {
         tooltip: i18n.t("timeline.navTitle"),
         icon: "clock",
-        route: ["timeline", "2014", "2016", "2018", "2022"],
+        route: ["timeline", "2014", "2014-home", "2014-projects", "2014-contact", "2016", "2018", "2022"],
       },
     ],
     navigationBuilder: [

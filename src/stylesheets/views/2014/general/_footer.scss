@@ -1,0 +1,78 @@
+.bk-ornament,
+.bk-ornament-2 {
+  position: absolute;
+  display: block;
+}
+
+footer {
+  .city {
+    width: 100%;
+    height: 220px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    transition: 1000ms;
+    background: url('/img/2014/city.svg') center bottom repeat-x;
+  }
+
+  .mountains {
+    width: 100%;
+    height: 220px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    transition: 1000ms;
+    background: url('/img/2014/mountains.svg') center bottom repeat-x;
+  }
+
+  .clouds {
+    position: absolute;
+    width: 100%;
+    height: 220px;
+    animation: sky linear 50s infinite;
+    bottom: 0;
+    left: 0;
+    background-image: url('/img/2014/p01.png');
+    background-repeat: repeat-x;
+    background-position: 0 0;
+  }
+}
+
+&.section {
+  &-home {
+    footer {
+      .city {
+        background-position-x: 1000px;
+        background-position-y: -70px;
+      }
+      .mountains {
+        background-position-x: 500px;
+        background-position-y: -75px;
+      }
+    } 
+  }
+  &-projects {
+    footer {
+      .city {
+        background-position-x: 10px;
+        background-position-y: -75px;
+      }
+      .mountains {
+        background-position-x: 20px;
+        background-position-y: -70px;
+      }
+    }
+  }
+  &-contact {
+    footer {
+      .city {
+        background-position-x: 500px;
+        background-position-y: -80px;
+      }
+      .mountains {
+        background-position-x: 200px;
+        background-position-y: -75px;
+      }
+    }
+  }
+}
