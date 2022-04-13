@@ -6,7 +6,7 @@
           <li v-bind:key="itemIndex" class="item icon-item">
             <nn-row>
               <nn-column size="100%, 150">
-                <nn-icon glyph="github"/>
+                <nn-icon glyph="github" />
               </nn-column>
               <nn-column size="100%">
                 <br />
@@ -46,6 +46,7 @@
                         color="royal-purple"
                         text="Visit"
                         tag="a"
+                        target="_blank"
                         :href="item.link"
                       />
                     </li>

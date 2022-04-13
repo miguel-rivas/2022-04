@@ -1,8 +1,6 @@
 <template lang="pug">
 .capsule
-  nn-row.row-block.row-block(
-    v-if="selection.currentLink.src === ''",
-  )
+  nn-row.row-block.row-block
     nn-column(size="100%")
       legend {{ $t('projects.section.list.panel.filter.legend') }}
 
@@ -73,10 +71,6 @@
                     value="homework",
                     v-model="selection.filterData"
                   )
-
-  nn-row.row-block(v-else)
-    nn-column(size="100%")
-      btn(@click="closeProject()", color="persian-red", text="Close Project")
 </template>
 
 <script>
@@ -86,18 +80,10 @@ export default Vue.extend({
   data: () => ({
     selection: {
       filterData: undefined,
-      currentLink: {},
     },
   }),
   created() {
     this.selection = this.$store.getters.getFilterData;
-  },
-  methods: {
-    closeProject() {
-      this.$store.commit("setProject", {
-        value: "",
-      });
-    },
   },
 });
 </script>

@@ -1,15 +1,5 @@
 <template lang="pug">
-.projector(v-if="selection.currentLink.src !== ''")
-  iframe(
-    :src="selection.currentLink.src",
-    :frameborder="selection.currentLink.frameborder",
-    :allow="selection.currentLink.allow",
-    :allowfullscreen="selection.currentLink.allowfullscreen",
-    :mozallowfullscreen="selection.currentLink.allowfullscreen",
-    :webkitallowfullscreen="selection.currentLink.allowfullscreen"
-  )
-
-nn-scroll-area(color="royal-purple", v-else, :horizontal="false")
+nn-scroll-area(color="royal-purple", :horizontal="false")
   gallery(:db="projectsDB")
 </template>
 
@@ -27,7 +17,6 @@ export default Vue.extend({
     panel: false,
     selection: {
       filterData: undefined,
-      currentLink: {},
     },
   }),
   computed: {

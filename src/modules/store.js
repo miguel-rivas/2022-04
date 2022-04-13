@@ -34,11 +34,6 @@ export const store = new Vuex.Store({
       },
       projects: {
         filterData: 'all',
-        currentLink: {
-          src: "",
-          frameborder: "0",
-          allowfullscreen: true
-        },
       },
       stargaze: {
         hue: 240,
@@ -54,9 +49,6 @@ export const store = new Vuex.Store({
   mutations: {
     setValue(state, payload) {
       state[payload.name] = payload.value;
-    },
-    setProject(state, payload) {
-      state.selection.projects.currentLink.src = payload.value;
     },
     centerMap(state, payload) {
       state.selection.locations.mapCenter = payload.position;
