@@ -33,12 +33,8 @@
 
 <script>
 import Vue from "vue";
-import Row from "./row.vue";
-import Column from "./column.vue";
-import Btn from "./btn.vue";
 
 export default Vue.extend({
-  components: { Row, Column, Btn },
   inheritAttrs: false,
   props: {
     label: {
