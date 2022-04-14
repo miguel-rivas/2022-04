@@ -33,11 +33,11 @@ const projects = [
     ],
     image: h.preview("2022"),
     links: [
-      {
-        url: linkWeb("2022-04"),
-        text: "App",
-        self: false,
-      },
+      // {
+      //   url: linkWeb("2022-04"),
+      //   text: "App",
+      //   self: false,
+      // },
       {
         url: linkGithub("2022-04"),
         text: "Github",
@@ -87,11 +87,11 @@ const projects = [
       tool.i18n,
     ],
     links: [
-      {
-        url: linkWeb("2022"),
-        text: "App",
-        self: false,
-      },
+      // {
+      //   url: linkWeb("2022"),
+      //   text: "App",
+      //   self: false,
+      // },
       {
         url: linkGithub("2022"),
         text: "Github",
@@ -1646,11 +1646,11 @@ const projects = [
       tool.git,
     ],
     links: [
-      {
-        url: linkWeb("2014"),
-        text: "App",
-        self: false,
-      },
+      // {
+      //   url: linkWeb("2014"),
+      //   text: "App",
+      //   self: false,
+      // },
       {
         url: linkGithub("2014"),
         text: "Github",
@@ -1712,13 +1712,13 @@ const projects = [
       tool.axios,
     ],
     links: [
+      // {
+      //   url: linkWeb("2021-vue"),
+      //   text: "App",
+      //   self: false,
+      // },
       {
-        url: linkWeb("2021-vue"),
-        text: "App",
-        self: false,
-      },
-      {
-        url: linkGithub("2021-vue"),
+        url: linkGithub("2021"),
         text: "Github",
         self: false,
       },
@@ -1782,11 +1782,11 @@ const projects = [
       //   text: "Video",
       //   self: false,
       // },
-      // {
-      //   url: linkGithub("2018"),
-      //   text: "Github",
-      //   self: false,
-      // },
+      {
+        url: linkGithub("2018"),
+        text: "Github",
+        self: false,
+      },
     ],
     children: [
       h.getNewID(client.miguelRivas, "2021/03/24"),
