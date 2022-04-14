@@ -7,11 +7,11 @@
           Washington, DC.
         </h1>
         <input type="text" placeholder="Filter Projects By" />
-        <btn text="All Projects" color="denim" />
+        <!-- <btn text="All Projects" color="denim" />
         <btn text="Top Projects" color="denim" />
         <btn text="HTML / JS / CSS" color="denim" />
         <btn text="Motion Graphics" color="denim" />
-        <btn text="Design" color="denim" />
+        <btn text="Design" color="denim" /> -->
       </div>
     </header>
     <section class="gallery">
