@@ -56,7 +56,7 @@ export default {
             {
               text: "timeline.section.2022.title",
               name: ["2022"],
-              icon: "monster",
+              icon: "moon",
             },
           ])
         }
