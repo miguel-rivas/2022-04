@@ -1,7 +1,7 @@
 <template>
   <section class="contact">
     <div class="form-container">
-      <img src="/img/2014/form-header.png" alt="" class="form-header" />
+      <img src="https://miguel-rivas.github.io/zapp/img/2014/form-header.png" alt="" class="form-header" />
       <form>
         <input type="text" name="name" placeholder="Name" />
         <input type="email" name="email" placeholder="Email" />

@@ -63,14 +63,14 @@ section.contact {
 		&.b1 {
 			@include size(125px, x, 103px, x);
 			@include position(150px, x, x, 10%);
-			background-image: url("/img/2014/sprites-04.png");
+			background-image: url("https://miguel-rivas.github.io/zapp/img/2014/sprites-04.png");
 			background-position: -4px -144px;
 		}
 
 		&.b2 {
 			@include size(60px, x, 50px, x);
 			@include position(500px, 10%, x, x);
-			background-image: url("/img/2014/sprites-04.png");
+			background-image: url("https://miguel-rivas.github.io/zapp/img/2014/sprites-04.png");
 			background-position: -4px -255px;
 
 			@media screen and (max-height: 700px) {
@@ -81,7 +81,7 @@ section.contact {
 		&.b3 {
 			@include size(140px, x, 140px, x);
 			@include position(150px, 12%, x, x);
-			background-image: url("/img/2014/sprites-04.png");
+			background-image: url("https://miguel-rivas.github.io/zapp/img/2014/sprites-04.png");
 			background-position: -4px -1px;
 		}
 	}
