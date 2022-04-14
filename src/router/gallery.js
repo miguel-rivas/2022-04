@@ -28,12 +28,12 @@ export default {
           default: () => ([
             {
               text: "galleries.section.images.title",
-              name: "images",
+              name: ["images"],
               icon: "collections",
             },
             {
               text: "galleries.section.videos.title",
-              name: "videos",
+              name: ["videos"],
               icon: "movie",
             },
           ])

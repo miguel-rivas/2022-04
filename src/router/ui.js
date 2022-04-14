@@ -31,22 +31,22 @@ export default {
           default: () => ([
             {
               text: "ui.section.gridBuilder.title",
-              name: "grid",
+              name: ["grid"],
               icon: "robot",
             },
             {
               text: "ui.section.gridGallery.title",
-              name: "grid-gallery",
+              name: ["grid-gallery"],
               icon: "robot",
             },
             {
               text: "ui.section.colors.title",
-              name: "colors",
+              name: ["colors"],
               icon: "color",
             },
             {
               text: "ui.section.icons.title",
-              name: "icons",
+              name: ["icons"],
               icon: "category",
             },
           ])

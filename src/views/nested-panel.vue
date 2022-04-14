@@ -13,18 +13,18 @@ nn-scroll-area(color="royal-purple")
                     btn(
                       tag="span",
                       mode="flat"
-                      :color="$route.name === route.name ? 'green-pea' : 'charcoal'",
+                      :color="route.name.includes($route.name) ? 'green-pea' : 'charcoal'",
                       :glyph="route.icon",
-                      :to="route"
+                      :to="route.name[0]"
                     )
                   nn-column(size="100%-35")
                     btn(
                       tag="span",
                       color="gravel"
                       mode="flat"
-                      :active="$route.name === route.name",
+                      :active="route.name.includes($route.name)",
                       :text="$t(route.text)",
-                      :to="route"
+                      :to="route.name[0]"
                     )
   router-view(name="panel2")
 </template>

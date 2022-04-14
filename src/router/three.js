@@ -34,37 +34,37 @@ export default {
           default: () => ([
             {
               text: "three.section.cube.title",
-              name: "cube",
+              name: ["cube"],
               icon: "cube",
             },
             {
               text: "three.section.spirit.title",
-              name: "spirit",
+              name: ["spirit"],
               icon: "monster",
             },
             {
               text: "three.section.drakkar.title",
-              name: "drakkar",
+              name: ["drakkar"],
               icon: "boat",
             },
             {
               text: "three.section.car.title",
-              name: "car",
+              name: ["car"],
               icon: "car",
             },
             {
               text: "three.section.xwing.title",
-              name: "xwing",
+              name: ["xwing"],
               icon: "rocket",
             },
             {
               text: "three.section.2017.title",
-              name: "portfolio2017",
+              name: ["portfolio2017"],
               icon: "book",
             },
             {
               text: "three.section.audio.title",
-              name: "audio2",
+              name: ["audio2"],
               icon: "book",
             },
             // {

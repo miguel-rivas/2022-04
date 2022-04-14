@@ -10,6 +10,8 @@ import P2014ContactView from '../views/2014-contact.vue';
 import P2014WorkareaView from '../views/2014-workarea.vue';
 import P2014PanelView from '../views/2014-panel.vue';
 
+import P2022PanelView from '../views/2022-panel.vue';
+
 import P2016WorkareaView from '../views/2016-workarea.vue';
 import P2016PanelView from '../views/2016-panel.vue';
 import P2018WorkareaView from '../views/2018-workarea.vue';
@@ -38,7 +40,7 @@ export default {
           default: () => ([
             {
               text: "timeline.section.2014.title",
-              name: "2014",
+              name: ["2014-home", "2014", "2014-projects", "2014-contact"],
               icon: "avo",
             },
             // {
@@ -53,7 +55,7 @@ export default {
             // },
             {
               text: "timeline.section.2022.title",
-              name: "2022",
+              name: ["2022"],
               icon: "monster",
             },
           ])
@@ -116,7 +118,7 @@ export default {
       path: '/2022',
       components: {
         workarea2: StargazerWorkareaView,
-        panel2: StargazerPanelView,
+        panel2: P2022PanelView,
       },
     },
   ],

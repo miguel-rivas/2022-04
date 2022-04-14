@@ -30,17 +30,17 @@ export default {
           default: () => ([
             {
               text: "projects.section.github.title",
-              name: "github",
+              name: ["github"],
               icon: "github",
             },
             {
               text: "projects.section.list.title",
-              name: "list",
+              name: ["list"],
               icon: "list",
             },
             {
               text: "projects.section.statistics.title",
-              name: "statistics",
+              name: ["statistics"],
               icon: "chart",
             },
           ])

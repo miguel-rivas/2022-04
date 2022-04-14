@@ -10,8 +10,6 @@ export default class Gear extends HTMLElement {
 
   connectedCallback() {
     const translation = this.defineProp('translation', "200");
-    const x = +this.defineProp('x', 0);
-    const y = +this.defineProp('y', 0);
     const sides = +this.defineProp('sides', 5);
     const rotation = +this.defineProp('rotation', 0);
     const starRadius = +this.defineProp('star-radius', 50);
