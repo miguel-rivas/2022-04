@@ -16,6 +16,10 @@ import P2016WorkareaView from '../views/2016-workarea.vue';
 import P2016PanelView from '../views/2016-panel.vue';
 
 import P2018HomeView from '../views/2018-workarea-home.vue';
+import P2018DrLogicView from '../views/2018-workarea-drlogic.vue';
+import P2018ApapView from '../views/2018-workarea-apap.vue';
+import P2018BPRBankView from '../views/2018-workarea-bpr.vue';
+import P2018PresidenteView from '../views/2018-workarea-presidente.vue';
 
 import P2018WorkareaView from '../views/2018-workarea.vue';
 import P2018PanelView from '../views/2018-panel.vue';
@@ -126,28 +130,28 @@ export default {
           name: '2018-drlogic',
           path: '/2018-drlogic',
           components: {
-            workarea3: P2018HomeView,
+            workarea3: P2018DrLogicView,
           },
         },
         {
           name: '2018-apap',
           path: '/2018-apap',
           components: {
-            workarea3: P2018HomeView,
+            workarea3: P2018ApapView,
           },
         },
         {
           name: '2018-presidente',
           path: '/2018-presidente',
           components: {
-            workarea3: P2018HomeView,
+            workarea3: P2018PresidenteView,
           },
         },
         {
           name: '2018-bpr',
           path: '/2018-bpr',
           components: {
-            workarea3: P2018HomeView,
+            workarea3: P2018BPRBankView,
           },
         },
       ],
