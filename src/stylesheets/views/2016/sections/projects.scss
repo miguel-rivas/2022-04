@@ -1,0 +1,56 @@
+section.projects {
+	text-align: center;
+	color: cyan;
+	background: #fff url("https://miguel-rivas.github.io/zapp/img/2016/landing_cloud_middle.png") bottom left no-repeat;
+	background-size: contain;
+	padding-top: 820px;
+	min-height: 740px;
+	position: relative;
+
+	.city {
+		width: 100%;
+		position: relative;
+		z-index: 1;
+		height: 430px;
+
+		@media (max-width: 650px) {
+			height: 250px;
+		}
+
+		.mountains {
+			bottom: -260px;
+			z-index: 2;
+			background: url("https://miguel-rivas.github.io/zapp/img/2016/landing_mountains.png") no-repeat bottom center;
+
+			@media (max-width: 900px) {
+				bottom: -165px;
+			}
+
+			@media (max-width: 500px) {
+				bottom: -169px;
+			}
+
+		}
+
+		.giant {
+			bottom: 0;
+			z-index: 1;
+			background: url("https://miguel-rivas.github.io/zapp/img/2016/landing_giant_character.png") no-repeat bottom center;
+			transition: background-position-y 5s;
+
+			@media (max-width: 800px) {
+				bottom: -100px;
+				background-size: 50%;
+			}
+		}
+
+		.mountains,
+		.giant {
+			position: absolute;
+			width: 120%;
+			height: 1300px;
+			background-size: contain;
+			left: -10%;
+		}
+	}
+}

@@ -3,9 +3,9 @@ import Vue from 'vue';
 import NestedWorkareaView from '../views/nested-workarea.vue';
 import NestedPanelView from '../views/nested-panel.vue';
 
-import P2014HomeView from '../views/2014-home.vue';
-import P2014ProjectsView from '../views/2014-projects.vue';
-import P2014ContactView from '../views/2014-contact.vue';
+import P2014HomeView from '../views/2014-workarea-home.vue';
+import P2014ProjectsView from '../views/2014-workarea-projects.vue';
+import P2014ContactView from '../views/2014-workarea-contact.vue';
 
 import P2014WorkareaView from '../views/2014-workarea.vue';
 import P2014PanelView from '../views/2014-panel.vue';
@@ -43,11 +43,11 @@ export default {
               name: ["2014-home", "2014", "2014-projects", "2014-contact"],
               icon: "avo",
             },
-            // {
-            //   text: "timeline.section.2016.title",
-            //   name: "2016",
-            //   icon: "monster",
-            // },
+            {
+              text: "timeline.section.2016.title",
+              name: ["2016"],
+              icon: "monster",
+            },
             // {
             //   text: "timeline.section.2018.title",
             //   name: "2018",

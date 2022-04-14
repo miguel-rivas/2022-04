@@ -15,7 +15,6 @@ export const store = new Vuex.Store({
     panel: false,
     panelSize: ['300', '100%-350'],
     theme: false,
-    theme2: 'clock',
     alert: {
       message: "",
       status: "",
@@ -35,6 +34,10 @@ export const store = new Vuex.Store({
       },
       projects: {
         filterData: 'all',
+      },
+      timeline: {
+        theme2014: 'clock',
+        theme2016: '',
       },
       stargaze: {
         hue: 240,
@@ -63,13 +66,25 @@ export const store = new Vuex.Store({
     removeColumn(state, index) {
       state.selection.gridState.columns.splice(index, 1);
     },
+
+    setTheme(state, payload) {
+      state.selection.timeline[payload.name] = payload.value;
+    },
+    toggleTheme(state, payload) {
+      if(state.selection.timeline[payload.name] !== payload.value){
+        state.selection.timeline[payload.name] = payload.value;
+      } else {
+        state.selection.timeline[payload.name] = payload.alt;
+      }
+    },
   },
   getters: {
     getGridSize: state => state.selection.pixelState.gridSize,
     getPanelVisibility: state => state.panel,
     getPanelSize: state => state.panelSize,
     getTheme: state => state.theme,
-    getTheme2: state => state.theme2,
+    getTheme2014: state => state.selection.timeline.theme2014,
+    getTheme2016: state => state.selection.timeline.theme2016,
     getAlert: state => state.alert,
     getModal: state => state.modalState,
     getStargazeSelection: state => state.selection.stargaze,

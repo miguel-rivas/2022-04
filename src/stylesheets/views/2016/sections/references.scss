@@ -1,0 +1,43 @@
+section.references {
+	background: #c1272d url("https://miguel-rivas.github.io/zapp/img/2016/landing_pattern.jpg") repeat;
+	padding: 20px 0 320px;
+	text-align: center;
+	position: relative;
+	color: #fff;
+
+	@media (max-width: 500px) { padding: 20px 0 70px; }
+
+	.preview {
+		max-width: 100%;
+	}
+
+	.content {
+		margin-top: 360px;
+		position: relative;
+	}
+
+	article {
+		display: inline-block;
+		margin: 3rem;
+
+		h3, p {
+			text-transform: uppercase;
+		}
+	}
+
+	.ornament_01,
+	.ornament_02 {
+		position: absolute;
+		@media (max-width: 500px) { display: none; }
+	}
+
+	.ornament_01 {
+		top: 0;
+		left: -130px;
+	}
+
+	.ornament_02 {
+		top: 590px;
+		right: -70px;
+	}
+}

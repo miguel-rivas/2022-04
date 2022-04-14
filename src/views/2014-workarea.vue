@@ -1,5 +1,5 @@
 <template>
-  <div class="nested-app p2014" :class="[theme2, sectionName]">
+  <div class="nested-app p2014" :class="[theme, sectionName]">
     <router-view name="workarea3" />
 
     <div class="bk-ornament" />
@@ -16,9 +16,7 @@ import Vue from "vue";
 import { mapGetters } from "vuex";
 
 export default Vue.extend({
-  components: {},
   data: () => ({
-    selection: {},
     contentIndex: 0,
     contentDB: [
       {
@@ -37,7 +35,7 @@ export default Vue.extend({
   }),
   computed: {
     ...mapGetters({
-      theme2: "getTheme2",
+      theme: "getTheme2014",
     }),
     sectionName() {
       return `section-${this.$route.name}`;

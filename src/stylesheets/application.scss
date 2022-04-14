@@ -3,6 +3,8 @@
 @import "~@fontsource/montserrat/latin-400.css";
 @import "~@fontsource/montserrat/latin-600.css";
 
+@import "~@fontsource/quicksand/latin-700.css";
+
 // ------------------ Modules
 @import "nano-grid/scss/nano-grid";
 @import "nano-grid/scss/btn";
@@ -91,6 +93,7 @@ main {
 @import "views/avatar";
 @import "views/pixel";
 @import "views/2014";
+@import "views/2016";
 
 @import "components/app";
 @import "components/table";
@@ -106,6 +109,11 @@ main {
 @import "components/spirit";
 
 @import "core/vue-theme";
+
+.nested-app {
+  height: 100%;
+  position: relative;
+}
 
 .close-btn {
   width: 100%;

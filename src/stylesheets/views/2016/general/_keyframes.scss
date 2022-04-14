@@ -1,0 +1,18 @@
+@keyframes flyingCloud
+{
+	from
+	{
+		left: -690px;
+	}
+	to
+	{
+		left: 300%;
+	}
+}
+
+@keyframes shake
+{
+	25% { transform: rotateZ(-1deg); }
+	50% { transform: rotateZ(1deg); }
+	100% { transform: rotateZ(0); }
+}
