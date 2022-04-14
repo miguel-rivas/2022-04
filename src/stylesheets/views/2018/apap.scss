@@ -1,18 +1,17 @@
-header {
-	background: url('https://miguel-rivas.github.io/zapp/img/2018/headers/apap.jpg') bottom no-repeat;
+&.section-2018-apap {
+	header {
+		background: url("https://miguel-rivas.github.io/zapp/img/2018/headers/apap.jpg") bottom no-repeat;
 
-	@media (max-width: $largeScreen) {
-		background: #243b87;
+		@media (max-width: $largeScreen) {
+			background: #243b87;
+		}
 	}
-	@media (min-width: $largeScreen) {
-		padding-top: 180px;
+
+	h1 {
+		color: #fff;
 	}
-}
 
-h1 {
-	color: #fff;
-}
-
-.info:first-child {
-	border-bottom: 3px solid #e6e034;
+	.info:first-child {
+		border-bottom: 3px solid #e6e034;
+	}
 }

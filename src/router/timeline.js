@@ -57,7 +57,7 @@ export default {
             {
               text: "timeline.section.2018.title",
               name: ["2018-home", "2018", "2018-apap", "2018-presidente", "2018-drlogic", "2018-bpr"],
-              icon: "monster",
+              icon: "collections",
             },
             {
               text: "timeline.section.2022.title",

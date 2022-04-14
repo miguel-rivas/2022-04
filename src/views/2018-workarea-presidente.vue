@@ -1,18 +1,21 @@
 <template>
   <section>
     <header>
-      <div class="column">
-        <img src="https://miguel-rivas.github.io/zapp/img/2018/logo/carnaval.png" class="logo" />
-        <h1>Event Landing Page</h1>
-        <a
-          target="_blank"
-          class="flat blue"
-          >Go to Carnaval Presidente</a
-        >
-      </div>
+      <nn-row>
+        <nn-column size="50%">
+          <nn-container>
+            <img
+              src="https://miguel-rivas.github.io/zapp/img/2018/logo/carnaval.png"
+              class="logo"
+            />
+            <h1>Event Landing Page</h1>
+            <btn text="Go to Website" color="green-pea" />
+          </nn-container>
+        </nn-column>
+      </nn-row>
     </header>
     <section class="content">
-      <div class="container">
+      <nn-container size="600">
         <section class="info">
           <h2>Brand Overview</h2>
           <p>
@@ -51,10 +54,13 @@
             ><span>ColorBox</span><span>GruntJs</span><span>PHP</span>
           </div>
         </section>
-      </div>
+      </nn-container>
     </section>
     <section class="footer">
-      <img src="https://miguel-rivas.github.io/zapp/img/2018/beer.png" class="beer big" /><img
+      <img
+        src="https://miguel-rivas.github.io/zapp/img/2018/beer.png"
+        class="beer big"
+      /><img
         src="https://miguel-rivas.github.io/zapp/img/2018/beer.png"
         class="beer small"
       />
@@ -67,107 +73,107 @@
         data-autoplay="true"
         data-vbtype="youtube"
         class="venobox"
-        ><img src="https://miguel-rivas.github.io/zapp/img/2018/videos/carnaval.jpg" class="video"
-      /></a>
-      <article class="snetwork">
-        <div class="column icon">
-          <span class="fa fa-facebook-official"></span>
-        </div>
-        <div class="column center">
-          <h3>engagement</h3>
-          <p>462,687</p>
-        </div>
-        <div class="column">
-          <h3>accounts</h3>
-          <p>7,492,584</p>
-        </div>
-      </article>
-      <article class="snetwork">
-        <div class="column icon"><span class="fa fa-twitter"></span></div>
-        <div class="column center">
-          <h3>engagement</h3>
-          <p>37,716</p>
-        </div>
-        <div class="column">
-          <h3>impressions</h3>
-          <p>137,398,592</p>
-        </div>
-      </article>
-      <article class="snetwork">
-        <div class="column icon"><span class="fa fa-instagram"></span></div>
-        <div class="column center">
-          <h3>interactions</h3>
-          <p>95,821</p>
-        </div>
-        <div class="column"></div>
-      </article>
+      >
+        <img
+          src="https://miguel-rivas.github.io/zapp/img/2018/videos/carnaval.jpg"
+          class="video"
+        />
+      </a>
+
+      <template v-for="(item, index) in infographic">
+        <article class="snetwork" :key="index">
+          <nn-container size="600">
+            <nn-row>
+              <nn-column size="100">
+                <nn-icon :glyph="item.icon" />
+              </nn-column>
+
+              <nn-column size="50%-75" v-if="item.engagement">
+                <h3>Engagement</h3>
+                <p>{{ item.engagement }}</p>
+              </nn-column>
+
+              <nn-column size="50%-25" v-if="item.accounts">
+                <h3>Accounts</h3>
+                <p>{{ item.accounts }}</p>
+              </nn-column>
+
+              <nn-column size="50%-75" v-if="item.interactions">
+                <h3>Interactions</h3>
+                <p>{{ item.interactions }}</p>
+              </nn-column>
+            </nn-row>
+          </nn-container>
+        </article>
+      </template>
+
     </section>
     <section class="gallery">
       <h1>OTHER PROJECTS</h1>
-      <a target="_blank" class="pronosticos_ux"
-        >
-        <img src="https://miguel-rivas.github.io/zapp/img/preview/3d/presidente-carnaval.png" />
+      <a target="_blank" class="pronosticos_ux">
+        <img
+          src="https://miguel-rivas.github.io/zapp/img/preview/3d/presidente-carnaval.png"
+        />
         <div class="hover">
           <p>GO TO CARNAVAL PRESIDENTE 2015</p>
         </div>
-        </a
-      >
-      <a target="_blank" class="presidente_filter"
-        >
-        <img src="https://miguel-rivas.github.io/zapp/img/preview/3d/filtro_carnaval.png" />
+      </a>
+      <a target="_blank" class="presidente_filter">
+        <img
+          src="https://miguel-rivas.github.io/zapp/img/preview/3d/filtro_carnaval.png"
+        />
         <div class="hover">
           <p>GO TO CARNAVAL PRESIDENTE 2015'S FILTER</p>
         </div>
-        </a
-      >
-      <a target="_blank" class="coro_app"
-        >
-        <img src="https://miguel-rivas.github.io/zapp/img/preview/3d/coroapp.png" />
+      </a>
+      <a target="_blank" class="coro_app">
+        <img
+          src="https://miguel-rivas.github.io/zapp/img/preview/3d/coroapp.png"
+        />
         <div class="hover">
           <p>GO TO DESTAPA EL CORO’S BETA TEST</p>
         </div>
-        </a
-      >
-      <a target="_blank" class="coro_flow"
-        >
-        <img src="https://miguel-rivas.github.io/zapp/img/preview/3d/userflow.png" />
+      </a>
+      <a target="_blank" class="coro_flow">
+        <img
+          src="https://miguel-rivas.github.io/zapp/img/preview/3d/userflow.png"
+        />
         <div class="hover">
           <p>SEE DESTAPA EL CORO’S USER FLOW</p>
         </div>
-        </a
-      >
-      <a target="_blank" class="photo_app"
-        >
-        <img src="https://miguel-rivas.github.io/zapp/img/preview/3d/photo.png" />
+      </a>
+      <a target="_blank" class="photo_app">
+        <img
+          src="https://miguel-rivas.github.io/zapp/img/preview/3d/photo.png"
+        />
         <div class="hover">
           <p>GO TO PHOTO ASSIGMENT’S APP</p>
         </div>
-        </a
-      >
-      <a target="_blank" class="pronosticos_ux"
-        >
-        <img src="https://miguel-rivas.github.io/zapp/img/preview/3d/pronosticos.png" />
+      </a>
+      <a target="_blank" class="pronosticos_ux">
+        <img
+          src="https://miguel-rivas.github.io/zapp/img/preview/3d/pronosticos.png"
+        />
         <div class="hover">
           <p>SEE PRONOSTICO’S WIREFRAME</p>
         </div>
-        </a
-      >
-      <a target="_blank" class="presidente_loader"
-        >
-        <img src="https://miguel-rivas.github.io/zapp/img/preview/3d/presidente-loader.png" />
+      </a>
+      <a target="_blank" class="presidente_loader">
+        <img
+          src="https://miguel-rivas.github.io/zapp/img/preview/3d/presidente-loader.png"
+        />
         <div class="hover">
           <p>SEE PRESIDENTE’S LOADER</p>
         </div>
-        </a
-      >
-      <a target="_blank" class="presidente_filter"
-        >
-        <img src="https://miguel-rivas.github.io/zapp/img/preview/3d/filter.png" />
+      </a>
+      <a target="_blank" class="presidente_filter">
+        <img
+          src="https://miguel-rivas.github.io/zapp/img/preview/3d/filter.png"
+        />
         <div class="hover">
           <p>SEE PRESIDENTE’S FILTER</p>
         </div>
-        </a
-      >
+      </a>
     </section>
   </section>
 </template>
@@ -176,6 +182,23 @@
 import Vue from "vue";
 
 export default Vue.extend({
-  data: () => ({}),
+  data: () => ({
+    infographic: [
+      {
+        icon: "facebook",
+        engagement: "462,687",
+        accounts: "7,492,584",
+      },
+      {
+        icon: "twitter",
+        engagement: "37,716",
+        accounts: "137,398,592",
+      },
+      {
+        icon: "instagram",
+        interactions: "95,821",
+      },
+    ],
+  }),
 });
 </script>

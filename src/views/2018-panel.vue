@@ -46,22 +46,22 @@ export default Vue.extend({
         path: "2018-home",
       },
       {
-        icon: "paper-plane",
-        text: "Presidente",
-        path: "2018-presidente",
-      },
-      {
-        icon: "paper-plane",
+        icon: "save",
         text: "DrLogic",
         path: "2018-drlogic",
       },
       {
-        icon: "paper-plane",
+        icon: "beer",
+        text: "Presidente",
+        path: "2018-presidente",
+      },
+      {
+        icon: "coin-dollar",
         text: "Apap",
         path: "2018-apap",
       },
       {
-        icon: "paper-plane",
+        icon: "coin-dollar",
         text: "BPR Bank",
         path: "2018-bpr",
       },

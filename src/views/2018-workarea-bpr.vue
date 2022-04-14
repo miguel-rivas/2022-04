@@ -1,14 +1,20 @@
 <template>
   <section>
     <header>
-      <div class="column">
-        <img src="https://miguel-rivas.github.io/zapp/img/2018/logo/bpr.png" />
-        <h1>Website Development</h1>
-        <a class="flat light-blue">Go to BPR Bank</a>
-      </div>
+      <nn-row>
+        <nn-column size="40%">
+          <nn-container>
+            <img
+              src="https://miguel-rivas.github.io/zapp/img/2018/logo/bpr.png"
+            />
+            <h1>Website Development</h1>
+            <btn text="Go to BPR Bank" color="denim" />
+          </nn-container>
+        </nn-column>
+      </nn-row>
     </header>
     <section class="content">
-      <div class="container">
+      <nn-container size="600">
         <section class="info">
           <h2>Brand Overview</h2>
           <p>
@@ -47,7 +53,7 @@
             <span>Rails</span>
           </div>
         </section>
-      </div>
+      </nn-container>
     </section>
   </section>
 </template>

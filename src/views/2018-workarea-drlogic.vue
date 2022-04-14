@@ -1,27 +1,32 @@
 <template>
   <section>
     <header>
-      <div class="column">
-        <img
-          src="https://miguel-rivas.github.io/zapp/img/2018/logo/drlogic.png"
-        />
-        <h1>Website Redesign</h1>
-        <a
-          href="https://player.vimeo.com/video/207152756"
-          data-autoplay="true"
-          data-vbtype="vimeo"
-          class="venobox"
-        >
-          <img
-            src="https://miguel-rivas.github.io/zapp/img/2018/videos/drlogic.jpg"
-            class="video"
-        /></a>
-        <a class="flat green">Go to DrLogic</a>
-      </div>
+      <nn-row breakpoint="md">
+        <nn-column size="40%">
+          <nn-container>
+            <img
+              src="https://miguel-rivas.github.io/zapp/img/2018/logo/drlogic.png"
+            />
+            <h1>Website Redesign</h1>
+            <a
+              href="https://player.vimeo.com/video/207152756"
+              data-autoplay="true"
+              data-vbtype="vimeo"
+              class="venobox"
+            >
+              <img
+                src="https://miguel-rivas.github.io/zapp/img/2018/videos/drlogic.jpg"
+                class="video"
+              />
+            </a>
+            <btn text="Go to DrLogic" color="denim" />
+          </nn-container>
+        </nn-column>
+      </nn-row>
     </header>
     <section class="content">
       <section class="info">
-        <div class="container">
+        <nn-container size="600">
           <h2>Brand Overview</h2>
           <p>
             In 1986, Dr Logic got his hands on his first Mac and so began a
@@ -34,7 +39,7 @@
             all things Mac-related. And for being that little bit different.
             We’re based in Clerkenwell and we support companies across London.
           </p>
-        </div>
+        </nn-container>
       </section>
       <section class="preview">
         <img
@@ -57,7 +62,7 @@
         />
       </section>
       <section class="info">
-        <div class="container">
+        <nn-container size="600">
           <h2>My Role<small>Web Designer at Pixel Perfect Tree</small></h2>
           <p>I was provided with a design mockup photoshop file initially.</p>
           <ul>
@@ -85,7 +90,7 @@
             <span>Haml</span><span>Sass</span><span>jQuery</span
             ><span>Bootstrap</span><span>Git</span><span>Rails</span>
           </div>
-        </div>
+        </nn-container>
       </section>
     </section>
     <section class="footer">

@@ -1,18 +1,17 @@
 <template>
   <section>
     <header>
-      <div class="container">
-        <h1>
-          Hi, My name is Miguel Rivas.<br />I'm a Frontend Developer living in
-          Washington, DC.
-        </h1>
-        <input type="text" placeholder="Filter Projects By" />
-        <!-- <btn text="All Projects" color="denim" />
-        <btn text="Top Projects" color="denim" />
-        <btn text="HTML / JS / CSS" color="denim" />
-        <btn text="Motion Graphics" color="denim" />
-        <btn text="Design" color="denim" /> -->
-      </div>
+      <nn-row>
+        <nn-column size="40%">
+          <nn-container>
+            <h1>
+              Hi, My name is Miguel Rivas.<br />I'm a Frontend Developer living
+              in Washington, DC.
+            </h1>
+            <input type="text" placeholder="Filter Projects By" />
+          </nn-container>
+        </nn-column>
+      </nn-row>
     </header>
     <section class="gallery">
       <template v-for="(item, index) in allDBListVisible">
