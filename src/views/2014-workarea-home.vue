@@ -76,7 +76,6 @@ import Vue from "vue";
 export default Vue.extend({
   components: {},
   data: () => ({
-    selection: {},
     contentIndex: 0,
     contentDB: [
       {

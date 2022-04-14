@@ -3,7 +3,7 @@ nn-scroll-area(color="royal-purple")
   nn-container
     ul.img-gallery
       template(v-for="(item, itemIndex) in database")
-        li(v-bind:key="`gallery${itemIndex}`")
+        li(:key="`gallery${itemIndex}`")
           carrousel(
             :item="item",
             :start="randomFrame()",

@@ -26,7 +26,7 @@ nn-scroll-area(color="royal-purple")
 
         .table-body(role="rowgroup")
           template(v-for="(project, projectIndex) in projectsDBList")
-            toggle-row(breakpoint="lg", v-bind:key="projectIndex")
+            toggle-row(breakpoint="lg", :key="projectIndex")
               template(v-slot:header)
                 nn-column(table-element, size="40%") {{ project.title }}
                 nn-column(table-element, size="20%") {{ $t(project.types) }}
@@ -54,7 +54,7 @@ nn-scroll-area(color="royal-purple")
                 nn-column(table-element, size="100%-200")
                   .pill-container
                     template(v-for="(tool, toolIndex) in project.tools")
-                      span.pill(v-bind:key="toolIndex", v-html="tool")
+                      span.pill(:key="toolIndex", v-html="tool")
 </template>
 
 <script>

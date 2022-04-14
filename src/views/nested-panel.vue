@@ -7,7 +7,7 @@ nn-scroll-area(color="royal-purple")
         nn-column(size="100%")
           ul.summary
             template(v-for="(route, routeIndex) in links")
-              li(v-bind:key="routeIndex")
+              li(:key="routeIndex")
                 nn-row
                   nn-column(size="35")
                     btn(

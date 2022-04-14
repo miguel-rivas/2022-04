@@ -7,7 +7,7 @@
         nn-column(size="100%")
           ul.summary
             template(v-for="(location, locationIndex) in locationsDBList")
-              li(v-bind:key="locationIndex")
+              li(:key="locationIndex")
                 nn-row
                   nn-column(size="35")
                     btn(

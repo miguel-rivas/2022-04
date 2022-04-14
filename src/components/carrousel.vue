@@ -3,7 +3,7 @@
     <button @blur="stopCarrousel()" @click="toggleCarrousel()" :class="[{active: interval}, 'item']">
       <template v-for="frameIndex in frames">
         <img
-          v-bind:key="frameIndex"
+          :key="frameIndex"
           :class="{ active: currentFrame + 1 === frameIndex }"
           :src="`https://miguel-rivas.github.io/zapp/img/3dlib/${item.name}/000${frameIndex}.jpg`"
         />

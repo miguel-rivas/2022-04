@@ -1,28 +1,26 @@
 <template>
-  <h1>2018</h1>
+  <div class="nested-app p2018" :class="[sectionName]">
+    <nn-scroll-area color="royal-purple">
+      <router-view name="workarea3" />
+    </nn-scroll-area>
+  </div>
 </template>
 
 <script>
 import Vue from "vue";
-// import { mapGetters } from "vuex";
 
 export default Vue.extend({
-  components: {},
   data: () => ({
-    selection: {},
   }),
   computed: {
-    // ...mapGetters({
-    //   panel: "getPanelVisibility",
-    //   panelSize: "getPanelVisibility",
-    // }),
+    sectionName() {
+      return `section-${this.$route.name}`;
+    },
   },
   created() {
-    // this.selection = this.$store.getters.getAvatarSelection;
-  },
-  mounted() {
-  },
-  methods: {
+    if (this.$route.name !== '2018-home') {
+      this.$router.push({ name: '2018-home' });
+    }
   },
 });
 </script>

@@ -7,7 +7,7 @@
           <nn-column size="100%">
             <ul class="summary">
               <template v-for="(theme, themeIndex) in themes">
-                <li v-bind:key="themeIndex">
+                <li :key="themeIndex">
                   <nn-row>
                     <nn-column size="35">
                       <btn

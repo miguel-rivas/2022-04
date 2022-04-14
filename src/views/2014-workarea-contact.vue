@@ -82,7 +82,6 @@
 import Vue from "vue";
 
 export default Vue.extend({
-  components: {},
   data: () => ({
     mX: 1,
     mY: 1,

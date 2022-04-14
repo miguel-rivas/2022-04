@@ -58,7 +58,7 @@
 
   template(v-for="(column, index) in selection.columns")
     panel-block-column(
-      v-bind:key="index",
+      :key="index",
       :index="index",
       :name="(index + 1).toString()"
     )

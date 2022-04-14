@@ -7,7 +7,7 @@
         nn-column(size="100%")
           ul.buttons
             template(v-for="(color, colorIndex) in gColorsDB")
-              li(v-bind:key="colorIndex")
+              li(:key="colorIndex")
                 btn(
                   tag="span",
                   :color="color.spinalCase",

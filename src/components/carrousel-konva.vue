@@ -7,7 +7,7 @@
     >
       <template v-for="frameIndex in frames">
         <v-image
-          v-bind:key="frameIndex"
+          :key="frameIndex"
           :config="{
             image: items[frameIndex - 1].config,
             x: item.position.x,

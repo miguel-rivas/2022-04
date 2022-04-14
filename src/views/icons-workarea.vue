@@ -3,7 +3,7 @@ nn-scroll-area(color="royal-purple")
   nn-container
     ul.img-gallery
       template(v-for="(icon, iconIndex) in iconsDB")
-        li.icon-item.item(v-bind:key="iconIndex")
+        li.icon-item.item(:key="iconIndex")
           nn-row
             nn-column(size="100%, 150")
               nn-icon(:glyph="icon")

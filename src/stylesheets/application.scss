@@ -14,9 +14,6 @@
 @import "nano-grid/scss/container";
 @import "nano-grid/scss/icon";
 
-
-// @import "https://miguel-rivas.github.io/zapp/fonts/icomoon/icomoon";
-
 * {
   box-sizing: border-box;
 }
@@ -94,6 +91,7 @@ main {
 @import "views/pixel";
 @import "views/2014";
 @import "views/2016";
+@import "views/2018";
 
 @import "components/app";
 @import "components/table";

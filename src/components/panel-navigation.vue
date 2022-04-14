@@ -8,7 +8,7 @@
               <template v-if="!nav.route.includes($route.name)">
                 <btn
                   :to="{ name: nav.route[0] }"
-                  v-bind:key="nav.route[0]"
+                  :key="nav.route[0]"
                   mode="transparent"
                   color="shamrock"
                   size="md"
@@ -19,7 +19,7 @@
               </template>
               <template v-else>
                 <btn
-                  v-bind:key="nav.route[0]"
+                  :key="nav.route[0]"
                   mode="transparent"
                   color="shamrock"
                   size="md"
@@ -35,7 +35,7 @@
               <template v-if="!nav.route.includes($route.name)">
                 <btn
                   :to="{ name: nav.route[0] }"
-                  v-bind:key="nav.route[0]"
+                  :key="nav.route[0]"
                   mode="transparent"
                   color="shamrock"
                   :title="`${nav.route[0]} button`"
@@ -46,7 +46,7 @@
               </template>
               <template v-else>
                 <btn
-                  v-bind:key="nav.route[0]"
+                  :key="nav.route[0]"
                   mode="transparent"
                   color="shamrock"
                   size="md"

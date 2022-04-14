@@ -14,10 +14,12 @@ import P2022PanelView from '../views/2022-panel.vue';
 
 import P2016WorkareaView from '../views/2016-workarea.vue';
 import P2016PanelView from '../views/2016-panel.vue';
+
+import P2018HomeView from '../views/2018-workarea-home.vue';
+
 import P2018WorkareaView from '../views/2018-workarea.vue';
 import P2018PanelView from '../views/2018-panel.vue';
 import StargazerWorkareaView from '../views/stargaze-workarea.vue';
-import StargazerPanelView from '../views/stargaze-panel.vue';
 
 export default {
   name: 'timeline',
@@ -48,11 +50,11 @@ export default {
               name: ["2016"],
               icon: "monster",
             },
-            // {
-            //   text: "timeline.section.2018.title",
-            //   name: "2018",
-            //   icon: "monster",
-            // },
+            {
+              text: "timeline.section.2018.title",
+              name: ["2018-home", "2018", "2018-apap", "2018-presidente", "2018-drlogic", "2018-bpr"],
+              icon: "monster",
+            },
             {
               text: "timeline.section.2022.title",
               name: ["2022"],
@@ -94,7 +96,7 @@ export default {
             workarea3: P2014ContactView,
           },
         },
-      ]
+      ],
     },
     
     {
@@ -112,6 +114,43 @@ export default {
         workarea2: P2018WorkareaView,
         panel2: P2018PanelView,
       },
+      children: [
+        {
+          name: '2018-home',
+          path: '/2018-home',
+          components: {
+            workarea3: P2018HomeView,
+          },
+        },
+        {
+          name: '2018-drlogic',
+          path: '/2018-drlogic',
+          components: {
+            workarea3: P2018HomeView,
+          },
+        },
+        {
+          name: '2018-apap',
+          path: '/2018-apap',
+          components: {
+            workarea3: P2018HomeView,
+          },
+        },
+        {
+          name: '2018-presidente',
+          path: '/2018-presidente',
+          components: {
+            workarea3: P2018HomeView,
+          },
+        },
+        {
+          name: '2018-bpr',
+          path: '/2018-bpr',
+          components: {
+            workarea3: P2018HomeView,
+          },
+        },
+      ],
     },
     {
       name: '2022',

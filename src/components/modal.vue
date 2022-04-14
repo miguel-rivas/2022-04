@@ -3,7 +3,7 @@
     <div class="modal-bk" v-on:click.self="closeModal">
       <div
         class="modal-body"
-        v-bind:style="{ width: `${width}px`, maxWidth: `100%` }"
+        :style="{ width: `${width}px`, maxWidth: `100%` }"
       >
         <div class="modal-header">
           <nn-row>
