@@ -39,7 +39,7 @@ section.ground {
 	}
 
 	.body {
-		background: #5e3119 url("https://miguel-rivas.github.io/zapp/img/2016/landing_underground.png") right center repeat-x;
+		background: #5e3119 url(get-zapp("img/2016/landing_underground.png")) right center repeat-x;
 		height: 453px;
 		position: relative;
 		background-size: contain;
@@ -63,11 +63,11 @@ section.ground {
 	}
 
 	.pattern_01 {
-		background: url("https://miguel-rivas.github.io/zapp/img/2016/landing_cave_pattern_01.png") repeat-x top center;
+		background: url(get-zapp("img/2016/landing_cave_pattern_01.png")) repeat-x top center;
 	}
 
 	.pattern_02 {
-		background: url("https://miguel-rivas.github.io/zapp/img/2016/landing_cave_pattern_02.png") repeat-x top center;
+		background: url(get-zapp("img/2016/landing_cave_pattern_02.png")) repeat-x top center;
 		background-position-x: 123px;
 	}
 }

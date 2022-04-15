@@ -4,21 +4,14 @@
       <nn-row>
         <nn-column size="40%">
           <nn-container>
-            <img
-              src="https://miguel-rivas.github.io/zapp/img/2018/logo/apap.png"
-              width="60"
-            />
+            <img :src="getZapp('img/2018/logo/apap.png')" width="60" />
             <h1>Single Page Application</h1>
             <a
               href="https://player.vimeo.com/video/211801157"
-              data-autoplay="true"
-              data-vbtype="vimeo"
+              target="_blank"
               class="venobox"
             >
-              <img
-                src="https://miguel-rivas.github.io/zapp/img/2018/videos/apap.jpg"
-                class="video"
-              />
+              <img :src="getZapp('img/2018/videos/apap.jpg')" class="video" />
             </a>
             <btn text="Go to the App" color="denim" />
           </nn-container>
@@ -26,7 +19,7 @@
       </nn-row>
     </header>
     <section class="content">
-      <nn-continaer size="600">
+      <nn-container size="600">
         <section class="info">
           <h2>Brand Overview</h2>
           <p>
@@ -62,7 +55,7 @@
             <span>Jade</span><span>Sass</span><span>jQuery</span>
           </div>
         </section>
-      </nn-continaer>
+      </nn-container>
     </section>
   </section>
 </template>

@@ -8,10 +8,10 @@
 		height: 1350px;
 		transform: rotate(360deg);
 		animation: rtl linear 20s infinite;
-		background: url("https://miguel-rivas.github.io/zapp/img/2014/dragon.svg") center center no-repeat;
+		background: url(get-zapp("img/2014/dragon.svg")) center center no-repeat;
 	}
 
 	.bird {
-		background-image: url("https://miguel-rivas.github.io/zapp/img/2014/sprites-06.png") !important;
+		background-image: url(get-zapp("img/2014/sprites-06.png")) !important;
 	}
 }

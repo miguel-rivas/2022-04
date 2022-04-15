@@ -4,9 +4,7 @@
       <nn-row>
         <nn-column size="40%">
           <nn-container>
-            <img
-              src="https://miguel-rivas.github.io/zapp/img/2018/logo/bpr.png"
-            />
+            <img :src="getZapp('img/2018/logo/bpr.png')" />
             <h1>Website Development</h1>
             <btn text="Go to BPR Bank" color="denim" />
           </nn-container>

@@ -1,6 +1,6 @@
 &.section-2018-bpr {
 	header {
-		background: url("https://miguel-rivas.github.io/zapp/img/2018/headers/bpr.jpg") bottom no-repeat;
+		background: url(get-zapp("img/2018/headers/bpr.jpg")) bottom no-repeat;
 
 		@media (max-width: $largeScreen) {
 			background: #4b4b4b;

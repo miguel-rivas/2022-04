@@ -2,7 +2,7 @@
   <section class="projects">
     <nn-scroll-area color="burn-orange">
       <nn-container width="1450" class="gallery">
-        <template v-for="(entry, entryIndex) in allDBListVisible">
+        <template v-for="(entry, entryIndex) in allDBListWithImages">
           <article class="nano-box" :key="entryIndex">
             <nn-row spacing="4" breakpoint="lg">
               <nn-column size="3/5">
@@ -31,11 +31,11 @@
 
 <script>
 import Vue from "vue";
-import { allDBListVisible } from "../modules/format-db";
+import { allDBListWithImages } from "../modules/format-db";
 
 export default Vue.extend({
   data: () => ({
-    allDBListVisible,
+    allDBListWithImages,
   }),
 });
 </script>

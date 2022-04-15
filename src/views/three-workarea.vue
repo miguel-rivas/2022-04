@@ -7,7 +7,7 @@ import Vue from "vue";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import ThreeScene from "../mixins/three-scene";
 import StudioLight from "../mixins/three-studio-light";
-import h from "../modules/helpers";
+import h, {getZapp} from "../modules/helpers";
 
 export default Vue.extend({
   mixins: [ThreeScene, StudioLight],
@@ -42,7 +42,7 @@ export default Vue.extend({
 
       (function (scene) {
         loader.load(
-          `https://miguel-rivas.github.io/zapp/3d/${mesh}.glb`,
+          getZapp(`3d/${mesh}.glb`),
           function (gltf) {
             scene.add(gltf.scene);
           },

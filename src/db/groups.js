@@ -1,13 +1,12 @@
 import { tool } from "../enums/tools";
-import { client} from "../enums/clients";
-
-import h from "../modules/helpers";
+import { client } from "../enums/clients";
+import h, { getZapp } from "../modules/helpers";
 
 const groups = [
   {
     date: "2004/09/20",
     disabled: false,
-    image: h.preview("itesa"),
+    image: getZapp("img/preview/wide/itesa.jpg"),
     clients: [
       client.itesa,
     ],
@@ -84,7 +83,7 @@ const groups = [
   },
   {
     date: "2009/09/01",
-    image: h.preview("itla"),
+    image: getZapp("img/preview/wide/itla.jpg"),
     disabled: false,
     description: 'canvas.section.map.modal.itla.position',
     list: 'canvas.section.map.modal.itla.summary',
@@ -138,7 +137,6 @@ const groups = [
   },
   {
     date: "2013/01/01",
-    image: h.preview("several"),
     disabled: true,
     description: 'canvas.section.map.modal.several.position',
     location: true,
@@ -158,7 +156,7 @@ const groups = [
   },
   {
     date: "2013/05/01",
-    image: h.preview("social-network"),
+    image: getZapp("img/preview/wide/social-network.jpg"),
     disabled: false,
     description: 'canvas.section.map.modal.social.position',
     list: 'canvas.section.map.modal.social.summary',
@@ -187,7 +185,7 @@ const groups = [
   },
   {
     date: "2014/06/01",
-    image: h.preview("presidente"),
+    image: getZapp("img/preview/wide/presidente.jpg"),
     disabled: false,
     group: true,
     clients: [
@@ -215,7 +213,7 @@ const groups = [
   },
   {
     date: "2014/05/01",
-    image: h.preview("capital"),
+    image: getZapp("img/preview/wide/capital.jpg"),
     disabled: false,
     description: 'canvas.section.map.modal.capital.position',
     list: 'canvas.section.map.modal.capital.summary',
@@ -258,7 +256,7 @@ const groups = [
   },
   {
     date: "2016/01/01",
-    image: h.preview("pixel"),
+    image: getZapp("img/preview/wide/pixel.jpg"),
     disabled: false,
     description: 'canvas.section.map.modal.pixel.position',
     list: 'canvas.section.map.modal.pixel.summary',
@@ -294,7 +292,7 @@ const groups = [
   },
   {
     date: "2013/07/15",
-    image: h.preview("avante"),
+    image: getZapp("img/preview/wide/avante.jpg"),
     disabled: false,
     description: 'canvas.section.map.modal.avante.position',
     list: 'canvas.section.map.modal.avante.summary',
@@ -325,7 +323,7 @@ const groups = [
   },
   {
     date: "2017/07/01",
-    image: h.preview("plant-therapy"),
+    image: getZapp("img/preview/wide/plant-therapy.jpg"),
     disabled: false,
     description: 'canvas.section.map.modal.plantTherapy.position',
     list: 'canvas.section.map.modal.plantTherapy.summary',
@@ -386,7 +384,7 @@ const groups = [
   // },
   {
     date: "2018/04/01",
-    image: h.preview("enovational"),
+    image: getZapp("img/preview/wide/enovational.jpg"),
     disabled: false,
     description: 'canvas.section.map.modal.enovational.position',
     list: 'canvas.section.map.modal.enovational.summary',

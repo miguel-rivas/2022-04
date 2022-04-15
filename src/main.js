@@ -8,12 +8,21 @@ import "@/modules/tooltip";
 import "@/modules/nano";
 import VueKonva from "vue-konva";
 import 'nano-grid/components';
+import { getZapp } from "./modules/helpers";
 
 //-- db
 
 import { user } from "./db/user";
 import i18n from "./i18n";
 
+// ---- global functions
+
+const globalManager = {
+  install(Vue) {
+    Vue.prototype.getZapp = getZapp
+  },
+}
+Vue.use(globalManager);
 
 // ---------------- Selection
 

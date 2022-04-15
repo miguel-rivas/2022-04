@@ -4,18 +4,15 @@
       <nn-row breakpoint="md">
         <nn-column size="40%">
           <nn-container>
-            <img
-              src="https://miguel-rivas.github.io/zapp/img/2018/logo/drlogic.png"
-            />
+            <img :src="getZapp('img/2018/logo/drlogic.png')" />
             <h1>Website Redesign</h1>
             <a
               href="https://player.vimeo.com/video/207152756"
-              data-autoplay="true"
-              data-vbtype="vimeo"
+              target="_blank"
               class="venobox"
             >
               <img
-                src="https://miguel-rivas.github.io/zapp/img/2018/videos/drlogic.jpg"
+                :src="getZapp('img/2018/videos/drlogic.jpg')"
                 class="video"
               />
             </a>
@@ -42,22 +39,18 @@
         </nn-container>
       </section>
       <section class="preview">
+        <img :src="getZapp('img/preview/3d/drlogic-home.png')" />
         <img
-          src="https://miguel-rivas.github.io/zapp/img/preview/3d/drlogic-home.png"
+          :src="getZapp('img/preview/3d/drlogic-about.png')"
+          class="keep_mobile"
         />
+        <img :src="getZapp('img/preview/3d/drlogic-portfolio.png')" />
         <img
-          src="https://miguel-rivas.github.io/zapp/img/preview/3d/drlogic-about.png"
+          :src="getZapp('img/preview/3d/drlogic-contact.png')"
           class="keep_mobile"
         />
         <img
-          src="https://miguel-rivas.github.io/zapp/img/preview/3d/drlogic-portfolio.png"
-        />
-        <img
-          src="https://miguel-rivas.github.io/zapp/img/preview/3d/drlogic-contact.png"
-          class="keep_mobile"
-        />
-        <img
-          src="https://miguel-rivas.github.io/zapp/img/preview/3d/drlogic-404.png"
+          :src="getZapp('img/preview/3d/drlogic-404.png')"
           class="keep_mobile"
         />
       </section>
@@ -111,41 +104,31 @@
     </section>
     <section class="gallery">
       <a class="mint">
-        <img
-          src="https://miguel-rivas.github.io/zapp/img/preview/3d/drlogic-home.png"
-        />
+        <img :src="getZapp('img/preview/3d/drlogic-home.png')" />
         <div class="hover">
           <p>GO TO DRLOGIC'S HOME PAGE</p>
         </div>
       </a>
       <a class="purple">
-        <img
-          src="https://miguel-rivas.github.io/zapp/img/preview/3d/drlogic-404.png"
-        />
+        <img :src="getZapp('img/preview/3d/drlogic-404.png')" />
         <div class="hover">
           <p>GO TO DRLOGIC'S PAGE 404</p>
         </div>
       </a>
       <a class="orange">
-        <img
-          src="https://miguel-rivas.github.io/zapp/img/preview/3d/drlogic-contact.png"
-        />
+        <img :src="getZapp('img/preview/3d/drlogic-contact.png')" />
         <div class="hover">
           <p>GO TO DRLOGIC'S CONTACT PAGE</p>
         </div>
       </a>
       <a class="salmon">
-        <img
-          src="https://miguel-rivas.github.io/zapp/img/preview/3d/drlogic-about.png"
-        />
+        <img :src="getZapp('img/preview/3d/drlogic-about.png')" />
         <div class="hover">
           <p>GO TO DRLOGIC'S ABOUT US PAGE</p>
         </div>
       </a>
       <a class="blue">
-        <img
-          src="https://miguel-rivas.github.io/zapp/img/preview/3d/terms.png"
-        />
+        <img :src="getZapp('img/preview/3d/terms.png')" />
         <div class="hover">
           <p>SEE DRLOGIC'S TERMS</p>
         </div>

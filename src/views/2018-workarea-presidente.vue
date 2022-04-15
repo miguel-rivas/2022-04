@@ -4,10 +4,7 @@
       <nn-row>
         <nn-column size="50%">
           <nn-container>
-            <img
-              src="https://miguel-rivas.github.io/zapp/img/2018/logo/carnaval.png"
-              class="logo"
-            />
+            <img :src="getZapp('img/2018/logo/carnaval.png')" class="logo" />
             <h1>Event Landing Page</h1>
             <btn text="Go to Website" color="green-pea" />
           </nn-container>
@@ -57,27 +54,16 @@
       </nn-container>
     </section>
     <section class="footer">
-      <img
-        src="https://miguel-rivas.github.io/zapp/img/2018/beer.png"
-        class="beer big"
-      /><img
-        src="https://miguel-rivas.github.io/zapp/img/2018/beer.png"
+      <img :src="getZapp('img/2018/beer.png')" class="beer big" /><img
+        :src="getZapp('img/2018/beer.png')"
         class="beer small"
       />
       <article class="website">
         <h3>pageviews</h3>
         <p>116,072</p>
       </article>
-      <a
-        href="https://youtu.be/4C5gvqLIR6k"
-        data-autoplay="true"
-        data-vbtype="youtube"
-        class="venobox"
-      >
-        <img
-          src="https://miguel-rivas.github.io/zapp/img/2018/videos/carnaval.jpg"
-          class="video"
-        />
+      <a href="https://youtu.be/4C5gvqLIR6k" target="_blank" class="venobox">
+        <img :src="getZapp('img/2018/videos/carnaval.jpg')" class="video" />
       </a>
 
       <template v-for="(item, index) in infographic">
@@ -106,70 +92,53 @@
           </nn-container>
         </article>
       </template>
-
     </section>
     <section class="gallery">
       <h1>OTHER PROJECTS</h1>
       <a target="_blank" class="pronosticos_ux">
-        <img
-          src="https://miguel-rivas.github.io/zapp/img/preview/3d/presidente-carnaval.png"
-        />
+        <img :src="getZapp('img/preview/3d/presidente-carnaval.png')" />
         <div class="hover">
           <p>GO TO CARNAVAL PRESIDENTE 2015</p>
         </div>
       </a>
       <a target="_blank" class="presidente_filter">
-        <img
-          src="https://miguel-rivas.github.io/zapp/img/preview/3d/filtro_carnaval.png"
-        />
+        <img :src="getZapp('img/preview/3d/filtro_carnaval.png')" />
         <div class="hover">
           <p>GO TO CARNAVAL PRESIDENTE 2015'S FILTER</p>
         </div>
       </a>
       <a target="_blank" class="coro_app">
-        <img
-          src="https://miguel-rivas.github.io/zapp/img/preview/3d/coroapp.png"
-        />
+        <img :src="getZapp('img/preview/3d/coroapp.png')" />
         <div class="hover">
           <p>GO TO DESTAPA EL CORO’S BETA TEST</p>
         </div>
       </a>
       <a target="_blank" class="coro_flow">
-        <img
-          src="https://miguel-rivas.github.io/zapp/img/preview/3d/userflow.png"
-        />
+        <img :src="getZapp('img/preview/3d/userflow.png')" />
         <div class="hover">
           <p>SEE DESTAPA EL CORO’S USER FLOW</p>
         </div>
       </a>
       <a target="_blank" class="photo_app">
-        <img
-          src="https://miguel-rivas.github.io/zapp/img/preview/3d/photo.png"
-        />
+        <img :src="getZapp('img/preview/3d/photo.png')" />
         <div class="hover">
           <p>GO TO PHOTO ASSIGMENT’S APP</p>
         </div>
       </a>
       <a target="_blank" class="pronosticos_ux">
-        <img
-          src="https://miguel-rivas.github.io/zapp/img/preview/3d/pronosticos.png"
-        />
+        <img :src="getZapp('img/preview/3d/pronosticos.png')" />
         <div class="hover">
           <p>SEE PRONOSTICO’S WIREFRAME</p>
         </div>
       </a>
       <a target="_blank" class="presidente_loader">
-        <img
-          src="https://miguel-rivas.github.io/zapp/img/preview/3d/presidente-loader.png"
-        />
+        <img :src="getZapp('img/preview/3d/presidente-loader.png')" />
         <div class="hover">
           <p>SEE PRESIDENTE’S LOADER</p>
         </div>
       </a>
       <a target="_blank" class="presidente_filter">
-        <img
-          src="https://miguel-rivas.github.io/zapp/img/preview/3d/filter.png"
-        />
+        <img :src="getZapp('img/preview/3d/filter.png')" />
         <div class="hover">
           <p>SEE PRESIDENTE’S FILTER</p>
         </div>

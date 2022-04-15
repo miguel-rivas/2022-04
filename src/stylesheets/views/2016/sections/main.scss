@@ -1,6 +1,6 @@
 aside.texture {
 	opacity: 0.2;
-	background: url("https://miguel-rivas.github.io/zapp/img/extras/paper.jpg") center repeat;
+	background: url(get-zapp("img/extras/paper.jpg")) center repeat;
 	width: 100%;
 	height: 100%;
 	top: 0;

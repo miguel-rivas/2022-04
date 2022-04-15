@@ -3,7 +3,7 @@ import { type } from "../enums/types";
 import { client } from "../enums/clients";
 import { user } from "./user";
 
-import h from "../modules/helpers";
+import h, { getZapp } from "../modules/helpers";
 
 const linkWeb = (item) => `https://${user.media.github.production}.github.io/${item}`;
 const linkGithub = (item) => `https://github.com/${user.media.github.production}/${item}`;
@@ -31,7 +31,7 @@ const projects = [
       tool.i18n,
       tool.webComponents,
     ],
-    image: h.preview("2022"),
+    image: getZapp("img/preview/wide/2022.jpg"),
     links: [
       // {
       //   url: linkWeb("2022-04"),
@@ -68,7 +68,7 @@ const projects = [
   {
     date: "2021/12/20",
     title: "Portfolio 2022",
-    image: h.preview("2022"),
+    image: getZapp("img/preview/wide/2022.jpg"),
     types: type.app,
     clients: [
       client.miguelRivas,
@@ -1211,7 +1211,7 @@ const projects = [
   {
     date: "2012/10/26",
     title: "Print Portfolio",
-    image: h.preview("2012"),
+    image: getZapp("img/preview/wide/2012.jpg"),
     types: type.document,
     clients: [
       client.miguelRivas,
@@ -1291,7 +1291,7 @@ const projects = [
   {
     date: "2015/01/03",
     title: "Mainfront",
-    image: h.preview("mainfront"),
+    image: getZapp("img/preview/wide/mainfront.jpg"),
     types: type.app,
     clients: [
       client.miguelRivas,
@@ -1321,7 +1321,7 @@ const projects = [
   {
     date: "2015/04/19",
     title: "CSS Study",
-    image: h.preview("css-study"),
+    image: getZapp("img/preview/wide/css-study.jpg"),
     types: type.app,
     clients: [
       client.miguelRivas,
@@ -1350,7 +1350,7 @@ const projects = [
   {
     date: "2021/03/24",
     title: "Hello",
-    image: h.preview("hello"),
+    image: getZapp("img/preview/wide/hello.jpg"),
     types: type.app,
     disabled: true,
     clients: [
@@ -1403,7 +1403,7 @@ const projects = [
   {
     date: "2015/04/26",
     title: "Evolution of the Web",
-    image: h.preview("evolution"),
+    image: getZapp("img/preview/wide/evolution.jpg"),
     types: type.app,
     clients: [
       client.miguelRivas,
@@ -1451,7 +1451,7 @@ const projects = [
   {
     date: "2015/05/23",
     title: "Minivan",
-    image: h.preview("minivan"),
+    image: getZapp("img/preview/wide/minivan.jpg"),
     types: type.prototype,
     clients: [
       client.miguelRivas,
@@ -1465,7 +1465,7 @@ const projects = [
   {
     date: "2015/05/25",
     title: "Window Form",
-    image: h.preview("window"),
+    image: getZapp("img/preview/wide/window.jpg"),
     types: type.prototype,
     disabled: true,
     clients: [
@@ -1480,7 +1480,7 @@ const projects = [
   {
     date: "2015/05/28",
     title: "Gear Builder",
-    image: h.preview("gear"),
+    image: getZapp("img/preview/wide/gear.jpg"),
     types: type.prototype,
     clients: [
       client.miguelRivas,
@@ -1498,7 +1498,7 @@ const projects = [
   {
     date: "2015/12/07",
     title: "SVG 101",
-    image: h.preview("svg-101"),
+    image: getZapp("img/preview/wide/svg-101.jpg"),
     types: type.prototype,
     clients: [
       client.miguelRivas,
@@ -1527,7 +1527,7 @@ const projects = [
   {
     date: "2015/12/22",
     title: "Tetravex",
-    image: h.preview("tetravex"),
+    image: getZapp("img/preview/wide/tetravex.jpg"),
     types: type.app,
     clients: [
       client.miguelRivas,
@@ -1572,7 +1572,7 @@ const projects = [
   {
     date: "2010/07/07",
     title: "French Toast",
-    image: h.preview("french-toast"),
+    image: getZapp("img/preview/wide/french-toast.jpg"),
     disabled: true,
     types: type.motionGraphics,
     clients: [
@@ -1592,7 +1592,7 @@ const projects = [
   {
     date: "2012/07/24",
     title: "La Guerra de Vectores",
-    image: h.preview("vectores"),
+    image: getZapp("img/preview/wide/vectores.jpg"),
     types: type.motionGraphics,
     disabled: true,
     clients: [
@@ -1612,7 +1612,7 @@ const projects = [
   {
     date: "2016/11/21",
     title: "Wurlex",
-    image: h.preview("wurlex"),
+    image: getZapp("img/preview/wide/wurlex.jpg"),
     types: type.animation3D,
     clients: [
       client.miguelRivas,
@@ -1635,7 +1635,7 @@ const projects = [
   {
     date: "2014/02/09",
     title: "Screens Portfolio",
-    image: h.preview("2014"),
+    image: getZapp("img/preview/wide/2014.jpg"),
     types: type.app,
     clients: [
       client.miguelRivas,
@@ -1666,7 +1666,7 @@ const projects = [
   {
     date: "2016/08/11",
     title: "Spirit Portfolio",
-    image: h.preview("2016"),
+    image: getZapp("img/preview/wide/2016.jpg"),
     types: type.app,
     clients: [
       client.miguelRivas,
@@ -1692,7 +1692,7 @@ const projects = [
   {
     date: "2021/08/12",
     title: "Portfolio 2021",
-    image: h.preview("2021"),
+    image: getZapp("img/preview/wide/2021.jpg"),
     types: type.app,
     clients: [
       client.miguelRivas,
@@ -1736,7 +1736,7 @@ const projects = [
   {
     date: "2018/01/01",
     title: "Grid Portfolio",
-    image: h.preview("2018"),
+    image: getZapp("img/preview/wide/2018.jpg"),
     types: type.app,
     clients: [
       client.miguelRivas,
@@ -1795,7 +1795,7 @@ const projects = [
   {
     date: "2016/01/11",
     title: "HTML/LOVE",
-    image: h.preview("html-love"),
+    image: getZapp("img/preview/wide/html-love.jpg"),
     types: type.landingPage,
     clients: [
       client.miguelRivas,
@@ -1921,7 +1921,7 @@ const projects = [
   {
     date: "2021/03/26",
     title: "3D Viewer",
-    image: h.preview("2021-react"),
+    image: getZapp("img/preview/wide/2021-react.jpg"),
     types: type.app,
     clients: [
       client.miguelRivas,
@@ -2150,7 +2150,7 @@ const projects = [
   {
     date: "2012/11/06",
     title: "Drakkar",
-    image: h.preview("drakkar"),
+    image: getZapp("img/preview/wide/drakkar.jpg"),
     types: type.animation3D,
     disabled: true,
     clients: [
@@ -2284,7 +2284,7 @@ const projects = [
   {
     date: "2011/07/06",
     title: "X-wing",
-    image: h.preview("x-wing"),
+    image: getZapp("img/preview/wide/x-wing.jpg"),
     types: type.animation3D,
     disabled: true,
     clients: [
@@ -2351,7 +2351,7 @@ const projects = [
   {
     date: "2015/03/24",
     title: "BigPapi Selfie",
-    image: h.preview("pepsi"),
+    image: getZapp("img/preview/wide/pepsi.jpg"),
     types: type.motionGraphics,
     clients: [
       client.pepsi,
@@ -2371,7 +2371,7 @@ const projects = [
   {
     date: "2015/04/18",
     title: "Carnaval Presidente 2015",
-    image: h.preview("carnaval-presidente"),
+    image: getZapp("img/preview/wide/carnaval-presidente.jpg"),
     types: type.landingPage,
     disabled: true,
     clients: [
@@ -2406,7 +2406,7 @@ const projects = [
   {
     date: "2015/05/20",
     title: "Recarga Con RedRock",
-    image: h.preview("redrock"),
+    image: getZapp("img/preview/wide/redrock.jpg"),
     types: type.motionGraphics,
     disabled: true,
     clients: [
@@ -2426,7 +2426,7 @@ const projects = [
   {
     date: "2015/10/23",
     title: "Retrobrindis",
-    image: h.preview("retro-brindis"),
+    image: getZapp("img/preview/wide/retro-brindis.jpg"),
     types: type.app,
     disabled: true,
     clients: [
@@ -2455,7 +2455,7 @@ const projects = [
   {
     date: "2015/11/12",
     title: "Mineriza a tu Familia",
-    image: h.preview("apap"),
+    image: getZapp("img/preview/wide/apap.jpg"),
     types: type.app,
     clients: [
       client.apap,
@@ -2537,7 +2537,7 @@ const projects = [
   {
     date: "2016/02/22",
     title: "Website",
-    image: h.preview("drlogic"),
+    image: getZapp("img/preview/wide/drlogic.jpg"),
     types: type.app,
     clients: [
       client.drLogic,
@@ -2621,7 +2621,7 @@ const projects = [
   {
     date: "2016/06/16",
     title: "Server Prompt",
-    image: h.preview("pixel-404"),
+    image: getZapp("img/preview/wide/pixel-404.jpg"),
     types: type.prototype,
     clients: [
       client.pixelPerfectTree,
@@ -2655,7 +2655,7 @@ const projects = [
   {
     date: "2016/06/30",
     title: "Animated Header",
-    image: h.preview("voxel"),
+    image: getZapp("img/preview/wide/voxel.jpg"),
     types: type.prototype,
     clients: [
       client.voxel,
@@ -2684,7 +2684,7 @@ const projects = [
   {
     date: "2015/05/27",
     title: "Orange Reel",
-    image: h.preview("orange"),
+    image: getZapp("img/preview/wide/orange.jpg"),
     types: type.motionGraphics,
     clients: [
       client.orange,
@@ -2864,7 +2864,7 @@ const projects = [
   {
     date: "2020/05/05",
     title: "Popkern",
-    image: h.preview("popkern"),
+    image: getZapp("img/preview/wide/popkern.jpg"),
     types: type.module,
     clients: [
       client.enovational,
@@ -3068,7 +3068,7 @@ const projects = [
   {
     date: "2018/06/25",
     title: "Maryland Onestop",
-    image: h.preview("onestop"),
+    image: getZapp("img/preview/wide/onestop.jpg"),
     types: type.app,
     disabled: true,
     clients: [
@@ -3088,7 +3088,7 @@ const projects = [
   {
     date: "2018/09/04",
     title: "Formability",
-    image: h.preview("formability"),
+    image: getZapp("img/preview/wide/formability.jpg"),
     types: type.app,
     disabled: true,
     clients: [
@@ -3201,7 +3201,7 @@ const projects = [
   {
     date: "2021/12/21",
     title: "Kaspar Island",
-    image: h.preview("kaspar"),
+    image: getZapp("img/preview/wide/kaspar.jpg"),
     types: type.animation3D,
     disabled: true,
     clients: [
@@ -3215,7 +3215,7 @@ const projects = [
   {
     date: "2021/12/30",
     title: "Iqra Island",
-    image: h.preview("iqra"),
+    image: getZapp("img/preview/wide/iqra.jpg"),
     types: type.animation3D,
     disabled: true,
     clients: [
@@ -3229,7 +3229,7 @@ const projects = [
   {
     date: "2021/12/10",
     title: "Goose",
-    image: h.preview("goose"),
+    image: getZapp("img/preview/wide/goose.jpg"),
     types: type.animation3D,
     disabled: true,
     clients: [
@@ -3243,7 +3243,7 @@ const projects = [
   {
     date: "2022/01/05",
     title: "MR Universe",
-    image: h.preview("mr-universe"),
+    image: getZapp("img/preview/wide/mr-universe.jpg"),
     types: type.animation3D,
     disabled: true,
     clients: [

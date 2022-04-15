@@ -13,7 +13,7 @@ nav
 
 header
 {
-	background: url("https://miguel-rivas.github.io/zapp/img/2018/headers/drlogic.jpg") bottom no-repeat;
+	background: url(get-zapp("img/2018/headers/drlogic.jpg")) bottom no-repeat;
 
 	input
 	{

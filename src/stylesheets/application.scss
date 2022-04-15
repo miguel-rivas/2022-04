@@ -72,6 +72,7 @@ main {
   color: var(--color-foreground);
 }
 
+@import "core/functions";
 @import "core/font-styles";
 @import "core/icomoon";
 @import "core/animations";

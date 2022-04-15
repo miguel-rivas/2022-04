@@ -12,7 +12,7 @@ footer {
     left: 0;
     position: absolute;
     transition: 1000ms;
-    background: url('https://miguel-rivas.github.io/zapp/img/2014/city.svg') center bottom repeat-x;
+    background: url(get-zapp('img/2014/city.svg')) center bottom repeat-x;
   }
 
   .mountains {
@@ -22,7 +22,7 @@ footer {
     left: 0;
     position: absolute;
     transition: 1000ms;
-    background: url('https://miguel-rivas.github.io/zapp/img/2014/mountains.svg') center bottom repeat-x;
+    background: url(get-zapp('img/2014/mountains.svg')) center bottom repeat-x;
   }
 
   .clouds {
@@ -32,7 +32,7 @@ footer {
     animation: sky linear 50s infinite;
     bottom: 0;
     left: 0;
-    background-image: url('https://miguel-rivas.github.io/zapp/img/2014/p01.png');
+    background-image: url(get-zapp('img/2014/p01.png'));
     background-repeat: repeat-x;
     background-position: 0 0;
   }

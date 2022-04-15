@@ -55,7 +55,7 @@ export default Vue.extend({
       theme: "getTheme",
     }),
   },
-   watch: {
+  watch: {
     theme: function () {
       this.createImgs();
     },
@@ -70,9 +70,9 @@ export default Vue.extend({
       for (let frame = 1; frame <= this.frames; frame++) {
         this.items.push({ config: undefined, temp: undefined });
         this.items[frame - 1].temp = new window.Image();
-        this.items[
-          frame - 1
-        ].temp.src = `https://miguel-rivas.github.io/zapp/img/3dlib/${this.currentTheme}/${this.item.name}/000${frame}.jpg`;
+        this.items[frame - 1].temp.src = this.getZapp(
+          `img/3dlib/${this.currentTheme}/${this.item.name}/000${frame}.jpg`
+        );
         this.items[frame - 1].temp.onload = () => {
           this.items[frame - 1].config = this.items[frame - 1].temp;
         };

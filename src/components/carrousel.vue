@@ -1,11 +1,15 @@
 <template>
   <div class="carrousel">
-    <button @blur="stopCarrousel()" @click="toggleCarrousel()" :class="[{active: interval}, 'item']">
+    <button
+      @blur="stopCarrousel()"
+      @click="toggleCarrousel()"
+      :class="[{ active: interval }, 'item']"
+    >
       <template v-for="frameIndex in frames">
         <img
           :key="frameIndex"
           :class="{ active: currentFrame + 1 === frameIndex }"
-          :src="`https://miguel-rivas.github.io/zapp/img/3dlib/${item.name}/000${frameIndex}.jpg`"
+          :src="getZapp(`img/3dlib/${item.name}/000${frameIndex}.jpg`)"
         />
       </template>
     </button>
@@ -27,7 +31,7 @@ export default Vue.extend({
     rotationDelay: {
       type: Number,
       default: 0,
-    }
+    },
   },
   data: () => ({
     currentFrame: 0,

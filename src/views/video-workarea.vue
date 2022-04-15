@@ -7,7 +7,7 @@ nn-scroll-area(color="royal-purple")
           nn-row(vertical)
             nn-column
               video(:width="item.width", :height="item.height", controls)
-                source(:src="item.url", type="video/mp4")
+                source(:src="getZapp(item.url)", type="video/mp4")
                 | Your browser does not support the video tag.
             nn-column
               .nano-shade-box

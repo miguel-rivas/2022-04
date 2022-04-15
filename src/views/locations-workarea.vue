@@ -205,14 +205,16 @@ export default Vue.extend({
     createImgs() {
       this.currentTheme = this.theme ? "light" : "dark";
       this.map.temp = new window.Image();
-      this.map.temp.src = `https://miguel-rivas.github.io/zapp/img/3d-map/${this.currentTheme}/map.jpg`;
+      this.map.temp.src = this.getZapp(`img/3d-map/${this.currentTheme}/map.jpg`);
       this.map.temp.onload = () => {
         this.map.image = this.map.temp;
       };
 
       this.img.forEach((item) => {
         item.temp = new window.Image();
-        item.temp.src = `https://miguel-rivas.github.io/zapp/img/3d-map/${this.currentTheme}/${item.name}.jpg`;
+        item.temp.src = this.getZapp(
+          `img/3d-map/${this.currentTheme}/${item.name}.jpg`
+        );
         item.temp.onload = () => {
           item.image = item.temp;
         };
