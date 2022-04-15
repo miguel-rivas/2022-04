@@ -32,10 +32,7 @@ header {
 	margin: 15px auto;
 	transition: opacity 500ms ease;
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-
-	@media (max-width: $largeScreen) {
-		max-width: 90%;
-	}
+	max-width: 340px;
 
 	&:hover {
 		opacity: 0.5;

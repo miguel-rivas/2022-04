@@ -1,10 +1,6 @@
 &.section-2018-drlogic {
 	header {
-		background: url(get-zapp("img/2018/headers/drlogic.jpg")) bottom no-repeat;
-
-		@media (max-width: $largeScreen) {
-			background: #3961d3;
-		}
+		background: #3961d3 url(get-zapp("img/2018/headers/drlogic.jpg")) bottom no-repeat;
 	}
 
 	h1 {

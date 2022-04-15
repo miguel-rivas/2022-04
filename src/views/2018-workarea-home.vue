@@ -124,13 +124,13 @@ section.new {
     left: 0;
     bottom: 0;
     right: 0;
-    padding: 1rem;
+    padding: 2rem 1rem 0;
 
     h2 {
-      font-size: 26px;
+      font-size: 17px;
       color: #000;
-      padding: 30px 5px 12px 40px;
-      margin: 0;
+      
+      margin: 0 0 1rem;
       text-transform: uppercase;
 
       em {
@@ -145,16 +145,17 @@ section.new {
     }
 
     ul {
-      font-size: 16px;
       list-style: none;
-      padding-left: 65px;
+      padding-left: 12%;
       margin: 0;
 
       li {
+        font-size: 12px;
         background-color: #000;
         padding: 2px;
         color: #fff;
-        margin: 3px;
+        margin: 0 0 0.5rem;
+            padding: 0.25rem;
         text-transform: uppercase;
       }
     }

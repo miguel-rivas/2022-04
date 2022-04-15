@@ -52,12 +52,10 @@
           </div>
         </section>
       </nn-container>
+      <img :src="getZapp('img/2018/beer.png')" class="beer big" />
+      <img :src="getZapp('img/2018/beer.png')" class="beer small" />
     </section>
     <section class="footer">
-      <img :src="getZapp('img/2018/beer.png')" class="beer big" /><img
-        :src="getZapp('img/2018/beer.png')"
-        class="beer small"
-      />
       <article class="website">
         <h3>pageviews</h3>
         <p>116,072</p>
