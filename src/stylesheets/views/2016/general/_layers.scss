@@ -1,0 +1,17 @@
+$layers: (
+  //----Bottom  
+  'section.letter',
+  'section.references',
+  'section.ground',
+  'section.projects',
+  'aside.texture',
+  //----Front
+);
+
+$index: -1;
+@each $layer in $layers {
+  $index: $index + 1;
+  #{$layer} {
+    z-index: $index;
+  }
+}

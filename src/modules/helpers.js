@@ -58,11 +58,12 @@ const helpers = {
   decToHex(number) {
     return (number).toString(16);
   },
-  preview(image){
-    return `https://miguel-rivas.github.io/zapp/img/preview/wide/${image}.jpg`
-  },
   rad: Math.PI / 180,
   deg: 180 / Math.PI,
+}
+
+export const getZapp = (path) => {
+  return `https://miguel-rivas.github.io/zapp/${path}`;
 }
 
 export default helpers;

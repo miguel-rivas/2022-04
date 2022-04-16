@@ -926,6 +926,11 @@
   resolved "https://registry.yarnpkg.com/@fontsource/montserrat/-/montserrat-4.5.2.tgz#95c38172b134db4ed7d2d728513c0abbef54fdb1"
   integrity sha512-RRrXoTlHYLg5CA+RaxVVnosU2RDO4NiZgRmgD1o1d6lm07Dvuzsr0JPALcm5I4VqZw5bzx4nIz2u+T5LOR7W7w==
 
+"@fontsource/quicksand@^4.2.2":
+  version "4.5.6"
+  resolved "https://registry.yarnpkg.com/@fontsource/quicksand/-/quicksand-4.5.6.tgz#f74a01a5d8e3ea3b6747029486ca44d793244025"
+  integrity sha512-I1qM4g8rZYcZcKR7/6UrL0XBYthWVfW1Ufz69GJs2N3WEyIH41t1QbWL+inOkd9VgkMjH8a3X+7mDwabqXB4IA==
+
 "@hapi/address@2.x.x":
   version "2.1.4"
   resolved "https://registry.npmjs.org/@hapi/address/-/address-2.1.4.tgz"

@@ -1,0 +1,33 @@
+aside.texture {
+	opacity: 0.2;
+	background: url(get-zapp("img/extras/paper.jpg")) center repeat;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	pointer-events: none;
+}
+
+.cloud {
+	position: absolute;
+	opacity: 0.5;
+	animation-name: flyingCloud;
+	animation-duration: 70s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	left: -690px;
+	pointer-events: none;
+
+	&.c01 {
+		bottom: 320px;
+		animation-delay: 10s;
+	}
+	&.c02 {
+		bottom: 210px;
+		animation-delay: 4s;
+	}
+	&.c03 {
+		bottom: 220px;
+	}
+}

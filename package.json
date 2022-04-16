@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@fontsource/montserrat": "^4.2.2",
+    "@fontsource/quicksand": "^4.2.2",
     "chart.js": "2",
     "core-js": "^3.6.5",
     "konva": "^8.3.2",

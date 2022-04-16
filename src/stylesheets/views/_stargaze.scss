@@ -1,3 +1,4 @@
+main.section-2022,
 main.section-stargazer {
   .nano-app {
     .cover,
@@ -10,7 +11,7 @@ main.section-stargazer {
     .stargaze {
       height: 100%;
       position: relative;
-      background-image: url("../img/stars.svg");
+      background-image: url(get-zapp("img/extras/stars.svg"));
       background-repeat: repeat;
       background-position-x: center;
       background-position-y: 0;

@@ -1,0 +1,15 @@
+&.night {
+	background-color: #6c5d91;
+
+	.bk-ornament {
+		bottom: -250px;
+		left: 20%;
+		width: 600px;
+		height: 600px;
+		background: url(get-zapp("img/2014/moon.svg")) center no-repeat;
+	}
+
+	.bird {
+		background-image: url(get-zapp("img/2014/sprites-06.png")) !important;
+	}
+}

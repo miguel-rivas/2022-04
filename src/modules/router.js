@@ -12,6 +12,7 @@ import ProjectsRouter from '../router/projects';
 import ThreeRouter from '../router/three';
 import GalleryRouter from '../router/gallery';
 import UiRouter from '../router/ui';
+import TimelineRouter from '../router/timeline';
 
 Vue.use(VueRouter);
 
@@ -40,7 +41,8 @@ const routes = [
   ProjectsRouter,
   ThreeRouter,
   GalleryRouter,
-  UiRouter
+  UiRouter,
+  TimelineRouter,
 ];
 
 const router = new VueRouter({

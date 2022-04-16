@@ -8,7 +8,7 @@
               <template v-if="!nav.route.includes($route.name)">
                 <btn
                   :to="{ name: nav.route[0] }"
-                  v-bind:key="nav.route[0]"
+                  :key="nav.route[0]"
                   mode="transparent"
                   color="shamrock"
                   size="md"
@@ -19,7 +19,7 @@
               </template>
               <template v-else>
                 <btn
-                  v-bind:key="nav.route[0]"
+                  :key="nav.route[0]"
                   mode="transparent"
                   color="shamrock"
                   size="md"
@@ -35,7 +35,7 @@
               <template v-if="!nav.route.includes($route.name)">
                 <btn
                   :to="{ name: nav.route[0] }"
-                  v-bind:key="nav.route[0]"
+                  :key="nav.route[0]"
                   mode="transparent"
                   color="shamrock"
                   :title="`${nav.route[0]} button`"
@@ -46,7 +46,7 @@
               </template>
               <template v-else>
                 <btn
-                  v-bind:key="nav.route[0]"
+                  :key="nav.route[0]"
                   mode="transparent"
                   color="shamrock"
                   size="md"
@@ -148,6 +148,25 @@ export default Vue.extend({
         tooltip: i18n.t("ui.navTitle"),
         icon: "color",
         route: ["ui", "colors", "icons", "grid", "grid-gallery"],
+      },
+      {
+        tooltip: i18n.t("timeline.navTitle"),
+        icon: "clock",
+        route: [
+          "timeline",
+          "2014",
+          "2014-home",
+          "2014-projects",
+          "2014-contact",
+          "2016",
+          "2018",
+          "2018-home",
+          "2018-presidente",
+          "2018-drlogic",
+          "2018-apap",
+          "2018-bpr",
+          "2022",
+        ],
       },
     ],
     navigationBuilder: [

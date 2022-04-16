@@ -49,3 +49,43 @@
     background-position: 1200px 1200px;
   }
 }
+
+@keyframes rtr {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes rtl {
+  from {
+    transform: rotateZ(360deg);
+  }
+  to {
+    transform: rotateZ(0deg);
+  }
+}
+
+@keyframes sky {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 800px 0;
+  }
+}
+
+.rtl,
+.rtr {
+  transform: rotateZ(360deg);
+}
+
+.rtl {
+  animation: rtl linear 9s infinite;
+}
+
+.rtr {
+  animation: rtr linear 9s infinite;
+}

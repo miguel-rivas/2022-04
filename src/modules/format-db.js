@@ -168,3 +168,4 @@ export const groupsDBList = Object.values(groupsDBObj).sort(sortByDate);
 export const locationsDBList = groupsDBList.filter((item) => item.location);
 export const allDBObj = {...projectsDBObj, ...groupsDBObj};
 export const allDBListVisible = Object.values(allDBObj).filter((item) => !item.disabled).sort(sortByDate);
+export const allDBListWithImages = Object.values(allDBObj).filter((item) => item.image).sort(sortByDate);

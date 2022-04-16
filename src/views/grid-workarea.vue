@@ -11,7 +11,7 @@ nn-scroll-area(color="royal-purple")
       )
         template(v-for="(column, index) in selection.columns")
           nn-column(
-            v-bind:key="index",
+            :key="index",
             :size="getColumnSize({ width: column.width, height: column.height, widthSubtraction: column.subtraction, absoluteHeight: column.absoluteHeight, absoluteWidth: column.absoluteWidth }).computedSize"
           )
             span.fake-btn(

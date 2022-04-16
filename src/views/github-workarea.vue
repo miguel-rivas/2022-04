@@ -3,10 +3,10 @@
     <nn-container>
       <ul class="img-gallery">
         <template v-for="(item, itemIndex) in database">
-          <li v-bind:key="itemIndex" class="item icon-item">
+          <li :key="itemIndex" class="item icon-item">
             <nn-row>
               <nn-column size="100%, 150">
-                <nn-icon glyph="github"/>
+                <nn-icon glyph="github" />
               </nn-column>
               <nn-column size="100%">
                 <br />
@@ -25,7 +25,7 @@
                               v-for="(summary, summaryIndex) in item.summary"
                             >
                               <li
-                                v-bind:key="`summaryIndex-${summaryIndex}`"
+                                :key="`summaryIndex-${summaryIndex}`"
                                 v-html="summary"
                               />
                             </template>
@@ -46,6 +46,7 @@
                         color="royal-purple"
                         text="Visit"
                         tag="a"
+                        target="_blank"
                         :href="item.link"
                       />
                     </li>

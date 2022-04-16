@@ -2,7 +2,7 @@
   <div class="gallery" v-if="database.length > 0">
     <nn-container size="1450" spacing="4">
       <template v-for="(project, projectIndex) in database">
-        <article v-bind:key="projectIndex" class="nano-box">
+        <article :key="projectIndex" class="nano-box">
           <nn-row :spacing="100" breakpoint="lg">
             <nn-column size="60%">
               <template>
@@ -20,7 +20,7 @@
                 <ul class="summary">
                   <template v-if="project.group">
                     <summary-row
-                      v-bind:key="`projectIndex-${projectIndex}`"
+                      :key="`projectIndex-${projectIndex}`"
                       :project="
                         helpers.getNewID(project.clients[0], project.date) +
                         '_group'
@@ -29,7 +29,7 @@
                   </template>
                   <template v-else>
                     <summary-row
-                      v-bind:key="`projectIndex-${projectIndex}`"
+                      :key="`projectIndex-${projectIndex}`"
                       :project="
                         helpers.getNewID(project.clients[0], project.date)
                       "
@@ -39,7 +39,7 @@
                     <ul class="summary" v-if="project.children.length">
                       <summary-row
                         v-for="(project2, projectIndex2) in project.children"
-                        v-bind:key="`projectIndex2-${projectIndex2}`"
+                        :key="`projectIndex2-${projectIndex2}`"
                         :project="project2"
                       >
                         <ul
@@ -50,7 +50,7 @@
                             v-for="(project3, projectIndex3) in allDBObj[
                               project2
                             ].children"
-                            v-bind:key="`projectIndex3-${projectIndex3}`"
+                            :key="`projectIndex3-${projectIndex3}`"
                             :project="project3"
                           >
                             <ul
@@ -61,7 +61,7 @@
                                 v-for="(project4, projectIndex4) in allDBObj[
                                   project3
                                 ].children"
-                                v-bind:key="`projectIndex4-${projectIndex4}`"
+                                :key="`projectIndex4-${projectIndex4}`"
                                 :project="project4"
                               >
                               </summary-row>

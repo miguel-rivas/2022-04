@@ -10,10 +10,10 @@
     template(v-slot:body)
       ul.list(v-if="modal.data.list.length > 0")
         template(v-for="(item, index) in $t(modal.data.list)")
-          li(v-bind:key="`locationList${index}`") {{ item }}
+          li(:key="`locationList${index}`") {{ item }}
       ul.skills(v-if="modal.data.tools.length > 0")
         template(v-for="(item, index) in modal.data.tools")
-          li(v-bind:key="`locationList${index}`") {{ item }}
+          li(:key="`locationList${index}`") {{ item }}
 
   div(ref="mapContainer")
     v-stage(:config="mapPos", @dragmove="dragging", ref="stage", @wheel="zoom")
@@ -21,7 +21,7 @@
         v-image(:config="map")
         template(v-for="(image, index) in img")
           v-image(
-            v-bind:key="`mapImg${index}`",
+            :key="`mapImg${index}`",
             @mouseover="hoverImg",
             @mouseout="mouseOutImg",
             @click="openModal(image.client)",
@@ -29,7 +29,7 @@
           )
 
         template(v-for="(item, index) in pins")
-          carrousel(v-bind:key="`mapCarrousel${index}`", :item="item")
+          carrousel(:key="`mapCarrousel${index}`", :item="item")
 </template>
 
 <script>
@@ -205,14 +205,16 @@ export default Vue.extend({
     createImgs() {
       this.currentTheme = this.theme ? "light" : "dark";
       this.map.temp = new window.Image();
-      this.map.temp.src = `https://miguel-rivas.github.io/zapp/img/3d-map/${this.currentTheme}/map.jpg`;
+      this.map.temp.src = this.getZapp(`img/3d-map/${this.currentTheme}/map.jpg`);
       this.map.temp.onload = () => {
         this.map.image = this.map.temp;
       };
 
       this.img.forEach((item) => {
         item.temp = new window.Image();
-        item.temp.src = `https://miguel-rivas.github.io/zapp/img/3d-map/${this.currentTheme}/${item.name}.jpg`;
+        item.temp.src = this.getZapp(
+          `img/3d-map/${this.currentTheme}/${item.name}.jpg`
+        );
         item.temp.onload = () => {
           item.image = item.temp;
         };

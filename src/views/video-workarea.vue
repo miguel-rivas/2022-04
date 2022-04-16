@@ -3,11 +3,11 @@ nn-scroll-area(color="royal-purple")
   nn-container
     ul.img-gallery
       template(v-for="(item, itemIndex) in videosDB")
-        li.item(v-bind:key="`gallery${itemIndex}`")
+        li.item(:key="`gallery${itemIndex}`")
           nn-row(vertical)
             nn-column
               video(:width="item.width", :height="item.height", controls)
-                source(:src="item.url", type="video/mp4")
+                source(:src="getZapp(item.url)", type="video/mp4")
                 | Your browser does not support the video tag.
             nn-column
               .nano-shade-box
@@ -19,7 +19,7 @@ nn-scroll-area(color="royal-purple")
                     nn-column(size="100%", table-element)
                       ul.skills
                         template(v-for="(skill, skillIndex) in item.skills")
-                          li(v-bind:key="`gallerySkill${itemIndex}${skillIndex}`") {{ skill }}
+                          li(:key="`gallerySkill${itemIndex}${skillIndex}`") {{ skill }}
                 p: small Soundtrack: {{ item.soundtrack.artist }} - {{ item.soundtrack.song }}
 </template>
 

@@ -3,6 +3,8 @@
 @import "~@fontsource/montserrat/latin-400.css";
 @import "~@fontsource/montserrat/latin-600.css";
 
+@import "~@fontsource/quicksand/latin-700.css";
+
 // ------------------ Modules
 @import "nano-grid/scss/nano-grid";
 @import "nano-grid/scss/btn";
@@ -11,9 +13,6 @@
 @import "nano-grid/scss/range-slider";
 @import "nano-grid/scss/container";
 @import "nano-grid/scss/icon";
-
-
-// @import "https://miguel-rivas.github.io/zapp/fonts/icomoon/icomoon";
 
 * {
   box-sizing: border-box;
@@ -73,12 +72,14 @@ main {
   color: var(--color-foreground);
 }
 
+@import "core/functions";
 @import "core/font-styles";
 @import "core/icomoon";
 @import "core/animations";
 @import "core/layers";
 @import "core/shortcuts";
 @import "core/inputs";
+@import "core/mixins";
 
 @import "views/stargaze";
 @import "views/grid";
@@ -89,6 +90,9 @@ main {
 @import "views/css";
 @import "views/avatar";
 @import "views/pixel";
+@import "views/2014";
+@import "views/2016";
+@import "views/2018";
 
 @import "components/app";
 @import "components/table";
@@ -104,6 +108,11 @@ main {
 @import "components/spirit";
 
 @import "core/vue-theme";
+
+.nested-app {
+  height: 100%;
+  position: relative;
+}
 
 .close-btn {
   width: 100%;

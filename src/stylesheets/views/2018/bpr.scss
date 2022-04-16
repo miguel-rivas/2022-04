@@ -1,0 +1,19 @@
+&.section-2018-bpr {
+	header {
+		background: #4b4b4b url(get-zapp("img/2018/headers/bpr.jpg")) bottom no-repeat;
+	}
+
+	h1 {
+		color: #ccc;
+	}
+
+	nav {
+		button.fa.fa-bars {
+			color: #ccc;
+		}
+	}
+
+	.info:first-child {
+		border-bottom: 3px solid #aaa;
+	}
+}

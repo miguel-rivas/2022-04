@@ -4,11 +4,11 @@ nn-scroll-area(color="royal-purple")
     section.nano-box
       h1 {{ $t('ui.section.gridGallery.workarea.fractions') }}
       template(v-for="(columns, indexRow) in rowsFractions")
-        nn-row(v-bind:key="`indexRowF${indexRow}`")
+        nn-row(:key="`indexRowF${indexRow}`")
           template(v-for="(column, indexColumn) in columns")
             nn-column(
               :size="column",
-              v-bind:key="`indexColumnF${indexRow}-${indexColumn}`"
+              :key="`indexColumnF${indexRow}-${indexColumn}`"
             )
               btn(
                 :text="column",
@@ -20,11 +20,11 @@ nn-scroll-area(color="royal-purple")
       nn-row.alert.warning
         nn-column(size="100%") {{ $t('ui.section.gridGallery.workarea.percentsAlert') }}
       template(v-for="(columns, indexRow) in rowsPercents")
-        nn-row(v-bind:key="`indexRowP${indexRow}`")
+        nn-row(:key="`indexRowP${indexRow}`")
           template(v-for="(column, indexColumn) in columns")
             nn-column(
               :size="column",
-              v-bind:key="`indexColumnP${indexRow}-${indexColumn}`"
+              :key="`indexColumnP${indexRow}-${indexColumn}`"
             )
               btn(
                 :text="column",
@@ -37,11 +37,11 @@ nn-scroll-area(color="royal-purple")
       nn-row.alert.warning
         nn-column(size="100%") {{ $t('ui.section.gridGallery.workarea.absolutesAlert') }}
       template(v-for="(columns, indexRow) in rowsAbsolutes")
-        nn-row(v-bind:key="`indexRowA${indexRow}`")
+        nn-row(:key="`indexRowA${indexRow}`")
           template(v-for="(column, indexColumn) in columns")
             nn-column(
               :size="column",
-              v-bind:key="`indexColumnA${indexRow}-${indexColumn}`"
+              :key="`indexColumnA${indexRow}-${indexColumn}`"
             )
               btn(
                 :text="column",
@@ -54,11 +54,11 @@ nn-scroll-area(color="royal-purple")
       nn-row.alert.warning
         nn-column(size="100%") {{ $t('ui.section.gridGallery.workarea.formulasAlert') }}
       template(v-for="(columns, indexRow) in formulas")
-        nn-row(v-bind:key="`indexRowFx${indexRow}`")
+        nn-row(:key="`indexRowFx${indexRow}`")
           template(v-for="(column, indexColumn) in columns")
             nn-column(
               :size="column",
-              v-bind:key="`indexColumnFx${indexRow}-${indexColumn}`"
+              :key="`indexColumnFx${indexRow}-${indexColumn}`"
             )
               btn(
                 :text="column",
@@ -73,11 +73,11 @@ nn-scroll-area(color="royal-purple")
       nn-row(grid)
         template(v-for="(columns, indexRow) in rowsHeightVH")
           nn-column.fheight(size="1/5")
-            nn-row(v-bind:key="`indexRowHF${indexRow}`")
+            nn-row(:key="`indexRowHF${indexRow}`")
               template(v-for="(column, indexColumn) in columns")
                 nn-column(
                   :size="column",
-                  v-bind:key="`indexColumnHF${indexRow}-${indexColumn}`"
+                  :key="`indexColumnHF${indexRow}-${indexColumn}`"
                 )
                   btn(
                     :text="column",
@@ -92,11 +92,11 @@ nn-scroll-area(color="royal-purple")
       nn-row(grid)
         template(v-for="(columns, indexRow) in rowsHeightPercents")
           nn-column.fheight(size="1/5")
-            nn-row(v-bind:key="`indexRowHF${indexRow}`")
+            nn-row(:key="`indexRowHF${indexRow}`")
               template(v-for="(column, indexColumn) in columns")
                 nn-column(
                   :size="column",
-                  v-bind:key="`indexColumnHF${indexRow}-${indexColumn}`"
+                  :key="`indexColumnHF${indexRow}-${indexColumn}`"
                 )
                   btn(
                     :text="column",
@@ -111,11 +111,11 @@ nn-scroll-area(color="royal-purple")
       nn-row(grid)
         template(v-for="(columns, indexRow) in rowsHeightAbsolutes")
           nn-column.fheight(size="1/5")
-            nn-row(v-bind:key="`indexRowHF${indexRow}`")
+            nn-row(:key="`indexRowHF${indexRow}`")
               template(v-for="(column, indexColumn) in columns")
                 nn-column(
                   :size="column",
-                  v-bind:key="`indexColumnHF${indexRow}-${indexColumn}`"
+                  :key="`indexColumnHF${indexRow}-${indexColumn}`"
                 )
                   btn(
                     :text="column",

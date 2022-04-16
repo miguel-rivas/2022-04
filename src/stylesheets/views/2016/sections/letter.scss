@@ -1,0 +1,49 @@
+.letter {
+	position: relative;
+	background-color: #fff;
+
+	.container {
+		margin-inline: auto;
+		max-width: 512px;
+		padding: 20px;
+		position: relative;
+		z-index: 5;
+
+		p {
+			color: #202028;
+			&:first-child {
+				display: none;
+			}
+		}
+
+		small {
+			color: #d96b45;
+			display: block;
+			line-height: 2;
+		}
+
+		em {
+			color: #0071bc;
+			font-style: normal;
+		}
+
+		h2 {
+			font-size: 17pt;
+			text-shadow: none;
+			margin-bottom: 0;
+			color: #0071bc;
+			text-transform: none;
+		}
+
+		strong {
+			color: #0071bc;
+			font-style: normal;
+			font-size: 44pt;
+			float: left;
+			text-transform: uppercase;
+			line-height: 1;
+			margin-right: 7px;
+			margin-bottom: -1px;
+		}
+	}
+}

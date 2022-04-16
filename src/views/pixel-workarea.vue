@@ -73,7 +73,7 @@
         </v-group>
         <template v-for="pixel in gridSize">
           <v-group
-            v-bind:key="`buttonTop${pixel}`"
+            :key="`buttonTop${pixel}`"
             @click="moveLine('top', pixel)"
           >
             <ctrl
@@ -86,7 +86,7 @@
             />
           </v-group>
           <v-group
-            v-bind:key="`buttonBottom${pixel}`"
+            :key="`buttonBottom${pixel}`"
             @click="moveLine('bottom', pixel)"
           >
             <ctrl
@@ -99,7 +99,7 @@
             />
           </v-group>
           <v-group
-            v-bind:key="`buttonLeft${pixel}`"
+            :key="`buttonLeft${pixel}`"
             @click="moveLine('left', pixel)"
           >
             <ctrl
@@ -112,7 +112,7 @@
             />
           </v-group>
           <v-group
-            v-bind:key="`buttonRight${pixel}`"
+            :key="`buttonRight${pixel}`"
             @click="moveLine('right', pixel)"
           >
             <ctrl
@@ -130,7 +130,7 @@
         <template v-for="(row, y) in pixelGrid">
           <template v-for="(color, x) in row">
             <v-rect
-              v-bind:key="`px${x}y${y}`"
+              :key="`px${x}y${y}`"
               :id="`px${x}y${y}`"
               @mousedown="paintColor(x, y, $event)"
               @mouseover="mouseOverPixel($event)"

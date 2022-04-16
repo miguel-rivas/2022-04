@@ -1,0 +1,3 @@
+@function get-zapp($path) {
+  @return "https://miguel-rivas.github.io/zapp/#{$path}";
+}

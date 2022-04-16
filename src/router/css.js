@@ -29,22 +29,22 @@ export default {
           default: () => ([
             {
               text: "css.section.house.title",
-              name: "house",
+              name: ["house"],
               icon: "home",
             },
             {
               text: "css.section.window.title",
-              name: "window",
+              name: ["window"],
               icon: "window",
             },
             {
               text: "css.section.minivan.title",
-              name: "minivan",
+              name: ["minivan"],
               icon: "bus",
             },
             {
               text: "css.section.pills.title",
-              name: "pills",
+              name: ["pills"],
               icon: "medical",
             },
           ])

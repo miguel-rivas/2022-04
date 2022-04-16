@@ -3,7 +3,7 @@ nn-scroll-area(color="royal-purple")
   nn-container
     ul.img-gallery
       template(v-for="(color, colorIndex) in gColorsDB")
-        li.swatch.item(v-bind:key="colorIndex")
+        li.swatch.item(:key="colorIndex")
           nn-row
             nn-column.color(
               size="100%, 250",

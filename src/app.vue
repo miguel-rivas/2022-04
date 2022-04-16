@@ -4,10 +4,7 @@
     <nn-row class="nano-app">
       <panel-navigation />
 
-      <nn-column
-        class="panel"
-        :size="panel ? panelSize[0] : '0'"
-      >
+      <nn-column class="panel" :size="panel ? panelSize[0] : '0'">
         <router-view name="panel" />
       </nn-column>
 

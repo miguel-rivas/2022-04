@@ -27,7 +27,7 @@
                     .tools"
                 >
                   <li
-                    v-bind:key="`projectToolIndex-${projectToolIndex}`"
+                    :key="`projectToolIndex-${projectToolIndex}`"
                     v-html="projectTool"
                   />
                 </template>
@@ -38,7 +38,7 @@
                 v-for="(projectLink, projectLinkIndex) in allDBObj[project]
                   .links"
               >
-                <li v-bind:key="`projectLinkIndex-${projectLinkIndex}`">
+                <li :key="`projectLinkIndex-${projectLinkIndex}`">
                   <btn
                     v-if="projectLink.self"
                     size="md"

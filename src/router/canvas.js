@@ -35,27 +35,27 @@ export default {
           default: () => ([
             {
               text: "canvas.section.map.title",
-              name: "locations",
+              name: ["locations"],
               icon: "airplane",
             },
             {
               text: "canvas.section.avatar.title",
-              name: "avatar",
+              name: ["avatar"],
               icon: "person",
             },
             {
               text: "canvas.section.pixelEditor.title",
-              name: "pixel",
+              name: ["pixel"],
               icon: "category",
             },
             {
               text: "canvas.section.gearBuilder.title",
-              name: "gear",
+              name: ["gear"],
               icon: "cog",
             },
             {
               text: "canvas.section.colorWheel.title",
-              name: "wheel",
+              name: ["wheel"],
               icon: "palette",
             },
           ])

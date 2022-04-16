@@ -1,0 +1,175 @@
+section.home {
+	$translateX: -150;
+	.monitor {
+		background-image: url(get-zapp("img/2014/e002.png"));
+		background-repeat: no-repeat;
+		background-position: left bottom;
+		width: 545px;
+		height: 505px + $translateX;
+		position: relative;
+		top: 0;
+		left: 10%;
+
+		nn-container {
+			position: absolute;
+			top: 240px + $translateX;
+			width: 390px;
+			height: 237px;
+			left: 70px;
+			display: flex;
+			flex-flow: column;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+
+			h1 {
+				font-size: 22px;
+				text-transform: uppercase;
+			}
+
+			p {
+				font-weight: 500;
+				font-size: 15px;
+				line-height: 1.3;
+				margin-bottom: 0;
+			}
+		}
+
+		&:hover {
+			.screen-container {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	web-gear {
+		z-index: -1;
+		position: absolute;
+		&.g1 {
+			left: -155px;
+			top: 25px;
+		}
+
+		&.g2 {
+			left: 350px;
+			top: -52px;
+		}
+
+		&.g3 {
+			left: -68px;
+			top: -21px;
+		}
+
+		&.g4 {
+			left: 16px;
+			top: 110px;
+		}
+
+		&.g5 {
+			left: 100px;
+			top: 0px;
+		}
+
+		&.g6 {
+			left: 259px;
+			top: 80px;
+		}
+	}
+
+	@keyframes static {
+		0% {
+			background-position: 0% 0%;
+		}
+		20% {
+			background-position: 0% 50%;
+		}
+		40% {
+			background-position: 50% 0%;
+		}
+		60% {
+			background-position: 0% 0%;
+		}
+		80% {
+			background-position: 50% 50%;
+		}
+	}
+
+	.screen-container {
+		position: absolute;
+		z-index: -2;
+		right: 19px;
+		bottom: 15px;
+		transform: rotate(90deg);
+		transform-origin: 55px 16px;
+		transition: 500ms;
+
+		.screen {
+			position: absolute;
+			width: 185px;
+			height: 130px;
+			border: 11px solid #222;
+			background-color: #333;
+			background-image: url(get-zapp("img/2014/static.jpg"));
+			animation: static steps(1) 320ms infinite;
+			background-repeat: repeat;
+			background-position: 0% 0%;
+			z-index: 0;
+			right: 100%;
+			top: -20%;
+		}
+
+		.bone {
+			width: 60px;
+			height: 30px;
+			background-color: #000000;
+		}
+
+		web-gear {
+			z-index: 0;
+			position: absolute;
+			right: -20px;
+			top: -10px;
+		}
+	}
+
+	.scrn_btn {
+		width: 85px;
+		height: 45px;
+		position: absolute;
+		bottom: -85px;
+		border: solid #222;
+		color: #333;
+		font-size: 32px;
+		background-color: rgb(157 157 157 / 40%);
+
+		&:hover {
+			cursor: pointer;
+			background-color: rgb(198 215 46 / 50%);
+		}
+
+		&:before {
+			content: "";
+			display: block;
+			width: 16px;
+			height: 14px;
+			background: #000;
+			position: absolute;
+			top: -20px;
+		}
+
+		&.prev {
+			border-width: 6px 22px 6px 6px;
+			right: 125px;
+			&:before {
+				right: -20px;
+			}
+		}
+		&.next {
+			border-width: 6px 6px 6px 22px;
+			right: 0;
+			&:before {
+				left: -20px;
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+&.dragon-night {
+	background-color: #40ba93;
+
+	.bk-ornament {
+		right: -200px;
+		top: -700px;
+		width: 1350px;
+		height: 1350px;
+		transform: rotate(360deg);
+		animation: rtl linear 20s infinite;
+		background: url(get-zapp("img/2014/dragon.svg")) center center no-repeat;
+	}
+
+	.bird {
+		background-image: url(get-zapp("img/2014/sprites-06.png")) !important;
+	}
+}
