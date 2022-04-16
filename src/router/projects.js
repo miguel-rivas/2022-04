@@ -16,7 +16,7 @@ export default {
     workarea: Vue.extend({
       props: {
         defaultRoute: {
-          default: "github"
+          default: "list"
         },
       },
       extends: NestedWorkareaView,
@@ -29,14 +29,14 @@ export default {
         links: {
           default: () => ([
             {
-              text: "projects.section.github.title",
-              name: ["github"],
-              icon: "github",
-            },
-            {
               text: "projects.section.list.title",
               name: ["list"],
               icon: "list",
+            },
+            {
+              text: "projects.section.github.title",
+              name: ["github"],
+              icon: "github",
             },
             {
               text: "projects.section.statistics.title",
