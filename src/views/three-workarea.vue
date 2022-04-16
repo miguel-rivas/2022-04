@@ -26,7 +26,7 @@ export default Vue.extend({
     },
     minDistance: {
       type: Number,
-      default: 7.5,
+      default: 107.5,
     },
     maxDistance: {
       type: Number,

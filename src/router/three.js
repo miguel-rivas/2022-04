@@ -9,9 +9,6 @@ import CubeWorkareaView from '../views/cube-workarea.vue';
 import CubePanelView from '../views/cube-panel.vue';
 import FlipbookWorkareaView from '../views/flipbook-workarea.vue';
 import FlipbookPanelView from '../views/flipbook-panel.vue';
-import PlanetWorkareaView from '../views/planet-workarea.vue';
-
-import CarrouselWorkareaView from '../views/carrousel-workarea.vue';
 
 export default {
   name: 'threejs',
@@ -80,13 +77,6 @@ export default {
   },
   children: [
     {
-      name: 'carrousel',
-      path: '/carrousel',
-      components: {
-        workarea2: CarrouselWorkareaView,
-      },
-    },
-    {
       name: 'audio2',
       path: '/audio2',
       components: {
@@ -120,14 +110,6 @@ export default {
           extends: FlipbookWorkareaView,
         }),
         panel2: FlipbookPanelView,
-      },
-    },
-    {
-      name: 'planet',
-      path: '/planet',
-      components: {
-        workarea2: PlanetWorkareaView,
-        panel2: ThreePanelView,
       },
     },
     {
