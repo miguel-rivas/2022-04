@@ -13,7 +13,7 @@ const linkVimeo = (id) => `https://player.vimeo.com/video/${id}`;
 const projects = [
   {
     date: "2022/04/11",
-    title: "Portfolio 2022-04",
+    title: "Portfolio Matryoshka",
     types: type.app,
     clients: [
       client.miguelRivas,
