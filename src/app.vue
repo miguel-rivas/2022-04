@@ -49,6 +49,12 @@ export default Vue.extend({
       return [this.sectionName, this.theme ? "nano-light" : "nano-dark"];
     },
   },
+  created() {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const currentRoute = urlParams.get("route") || "stargazer";
+    this.$router.push(`/${currentRoute}`);
+  },
   methods: {
     ...mapMutations(["toggleValue"]),
     playSound() {
