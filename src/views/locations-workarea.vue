@@ -222,7 +222,7 @@ export default Vue.extend({
     },
     openModal(filter) {
       this.modal.data = locationsDBList.find(
-        (item) => item.clients[0] === filter
+        (item) => item.clients === filter
       );
       this.modal.hidden = false;
     },

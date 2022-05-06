@@ -17,7 +17,7 @@
                     )
                   nn-column(size="100%-35")
                     btn(
-                      @click="openModal(location.clients[0])",
+                      @click="openModal(location.client)",
                       color="gold-tips",
                       :text="location.title"
                     )
@@ -45,7 +45,7 @@ export default Vue.extend({
     },
     openModal(filter) {
       this.modal.data = locationsDBList.find(
-        (item) => item.clients[0] === filter
+        (item) => item.client === filter
       );
       this.modal.hidden = false;
     },

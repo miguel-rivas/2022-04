@@ -52,8 +52,10 @@ export default Vue.extend({
   created() {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    const currentRoute = urlParams.get("route") || "stargazer";
-    this.$router.push(`/${currentRoute}`);
+    const currentRoute = urlParams.get("route");
+    if (currentRoute) {
+      this.$router.push(`/${currentRoute}`);
+    }
   },
   methods: {
     ...mapMutations(["toggleValue"]),

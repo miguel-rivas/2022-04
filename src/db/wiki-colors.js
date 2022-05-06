@@ -1,4 +1,4 @@
-import { gColor } from "../modules/gcolor";
+import { gColor } from "../classes/gcolor";
 
 export const wikiColors = {
 	/*0 - 50 */

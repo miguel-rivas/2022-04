@@ -1,4 +1,4 @@
-import h from "./helpers";
+import { spinalCase, pascalCase, titleCase } from "../modules/helpers";
 
 export class gColor {
   label;
@@ -83,13 +83,13 @@ export class gColor {
   }
 
   get spinalCase() {
-    return h.spinalCase(this.label)
+    return spinalCase(this.label)
   }
   get pascalCase() {
-    return h.pascalCase(this.label)
+    return pascalCase(this.label)
   }
 
   get titleCase() {
-    return h.titleCase(this.label)
+    return titleCase(this.label)
   }
 }

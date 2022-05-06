@@ -1,3 +1,5 @@
+import Enumerator from "../modules/enumerator";
+
 export const tool = {
   html: "HTML",
   erb: "HTML/ERB",
@@ -89,3 +91,9 @@ export const tool = {
   i18n: "vue-i18n",
   webComponents: "Web Components",
 };
+
+export const toolR = Object.values(tool);
+
+export const toolEnum = new Enumerator(
+  ...Object.keys(tool)
+);

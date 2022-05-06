@@ -3,8 +3,12 @@
     <div role="rowgroup" class="table-body">
       <toggle-row>
         <template v-slot:header>
-          <template v-if="!allDBObj[project].group">
-            <nn-column table-element size="100%-35" v-html="allDBObj[project].title" />
+          <template v-if="!allDBObj[project].filter.includes('group')">
+            <nn-column
+              table-element
+              size="100%-35"
+              v-html="allDBObj[project].title"
+            />
           </template>
           <template v-else>
             <nn-column table-element size="100%-35" v-html="'Summary'" />
@@ -12,9 +16,9 @@
         </template>
         <template v-slot:more>
           <nn-column table-element size="100%" v-if="allDBObj[project]">
-            <h2 v-html="allDBObj[project].clients.join(' & ')" />
+            <h2 v-html="allDBObj[project].client" />
             <h3
-              v-if="!allDBObj[project].group"
+              v-if="!allDBObj[project].filter.includes('group')"
               v-html="$t(allDBObj[project].types)"
             />
             <h4>
@@ -40,14 +44,6 @@
               >
                 <li :key="`projectLinkIndex-${projectLinkIndex}`">
                   <btn
-                    v-if="projectLink.self"
-                    size="md"
-                    color="gold-tips"
-                    :text="projectLink.text"
-                    @click="sentToProjector(projectLink.url)"
-                  />
-                  <btn
-                    v-else
                     tag="a"
                     size="md"
                     color="royal-purple"
@@ -85,14 +81,6 @@ export default Vue.extend({
     hasSlots: undefined,
     allDBObj,
   }),
-  methods: {
-    sentToProjector(src) {
-      this.$store.commit("setProject", {
-        value: src,
-      });
-      console.clear();
-    },
-  },
   mounted() {
     this.hasSlots = this.$slots.default?.length;
   },

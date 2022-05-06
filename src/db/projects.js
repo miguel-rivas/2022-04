@@ -1,3271 +1,2745 @@
-import { tool } from "../enums/tools";
+import { tool, toolEnum } from "../enums/tools";
 import { type } from "../enums/types";
 import { client } from "../enums/clients";
-import { user } from "./user";
 
-import h, { getZapp } from "../modules/helpers";
+import { Project, Children, Link, LinkCodepen, LinkVimeo, LinkGithub, LinkWeb, Preview } from "../classes/project";
 
-const linkWeb = (item) => `https://${user.media.github.production}.github.io/${item}`;
-const linkGithub = (item) => `https://github.com/${user.media.github.production}/${item}`;
-const linkCodepen = (item) => `https://codepen.io/${user.media.codepen.user}/pen/${item}`;
-const linkVimeo = (id) => `https://player.vimeo.com/video/${id}`;
+const pj = [
+  new Project(
+    "2022/04/11",
+    "Portfolio Matryoshka",
+    type.app,
+    client.miguelRivas,
+    [
+      toolEnum.vue,
+      toolEnum.vuex,
+      toolEnum.vueRouter,
+      toolEnum.three,
+      toolEnum.scss,
+      toolEnum.git,
+      toolEnum.chartJS,
+      toolEnum.konva,
+      toolEnum.pug,
+      toolEnum.i18n,
+      toolEnum.webComponents
+    ],
+    new Preview("2022.jpg"),
+    [
+      new LinkGithub("matryoshka")
+    ],
+    [
+      new Children(client.miguelRivas, "2021/12/20"),
+      new Children(client.miguelRivas, "2021/08/12"),
+      new Children(client.miguelRivas, "2018/01/01"),
+      new Children(client.miguelRivas, "2016/08/11"),
+      new Children(client.miguelRivas, "2014/02/09"),
+    ],
+    undefined
+  ),
 
-const projects = [
-  {
-    date: "2022/04/11",
-    title: "Portfolio Matryoshka",
-    types: type.app,
-    clients: [
-      client.miguelRivas,
+  new Project(
+    "2021/12/20",
+    "Portfolio 2022",
+    type.app,
+    client.miguelRivas,
+    [
+      toolEnum.vue,
+      toolEnum.vuex,
+      toolEnum.vueRouter,
+      toolEnum.typescript,
+      toolEnum.three,
+      toolEnum.scss,
+      toolEnum.git,
+      toolEnum.chartJS,
+      toolEnum.konva,
+      toolEnum.pug,
+      toolEnum.i18n,
     ],
-    tools: [
-      tool.vue,
-      tool.vuex,
-      tool.vueRouter,
-      tool.three,
-      tool.scss,
-      tool.git,
-      tool.chartJS,
-      tool.konva,
-      tool.pug,
-      tool.i18n,
-      tool.webComponents,
+    new Preview("2022.jpg"),
+    [
+      new LinkGithub("2022")
     ],
-    image: getZapp("img/preview/wide/2022.jpg"),
-    links: [
-      // {
-      //   url: linkWeb("2022-04"),
-      //   text: "App",
-      //   self: false,
-      // },
-      {
-        url: linkGithub("2022-04"),
-        text: "Github",
-        self: false,
-      },
+    [
+      new Children(client.itla, "2011/07/06"),
+      new Children(client.itla, "2011/07/25"),
+      new Children(client.miguelRivas, "2012/11/06"),
+      new Children(client.miguelRivas, "2015/05/23"),
+      new Children(client.miguelRivas, "2015/05/25"),
+      new Children(client.miguelRivas, "2015/05/28"),
+      new Children(client.miguelRivas, "2017/01/01"),
+      new Children(client.miguelRivas, "2017/02/20"),
+      new Children(client.miguelRivas, "2018/06/27"),
+      new Children(client.miguelRivas, "2021/03/22"),
+      new Children(client.miguelRivas, "2021/02/27"),
+      new Children(client.miguelRivas, "2022/01/05"),
+      new Children(client.miguelRivas, "2022/01/24"),
+      new Children(client.miguelRivas, "2022/02/02"),
+      new Children(client.miguelRivas, "2022/02/07"),
+      new Children(client.miguelRivas, "2022/02/20"),
     ],
-    children: [
-      h.getNewID(client.itla, "2011/07/06"),
-      h.getNewID(client.itla, "2011/07/25"),
-      h.getNewID(client.miguelRivas, "2012/11/06"),
-      h.getNewID(client.miguelRivas, "2015/05/23"),
-      h.getNewID(client.miguelRivas, "2015/05/25"),
-      h.getNewID(client.miguelRivas, "2015/05/28"),
-      h.getNewID(client.miguelRivas, "2017/01/01"),
-      h.getNewID(client.miguelRivas, "2017/02/20"),
-      h.getNewID(client.miguelRivas, "2018/06/27"),
-      h.getNewID(client.miguelRivas, "2021/03/22"),
-      h.getNewID(client.miguelRivas, "2021/02/27"),
-      h.getNewID(client.miguelRivas, "2022/01/05"),
-      h.getNewID(client.miguelRivas, "2022/01/24"),
-      h.getNewID(client.miguelRivas, "2022/02/02"),
-      h.getNewID(client.miguelRivas, "2022/02/07"),
-      h.getNewID(client.miguelRivas, "2022/02/20"),
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2022/03/04",
+    "Grid Gallery",
+    type.prototype,
+    client.miguelRivas,
+    [
+      toolEnum.vue,
+      toolEnum.vuex,
+      toolEnum.vueRouter,
+      toolEnum.typescript,
+      toolEnum.scss,
+      toolEnum.git,
+      toolEnum.pug,
     ],
-  },
+    undefined,
+    undefined,
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2022/02/20",
+    "Pixel Editor",
+    type.prototype,
+    client.miguelRivas,
+    [
+      toolEnum.vue,
+      toolEnum.vuex,
+      toolEnum.vueRouter,
+      toolEnum.typescript,
+      toolEnum.scss,
+      toolEnum.git,
+      toolEnum.konva,
+      toolEnum.pug,
+    ],
+    undefined,
+    undefined,
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2022/02/07",
+    "Avatar Builder",
+    type.prototype,
+    client.miguelRivas,
+    [
+      toolEnum.vue,
+      toolEnum.vuex,
+      toolEnum.vueRouter,
+      toolEnum.typescript,
+      toolEnum.scss,
+      toolEnum.git,
+      toolEnum.konva,
+      toolEnum.pug,
+    ],
+    undefined,
+    undefined,
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2022/02/02",
+    "3D House",
+    type.prototype,
+    client.miguelRivas,
+    [
+      toolEnum.scss,
+      toolEnum.git,
+      toolEnum.pug,
+    ],
+    undefined,
+    undefined,
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2022/01/24",
+    "Map 3D",
+    type.animation3D,
+    client.miguelRivas,
+    [
+      toolEnum.blender,
+    ],
+    undefined,
+    undefined,
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2008/12/05",
+    "Falling Code / Game",
+    type.app,
+    client.itesa,
+    [
+      toolEnum.vb,
+    ],
+    undefined,
+    [
+      new LinkGithub("visualbasic")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2008/11/11",
+    "Bouncing Shapes",
+    type.app,
+    client.itesa,
+    [
+      toolEnum.vb,
+    ],
+    undefined,
+    [
+      new LinkGithub("visualbasic")
+    ],
+    [
+      new Children(client.itesa, "2008/05/16"),
+    ],
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2008/05/16",
+    "Analog Clock",
+    type.app,
+    client.itesa,
+    [
+      toolEnum.vb,
+    ],
+    undefined,
+    [
+      new LinkGithub("visualbasic")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2005/10/01",
+    "ATM",
+    type.app,
+    client.itesa,
+    [
+      toolEnum.pascal,
+    ],
+    undefined,
+    [
+      new LinkGithub("pascal-2004")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2005/10/02",
+    "Bubble Sort",
+    type.app,
+    client.itesa,
+    [
+      toolEnum.pascal,
+    ],
+    undefined,
+    undefined,
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2005/10/03",
+    "Infinite Menu",
+    type.app,
+    client.itesa,
+    [
+      toolEnum.pascal,
+    ],
+    undefined,
+    [
+      new LinkGithub("pascal-2004")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2005/10/04",
+    "Fibonacci Sequence",
+    type.app,
+    client.itesa,
+    [
+      toolEnum.pascal,
+    ],
+    undefined,
+    [
+      new LinkGithub("pascal-2004")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2005/10/05",
+    "Summatory / Accumulator",
+    type.app,
+    client.itesa,
+    [
+      toolEnum.pascal,
+    ],
+    undefined,
+    [
+      new LinkGithub("pascal-2004")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2005/09/28",
+    "Random Number",
+    type.app,
+    client.itesa,
+    [
+      toolEnum.pascal,
+    ],
+    undefined,
+    [
+      new LinkGithub("pascal-2004")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2007/09/04",
+    "Pacman Pixel Draw",
+    type.app,
+    client.itesa,
+    [
+      toolEnum.c,
+    ],
+    undefined,
+    [
+      new LinkGithub("pascal-2004")
+    ],
+    [
+      new Children(client.miguelRivas, "2021/11/08"),
+    ],
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2008/05/17",
+    "Tetravex",
+    type.app,
+    client.itesa,
+    [
+      toolEnum.vb,
+    ],
+    undefined,
+    undefined,
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2008/05/18",
+    "Minesweeper",
+    type.app,
+    client.itesa,
+    [
+      toolEnum.vb,
+    ],
+    undefined,
+    undefined,
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2006/01/05",
+    "Falling Code / Matrix Effect",
+    type.app,
+    client.itesa,
+    [
+      toolEnum.vb,
+    ],
+    undefined,
+    undefined,
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2013/12/06",
+    "Pasteleria Del Jardin",
+    type.socialMedia,
+    client.delJardin,
+    [
+      toolEnum.illustrator,
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf1_000/8", "Document")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2013/06/18",
+    "Lanza tu Promo",
+    type.socialMedia,
+    client.highschool,
+    [
+      toolEnum.illustrator,
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf1_000/10", "Document")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2013/05/28",
+    "Audrey Hepburn",
+    type.document,
+    client.miguelRivas,
+    [
+      toolEnum.photoshop,
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf1_000/12", "Document")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2013/03/21",
+    "Audio 2",
+    type.document,
+    client.itla,
+    [
+      toolEnum.illustrator,
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf1_000/14", "Document")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2012/11/26",
+    "Beauty is a Beast",
+    type.document,
+    client.itla,
+    [
+      toolEnum.illustrator,
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf1_000/16", "Document")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2012/10/24",
+    "Linux Grub",
+    type.document,
+    client.miguelRivas,
+    [
+      toolEnum.freehand,
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf1_000/24", "Document")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2019/07/10",
+    "Play Sound",
+    type.prototype,
+    client.miguelRivas,
+    [
+      toolEnum.javascript,
+    ],
+    undefined,
+    [
+      new LinkCodepen("bPzVPJ")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2020/08/08",
+    "Switch",
+    type.prototype,
+    client.miguelRivas,
+    [
+      toolEnum.scss,
+      toolEnum.slim,
+    ],
+    undefined,
+    [
+      new LinkCodepen("LYNEwLZ")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2020/06/17",
+    "Toggle Arrow",
+    type.prototype,
+    client.miguelRivas,
+    [
+      toolEnum.scss,
+      toolEnum.slim,
+    ],
+    undefined,
+    [
+      new LinkCodepen("VwembzX")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2020/08/18",
+    "Range Slider",
+    type.prototype,
+    client.miguelRivas,
+    [
+      toolEnum.scss,
+      toolEnum.slim,
+    ],
+    undefined,
+    [
+      new LinkCodepen("qBZNMyQ")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2011/07/17",
+    "Madre Naturaleza",
+    type.document,
+    client.miguelRivas,
+    [
+      toolEnum.sk1,
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf1_000/40", "Document")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2011/04/24",
+    "El Montaje",
+    type.document,
+    client.itla,
+    [
+      toolEnum.flash,
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf1_000/42", "Document")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2011/02/22",
+    "Transformer",
+    type.document,
+    client.itla,
+    [
+      toolEnum.illustrator,
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf1_000/44", "Document")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2009/04/27",
+    "Flygon",
+    type.document,
+    client.miguelRivas,
+    [
+      toolEnum.fireworks,
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf1_000/48", "Document")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2012/12/12",
+    "Baká",
+    type.document,
+    client.miguelRivas,
+    [
+      toolEnum.indesign,
+      toolEnum.pencil,
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf2_000/16", "Document"),
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf3_005/28", "Document")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2012/06/14",
+    "Le Machine",
+    type.document,
+    client.miguelRivas,
+    [
+      toolEnum.inkscape,
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf2_000/18", "Document")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2012/01/16",
+    "Stars",
+    type.document,
+    client.miguelRivas,
+    [
+      toolEnum.inkscape,
+      toolEnum.html,
+      toolEnum.javascript,
+      toolEnum.css,
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf2_000/20", "Document")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2012/06/25",
+    "Water Matters",
+    type.document,
+    client.itla,
+    [
+      toolEnum.indesign,
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf2_000/24", "Document")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2012/06/21",
+    "Wickhop",
+    type.document,
+    client.miguelRivas,
+    [
+      toolEnum.inkscape,
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf2_000/28", "Document")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2012/04/29",
+    "Corel Draw",
+    type.document,
+    client.miguelRivas,
+    [
+      toolEnum.corelDraw,
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf2_000/34", "Document")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2011/08/03",
+    "MP4",
+    type.document,
+    client.itla,
+    [
+      toolEnum.flash,
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf2_000/38", "Document")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2011/04/25",
+    "Dream",
+    type.document,
+    client.itla,
+    [
+      toolEnum.illustrator,
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf2_000/40", "Document")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2010/12/27",
+    "Lapices de Colores",
+    type.document,
+    client.miguelRivas,
+    [
+      toolEnum.fireworks,
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf3_005/48", "Document")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2012/07/14",
+    "Living Walls",
+    type.graphicDesign,
+    client.miguelRivas,
+    [
+      toolEnum.inkscape,
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf3_005/42", "Document")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2012/08/23",
+    "Tambora",
+    type.document,
+    client.miguelRivas,
+    [
+      toolEnum.inkscape,
+      toolEnum.indesign
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf3_005/38", "Document")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2012/09/20",
+    "T-Magazine",
+    type.document,
+    client.miguelRivas,
+    [
+      toolEnum.scribus,
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf3_005/32", "Document")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2013/11/30",
+    "AguacateKun Identidad",
+    type.document,
+    client.miguelRivas,
+    [
+      toolEnum.autocad,
+      toolEnum.illustrator,
+      toolEnum.indesign,
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf3_005/14", "Document")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2013/01/20",
+    "Libro de Cuentos",
+    type.graphicDesign,
+    client.miguelRivas,
+    [
+      toolEnum.gimp,
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf2_000/10", "Document"),
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf2_000/14", "Document")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2013/12/03",
+    "Vacaciones Navideñas",
+    type.socialMedia,
+    client.descubria,
+    [
+      toolEnum.illustrator,
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf3_005/12", "Document")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2013/08/03",
+    "Social Network Facebook",
+    type.socialMedia,
+    client.socialNetwork,
+    [
+      toolEnum.illustrator,
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf3_005/16", "Document")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2013/07/06",
+    "Facebook App",
+    type.graphicDesign,
+    client.tiempoExtra,
+    [
+      toolEnum.illustrator,
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf3_005/18", "Document")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2013/07/05",
+    "Home Gallery Facebook",
+    type.socialMedia,
+    client.homeGallery,
+    [
+      toolEnum.illustrator,
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf3_005/20", "Document")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2013/07/05",
+    "SDQ Training Center Facebook",
+    type.socialMedia,
+    client.sdq,
+    [
+      toolEnum.illustrator,
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf3_005/22", "Document")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2013/06/27",
+    "Harina Blaquita Facebook",
+    type.socialMedia,
+    client.harinaBlanquita,
+    [
+      toolEnum.illustrator,
+      toolEnum.photoshop,
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf3_005/24", "Document")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2012/12/29",
+    "Jenny Aquino",
+    type.graphicDesign,
+    client.miguelRivas,
+    [
+      toolEnum.inkscape
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf3_005/26", "Document")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2012/10/12",
+    "Blindness Poster",
+    type.graphicDesign,
+    client.itla,
+    [
+      toolEnum.photoshop
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf3_005/30", "Document")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2012/09/13",
+    "Diseño de Productos",
+    type.document,
+    client.itla,
+    [
+      toolEnum.indesign
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf3_005/34", "Document")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2012/04/16",
+    "Raspberry Pi C",
+    type.graphicDesign,
+    client.itla,
+    [
+      toolEnum.inkscape
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf3_005/44", "Document")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2012/02/28",
+    "Maggiver",
+    type.graphicDesign,
+    client.mangoBajito,
+    [
+      toolEnum.inkscape
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf3_005/46", "Document")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2013/12/15",
+    "Badges",
+    type.graphicDesign,
+    client.cosplayDominicano,
+    [
+      toolEnum.illustrator
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf2_000/8", "Document")
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2012/10/26",
+    "Print Portfolio",
+    type.document,
+    client.miguelRivas,
+    [
+      toolEnum.indesign
+    ],
+    new Preview("2012.jpg"),
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf3_005", "Portfolio 3"),
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf2_000", "Portfolio 2"),
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf1_000", "Portfolio 1"),
+    ],
+    [
+      new Children(client.miguelRivas, "2009/04/27"),
+      new Children(client.itla, "2010/07/07"),
+      new Children(client.miguelRivas, "2010/12/27"),
+      new Children(client.itla, "2011/06/22"),
+      new Children(client.itla, "2011/02/22"),
+      new Children(client.itla, "2011/04/24"),
+      new Children(client.itla, "2011/04/25"),
+      new Children(client.itla, "2011/07/06"),
+      new Children(client.miguelRivas, "2011/07/17"),
+      new Children(client.itla, "2011/07/25"),
+      new Children(client.itla, "2011/07/31"),
+      new Children(client.itla, "2011/08/03"),
+      new Children(client.itla, "2011/11/15"),
+      new Children(client.itla, "2011/11/18"),
+      new Children(client.itla, "2011/12/05"),
+      new Children(client.miguelRivas, "2012/01/16"),
+      new Children(client.mangoBajito, "2012/02/28"),
+      new Children(client.itla, "2012/04/16"),
+      new Children(client.miguelRivas, "2012/04/29"),
+      new Children(client.miguelRivas, "2012/06/14"),
+      new Children(client.miguelRivas, "2012/06/21"),
+      new Children(client.itla, "2012/06/25"),
+      new Children(client.miguelRivas, "2012/07/14"),
+      new Children(client.itla, "2012/07/24"),
+      new Children(client.miguelRivas, "2012/08/23"),
+      new Children(client.miguelRivas, "2012/09/26"),
+      new Children(client.itla, "2012/09/13"),
+      new Children(client.miguelRivas, "2012/09/20"),
+      new Children(client.itla, "2012/10/12"),
+      new Children(client.miguelRivas, "2012/10/24"),
+      new Children(client.miguelRivas, "2012/11/06"),
+      new Children(client.itla, "2012/11/26"),
+      new Children(client.miguelRivas, "2012/12/12"),
+      new Children(client.miguelRivas, "2012/12/29"),
+      new Children(client.miguelRivas, "2013/01/20"),
+      new Children(client.itla, "2013/03/21"),
+      new Children(client.miguelRivas, "2013/05/28"),
+      new Children(client.highschool, "2013/06/18"),
+      new Children(client.harinaBlanquita, "2013/06/27"),
+      new Children(client.sdq, "2013/07/05"),
+      new Children(client.homeGallery, "2013/07/05"),
+      new Children(client.tiempoExtra, "2013/07/06"),
+      new Children(client.socialNetwork, "2013/08/03"),
+      new Children(client.miguelRivas, "2013/11/30"),
+      new Children(client.descubria, "2013/12/03"),
+      new Children(client.delJardin, "2013/12/06"),
+      new Children(client.cosplayDominicano, "2013/12/15"),
+      new Children(client.miguelRivas, "2014/02/09"),
+    ],
+    undefined
+  ),
+
+  new Project(
+    "2015/01/03",
+    "Mainfront",
+    type.app,
+    client.miguelRivas,
+    [
+      toolEnum.pug,
+      toolEnum.jQuery,
+      toolEnum.grunt,
+      toolEnum.scss,
+      toolEnum.illustrator,
+      toolEnum.git,
+    ],
+    new Preview("mainfront.jpg"),
+    [
+      new LinkWeb("main-front", "App"),
+      new LinkGithub("main-front"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2015/04/19",
+    "CSS Study",
+    type.app,
+    client.miguelRivas,
+    [
+      toolEnum.angular,
+      toolEnum.sweetAlert,
+      toolEnum.illustrator,
+      toolEnum.scss,
+      toolEnum.pug,
+      toolEnum.git,
+    ],
+    new Preview("css-study.jpg"),
+    [
+      new LinkWeb("css-study", "App"),
+      new LinkGithub("css-study"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2021/03/24",
+    "Hello",
+    type.app,
+    client.miguelRivas,
+    [
+      toolEnum.vue,
+      toolEnum.illustrator,
+      toolEnum.scss,
+      toolEnum.git,
+    ],
+    new Preview("hello.jpg"),
+    [
+      new LinkWeb("hello", "Berlin", ["city=berlin"]),
+      new LinkWeb("hello", "Dusseldorf", ["city=dusseldorf"]),
+      new LinkWeb("hello", "Melbourne", ["city=melbourne"]),
+      new LinkWeb("hello", "Schwangau", ["city=shwangau"]),
+      new LinkWeb("hello", "Texas", ["city=texas"]),
+      new LinkGithub("hello"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2015/04/26",
+    "Evolution of the Web",
+    type.app,
+    client.miguelRivas,
+    [
+      toolEnum.stellar,
+      toolEnum.inkscape,
+      toolEnum.pug,
+      toolEnum.git,
+      toolEnum.scss,
+    ],
+    new Preview("evolution.jpg"),
+    [
+      new LinkWeb("evolution-web", "App"),
+      new LinkGithub("evolution-web"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2015/05/14",
+    "Robotic Screen",
+    type.prototype,
+    client.miguelRivas,
+    [
+      toolEnum.pug,
+      toolEnum.scss,
+      toolEnum.illustrator,
+    ],
+    new Preview("evolution.jpg"),
+    [
+      new LinkCodepen("oXxPvw"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2015/05/23",
+    "Minivan",
+    type.prototype,
+    client.miguelRivas,
+    [
+      toolEnum.pug,
+      toolEnum.scss,
+    ],
+    new Preview("minivan.jpg"),
+    [
+      new LinkCodepen("oXxPvw"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2015/05/25",
+    "Window Form",
+    type.prototype,
+    client.miguelRivas,
+    [
+      toolEnum.scss,
+      toolEnum.jade,
+      toolEnum.illustrator,
+    ],
+    new Preview("window.jpg"),
+    undefined,
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2015/05/28",
+    "Gear Builder",
+    type.prototype,
+    client.miguelRivas,
+    [
+      toolEnum.canvas,
+      toolEnum.pug,
+      toolEnum.scss,
+    ],
+    new Preview("gear.jpg"),
+    undefined,
+    [
+      new Children(client.itesa, "2008/05/16"),
+    ],
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2015/12/07",
+    "SVG 101",
+    type.prototype,
+    client.miguelRivas,
+    [
+      toolEnum.stellar,
+      toolEnum.snapSVG,
+      toolEnum.pug,
+      toolEnum.scss,
+      toolEnum.illustrator,
+      toolEnum.git,
+    ],
+    new Preview("svg-101.jpg"),
+    [
+      new LinkWeb("svg-101", "Prototype"),
+      new LinkGithub("svg-101"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2015/12/22",
+    "Tetravex",
+    type.app,
+    client.miguelRivas,
+    [
+      toolEnum.javascript,
+      toolEnum.pug,
+      toolEnum.scss,
+      toolEnum.sizzle,
+      toolEnum.lodash,
+      toolEnum.velocity,
+      toolEnum.illustrator,
+      toolEnum.inkscape,
+      toolEnum.git,
+    ],
+    new Preview("tetravex.jpg"),
+    [
+      new LinkWeb("tetravex", "App"),
+      new LinkGithub("tetravex"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2017/02/20",
+    "Pills",
+    type.prototype,
+    client.miguelRivas,
+    [
+      toolEnum.slim,
+      toolEnum.scss,
+    ],
+    new Preview("tetravex.jpg"),
+    undefined,
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2010/07/07",
+    "French Toast",
+    type.motionGraphics,
+    client.itla,
+    [
+      toolEnum.flash,
+    ],
+    new Preview("french-toast.jpg"),
+    [
+      new LinkVimeo("224945169"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2012/07/24",
+    "La Guerra de Vectores",
+    type.motionGraphics,
+    client.itla,
+    [
+      toolEnum.flash,
+    ],
+    new Preview("vectores.jpg"),
+    [
+      new LinkVimeo("175240185"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2016/11/21",
+    "Wurlex",
+    type.animation3D,
+    client.itla,
+    [
+      toolEnum.unity,
+      toolEnum.premiere,
+    ],
+    new Preview("wurlex.jpg"),
+    [
+      new LinkVimeo("224977703"),
+    ],
+    [
+      new Children(client.itla, "2011/04/25"),
+    ],
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2014/02/09",
+    "Screens Portfolio",
+    type.app,
+    client.miguelRivas,
+    [
+      toolEnum.svelte,
+      toolEnum.scss,
+      toolEnum.git,
+    ],
+    new Preview("2014.jpg"),
+    [
+      new LinkGithub("2014"),
+    ],
+    [
+      new Children(client.miguelRivas, "2012/01/16"),
+      new Children(client.miguelRivas, "2015/05/14"),
+      new Children(client.miguelRivas, "2015/05/28"),
+    ],
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2016/08/11",
+    "Spirit Portfolio",
+    type.app,
+    client.miguelRivas,
+    [
+      toolEnum.react,
+      toolEnum.sass,
+      toolEnum.git,
+    ],
+    new Preview("2016.jpg"),
+    [
+      new LinkWeb("2016", "App"),
+      new LinkGithub("2016"),
+    ],
+    [
+      new Children(client.miguelRivas, "2012/01/16"),
+      new Children(client.miguelRivas, "2015/05/14"),
+      new Children(client.miguelRivas, "2015/05/28"),
+    ],
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2021/08/12",
+    "Portfolio 2021",
+    type.app,
+    client.miguelRivas,
+    [
+      toolEnum.vue,
+      toolEnum.vuex,
+      toolEnum.vueRouter,
+      toolEnum.typescript,
+      toolEnum.three,
+      toolEnum.scss,
+      toolEnum.git,
+      toolEnum.chartJS,
+      toolEnum.firebase,
+      toolEnum.highlight,
+      toolEnum.gmap,
+      toolEnum.axios,
+    ],
+    new Preview("2021.jpg"),
+    [
+      new LinkGithub("2021"),
+    ],
+    [
+      new Children(client.miguelRivas, "2012/11/06"),
+      new Children(client.miguelRivas, "2015/05/28"),
+      new Children(client.miguelRivas, "2017/01/01"),
+      new Children(client.miguelRivas, "2018/06/27"),
+      new Children(client.miguelRivas, "2021/03/22"),
+      new Children(client.miguelRivas, "2021/09/12"),
+      new Children(client.miguelRivas, "2021/02/27"),
+    ],
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2018/01/01",
+    "Grid Portfolio",
+    type.app,
+    client.miguelRivas,
+    [
+      toolEnum.angular,
+      toolEnum.scss,
+      toolEnum.git,
+    ],
+    new Preview("2018.jpg"),
+    [
+      new LinkGithub("2018"),
+    ],
+    [
+      new Children(client.miguelRivas, "2021/03/24"),
+    ],
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2016/01/11",
+    "HTML/LOVE",
+    type.landingPage,
+    client.miguelRivas,
+    [
+      toolEnum.angular,
+      toolEnum.scss,
+      toolEnum.git,
+    ],
+    new Preview("html-love.jpg"),
+    [
+      new LinkWeb("html-love", "App"),
+      new LinkGithub("html-love"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2021/03/22",
+    "Nano Grid",
+    type.module,
+    client.miguelRivas,
+    [
+      toolEnum.vue,
+      toolEnum.scss,
+      toolEnum.webComponents,
+      toolEnum.git,
+      toolEnum.javascript,
+      toolEnum.gulp,
+    ],
+    undefined,
+    [
+      new Link("https://www.npmjs.com/package/nano-grid", "Node Module"),
+
+      new LinkGithub("nano-grid"),
+    ],
+    [
+      new Children(client.miguelRivas, "2019/07/10"),
+      new Children(client.miguelRivas, "2020/08/18"),
+    ],
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2021/09/12",
+    "MR Kernel",
+    type.module,
+    client.miguelRivas,
+    [
+      toolEnum.typescript,
+      toolEnum.scss,
+      toolEnum.git,
+    ],
+    undefined,
+    [
+      new Link("https://www.npmjs.com/package/mr-kernel", "Node Module"),
+      new LinkGithub("mr-kernel"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2012/09/26",
+    "Tips of Design",
+    type.document,
+    client.miguelRivas,
+    [
+      toolEnum.indesign,
+    ],
+    undefined,
+    undefined,
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2017/03/05",
+    "Art Direction",
+    type.document,
+    client.miguelRivas,
+    [
+      toolEnum.indesign,
+      toolEnum.illustrator,
+      toolEnum.photoshop,
+    ],
+    undefined,
+    undefined,
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2015/05/10",
+    "Bootstrap Prototype",
+    type.landingPage,
+    client.miguelRivas,
+    [
+      toolEnum.bootstrap,
+      toolEnum.pug,
+      toolEnum.illustrator,
+      toolEnum.scss,
+    ],
+    undefined,
+    undefined,
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2021/03/26",
+    "3D Viewer",
+    type.app,
+    client.miguelRivas,
+    [
+      toolEnum.react,
+      toolEnum.redux,
+      toolEnum.three,
+      toolEnum.firebase,
+      toolEnum.scss,
+      toolEnum.typescript,
+      toolEnum.git,
+    ],
+    new Preview("2021-react.jpg"),
+    [
+      new LinkWeb("2021-react", "App"),
+      new LinkGithub("2021-react"),
+    ],
+    [
+      new Children(client.miguelRivas, "2021/03/22"),
+      new Children(client.miguelRivas, "2021/09/12"),
+      new Children(client.itla, "2011/07/06"),
+      new Children(client.itla, "2011/06/22"),
+      new Children(client.itla, "2011/07/25"),
+    ],
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2017/01/01",
+    "FlatCSS",
+    type.module,
+    client.miguelRivas,
+    [
+      toolEnum.pug,
+      toolEnum.css,
+      toolEnum.git,
+    ],
+    undefined,
+    [
+      new LinkWeb("flat-css", "App"),
+      new LinkGithub("flat-css"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2020/10/04",
+    "Fake Audience",
+    type.app,
+    client.miguelRivas,
+    [
+      toolEnum.kotlin,
+      toolEnum.git,
+    ],
+    undefined,
+    [
+      new LinkGithub("fake_audience"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2021/02/27",
+    "3D Graph Colors",
+    type.prototype,
+    client.miguelRivas,
+    [
+      toolEnum.three
+    ],
+    undefined,
+    undefined,
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2020/05/09",
+    "Animated SVG Header",
+    type.prototype,
+    client.miguelRivas,
+    [
+      toolEnum.tweenMax,
+      toolEnum.html,
+      toolEnum.scss,
+    ],
+    undefined,
+    [
+      new LinkCodepen("zYvjwEM"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2020/03/23",
+    "Xpinner",
+    type.prototype,
+    client.miguelRivas,
+    [
+      toolEnum.svg,
+      toolEnum.scss,
+    ],
+    undefined,
+    [
+      new LinkCodepen("VwLGgYv"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2018/06/27",
+    "Color Wheel Creator",
+    type.prototype,
+    client.miguelRivas,
+    [
+      toolEnum.javascript,
+      toolEnum.scss,
+    ],
+    undefined,
+    [
+      new LinkCodepen("ERdMLO"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2018/09/11",
+    "Movie projector",
+    type.prototype,
+    client.miguelRivas,
+    [
+      toolEnum.svg,
+      toolEnum.scss,
+    ],
+    undefined,
+    [
+      new LinkCodepen("rZdMYj"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2018/05/31",
+    "Check Animation",
+    type.prototype,
+    client.miguelRivas,
+    [
+      toolEnum.svg,
+      toolEnum.scss,
+    ],
+    undefined,
+    [
+      new LinkCodepen("ZRGpbQ"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2018/03/28",
+    "Bounce Animation",
+    type.prototype,
+    client.miguelRivas,
+    [
+      toolEnum.canvas,
+    ],
+    undefined,
+    [
+      new LinkCodepen("GxyMMz"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2015/05/29",
+    "Spinners",
+    type.prototype,
+    client.miguelRivas,
+    [
+      toolEnum.pug,
+      toolEnum.scss,
+    ],
+    undefined,
+    [
+      new LinkCodepen("eNgRRe"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2012/11/06",
+    "Drakkar",
+    type.animation3D,
+    client.miguelRivas,
+    [
+      toolEnum.blender,
+    ],
+    new Preview("drakkar.jpg"),
+    [
+      new Link("https://sketchfab.com/3d-models/drakkar-d0f14c73155e460cb848a3db80e1cb07", "3D Model"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2011/12/05",
+    "Reloj",
+    type.animation3D,
+    client.itla,
+    [
+      toolEnum.maya,
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf1_000/28", "Document"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2011/11/15",
+    "Pencil Sharpener",
+    type.animation3D,
+    client.itla,
+    [
+      toolEnum.maya,
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf1_000/30", "Document"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2011/11/18",
+    "Batteries: depth of field",
+    type.animation3D,
+    client.itla,
+    [
+      toolEnum.maya,
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf1_000/30", "Document"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2011/07/25",
+    "Audi",
+    type.animation3D,
+    client.itla,
+    [
+      toolEnum.maya,
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf1_000/32", "Document"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2011/07/31",
+    "Mackbook Pro",
+    type.animation3D,
+    client.itla,
+    [
+      toolEnum.maya,
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf1_000/34", "Document"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2011/06/22",
+    "Backpack",
+    type.animation3D,
+    client.itla,
+    [
+      toolEnum.maya,
+    ],
+    undefined,
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf1_000/36", "Document"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2011/07/06",
+    "X-wing",
+    type.animation3D,
+    client.itla,
+    [
+      toolEnum.maya,
+    ],
+    new Preview("x-wing.jpg"),
+    [
+      new Link("https://issuu.com/jemiguelrivas/docs/ptf1_000/38", "Document"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2014/06/16",
+    "Destapa el Coro",
+    type.app,
+    client.presidente,
+    [
+      toolEnum.html,
+      toolEnum.jQuery,
+      toolEnum.grunt,
+      toolEnum.css,
+      toolEnum.git,
+    ],
+    undefined,
+    [
+      new LinkWeb("presidente-destapa-coro", "App"),
+      new LinkGithub("presidente-destapa-coro"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2015/03/30",
+    "Pacman",
+    type.motionGraphics,
+    client.presidente,
+    [
+      toolEnum.flash,
+    ],
+    undefined,
+    [
+      new LinkVimeo("175240177", "Video"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
 
 
-  {
-    date: "2021/12/20",
-    title: "Portfolio 2022",
-    image: getZapp("img/preview/wide/2022.jpg"),
-    types: type.app,
-    clients: [
-      client.miguelRivas,
+  new Project(
+    "2015/03/24",
+    "BigPapi Selfie",
+    type.motionGraphics,
+    client.pepsi,
+    [
+      toolEnum.flash,
     ],
-    tools: [
-      tool.vue,
-      tool.vuex,
-      tool.vueRouter,
-      tool.typescript,
-      tool.three,
-      tool.scss,
-      tool.git,
-      tool.chartJS,
-      tool.konva,
-      tool.pug,
-      tool.i18n,
+    new Preview("pepsi.jpg"),
+    [
+      new LinkVimeo("175240184", "Video"),
     ],
-    links: [
-      // {
-      //   url: linkWeb("2022"),
-      //   text: "App",
-      //   self: false,
-      // },
-      {
-        url: linkGithub("2022"),
-        text: "Github",
-        self: false,
-      },
-    ],
-    children: [
-      h.getNewID(client.itla, "2011/07/06"),
-      h.getNewID(client.itla, "2011/07/25"),
-      h.getNewID(client.miguelRivas, "2012/11/06"),
-      h.getNewID(client.miguelRivas, "2015/05/23"),
-      h.getNewID(client.miguelRivas, "2015/05/25"),
-      h.getNewID(client.miguelRivas, "2015/05/28"),
-      h.getNewID(client.miguelRivas, "2017/01/01"),
-      h.getNewID(client.miguelRivas, "2017/02/20"),
-      h.getNewID(client.miguelRivas, "2018/06/27"),
-      h.getNewID(client.miguelRivas, "2021/03/22"),
-      h.getNewID(client.miguelRivas, "2021/02/27"),
-      h.getNewID(client.miguelRivas, "2022/01/05"),
-      h.getNewID(client.miguelRivas, "2022/01/24"),
-      h.getNewID(client.miguelRivas, "2022/02/02"),
-      h.getNewID(client.miguelRivas, "2022/02/07"),
-      h.getNewID(client.miguelRivas, "2022/02/20"),
-    ],
-  },
-
-  {
-    date: "2022/03/04",
-    title: "Grid Gallery",
-    types: type.prototype,
-    clients: [
-      client.miguelRivas,
-    ],
-    disabled: true,
-    tools: [
-      tool.vue,
-      tool.vuex,
-      tool.vueRouter,
-      tool.typescript,
-      tool.scss,
-      tool.git,
-      tool.pug,
-    ],
-  },
-
-  {
-    date: "2022/02/20",
-    title: "Pixel Editor",
-    types: type.prototype,
-    clients: [
-      client.miguelRivas,
-    ],
-    disabled: true,
-    tools: [
-      tool.vue,
-      tool.vuex,
-      tool.vueRouter,
-      tool.typescript,
-      tool.scss,
-      tool.git,
-      tool.konva,
-      tool.pug,
-    ],
-  },
+    undefined,
+    ["no-listing"]
+  ),
 
 
-  {
-    date: "2022/02/07",
-    title: "Avatar Builder",
-    types: type.prototype,
-    clients: [
-      client.miguelRivas,
+  new Project(
+    "2015/04/18",
+    "Carnaval Presidente 2015",
+    type.landingPage,
+    client.presidente,
+    [
+      toolEnum.html,
+      toolEnum.jQuery,
+      toolEnum.grunt,
+      toolEnum.scss,
+      toolEnum.php,
+      toolEnum.git,
     ],
-    disabled: true,
-    tools: [
-      tool.vue,
-      tool.vuex,
-      tool.vueRouter,
-      tool.typescript,
-      tool.scss,
-      tool.git,
-      tool.konva,
-      tool.pug,
+    new Preview("carnaval-presidente.jpg"),
+    [
+      new LinkWeb("presidente-carnaval-2015/filter.html", "Filter"),
+      new LinkWeb("presidente-carnaval-2015/home.html", "Home"),
+      new LinkGithub("presidente-carnaval-2015"),
     ],
-  },
-
-  {
-    date: "2022/02/02",
-    title: "3D House",
-    types: type.prototype,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.scss,
-      tool.git,
-      tool.pug,
-    ],
-    disabled: true,
-  },
+    undefined,
+    ["no-listing"]
+  ),
 
 
-  {
-    date: "2022/01/24",
-    title: "Map 3D",
-    types: type.animation3D,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
+  new Project(
+    "2015/05/20",
+    "Recarga Con RedRock",
+    type.motionGraphics,
+    client.redRock,
+    [
+      toolEnum.flash,
     ],
-    tools: [
-      tool.blender,
+    new Preview("redrock.jpg"),
+    [
+      new LinkVimeo("175240186", "Video"),
     ],
-  },
+    undefined,
+    ["no-listing"]
+  ),
 
-  {
-    date: "2008/12/05",
-    title: "Falling Code / Game",
-    types: type.app,
-    disabled: true,
-    clients: [
-      client.itesa,
-    ],
-    tools: [
-      tool.vb,
-    ],
-    links: [
-      {
-        url: linkGithub("visualbasic"),
-        text: "Github",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2008/11/11",
-    title: "Bouncing Shapes",
-    types: type.app,
-    disabled: true,
-    clients: [
-      client.itesa,
-    ],
-    tools: [
-      tool.vb,
-    ],
-    links: [
-      {
-        url: linkGithub("visualbasic"),
-        text: "Github",
-        self: false,
-      },
-    ],
-    children: [
-      h.getNewID(client.itesa, "2008/05/16"),
-    ],
-  },
-  {
-    date: "2008/05/16",
-    title: "Analog Clock",
-    types: type.app,
-    disabled: true,
-    clients: [
-      client.itesa,
-    ],
-    tools: [
-      tool.vb,
-    ],
-    links: [
-      {
-        url: linkGithub("visualbasic"),
-        text: "Github",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2005/10/01",
-    title: "ATM",
-    types: type.app,
-    disabled: true,
-    clients: [
-      client.itesa,
-    ],
-    tools: [
-      tool.pascal,
-    ],
-    links: [
-      {
-        url: linkGithub("pascal-2004"),
-        text: "Github",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2005/10/02",
-    title: "Bubble Sort",
-    types: type.app,
-    disabled: true,
-    clients: [
-      client.itesa,
-    ],
-    tools: [
-      tool.pascal,
-    ],
-    links: [],
-  },
-  {
-    date: "2005/10/03",
-    title: "Infinite Menu",
-    types: type.app,
-    disabled: true,
-    clients: [
-      client.itesa,
-    ],
-    tools: [
-      tool.pascal,
-    ],
-    links: [
-      {
-        url: linkGithub("pascal-2004"),
-        text: "Github",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2005/10/04",
-    title: "Fibonacci Sequence",
-    types: type.app,
-    disabled: true,
-    clients: [
-      client.itesa,
-    ],
-    tools: [
-      tool.pascal,
-    ],
-    links: [
-      {
-        url: linkGithub("pascal-2004"),
-        text: "Github",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2005/10/05",
-    title: "Summatory / Accumulator",
-    types: type.app,
-    disabled: true,
-    clients: [
-      client.itesa,
-    ],
-    tools: [
-      tool.pascal,
-    ],
-    links: [
-      {
-        url: linkGithub("pascal-2004"),
-        text: "Github",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2005/09/28",
-    title: "Random Number",
-    types: type.app,
-    disabled: true,
-    clients: [
-      client.itesa,
-    ],
-    tools: [
-      tool.pascal,
-    ],
-    links: [
-      {
-        url: linkGithub("pascal-2004"),
-        text: "Github",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2007/09/04",
-    title: "Pacman Pixel Draw",
-    types: type.app,
-    disabled: true,
-    clients: [
-      client.itesa,
-    ],
-    tools: [
-      tool.c,
-    ],
-    links: [],
-    children: [
-      h.getNewID(client.miguelRivas, "2021/11/08"),
-    ],
-  },
-  {
-    date: "2008/05/17",
-    title: "Tetravex",
-    types: type.app,
-    disabled: true,
-    clients: [
-      client.itesa,
-    ],
-    tools: [
-      tool.vb,
-    ],
-    links: [],
-  },
-  {
-    date: "2008/05/18",
-    title: "Minesweeper",
-    types: type.app,
-    disabled: true,
-    clients: [
-      client.itesa,
-    ],
-    tools: [
-      tool.vb,
-    ],
-    links: [],
-  },
-  {
-    date: "2006/01/05",
-    title: "Falling Code / Matrix Effect",
-    types: type.app,
-    disabled: true,
-    clients: [
-      client.itesa,
-    ],
-    tools: [
-      tool.vb,
-    ],
-    links: [],
-  },
-  {
-    date: "2013/12/06",
-    title: "Pasteleria Del Jardin",
-    types: type.socialMedia,
-    disabled: true,
-    clients: [
-      client.delJardin,
-    ],
-    tools: [
-      tool.illustrator,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf1_000/8",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2013/06/18",
-    title: "Lanza tu Promo",
-    types: type.socialMedia,
-    disabled: true,
-    clients: [
-      client.highschool,
-    ],
-    tools: [
-      tool.illustrator,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf1_000/10",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2013/05/28",
-    title: "Audrey Hepburn",
-    types: type.document,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.photoshop,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf1_000/12",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2013/03/21",
-    title: "Audio 2",
-    types: type.document,
-    disabled: true,
-    clients: [
-      client.itla,
-    ],
-    tools: [
-      tool.illustrator,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf1_000/14",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2012/11/26",
-    title: "Beauty is a Beast",
-    types: type.document,
-    disabled: true,
-    clients: [
-      client.itla,
-    ],
-    tools: [
-      tool.illustrator,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf1_000/16",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2012/10/24",
-    title: "Linux Grub",
-    types: type.document,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.freehand,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf1_000/24",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2019/07/10",
-    title: "Play Sound",
-    types: type.prototype,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.javascript,
-    ],
-    links: [
-      {
-        url: linkCodepen("bPzVPJ"),
-        text: "Codepen Prototype",
-      },
-    ],
-  },
-  {
-    date: "2020/08/08",
-    title: "Switch",
-    types: type.prototype,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.scss,
-      tool.slim,
-    ],
-    links: [
-      {
-        url: linkCodepen("LYNEwLZ"),
-        text: "Codepen Prototype",
-      },
-    ],
-  },
-  {
-    date: "2020/06/17",
-    title: "Toggle Arrow",
-    types: type.prototype,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.scss,
-      tool.slim,
-    ],
-    links: [
-      {
-        url: linkCodepen("VwembzX"),
-        text: "Codepen Prototype",
-      },
-    ],
-  },
-  {
-    date: "2020/08/18",
-    title: "Range Slider",
-    types: type.prototype,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.scss,
-      tool.slim,
-    ],
-    links: [
-      {
-        url: linkCodepen("qBZNMyQ"),
-        text: "Codepen Prototype",
-      },
-    ],
-  },
-  {
-    date: "2011/07/17",
-    title: "Madre Naturaleza",
-    types: type.document,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.sk1,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf1_000/40",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2011/04/24",
-    title: "El Montaje",
-    types: type.document,
-    disabled: true,
-    clients: [
-      client.itla,
-    ],
-    tools: [
-      tool.flash,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf1_000/42",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2011/02/22",
-    title: "Transformer",
-    types: type.document,
-    disabled: true,
-    clients: [
-      client.itla,
-    ],
-    tools: [
-      tool.illustrator,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf1_000/44",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2009/04/27",
-    title: "Flygon",
-    types: type.document,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.fireworks,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf1_000/48",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2012/12/12",
-    title: "Baká",
-    types: type.document,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.indesign,
-      tool.pencil,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf2_000/16",
-        text: "Document",
-        self: false,
-      },
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf3_005/28",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2012/06/14",
-    title: "Le Machine",
-    types: type.document,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.inkscape,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf2_000/18",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2012/01/16",
-    title: "Stars",
-    types: type.document,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.inkscape,
-      tool.html,
-      tool.javascript,
-      tool.css,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf2_000/20",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2012/06/25",
-    title: "Water Matters",
-    types: type.document,
-    disabled: true,
-    clients: [
-      client.itla,
-    ],
-    tools: [
-      tool.indesign,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf2_000/24",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2012/06/21",
-    title: "Wickhop",
-    types: type.document,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.inkscape,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf2_000/28",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2012/04/29",
-    title: "Corel Draw",
-    types: type.document,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.corelDraw,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf2_000/34",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2011/08/03",
-    title: "MP4",
-    types: type.document,
-    disabled: true,
-    clients: [
-      client.itla,
-    ],
-    tools: [
-      tool.flash,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf2_000/38",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2011/04/25",
-    title: "Dream",
-    types: type.document,
-    disabled: true,
-    clients: [
-      client.itla,
-    ],
-    tools: [
-      tool.illustrator,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf2_000/40",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2010/12/27",
-    title: "Lapices de Colores",
-    types: type.document,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.fireworks,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf3_005/48",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2012/07/14",
-    title: "Living Walls",
-    types: type.graphicDesign,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.inkscape,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf3_005/42",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2012/08/23",
-    title: "Tambora",
-    types: type.document,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.inkscape,
-      tool.indesign,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf3_005/38",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2012/09/20",
-    title: "T-Magazine",
-    types: type.document,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.scribus,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf3_005/32",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2013/11/30",
-    title: "AguacateKun Identidad",
-    types: type.document,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.autocad,
-      tool.illustrator,
-      tool.indesign,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf3_005/14",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2013/01/20",
-    title: "Libro de Cuentos",
-    types: type.graphicDesign,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.gimp,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf2_000/10",
-        text: "Document",
-        self: false,
-      },
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf2_000/14",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2013/12/03",
-    title: "Vacaciones Navideñas",
-    types: type.socialMedia,
-    disabled: true,
-    clients: [
-      client.descubria,
-    ],
-    tools: [
-      tool.illustrator,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf3_005/12",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2013/08/03",
-    title: "Social Network Facebook",
-    types: type.socialMedia,
-    disabled: true,
-    clients: [
-      client.socialNetwork,
-    ],
-    tools: [
-      tool.illustrator,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf3_005/16",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2013/07/06",
-    title: "Facebook App",
-    types: type.graphicDesign,
-    disabled: true,
-    clients: [
-      client.tiempoExtra,
-    ],
-    tools: [
-      tool.illustrator,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf3_005/18",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2013/07/05",
-    title: "Home Gallery Facebook",
-    types: type.socialMedia,
-    disabled: true,
-    clients: [
-      client.homeGallery,
-    ],
-    tools: [
-      tool.illustrator,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf3_005/20",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2013/07/05",
-    title: "SDQ Training Center Facebook",
-    types: type.socialMedia,
-    disabled: true,
-    clients: [
-      client.sdq,
-    ],
-    tools: [
-      tool.illustrator,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf3_005/22",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2013/06/27",
-    title: "Harina Blaquita Facebook",
-    types: type.socialMedia,
-    disabled: true,
-    clients: [
-      client.harinaBlanquita,
-    ],
-    tools: [
-      tool.illustrator,
-      tool.photoshop,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf3_005/24",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2012/12/29",
-    title: "Jenny Aquino",
-    types: type.graphicDesign,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.inkscape,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf3_005/26",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2012/10/12",
-    title: "Blindness Poster",
-    types: type.graphicDesign,
-    disabled: true,
-    clients: [
-      client.itla,
-    ],
-    tools: [
-      tool.photoshop,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf3_005/30",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2012/09/13",
-    title: "Diseño de Productos",
-    types: type.document,
-    disabled: true,
-    clients: [
-      client.itla,
-    ],
-    tools: [
-      tool.indesign,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf3_005/34",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2012/04/16",
-    title: "Raspberry Pi C",
-    types: type.graphicDesign,
-    disabled: true,
-    clients: [
-      client.itla,
-    ],
-    tools: [
-      tool.inkscape,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf3_005/44",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2012/02/28",
-    title: "Maggiver",
-    types: type.document,
-    disabled: true,
-    clients: [
-      client.mangoBajito,
-    ],
-    tools: [
-      tool.inkscape,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf3_005/46",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2013/12/15",
-    title: "Badges",
-    types: type.graphicDesign,
-    disabled: true,
-    clients: [
-      client.cosplayDominicano,
-    ],
-    tools: [
-      tool.illustrator,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf2_000/8",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
 
-  {
-    date: "2012/10/26",
-    title: "Print Portfolio",
-    image: getZapp("img/preview/wide/2012.jpg"),
-    types: type.document,
-    clients: [
-      client.miguelRivas,
+  new Project(
+    "2015/10/23",
+    "Retrobrindis",
+    type.app,
+    client.presidente,
+    [
+      toolEnum.html,
+      toolEnum.css,
+      toolEnum.jQuery,
+      toolEnum.php,
+      toolEnum.git,
     ],
-    tools: [
-      tool.indesign,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf3_005",
-        text: "Portfolio 3",
-        self: false,
-      },
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf2_000",
-        text: "Portfolio 2",
-        self: false,
-      },
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf1_000",
-        text: "Portfolio 1",
-        self: false,
-      },
-    ],
-    children: [
-      h.getNewID(client.miguelRivas, "2009/04/27"),
-      h.getNewID(client.itla, "2010/07/07"),
-      h.getNewID(client.miguelRivas, "2010/12/27"),
-      h.getNewID(client.itla, "2011/06/22"),
-      h.getNewID(client.itla, "2011/02/22"),
-      h.getNewID(client.itla, "2011/04/24"),
-      h.getNewID(client.itla, "2011/04/25"),
-      h.getNewID(client.itla, "2011/07/06"),
-      h.getNewID(client.miguelRivas, "2011/07/17"),
-      h.getNewID(client.itla, "2011/07/25"),
-      h.getNewID(client.itla, "2011/07/31"),
-      h.getNewID(client.itla, "2011/08/03"),
-      h.getNewID(client.itla, "2011/11/15"),
-      h.getNewID(client.itla, "2011/11/18"),
-      h.getNewID(client.itla, "2011/12/05"),
-      h.getNewID(client.miguelRivas, "2012/01/16"),
-      h.getNewID(client.mangoBajito, "2012/02/28"),
-      h.getNewID(client.itla, "2012/04/16"),
-      h.getNewID(client.miguelRivas, "2012/04/29"),
-      h.getNewID(client.miguelRivas, "2012/06/14"),
-      h.getNewID(client.miguelRivas, "2012/06/21"),
-      h.getNewID(client.itla, "2012/06/25"),
-      h.getNewID(client.miguelRivas, "2012/07/14"),
-      h.getNewID(client.itla, "2012/07/24"),
-      h.getNewID(client.miguelRivas, "2012/08/23"),
-      h.getNewID(client.miguelRivas, "2012/09/26"),
-      h.getNewID(client.itla, "2012/09/13"),
-      h.getNewID(client.miguelRivas, "2012/09/20"),
-      h.getNewID(client.itla, "2012/10/12"),
-      h.getNewID(client.miguelRivas, "2012/10/24"),
-      h.getNewID(client.miguelRivas, "2012/11/06"),
-      h.getNewID(client.itla, "2012/11/26"),
-      h.getNewID(client.miguelRivas, "2012/12/12"),
-      h.getNewID(client.miguelRivas, "2012/12/29"),
-      h.getNewID(client.miguelRivas, "2013/01/20"),
-      h.getNewID(client.itla, "2013/03/21"),
-      h.getNewID(client.miguelRivas, "2013/05/28"),
-      h.getNewID(client.highschool, "2013/06/18"),
-      h.getNewID(client.harinaBlanquita, "2013/06/27"),
-      h.getNewID(client.sdq, "2013/07/05"),
-      h.getNewID(client.homeGallery, "2013/07/05"),
-      h.getNewID(client.tiempoExtra, "2013/07/06"),
-      h.getNewID(client.socialNetwork, "2013/08/03"),
-      h.getNewID(client.miguelRivas, "2013/11/30"),
-      h.getNewID(client.descubria, "2013/12/03"),
-      h.getNewID(client.delJardin, "2013/12/06"),
-      h.getNewID(client.cosplayDominicano, "2013/12/15"),
-      h.getNewID(client.miguelRivas, "2014/02/09"),
-    ],
-  },
+    new Preview("retro-brindis.jpg"),
+    [
 
-  {
-    date: "2015/01/03",
-    title: "Mainfront",
-    image: getZapp("img/preview/wide/mainfront.jpg"),
-    types: type.app,
-    clients: [
-      client.miguelRivas,
+      new LinkWeb("presidente-retro-brindis", "App"),
+      new LinkGithub("presidente-retro-brindis"),
     ],
-    tools: [
-      tool.pug,
-      tool.jQuery,
-      tool.grunt,
-      tool.scss,
-      tool.illustrator,
-      tool.git,
-    ],
-    disabled: true,
-    links: [
-      {
-        url: linkWeb("main-front"),
-        text: "App",
-        self: false,
-      },
-      {
-        url: linkGithub("main-front"),
-        text: "Github",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2015/04/19",
-    title: "CSS Study",
-    image: getZapp("img/preview/wide/css-study.jpg"),
-    types: type.app,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.angular,
-      tool.sweetAlert,
-      tool.illustrator,
-      tool.scss,
-      tool.pug,
-      tool.git,
-    ],
-    links: [
-      {
-        url: linkWeb("css-study"),
-        text: "App",
-        self: false,
-      },
-      {
-        url: linkGithub("css-study"),
-        text: "Github",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2021/03/24",
-    title: "Hello",
-    image: getZapp("img/preview/wide/hello.jpg"),
-    types: type.app,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.vue,
-      tool.illustrator,
-      tool.scss,
-      tool.git,
-    ],
-    links: [
-      {
-        url: `${linkWeb("hello")}`,
-        text: "berlin",
-        params: ["city=berlin"],
-        self: false,
-      },
-      {
-        url: `${linkWeb("hello")}`,
-        text: "dusseldorf",
-        params: ["city=dusseldorf"],
-        self: false,
-      },
-      {
-        url: `${linkWeb("hello")}`,
-        text: "melbourne",
-        params: ["city=melbourne"],
-        self: false,
-      },
-      {
-        url: `${linkWeb("hello")}`,
-        text: "schwangau",
-        params: ["city=schwangau"],
-        self: false,
-      },
-      {
-        url: `${linkWeb("hello")}`,
-        text: "texas",
-        params: ["city=texas"],
-        self: false,
-      },
-      {
-        url: linkGithub("hello"),
-        text: "Github",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2015/04/26",
-    title: "Evolution of the Web",
-    image: getZapp("img/preview/wide/evolution.jpg"),
-    types: type.app,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.stellar,
-      tool.inkscape,
-      tool.pug,
-      tool.git,
-      tool.scss,
-    ],
-    links: [
-      {
-        url: linkWeb("evolution-web"),
-        text: "App",
-        self: false,
-      },
-      {
-        url: linkGithub("evolution-web"),
-        text: "Github",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2015/05/14",
-    title: "Robotic Screen",
-    types: type.prototype,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.pug,
-      tool.scss,
-      tool.illustrator,
-    ],
-    links: [
-      {
-        url: linkCodepen("oXxPvw"),
-        text: "Codepen Prototype",
-      },
-    ],
-  },
-  {
-    date: "2015/05/23",
-    title: "Minivan",
-    image: getZapp("img/preview/wide/minivan.jpg"),
-    types: type.prototype,
-    clients: [
-      client.miguelRivas,
-    ],
-    disabled: true,
-    tools: [
-      tool.pug,
-      tool.scss,
-    ],
-  },
-  {
-    date: "2015/05/25",
-    title: "Window Form",
-    image: getZapp("img/preview/wide/window.jpg"),
-    types: type.prototype,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.scss,
-      tool.jade,
-      tool.illustrator,
-    ],
-  },
-  {
-    date: "2015/05/28",
-    title: "Gear Builder",
-    image: getZapp("img/preview/wide/gear.jpg"),
-    types: type.prototype,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.canvas,
-      tool.pug,
-      tool.scss,
-    ],
-    disabled: true,
-    children: [
-      h.getNewID(client.itesa, "2008/05/16"),
-    ],
-  },
-  {
-    date: "2015/12/07",
-    title: "SVG 101",
-    image: getZapp("img/preview/wide/svg-101.jpg"),
-    types: type.prototype,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.stellar,
-      tool.snapSVG,
-      tool.pug,
-      tool.scss,
-      tool.illustrator,
-      tool.git,
-    ],
-    links: [
-      {
-        url: linkWeb("svg-101"),
-        text: "Prototype",
-        self: false,
-      },
-      {
-        url: linkGithub("svg-101"),
-        text: "Github",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2015/12/22",
-    title: "Tetravex",
-    image: getZapp("img/preview/wide/tetravex.jpg"),
-    types: type.app,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.javascript,
-      tool.pug,
-      tool.scss,
-      tool.sizzle,
-      tool.lodash,
-      tool.velocity,
-      tool.illustrator,
-      tool.inkscape,
-      tool.git,
-    ],
-    links: [
-      {
-        url: linkWeb("tetravex"),
-        text: "App",
-        self: false,
-      },
-      {
-        url: linkGithub("tetravex"),
-        text: "Github",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2017/02/20",
-    title: "Pills",
-    types: type.prototype,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.slim,
-      tool.scss,
-    ],
-  },
-  {
-    date: "2010/07/07",
-    title: "French Toast",
-    image: getZapp("img/preview/wide/french-toast.jpg"),
-    disabled: true,
-    types: type.motionGraphics,
-    clients: [
-      client.itla,
-    ],
-    tools: [
-      tool.flash,
-    ],
-    links: [
-      {
-        url: linkVimeo("224945169"),
-        text: "Video",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2012/07/24",
-    title: "La Guerra de Vectores",
-    image: getZapp("img/preview/wide/vectores.jpg"),
-    types: type.motionGraphics,
-    disabled: true,
-    clients: [
-      client.itla,
-    ],
-    tools: [
-      tool.flash,
-    ],
-    links: [
-      {
-        url: linkVimeo("175240185"),
-        text: "Video",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2016/11/21",
-    title: "Wurlex",
-    image: getZapp("img/preview/wide/wurlex.jpg"),
-    types: type.animation3D,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.unity,
-      tool.premiere,
-    ],
-    links: [
-      {
-        url: linkVimeo("224977703"),
-        text: "Video",
-        self: false,
-      },
-    ],
-    children: [
-      h.getNewID(client.itla, "2011/04/25"),
-    ],
-  },
-  {
-    date: "2014/02/09",
-    title: "Screens Portfolio",
-    image: getZapp("img/preview/wide/2014.jpg"),
-    types: type.app,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.svelte,
-      tool.scss,
-      tool.git,
-    ],
-    links: [
-      // {
-      //   url: linkWeb("2014"),
-      //   text: "App",
-      //   self: false,
-      // },
-      {
-        url: linkGithub("2014"),
-        text: "Github",
-        self: false,
-      },
-    ],
-    children: [
-      h.getNewID(client.miguelRivas, "2012/01/16"),
-      h.getNewID(client.miguelRivas, "2015/05/14"),
-      h.getNewID(client.miguelRivas, "2015/05/28"),
-    ],
-  },
-  {
-    date: "2016/08/11",
-    title: "Spirit Portfolio",
-    image: getZapp("img/preview/wide/2016.jpg"),
-    types: type.app,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.react,
-      tool.sass,
-      tool.git,
-    ],
-    links: [
-      {
-        url: linkWeb("2016"),
-        text: "App",
-        self: false,
-      },
-      {
-        url: linkGithub("2016"),
-        text: "Github",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2021/08/12",
-    title: "Portfolio 2021",
-    image: getZapp("img/preview/wide/2021.jpg"),
-    types: type.app,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.vue,
-      tool.vuex,
-      tool.vueRouter,
-      tool.typescript,
-      tool.three,
-      tool.scss,
-      tool.git,
-      tool.chartJS,
-      tool.firebase,
-      tool.highlight,
-      tool.gmap,
-      tool.axios,
-    ],
-    links: [
-      // {
-      //   url: linkWeb("2021-vue"),
-      //   text: "App",
-      //   self: false,
-      // },
-      {
-        url: linkGithub("2021"),
-        text: "Github",
-        self: false,
-      },
-    ],
-    children: [
-      h.getNewID(client.miguelRivas, "2012/11/06"),
-      h.getNewID(client.miguelRivas, "2015/05/28"),
-      h.getNewID(client.miguelRivas, "2017/01/01"),
-      h.getNewID(client.miguelRivas, "2018/06/27"),
-      h.getNewID(client.miguelRivas, "2021/03/22"),
-      h.getNewID(client.miguelRivas, "2021/09/12"),
-      h.getNewID(client.miguelRivas, "2021/02/27"),
-    ],
-  },
-  {
-    date: "2018/01/01",
-    title: "Grid Portfolio",
-    image: getZapp("img/preview/wide/2018.jpg"),
-    types: type.app,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.angular,
-      tool.scss,
-      tool.git,
-    ],
-    links: [
-      // {
-      //   url: linkWeb("2018"),
-      //   text: "Home",
-      //   self: false,
-      // },
-      // {
-      //   url: linkWeb("2018/drlogic.html"),
-      //   text: "DrLogic",
-      //   self: false,
-      // },
-      // {
-      //   url: linkWeb("2018/apap.html"),
-      //   text: "Apap",
-      //   self: false,
-      // },
-      // {
-      //   url: linkWeb("2018/bpr.html"),
-      //   text: "BPR Bank",
-      //   self: false,
-      // },
-      // {
-      //   url: linkWeb("2018/presidente.html"),
-      //   text: "Presidente",
-      //   self: false,
-      // },
-      // {
-      //   url: linkWeb("2018/tests.html"),
-      //   text: "Tests",
-      //   self: false,
-      // },
-      // {
-      //   url: linkVimeo("260621089"),
-      //   text: "Video",
-      //   self: false,
-      // },
-      {
-        url: linkGithub("2018"),
-        text: "Github",
-        self: false,
-      },
-    ],
-    children: [
-      h.getNewID(client.miguelRivas, "2021/03/24"),
-    ]
-  },
-  {
-    date: "2016/01/11",
-    title: "HTML/LOVE",
-    image: getZapp("img/preview/wide/html-love.jpg"),
-    types: type.landingPage,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.haml,
-      tool.scss,
-      tool.illustrator,
-      tool.animate,
-      tool.git,
-    ],
-    links: [
-      {
-        url: linkWeb("html-love"),
-        text: "App",
-        self: false,
-      },
-      {
-        url: linkGithub("html-love"),
-        text: "Github",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2021/03/22",
-    title: "Nano Grid",
-    types: type.module,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.vue,
-      tool.scss,
-      tool.git,
-      tool.javascript,
-      tool.gulp,
-    ],
-    disabled: true,
-    links: [
-      {
-        url: "https://www.npmjs.com/package/nano-grid",
-        text: "Node Module",
-      },
-      {
-        url: linkGithub("nano-grid"),
-        text: "Github",
-        self: false,
-      },
-    ],
-    children: [
-      h.getNewID(client.miguelRivas, "2019/07/10"),
-      h.getNewID(client.miguelRivas, "2020/08/18"),
-    ],
-  },
-  {
-    date: "2021/09/12",
-    title: "MR Kernel",
-    types: type.module,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
+    undefined,
+    ["no-listing"]
+  ),
 
-      tool.typescript,
-      tool.scss,
-      tool.git,
-    ],
-    links: [
-      {
-        url: "https://www.npmjs.com/package/mr-kernel",
-        text: "Node Module",
-      },
-      {
-        url: linkGithub("mr-kernel"),
-        text: "Github",
-        self: false,
-      },
-    ],
-    disabled: true,
-  },
-  {
-    date: "2012/09/26",
-    title: "Tips of Design",
-    types: type.document,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.indesign,
-    ],
-  },
-  {
-    date: "2017/03/05",
-    title: "Art Direction",
-    types: type.document,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.indesign,
-      tool.illustrator,
-      tool.photoshop,
-    ],
-    disabled: true,
-  },
-  {
-    date: "2015/05/10",
-    title: "Bootstrap Prototype",
-    types: type.landingPage,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.bootstrap,
-      tool.pug,
-      tool.illustrator,
-      tool.scss,
-    ]
-  },
-  {
-    date: "2021/03/26",
-    title: "3D Viewer",
-    image: getZapp("img/preview/wide/2021-react.jpg"),
-    types: type.app,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.react,
-      tool.redux,
-      tool.three,
-      tool.firebase,
-      tool.scss,
-      tool.typescript,
-      tool.git,
-    ],
-    disabled: true,
-    links: [
-      {
-        url: linkWeb("2021-react"),
-        text: "App",
-        self: false,
-      },
-      {
-        url: linkGithub("2021-react"),
-        text: "Github",
-        self: false,
-      },
-    ],
-    children: [
-      h.getNewID(client.miguelRivas, "2021/03/22"),
-      h.getNewID(client.miguelRivas, "2021/09/12"),
-      h.getNewID(client.itla, "2011/07/06"),
-      h.getNewID(client.itla, "2011/06/22"),
-      h.getNewID(client.itla, "2011/07/25"),
-    ],
-  },
-  {
-    date: "2017/01/01",
-    title: "FlatCSS",
-    types: type.module,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.pug,
-      tool.css,
-      tool.git,
-    ],
-    links: [
-      {
-        url: linkWeb("flat-css"),
-        text: "App",
-        self: false,
-      },
-      {
-        url: linkGithub("flat-css"),
-        text: "Github",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2020/10/04",
-    title: "Fake Audience",
-    types: type.app,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.kotlin,
-      tool.git,
-    ],
-    links: [
-      {
-        url: linkGithub("fake_audience"),
-        text: "Github",
-        self: false,
-      }
-    ],
-  },
-  {
-    date: "2021/02/27",
-    title: "3D Graph Colors",
-    types: type.prototype,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.three,
-    ],
-  },
-  {
-    date: "2020/05/09",
-    title: "Animated SVG Header",
-    types: type.prototype,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.tweenMax,
-      tool.html,
-      tool.scss,
-    ],
-    links: [
-      {
-        url: linkCodepen("zYvjwEM"),
-        text: "Codepen Prototype",
-      },
-    ]
-  },
-  {
-    date: "2020/03/23",
-    title: "Xpinner",
-    types: type.prototype,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.svg,
-      tool.scss,
-    ],
-    links: [
-      {
-        url: linkCodepen("VwLGgYv"),
-        text: "Codepen Prototype",
-      },
-    ]
-  },
-  {
-    date: "2018/06/27",
-    title: "Color Wheel Creator",
-    types: type.prototype,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.javascript,
-      tool.scss,
-    ],
-    links: [
-      {
-        url: linkCodepen("ERdMLO"),
-        text: "Codepen Prototype",
-      },
-    ],
-  },
-  {
-    date: "2018/09/11",
-    title: "Movie projector",
-    types: type.prototype,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.svg,
-      tool.scss,
-    ],
-    links: [
-      {
-        url: linkCodepen("rZdMYj"),
-        text: "Codepen Prototype",
-      },
-    ]
-  },
-  {
-    date: "2018/05/31",
-    title: "Check Animation",
-    types: type.prototype,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.svg,
-      tool.scss,
-    ],
-    links: [
-      {
-        url: linkCodepen("ZRGpbQ"),
-        text: "Codepen Prototype",
-      },
-    ]
-  },
-  {
-    date: "2018/03/28",
-    title: "Bounce Animation",
-    types: type.prototype,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.canvas,
-    ],
-    links: [
-      {
-        url: linkCodepen("GxyMMz"),
-        text: "Codepen Prototype",
-      },
-    ],
-  },
-  {
-    date: "2015/05/29",
-    title: "Spinners",
-    types: type.prototype,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.pug,
-      tool.scss,
-    ],
-    links: [
-      {
-        url: linkCodepen("eNgRRe"),
-        text: "Codepen Prototype",
-      },
-    ],
-  },
-  {
-    date: "2012/11/06",
-    title: "Drakkar",
-    image: getZapp("img/preview/wide/drakkar.jpg"),
-    types: type.animation3D,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.blender,
-    ],
-    links: [
-      {
-        url: "https://sketchfab.com/3d-models/drakkar-d0f14c73155e460cb848a3db80e1cb07",
-        text: "3D Model",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2011/12/05",
-    title: "Reloj",
-    types: type.animation3D,
-    disabled: true,
-    clients: [
-      client.itla,
-    ],
-    tools: [
-      tool.maya,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf1_000/28",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2011/11/15",
-    title: "Pencil Sharpener",
-    types: type.animation3D,
-    disabled: true,
-    clients: [
-      client.itla,
-    ],
-    tools: [
-      tool.maya,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf1_000/30",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2011/11/18",
-    title: "Batteries: depth of field",
-    types: type.animation3D,
-    disabled: true,
-    clients: [
-      client.itla,
-    ],
-    tools: [
-      tool.maya,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf1_000/30",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2011/07/25",
-    title: "Audi",
-    types: type.animation3D,
-    disabled: true,
-    clients: [
-      client.itla,
-    ],
-    tools: [
-      tool.maya,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf1_000/32",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2011/07/31",
-    title: "Mackbook Pro",
-    types: type.animation3D,
-    disabled: true,
-    clients: [
-      client.itla,
-    ],
-    tools: [
-      tool.maya,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf1_000/34",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2011/06/22",
-    title: "Backpack",
-    types: type.animation3D,
-    disabled: true,
-    clients: [
-      client.itla,
-    ],
-    tools: [
-      tool.maya,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf1_000/36",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2011/07/06",
-    title: "X-wing",
-    image: getZapp("img/preview/wide/x-wing.jpg"),
-    types: type.animation3D,
-    disabled: true,
-    clients: [
-      client.itla,
-    ],
-    tools: [
-      tool.maya,
-    ],
-    links: [
-      {
-        url: "https://issuu.com/jemiguelrivas/docs/ptf1_000/38",
-        text: "Document",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2014/06/16",
-    title: "Destapa el Coro",
-    types: type.app,
-    clients: [
-      client.presidente,
-    ],
-    disabled: true,
-    tools: [
-      tool.html,
-      tool.jQuery,
-      tool.grunt,
-      tool.css,
-      tool.git,
-    ],
-    links: [
-      {
-        url: linkWeb("presidente-destapa-coro"),
-        text: "App",
-        self: false,
-      },
-      {
-        url: linkGithub("presidente-destapa-coro"),
-        text: "Github",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2015/03/30",
-    title: "Pacman",
-    disabled: true,
-    types: type.motionGraphics,
-    clients: [
-      client.presidente,
-    ],
-    tools: [
-      tool.flash,
-    ],
-    links: [
-      {
-        url: linkVimeo("175240177"),
-        text: "Video",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2015/03/24",
-    title: "BigPapi Selfie",
-    image: getZapp("img/preview/wide/pepsi.jpg"),
-    types: type.motionGraphics,
-    clients: [
-      client.pepsi,
-    ],
-    tools: [
-      tool.flash,
-    ],
-    disabled: true,
-    links: [
-      {
-        url: linkVimeo("175240184"),
-        text: "Video",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2015/04/18",
-    title: "Carnaval Presidente 2015",
-    image: getZapp("img/preview/wide/carnaval-presidente.jpg"),
-    types: type.landingPage,
-    disabled: true,
-    clients: [
-      client.presidente,
-    ],
-    tools: [
-      tool.html,
-      tool.jQuery,
-      tool.grunt,
-      tool.scss,
-      tool.php,
-      tool.git,
-    ],
-    links: [
-      {
-        url: linkWeb("presidente-carnaval-2015/filter.html"),
-        text: "Filter",
-        self: false,
-      },
-      {
-        url: linkWeb("presidente-carnaval-2015/home.html"),
-        text: "Home",
-        self: false,
-      },
-      {
-        url: linkGithub("presidente-carnaval-2015"),
-        text: "Github",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2015/05/20",
-    title: "Recarga Con RedRock",
-    image: getZapp("img/preview/wide/redrock.jpg"),
-    types: type.motionGraphics,
-    disabled: true,
-    clients: [
-      client.redRock,
-    ],
-    tools: [
-      tool.flash,
-    ],
-    links: [
-      {
-        url: linkVimeo("175240186"),
-        text: "Video",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2015/10/23",
-    title: "Retrobrindis",
-    image: getZapp("img/preview/wide/retro-brindis.jpg"),
-    types: type.app,
-    disabled: true,
-    clients: [
-      client.presidente,
-    ],
-    tools: [
-      tool.html,
-      tool.css,
-      tool.jQuery,
-      tool.php,
-      tool.git,
-    ],
-    links: [
-      {
-        url: linkWeb("presidente-retro-brindis"),
-        text: "App",
-        self: false,
-      },
-      {
-        url: linkGithub("presidente-retro-brindis"),
-        text: "Github",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2015/11/12",
-    title: "Mineriza a tu Familia",
-    image: getZapp("img/preview/wide/apap.jpg"),
-    types: type.app,
-    clients: [
-      client.apap,
-    ],
-    tools: [
-      tool.pug,
-      tool.jQuery,
-      tool.css,
-      tool.git,
-    ],
-    links: [
-      {
-        url: linkWeb("apap-mineriza-familia"),
-        text: "App",
-        self: false,
-      },
-      {
-        url: linkGithub("apap-mineriza-familia"),
-        text: "Github",
-        self: false,
-      },
-    ],
-    children: [
-      h.getNewID(client.miguelRivas, "2017/04/04"),
-    ],
-  },
-  {
-    date: "2017/04/04",
-    title: "Promo",
-    types: type.motionGraphics,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.afterEffects,
-      tool.premiere,
-    ],
-    links: [
-      {
-        url: linkVimeo("211801157"),
-        text: "Video",
-        self: false,
-      },
-    ],
-    disabled: true,
-  },
-  {
-    date: "2015/12/16",
-    title: "Verano Presidente 2015",
-    types: type.prototype,
-    disabled: true,
-    clients: [
-      client.presidente,
-    ],
-    tools: [
-      tool.html,
-      tool.jQuery,
-      tool.css,
-      tool.git,
-    ],
-    links: [
-      {
-        url: linkWeb("presidente-verano-2015"),
-        text: "Filter",
-        self: false,
-      },
-      {
-        url: linkWeb("presidente-loader"),
-        text: "Loader",
-        self: false,
-      },
-      {
-        url: linkGithub("presidente-verano-2015"),
-        text: "Github",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2016/02/22",
-    title: "Website",
-    image: getZapp("img/preview/wide/drlogic.jpg"),
-    types: type.app,
-    clients: [
-      client.drLogic,
-    ],
-    tools: [
-      tool.haml,
-      tool.scss,
-      tool.jQuery,
-      tool.bootstrap,
-      tool.rails,
-      tool.git,
-    ],
-    links: [
-      {
-        url: linkWeb("drlogic/home.html"),
-        text: "Home",
-        self: false,
-      },
-      {
-        url: linkWeb("drlogic/about-us.html"),
-        text: "About Us",
-        self: false,
-      },
-      {
-        url: linkWeb("drlogic/contact-us.html"),
-        text: "Contact Us",
-        self: false,
-      },
-      {
-        url: linkWeb("drlogic/portfolio.html"),
-        text: "Portfolio",
-        self: false,
-      },
-      {
-        url: linkWeb("drlogic/404.html"),
-        text: "404",
-        self: false,
-      },
-      {
-        url: linkGithub("drlogic"),
-        text: "Github",
-        self: false,
-      },
-    ],
-    children: [
-      h.getNewID(client.drLogic, "2016/03/08"),
-      h.getNewID(client.miguelRivas, "2017/03/06"),
-    ],
-  },
-  {
-    date: "2017/03/06",
-    title: "Promo",
-    types: type.animation3D,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.flash,
-    ],
-    links: [
-      {
-        url: linkVimeo("207152756"),
-        text: "Video",
-        self: false,
-      },
-    ],
-    disabled: true,
-  },
-  {
-    date: "2016/03/08",
-    title: "Terms and Conditions",
-    types: type.document,
-    clients: [
-      client.drLogic,
-    ],
-    tools: [
-      tool.indesign,
-    ],
-    disabled: true,
-  },
-  {
-    date: "2016/06/16",
-    title: "Server Prompt",
-    image: getZapp("img/preview/wide/pixel-404.jpg"),
-    types: type.prototype,
-    clients: [
-      client.pixelPerfectTree,
-    ],
-    tools: [
-      tool.haml,
-      tool.scss,
-      tool.illustrator,
-      tool.rails,
-      tool.git,
-    ],
-    disabled: true,
-    links: [
-      {
-        url: linkWeb("pixel-server-prompt/404"),
-        text: "404",
-        self: false,
-      },
-      {
-        url: linkWeb("pixel-server-prompt/500"),
-        text: "500",
-        self: false,
-      },
-      {
-        url: linkGithub("pixel-server-prompt"),
-        text: "Github",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2016/06/30",
-    title: "Animated Header",
-    image: getZapp("img/preview/wide/voxel.jpg"),
-    types: type.prototype,
-    clients: [
-      client.voxel,
-    ],
-    tools: [
-      tool.haml,
-      tool.scss,
-      tool.photoshop,
-      tool.rails,
-      tool.git,
-    ],
-    disabled: true,
-    links: [
-      {
-        url: linkWeb("voxel-animation"),
-        text: "Animated Header",
-        self: false,
-      },
-      {
-        url: linkGithub("voxel-animation"),
-        text: "Github",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2015/05/27",
-    title: "Orange Reel",
-    image: getZapp("img/preview/wide/orange.jpg"),
-    types: type.motionGraphics,
-    clients: [
-      client.orange,
-    ],
-    tools: [
-      tool.premiere,
-    ],
-    links: [
-      {
-        url: linkVimeo("212177083"),
-        text: "Video",
-        self: false,
-      },
-    ],
-    children: [
-      h.getNewID(client.orange, "2015/03/22"),
-      h.getNewID(client.orange, "2015/03/24"),
-      h.getNewID(client.orange, "2015/03/31"),
-      h.getNewID(client.orange, "2015/04/24"),
-      h.getNewID(client.orange, "2015/05/22"),
-    ],
-  },
-  {
-    date: "2015/03/22",
-    title: "Essentials",
-    types: type.motionGraphics,
-    clients: [
-      client.orange,
-    ],
-    tools: [
-      tool.flash,
-    ],
-    disabled: true,
-  },
-  {
-    date: "2015/03/24",
-    title: "Selfie",
-    types: type.motionGraphics,
-    clients: [
-      client.orange,
-    ],
-    tools: [
-      tool.flash,
-    ],
-    disabled: true,
-  },
-  {
-    date: "2015/04/24",
-    title: "Café",
-    types: type.motionGraphics,
-    clients: [
-      client.orange,
-    ],
-    tools: [
-      tool.flash,
-    ],
-    disabled: true,
-  },
-  {
-    date: "2015/05/22",
-    title: "Día de las Madres",
-    types: type.motionGraphics,
-    clients: [
-      client.orange,
-    ],
-    tools: [
-      tool.flash,
-    ],
-    disabled: true,
-  },
-  {
-    date: "2015/03/31",
-    title: "Snorkeling",
-    types: type.motionGraphics,
-    clients: [
-      client.orange,
-    ],
-    tools: [
-      tool.flash,
-    ],
-    disabled: true,
-  },
-  {
-    date: "2014/01/14",
-    title: "Descubria Website",
-    types: type.app,
-    disabled: true,
-    clients: [
-      client.descubria,
-    ],
-    tools: [
-      tool.html,
-      tool.css,
-      tool.jQuery,
-      tool.git,
-    ],
-    links: [
-      {
-        url: linkWeb("descubria"),
-        text: "Home",
-        self: false,
-      },
-      {
-        url: linkGithub("descubria"),
-        text: "Github",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2014/08/06",
-    title: "Server Prompt",
-    types: type.prototype,
-    clients: [
-      client.capitalDBG,
-    ],
-    tools: [
-      tool.html,
-      tool.css,
-      tool.illustrator,
-      tool.git,
-    ],
-    disabled: true,
-    links: [
-      {
-        url: linkWeb("capital-dbg-server-prompt"),
-        text: "Prototype",
-        self: false,
-      },
-      {
-        url: linkGithub("capital-dbg-server-prompt"),
-        text: "Github",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2015/10/28",
-    title: "Test",
-    types: type.landingPage,
-    disabled: true,
-    clients: [
-      client.pixelPerfectTree,
-    ],
-    tools: [
-      tool.pug,
-      tool.scss,
-      tool.jQuery,
-      tool.illustrator,
-      tool.git,
-    ],
-    links: [
-      {
-        url: linkWeb("test-pixel-perfect-tree"),
-        text: "Test",
-        self: false,
-      },
-      {
-        url: linkGithub("test-pixel-perfect-tree"),
-        text: "Github",
-        self: false,
-      },
-    ],
-  },
-  {
-    clients: [
-      client.presidente,
-    ],
-    title: "Destapa el Coro: User Flow",
-    date: "2014/06/02",
-    tools: [
-      tool.illustrator,
-    ],
-    types: type.userFlow,
-    disabled: true,
-  },
-  {
-    date: "2020/05/05",
-    title: "Popkern",
-    image: getZapp("img/preview/wide/popkern.jpg"),
-    types: type.module,
-    clients: [
-      client.enovational,
-    ],
-    tools: [
-      tool.vue,
-      tool.vueRouter,
-      tool.rails,
-      tool.slim,
-      tool.scss,
-      tool.git,
-      tool.three,
-      tool.tweenMax,
-    ],
-    children: [
-      h.getNewID(client.miguelRivas, "2020/03/23"),
-      h.getNewID(client.miguelRivas, "2020/05/09"),
-      h.getNewID(client.miguelRivas, "2020/06/17"),
-      h.getNewID(client.miguelRivas, "2020/08/18"),
-    ],
-    disabled: true,
-  },
-  {
-    date: "2017/09/20",
-    title: "Lemon Deal",
-    types: type.landingPage,
-    clients: [
-      client.plantTherapy,
-    ],
-    tools: [
-      tool.html,
-      tool.miva,
-      tool.css,
-      tool.jQuery,
-      tool.illustrator,
-    ],
-    disabled: true,
-  },
-  {
-    date: "2017/12/01",
-    title: "25 Days of Christmas",
-    types: type.landingPage,
-    clients: [
-      client.plantTherapy,
-    ],
-    tools: [
-      tool.html,
-      tool.miva,
-      tool.css,
-      tool.jQuery,
-      tool.illustrator,
-    ],
-    disabled: true,
-  },
-  {
-    date: "2015/08/03",
-    title: "SIP",
-    types: type.app,
-    clients: [
-      client.capitalDBG,
-    ],
-    tools: [
-      tool.pug,
-      tool.scss,
-      tool.jQuery,
-    ],
-    disabled: true,
-  },
-  {
-    date: "2014/10/18",
-    title: "Presidente Photo Assignmet",
-    types: type.app,
-    clients: [
-      client.presidente,
-    ],
-    tools: [
-      tool.html,
-      tool.jQuery,
-      tool.grunt,
-      tool.php,
-      tool.scss,
-    ],
-    disabled: true,
-  },
-  {
-    date: "2014/11/05",
-    title: "Pronosticos: Wireframe",
-    types: type.wireFrame,
-    clients: [
-      client.presidente,
-    ],
-    tools: [
-      tool.illustrator,
-    ],
-    disabled: true,
-  },
-  {
-    date: "2016/01/29",
-    title: "Shop.pr",
-    types: type.document,
-    clients: [
-      client.pixelPerfectTree,
-    ],
-    tools: [
-      tool.illustrator,
-    ],
-    disabled: true,
-  },
-  {
-    date: "2017/08/04",
-    title: "Chakras",
-    disabled: true,
-    types: type.wireFrame,
-    clients: [
-      client.plantTherapy,
-    ],
-    tools: [
-      tool.illustrator,
-    ]
-  },
-  {
-    date: "2016/02/18",
-    title: "BPR Bank",
-    types: type.app,
-    clients: [
-      client.bprBank,
-    ],
-    tools: [
-      tool.haml,
-      tool.scss,
-      tool.jQuery,
-      tool.bootstrap,
-      tool.rails,
-      tool.git,
-    ],
-    disabled: true,
-  },
-  {
-    date: "2016/06/24",
-    title: "Social Media Posts",
-    types: type.socialMedia,
-    disabled: true,
-    clients: [
-      client.voxel,
-    ],
-    tools: [
-      tool.photoshop,
-      tool.illustrator,
-    ]
-  },
-  {
-    date: "2019/01/01",
-    title: "MSEC Financial Disclosures Portal",
-    types: type.app,
-    clients: [
-      client.enovational,
-    ],
-    tools: [
-      tool.html,
-      tool.rails,
-      tool.scss,
-      tool.git,
-      tool.bootstrap,
-    ],
-    disabled: true,
-    links: [
-      {
-        url: "https://efds.ethics.maryland.gov/",
-        text: "Website",
-      },
-    ],
-    children: [
-      h.getNewID(client.miguelRivas, "2018/05/31"),
-    ],
-  },
-  {
-    date: "2018/05/01",
-    title: "MDA Vetboard Portal",
-    types: type.app,
-    clients: [
-      client.enovational,
-    ],
-    tools: [
-      tool.html,
-      tool.rails,
-      tool.scss,
-      tool.git,
-      tool.bootstrap,
-    ],
-    disabled: true,
-    links: [
-      {
-        url: "https://portal.mda.maryland.gov/",
-        text: "Website"
-      },
-    ],
-    children: [
-      h.getNewID(client.miguelRivas, "2018/05/31"),
-    ],
-  },
-  {
-    date: "2018/06/25",
-    title: "Maryland Onestop",
-    image: getZapp("img/preview/wide/onestop.jpg"),
-    types: type.app,
-    disabled: true,
-    clients: [
-      client.enovational,
-    ],
-    tools: [
-      tool.vue,
-      tool.rails,
-      tool.scss,
-      tool.git,
-      tool.bootstrap,
-    ],
-    children: [
-      h.getNewID(client.enovational, "2020/05/05"),
-    ],
-  },
-  {
-    date: "2018/09/04",
-    title: "Formability",
-    image: getZapp("img/preview/wide/formability.jpg"),
-    types: type.app,
-    disabled: true,
-    clients: [
-      client.enovational,
-    ],
-    tools: [
-      tool.vue,
-      tool.vueRouter,
-      tool.vuex,
-      tool.rails,
-      tool.scss,
-      tool.git,
-      tool.bootstrap,
-    ],
-    children: [
-      h.getNewID(client.miguelRivas, "2018/05/31"),
-      h.getNewID(client.miguelRivas, "2018/06/27"),
-      h.getNewID(client.miguelRivas, "2018/09/11"),
-      h.getNewID(client.enovational, "2020/05/05"),
-    ],
-    links: [
-      // {
-      //   url: linkWeb("formability/demo"),
-      //   text: "Demo",
-      //   self: false,
-      // },
-      // {
-      //   url: linkWeb("formability/401"),
-      //   text: "401",
-      //   self: false,
-      // },
-      // {
-      //   url: linkWeb("formability/404"),
-      //   text: "404",
-      //   self: false,
-      // },
-      // {
-      //   url: linkWeb("formability/500"),
-      //   text: "500",
-      //   self: false,
-      // },
-    ],
-  },
-  {
-    date: "2021/06/21",
-    title: "Connections Academy",
-    types: type.app,
-    disabled: true,
-    clients: [
-      client.jellyfish,
-    ],
-    tools: [
-      tool.php,
-      tool.wordpress,
-      tool.html,
-      tool.scss,
-      tool.git,
-      tool.grunt,
-    ]
-  },
-  {
-    date: "2021/11/08",
-    title: "Bitmap Creator",
-    types: type.app,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.python,
-      tool.tkinter,
-    ],
-    links: [
-      {
-        url: linkGithub("bitmap-creator"),
-        text: "Github",
-        self: false,
-      },
-      {
-        url: linkVimeo("643739212"),
-        text: "Video",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2021/11/14",
-    title: "Spirit 3D",
-    types: type.animation3D,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.blender,
-    ],
-    links: [
-      {
-        url: "https://sketchfab.com/3d-models/monster-3d-435d64cdb0a042dfba2ae21d7d5a6986",
-        text: "Spirit",
-        self: false,
-      },
-      {
-        url: "https://sketchfab.com/3d-models/404-section-4752fcc0d7714e7fbec4747a2fe10ba9",
-        text: "404 section",
-        self: false,
-      },
-    ],
-  },
-  {
-    date: "2021/12/21",
-    title: "Kaspar Island",
-    image: getZapp("img/preview/wide/kaspar.jpg"),
-    types: type.animation3D,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.blender,
-    ],
-    links: [],
-  },
-  {
-    date: "2021/12/30",
-    title: "Iqra Island",
-    image: getZapp("img/preview/wide/iqra.jpg"),
-    types: type.animation3D,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.blender,
-    ],
-    links: [],
-  },
-  {
-    date: "2021/12/10",
-    title: "Goose",
-    image: getZapp("img/preview/wide/goose.jpg"),
-    types: type.animation3D,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.blender,
-    ],
-    links: [],
-  },
-  {
-    date: "2022/01/05",
-    title: "MR Universe",
-    image: getZapp("img/preview/wide/mr-universe.jpg"),
-    types: type.animation3D,
-    disabled: true,
-    clients: [
-      client.miguelRivas,
-    ],
-    tools: [
-      tool.unity,
-    ],
-    children: [
-      h.getNewID(client.miguelRivas, "2021/11/14"),
-      h.getNewID(client.miguelRivas, "2021/12/10"),
-      h.getNewID(client.miguelRivas, "2021/12/21"),
-      h.getNewID(client.miguelRivas, "2021/12/30"),
-    ],
-    links: [
-      {
-        url: "https://play.google.com/store/apps/details?id=com.miguelrivas.github.io.MRUniverse",
-        text: "Google Play",
-        self: false,
-      },
-    ],
-  },
+
+  new Project(
+    "2015/11/12",
+    "Mineriza a tu Familia",
+    type.app,
+    client.apap,
+    [
+      toolEnum.pug,
+      toolEnum.jQuery,
+      toolEnum.css,
+      toolEnum.git,
+    ],
+    new Preview("apap.jpg"),
+    [
+
+      new LinkWeb("apap-mineriza-familia", "App"),
+      new LinkGithub("apap-mineriza-familia"),
+    ],
+    [
+      new Children(client.miguelRivas, "2017/04/04"),
+    ],
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2017/04/04",
+    "Promo",
+    type.motionGraphics,
+    client.apap,
+    [
+      toolEnum.afterEffects,
+      toolEnum.premiere,
+    ],
+    undefined,
+    [
+      new LinkVimeo("211801157", "Video"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2015/12/16",
+    "Verano Presidente 2015",
+    type.prototype,
+    client.presidente,
+    [
+      toolEnum.html,
+      toolEnum.jQuery,
+      toolEnum.css,
+      toolEnum.git,
+    ],
+    undefined,
+    [
+      new LinkWeb("presidente-verano-2015", "Filter"),
+      new LinkWeb("presidente-loader", "Loader"),
+      new LinkWeb("presidente-verano-2015", "Github"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2016/02/22",
+    "Website",
+    type.app,
+    client.drLogic,
+    [
+      toolEnum.haml,
+      toolEnum.scss,
+      toolEnum.jQuery,
+      toolEnum.bootstrap,
+      toolEnum.rails,
+      toolEnum.git,
+    ],
+    new Preview("drlogic.jpg"),
+    [
+      new LinkWeb("drlogic/home.html", "Home"),
+      new LinkWeb("drlogic/about-us.html", "About Us"),
+      new LinkWeb("drlogic/contact-us.html", "Contact Us"),
+      new LinkWeb("drlogic/portfolio.html", "Portfolio"),
+      new LinkWeb("drlogic/404.html", "404"),
+      new LinkGithub("drlogic"),
+    ],
+    [
+      new Children(client.drLogic, "2016/03/08"),
+      new Children(client.miguelRivas, "2017/03/06"),
+    ],
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2017/03/06",
+    "Promo",
+    type.animation3D,
+    client.miguelRivas,
+    [
+      toolEnum.flash,
+    ],
+    new Preview("drlogic.jpg"),
+    [
+      new LinkVimeo("207152756", "Video"),
+    ],
+    [
+      new Children(client.drLogic, "2016/03/08"),
+      new Children(client.miguelRivas, "2017/03/06"),
+    ],
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2016/03/08",
+    "Terms and Conditions",
+    type.document,
+    client.drLogic,
+    [
+      toolEnum.indesign,
+    ],
+    new Preview("drlogic.jpg"),
+    undefined,
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2016/06/16",
+    "Server Prompt",
+    type.prototype,
+    client.pixelPerfectTree,
+    [
+      toolEnum.haml,
+      toolEnum.scss,
+      toolEnum.illustrator,
+      toolEnum.rails,
+      toolEnum.git,
+    ],
+    new Preview("pixel-404.jpg"),
+    [
+      new LinkWeb("pixel-server-prompt/404", "404"),
+      new LinkWeb("pixel-server-prompt/500", "500"),
+      new LinkGithub("pixel-server-prompt"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2016/06/30",
+    "Animated Header",
+    type.prototype,
+    client.voxel,
+    [
+      toolEnum.haml,
+      toolEnum.scss,
+      toolEnum.photoshop,
+      toolEnum.rails,
+      toolEnum.git,
+    ],
+    new Preview("voxel.jpg"),
+    [
+      new LinkWeb("voxel-animation", "Animated Header"),
+      new LinkGithub("voxel-animation"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2015/05/27",
+    "Orange Reel",
+    type.motionGraphics,
+    client.orange,
+    [
+      toolEnum.premiere,
+    ],
+    new Preview("orange.jpg"),
+    [
+      new LinkVimeo("212177083", "Video"),
+    ],
+    [
+      new Children(client.orange, "2015/03/22"),
+      new Children(client.orange, "2015/03/24"),
+      new Children(client.orange, "2015/03/31"),
+      new Children(client.orange, "2015/04/24"),
+      new Children(client.orange, "2015/05/22"),
+    ],
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2015/03/22",
+    "Essentials",
+    type.motionGraphics,
+    client.orange,
+    [
+      toolEnum.flash,
+    ],
+    undefined,
+    undefined,
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2015/03/24",
+    "Selfie",
+    type.motionGraphics,
+    client.orange,
+    [
+      toolEnum.flash,
+    ],
+    undefined,
+    undefined,
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2015/04/24",
+    "Café",
+    type.motionGraphics,
+    client.orange,
+    [
+      toolEnum.flash,
+    ],
+    undefined,
+    undefined,
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2015/05/22",
+    "Día de las Madres",
+    type.motionGraphics,
+    client.orange,
+    [
+      toolEnum.flash,
+    ],
+    undefined,
+    undefined,
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2015/03/31",
+    "Snorkeling",
+    type.motionGraphics,
+    client.orange,
+    [
+      toolEnum.flash,
+    ],
+    undefined,
+    undefined,
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2014/01/14",
+    "Descubria Website",
+    type.app,
+    client.descubria,
+    [
+      toolEnum.html,
+      toolEnum.css,
+      toolEnum.jQuery,
+      toolEnum.git,
+    ],
+    undefined,
+    [
+      new LinkWeb("descubria", "Home"),
+      new LinkGithub("descubria"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2014/08/06",
+    "Server Prompt",
+    type.prototype,
+    client.capitalDBG,
+    [
+      toolEnum.html,
+      toolEnum.css,
+      toolEnum.illustrator,
+      toolEnum.git,
+    ],
+    undefined,
+    [
+      new LinkWeb("capital-dbg-server-prompt", "Prototype"),
+      new LinkGithub("capital-dbg-server-prompt"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2015/10/28",
+    "Test",
+    type.landingPage,
+    client.pixelPerfectTree,
+    [
+      toolEnum.pug,
+      toolEnum.scss,
+      toolEnum.jQuery,
+      toolEnum.illustrator,
+      toolEnum.git,
+    ],
+    undefined,
+    [
+      new LinkWeb("test-pixel-perfect-tree", "Test"),
+      new LinkGithub("test-pixel-perfect-tree"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2014/06/02",
+    "Destapa el Coro: User Flow",
+    type.userFlow,
+    client.presidente,
+    [
+      toolEnum.illustrator,
+    ],
+    undefined,
+    undefined,
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2020/05/05",
+    "Popkern",
+    type.module,
+    client.enovational,
+    [
+      toolEnum.vue,
+      toolEnum.vueRouter,
+      toolEnum.rails,
+      toolEnum.slim,
+      toolEnum.scss,
+      toolEnum.git,
+      toolEnum.three,
+      toolEnum.tweenMax,
+    ],
+    new Preview("popkern.jpg"),
+    undefined,
+    [
+      new Children(client.miguelRivas, "2020/03/23"),
+      new Children(client.miguelRivas, "2020/05/09"),
+      new Children(client.miguelRivas, "2020/06/17"),
+      new Children(client.miguelRivas, "2020/08/18"),
+    ],
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2017/09/20",
+    "Lemon Deal",
+    type.landingPage,
+    client.plantTherapy,
+    [
+      toolEnum.html,
+      toolEnum.miva,
+      toolEnum.css,
+      toolEnum.jQuery,
+      toolEnum.illustrator,
+    ],
+    undefined,
+    undefined,
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2017/12/01",
+    "25 Days of Christmas",
+    type.landingPage,
+    client.plantTherapy,
+    [
+      toolEnum.html,
+      toolEnum.miva,
+      toolEnum.css,
+      toolEnum.jQuery,
+      toolEnum.illustrator,
+    ],
+    undefined,
+    undefined,
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2015/08/03",
+    "SIP",
+    type.app,
+    client.capitalDBG,
+    [
+      toolEnum.pug,
+      toolEnum.scss,
+      toolEnum.jQuery,
+    ],
+    undefined,
+    undefined,
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2014/10/18",
+    "Presidente Photo Assignmet",
+    type.app,
+    client.presidente,
+    [
+      toolEnum.html,
+      toolEnum.jQuery,
+      toolEnum.grunt,
+      toolEnum.php,
+      toolEnum.scss,
+    ],
+    undefined,
+    undefined,
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2014/11/05",
+    "Pronosticos: Wireframe",
+    type.wireFrame,
+    client.presidente,
+    [
+      toolEnum.illustrator,
+    ],
+    undefined,
+    undefined,
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2016/01/29",
+    "Shop.pr",
+    type.document,
+    client.pixelPerfectTree,
+    [
+      toolEnum.illustrator,
+    ],
+    undefined,
+    undefined,
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2017/08/04",
+    "Chakras",
+    type.wireFrame,
+    client.plantTherapy,
+    [
+      toolEnum.illustrator,
+    ],
+    undefined,
+    undefined,
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2016/02/18",
+    "BPR Bank",
+    type.app,
+    client.bprBank,
+    [
+      toolEnum.haml,
+      toolEnum.scss,
+      toolEnum.jQuery,
+      toolEnum.bootstrap,
+      toolEnum.rails,
+      toolEnum.git,
+    ],
+    undefined,
+    undefined,
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2016/06/24",
+    "Social Media Posts",
+    type.socialMedia,
+    client.voxel,
+    [
+      toolEnum.photoshop,
+      toolEnum.illustrator,
+    ],
+    undefined,
+    undefined,
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2019/01/01",
+    "MSEC Financial Disclosures Portal",
+    type.app,
+    client.enovational,
+    [
+      toolEnum.html,
+      toolEnum.rails,
+      toolEnum.scss,
+      toolEnum.git,
+      toolEnum.bootstrap,
+    ],
+    undefined,
+    [
+      new Link("https://efds.ethics.maryland.gov/", "Website"),
+    ],
+    [
+      new Children(client.miguelRivas, "2018/05/31"),
+    ],
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2018/05/01",
+    "MDA Vetboard Portal",
+    type.app,
+    client.enovational,
+    [
+      toolEnum.html,
+      toolEnum.rails,
+      toolEnum.scss,
+      toolEnum.git,
+      toolEnum.bootstrap,
+    ],
+    undefined,
+    [
+      new Link("https://portal.mda.maryland.gov/", "Website")
+    ],
+    [
+      new Children(client.miguelRivas, "2018/05/31"),
+    ],
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2018/06/25",
+    "Maryland Onestop",
+    type.app,
+    client.enovational,
+    [
+      toolEnum.vue,
+      toolEnum.rails,
+      toolEnum.scss,
+      toolEnum.git,
+      toolEnum.bootstrap,
+    ],
+    new Preview("onestop.jpg"),
+    undefined,
+    [
+      new Children(client.enovational, "2020/05/05"),
+    ],
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2018/09/04",
+    "Formability",
+    type.app,
+    client.enovational,
+    [
+      toolEnum.vue,
+      toolEnum.vueRouter,
+      toolEnum.vuex,
+      toolEnum.rails,
+      toolEnum.scss,
+      toolEnum.git,
+      toolEnum.bootstrap,
+    ],
+    new Preview("formability.jpg"),
+    [
+      new LinkWeb("formability/demo", "Demo"),
+      new LinkWeb("formability/401", "401"),
+      new LinkWeb("formability/404", "404"),
+      new LinkWeb("formability/500", "500"),
+    ],
+    [
+      new Children(client.miguelRivas, "2018/05/31"),
+      new Children(client.miguelRivas, "2018/06/27"),
+      new Children(client.miguelRivas, "2018/09/11"),
+      new Children(client.enovational, "2020/05/05"),
+    ],
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2021/06/21",
+    "Connections Academy",
+    type.app,
+    client.jellyfish,
+    [
+      toolEnum.php,
+      toolEnum.wordpress,
+      toolEnum.html,
+      toolEnum.scss,
+      toolEnum.git,
+      toolEnum.grunt,
+    ],
+    undefined,
+    undefined,
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2021/11/08",
+    "Bitmap Creator",
+    type.app,
+    client.miguelRivas,
+    [
+      toolEnum.python,
+      toolEnum.tkinter,
+    ],
+    undefined,
+    [
+      new LinkGithub("bitmap-creator"),
+      new LinkVimeo("643739212", "Video"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2021/11/14",
+    "Spirit 3D",
+    type.animation3D,
+    client.miguelRivas,
+    [
+      toolEnum.blender,
+    ],
+    undefined,
+    [
+      new Link("https://sketchfab.com/3d-models/monster-3d-435d64cdb0a042dfba2ae21d7d5a6986", "Spirit"),
+      new Link("https://sketchfab.com/3d-models/404-section-4752fcc0d7714e7fbec4747a2fe10ba9", "404 section"),
+    ],
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2021/12/21",
+    "Kaspar Island",
+    type.animation3D,
+    client.miguelRivas,
+    [
+      toolEnum.blender,
+    ],
+    new Preview("kaspar.jpg"),
+    undefined,
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2021/12/30",
+    "Iqra Island",
+    type.animation3D,
+    client.miguelRivas,
+    [
+      toolEnum.blender,
+    ],
+    new Preview("iqra.jpg"),
+    undefined,
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2021/12/10",
+    "Goose",
+    type.animation3D,
+    client.miguelRivas,
+    [
+      toolEnum.blender,
+    ],
+    new Preview("goose.jpg"),
+    undefined,
+    undefined,
+    ["no-listing"]
+  ),
+
+  new Project(
+    "2022/01/05",
+    "MR Universe",
+    type.animation3D,
+    client.miguelRivas,
+    [
+      toolEnum.unity,
+    ],
+    new Preview("mr-universe.jpg"),
+    [
+      new Link("https://play.google.com/store/apps/details?id=com.miguelrivas.github.io.MRUniverse", "Google Play"),
+    ],
+    [
+      new Children(client.miguelRivas, "2021/11/14"),
+      new Children(client.miguelRivas, "2021/12/10"),
+      new Children(client.miguelRivas, "2021/12/21"),
+      new Children(client.miguelRivas, "2021/12/30"),
+    ],
+    ["no-listing"]
+  ),
 ];
 
-export { projects as projectsDB };
+console.log(pj);
+
+export { pj as projectsDB };

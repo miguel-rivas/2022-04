@@ -1,9 +1,9 @@
-import helpers from "../modules/helpers";
+import { dateToNumber, turingDate, getNewID } from "../modules/helpers";
 import { projectsDB as rawDB } from "../db/projects";
 import { groupsDB as rawGroupsDB } from "../db/groups";
 
 export function sortByDate(a, b) {
-  return helpers.dateToNumber(b.date) - helpers.dateToNumber(a.date);
+  return dateToNumber(b.date) - dateToNumber(a.date);
 }
 
 /* ------------------------------------- */
@@ -11,50 +11,8 @@ export function sortByDate(a, b) {
 function uncompressProjectsDBtoJSON(db) {
   const result = {};
   db.forEach(entry => {
-
-    const disabled = entry.disabled ? true : false;
-    const children = entry.children || [];
-
-    const tools = entry.tools;
-
-    const clients = entry.clients;
-
-    const types = entry.types;
-
-    let links = [];
-    if (entry.links?.length > 0) {
-      links = entry.links.map(
-        link => {
-          const params = link.params?.length ? `?${link.params.join("&")}` : '';
-          const url = link.url;
-
-          return {
-            "url": `${url}${params}`,
-            "text": link.text,
-            "self": link.self,
-          }
-        }
-      );
-    }
-
-    const project = {
-      "title": entry.title,
-      "clients": clients,
-      "date": entry.date,
-      "turingDate": helpers.turingDate(entry.date),
-      "types": types,
-      "links": links,
-      "disabled": disabled,
-      "tools": tools,
-      "children": children,
-      "group": false,
-      "location": false,
-      "image": entry.image,
-    };
-
-    const id = helpers.getNewID(project.clients[0], project.date);
-    
-    result[id] = project;
+    const id = getNewID(entry.client, entry.date);
+    result[id] = entry;
   });
 
   return result;
@@ -64,16 +22,16 @@ function uncompressGroupsDBtoJSON(groups) {
   const result = {};
   groups.forEach(group => {
     let position = { lat: '', lng: '' };
-    
+
     if (group.location) {
       position = group.position;
     }
 
     const project = {
-      "title": group.clients[0],
-      "clients": group.clients,
+      "title": group.client,
+      "client": group.client,
       "date": group.date,
-      "turingDate": helpers.turingDate(group.date),
+      "turingDate": turingDate(group.date),
       "types": undefined,
       "group": group.group,
       "location": group.location,
@@ -88,7 +46,7 @@ function uncompressGroupsDBtoJSON(groups) {
       "image": group.image,
     };
 
-    const id = helpers.getNewID(project.clients[0], project.date);
+    const id = getNewID(project.client, project.date);
 
     result[id + "_group"] = project;
   });
@@ -166,6 +124,6 @@ export const groupsDBObj = uncompressGroupsDBtoJSON(rawGroupsDB);
 export const groupsDBList = Object.values(groupsDBObj).sort(sortByDate);
 
 export const locationsDBList = groupsDBList.filter((item) => item.location);
-export const allDBObj = {...projectsDBObj, ...groupsDBObj};
-export const allDBListVisible = Object.values(allDBObj).filter((item) => !item.disabled).sort(sortByDate);
+export const allDBObj = { ...projectsDBObj }; //, ...groupsDBObj
+export const allDBListVisible = Object.values(allDBObj).filter((item) => !item.filter.includes("no-listing")).sort(sortByDate);
 export const allDBListWithImages = Object.values(allDBObj).filter((item) => item.image).sort(sortByDate);

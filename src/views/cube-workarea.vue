@@ -5,17 +5,17 @@
 <script>
 import Vue from "vue";
 import * as THREE from "three";
-import {wikiColors} from "../db/wiki-colors";
+import { wikiColors } from "../db/wiki-colors";
 import ThreeScene from "../mixins/three-scene";
-import h from "../modules/helpers";
+import { rad } from "../modules/helpers";
 
 export default Vue.extend({
   mixins: [ThreeScene],
   data: () => ({
     gColorsDB: Object.values(wikiColors),
     linesGroup: undefined,
-    minPolarAngle: 75 * h.rad,
-    maxPolarAngle: 120 * h.rad,
+    minPolarAngle: 75 * rad,
+    maxPolarAngle: 120 * rad,
     minDistance: 7.5,
     maxDistance: 500,
     distanceBetweenCubes: 1,

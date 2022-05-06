@@ -7,7 +7,7 @@ import Vue from "vue";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import StudioLight from "../mixins/three-studio-light";
-import h, {getZapp} from "../modules/helpers";
+import { getZapp, rad } from "../modules/helpers";
 import { mapGetters } from "vuex";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
@@ -20,11 +20,11 @@ export default Vue.extend({
     },
     minPolarAngle: {
       type: Number,
-      default: 75 * h.rad,
+      default: 75 * rad,
     },
     maxPolarAngle: {
       type: Number,
-      default: 120 * h.rad,
+      default: 120 * rad,
     },
     minDistance: {
       type: Number,
@@ -76,14 +76,19 @@ export default Vue.extend({
         this.controls.update();
       }
       requestAnimationFrame(this.render);
-      
+
       this.scene.rotation.y += 1 * 0.01;
-      
+
       this.renderer.render(this.scene, this.camera);
     },
     buildScene(
       cameraPosition = { x: 1, y: 1, z: 1 },
-      perspectiveCamera = { fov: 3, aspect: this.winWidth / this.winHeight, near: 1, far: 1000 },
+      perspectiveCamera = {
+        fov: 3,
+        aspect: this.winWidth / this.winHeight,
+        near: 1,
+        far: 1000,
+      }
     ) {
       this.winWidth = window.innerWidth - this.panelsSize;
       this.scene = new THREE.Scene();
@@ -96,7 +101,11 @@ export default Vue.extend({
         perspectiveCamera.near,
         perspectiveCamera.far
       );
-      this.camera.position.set(cameraPosition.x, cameraPosition.y, cameraPosition.z);
+      this.camera.position.set(
+        cameraPosition.x,
+        cameraPosition.y,
+        cameraPosition.z
+      );
       this.renderer = new THREE.WebGLRenderer({
         antialias: true,
         alpha: true,

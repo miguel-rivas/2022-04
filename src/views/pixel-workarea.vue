@@ -159,7 +159,7 @@ import { mapGetters } from "vuex";
 import { allColors } from "../db/wiki-colors";
 import ctrl from "../components/pixel-controller.vue";
 import { wikiColor } from "../enums/wikicolors";
-import h from "../modules/helpers";
+import {hexToDec} from "../modules/helpers";
 import goose from "../json/goose";
 
 export default Vue.extend({
@@ -243,7 +243,7 @@ export default Vue.extend({
   methods: {
     openGoose() {
       this.selection.pixelGrid = goose.map((y) =>
-        y.map((x) => allColors[wikiColor[h.hexToDec(x)]])
+        y.map((x) => allColors[wikiColor[hexToDec(x)]])
       );
     },
     saveImg() {

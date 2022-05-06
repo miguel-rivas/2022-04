@@ -154,7 +154,7 @@
 import Vue from "vue";
 import { pixelColors, wikiColors, allColors } from "../db/wiki-colors";
 import { wikiColor } from "../enums/wikicolors";
-import h from "../modules/helpers";
+import { decToHex, hexToDec } from "../modules/helpers";
 import ToggleRow from "../components/toggle-row.vue";
 
 export default Vue.extend({
@@ -197,7 +197,7 @@ export default Vue.extend({
       const newFile = this.$refs.file.files[0];
       reader.onload = (res) => {
         this.selection.pixelGrid = JSON.parse(res.target.result).map((y) =>
-          y.map((x) => allColors[wikiColor[h.hexToDec(x)]])
+          y.map((x) => allColors[wikiColor[hexToDec(x)]])
         );
       };
       reader.onerror = (err) => console.log(err);
@@ -217,7 +217,7 @@ export default Vue.extend({
     saveJson() {
       const arr = this.selection.pixelGrid.map((y) =>
         y.map((x) => {
-          let id = h.decToHex(wikiColor[x.spinalCase]);
+          let id = decToHex(wikiColor[x.spinalCase]);
           if (id.length < 2) {
             id = "0" + id;
           }

@@ -31,7 +31,7 @@ nn-scroll-area(color="royal-purple")
                 nn-column(table-element, size="40%") {{ project.title }}
                 nn-column(table-element, size="20%") {{ $t(project.types) }}
                 nn-column(table-element, size="20%") {{ project.turingDate }}
-                nn-column(table-element, size="20%-35") {{ project.clients.join(' & ') }}
+                nn-column(table-element, size="20%-35") {{ project.client }}
 
               template(v-slot:more)
                 nn-column(table-element, size="200")

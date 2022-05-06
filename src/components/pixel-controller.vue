@@ -29,7 +29,7 @@
         fontFamily: 'icomoon',
         lineHeight: 0,
         verticalAlign: 'middle',
-        text: h.getIcon(glyph),
+        text: getIcon(glyph),
         rotation: rotation,
         offsetX: offset.x,
         offsetY: offset.y,
@@ -40,7 +40,7 @@
 
 <script>
 import Vue from "vue";
-import h from "../modules/helpers";
+import { getIcon } from "../modules/helpers";
 
 export default Vue.extend({
   props: {
@@ -77,7 +77,7 @@ export default Vue.extend({
     },
   },
   data: () => ({
-    h,
+    getIcon,
     textColor: "#999",
     strokeColor: "#222",
     fontSize: 0,

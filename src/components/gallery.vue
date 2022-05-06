@@ -10,29 +10,26 @@
                   width="1050"
                   height="551"
                   :src="project.image"
-                  :alt="`${project.clients.join(' & ')} ${project.turingDate}`"
+                  :alt="`${project.client} ${project.turingDate}`"
                 />
               </template>
             </nn-column>
             <nn-column size="40%">
               <nn-scroll-area color="royal-purple">
-                <h1 v-html="project.clients.join(' & ')" />
+                <h1 v-html="project.client" />
                 <ul class="summary">
-                  <template v-if="project.group">
+                  <template v-if="project.filter.includes('group')">
                     <summary-row
                       :key="`projectIndex-${projectIndex}`"
                       :project="
-                        helpers.getNewID(project.clients[0], project.date) +
-                        '_group'
+                        getNewID(project.client, project.date) + '_group'
                       "
                     />
                   </template>
                   <template v-else>
                     <summary-row
                       :key="`projectIndex-${projectIndex}`"
-                      :project="
-                        helpers.getNewID(project.clients[0], project.date)
-                      "
+                      :project="getNewID(project.client, project.date)"
                     />
                   </template>
                   <li>
@@ -40,22 +37,22 @@
                       <summary-row
                         v-for="(project2, projectIndex2) in project.children"
                         :key="`projectIndex2-${projectIndex2}`"
-                        :project="project2"
+                        :project="project2.id"
                       >
                         <ul
                           class="summary"
-                          v-if="allDBObj[project2].children.length"
+                          v-if="allDBObj[project2.id].children.length"
                         >
                           <summary-row
                             v-for="(project3, projectIndex3) in allDBObj[
-                              project2
+                              project2.id
                             ].children"
                             :key="`projectIndex3-${projectIndex3}`"
-                            :project="project3"
+                            :project="project3.id"
                           >
                             <ul
                               class="summary"
-                              v-if="allDBObj[project3].children.length"
+                              v-if="allDBObj[project3.id].children.length"
                             >
                               <summary-row
                                 v-for="(project4, projectIndex4) in allDBObj[
@@ -88,7 +85,7 @@
 <script>
 import Vue from "vue";
 import summaryRow from "./summary.vue";
-import helpers from "../modules/helpers";
+import { getNewID } from "../modules/helpers";
 import { allDBObj } from "../modules/format-db";
 
 export default Vue.extend({
@@ -100,7 +97,7 @@ export default Vue.extend({
   },
   data: () => ({
     allDBObj,
-    helpers,
+    getNewID,
   }),
   computed: {
     database() {

@@ -7,7 +7,7 @@ import Vue from "vue";
 import * as THREE from "three";
 import ThreeScene from "../mixins/three-scene";
 import StudioLight from "../mixins/three-studio-light";
-import h from "../modules/helpers";
+import { rad } from "../modules/helpers";
 
 export default Vue.extend({
   mixins: [ThreeScene, StudioLight],
@@ -16,8 +16,8 @@ export default Vue.extend({
     book: { type: String, default: "" },
   },
   data: () => ({
-    minPolarAngle: 75 * h.rad,
-    maxPolarAngle: 120 * h.rad,
+    minPolarAngle: 75 * rad,
+    maxPolarAngle: 120 * rad,
     minDistance: 7.5,
     maxDistance: 50,
     layers: [],
@@ -32,7 +32,9 @@ export default Vue.extend({
 
       const materials = [...Array(this.pages).keys()].map((index) => {
         return new THREE.MeshLambertMaterial({
-          map: loader.load(this.getZapp(`books/${this.book}/page${index + 1}.jpg`)),
+          map: loader.load(
+            this.getZapp(`books/${this.book}/page${index + 1}.jpg`)
+          ),
         });
       });
 

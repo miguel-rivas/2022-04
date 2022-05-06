@@ -28,39 +28,39 @@ export default Vue.extend({
         case "projects":
           result = db.filter(
             (item) =>
-              !item.clients.includes(client.miguelRivas) &&
-              !item.clients.includes(client.itla) &&
-              !item.clients.includes(client.itesa) &&
-              !item.clients.includes(client.codepen)
+              !item.client.includes(client.miguelRivas) &&
+              !item.client.includes(client.itla) &&
+              !item.client.includes(client.itesa) &&
+              !item.client.includes(client.codepen)
           );
           break;
         case "experiments":
           result = db.filter(
             (item) =>
-              item.clients.includes(client.miguelRivas) ||
-              item.clients.includes(client.itla) ||
-              item.clients.includes(client.itesa) ||
-              item.clients.includes(client.codepen)
+              item.client.includes(client.miguelRivas) ||
+              item.client.includes(client.itla) ||
+              item.client.includes(client.itesa) ||
+              item.client.includes(client.codepen)
           );
           break;
         case "companies":
           result = db.filter(
             (item) =>
-              item.clients.includes(client.enovational) ||
-              item.clients.includes(client.avante) ||
-              item.clients.includes(client.jellyfish) ||
-              item.clients.includes(client.pixelPerfectTree) ||
-              item.clients.includes(client.capitalDBG) ||
-              item.clients.includes(client.plantTherapy) ||
-              item.clients.includes(client.socialNetwork)
+              item.client.includes(client.enovational) ||
+              item.client.includes(client.avante) ||
+              item.client.includes(client.jellyfish) ||
+              item.client.includes(client.pixelPerfectTree) ||
+              item.client.includes(client.capitalDBG) ||
+              item.client.includes(client.plantTherapy) ||
+              item.client.includes(client.socialNetwork)
           );
           break;
         case "homework":
           result = db.filter(
             (item) =>
               !item.disabled &&
-              (item.clients.includes(client.itla) ||
-                item.clients.includes(client.itesa))
+              (item.client.includes(client.itla) ||
+                item.client.includes(client.itesa))
           );
           break;
       }

@@ -8,7 +8,7 @@
   mountains(:cx="cx", :cy="cy", :hue="selection.hue")
   footer
     p(
-      v-html="$t('stargaze.workarea.footer') + `<time> // ${helpers.currentTuringDate()} </time>`"
+      v-html="$t('stargaze.workarea.footer') + `<time> // ${currentTuringDate()} </time>`"
     )
 </template>
 
@@ -16,7 +16,7 @@
 import Vue from "vue";
 import { mapGetters } from "vuex";
 import mountains from "../components/mountains.vue";
-import helpers from "../modules/helpers";
+import { currentTuringDate } from "../modules/helpers";
 
 export default Vue.extend({
   components: { mountains },
@@ -24,7 +24,7 @@ export default Vue.extend({
     selection: {},
     cx: 0,
     cy: 0,
-    helpers,
+    currentTuringDate,
   }),
   computed: {
     ...mapGetters({

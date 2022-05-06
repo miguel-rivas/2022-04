@@ -9,7 +9,7 @@
                 <img :src="entry.image" :alt="entry.header + ' preview'" />
               </nn-column>
               <nn-column size="2/5">
-                <h2 v-html="entry.clients[0]" />
+                <h2 v-html="entry.clients" />
                 <h3 v-html="entry.title" />
                 <h4 v-html="$t(entry.types)" />
                 <h5>
