@@ -1,4 +1,4 @@
-import { tool, toolEnum } from "../enums/tools";
+import { toolEnum } from "../enums/tools";
 import { type } from "../enums/types";
 import { client } from "../enums/clients";
 
@@ -2739,7 +2739,5 @@ const pj = [
     ["no-listing"]
   ),
 ];
-
-console.log(pj);
 
 export { pj as projectsDB };

@@ -9,7 +9,7 @@
                 <img
                   width="1050"
                   height="551"
-                  :src="project.image"
+                  :src="project.image.src"
                   :alt="`${project.client} ${project.turingDate}`"
                 />
               </template>
@@ -33,7 +33,7 @@
                     />
                   </template>
                   <li>
-                    <ul class="summary" v-if="project.children.length">
+                    <ul class="summary" v-if="project.children.length > 0">
                       <summary-row
                         v-for="(project2, projectIndex2) in project.children"
                         :key="`projectIndex2-${projectIndex2}`"
@@ -41,7 +41,10 @@
                       >
                         <ul
                           class="summary"
-                          v-if="allDBObj[project2.id].children.length"
+                          v-if="
+                            allDBObj[project2.id].children &&
+                            allDBObj[project2.id].children.length > 0
+                          "
                         >
                           <summary-row
                             v-for="(project3, projectIndex3) in allDBObj[
@@ -52,14 +55,17 @@
                           >
                             <ul
                               class="summary"
-                              v-if="allDBObj[project3.id].children.length"
+                              v-if="
+                                allDBObj[project3.id].children &&
+                                allDBObj[project3.id].children.length > 0
+                              "
                             >
                               <summary-row
                                 v-for="(project4, projectIndex4) in allDBObj[
-                                  project3
+                                  project3.id
                                 ].children"
                                 :key="`projectIndex4-${projectIndex4}`"
-                                :project="project4"
+                                :project="project4.id"
                               >
                               </summary-row>
                             </ul>

@@ -48,7 +48,7 @@
                     size="md"
                     color="royal-purple"
                     target="_blank"
-                    :href="projectLink.url"
+                    :href="projectLink.path"
                     :text="projectLink.text"
                   />
                 </li>

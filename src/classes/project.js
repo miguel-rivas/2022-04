@@ -50,13 +50,13 @@ export class Link {
   baseUrl;
   params;
   text;
-  paths;
+  path;
 
-  constructor(baseUrl = "", text = "", params = [""]) {
+  constructor(baseUrl = "", text = "", param = "") {
     this.baseUrl = baseUrl;
-    this.params = params;
+    this.params = param;
     this.text = text;
-    this.paths = this.params.map(param => param !== '' ? `${baseUrl}?${param}` : baseUrl);
+    this.path = param !== '' ? `${baseUrl}?${param}` : baseUrl;
   }
 }
 
@@ -64,13 +64,13 @@ export class LinkWeb {
   id;
   baseUrl;
   text;
-  paths;
+  path;
 
   constructor(id = "", text = "") {
     this.id = id;
     this.text = text;
     this.baseUrl = `https://${user.media.github.production}.github.io/`;
-    this.paths = `${this.baseUrl}/${id}`;
+    this.path = `${this.baseUrl}/${id}`;
   }
 }
 
@@ -78,13 +78,13 @@ export class LinkCodepen {
   id;
   baseUrl;
   text;
-  paths;
+  path;
 
   constructor(id = "", text = "Codepen Prototype") {
     this.id = id;
     this.text = text;
     this.baseUrl = `https://github.com/${user.media.codepen.user}`;
-    this.paths = `${this.baseUrl}/pen/${id}`;
+    this.path = `${this.baseUrl}/pen/${id}`;
   }
 }
 
@@ -92,13 +92,13 @@ export class LinkGithub {
   id;
   baseUrl;
   text;
-  paths;
+  path;
 
   constructor(id = "", text = "Github") {
     this.id = id;
     this.text = text;
     this.baseUrl = `https://github.com/${user.media.github.production}`;
-    this.paths = `${this.baseUrl}/${id}`;
+    this.path = `${this.baseUrl}/${id}`;
   }
 }
 
@@ -106,12 +106,12 @@ export class LinkVimeo {
   id;
   baseUrl;
   text;
-  paths;
+  path;
 
   constructor(id = "", text = "Vimeo") {
     this.id = id;
     this.text = text;
     this.baseUrl = `https://player.vimeo.com/video/`;
-    this.paths = `${this.baseUrl}/${id}`;
+    this.path = `${this.baseUrl}/${id}`;
   }
 }
