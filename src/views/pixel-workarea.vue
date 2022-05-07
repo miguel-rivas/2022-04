@@ -72,10 +72,7 @@
           />
         </v-group>
         <template v-for="pixel in gridSize">
-          <v-group
-            :key="`buttonTop${pixel}`"
-            @click="moveLine('top', pixel)"
-          >
+          <v-group :key="`buttonTop${pixel}`" @click="moveLine('top', pixel)">
             <ctrl
               glyph="chevron"
               :x="pixel"
@@ -98,10 +95,7 @@
               :rotation="0"
             />
           </v-group>
-          <v-group
-            :key="`buttonLeft${pixel}`"
-            @click="moveLine('left', pixel)"
-          >
+          <v-group :key="`buttonLeft${pixel}`" @click="moveLine('left', pixel)">
             <ctrl
               glyph="chevron"
               :x="0"
@@ -159,7 +153,7 @@ import { mapGetters } from "vuex";
 import { allColors } from "../db/wiki-colors";
 import ctrl from "../components/pixel-controller.vue";
 import { wikiColor } from "../enums/wikicolors";
-import {hexToDec} from "../modules/helpers";
+import { hexToDec } from "../modules/helpers";
 import goose from "../json/goose";
 
 export default Vue.extend({
@@ -343,7 +337,8 @@ export default Vue.extend({
         const inc = -x;
 
         for (let cy = minValue; cy <= maxValue; cy++) {
-          newMatrix[cy][loopBegin] = this.selection.pixelGrid[cy][loopBegin + inc];
+          newMatrix[cy][loopBegin] =
+            this.selection.pixelGrid[cy][loopBegin + inc];
         }
         for (let cy = minValue; cy <= maxValue; cy++) {
           for (let cx = minValue + 1; cx <= maxValue - 1; cx++) {

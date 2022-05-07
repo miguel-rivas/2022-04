@@ -43,7 +43,7 @@ export const titleCase = (label) => {
 }
 
 export const getIcon = (icon) => {
-  return String.fromCharCode(this.hexToDec(icons[icon]));
+  return String.fromCharCode(hexToDec(icons[icon]));
 }
 
 export const hexToDec = (number) => {

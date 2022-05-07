@@ -1,7 +1,6 @@
 import { toolEnum } from "../enums/tools";
 import { type } from "../enums/types";
 import { client } from "../enums/clients";
-
 import { Project, Children, Link, LinkCodepen, LinkVimeo, LinkGithub, LinkWeb, Preview } from "../classes/project";
 
 const pj = [

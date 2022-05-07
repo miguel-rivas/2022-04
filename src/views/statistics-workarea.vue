@@ -29,7 +29,7 @@ nn-scroll-area(color="royal-purple")
             toggle-row(breakpoint="lg", :key="projectIndex")
               template(v-slot:header)
                 nn-column(table-element, size="40%") {{ project.title }}
-                nn-column(table-element, size="20%") {{ $t(project.types) }}
+                nn-column(table-element, size="20%") {{ $t(project.type) }}
                 nn-column(table-element, size="20%") {{ project.turingDate }}
                 nn-column(table-element, size="20%-35") {{ project.client }}
 

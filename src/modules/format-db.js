@@ -8,7 +8,7 @@ export function sortByDate(a, b) {
 
 /* ------------------------------------- */
 
-function uncompressProjectsDBtoJSON(db) {
+function uncompressDBtoJSON(db) {
   const result = {};
   db.forEach(entry => {
     const id = getNewID(entry.client, entry.date);
@@ -18,37 +18,11 @@ function uncompressProjectsDBtoJSON(db) {
   return result;
 }
 
-function uncompressGroupsDBtoJSON(groups) {
+function uncompressGroupsDBtoJSON(db) {
   const result = {};
-  groups.forEach(group => {
-    let position = { lat: '', lng: '' };
-
-    if (group.location) {
-      position = group.position;
-    }
-
-    const project = {
-      "title": group.client,
-      "client": group.client,
-      "date": group.date,
-      "turingDate": turingDate(group.date),
-      "types": undefined,
-      "group": group.group,
-      "location": group.location,
-      "links": [],
-      "disabled": group.disabled,
-      "tools": group.tools,
-      "children": group.children,
-      "image": "",
-      "position": position,
-      "description": group.description,
-      "list": group.list,
-      "image": group.image,
-    };
-
-    const id = getNewID(project.client, project.date);
-
-    result[id + "_group"] = project;
+  db.forEach(entry => {
+    const id = getNewID(entry.client, entry.date);
+    result[id + "_group"] = entry;
   });
 
   return result;
@@ -117,13 +91,13 @@ export function allDates() {
 
 /* ------------------------------------- */
 
-export const projectsDBObj = uncompressProjectsDBtoJSON(rawDB);
+export const projectsDBObj = uncompressDBtoJSON(rawDB);
 export const projectsDBList = Object.values(projectsDBObj).sort(sortByDate);
 
 export const groupsDBObj = uncompressGroupsDBtoJSON(rawGroupsDB);
 export const groupsDBList = Object.values(groupsDBObj).sort(sortByDate);
 
-export const locationsDBList = groupsDBList.filter((item) => item.location);
-export const allDBObj = { ...projectsDBObj }; //, ...groupsDBObj
+export const locationsDBList = groupsDBList.filter((item) => item.filter.includes("location"));
+export const allDBObj = { ...projectsDBObj, ...groupsDBObj };
 export const allDBListVisible = Object.values(allDBObj).filter((item) => !item.filter.includes("no-listing")).sort(sortByDate);
 export const allDBListWithImages = Object.values(allDBObj).filter((item) => item.image).sort(sortByDate);

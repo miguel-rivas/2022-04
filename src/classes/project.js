@@ -29,6 +29,45 @@ export class Project {
     this.id = getNewID(client, date);
   }
 }
+export class Group {
+  date;
+  title;
+  turingDate;
+  client;
+  tools;
+  image;
+  children;
+  filter;
+  id;
+  description;
+  list;
+  position;
+
+  constructor(date, client, tools, image, children, filter = [], description, position) {
+    this.date = date;
+    this.title = client;
+    this.turingDate = turingDate(date);
+    this.client = client;
+    this.tools = tools ? tools.sort((a, b) => a - b).map(i => toolR[i]) : [];
+    this.image = image;
+    this.children = children;
+    this.filter = filter;
+    this.id = getNewID(client, date);
+    this.description = `canvas.section.map.modal.${description}.position`;
+    this.list = `canvas.section.map.modal.${description}.summary`;
+    this.position = position
+  }
+}
+
+export class Position {
+  lat;
+  lng;
+
+  constructor(x, y) {
+    this.lat = x;
+    this.lng = y;
+  }
+}
 
 export class Preview {
   src;
