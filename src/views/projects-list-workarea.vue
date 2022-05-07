@@ -37,8 +37,6 @@ export default Vue.extend({
         case "companies":
           result = db.filter(
             (item) =>
-  
-
               !item.client.includes(client.miguelRivas) &&
               !item.client.includes(client.itla) &&
               !item.client.includes(client.itesa) &&

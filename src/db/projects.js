@@ -337,7 +337,7 @@ const pj = [
     "2008/05/17",
     "Tetravex",
     type.app,
-    client.miguelRivas,
+    client.itesa,
     [
       toolEnum.vb,
     ],

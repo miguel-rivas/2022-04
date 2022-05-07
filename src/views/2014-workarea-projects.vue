@@ -6,7 +6,7 @@
           <article class="nano-box" :key="entryIndex">
             <nn-row spacing="4" breakpoint="lg">
               <nn-column size="3/5">
-                <img :src="entry.image" :alt="entry.header + ' preview'" />
+                <img :src="entry.image.src" :alt="entry.header + ' preview'" />
               </nn-column>
               <nn-column size="2/5">
                 <h2 v-html="entry.clients" />
