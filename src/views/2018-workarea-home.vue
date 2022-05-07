@@ -19,7 +19,7 @@
     <section class="gallery">
       <template v-for="(item, index) in db2018">
         <a :class="item.bgColor" :key="index">
-          <img :src="getZapp(`img/preview/3d/${item.preview}.png`)" />
+          <img :src="getZapp(`img/preview/3d/${item.preview}.webp`)" />
           <div class="hover">
             <h2>
               {{ item.title }} /<em> {{ item.type }}</em>

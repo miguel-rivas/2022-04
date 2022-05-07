@@ -2,7 +2,7 @@
   <section class="contact">
     <div class="form-container">
       <img
-        :src="getZapp('img/2014/form-header.png')"
+        :src="getZapp('img/2014/form-header.webp')"
         alt=""
         class="form-header"
       />

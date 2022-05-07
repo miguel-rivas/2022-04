@@ -2,7 +2,7 @@
 	background-color: #e0ff8a;
 
 	header {
-		background: #72bd1a url(get-zapp("img/2018/headers/carnaval.jpg")) bottom no-repeat;
+		background: #72bd1a url(get-zapp("img/2018/headers/carnaval.webp")) bottom no-repeat;
 	}
 
 	section.info {
@@ -60,7 +60,7 @@
 			left: 0;
 			width: 100%;
 			height: 159px;
-			background: url(get-zapp("img/2018/waves.png")) repeat-x bottom;
+			background: url(get-zapp("img/2018/waves.webp")) repeat-x bottom;
 			animation: waves linear 5s infinite;
 		}
 

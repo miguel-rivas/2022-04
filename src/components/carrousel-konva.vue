@@ -71,7 +71,7 @@ export default Vue.extend({
         this.items.push({ config: undefined, temp: undefined });
         this.items[frame - 1].temp = new window.Image();
         this.items[frame - 1].temp.src = this.getZapp(
-          `img/3dlib/${this.currentTheme}/${this.item.name}/000${frame}.jpg`
+          `img/3dlib/${this.currentTheme}/${this.item.name}/000${frame}.webp`
         );
         this.items[frame - 1].temp.onload = () => {
           this.items[frame - 1].config = this.items[frame - 1].temp;

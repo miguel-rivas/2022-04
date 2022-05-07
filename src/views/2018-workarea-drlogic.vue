@@ -4,7 +4,7 @@
       <nn-row breakpoint="md">
         <nn-column size="40%">
           <nn-container>
-            <img :src="getZapp('img/2018/logo/drlogic.png')" />
+            <img :src="getZapp('img/2018/logo/drlogic.webp')" />
             <h1>Website Redesign</h1>
             <a
               href="https://player.vimeo.com/video/207152756"
@@ -12,7 +12,7 @@
               class="venobox"
             >
               <img
-                :src="getZapp('img/2018/videos/drlogic.jpg')"
+                :src="getZapp('img/2018/videos/drlogic.webp')"
                 class="video"
               />
             </a>
@@ -39,18 +39,18 @@
         </nn-container>
       </section>
       <section class="preview">
-        <img :src="getZapp('img/preview/3d/drlogic-home.png')" />
+        <img :src="getZapp('img/preview/3d/drlogic-home.webp')" />
         <img
-          :src="getZapp('img/preview/3d/drlogic-about.png')"
+          :src="getZapp('img/preview/3d/drlogic-about.webp')"
           class="keep_mobile"
         />
-        <img :src="getZapp('img/preview/3d/drlogic-portfolio.png')" />
+        <img :src="getZapp('img/preview/3d/drlogic-portfolio.webp')" />
         <img
-          :src="getZapp('img/preview/3d/drlogic-contact.png')"
+          :src="getZapp('img/preview/3d/drlogic-contact.webp')"
           class="keep_mobile"
         />
         <img
-          :src="getZapp('img/preview/3d/drlogic-404.png')"
+          :src="getZapp('img/preview/3d/drlogic-404.webp')"
           class="keep_mobile"
         />
       </section>
@@ -104,31 +104,31 @@
     </section>
     <section class="gallery">
       <a class="mint">
-        <img :src="getZapp('img/preview/3d/drlogic-home.png')" />
+        <img :src="getZapp('img/preview/3d/drlogic-home.webp')" />
         <div class="hover">
           <p>GO TO DRLOGIC'S HOME PAGE</p>
         </div>
       </a>
       <a class="purple">
-        <img :src="getZapp('img/preview/3d/drlogic-404.png')" />
+        <img :src="getZapp('img/preview/3d/drlogic-404.webp')" />
         <div class="hover">
           <p>GO TO DRLOGIC'S PAGE 404</p>
         </div>
       </a>
       <a class="orange">
-        <img :src="getZapp('img/preview/3d/drlogic-contact.png')" />
+        <img :src="getZapp('img/preview/3d/drlogic-contact.webp')" />
         <div class="hover">
           <p>GO TO DRLOGIC'S CONTACT PAGE</p>
         </div>
       </a>
       <a class="salmon">
-        <img :src="getZapp('img/preview/3d/drlogic-about.png')" />
+        <img :src="getZapp('img/preview/3d/drlogic-about.webp')" />
         <div class="hover">
           <p>GO TO DRLOGIC'S ABOUT US PAGE</p>
         </div>
       </a>
       <a class="blue">
-        <img :src="getZapp('img/preview/3d/terms.png')" />
+        <img :src="getZapp('img/preview/3d/terms.webp')" />
         <div class="hover">
           <p>SEE DRLOGIC'S TERMS</p>
         </div>

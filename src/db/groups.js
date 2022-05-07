@@ -6,7 +6,7 @@ const groups = [
   {
     date: "2004/09/20",
     disabled: false,
-    image: getZapp("img/preview/wide/itesa.jpg"),
+    image: getZapp("img/preview/wide/itesa.webp"),
     client: client.itesa,
     group: true,
     location: true,
@@ -79,7 +79,7 @@ const groups = [
   },
   {
     date: "2009/09/01",
-    image: getZapp("img/preview/wide/itla.jpg"),
+    image: getZapp("img/preview/wide/itla.webp"),
     disabled: false,
     description: 'canvas.section.map.modal.itla.position',
     list: 'canvas.section.map.modal.itla.summary',
@@ -148,7 +148,7 @@ const groups = [
   },
   {
     date: "2013/05/01",
-    image: getZapp("img/preview/wide/social-network.jpg"),
+    image: getZapp("img/preview/wide/social-network.webp"),
     disabled: false,
     description: 'canvas.section.map.modal.social.position',
     list: 'canvas.section.map.modal.social.summary',
@@ -175,7 +175,7 @@ const groups = [
   },
   {
     date: "2014/06/01",
-    image: getZapp("img/preview/wide/presidente.jpg"),
+    image: getZapp("img/preview/wide/presidente.webp"),
     disabled: false,
     group: true,
     client: client.presidente,
@@ -201,7 +201,7 @@ const groups = [
   },
   {
     date: "2014/05/01",
-    image: getZapp("img/preview/wide/capital.jpg"),
+    image: getZapp("img/preview/wide/capital.webp"),
     disabled: false,
     description: 'canvas.section.map.modal.capital.position',
     list: 'canvas.section.map.modal.capital.summary',
@@ -242,7 +242,7 @@ const groups = [
   },
   {
     date: "2016/01/01",
-    image: getZapp("img/preview/wide/pixel.jpg"),
+    image: getZapp("img/preview/wide/pixel.webp"),
     disabled: false,
     description: 'canvas.section.map.modal.pixel.position',
     list: 'canvas.section.map.modal.pixel.summary',
@@ -276,7 +276,7 @@ const groups = [
   },
   {
     date: "2013/07/15",
-    image: getZapp("img/preview/wide/avante.jpg"),
+    image: getZapp("img/preview/wide/avante.webp"),
     disabled: false,
     description: 'canvas.section.map.modal.avante.position',
     list: 'canvas.section.map.modal.avante.summary',
@@ -305,7 +305,7 @@ const groups = [
   },
   {
     date: "2017/07/01",
-    image: getZapp("img/preview/wide/plant-therapy.jpg"),
+    image: getZapp("img/preview/wide/plant-therapy.webp"),
     disabled: false,
     description: 'canvas.section.map.modal.plantTherapy.position',
     list: 'canvas.section.map.modal.plantTherapy.summary',
@@ -362,7 +362,7 @@ const groups = [
   // },
   {
     date: "2018/04/01",
-    image: getZapp("img/preview/wide/enovational.jpg"),
+    image: getZapp("img/preview/wide/enovational.webp"),
     disabled: false,
     description: 'canvas.section.map.modal.enovational.position',
     list: 'canvas.section.map.modal.enovational.summary',

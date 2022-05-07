@@ -4,7 +4,7 @@
       <nn-row>
         <nn-column size="50%">
           <nn-container>
-            <img :src="getZapp('img/2018/logo/carnaval.png')" class="logo" />
+            <img :src="getZapp('img/2018/logo/carnaval.webp')" class="logo" />
             <h1>Event Landing Page</h1>
             <btn text="Go to Website" color="green-pea" />
           </nn-container>
@@ -52,8 +52,8 @@
           </div>
         </section>
       </nn-container>
-      <img :src="getZapp('img/2018/beer.png')" class="beer big" />
-      <img :src="getZapp('img/2018/beer.png')" class="beer small" />
+      <img :src="getZapp('img/2018/beer.webp')" class="beer big" />
+      <img :src="getZapp('img/2018/beer.webp')" class="beer small" />
     </section>
     <section class="footer">
       <article class="website">
@@ -61,7 +61,7 @@
         <p>116,072</p>
       </article>
       <a href="https://youtu.be/4C5gvqLIR6k" target="_blank" class="venobox">
-        <img :src="getZapp('img/2018/videos/carnaval.jpg')" class="video" />
+        <img :src="getZapp('img/2018/videos/carnaval.webp')" class="video" />
       </a>
 
       <template v-for="(item, index) in infographic">
@@ -94,49 +94,49 @@
     <section class="gallery">
       <h1>OTHER PROJECTS</h1>
       <a target="_blank" class="pronosticos_ux">
-        <img :src="getZapp('img/preview/3d/presidente-carnaval.png')" />
+        <img :src="getZapp('img/preview/3d/presidente-carnaval.webp')" />
         <div class="hover">
           <p>GO TO CARNAVAL PRESIDENTE 2015</p>
         </div>
       </a>
       <a target="_blank" class="presidente_filter">
-        <img :src="getZapp('img/preview/3d/filtro_carnaval.png')" />
+        <img :src="getZapp('img/preview/3d/filtro_carnaval.webp')" />
         <div class="hover">
           <p>GO TO CARNAVAL PRESIDENTE 2015'S FILTER</p>
         </div>
       </a>
       <a target="_blank" class="coro_app">
-        <img :src="getZapp('img/preview/3d/coroapp.png')" />
+        <img :src="getZapp('img/preview/3d/coroapp.webp')" />
         <div class="hover">
           <p>GO TO DESTAPA EL CORO’S BETA TEST</p>
         </div>
       </a>
       <a target="_blank" class="coro_flow">
-        <img :src="getZapp('img/preview/3d/userflow.png')" />
+        <img :src="getZapp('img/preview/3d/userflow.webp')" />
         <div class="hover">
           <p>SEE DESTAPA EL CORO’S USER FLOW</p>
         </div>
       </a>
       <a target="_blank" class="photo_app">
-        <img :src="getZapp('img/preview/3d/photo.png')" />
+        <img :src="getZapp('img/preview/3d/photo.webp')" />
         <div class="hover">
           <p>GO TO PHOTO ASSIGMENT’S APP</p>
         </div>
       </a>
       <a target="_blank" class="pronosticos_ux">
-        <img :src="getZapp('img/preview/3d/pronosticos.png')" />
+        <img :src="getZapp('img/preview/3d/pronosticos.webp')" />
         <div class="hover">
           <p>SEE PRONOSTICO’S WIREFRAME</p>
         </div>
       </a>
       <a target="_blank" class="presidente_loader">
-        <img :src="getZapp('img/preview/3d/presidente-loader.png')" />
+        <img :src="getZapp('img/preview/3d/presidente-loader.webp')" />
         <div class="hover">
           <p>SEE PRESIDENTE’S LOADER</p>
         </div>
       </a>
       <a target="_blank" class="presidente_filter">
-        <img :src="getZapp('img/preview/3d/filter.png')" />
+        <img :src="getZapp('img/preview/3d/filter.webp')" />
         <div class="hover">
           <p>SEE PRESIDENTE’S FILTER</p>
         </div>

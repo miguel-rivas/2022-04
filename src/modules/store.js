@@ -33,7 +33,7 @@ export const store = new Vuex.Store({
         },
       },
       projects: {
-        filterData: 'all',
+        filterData: 'companies',
       },
       timeline: {
         theme2014: 'clock',

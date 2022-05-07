@@ -9,7 +9,7 @@
         <img
           :key="frameIndex"
           :class="{ active: currentFrame + 1 === frameIndex }"
-          :src="getZapp(`img/3dlib/${item.name}/000${frameIndex}.jpg`)"
+          :src="getZapp(`img/3dlib/${item.name}/000${frameIndex}.webp`)"
         />
       </template>
     </button>

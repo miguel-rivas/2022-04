@@ -25,15 +25,6 @@ export default Vue.extend({
 
       let result = db;
       switch (this.selection.filterData) {
-        case "projects":
-          result = db.filter(
-            (item) =>
-              !item.client.includes(client.miguelRivas) &&
-              !item.client.includes(client.itla) &&
-              !item.client.includes(client.itesa) &&
-              !item.client.includes(client.codepen)
-          );
-          break;
         case "experiments":
           result = db.filter(
             (item) =>
@@ -46,13 +37,12 @@ export default Vue.extend({
         case "companies":
           result = db.filter(
             (item) =>
-              item.client.includes(client.enovational) ||
-              item.client.includes(client.avante) ||
-              item.client.includes(client.jellyfish) ||
-              item.client.includes(client.pixelPerfectTree) ||
-              item.client.includes(client.capitalDBG) ||
-              item.client.includes(client.plantTherapy) ||
-              item.client.includes(client.socialNetwork)
+  
+
+              !item.client.includes(client.miguelRivas) &&
+              !item.client.includes(client.itla) &&
+              !item.client.includes(client.itesa) &&
+              !item.client.includes(client.codepen)
           );
           break;
         case "homework":

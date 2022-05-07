@@ -259,7 +259,7 @@ export default Vue.extend({
       //   // delete link;
       // }
       // const dataURL = this.stage.toDataURL({ pixelRatio: 3 });
-      // downloadURI(dataURL, "stage.png");
+      // downloadURI(dataURL, "stage.webp");
       // // this.stage.find("#controllers").opacity = 1;
     },
     mouseOverPixel(event) {

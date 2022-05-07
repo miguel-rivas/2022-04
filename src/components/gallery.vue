@@ -9,7 +9,7 @@
                 <img
                   width="1050"
                   height="551"
-                  :src="project.image.src"
+                  :src="project.image && project.image.src"
                   :alt="`${project.client} ${project.turingDate}`"
                 />
               </template>
@@ -33,7 +33,7 @@
                     />
                   </template>
                   <li>
-                    <ul class="summary" v-if="project.children.length > 0">
+                    <ul class="summary" v-if="project.children && project.children.length > 0">
                       <summary-row
                         v-for="(project2, projectIndex2) in project.children"
                         :key="`projectIndex2-${projectIndex2}`"

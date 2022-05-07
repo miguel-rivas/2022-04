@@ -4,14 +4,14 @@
       <nn-row>
         <nn-column size="40%">
           <nn-container>
-            <img :src="getZapp('img/2018/logo/apap.png')" width="60" />
+            <img :src="getZapp('img/2018/logo/apap.webp')" width="60" />
             <h1>Single Page Application</h1>
             <a
               href="https://player.vimeo.com/video/211801157"
               target="_blank"
               class="venobox"
             >
-              <img :src="getZapp('img/2018/videos/apap.jpg')" class="video" />
+              <img :src="getZapp('img/2018/videos/apap.webp')" class="video" />
             </a>
             <btn text="Go to the App" color="denim" />
           </nn-container>

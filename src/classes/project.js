@@ -34,7 +34,7 @@ export class Preview {
   src;
 
   constructor(image) {
-    this.src = getZapp(`img/preview/wide/${image}`);
+    this.src = getZapp(`img/preview/wide/${image}.webp`);
   }
 }
 

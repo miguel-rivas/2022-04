@@ -10,19 +10,6 @@
             li: nn-row
               nn-column(size="100%")
                 label.btn.flat.charcoal(
-                  :class="{ active: selection.filterData == 'all' }"
-                )
-                  | {{ $t('projects.section.list.panel.filter.all') }}
-                  input(
-                    type="radio",
-                    name="filter",
-                    value="all",
-                    v-model="selection.filterData"
-                  )
-
-            li: nn-row
-              nn-column(size="100%")
-                label.btn.flat.charcoal(
                   :class="{ active: selection.filterData == 'companies' }"
                 )
                   | {{ $t('projects.section.list.panel.filter.companies') }}
@@ -30,19 +17,6 @@
                     type="radio",
                     name="filter",
                     value="companies",
-                    v-model="selection.filterData"
-                  )
-
-            li: nn-row
-              nn-column(size="100%")
-                label.btn.flat.charcoal(
-                  :class="{ active: selection.filterData == 'projects' }"
-                )
-                  | {{ $t('projects.section.list.panel.filter.projects') }}
-                  input(
-                    type="radio",
-                    name="filter",
-                    value="projects",
                     v-model="selection.filterData"
                   )
 
@@ -69,6 +43,17 @@
                     type="radio",
                     name="filter",
                     value="homework",
+                    v-model="selection.filterData"
+                  )
+
+            li: nn-row
+              nn-column(size="100%")
+                label.btn.flat.charcoal(:class="{ active: selection.filterData == 'all' }")
+                  | {{ $t('projects.section.list.panel.filter.all') }}
+                  input(
+                    type="radio",
+                    name="filter",
+                    value="all",
                     v-model="selection.filterData"
                   )
 </template>

@@ -1,7 +1,7 @@
 section.home {
 	$translateX: -150;
 	.monitor {
-		background-image: url(get-zapp("img/2014/e002.png"));
+		background-image: url(get-zapp("img/2014/e002.webp"));
 		background-repeat: no-repeat;
 		background-position: left bottom;
 		width: 545px;
@@ -109,7 +109,7 @@ section.home {
 			height: 130px;
 			border: 11px solid #222;
 			background-color: #333;
-			background-image: url(get-zapp("img/2014/static.jpg"));
+			background-image: url(get-zapp("img/2014/static.webp"));
 			animation: static steps(1) 320ms infinite;
 			background-repeat: repeat;
 			background-position: 0% 0%;

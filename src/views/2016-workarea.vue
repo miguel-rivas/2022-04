@@ -4,8 +4,8 @@
     <nn-scroll-area horizontal="false" color="royal-purple">
       <header>
         <h1>Hello<strong></strong></h1>
-        <img :src="getZapp('img/2016/cloud.png')" class="cloud c01" />
-        <img :src="getZapp('img/2016/cloud.png')" class="cloud c02" />
+        <img :src="getZapp('img/2016/cloud.webp')" class="cloud c01" />
+        <img :src="getZapp('img/2016/cloud.webp')" class="cloud c02" />
       </header>
       <section id="aboutme" class="letter">
         <div class="container">
@@ -28,7 +28,7 @@
         </div>
       </section>
       <section class="projects">
-        <img :src="getZapp('img/2016/cloud.png')" class="cloud c03" />
+        <img :src="getZapp('img/2016/cloud.webp')" class="cloud c03" />
         <div class="city">
           <div class="giant"></div>
           <div class="mountains"></div>
@@ -41,15 +41,15 @@
               <img
                 width="200"
                 height="200"
-                :src="getZapp(`img/preview/square/${item}.jpg`)"
+                :src="getZapp(`img/preview/square/${item}.webp`)"
                 :key="`nav-${itemIndex}`"
               />
             </template>
           </div>
-          <img :src="getZapp('img/2016/ribbon.png')" class="ribbon" />
+          <img :src="getZapp('img/2016/ribbon.webp')" class="ribbon" />
         </div>
         <img
-          :src="getZapp('img/2016/landing_earth_ornament_top.png')"
+          :src="getZapp('img/2016/landing_earth_ornament_top.webp')"
           class="top"
         />
         <div class="body"></div>
@@ -60,18 +60,18 @@
       </section>
       <section class="references">
         <img
-          :src="getZapp('img/2016/landing_wall ornament big.png')"
+          :src="getZapp('img/2016/landing_wall ornament big.webp')"
           class="ornament_01"
         />
         <img
-          :src="getZapp('img/2016/landing_wall ornament small.png')"
+          :src="getZapp('img/2016/landing_wall ornament small.webp')"
           class="ornament_02"
         />
         <div class="content">
           <h2 id="references">References</h2>
           <template v-for="(item, itemIndex) in references">
             <article :key="`nav-${itemIndex}`">
-              <img :src="getZapp(`img/2016/${item.img}.png`)" class="preview" />
+              <img :src="getZapp(`img/2016/${item.img}.webp`)" class="preview" />
               <h3>{{ item.title }}</h3>
               <p>{{ item.description }}</p>
             </article>

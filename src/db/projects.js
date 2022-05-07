@@ -23,7 +23,7 @@ const pj = [
       toolEnum.i18n,
       toolEnum.webComponents
     ],
-    new Preview("2022.jpg"),
+    new Preview("2022"),
     [
       new LinkGithub("matryoshka")
     ],
@@ -55,7 +55,7 @@ const pj = [
       toolEnum.pug,
       toolEnum.i18n,
     ],
-    new Preview("2022.jpg"),
+    new Preview("2022"),
     [
       new LinkGithub("2022")
     ],
@@ -338,14 +338,14 @@ const pj = [
     "2008/05/17",
     "Tetravex",
     type.app,
-    client.itesa,
+    client.miguelRivas,
     [
       toolEnum.vb,
     ],
+    new Preview("tetravex"),
     undefined,
     undefined,
-    undefined,
-    ["no-listing"]
+    undefined
   ),
 
   new Project(
@@ -1037,7 +1037,7 @@ const pj = [
     [
       toolEnum.indesign
     ],
-    new Preview("2012.jpg"),
+    new Preview("2012"),
     [
       new Link("https://issuu.com/jemiguelrivas/docs/ptf3_005", "Portfolio 3"),
       new Link("https://issuu.com/jemiguelrivas/docs/ptf2_000", "Portfolio 2"),
@@ -1109,7 +1109,7 @@ const pj = [
       toolEnum.illustrator,
       toolEnum.git,
     ],
-    new Preview("mainfront.jpg"),
+    new Preview("mainfront"),
     [
       new LinkWeb("main-front", "App"),
       new LinkGithub("main-front"),
@@ -1131,13 +1131,13 @@ const pj = [
       toolEnum.pug,
       toolEnum.git,
     ],
-    new Preview("css-study.jpg"),
+    new Preview("css-study"),
     [
       new LinkWeb("css-study", "App"),
       new LinkGithub("css-study"),
     ],
     undefined,
-    ["no-listing"]
+    undefined
   ),
 
   new Project(
@@ -1151,7 +1151,7 @@ const pj = [
       toolEnum.scss,
       toolEnum.git,
     ],
-    new Preview("hello.jpg"),
+    new Preview("hello"),
     [
       new LinkWeb("hello", "Berlin", ["city=berlin"]),
       new LinkWeb("hello", "Dusseldorf", ["city=dusseldorf"]),
@@ -1176,13 +1176,13 @@ const pj = [
       toolEnum.git,
       toolEnum.scss,
     ],
-    new Preview("evolution.jpg"),
+    new Preview("evolution"),
     [
       new LinkWeb("evolution-web", "App"),
       new LinkGithub("evolution-web"),
     ],
     undefined,
-    ["no-listing"]
+    undefined
   ),
 
   new Project(
@@ -1195,7 +1195,7 @@ const pj = [
       toolEnum.scss,
       toolEnum.illustrator,
     ],
-    new Preview("evolution.jpg"),
+    undefined,
     [
       new LinkCodepen("oXxPvw"),
     ],
@@ -1212,7 +1212,7 @@ const pj = [
       toolEnum.pug,
       toolEnum.scss,
     ],
-    new Preview("minivan.jpg"),
+    new Preview("minivan"),
     [
       new LinkCodepen("oXxPvw"),
     ],
@@ -1230,7 +1230,7 @@ const pj = [
       toolEnum.jade,
       toolEnum.illustrator,
     ],
-    new Preview("window.jpg"),
+    new Preview("window"),
     undefined,
     undefined,
     ["no-listing"]
@@ -1246,7 +1246,7 @@ const pj = [
       toolEnum.pug,
       toolEnum.scss,
     ],
-    new Preview("gear.jpg"),
+    new Preview("gear"),
     undefined,
     [
       new Children(client.itesa, "2008/05/16"),
@@ -1267,13 +1267,13 @@ const pj = [
       toolEnum.illustrator,
       toolEnum.git,
     ],
-    new Preview("svg-101.jpg"),
+    new Preview("svg-101"),
     [
       new LinkWeb("svg-101", "Prototype"),
       new LinkGithub("svg-101"),
     ],
     undefined,
-    ["no-listing"]
+    undefined
   ),
 
   new Project(
@@ -1292,7 +1292,7 @@ const pj = [
       toolEnum.inkscape,
       toolEnum.git,
     ],
-    new Preview("tetravex.jpg"),
+    new Preview("tetravex"),
     [
       new LinkWeb("tetravex", "App"),
       new LinkGithub("tetravex"),
@@ -1310,7 +1310,7 @@ const pj = [
       toolEnum.slim,
       toolEnum.scss,
     ],
-    new Preview("tetravex.jpg"),
+    new Preview("pills"),
     undefined,
     undefined,
     ["no-listing"]
@@ -1324,7 +1324,7 @@ const pj = [
     [
       toolEnum.flash,
     ],
-    new Preview("french-toast.jpg"),
+    new Preview("french-toast"),
     [
       new LinkVimeo("224945169"),
     ],
@@ -1340,7 +1340,7 @@ const pj = [
     [
       toolEnum.flash,
     ],
-    new Preview("vectores.jpg"),
+    new Preview("vectores"),
     [
       new LinkVimeo("175240185"),
     ],
@@ -1357,14 +1357,14 @@ const pj = [
       toolEnum.unity,
       toolEnum.premiere,
     ],
-    new Preview("wurlex.jpg"),
+    new Preview("wurlex"),
     [
       new LinkVimeo("224977703"),
     ],
     [
       new Children(client.itla, "2011/04/25"),
     ],
-    ["no-listing"]
+    undefined
   ),
 
   new Project(
@@ -1377,7 +1377,7 @@ const pj = [
       toolEnum.scss,
       toolEnum.git,
     ],
-    new Preview("2014.jpg"),
+    new Preview("2014"),
     [
       new LinkGithub("2014"),
     ],
@@ -1399,7 +1399,7 @@ const pj = [
       toolEnum.sass,
       toolEnum.git,
     ],
-    new Preview("2016.jpg"),
+    new Preview("2016"),
     [
       new LinkWeb("2016", "App"),
       new LinkGithub("2016"),
@@ -1431,7 +1431,7 @@ const pj = [
       toolEnum.gmap,
       toolEnum.axios,
     ],
-    new Preview("2021.jpg"),
+    new Preview("2021"),
     [
       new LinkGithub("2021"),
     ],
@@ -1457,7 +1457,7 @@ const pj = [
       toolEnum.scss,
       toolEnum.git,
     ],
-    new Preview("2018.jpg"),
+    new Preview("2018"),
     [
       new LinkGithub("2018"),
     ],
@@ -1477,13 +1477,13 @@ const pj = [
       toolEnum.scss,
       toolEnum.git,
     ],
-    new Preview("html-love.jpg"),
+    new Preview("html-love"),
     [
       new LinkWeb("html-love", "App"),
       new LinkGithub("html-love"),
     ],
     undefined,
-    ["no-listing"]
+    undefined
   ),
 
   new Project(
@@ -1592,7 +1592,7 @@ const pj = [
       toolEnum.typescript,
       toolEnum.git,
     ],
-    new Preview("2021-react.jpg"),
+    new Preview("2021-react"),
     [
       new LinkWeb("2021-react", "App"),
       new LinkGithub("2021-react"),
@@ -1784,7 +1784,7 @@ const pj = [
     [
       toolEnum.blender,
     ],
-    new Preview("drakkar.jpg"),
+    new Preview("drakkar"),
     [
       new Link("https://sketchfab.com/3d-models/drakkar-d0f14c73155e460cb848a3db80e1cb07", "3D Model"),
     ],
@@ -1896,7 +1896,7 @@ const pj = [
     [
       toolEnum.maya,
     ],
-    new Preview("x-wing.jpg"),
+    new Preview("x-wing"),
     [
       new Link("https://issuu.com/jemiguelrivas/docs/ptf1_000/38", "Document"),
     ],
@@ -1950,7 +1950,7 @@ const pj = [
     [
       toolEnum.flash,
     ],
-    new Preview("pepsi.jpg"),
+    new Preview("pepsi"),
     [
       new LinkVimeo("175240184", "Video"),
     ],
@@ -1972,7 +1972,7 @@ const pj = [
       toolEnum.php,
       toolEnum.git,
     ],
-    new Preview("carnaval-presidente.jpg"),
+    new Preview("carnaval-presidente"),
     [
       new LinkWeb("presidente-carnaval-2015/filter.html", "Filter"),
       new LinkWeb("presidente-carnaval-2015/home.html", "Home"),
@@ -1991,7 +1991,7 @@ const pj = [
     [
       toolEnum.flash,
     ],
-    new Preview("redrock.jpg"),
+    new Preview("redrock"),
     [
       new LinkVimeo("175240186", "Video"),
     ],
@@ -2012,7 +2012,7 @@ const pj = [
       toolEnum.php,
       toolEnum.git,
     ],
-    new Preview("retro-brindis.jpg"),
+    new Preview("retro-brindis"),
     [
 
       new LinkWeb("presidente-retro-brindis", "App"),
@@ -2034,7 +2034,7 @@ const pj = [
       toolEnum.css,
       toolEnum.git,
     ],
-    new Preview("apap.jpg"),
+    new Preview("apap"),
     [
 
       new LinkWeb("apap-mineriza-familia", "App"),
@@ -2043,14 +2043,14 @@ const pj = [
     [
       new Children(client.miguelRivas, "2017/04/04"),
     ],
-    ["no-listing"]
+    undefined
   ),
 
   new Project(
     "2017/04/04",
     "Promo",
     type.motionGraphics,
-    client.apap,
+    client.miguelRivas,
     [
       toolEnum.afterEffects,
       toolEnum.premiere,
@@ -2097,7 +2097,7 @@ const pj = [
       toolEnum.rails,
       toolEnum.git,
     ],
-    new Preview("drlogic.jpg"),
+    new Preview("drlogic"),
     [
       new LinkWeb("drlogic/home.html", "Home"),
       new LinkWeb("drlogic/about-us.html", "About Us"),
@@ -2110,7 +2110,7 @@ const pj = [
       new Children(client.drLogic, "2016/03/08"),
       new Children(client.miguelRivas, "2017/03/06"),
     ],
-    ["no-listing"]
+    undefined
   ),
 
   new Project(
@@ -2121,7 +2121,7 @@ const pj = [
     [
       toolEnum.flash,
     ],
-    new Preview("drlogic.jpg"),
+    new Preview("drlogic"),
     [
       new LinkVimeo("207152756", "Video"),
     ],
@@ -2140,7 +2140,7 @@ const pj = [
     [
       toolEnum.indesign,
     ],
-    new Preview("drlogic.jpg"),
+    new Preview("drlogic"),
     undefined,
     undefined,
     ["no-listing"]
@@ -2158,7 +2158,7 @@ const pj = [
       toolEnum.rails,
       toolEnum.git,
     ],
-    new Preview("pixel-404.jpg"),
+    new Preview("pixel-404"),
     [
       new LinkWeb("pixel-server-prompt/404", "404"),
       new LinkWeb("pixel-server-prompt/500", "500"),
@@ -2180,7 +2180,7 @@ const pj = [
       toolEnum.rails,
       toolEnum.git,
     ],
-    new Preview("voxel.jpg"),
+    new Preview("voxel"),
     [
       new LinkWeb("voxel-animation", "Animated Header"),
       new LinkGithub("voxel-animation"),
@@ -2197,7 +2197,7 @@ const pj = [
     [
       toolEnum.premiere,
     ],
-    new Preview("orange.jpg"),
+    new Preview("orange"),
     [
       new LinkVimeo("212177083", "Video"),
     ],
@@ -2208,7 +2208,7 @@ const pj = [
       new Children(client.orange, "2015/04/24"),
       new Children(client.orange, "2015/05/22"),
     ],
-    ["no-listing"]
+    undefined
   ),
 
   new Project(
@@ -2371,7 +2371,7 @@ const pj = [
       toolEnum.three,
       toolEnum.tweenMax,
     ],
-    new Preview("popkern.jpg"),
+    new Preview("popkern"),
     undefined,
     [
       new Children(client.miguelRivas, "2020/03/23"),
@@ -2379,7 +2379,7 @@ const pj = [
       new Children(client.miguelRivas, "2020/06/17"),
       new Children(client.miguelRivas, "2020/08/18"),
     ],
-    ["no-listing"]
+    undefined
   ),
 
   new Project(
@@ -2584,7 +2584,7 @@ const pj = [
       toolEnum.git,
       toolEnum.bootstrap,
     ],
-    new Preview("onestop.jpg"),
+    new Preview("onestop"),
     undefined,
     [
       new Children(client.enovational, "2020/05/05"),
@@ -2606,7 +2606,7 @@ const pj = [
       toolEnum.git,
       toolEnum.bootstrap,
     ],
-    new Preview("formability.jpg"),
+    new Preview("formability"),
     [
       new LinkWeb("formability/demo", "Demo"),
       new LinkWeb("formability/401", "401"),
@@ -2619,7 +2619,7 @@ const pj = [
       new Children(client.miguelRivas, "2018/09/11"),
       new Children(client.enovational, "2020/05/05"),
     ],
-    ["no-listing"]
+    undefined
   ),
 
   new Project(
@@ -2684,7 +2684,7 @@ const pj = [
     [
       toolEnum.blender,
     ],
-    new Preview("kaspar.jpg"),
+    new Preview("kaspar"),
     undefined,
     undefined,
     ["no-listing"]
@@ -2698,7 +2698,7 @@ const pj = [
     [
       toolEnum.blender,
     ],
-    new Preview("iqra.jpg"),
+    new Preview("iqra"),
     undefined,
     undefined,
     ["no-listing"]
@@ -2712,7 +2712,7 @@ const pj = [
     [
       toolEnum.blender,
     ],
-    new Preview("goose.jpg"),
+    new Preview("goose"),
     undefined,
     undefined,
     ["no-listing"]
@@ -2726,7 +2726,7 @@ const pj = [
     [
       toolEnum.unity,
     ],
-    new Preview("mr-universe.jpg"),
+    new Preview("mr-universe"),
     [
       new Link("https://play.google.com/store/apps/details?id=com.miguelrivas.github.io.MRUniverse", "Google Play"),
     ],
