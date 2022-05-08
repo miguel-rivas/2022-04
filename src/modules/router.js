@@ -6,6 +6,8 @@ import DefaultPanelView from '../views/default-panel.vue';
 import StargazeWorkareaView from '../views/stargaze-workarea.vue';
 import StargazePanelView from '../views/stargaze-panel.vue';
 
+import SoundboardWorkareaView from '../views/soundboard-workarea.vue';
+
 import CanvasRouter from '../router/canvas';
 import CssRouter from '../router/css';
 import ProjectsRouter from '../router/projects';
@@ -27,6 +29,14 @@ const routes = [
     components: {
       workarea: StargazeWorkareaView,
       panel: StargazePanelView,
+    },
+  },
+  {
+    name: 'fake-audience',
+    path: '/fake-audience',
+    components: {
+      workarea: SoundboardWorkareaView,
+      panel: DefaultPanelView,
     },
   },
   {

@@ -196,6 +196,11 @@ export default Vue.extend({
         icon: "css3",
         route: ["css", "house", "pills", "minivan", "window"],
       },
+      {
+        tooltip: "Fake Audience",
+        icon: "moon",
+        route: ["fake-audience"],
+      },
     ],
     playSound,
     linkGithub,
