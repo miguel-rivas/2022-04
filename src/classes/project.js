@@ -77,6 +77,20 @@ export class Preview {
   }
 }
 
+export class Document {
+  id;
+  baseUrl;
+  text;
+  path;
+
+  constructor(doc = "", text = "Document") {
+    this.id = doc;
+    this.text = text;
+    this.baseUrl = getZapp(`docs`);
+    this.path = `${this.baseUrl}/${doc}.pdf`;
+  }
+}
+
 export class Children {
   id;
 
@@ -108,7 +122,7 @@ export class LinkWeb {
   constructor(id = "", text = "") {
     this.id = id;
     this.text = text;
-    this.baseUrl = `https://${user.media.github.production}.github.io/`;
+    this.baseUrl = `https://${user.media.github.production}.github.io`;
     this.path = `${this.baseUrl}/${id}`;
   }
 }
@@ -122,7 +136,7 @@ export class LinkCodepen {
   constructor(id = "", text = "Codepen Prototype") {
     this.id = id;
     this.text = text;
-    this.baseUrl = `https://github.com/${user.media.codepen.user}`;
+    this.baseUrl = `https://codepen.io/${user.media.codepen.user}`;
     this.path = `${this.baseUrl}/pen/${id}`;
   }
 }
@@ -150,7 +164,7 @@ export class LinkVimeo {
   constructor(id = "", text = "Vimeo") {
     this.id = id;
     this.text = text;
-    this.baseUrl = `https://player.vimeo.com/video/`;
+    this.baseUrl = `https://vimeo.com`;
     this.path = `${this.baseUrl}/${id}`;
   }
 }

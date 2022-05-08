@@ -1,7 +1,7 @@
 import { toolEnum } from "../enums/tools";
 import { type } from "../enums/types";
 import { client } from "../enums/clients";
-import { Project, Children, Link, LinkCodepen, LinkVimeo, LinkGithub, LinkWeb, Preview } from "../classes/project";
+import { Project, Children, Link, LinkCodepen, LinkVimeo, LinkGithub, LinkWeb, Preview, Document } from "../classes/project";
 
 const pj = [
   new Project(
@@ -2350,7 +2350,9 @@ const pj = [
       toolEnum.illustrator,
     ],
     undefined,
-    undefined,
+    [
+      new Document("coroapp_ux")
+    ],
     undefined,
     ["no-listing"]
   ),
@@ -2460,7 +2462,9 @@ const pj = [
       toolEnum.illustrator,
     ],
     undefined,
-    undefined,
+    [
+      new Document("pronosticos_ux")
+    ],
     undefined,
     ["no-listing"]
   ),
@@ -2474,7 +2478,10 @@ const pj = [
       toolEnum.illustrator,
     ],
     undefined,
-    undefined,
+    [
+      new Document("admin"),
+      new Document("timetable"),
+    ],
     undefined,
     ["no-listing"]
   ),
@@ -2488,7 +2495,9 @@ const pj = [
       toolEnum.illustrator,
     ],
     undefined,
-    undefined,
+    [
+      new Document("wireframe_chakras")
+    ],
     undefined,
     ["no-listing"]
   ),
@@ -2522,7 +2531,9 @@ const pj = [
       toolEnum.illustrator,
     ],
     undefined,
-    undefined,
+    [
+      new Document("voxel_social")
+    ],
     undefined,
     ["no-listing"]
   ),
