@@ -75,3 +75,8 @@ export const deg = 180 / Math.PI;
 export const getZapp = (path) => {
   return `https://miguel-rivas.github.io/zapp/${path}`;
 }
+
+const audio = new Audio(getZapp(`audio/click.mp3`));
+export const playSound = () => {
+  audio.play();
+}

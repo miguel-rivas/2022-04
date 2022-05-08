@@ -124,6 +124,7 @@ import Vue from "vue";
 import { mapGetters, mapMutations } from "vuex";
 import { linkGithub, linkLinkedin } from "../db/user";
 import i18n from "../i18n";
+import { playSound } from "../modules/helpers";
 
 export default Vue.extend({
   components: {},
@@ -196,6 +197,7 @@ export default Vue.extend({
         route: ["css", "house", "pills", "minivan", "window"],
       },
     ],
+    playSound,
     linkGithub,
     linkLinkedin,
   }),
@@ -206,23 +208,10 @@ export default Vue.extend({
   },
   methods: {
     switchLanguage(lang) {
-      this.playSound();
+      playSound();
       this.$i18n.locale = lang;
     },
     ...mapMutations(["toggleValue"]),
-    playSound() {
-      let context = new AudioContext();
-      let newSound = context.createOscillator();
-      let newGain = context.createGain();
-      newSound.connect(newGain);
-      newSound.frequency.value = 300;
-      newGain.connect(context.destination);
-      newSound.start(0);
-      newGain.gain.exponentialRampToValueAtTime(
-        0.00000001,
-        context.currentTime + 0.5
-      );
-    },
   },
 });
 </script>

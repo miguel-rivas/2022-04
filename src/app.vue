@@ -30,8 +30,12 @@ import Vue from "vue";
 import PanelNavigation from "./components/panel-navigation.vue";
 import Alert from "./components/alert.vue";
 import { mapGetters, mapMutations } from "vuex";
+import { playSound } from "./modules/helpers";
 
 export default Vue.extend({
+  data: () => ({
+    playSound,
+  }),
   components: {
     PanelNavigation,
     Alert,
@@ -59,19 +63,6 @@ export default Vue.extend({
   },
   methods: {
     ...mapMutations(["toggleValue"]),
-    playSound() {
-      let context = new AudioContext();
-      let newSound = context.createOscillator();
-      let newGain = context.createGain();
-      newSound.connect(newGain);
-      newSound.frequency.value = 300;
-      newGain.connect(context.destination);
-      newSound.start(0);
-      newGain.gain.exponentialRampToValueAtTime(
-        0.00000001,
-        context.currentTime + 0.5
-      );
-    },
   },
 });
 </script>
