@@ -3,17 +3,16 @@
     <nn-container size="900">
       <div class="title">
         <h1>Fake Audience</h1>
-        <p>For those people who are alone in this pandemic and just want someone who laugh at their jokes.</p>
+        <p>
+          For those people who are alone in this pandemic and just want someone
+          who laugh at their jokes.
+        </p>
       </div>
       <nn-row class="btn-gallery" grid>
         <template v-for="(item, itemIndex) in database">
           <nn-column size="200, 200" :key="itemIndex">
-            <button class="btn arcade">
+            <button class="btn arcade" @click="playAudio(item)">
               <img :src="getZapp(`img/fakeaudience/${item}.svg`)" />
-              <audio
-                preload="auto"
-                :src="getZapp(`audio/fakeaudience/${item}.mp3`)"
-              />
             </button>
           </nn-column>
         </template>
@@ -43,7 +42,22 @@ export default Vue.extend({
       "drum_roll",
       "rimshot",
     ],
+    sound: {},
     getZapp,
   }),
+  created() {
+    this.database.forEach((item) => {
+      this.sound[item] = new Audio(getZapp(`audio/fakeaudience/${item}.mp3`));
+    });
+  },
+  methods: {
+    playAudio(file) {
+      Object.values(this.sound).forEach(item => {
+        item.pause();
+        item.currentTime = 0;
+      })
+      this.sound[file].play();
+    },
+  },
 });
 </script>
