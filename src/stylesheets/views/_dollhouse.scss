@@ -1,0 +1,19 @@
+main.section-dollhouse {
+  &.nano-dark {
+    .workarea {
+      background: linear-gradient(169deg, #42204c 0%, #15121c 100%);
+    }
+  }
+  &.nano-light {
+    .workarea {
+      background: linear-gradient(169deg, #7a5383 0%, #312032 100%);
+    }
+  }
+  .map {
+    background-image: url(get-zapp("img/extras/stars.svg"));
+    background-repeat: repeat;
+    background-position-x: center;
+    background-position-y: 0;
+    animation: stargaze linear 10s infinite;
+  }
+}

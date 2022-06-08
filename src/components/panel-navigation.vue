@@ -131,7 +131,7 @@ export default Vue.extend({
   data: () => ({
     navigation: [
       {
-        tooltip: i18n.t("stargaze.navTitle"),
+        tooltip: i18n.t("dollhouse.navTitle"),
         icon: "monster",
         route: ["dollhouse"],
       },
@@ -179,7 +179,7 @@ export default Vue.extend({
       {
         tooltip: i18n.t("canvas.navTitle"),
         icon: "window",
-        route: ["canvas", "locations", "avatar", "gear", "wheel", "pixel"],
+        route: ["canvas", "locations", "avatar", "gear", "wheel", "pixel", "stargazer"],
       },
       {
         tooltip: i18n.t("three.navTitle"),

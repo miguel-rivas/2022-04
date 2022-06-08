@@ -17,6 +17,17 @@
       "graphicDesign": "Graphic Design"
     }
   },
+  "dollhouse": {
+    "navTitle": "Doll House",
+    "panel": {
+      "controller": {
+        "rotate": "Rotate"
+      }
+    },
+    "workarea": {
+      "footer": "Built with&nbsp;<strong><a href='https://vuejs.org/'>Vue.js&nbsp;</a></strong>"
+    }
+  },
   "stargaze": {
     "navTitle": "Star Gazer",
     "panel": {
@@ -104,52 +115,6 @@
   "ui": {
     "navTitle": "Portfolio UI",
     "section": {
-      "gridBuilder": {
-        "title": "Grid Builder",
-        "workarea": {
-          "html": "Get HTML Code",
-          "pug": "Get Pug Code",
-          "haml": "Get HAML Code"
-        },
-        "panel": {
-          "addCTA": "Add Column",
-          "rowStyle": {
-            "legend": "Row Styles",
-            "group": "Group",
-            "vertical": "Vertical",
-            "integrated": "Integrated",
-            "spacing": "Spacing (Rem)",
-            "breakpoint": "Breakpoint"
-          },
-          "columnStyle": {
-            "absoluteWidth": "Absolute Width",
-            "width": "Width",
-            "widthSubtraction": "Width Subtraction",
-            "absoluteHeight": "Absolute Height",
-            "height": "Height",
-            "columnStyle": "Column Style",
-            "removeCTA": "Remove Column"
-          }
-        }
-      },
-      "gridGallery": {
-        "title": "Grid Gallery",
-        "workarea": {
-          "fractions": "Fractions",
-          "percents": "Percents",
-          "percentsAlert": "The final value of a percent size will be a fraction.",
-          "absolutes": "Absolutes",
-          "absolutesAlert": "Values above 300px will be appended as a style attribute instead of a class.",
-          "formulas": "Formulas",
-          "formulasAlert": "Multiplication is only allow for subtraction values.",
-          "heightFractions": "Height: Fractions (% / VH)",
-          "heightFractionsAlert": "1/2 refers to a relative size based on the container, while 1/2vh refers to a relative size based on the screen height.",
-          "heightPercents": "Height: Percents (% / VH)",
-          "heightPercentsAlert": "100% refers to a relative size based on the container, while 100%vh refers to a relative size based on the screen height.",
-          "heightAbsolute": "Height: Absolute",
-          "heightAbsoluteAlert": "Values above 300px will be appended as a style attribute instead of a class."
-        }
-      },
       "colors": {
         "title": "Colors",
         "panel": {
@@ -458,9 +423,6 @@
       }
     }
   },
-  "unity": {
-    "navTitle": "Unity"
-  },
   "css": {
     "navTitle": "CSS Models",
     "section": {
@@ -475,6 +437,9 @@
       },
       "pills": {
         "title": "Pills"
+      },
+      "stargazer": {
+        "title": "Stargazer"
       }
     }
   }

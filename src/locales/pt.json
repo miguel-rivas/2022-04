@@ -104,52 +104,6 @@
   "ui": {
     "navTitle": "Interface de Portfólio",
     "section": {
-      "gridBuilder": {
-        "title": "Construtor de Grade",
-        "workarea": {
-          "html": "Obter Código HTML",
-          "pug": "Obter Código PUG",
-          "haml": "Obter Código HAML"
-        },
-        "panel": {
-          "addCTA": "Adicionar Coluna",
-          "rowStyle": {
-            "legend": "Estilo de Linha",
-            "group": "Grupo",
-            "vertical": "Vertical",
-            "integrated": "Integrado",
-            "spacing": "Espaçamento (Rem)",
-            "breakpoint": "Ponto de Interrupção"
-          },
-          "columnStyle": {
-            "absoluteWidth": "Largura Absoluta",
-            "width": "Largura",
-            "widthSubtraction": "Subtração de Largura",
-            "absoluteHeight": "Altura Absoluta",
-            "height": "Altura",
-            "columnStyle": "Estilo da Coluna",
-            "removeCTA": "Remover Coluna"
-          }
-        }
-      },
-      "gridGallery": {
-        "title": "Galería de Grades",
-        "workarea": {
-          "fractions": "Frações",
-          "percents": "Porcentagens",
-          "percentsAlert": "O valor final de uma porcentagem será uma fração.",
-          "absolutes": "Absolutos",
-          "absolutesAlert": "Valores maiores que 300px serão adicionados como um atributo de estilo ao invés de uma classe.",
-          "formulas": "Fórmulas",
-          "formulasAlert": "A multiplicação só é permitida para valores de subtração.",
-          "heightFractions": "Altura: Frações (% / VH)",
-          "heightFractionsAlert": "1/2 refere-se a um tamanho relativo baseado no contêiner, enquanto 1/2vh refere-se a um tamanho relativo baseado na altura da tela.",
-          "heightPercents": "Altura: Porcentagens (% / VH)",
-          "heightPercentsAlert": "100% refere-se a um tamanho relativo baseado no contêiner, enquanto 100%vh refere-se a um tamanho relativo baseado na altura da tela.",
-          "heightAbsolute": "Altura: Absolutos",
-          "heightAbsoluteAlert": "Valores maiores que 300px serão adicionados como um atributo de estilo ao invés de uma classe."
-        }
-      },
       "colors": {
         "title": "Cores",
         "panel": {
@@ -455,9 +409,6 @@
       }
     }
   },
-  "unity": {
-    "navTitle": "Unity"
-  },
   "css": {
     "navTitle": "Modelos CSS",
     "section": {
@@ -472,6 +423,9 @@
       },
       "pills": {
         "title": "Pílulas"
+      },
+      "stargazer": {
+        "title": "Observador de Estrelas"
       }
     }
   }

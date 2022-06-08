@@ -104,52 +104,6 @@
   "ui": {
     "navTitle": "Interfaz del Portafolio",
     "section": {
-      "gridBuilder": {
-        "title": "Constructor de Cuadrícula",
-        "workarea": {
-          "html": "Obtener Código HTML",
-          "pug": "Obtener Código PUG",
-          "haml": "Obtener Código HAML"
-        },
-        "panel": {
-          "addCTA": "Agregar Columna",
-          "rowStyle": {
-            "legend": "Estilo de la fila",
-            "group": "Agrupar",
-            "vertical": "Vertical",
-            "integrated": "Integrada",
-            "spacing": "Espaciado (Rem)",
-            "breakpoint": "Punto de Interrupción"
-          },
-          "columnStyle": {
-            "absoluteWidth": "Ancho Absoluto",
-            "width": "Ancho",
-            "widthSubtraction": "Subtracción del Ancho",
-            "absoluteHeight": "Alto Absoluto",
-            "height": "Alto",
-            "columnStyle": "Estilo de Columna",
-            "removeCTA": "Remover Columna"
-          }
-        }
-      },
-      "gridGallery": {
-        "title": "Galería de Cuadrículas",
-        "workarea": {
-          "fractions": "Fracciones",
-          "percents": "Porcentajes",
-          "percentsAlert": "El valor final de un porcentaje será una fracción.",
-          "absolutes": "Absolutos",
-          "absolutesAlert": "Los valores superiores a 300px se agregarán como un atributo de estilo en lugar de una clase.",
-          "formulas": "Fórmulas",
-          "formulasAlert": "La multiplicación solo se permite para valores de substracción.",
-          "heightFractions": "Alto: Fracciones (% / VH)",
-          "heightFractionsAlert": "1/2 se refiere a un tamaño relativo basado en el contenedor, mientras que 1/2vh se refiere a un tamaño relativo basado en la altura de la pantalla.",
-          "heightPercents": "Alto: Porcentajes (% / VH)",
-          "heightPercentsAlert": "100% se refiere a un tamaño relativo basado en el contenedor, mientras que 100%vh se refiere a un tamaño relativo basado en la altura de la pantalla.",
-          "heightAbsolute": "Alto: Absolutos",
-          "heightAbsoluteAlert": "Los valores superiores a 300px se agregarán como un atributo de estilo en lugar de una clase."
-        }
-      },
       "colors": {
         "title": "Colores",
         "panel": {
@@ -455,9 +409,6 @@
       }
     }
   },
-  "unity": {
-    "navTitle": "Unity"
-  },
   "css": {
     "navTitle": "Modelos CSS",
     "section": {
@@ -472,6 +423,9 @@
       },
       "pills": {
         "title": "Pastillas"
+      },
+      "stargazer": {
+        "title": "Mirador de Estrellas"
       }
     }
   }

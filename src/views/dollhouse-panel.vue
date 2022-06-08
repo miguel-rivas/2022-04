@@ -3,7 +3,7 @@
     <div class="capsule">
       <nn-row class="row-block">
         <nn-column size="100%">
-          <legend>Theme</legend>
+          <legend>Controllers</legend>
           <nn-row>
             <nn-column size="100%">
               <nn-row>

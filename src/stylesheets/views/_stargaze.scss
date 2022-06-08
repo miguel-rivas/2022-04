@@ -78,14 +78,3 @@ main.section-stargazer {
     }
   }
 }
-
-@keyframes stargaze {
-  from {
-    background-position-y: 500px;
-    background-position-x: 0;
-  }
-  to {
-    background-position-y: 0;
-    background-position-x: 500px;
-  }
-}

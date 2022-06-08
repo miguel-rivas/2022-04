@@ -7,6 +7,8 @@ import HouseWorkareaView from '../views/house-workarea.vue';
 import WindowWorkareaView from '../views/window-workarea.vue';
 import BusWorkareaView from '../views/minivan-workarea.vue';
 import PillsWorkareaView from '../views/pills-workarea.vue';
+import StargazeWorkareaView from '../views/stargaze-workarea.vue';
+import StargazePanelView from '../views/stargaze-panel.vue';
 
 export default {
   name: 'css',
@@ -47,6 +49,11 @@ export default {
               name: ["pills"],
               icon: "medical",
             },
+            {
+              text: "css.section.stargazer.title",
+              name: ["stargazer"],
+              icon: "medical",
+            },
           ])
         }
       },
@@ -80,6 +87,14 @@ export default {
       path: '/minivan',
       components: {
         workarea2: BusWorkareaView,
+      }
+    },
+    {
+      name: 'stargazer',
+      path: '/stargazer',
+      components: {
+        workarea2: StargazeWorkareaView,
+        panel2: StargazePanelView,
       }
     },
   ],

@@ -10,7 +10,7 @@
               :key="`mapImgRight${index}`",
               @mouseover="hoverImg",
               @mouseout="mouseOutImg",
-              @click="openModal(image.client)",
+              @click="navigateTo(image.link)"
               :config="image"
             )
         template(v-else)
@@ -20,7 +20,7 @@
               :key="`mapImgLeft${index}`",
               @mouseover="hoverImg",
               @mouseout="mouseOutImg",
-              @click="openModal(image.client)",
+              @click="navigateTo(image.link)"
               :config="image"
             )
 </template>
@@ -43,90 +43,102 @@ export default Vue.extend({
     img: [],
     imgRight: [
       {
-        name: "pole",
+        name: "pole-r",
         image: null,
         x: 2384,
         y: 692,
         opacity: 0,
+        link: 'threejs',
       },
       {
-        name: "avocado",
+        name: "avocado-r",
         image: null,
         x: 2750,
         y: 933,
         opacity: 0,
+        link: 'timeline',
       },
       {
-        name: "pc",
+        name: "pc-r",
         image: null,
         x: 1602,
         y: 1155,
         opacity: 0,
+        link: 'projects',
       },
       {
-        name: "backpack",
+        name: "backpack-r",
         image: null,
         x: 1602,
         y: 967,
         opacity: 0,
+        link: 'css',
       },
       {
-        name: "sink",
+        name: "sink-r",
         image: null,
         x: 911,
         y: 899,
         opacity: 0,
+        link: 'canvas',
       },
       {
-        name: "stove",
+        name: "stove-r",
         image: null,
         x: 1107,
         y: 839,
         opacity: 0,
+        link: 'gallery',
       },
     ],
     imgLeft: [
       {
-        name: "pole",
+        name: "pole-l",
         image: null,
         x: 3018,
         y: 380,
         opacity: 0,
+        link: 'threejs',
       },
       {
-        name: "avocado",
+        name: "avocado-l",
         image: null,
         x: 2244,
         y: 654,
         opacity: 0,
+        link: 'timeline',
       },
       {
-        name: "pc",
+        name: "pc-l",
         image: null,
         x: 2306,
         y: 916,
         opacity: 0,
+        link: 'projects',
       },
       {
-        name: "backpack",
+        name: "backpack-l",
         image: null,
         x: 1528,
         y: 916,
         opacity: 0,
+        link: 'css',
       },
       {
-        name: "sink",
+        name: "sink-l",
         image: null,
         x: 804,
         y: 1297,
         opacity: 0,
+        link: 'canvas',
       },
       {
-        name: "stove",
+        name: "stove-l",
         image: null,
         x: 723,
         y: 1140,
         opacity: 0,
+        link: 'gallery',
       },
     ],
     selection: {},
@@ -185,6 +197,7 @@ export default Vue.extend({
   },
   mounted() {
     this.stage = this.$refs.stage.getStage();
+    this.stage.position({ x: -900, y: -800 });
     this.$refs.mapContainer.style.cursor = "grab";
     this.updateCanvas();
   },
@@ -207,33 +220,24 @@ export default Vue.extend({
         this.mapR.image = this.mapR.temp;
       };
 
-      this.imgRight.forEach((item) => {
-        item.temp = new window.Image();
-        item.temp.src = this.getZapp(`img/dollhouse/${item.name}-r.webp`);
-        item.temp.onload = () => {
-          item.image = item.temp;
-        };
-      });
-
       this.mapL.temp = new window.Image();
       this.mapL.temp.src = this.getZapp(`img/dollhouse/dollhouse-l.webp`);
       this.mapL.temp.onload = () => {
         this.mapL.image = this.mapL.temp;
       };
 
-      this.imgLeft.forEach((item) => {
+      this.img = [...this.imgRight, ...this.imgLeft];
+
+      this.img.forEach((item) => {
         item.temp = new window.Image();
-        item.temp.src = this.getZapp(`img/dollhouse/${item.name}-l.webp`);
+        item.temp.src = this.getZapp(`img/dollhouse/${item.name}.webp`);
         item.temp.onload = () => {
           item.image = item.temp;
         };
       });
-
-      this.img = [...this.imgRight, this.imgLeft];
     },
-    openModal(filter) {
-      this.modal.data = locationsDBList.find((item) => item.client === filter);
-      this.modal.hidden = false;
+    navigateTo(link){
+      this.$router.push({ name: link });
     },
     updateCanvas: function () {
       let margin = this.panel ? this.panelSize : 0;

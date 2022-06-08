@@ -6,9 +6,6 @@ import DefaultPanelView from '../views/default-panel.vue';
 import DollhouseWorkareaView from '../views/dollhouse-workarea.vue';
 import DollhousePanelView from '../views/dollhouse-panel.vue';
 
-import StargazeWorkareaView from '../views/stargaze-workarea.vue';
-import StargazePanelView from '../views/stargaze-panel.vue';
-
 import ResumeWorkareaView from '../views/resume-workarea.vue';
 
 import CanvasRouter from '../router/canvas';
@@ -32,14 +29,6 @@ const routes = [
     components: {
       workarea: DollhouseWorkareaView,
       panel: DollhousePanelView,
-    },
-  },
-  {
-    name: 'stargazer',
-    path: '/stargazer',
-    components: {
-      workarea: StargazeWorkareaView,
-      panel: StargazePanelView,
     },
   },
   {
