@@ -45,6 +45,9 @@ export default Vue.extend({
     sound: {},
     getZapp,
   }),
+  beforeDestroy() {
+    this.stopAllsounds();
+  },
   created() {
     this.database.forEach((item) => {
       this.sound[item] = new Audio(getZapp(`audio/fakeaudience/${item}.mp3`));
@@ -52,11 +55,14 @@ export default Vue.extend({
   },
   methods: {
     playAudio(file) {
-      Object.values(this.sound).forEach(item => {
+      this.stopAllsounds();
+      this.sound[file].play();
+    },
+    stopAllsounds() {
+      Object.values(this.sound).forEach((item) => {
         item.pause();
         item.currentTime = 0;
-      })
-      this.sound[file].play();
+      });
     },
   },
 });
