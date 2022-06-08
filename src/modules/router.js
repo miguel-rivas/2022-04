@@ -7,7 +7,6 @@ import StargazeWorkareaView from '../views/stargaze-workarea.vue';
 import StargazePanelView from '../views/stargaze-panel.vue';
 
 import ResumeWorkareaView from '../views/resume-workarea.vue';
-import SoundboardWorkareaView from '../views/soundboard-workarea.vue';
 
 import CanvasRouter from '../router/canvas';
 import CssRouter from '../router/css';
@@ -37,14 +36,6 @@ const routes = [
     path: '/resume',
     components: {
       workarea: ResumeWorkareaView,
-      panel: DefaultPanelView,
-    },
-  },
-  {
-    name: 'fake-audience',
-    path: '/fake-audience',
-    components: {
-      workarea: SoundboardWorkareaView,
       panel: DefaultPanelView,
     },
   },

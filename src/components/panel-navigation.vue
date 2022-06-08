@@ -148,7 +148,7 @@ export default Vue.extend({
       {
         tooltip: i18n.t("galleries.navTitle"),
         icon: "collections",
-        route: ["gallery", "images", "videos"],
+        route: ["gallery", "images", "videos", "fake-audience"],
       },
       {
         tooltip: i18n.t("ui.navTitle"),
@@ -200,11 +200,6 @@ export default Vue.extend({
         tooltip: i18n.t("css.navTitle"),
         icon: "css3",
         route: ["css", "house", "pills", "minivan", "window"],
-      },
-      {
-        tooltip: "Fake Audience",
-        icon: "moon",
-        route: ["fake-audience"],
       },
     ],
     playSound,

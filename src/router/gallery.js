@@ -6,6 +6,7 @@ import NestedPanelView from '../views/nested-panel.vue';
 import Projects3DWorkareaView from '../views/images-workarea.vue';
 import Projects3DPanelView from '../views/images-panel.vue';
 import ProjectsVideoWorkareaView from '../views/video-workarea.vue';
+import SoundboardWorkareaView from '../views/soundboard-workarea.vue';
 
 export default {
   name: 'gallery',
@@ -36,6 +37,11 @@ export default {
               name: ["videos"],
               icon: "movie",
             },
+            {
+              text: 'galleries.section.fake-audience.title',
+              name: ['fake-audience'],
+              icon: "moon",
+            },
           ])
         }
       },
@@ -56,6 +62,13 @@ export default {
       path: '/videos',
       components: {
         workarea2: ProjectsVideoWorkareaView,
+      },
+    },
+    {
+      path: '/fake-audience',
+      name: 'fake-audience',
+      components: {
+        workarea2: SoundboardWorkareaView,
       },
     },
   ],

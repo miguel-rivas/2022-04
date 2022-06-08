@@ -78,6 +78,9 @@
       },
       "videos": {
         "title": "Videos"
+      },
+      "fake-audience": {
+        "title": "Fake Audience"
       }
     }
   },
