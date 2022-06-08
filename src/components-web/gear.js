@@ -1,4 +1,4 @@
-import { createNode } from "nano-grid/modules/helpers";
+import { createNode } from "nano-grid-extended/modules/helpers";
 export default class Gear extends HTMLElement {
   constructor() {
     super();

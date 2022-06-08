@@ -5,9 +5,10 @@ const user = {
   "title": "Frontend Developer",
   "website": "miguel-rivas.github.io",
   "email": "miguel.portfolio.gi7pt@simplelogin.fr",
+  "phone": "2029830839",
   "location": {
-    "city": "Washington",
-    "state": "DC"
+    "city": "Chicago",
+    "state": "IL"
   },
   "media": {
     "codepen": {

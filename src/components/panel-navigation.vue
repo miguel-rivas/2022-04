@@ -135,6 +135,11 @@ export default Vue.extend({
         icon: "monster",
         route: ["stargazer"],
       },
+      // {
+      //   tooltip: "Resume",
+      //   icon: "person",
+      //   route: ["resume"],
+      // },
       {
         tooltip: i18n.t("projects.navTitle"),
         icon: "duck",
@@ -148,7 +153,7 @@ export default Vue.extend({
       {
         tooltip: i18n.t("ui.navTitle"),
         icon: "color",
-        route: ["ui", "colors", "icons", "grid", "grid-gallery"],
+        route: ["ui", "colors", "icons"],
       },
       {
         tooltip: i18n.t("timeline.navTitle"),

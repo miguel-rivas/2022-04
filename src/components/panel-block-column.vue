@@ -68,7 +68,7 @@
                   type="range"
                   min="0"
                   class="cobalt-blue"
-                  :max="cssSizesWidth.length - 1"
+                  :max="cssWClass.length - 1"
                   step="1"
                   v-model="selection.columns[index].width"
                 />
@@ -134,7 +134,7 @@
                 type="range"
                 min="0"
                 class="cobalt-blue"
-                :max="cssSizesHeight.length - 1"
+                :max="cssHClass.length - 1"
                 step="1"
                 v-model="selection.columns[index].height"
               />
@@ -192,7 +192,7 @@ export default Vue.extend({
     absoluteWidth: function () {
       this.selection.columns[this.index].width = this.absoluteWidth
         ? 300
-        : this.cssSizesWidth.length - 1;
+        : this.cssWClass.length - 1;
       this.selection.columns[this.index].subtraction = 0;
     },
     absoluteHeight: function () {

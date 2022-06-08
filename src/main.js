@@ -8,6 +8,7 @@ import "@/modules/tooltip";
 import "@/modules/nano";
 import VueKonva from "vue-konva";
 import 'nano-grid/components';
+import 'nano-grid-extended/components';
 import { getZapp } from "./modules/helpers";
 
 //-- db
@@ -23,18 +24,6 @@ const globalManager = {
   },
 }
 Vue.use(globalManager);
-
-// ---------------- Selection
-
-store.commit("addColumn",
-  {
-    absoluteWidth: false,
-    absoluteHeight: false,
-    width: 0,
-    height: 0,
-    subtraction: 100,
-  }
-);
 
 Vue.use(VueKonva);
 Vue.config.productionTip = false;

@@ -4,7 +4,6 @@ import Vuex from 'vuex';
 import { modalState } from '../store/modal';
 import { avatarState } from '../store/avatar';
 import { threeState } from '../store/three';
-import { gridState } from '../store/grid';
 import { gearState } from '../store/gear';
 import { pixelState } from '../store/pixel';
 
@@ -22,7 +21,6 @@ export const store = new Vuex.Store({
     modalState,
     selection: {
       threeState,
-      gridState,
       gearState,
       avatarState,
       pixelState,
@@ -60,13 +58,6 @@ export const store = new Vuex.Store({
     toggleValue(state, payload) {
       state[payload] = !state[payload];
     },
-    addColumn(state, payload) {
-      state.selection.gridState.columns.push(payload);
-    },
-    removeColumn(state, index) {
-      state.selection.gridState.columns.splice(index, 1);
-    },
-
     setTheme(state, payload) {
       state.selection.timeline[payload.name] = payload.value;
     },
@@ -88,7 +79,6 @@ export const store = new Vuex.Store({
     getAlert: state => state.alert,
     getModal: state => state.modalState,
     getStargazeSelection: state => state.selection.stargaze,
-    getGridSelection: state => state.selection.gridState,
     getGearSelection: state => state.selection.gearState,
     getWheelSelection: state => state.selection.wheel,
     getLocationSelection: state => state.selection.locations,
