@@ -24,6 +24,13 @@ export const store = new Vuex.Store({
       gearState,
       avatarState,
       pixelState,
+      dollhouse: {
+        viewSide: 'left',
+        mapCenter: {
+          x: 0,
+          y: 0,
+        },
+      },
       locations: {
         mapCenter: {
           x: 0,
@@ -68,6 +75,13 @@ export const store = new Vuex.Store({
         state.selection.timeline[payload.name] = payload.alt;
       }
     },
+    toggleViewSide(state) {
+      if(state.selection.dollhouse.viewSide === 'right'){
+        state.selection.dollhouse.viewSide = 'left';
+      } else {
+        state.selection.dollhouse.viewSide = 'right';
+      }
+    },
   },
   getters: {
     getGridSize: state => state.selection.pixelState.gridSize,
@@ -88,6 +102,8 @@ export const store = new Vuex.Store({
     getAvatarSelection: state => state.selection.avatarState,
     getPixelSelection: state => state.selection.pixelState,
     getPixelGridSelection: state => state.selection.pixelState.pixelGrid,
+    getDollHouseSelection: state => state.selection.dollhouse,
+    getDollHouseViewSide: state => state.selection.dollhouse.viewSide,
     getLock: state => state.selection.pixelState.lock,
   }
 });

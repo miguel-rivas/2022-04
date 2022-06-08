@@ -133,7 +133,7 @@ export default Vue.extend({
       {
         tooltip: i18n.t("stargaze.navTitle"),
         icon: "monster",
-        route: ["stargazer"],
+        route: ["dollhouse"],
       },
       // {
       //   tooltip: "Resume",

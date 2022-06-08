@@ -3,6 +3,9 @@ import VueRouter from 'vue-router';
 
 import DefaultPanelView from '../views/default-panel.vue';
 
+import DollhouseWorkareaView from '../views/dollhouse-workarea.vue';
+import DollhousePanelView from '../views/dollhouse-panel.vue';
+
 import StargazeWorkareaView from '../views/stargaze-workarea.vue';
 import StargazePanelView from '../views/stargaze-panel.vue';
 
@@ -22,6 +25,14 @@ const routes = [
   {
     path: '/',
     redirect: '/stargazer',
+  },
+  {
+    name: 'dollhouse',
+    path: '/dollhouse',
+    components: {
+      workarea: DollhouseWorkareaView,
+      panel: DollhousePanelView,
+    },
   },
   {
     name: 'stargazer',
