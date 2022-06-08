@@ -3,7 +3,7 @@
     <div class="capsule">
       <nn-row class="row-block">
         <nn-column size="100%">
-          <legend>Controllers</legend>
+          <legend>{{ $t(`dollhouse.panel.controller.legend`) }}</legend>
           <nn-row>
             <nn-column size="100%">
               <nn-row>
@@ -17,7 +17,7 @@
                 <nn-column size="100%-35">
                   <btn
                     color="gold-tips"
-                    text="Rotate"
+                    :text="$t(`dollhouse.panel.controller.rotate`)"
                     @click="$store.commit('toggleViewSide')"
                   />
                 </nn-column>

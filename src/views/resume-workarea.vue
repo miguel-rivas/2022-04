@@ -7,7 +7,7 @@
       </header>
 
       <section class="column left">
-        <h3>Contact</h3>
+        <h3>{{ $t(`resume.contact`) }}</h3>
 
         <address>
           <dl>
@@ -28,27 +28,25 @@
           </dl>
         </address>
 
-        <h3>Skills</h3>
+        <h3>{{ $t(`resume.skills`) }}</h3>
 
         <ul>
           <template v-for="(skill, pIndex) in skills">
-            <li :key="skill + pIndex">
-              {{ skill }}
-            </li>
+            <li :key="skill + pIndex" v-html="skill" />
           </template>
         </ul>
       </section>
 
       <section class="column right">
-        <h3>Experience</h3>
+        <h3>{{ $t(`resume.experience`) }}</h3>
 
         <template v-for="(location, index) in locations">
           <article :key="location + index">
             <h4 v-html="$t(`canvas.section.map.modal.${location}.title`)" />
             <h5 v-html="$t(`canvas.section.map.modal.${location}.position`)" />
-            <!-- <h6>
-              <time v-html="location.date" />
-            </h6> -->
+            <h6>
+              <time v-html="dates[location]" />
+            </h6>
             <ul>
               <template
                 v-for="(p, pIndex) in $t(
@@ -61,15 +59,15 @@
           </article>
         </template>
 
-        <h3>Education</h3>
+        <h3>{{ $t(`resume.education`) }}</h3>
 
         <template v-for="(location, index) in education">
           <article :key="location + index">
             <h4 v-html="$t(`canvas.section.map.modal.${location}.title`)" />
             <h5 v-html="$t(`canvas.section.map.modal.${location}.position`)" />
-            <!-- <h6>
-              <time v-html="location.date" />
-            </h6> -->
+            <h6>
+              <time v-html="dates[location]" />
+            </h6>
             <ul>
               <template
                 v-for="(p, pIndex) in $t(
@@ -88,25 +86,33 @@
 
 <script>
 import Vue from "vue";
-import { locationsDBList } from "../modules/format-db";
 import { user } from "../db/user";
 import { tool } from "../enums/tools";
 
-const separator = "------------------------------------------";
+const separator = "";
 
 export default Vue.extend({
   components: {},
   data: () => ({
-    locationsDBList,
     locations: [
       "enovational",
       "plantTherapy",
       "pixel",
       "capital",
       "avante",
-      "social",
+      // "social",
       "several",
     ],
+    dates: {
+      enovational: "2018/04/01",
+      plantTherapy: "2017/07/01",
+      pixel: "2016/01/01",
+      capital: "2014/05/01",
+      avante: "2013/07/05",
+      social: "2013/05/01",
+      several: "2013/01/01",
+      itla: "2009/09/01",
+    },
     education: ["itla"],
     user,
     skills: [
@@ -131,7 +137,7 @@ export default Vue.extend({
       tool.rails,
       separator,
       tool.grunt,
-      tool.grunt,
+      tool.gulp,
       tool.webpack,
       separator,
       tool.bootstrap,

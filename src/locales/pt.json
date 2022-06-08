@@ -17,6 +17,21 @@
       "graphicDesign": "Design Gráfico"
     }
   },
+  "resume": {
+    "contact": "Contato",
+    "skills": "Habilidades",
+    "experience": "Experiência",
+    "education": "Educação"
+  },
+  "dollhouse": {
+    "navTitle": "Casa de Bonecas",
+    "panel": {
+      "controller": {
+        "legend": "Controladores",
+        "rotate": "Girar"
+      }
+    }
+  },
   "stargaze": {
     "navTitle": "Observador de Estrelas",
     "panel": {
@@ -208,7 +223,7 @@
             ]
           },
           "itla": {
-            "title": "ITLA",
+            "title": "Instituto Tecnologico de las Americas",
             "position": "Tecnólogo em Multimedia",
             "summary": [
               "Ilustração digital",

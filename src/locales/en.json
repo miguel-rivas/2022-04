@@ -17,15 +17,19 @@
       "graphicDesign": "Graphic Design"
     }
   },
+  "resume": {
+    "contact": "Contact",
+    "skills": "Skills",
+    "experience": "Experience",
+    "education": "Education"
+  },
   "dollhouse": {
     "navTitle": "Doll House",
     "panel": {
       "controller": {
+        "legend": "Controllers",
         "rotate": "Rotate"
       }
-    },
-    "workarea": {
-      "footer": "Built with&nbsp;<strong><a href='https://vuejs.org/'>Vue.js&nbsp;</a></strong>"
     }
   },
   "stargaze": {
@@ -219,7 +223,7 @@
             ]
           },
           "itla": {
-            "title": "ITLA",
+            "title": "Instituto Tecnologico de las Americas",
             "position": "Asociates of Art, Multimedia",
             "summary": [
               "Digital Illustration",

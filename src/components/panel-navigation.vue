@@ -135,11 +135,11 @@ export default Vue.extend({
         icon: "monster",
         route: ["dollhouse"],
       },
-      // {
-      //   tooltip: "Resume",
-      //   icon: "person",
-      //   route: ["resume"],
-      // },
+      {
+        tooltip: "Resume",
+        icon: "person",
+        route: ["resume"],
+      },
       {
         tooltip: i18n.t("projects.navTitle"),
         icon: "duck",

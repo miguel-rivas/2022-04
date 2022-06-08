@@ -1,0 +1,149 @@
+.section-resume {
+  a {
+    text-decoration: none;
+    color: var(--color-foreground);
+    &:hover {
+      text-decoration: dotted;
+      color: var(--color-title);
+      border-bottom: 1px dotted var(--color-title);
+    }
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 0.25rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 0;
+  }
+
+  h3 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    border-bottom: 1px dotted var(--color-foreground);
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    color: var(--color-legend);
+  }
+
+  h4 {
+    color: var(--color-label);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  h5 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  h6 {
+    font-size: 0.65rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+  }
+
+  dl {
+    margin-bottom: 2rem;
+    dt {
+      display: none;
+    }
+    dd {
+      margin: 0;
+      text-transform: uppercase;
+      font-style: normal;
+      margin: 0 0 0.5rem;
+    }
+  }
+
+  ul {
+    padding-inline-start: 1rem;
+  }
+
+  dt,
+  dd,
+  li {
+    font-size: 0.75rem;
+  }
+
+  header {
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px dotted var(--color-foreground);
+  }
+
+  .column {
+    display: inline-block;
+    vertical-align: top;
+
+    &.left {
+      width: 40%;
+      padding-right: 2rem;
+
+      li {
+        text-transform: uppercase;
+
+        &:empty {
+          border-bottom: 1px dashed var(--color-foreground);
+          list-style: none;
+          margin-block: 1rem;
+          margin-inline-start: -1rem;
+        }
+      }
+    }
+
+    &.right {
+      width: 60%;
+      padding-left: 1rem;
+      border-left: 1px dotted var(--color-foreground);
+
+      article {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+@media print {
+  body {
+    overflow: auto;
+    .nano-app {
+      > .main-panel,
+      > .panel,
+      > .panel-bar {
+        display: none;
+      }
+      > .workarea {
+        width: 100%;
+        flex-basis: 100%;
+        max-width: 100%;
+        background-color: transparent;
+
+        > nn-scroll-area {
+          overflow: auto;
+          max-height: none;
+
+          // > nn-container {
+          //   width: 100%;
+          //   max-width: 100%;
+          // }
+        }
+      }
+    }
+  }
+
+  @page {
+    size: 8.5in 14in;
+    margin: 5mm;
+  }
+}
