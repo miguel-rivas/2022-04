@@ -7,7 +7,7 @@ header {
 		padding-block: 0;
 	}
 
-	nn-row {
+	#{wc("row")} {
 		height: 800px;
 		align-items: center;
 		margin-bottom: 0;
@@ -38,7 +38,7 @@ header {
 		max-width: 100%;
 	}
 
-	.btn {
+	.#{$nano}btn {
 		width: auto;
 		padding-inline: 1rem;
 	}

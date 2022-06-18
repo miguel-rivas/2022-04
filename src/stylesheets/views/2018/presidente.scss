@@ -24,18 +24,18 @@
 		margin-bottom: 120px;
 		.beer {
 			position: absolute;
-	
+
 			&.big {
 				animation: floating linear 1s infinite alternate;
 				bottom: -320px;
 				right: 250px;
 				transform: rotate(17deg);
-	
+
 				@media (max-width: $SmallScreen) {
 					display: none;
 				}
 			}
-	
+
 			&.small {
 				animation: floating_small linear 1200ms infinite alternate;
 				width: 70px;
@@ -94,7 +94,7 @@
 					padding: 10px 0;
 				}
 
-				nn-column {
+				#{wc("column")} {
 					border-left: 1px solid #000;
 					&:first-child {
 						border-width: 0;

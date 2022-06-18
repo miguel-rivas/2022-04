@@ -15,19 +15,19 @@
 
       nn-row
         nn-column(size="100%")
-          label.btn.flat.charcoal(:class="{ active: selection.grid }")
+          label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.grid }")
             | {{ $t('three.panel.controller.grid') }}
             input(type="checkbox", v-model="selection.grid")
 
       nn-row
         nn-column(size="100%")
-          label.btn.flat.charcoal(:class="{ active: selection.pause }")
+          label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.pause }")
             | {{ $t('three.panel.controller.pause') }}
             input(type="checkbox", v-model="selection.pause")
 
       nn-row
         nn-column(size="100%")
-          label.btn.flat.charcoal(:class="{ active: selection.lines }")
+          label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.lines }")
             | {{ $t('three.panel.controller.lines') }}
             input(type="checkbox", v-model="selection.lines")
 </template>

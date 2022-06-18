@@ -35,7 +35,10 @@
 
       <nn-row>
         <nn-column size="100%">
-          <label class="btn flat charcoal" :class="{ active: absoluteWidth }">
+          <label
+            class="nn-btn nn-flat nn-charcoal"
+            :class="{ 'nn-active': absoluteWidth }"
+          >
             {{ $t("ui.section.gridBuilder.panel.columnStyle.absoluteWidth") }}
             <input type="checkbox" v-model="absoluteWidth" />
           </label>
@@ -67,7 +70,7 @@
                   :id="`id-${name}-width`"
                   type="range"
                   min="0"
-                  class="cobalt-blue"
+                  class="nn-range nn-cobalt-blue"
                   :max="cssWClass.length - 1"
                   step="1"
                   v-model="selection.columns[index].width"
@@ -102,7 +105,10 @@
 
       <nn-row>
         <nn-column size="100%">
-          <label class="btn flat charcoal" :class="{ active: absoluteHeight }">
+          <label
+            class="nn-btn nn-flat nn-charcoal"
+            :class="{ 'nn-active': absoluteHeight }"
+          >
             {{ $t("ui.section.gridBuilder.panel.columnStyle.absoluteHeight") }}
             <input type="checkbox" v-model="absoluteHeight" />
           </label>
@@ -133,7 +139,7 @@
                 :id="`id-${name}-height`"
                 type="range"
                 min="0"
-                class="cobalt-blue"
+                class="nn-range nn-cobalt-blue"
                 :max="cssHClass.length - 1"
                 step="1"
                 v-model="selection.columns[index].height"

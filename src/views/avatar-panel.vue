@@ -215,19 +215,19 @@
 
       nn-row
         nn-column(size="100%")
-          label.btn.flat.charcoal(:class="{ active: selection.topHair }")
+          label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.topHair }")
             | {{ $t('canvas.section.avatar.panel.face.topHair') }}
             input(type="checkbox", v-model="selection.topHair")
 
       nn-row
         nn-column(size="100%")
-          label.btn.flat.charcoal(:class="{ active: selection.sideHair }")
+          label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.sideHair }")
             | {{ $t('canvas.section.avatar.panel.face.sideHair') }}
             input(type="checkbox", v-model="selection.sideHair")
 
       nn-row
         nn-column(size="100%")
-          label.btn.flat.charcoal(:class="{ active: selection.beard }")
+          label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.beard }")
             | {{ $t('canvas.section.avatar.panel.face.beard') }}
             input(type="checkbox", v-model="selection.beard")
 
@@ -294,23 +294,23 @@
 
       nn-row
         nn-column(size="100%")
-          label.btn.flat.charcoal(:class="{ active: selection.shirt }")
+          label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.shirt }")
             | {{ $t('canvas.section.avatar.panel.shirt.shirt') }}
             input(type="checkbox", v-model="selection.shirt")
 
       nn-row
         nn-column(size="50%")
-          label.btn.flat.charcoal(:class="{ active: selection.leftPocket }")
+          label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.leftPocket }")
             | {{ $t('canvas.section.avatar.panel.shirt.lPockect') }}
             input(type="checkbox", v-model="selection.leftPocket")
         nn-column(size="50%")
-          label.btn.flat.charcoal(:class="{ active: selection.rightPocket }")
+          label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.rightPocket }")
             | {{ $t('canvas.section.avatar.panel.shirt.rPockect') }}
             input(type="checkbox", v-model="selection.rightPocket")
 
       nn-row
         nn-column(size="100%")
-          label.btn.flat.charcoal(:class="{ active: selection.buttons }")
+          label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.buttons }")
             | {{ $t('canvas.section.avatar.panel.shirt.buttons') }}
             input(type="checkbox", v-model="selection.buttons")
 
@@ -374,13 +374,13 @@
 
       nn-row
         nn-column(size="100%")
-          label.btn.flat.charcoal(:class="{ active: selection.pants }")
+          label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.pants }")
             | {{ $t('canvas.section.avatar.panel.pants.pants') }}
             input(type="checkbox", v-model="selection.pants")
 
       nn-row
         nn-column(size="100%")
-          label.btn.flat.charcoal(:class="{ active: selection.belt }")
+          label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.belt }")
             | {{ $t('canvas.section.avatar.panel.pants.belt') }}
             input(type="checkbox", v-model="selection.belt")
 
@@ -444,7 +444,7 @@
 
       nn-row
         nn-column(size="100%")
-          label.btn.flat.charcoal(:class="{ active: selection.shoes }")
+          label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.shoes }")
             | {{ $t('canvas.section.avatar.panel.shoes.shoes') }}
             input(type="checkbox", v-model="selection.shoes")
 

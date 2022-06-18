@@ -10,7 +10,6 @@ import P2014ContactView from '../views/2014-workarea-contact.vue';
 import P2014WorkareaView from '../views/2014-workarea.vue';
 import P2014PanelView from '../views/2014-panel.vue';
 
-import P2022PanelView from '../views/2022-panel.vue';
 
 import P2016WorkareaView from '../views/2016-workarea.vue';
 import P2016PanelView from '../views/2016-panel.vue';
@@ -23,7 +22,9 @@ import P2018PresidenteView from '../views/2018-workarea-presidente.vue';
 
 import P2018WorkareaView from '../views/2018-workarea.vue';
 import P2018PanelView from '../views/2018-panel.vue';
-import StargazerWorkareaView from '../views/stargaze-workarea.vue';
+
+import P2022WorkareaView from '../views/stargaze-workarea.vue';
+import P2022PanelView from '../views/stargaze-panel.vue';
 
 export default {
   name: 'timeline',
@@ -160,7 +161,7 @@ export default {
       name: '2022',
       path: '/2022',
       components: {
-        workarea2: StargazerWorkareaView,
+        workarea2: P2022WorkareaView,
         panel2: P2022PanelView,
       },
     },

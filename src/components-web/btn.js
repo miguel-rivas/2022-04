@@ -1,4 +1,4 @@
-import { createNode, prepairClasses } from "../modules/helpers";
+import { createNode, prepairClasses, nano } from "../modules/helpers";
 
 export default class Btn extends HTMLElement {
   constructor() {
@@ -6,19 +6,19 @@ export default class Btn extends HTMLElement {
   }
 
   connectedCallback() {
-    const color = this.hasAttribute('color') ? this.getAttribute('color') : '';
-    const glyph = this.hasAttribute('glyph') ? this.getAttribute('glyph') : undefined;
-    const direction = this.hasAttribute('direction') ? this.getAttribute('direction') : 'down';
-    const active = this.hasAttribute('active') && this.getAttribute('active') !== 'false' ? 'active' : '';
-    const mode = this.hasAttribute('mode') ? this.getAttribute('mode') : 'flat';
-    const size = this.hasAttribute('size') ? this.getAttribute('size') : '';
+    const color = this.hasAttribute('color') ? nano + this.getAttribute('color') : '';
+    const glyph = this.hasAttribute('glyph') ? nano + this.getAttribute('glyph') : undefined;
+    const direction = this.hasAttribute('direction') ? nano + this.getAttribute('direction') : nano + 'down';
+    const active = this.hasAttribute('active') && this.getAttribute('active') !== 'false' ? nano + 'active' : '';
+    const mode = this.hasAttribute('mode') ? nano + this.getAttribute('mode') : nano + 'flat';
+    const size = this.hasAttribute('size') ? nano + this.getAttribute('size') : '';
     const text = this.getAttribute('text');
 
     let btnAttr = [
       {
         name: 'class',
         value: prepairClasses([
-          'btn',
+          nano + 'btn',
           color,
           active,
           mode,

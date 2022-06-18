@@ -13,20 +13,20 @@ main.vue-theme {
   // --color-panel-background: hsl(0deg 0% 15%);
   --color-panel-background: hsl(244deg 15% 16%);
 
-  &.nano-light {
+  &.nn-light {
     --color-title: var(--color-3);
     --color-legend: var(--color-3);
     --color-label: var(--color-6);
   }
 
-  &.nano-dark {
+  &.nn-dark {
     --title-shadow: 0 0 9px var(--color-2);
     --color-title: var(--color-2);
     --color-legend: var(--color-2);
     --color-label: var(--color-1);
   }
 
-  .btn.flat.active:not(.panel-ctrl) {
+  .#{$nano}btn.#{$nano}flat.#{$nano}active:not(.panel-ctrl) {
     background-color: var(--color-2) !important;
     box-shadow: 0px 3px 0 var(--color-3) !important;
     color: var(--color-4) !important;

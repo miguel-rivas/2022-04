@@ -3,7 +3,8 @@
   padding: 0;
   margin: 0;
 
-  li, li > nn-row {
+  li,
+  li > nn-row {
     display: inline-flex;
     min-width: 250px + 16 * 2;
   }
@@ -56,7 +57,7 @@
   }
 
   &.icon-item {
-    nn-column:first-child {
+    #{wc("column", "", ":first-child")} {
       display: flex;
       align-items: center;
       justify-content: center;

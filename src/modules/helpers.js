@@ -3,6 +3,8 @@ import { icons } from "../db/icons";
 
 const initialDate = { years: 1990, months: 5, days: 5, hours: 13, };
 
+export const nano = "nn-";
+
 export const getID = (client, date) => {
   client = client.replace(/[\s./]/g, "").toLowerCase();
   date = date.replace(/\//g, "");

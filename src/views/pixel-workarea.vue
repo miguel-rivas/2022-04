@@ -240,22 +240,6 @@ export default Vue.extend({
         y.map((x) => allColors[wikiColor[hexToDec(x)]])
       );
     },
-    saveImg() {
-      // // console.log(this.stage.find("#controllers")[0].attrs);
-      // this.stage.find("#controllers")[0].attrs.opacity = 0;
-      // function downloadURI(uri, name) {
-      //   let link = document.createElement("a");
-      //   link.download = name;
-      //   link.href = uri;
-      //   document.body.appendChild(link);
-      //   link.click();
-      //   document.body.removeChild(link);
-      //   // delete link;
-      // }
-      // const dataURL = this.stage.toDataURL({ pixelRatio: 3 });
-      // downloadURI(dataURL, "stage.webp");
-      // // this.stage.find("#controllers").opacity = 1;
-    },
     mouseOverPixel(event) {
       event.target.opacity(0.2);
     },

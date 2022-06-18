@@ -20,7 +20,7 @@
         nn-column(size="35")
           btn(glyph="open", color="burn-orange", @click="openImage()")
         nn-column(size="100%-35")
-          label.btn.flat.gold-tips
+          label.nn-btn.nn-flat.nn-gold-tips
             | {{ $t('canvas.section.pixelEditor.panel.general.open') }}
             input(
               type="file",
@@ -112,11 +112,11 @@
     nn-column(size="100%")
       legend {{ $t('canvas.section.pixelEditor.panel.palette.legend') }}
 
-      nn-row.list-palette(group, integrated)
+      nn-row.list-palette(group)
         nn-column(size="100%-40")
-          p.input-label {{ selection.currentColor.titleCase }}
+          p.nn-label {{ selection.currentColor.titleCase }}
         nn-column(size="40")
-          span.shade(
+          span.shade.nn-label(
             :style="`background-color: ${selection.currentColor.rgb}`"
           )
 
@@ -131,7 +131,8 @@
                 button.shade(
                   @click="changeColor(color)",
                   :style="`background-color: ${color.rgb}`",
-                  v-nano-tooltip.right="color.titleCase"
+                  :title="color.titleCase",
+                  :area-label="color.titleCase"
                 )
 
             nn-column(size="100%"): hr
@@ -146,7 +147,8 @@
                       button.shade(
                         @click="changeColor(color)",
                         :style="`background-color: ${color.rgb}`",
-                        v-nano-tooltip.right="color.titleCase"
+                        :title="color.titleCase",
+                        :area-label="color.titleCase"
                       )
 </template>
 
@@ -208,11 +210,6 @@ export default Vue.extend({
         y.map((x) => allColors.empty)
       );
       this.selection.pixelGrid = newMatrix;
-    },
-    saveImage() {
-      // stage.toDataURL({
-      //   pixelRatio: 2 // or other value you need
-      // })
     },
     saveJson() {
       const arr = this.selection.pixelGrid.map((y) =>

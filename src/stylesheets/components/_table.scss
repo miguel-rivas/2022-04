@@ -30,7 +30,7 @@
 .table {
   > .table-head,
   > .table-body {
-    > nn-row {
+    #{wc("row", ">")} {
       &:last-child {
         margin-bottom: 0;
       }
@@ -38,8 +38,8 @@
   }
 
   > .table-head {
-    > nn-row {
-      > nn-column {
+    #{wc("row", ">")} {
+      #{wc("column", ">")} {
         text-transform: uppercase;
         font-weight: 300;
         padding: 0.25rem 1rem;
@@ -48,15 +48,15 @@
     }
   }
   > .table-body {
-    > nn-row {
+    #{wc("row", ">")} {
       background-color: var(--color-table-background);
       transition: background-color ease-in-out 200ms;
       &:hover {
         background-color: var(--color-table-background-hover);
       }
-      > nn-column {
+      #{wc("column", ">")} {
         padding: 0.5rem 1rem;
-        
+
         &.controllers {
           padding: 0 0 2px 0;
         }

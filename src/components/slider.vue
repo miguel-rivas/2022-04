@@ -4,16 +4,16 @@ nn-row
     label(:for="$attrs.id", v-html="label")
   nn-column(size="100%")
     nn-row.nano-slider(group, integrated)
-      nn-column(size="100%-40")
+      nn-column(size="100%-60")
         input(
-          :class="color",
+          :class="'nn-range ' + inputColor",
           v-bind="$attrs",
           type="range",
           v-model="val",
           @change="updateValue()"
         )
-      nn-column(size="40")
-        input(
+      nn-column(size="60")
+        input.nn-input(
           type="number",
           :min="$attrs.min",
           :max="$attrs.max",
@@ -43,6 +43,11 @@ export default Vue.extend({
   data: () => ({
     val: 0,
   }),
+  computed: {
+    inputColor(){
+      return "nn-" + this.color;
+    }
+  },
   methods: {
     updateValue() {
       this.$emit("update-value", this.val);

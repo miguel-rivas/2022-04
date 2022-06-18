@@ -9,8 +9,8 @@
           ul.summary
             li: nn-row
               nn-column(size="100%")
-                label.btn.flat.charcoal(
-                  :class="{ active: selection.filterData == 'companies' }"
+                label.nn-btn.nn-flat.nn-charcoal(
+                  :class="{ 'nn-active': selection.filterData == 'companies' }"
                 )
                   | {{ $t('projects.section.list.panel.filter.companies') }}
                   input(
@@ -22,8 +22,8 @@
 
             li: nn-row
               nn-column(size="100%")
-                label.btn.flat.charcoal(
-                  :class="{ active: selection.filterData == 'experiments' }"
+                label.nn-btn.nn-flat.nn-charcoal(
+                  :class="{ 'nn-active': selection.filterData == 'experiments' }"
                 )
                   | {{ $t('projects.section.list.panel.filter.experiments') }}
                   input(
@@ -35,8 +35,8 @@
 
             li: nn-row
               nn-column(size="100%")
-                label.btn.flat.charcoal(
-                  :class="{ active: selection.filterData == 'homework' }"
+                label.nn-btn.nn-flat.nn-charcoal(
+                  :class="{ 'nn-active': selection.filterData == 'homework' }"
                 )
                   | {{ $t('projects.section.list.panel.filter.homework') }}
                   input(
@@ -48,7 +48,7 @@
 
             li: nn-row
               nn-column(size="100%")
-                label.btn.flat.charcoal(:class="{ active: selection.filterData == 'all' }")
+                label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.filterData == 'all' }")
                   | {{ $t('projects.section.list.panel.filter.all') }}
                   input(
                     type="radio",

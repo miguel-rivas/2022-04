@@ -9,22 +9,20 @@
                 <btn
                   :to="{ name: nav.route[0] }"
                   :key="nav.route[0]"
-                  mode="transparent"
+                  mode="nav"
                   color="shamrock"
                   size="md"
-                  :title="`${nav.route[0]} button`"
-                  v-nano-tooltip.right="nav.tooltip"
+                  :title="nav.tooltip"
                   :glyph="nav.icon"
                 />
               </template>
               <template v-else>
                 <btn
                   :key="nav.route[0]"
-                  mode="transparent"
+                  mode="nav"
                   color="shamrock"
                   size="md"
-                  :title="`${nav.route[0]} button`"
-                  v-nano-tooltip.right="nav.tooltip"
+                  :title="nav.tooltip"
                   @click="toggleValue('panel'), playSound()"
                   :glyph="nav.icon"
                   active
@@ -36,10 +34,9 @@
                 <btn
                   :to="{ name: nav.route[0] }"
                   :key="nav.route[0]"
-                  mode="transparent"
+                  mode="nav"
                   color="shamrock"
-                  :title="`${nav.route[0]} button`"
-                  v-nano-tooltip.right="nav.tooltip"
+                  :title="nav.tooltip"
                   size="md"
                   :glyph="nav.icon"
                 />
@@ -47,11 +44,10 @@
               <template v-else>
                 <btn
                   :key="nav.route[0]"
-                  mode="transparent"
+                  mode="nav"
                   color="shamrock"
                   size="md"
-                  :title="`${nav.route[0]} button`"
-                  v-nano-tooltip.right="nav.tooltip"
+                  :title="nav.tooltip"
                   @click="toggleValue('panel'), playSound()"
                   :glyph="nav.icon"
                   active
@@ -62,11 +58,10 @@
             <btn
               tag="a"
               :href="linkLinkedin"
-              mode="transparent"
+              mode="nav"
               color="royal-purple"
               size="md"
               title="Linkedin button"
-              v-nano-tooltip.right="'Linkedin'"
               glyph="linkedin"
               target="_blank"
             />
@@ -74,9 +69,8 @@
             <btn
               color="gold-tips"
               size="md"
-              mode="transparent"
-              title="Switch to english"
-              v-nano-tooltip.right="'English'"
+              mode="nav"
+              title="Switch to English"
               text="EN"
               @click="switchLanguage('en')"
               :active="$i18n.locale === 'en'"
@@ -84,9 +78,8 @@
             <btn
               color="gold-tips"
               size="md"
-              mode="transparent"
-              title="Switch to spanish"
-              v-nano-tooltip.right="'Español'"
+              mode="nav"
+              title="Switch to Spanish"
               text="ES"
               @click="switchLanguage('es')"
               :active="$i18n.locale === 'es'"
@@ -94,9 +87,8 @@
             <btn
               color="gold-tips"
               size="md"
-              mode="transparent"
-              title="Switch to portuguese"
-              v-nano-tooltip.right="'Português'"
+              mode="nav"
+              title="Switch to Portuguese"
               text="PT"
               @click="switchLanguage('pt')"
               :active="$i18n.locale === 'pt'"
@@ -105,9 +97,8 @@
             <btn
               color="gold-tips"
               size="md"
-              mode="transparent"
+              mode="nav"
               title="Toggle theme button"
-              v-nano-tooltip.right="$t('toggleTheme')"
               glyph="brightness"
               @click="toggleValue('theme'), playSound()"
               :active="theme"
@@ -179,7 +170,15 @@ export default Vue.extend({
       {
         tooltip: i18n.t("canvas.navTitle"),
         icon: "window",
-        route: ["canvas", "locations", "avatar", "gear", "wheel", "pixel", "stargazer"],
+        route: [
+          "canvas",
+          "locations",
+          "avatar",
+          "gear",
+          "wheel",
+          "pixel",
+          "stargazer",
+        ],
       },
       {
         tooltip: i18n.t("three.navTitle"),

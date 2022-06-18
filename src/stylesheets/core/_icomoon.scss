@@ -82,7 +82,7 @@ nn-icon {
   font-family: "icomoon" !important;
 
   @each $name, $value in $icons {
-    &.#{$name}:before {
+    &.#{$nano}#{$name}:before {
       content: $value;
     }
   }

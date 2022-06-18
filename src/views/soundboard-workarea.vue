@@ -11,7 +11,7 @@
       <nn-row class="btn-gallery" grid>
         <template v-for="(item, itemIndex) in database">
           <nn-column size="200, 200" :key="itemIndex">
-            <button class="btn arcade" @click="playAudio(item)">
+            <button class="nn-btn arcade" @click="playAudio(item)">
               <img :src="getZapp(`img/fakeaudience/${item}.svg`)" />
             </button>
           </nn-column>

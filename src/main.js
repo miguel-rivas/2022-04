@@ -4,7 +4,6 @@ import router from "./modules/router";
 import { store } from "./modules/store";
 import "./stylesheets/application.scss";
 import "./modules/commons";
-import "@/modules/tooltip";
 import VueKonva from "vue-konva";
 import 'nano-grid/components';
 import 'nano-grid-extended/components';

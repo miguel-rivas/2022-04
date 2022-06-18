@@ -18,6 +18,7 @@
 <script>
 import Vue from "vue";
 import { colorsType, directionsType } from "../modules/types";
+import { nano, titleCase } from "../modules/helpers";
 
 export default Vue.extend({
   props: {
@@ -63,17 +64,17 @@ export default Vue.extend({
   },
   computed: {
     buttonType() {
-      return `btn ${this.mode}`;
+      return `${nano}btn ${nano}${this.mode}`;
     },
     itemColor() {
       if (colorsType.includes(this.color)) {
-        return this.color;
+        return nano + this.color;
       } else {
         console.warn(
           `color="${this.color}" is not a supported value on btn.vue, try the following values instead:`
         );
         console.warn(colorsType);
-        return "transparent";
+        return "";
       }
     },
     iconDirection() {
@@ -95,10 +96,12 @@ export default Vue.extend({
       }
     },
     computedLabel() {
-      if (this.text) {
-        return undefined;
-      } else {
-        return this.title;
+      if (this.title) {
+        return titleCase(this.title);
+      } else if (this.text) {
+        return titleCase(this.text) + " Button";
+      } else if (this.glyph) {
+        return titleCase(this.glyph) + " Button";
       }
     },
     computedClasses() {
@@ -107,7 +110,7 @@ export default Vue.extend({
         this.itemColor,
         this.size,
         {
-          active: this.active,
+          "nn-active": this.active,
         },
       ];
     },

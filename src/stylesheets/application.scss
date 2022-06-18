@@ -1,3 +1,5 @@
+$nano: "nn-";
+
 // ------------------ Fonts
 @import "~@fontsource/montserrat/latin-300.css";
 @import "~@fontsource/montserrat/latin-400.css";
@@ -7,9 +9,14 @@
 
 // ------------------ Modules
 @import "nano-grid/scss/nano-grid";
+
 @import "nano-grid-extended/scss/btn";
+@import "nano-grid-extended/scss/btn-flat";
+@import "nano-grid-extended/scss/btn-nav";
+@import "nano-grid-extended/scss/input";
+@import "nano-grid-extended/scss/label";
+
 @import "nano-grid-extended/scss/scroll-area";
-@import "nano-grid-extended/scss/tooltip";
 @import "nano-grid-extended/scss/range-slider";
 @import "nano-grid-extended/scss/container";
 @import "nano-grid-extended/scss/icon";
@@ -28,7 +35,7 @@ body {
 }
 
 main {
-  &.nano-light {
+  &.nn-light {
     --color-title: #9c330a;
     --color-background: #ffffff;
     --color-foreground: #202028;
@@ -47,7 +54,7 @@ main {
     --color-table-background-hover: hsl(240deg 35% 90% / 0.2);
     --map-background: #c88396;
   }
-  &.nano-dark {
+  &.nn-dark {
     --color-title: #e69b28;
     --color-background: #222;
     --color-foreground: #eee;
@@ -138,7 +145,7 @@ main {
 
 /*------------------------*/
 
-.btn,
+.#{$nano}btn,
 label,
 select,
 input[type="text"] {
@@ -182,7 +189,7 @@ input[type="text"] {
 }
 
 .nano-app {
-  .btn.flat.btn {
+  .#{$nano}btn.#{$nano}flat {
     &-vue {
       &,
       &:hover {
@@ -208,14 +215,14 @@ input[type="text"] {
       display: block;
     }
   }
-  .btn {
+  .#{$nano}btn {
     display: inline-block;
   }
 }
 
 /*------------------------*/
 
-nn-row {
+#{wc("row")} {
   &.palette {
     .shade {
       height: 35px;
@@ -229,7 +236,7 @@ nn-row {
         opacity: 0.8;
       }
     }
-    nn-column {
+    #{wc("column")} {
       padding: 0.25rem;
     }
   }
@@ -237,28 +244,28 @@ nn-row {
 
 /*------------------------*/
 
-nn-row {
-  &.nano-slider.nano-group.integrated {
+#{wc("row")} {
+  &.nano-slider.#{$nano}group {
     border: transparent;
-    > nn-column {
-      > input[type="range"] {
+    #{wc("column", ">")} {
+      > .#{$nano}range {
         padding: 0.5rem;
         width: 100%;
         background: var(--color-background-input);
       }
     }
-    > nn-column:last-child {
-      > input {
+    #{wc("column", ">", ":last-child")} {
+      > .#{$nano}input {
         padding-right: 0.25rem;
         text-align: center;
       }
     }
   }
 
-  &.nano-slider-alt.nano-group {
+  &.nano-slider-alt.#{$nano}group {
     border: transparent;
-    > nn-column {
-      > input[type="range"] {
+    #{wc("column", ">")} {
+      > .#{$nano}range {
         padding: 0.5rem;
         width: 100%;
         background: var(--color-background-input);
@@ -266,7 +273,8 @@ nn-row {
         border: 0;
       }
       &:last-child {
-        .input-label {
+        .#{$nano}input,
+        .#{$nano}label {
           border-radius: 0 0 10px 10px;
         }
       }
@@ -276,17 +284,16 @@ nn-row {
 
 /*------------------------*/
 
-nn-row {
+#{wc("row")} {
   &.list-palette {
-    border: 1px solid var(--color-border) !important;
-    .input-label {
+    .nn-label {
       font-size: 12px;
       min-height: 36px !important;
     }
     .shade {
       height: 35px;
       width: 100%;
-      border-left: 1px solid var(--color-border) !important;
+      border: 1px solid var(--color-border) !important;
       &:hover {
         opacity: 0.8;
       }
@@ -344,7 +351,7 @@ nn-row {
       margin: 4rem auto;
       width: min(500px, 100%);
     }
-    
+
     h1 {
       font-size: 35px;
     }
@@ -360,7 +367,7 @@ nn-row {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-  
+
       img {
         width: 65px;
         pointer-events: none;
@@ -371,7 +378,7 @@ nn-row {
 
 /*------------------------*/
 
-.btn.arcade {
+.#{$nano}btn.arcade {
   padding: 0.75rem 0.85rem;
   transition: all 5ms ease;
   border-radius: 0.55rem;
@@ -379,8 +386,8 @@ nn-row {
   border: 1px solid;
 }
 
-.nano-light {
-  .btn.arcade {
+.nn-light {
+  .#{$nano}btn.arcade {
     background-color: #f8f7fb;
     box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff;
     border-color: #d1d9e6;
@@ -394,8 +401,8 @@ nn-row {
   }
 }
 
-.nano-dark {
-  .btn.arcade {
+.nn-dark {
+  .#{$nano}btn.arcade {
     background-color: hsl(244deg 15% 16%);
     box-shadow: 6px 6px 12px hsl(230deg 4% 10%), -6px -6px 12px hsl(0deg 0% 12%);
     border-color: hsl(218deg 29% 15%);
