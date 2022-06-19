@@ -3,7 +3,7 @@ nn-row
   nn-column(size="100%", v-if="label")
     label(:for="$attrs.id", v-html="label")
   nn-column(size="100%")
-    nn-row(group)
+    nn-row
       nn-column(size="100%-60")
         input(
           :class="'nn-range ' + inputColor",
