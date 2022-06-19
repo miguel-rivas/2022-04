@@ -112,7 +112,7 @@
     nn-column(size="100%")
       legend {{ $t('canvas.section.pixelEditor.panel.palette.legend') }}
 
-      nn-row.list-palette(group)
+      nn-row
         nn-column(size="100%-40")
           p.nn-label {{ selection.currentColor.titleCase }}
         nn-column(size="40")
@@ -128,7 +128,7 @@
           nn-row.palette
             template(v-for="color in pixelColors")
               nn-column(size="20%")
-                button.shade(
+                button.nn-label.shade(
                   @click="changeColor(color)",
                   :style="`background-color: ${color.rgb}`",
                   :title="color.titleCase",
@@ -144,7 +144,7 @@
                 template(v-slot:more)
                   template(v-for="color in wikiColors")
                     nn-column(size="20%")
-                      button.shade(
+                      button.nn-label.shade(
                         @click="changeColor(color)",
                         :style="`background-color: ${color.rgb}`",
                         :title="color.titleCase",

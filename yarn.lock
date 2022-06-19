@@ -6188,12 +6188,12 @@ nan@^2.12.1:
   integrity sha512-8ZtvEnA2c5aYCZYd1cvgdnU6cqwixRoYg70xPLWUws5ORTa/lnw+u4amixRS/Ac5U5mQVgp9pnlSUnbNWFaWZQ==
 
 "nano-grid-extended@file:../../app_web_module_nanogrid-extended":
-  version "1.0.0"
+  version "1.0.1"
   dependencies:
     gulp-cli "^2.3.0"
 
 "nano-grid@file:../../app_web_module_nanogrid":
-  version "3.0.0"
+  version "3.0.1"
   dependencies:
     gulp-cli "^2.3.0"
 

@@ -64,7 +64,7 @@
             }}</label>
           </nn-column>
           <nn-column size="100%">
-            <nn-row class="nano-slider-alt" group>
+            <nn-row group>
               <nn-column size="100%">
                 <input
                   :id="`id-${name}-width`"
@@ -133,7 +133,7 @@
           }}</label>
         </nn-column>
         <nn-column size="100%">
-          <nn-row class="nano-slider-alt" group>
+          <nn-row group>
             <nn-column size="100%">
               <input
                 :id="`id-${name}-height`"

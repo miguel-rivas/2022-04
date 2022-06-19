@@ -108,7 +108,7 @@ export default Vue.extend({
       return [
         this.buttonType,
         this.itemColor,
-        this.size,
+        `nn-${this.size}`,
         {
           "nn-active": this.active,
         },

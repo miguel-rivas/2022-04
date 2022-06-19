@@ -144,15 +144,6 @@ main {
 }
 
 /*------------------------*/
-
-.#{$nano}btn,
-label,
-select,
-input[type="text"] {
-  width: 100%;
-}
-
-/*------------------------*/
 .pill-container {
   background-color: rgba(127.5, 127.5, 127.5, 0.2);
   padding: 10px;
@@ -203,39 +194,8 @@ input[type="text"] {
 
 /*------------------------*/
 
-.slider {
-  .controllers {
-    position: relative;
-    text-align: center;
-    top: -20px;
-  }
-  img {
-    display: none;
-    &.active {
-      display: block;
-    }
-  }
-  .#{$nano}btn {
-    display: inline-block;
-  }
-}
-
-/*------------------------*/
-
 #{wc("row")} {
   &.palette {
-    .shade {
-      height: 35px;
-      width: 100%;
-      border: 1px solid var(--color-border) !important;
-      &.active {
-        border: 1px solid #285cad !important;
-        outline: 1px solid rgb(65 89 173 / 26%);
-      }
-      &:hover {
-        opacity: 0.8;
-      }
-    }
     #{wc("column")} {
       padding: 0.25rem;
     }
@@ -244,60 +204,11 @@ input[type="text"] {
 
 /*------------------------*/
 
-#{wc("row")} {
-  &.nano-slider.#{$nano}group {
-    border: transparent;
-    #{wc("column", ">")} {
-      > .#{$nano}range {
-        padding: 0.5rem;
-        width: 100%;
-        background: var(--color-background-input);
-      }
-    }
-    #{wc("column", ">", ":last-child")} {
-      > .#{$nano}input {
-        padding-right: 0.25rem;
-        text-align: center;
-      }
-    }
-  }
 
-  &.nano-slider-alt.#{$nano}group {
-    border: transparent;
-    #{wc("column", ">")} {
-      > .#{$nano}range {
-        padding: 0.5rem;
-        width: 100%;
-        background: var(--color-background-input);
-        border-radius: 10px 10px 10px 0;
-        border: 0;
-      }
-      &:last-child {
-        .#{$nano}input,
-        .#{$nano}label {
-          border-radius: 0 0 10px 10px;
-        }
-      }
-    }
-  }
-}
-
-/*------------------------*/
-
-#{wc("row")} {
-  &.list-palette {
-    .nn-label {
-      font-size: 12px;
-      min-height: 36px !important;
-    }
-    .shade {
-      height: 35px;
-      width: 100%;
-      border: 1px solid var(--color-border) !important;
-      &:hover {
-        opacity: 0.8;
-      }
-    }
+.shade {
+  border: 1px solid var(--color-border) !important;
+  &:hover {
+    opacity: 0.8;
   }
 }
 
