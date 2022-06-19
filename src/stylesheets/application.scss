@@ -21,6 +21,8 @@ $nano: "nn-";
 @import "nano-grid-extended/scss/container";
 @import "nano-grid-extended/scss/icon";
 
+@import "nano-spirit/scss/nano-spirit";
+
 * {
   box-sizing: border-box;
 }
@@ -113,7 +115,6 @@ main {
 @import "components/area-box";
 @import "components/loading";
 @import "components/toggle-input";
-@import "components/spirit";
 
 @import "core/vue-theme";
 
