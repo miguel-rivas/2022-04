@@ -3,7 +3,6 @@ import Vue from 'vue';
 import NestedWorkareaView from '../views/nested-workarea.vue';
 import NestedPanelView from '../views/nested-panel.vue';
 
-import ColorsPanelView from '../views/colors-panel.vue';
 import ColorsWorkareaView from '../views/colors-workarea.vue';
 import IconsWorkareaView from '../views/icons-workarea.vue';
 
@@ -47,7 +46,6 @@ export default {
       name: 'colors',
       path: '/colors',
       components: {
-        panel2: ColorsPanelView,
         workarea2: ColorsWorkareaView,
       },
     },

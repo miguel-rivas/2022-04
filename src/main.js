@@ -6,7 +6,6 @@ import "./stylesheets/application.scss";
 import "./modules/commons";
 import VueKonva from "vue-konva";
 import 'nano-grid/components';
-import 'nano-grid-extended/components';
 import { getZapp } from "./modules/helpers";
 
 //-- db

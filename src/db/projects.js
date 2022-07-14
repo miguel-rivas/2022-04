@@ -531,9 +531,7 @@ const pj = [
       toolEnum.slim,
     ],
     undefined,
-    [
-      new LinkCodepen("qBZNMyQ")
-    ],
+    [],
     undefined,
     ["no-listing"]
   ),
@@ -1498,17 +1496,18 @@ const pj = [
       toolEnum.javascript,
       toolEnum.gulp,
     ],
-    undefined,
+    new Preview("nano-grid"),
     [
       new Link("https://www.npmjs.com/package/nano-grid", "Node Module"),
 
       new LinkGithub("nano-grid"),
     ],
     [
-      new Children(client.miguelRivas, "2019/07/10"),
+      // new Children(client.miguelRivas, "2019/07/10"),
       new Children(client.miguelRivas, "2020/08/18"),
+      new Children(client.miguelRivas, "2017/01/01"),
     ],
-    ["no-listing"]
+    ["company"]
   ),
 
   new Project(

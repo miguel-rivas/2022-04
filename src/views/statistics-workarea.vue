@@ -34,24 +34,7 @@ nn-scroll-area(color="royal-purple")
                 nn-column(table-element, size="20%-35") {{ project.client }}
 
               template(v-slot:more)
-                nn-column(table-element, size="200")
-                  template(v-if="project.links && project.links[0]")
-                    btn(
-                      tag="a",
-                      size="md",
-                      color="royal-purple",
-                      target="_blank",
-                      :href="project.links[0].url",
-                      text="See Preview"
-                    )
-                  template(v-else)
-                    btn(
-                      tag="span",
-                      size="md",
-                      color="persian-red",
-                      text="No Link"
-                    )
-                nn-column(table-element, size="100%-200")
+                nn-column(table-element, size="100%")
                   .pill-container
                     template(v-for="(tool, toolIndex) in project.tools")
                       span.pill(:key="toolIndex", v-html="tool")
