@@ -3,11 +3,7 @@ import VueRouter from 'vue-router';
 
 import DefaultPanelView from '../views/default-panel.vue';
 
-import DollhouseWorkareaView from '../views/dollhouse-workarea.vue';
-import DollhousePanelView from '../views/dollhouse-panel.vue';
-
 import ResumeWorkareaView from '../views/resume-workarea.vue';
-
 import CanvasRouter from '../router/canvas';
 import CssRouter from '../router/css';
 import ProjectsRouter from '../router/projects';
@@ -21,15 +17,7 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: '/',
-    redirect: '/dollhouse',
-  },
-  {
-    name: 'dollhouse',
-    path: '/dollhouse',
-    components: {
-      workarea: DollhouseWorkareaView,
-      panel: DollhousePanelView,
-    },
+    redirect: '/list',
   },
   {
     name: 'resume',

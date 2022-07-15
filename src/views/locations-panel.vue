@@ -44,9 +44,7 @@ export default Vue.extend({
       });
     },
     openModal(filter) {
-      this.modal.data = locationsDBList.find(
-        (item) => item.client === filter
-      );
+      this.modal.data = locationsDBList.find((item) => item.client === filter);
       this.modal.hidden = false;
     },
   },

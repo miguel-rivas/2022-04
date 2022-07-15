@@ -1489,7 +1489,6 @@ const pj = [
     type.module,
     client.miguelRivas,
     [
-      toolEnum.vue,
       toolEnum.scss,
       toolEnum.webComponents,
       toolEnum.git,
@@ -1499,13 +1498,13 @@ const pj = [
     new Preview("nano-grid"),
     [
       new Link("https://www.npmjs.com/package/nano-grid", "Node Module"),
-
       new LinkGithub("nano-grid"),
+      new Link("https://nano-grid.github.io", "Website"),
     ],
     [
       // new Children(client.miguelRivas, "2019/07/10"),
-      new Children(client.miguelRivas, "2020/08/18"),
       new Children(client.miguelRivas, "2017/01/01"),
+      new Children(client.miguelRivas, "2020/08/18"),
     ],
     ["company"]
   ),

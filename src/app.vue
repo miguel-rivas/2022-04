@@ -9,7 +9,7 @@
       </nn-column>
 
       <nn-column size="0" class="panel-bar">
-        <btn
+        <nn-btn
           class="panel-ctrl"
           title="Toggle panel button"
           glyph="chevron"

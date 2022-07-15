@@ -13,6 +13,8 @@ import AvatarWorkareaView from '../views/avatar-workarea.vue';
 import AvatarPanelView from '../views/avatar-panel.vue';
 import PixelWorkareaView from '../views/pixel-workarea.vue';
 import PixelPanelView from '../views/pixel-panel.vue';
+import DollhouseWorkareaView from '../views/dollhouse-workarea.vue';
+import DollhousePanelView from '../views/dollhouse-panel.vue';
 
 export default {
   name: 'canvas',
@@ -21,7 +23,7 @@ export default {
     workarea: Vue.extend({
       props: {
         defaultRoute: {
-          default: "locations"
+          default: "dollhouse"
         },
       },
       extends: NestedWorkareaView,
@@ -33,6 +35,11 @@ export default {
         },
         links: {
           default: () => ([
+            {
+              text: "dollhouse.navTitle",
+              name: ["dollhouse"],
+              icon: "home",
+            },
             {
               text: "canvas.section.map.title",
               name: ["locations"],
@@ -65,6 +72,14 @@ export default {
     }),
   },
   children: [
+    {
+      name: 'dollhouse',
+      path: '/dollhouse',
+      components: {
+        workarea2: DollhouseWorkareaView,
+        panel2: DollhousePanelView,
+      },
+    },
     {
       name: 'pixel',
       path: '/pixel',

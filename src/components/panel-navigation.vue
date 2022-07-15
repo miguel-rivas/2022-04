@@ -120,19 +120,14 @@ export default Vue.extend({
   data: () => ({
     navigation: [
       {
-        tooltip: i18n.t("dollhouse.navTitle"),
-        icon: "monster",
-        route: ["dollhouse"],
+        tooltip: i18n.t("projects.navTitle"),
+        icon: "duck",
+        route: ["projects", "list", "statistics", "github"],
       },
       {
         tooltip: "Resume",
         icon: "person",
         route: ["resume"],
-      },
-      {
-        tooltip: i18n.t("projects.navTitle"),
-        icon: "duck",
-        route: ["projects", "list", "statistics", "github"],
       },
       {
         tooltip: i18n.t("galleries.navTitle"),
@@ -170,6 +165,7 @@ export default Vue.extend({
         icon: "window",
         route: [
           "canvas",
+          "dollhouse",
           "locations",
           "avatar",
           "gear",

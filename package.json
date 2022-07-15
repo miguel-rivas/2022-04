@@ -18,7 +18,7 @@
     "konva": "^8.3.2",
     "luxon": "^2.3.0",
     "mr-vue-color": "file:../../app_web_module_vue-color-fork",
-    "nano-grid": "file:../../app_web_module_nanogrid",
+    "nano-grid": "3.2.5",
     "three": "^0.131.3",
     "vue": "^2.6.11",
     "vue-chartjs": "^3.5.1",
