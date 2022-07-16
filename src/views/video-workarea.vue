@@ -4,12 +4,11 @@ nn-scroll-area(color="royal-purple")
     ul.img-gallery
       template(v-for="(item, itemIndex) in videosDB")
         li.item(:key="`gallery${itemIndex}`")
-          nn-row(vertical)
-            nn-column
+          nn-row
+            nn-column(size="100%")
               video(:width="item.width", :height="item.height", controls)
                 source(:src="getZapp(item.url)", type="video/mp4")
                 | Your browser does not support the video tag.
-            nn-column
               .nano-shade-box
                 toggle-row.toggle-input(breakpoint="lg")
                   template(v-slot:header)
