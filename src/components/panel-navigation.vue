@@ -126,14 +126,14 @@ export default Vue.extend({
         divider: true,
       },
       {
-        tooltip: i18n.t("dollhouse.title"),
-        icon: "home",
-        route: ["dollhouse"],
-      },
-      {
         tooltip: i18n.t("map.title"),
         icon: "airplane",
         route: ["locations"],
+      },
+      {
+        tooltip: i18n.t("dollhouse.title"),
+        icon: "home",
+        route: ["dollhouse"],
       },
       {
         tooltip: i18n.t("avatar.title"),
