@@ -7,8 +7,8 @@ const user = {
   "email": "miguel.portfolio.gi7pt@simplelogin.fr",
   "phone": "2029830839",
   "location": {
-    "city": "Chicago",
-    "state": "IL"
+    "city": "Washington",
+    "state": "DC"
   },
   "media": {
     "codepen": {

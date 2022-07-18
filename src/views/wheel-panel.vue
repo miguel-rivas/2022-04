@@ -1,11 +1,11 @@
 <template lang="pug">
-.capsule
+nn-scroll-area(color="royal-purple")
   nn-row.row-block
     nn-column(size="100%")
-      legend {{ $t('canvas.section.colorWheel.panel.general.legend') }}
+      legend {{ $t('colorWheel.panel.general.legend') }}
 
       slider#colors(
-        :label="$t('canvas.section.colorWheel.panel.general.colors')",
+        :label="$t('colorWheel.panel.general.colors')",
         min="1",
         max="720",
         step="1",

@@ -24,7 +24,7 @@
     "education": "Educação"
   },
   "dollhouse": {
-    "navTitle": "Casa de Bonecas",
+    "title": "Casa de Bonecas",
     "panel": {
       "controller": {
         "legend": "Controladores",
@@ -33,7 +33,7 @@
     }
   },
   "stargaze": {
-    "navTitle": "Observador de Estrelas",
+    "title": "Observador de Estrelas",
     "panel": {
       "controller": {
         "legend": "Controles de cena",
@@ -45,62 +45,52 @@
     }
   },
   "projects": {
-    "navTitle": "Projetos",
-    "section": {
-      "list": {
-        "title": "Lista",
-        "panel": {
-          "filter": {
-            "legend": "Filtros",
-            "all": "Tudo",
-            "companies": "Empresas",
-            "projects": "Projetos",
-            "experiments": "Experimentos",
-            "homework": "Tarefas"
-          }
-        }
-      },
-      "github": {
-        "title": "Github"
-      },
-      "statistics": {
-        "title": "Estatísticas",
-        "workarea": {
-          "yearlyAverage": "Projetos por ano",
-          "skillsUsed": "Habilidades Usadas",
-          "database": "Base de Dados",
-          "table": {
-            "name": "Nome",
-            "type": "Tipo",
-            "date": "Data",
-            "client": "Cliente"
-          }
-        }
+    "title": "Projetos",
+    "panel": {
+      "filter": {
+        "legend": "Filtros",
+        "all": "Tudo",
+        "companies": "Empresas",
+        "projects": "Projetos",
+        "experiments": "Experimentos",
+        "homework": "Tarefas"
       }
     }
   },
-  "galleries": {
-    "navTitle": "Galerias",
-    "section": {
-      "images": {
-        "title": "Imagens",
-        "panel": {
-          "controller": {
-            "legend": "Controladores de Animação",
-            "rotationDelay": "Atraso de Rotação"
-          }
-        }
-      },
-      "videos": {
-        "title": "Vídeos"
-      },
-      "fake-audience": {
-        "title": "Fake Audience"
+  "github": {
+    "title": "Github"
+  },
+  "statistics": {
+    "title": "Estatísticas",
+    "workarea": {
+      "yearlyAverage": "Projetos por ano",
+      "skillsUsed": "Habilidades Usadas",
+      "database": "Base de Dados",
+      "table": {
+        "name": "Nome",
+        "type": "Tipo",
+        "date": "Data",
+        "client": "Cliente"
       }
     }
+  },
+  "images": {
+    "title": "Imagens",
+    "panel": {
+      "controller": {
+        "legend": "Controladores de Animação",
+        "rotationDelay": "Atraso de Rotação"
+      }
+    }
+  },
+  "videos": {
+    "title": "Vídeos"
+  },
+  "fake-audience": {
+    "title": "Fake Audience"
   },
   "timeline": {
-    "navTitle": "Máquina do Tempo",
+    "title": "Máquina do Tempo",
     "section": {
       "2014": {
         "title": "2014"
@@ -117,7 +107,7 @@
     }
   },
   "ui": {
-    "navTitle": "Interface de Portfólio",
+    "title": "Interface de Portfólio",
     "section": {
       "colors": {
         "title": "Cores",
@@ -132,264 +122,259 @@
       }
     }
   },
-  "canvas": {
-    "navTitle": "Tela",
-    "section": {
-      "map": {
-        "title": "Mapa",
-        "panel": {
-          "locations": {
-            "legend": "Localizações"
-          }
-        },
-        "modal": {
-          "removeCTA": "Fechar Modal",
-          "jellyfish": {
-            "title": "Jellyfish",
-            "position": "Desenvolvedor Frontend",
-            "summary": [
-              "Criar aplicativos com HTML, SCSS e jQuery em um ambiente de PHP com Grunt.",
-              "Otimizar aplicativos para velocidade máxima.",
-              "Trabalhar com Git para controlar a versão dos projetos."
-            ]
-          },
-          "enovational": {
-            "title": "Enovational",
-            "position": "Desenvolvedor Frontend",
-            "summary": [
-              "Criar aplicativos governamentais com HTML/Slim, SCSS, Bootstrap, jQuery/Vue.js em um ambiente de Ruby on Rails com Webpack.",
-              "Otimizar aplicativos para velocidade máxima.",
-              "Garantir que os aplicativos sigam as convenções e padrões de acordo com a complexidade do projeto.",
-              "Colaborar com desenhadores de UI/UX, desenvolvedores fullstack, gerentes de projeto, testadores de controle de qualidade e analistas de negócios para melhorar a usabilidade.",
-              "Trabalhar com Git para controlar a versão dos projetos.",
-              "Trabalhar com Agile."
-            ]
-          },
-          "plantTherapy": {
-            "title": "Plant Therapy",
-            "position": "Web Designer",
-            "summary": [
-              "Criar protótipos e páginas de destino com Pug, SCSS, jQuery e Miva.",
-              "Manter e otimizar o site web.",
-              "Criar esquema e fluxo de usuários com Adobe Illustrator."
-            ]
-          },
-          "pixel": {
-            "title": "Pixel Perfect Tree",
-            "position": "Desenvolvedor Frontend",
-            "summary": [
-              "Desenhar e desenvolver aplicativos com Haml, SCSS, Bootstrap, jQuery/React em um ambiente de Ruby on Rails com Webpack.",
-              "Manter e otimizar aplicativos.",
-              "Colaborar com desenvolvedores fullstack e administradores de projetos para melhorar a usabilidade.",
-              "Trabalhar com Git para controlar a versão dos projetos.",
-              "Trabalhar com Agile."
-            ]
-          },
-          "capital": {
-            "title": "Capital",
-            "position": "Desenvolvedor Frontend",
-            "summary": [
-              "Criar aplicativos com Pug, SCSS, jQuery em um ambiente de PHP com GruntJS.",
-              "Otimizar aplicativos para velocidade máxima.",
-              "Criar esquema e fluxo de usuários com Adobe Illustrator.",
-              "Colaborar com desenvolvedores backend, desenhadores e gerentes de projeto para melhorar a usabilidade.",
-              "Animar banners de anúncios para sites com Adobe Flash.",
-              "Criar gráficos em movimento para as redes sociais com Adobe Flash."
-            ]
-          },
-          "avante": {
-            "title": "Avante Marketing",
-            "position": "Web Designer",
-            "summary": [
-              "Desenhar e criar aplicativos com HTML, CSS, jQuery em um ambiente de PHP.",
-              "Otimizar aplicativos para velocidade máxima.",
-              "Desenhar gráficos para redes sociais com Adobe Illustrator, Adobe Photoshop e Adobe Indesign."
-            ]
-          },
-          "social": {
-            "title": "Social Network",
-            "position": "Web Designer",
-            "summary": [
-              "Desenhar a interface das aplicativos com Adobe Illustrator.",
-              "Desenhar gráficos para redes sociais com Adobe Illustrator, Adobe Photoshop e Adobe Indesign."
-            ]
-          },
-          "several": {
-            "title": "Studio Several",
-            "position": "Designer Gráfico",
-            "summary": [
-              "Retocar fotos com Adobe Photoshop",
-              "Desenhar anuários com Adobe Indesign e Adobe Photoshop"
-            ]
-          },
-          "itla": {
-            "title": "Instituto Tecnologico de las Americas",
-            "position": "Tecnólogo em Multimedia",
-            "summary": [
-              "Ilustração digital",
-              "Comunicação visual",
-              "Gráficos bitmap",
-              "Gráficos vetoriais",
-              "Desktop Publishing",
-              "Vídeo digital",
-              "Criação de sites",
-              "Animação em Flash com Action Script",
-              "Gráficos 3D e Animação",
-              "Áudio digital",
-              "Branding"
-            ]
-          },
-          "itesa": {
-            "title": "ITESA",
-            "position": "Informática, Secundaria",
-            "summary": [
-              "HTML",
-              "CSS",
-              "Javascript",
-              "Adobe Flash",
-              "Fireworks",
-              "Adobe Dreamweaver",
-              "Pascal",
-              "C++",
-              "Visual Basic",
-              "Visual FoxPro",
-              "Bash",
-              "Linux",
-              "Microsoft Excel",
-              "Microsoft Word",
-              "Microsoft Powerpoint",
-              "ActionScript 2"
-            ]
-          }
-        }
+  "map": {
+    "title": "Mapa",
+    "panel": {
+      "locations": {
+        "legend": "Localizações"
+      }
+    },
+    "modal": {
+      "removeCTA": "Fechar Modal",
+      "jellyfish": {
+        "title": "Jellyfish",
+        "position": "Desenvolvedor Frontend",
+        "summary": [
+          "Criar aplicativos com HTML, SCSS e jQuery em um ambiente de PHP com Grunt.",
+          "Otimizar aplicativos para velocidade máxima.",
+          "Trabalhar com Git para controlar a versão dos projetos."
+        ]
       },
-      "avatar": {
-        "title": "Avatar",
-        "panel": {
-          "presets": {
-            "legend": "Predefinições",
-            "90": "Anos 90",
-            "work": "Trabalho",
-            "sunday": "Domingo",
-            "pooh": "Ursinho Puff",
-            "dc": "DC",
-            "pool": "Piscina",
-            "franciscano": "Franciscano"
-          },
-          "general": {
-            "legend": "Geral",
-            "height": "Altura",
-            "porcelain": "Porcelana",
-            "honey": "Mel",
-            "caramel": "Doce",
-            "umber": "Úmero",
-            "sable": "Sable",
-            "avatar": "Avatar",
-            "hellboy": "Hellboy",
-            "bubblegum": "Chiclete",
-            "green": "Gigante Verde",
-            "skinColor": "Cor da Pele",
-            "skinColor2": "Cor da Pele Secundária"
-          },
-          "face": {
-            "legend": "Cabelo",
-            "raven": "Corvo",
-            "brunette": "Castanho",
-            "blonde": "Loira",
-            "ginger": "Ruiva",
-            "silver": "Prata",
-            "blue": "Índigo",
-            "red": "Siena Escuro",
-            "bubblegum": "Chiclete",
-            "green": "Verde",
-            "topHair": "Alternar Cabelo",
-            "sideHair": "Alternar Cabelo Lateral",
-            "beard": "Alternar Barba",
-            "hairColor": "Cor do Cabelo",
-            "hairSideColor": "Cor do Cabelo Lateral",
-            "beardColor": "Cor da Barba",
-            "lipsColor": "Cor dos lábios",
-            "happiness": "Felicidade"
-          },
-          "shirt": {
-            "legend": "Camisa",
-            "shirt": "Alternar camisa",
-            "lPockect": "Bolso Esq",
-            "rPockect": "Bolso Dir",
-            "buttons": "Alternar Botões",
-            "length": "Comprimento da camisa",
-            "sleeve": "Comprimento da manga",
-            "shirtColor": "Cor da camisa",
-            "sleeveColor": "Cor da manga",
-            "pockectsColor": "Cor dos bolsos"
-          },
-          "pants": {
-            "legend": "Calças",
-            "pants": "Alternar calças",
-            "belt": "Alternãncia de cinto",
-            "length": "Comprimento das calças",
-            "fit": "Ajustar",
-            "pantsColor": "Cor da calça",
-            "legsColor": "Cor das pernas",
-            "beltColor": "Cor do cinto"
-          },
-          "shoes": {
-            "legend": "Sapatos",
-            "shoes": "Alternar Sapatos",
-            "shoesColor": "Cor dos sapatos"
-          }
-        }
+      "enovational": {
+        "title": "Enovational",
+        "position": "Desenvolvedor Frontend",
+        "summary": [
+          "Criar aplicativos governamentais com HTML/Slim, SCSS, Bootstrap, jQuery/Vue.js em um ambiente de Ruby on Rails com Webpack.",
+          "Otimizar aplicativos para velocidade máxima.",
+          "Garantir que os aplicativos sigam as convenções e padrões de acordo com a complexidade do projeto.",
+          "Colaborar com desenhadores de UI/UX, desenvolvedores fullstack, gerentes de projeto, testadores de controle de qualidade e analistas de negócios para melhorar a usabilidade.",
+          "Trabalhar com Git para controlar a versão dos projetos.",
+          "Trabalhar com Agile."
+        ]
       },
-      "pixelEditor": {
-        "title": "Editor de Pixels",
-        "panel": {
-          "general": {
-            "legend": "Geral",
-            "new": "Nova Imagem",
-            "open": "Abrir Imagem",
-            "save": "Salvar Imagem",
-            "export": "Exportar PNG"
-          },
-          "tools": {
-            "legend": "Ferramentas",
-            "lock": "Bloquear área de trabalho",
-            "dropper": "Conta-gotas",
-            "eraser": "Apagador"
-          },
-          "palette": {
-            "legend": "Paleta",
-            "more": "Mais Cores"
-          }
-        }
+      "plantTherapy": {
+        "title": "Plant Therapy",
+        "position": "Web Designer",
+        "summary": [
+          "Criar protótipos e páginas de destino com Pug, SCSS, jQuery e Miva.",
+          "Manter e otimizar o site web.",
+          "Criar esquema e fluxo de usuários com Adobe Illustrator."
+        ]
       },
-      "gearBuilder": {
-        "title": "Construtor de engranagens",
-        "panel": {
-          "properties": {
-            "legend": "Propiedades da engranagem",
-            "teethAmount": "Quantidade de dentes",
-            "pitchRadius": "Altura dos Dentes",
-            "baseCircleRadius": "Raio da Coroa",
-            "axisRadius": "Raio do Cubo",
-            "sidePerforationAmount": "Número de Perfurações Laterais",
-            "sidePerforationRadius": "Raio das Perfurações Laterais",
-            "sidePerforationDistance": "Distância entre as Perfurações Laterais"
-          }
-        }
+      "pixel": {
+        "title": "Pixel Perfect Tree",
+        "position": "Desenvolvedor Frontend",
+        "summary": [
+          "Desenhar e desenvolver aplicativos com Haml, SCSS, Bootstrap, jQuery/React em um ambiente de Ruby on Rails com Webpack.",
+          "Manter e otimizar aplicativos.",
+          "Colaborar com desenvolvedores fullstack e administradores de projetos para melhorar a usabilidade.",
+          "Trabalhar com Git para controlar a versão dos projetos.",
+          "Trabalhar com Agile."
+        ]
       },
-      "colorWheel": {
-        "title": "Roda de Cores",
-        "panel": {
-          "general": {
-            "legend": "Geral",
-            "colors": "Cores"
-          }
-        }
+      "capital": {
+        "title": "Capital",
+        "position": "Desenvolvedor Frontend",
+        "summary": [
+          "Criar aplicativos com Pug, SCSS, jQuery em um ambiente de PHP com GruntJS.",
+          "Otimizar aplicativos para velocidade máxima.",
+          "Criar esquema e fluxo de usuários com Adobe Illustrator.",
+          "Colaborar com desenvolvedores backend, desenhadores e gerentes de projeto para melhorar a usabilidade.",
+          "Animar banners de anúncios para sites com Adobe Flash.",
+          "Criar gráficos em movimento para as redes sociais com Adobe Flash."
+        ]
+      },
+      "avante": {
+        "title": "Avante Marketing",
+        "position": "Web Designer",
+        "summary": [
+          "Desenhar e criar aplicativos com HTML, CSS, jQuery em um ambiente de PHP.",
+          "Otimizar aplicativos para velocidade máxima.",
+          "Desenhar gráficos para redes sociais com Adobe Illustrator, Adobe Photoshop e Adobe Indesign."
+        ]
+      },
+      "social": {
+        "title": "Social Network",
+        "position": "Web Designer",
+        "summary": [
+          "Desenhar a interface das aplicativos com Adobe Illustrator.",
+          "Desenhar gráficos para redes sociais com Adobe Illustrator, Adobe Photoshop e Adobe Indesign."
+        ]
+      },
+      "several": {
+        "title": "Studio Several",
+        "position": "Designer Gráfico",
+        "summary": [
+          "Retocar fotos com Adobe Photoshop",
+          "Desenhar anuários com Adobe Indesign e Adobe Photoshop"
+        ]
+      },
+      "itla": {
+        "title": "Instituto Tecnologico de las Americas",
+        "position": "Tecnólogo em Multimedia",
+        "summary": [
+          "Ilustração digital",
+          "Comunicação visual",
+          "Gráficos bitmap",
+          "Gráficos vetoriais",
+          "Desktop Publishing",
+          "Vídeo digital",
+          "Criação de sites",
+          "Animação em Flash com Action Script",
+          "Gráficos 3D e Animação",
+          "Áudio digital",
+          "Branding"
+        ]
+      },
+      "itesa": {
+        "title": "ITESA",
+        "position": "Informática, Secundaria",
+        "summary": [
+          "HTML",
+          "CSS",
+          "Javascript",
+          "Adobe Flash",
+          "Fireworks",
+          "Adobe Dreamweaver",
+          "Pascal",
+          "C++",
+          "Visual Basic",
+          "Visual FoxPro",
+          "Bash",
+          "Linux",
+          "Microsoft Excel",
+          "Microsoft Word",
+          "Microsoft Powerpoint",
+          "ActionScript 2"
+        ]
+      }
+    }
+  },
+  "avatar": {
+    "title": "Avatar",
+    "panel": {
+      "presets": {
+        "legend": "Predefinições",
+        "90": "Anos 90",
+        "work": "Trabalho",
+        "sunday": "Domingo",
+        "pooh": "Ursinho Puff",
+        "dc": "DC",
+        "pool": "Piscina",
+        "franciscano": "Franciscano"
+      },
+      "general": {
+        "legend": "Geral",
+        "height": "Altura",
+        "porcelain": "Porcelana",
+        "honey": "Mel",
+        "caramel": "Doce",
+        "umber": "Úmero",
+        "sable": "Sable",
+        "avatar": "Avatar",
+        "hellboy": "Hellboy",
+        "bubblegum": "Chiclete",
+        "green": "Gigante Verde",
+        "skinColor": "Cor da Pele",
+        "skinColor2": "Cor da Pele Secundária"
+      },
+      "face": {
+        "legend": "Cabelo",
+        "raven": "Corvo",
+        "brunette": "Castanho",
+        "blonde": "Loira",
+        "ginger": "Ruiva",
+        "silver": "Prata",
+        "blue": "Índigo",
+        "red": "Siena Escuro",
+        "bubblegum": "Chiclete",
+        "green": "Verde",
+        "topHair": "Alternar Cabelo",
+        "sideHair": "Alternar Cabelo Lateral",
+        "beard": "Alternar Barba",
+        "hairColor": "Cor do Cabelo",
+        "hairSideColor": "Cor do Cabelo Lateral",
+        "beardColor": "Cor da Barba",
+        "lipsColor": "Cor dos lábios",
+        "happiness": "Felicidade"
+      },
+      "shirt": {
+        "legend": "Camisa",
+        "shirt": "Alternar camisa",
+        "lPockect": "Bolso Esq",
+        "rPockect": "Bolso Dir",
+        "buttons": "Alternar Botões",
+        "length": "Comprimento da camisa",
+        "sleeve": "Comprimento da manga",
+        "shirtColor": "Cor da camisa",
+        "sleeveColor": "Cor da manga",
+        "pockectsColor": "Cor dos bolsos"
+      },
+      "pants": {
+        "legend": "Calças",
+        "pants": "Alternar calças",
+        "belt": "Alternãncia de cinto",
+        "length": "Comprimento das calças",
+        "fit": "Ajustar",
+        "pantsColor": "Cor da calça",
+        "legsColor": "Cor das pernas",
+        "beltColor": "Cor do cinto"
+      },
+      "shoes": {
+        "legend": "Sapatos",
+        "shoes": "Alternar Sapatos",
+        "shoesColor": "Cor dos sapatos"
+      }
+    }
+  },
+  "pixelEditor": {
+    "title": "Editor de Pixels",
+    "panel": {
+      "general": {
+        "legend": "Geral",
+        "new": "Nova Imagem",
+        "open": "Abrir Imagem",
+        "save": "Salvar Imagem",
+        "export": "Exportar PNG"
+      },
+      "tools": {
+        "legend": "Ferramentas",
+        "lock": "Bloquear área de trabalho",
+        "dropper": "Conta-gotas",
+        "eraser": "Apagador"
+      },
+      "palette": {
+        "legend": "Paleta",
+        "more": "Mais Cores"
+      }
+    }
+  },
+  "gearBuilder": {
+    "title": "Construtor de engranagens",
+    "panel": {
+      "properties": {
+        "legend": "Propiedades da engranagem",
+        "teethAmount": "Quantidade de dentes",
+        "pitchRadius": "Altura dos Dentes",
+        "baseCircleRadius": "Raio da Coroa",
+        "axisRadius": "Raio do Cubo",
+        "sidePerforationAmount": "Número de Perfurações Laterais",
+        "sidePerforationRadius": "Raio das Perfurações Laterais",
+        "sidePerforationDistance": "Distância entre as Perfurações Laterais"
+      }
+    }
+  },
+  "colorWheel": {
+    "title": "Roda de Cores",
+    "panel": {
+      "general": {
+        "legend": "Geral",
+        "colors": "Cores"
       }
     }
   },
   "three": {
-    "navTitle": "ThreeJS",
+    "title": "ThreeJS",
     "panel": {
       "controller": {
         "legend": "Controles de cena",
@@ -425,7 +410,7 @@
     }
   },
   "css": {
-    "navTitle": "Modelos CSS",
+    "title": "Modelos CSS",
     "section": {
       "house": {
         "title": "Casa"
@@ -438,9 +423,6 @@
       },
       "pills": {
         "title": "Pílulas"
-      },
-      "stargazer": {
-        "title": "Observador de Estrelas"
       }
     }
   }

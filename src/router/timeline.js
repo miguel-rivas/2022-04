@@ -41,7 +41,7 @@ export default {
     panel: Vue.extend({
       props: {
         panelTitle: {
-          default: "timeline.navTitle"
+          default: "timeline.title"
         },
         links: {
           default: () => ([

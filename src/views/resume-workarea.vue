@@ -42,16 +42,14 @@
 
         <template v-for="(location, index) in locations">
           <article :key="location + index">
-            <h4 v-html="$t(`canvas.section.map.modal.${location}.title`)" />
-            <h5 v-html="$t(`canvas.section.map.modal.${location}.position`)" />
+            <h4 v-html="$t(`map.modal.${location}.title`)" />
+            <h5 v-html="$t(`map.modal.${location}.position`)" />
             <h6>
               <time v-html="dates[location]" />
             </h6>
             <ul>
               <template
-                v-for="(p, pIndex) in $t(
-                  `canvas.section.map.modal.${location}.summary`
-                )"
+                v-for="(p, pIndex) in $t(`map.modal.${location}.summary`)"
               >
                 <li :key="location + pIndex" v-html="p" />
               </template>
@@ -63,16 +61,14 @@
 
         <template v-for="(location, index) in education">
           <article :key="location + index">
-            <h4 v-html="$t(`canvas.section.map.modal.${location}.title`)" />
-            <h5 v-html="$t(`canvas.section.map.modal.${location}.position`)" />
+            <h4 v-html="$t(`map.modal.${location}.title`)" />
+            <h5 v-html="$t(`map.modal.${location}.position`)" />
             <h6>
               <time v-html="dates[location]" />
             </h6>
             <ul>
               <template
-                v-for="(p, pIndex) in $t(
-                  `canvas.section.map.modal.${location}.summary`
-                )"
+                v-for="(p, pIndex) in $t(`map.modal.${location}.summary`)"
               >
                 <li :key="location + pIndex" v-html="p" />
               </template>

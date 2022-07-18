@@ -3,8 +3,11 @@
     <nn-scroll-area color="royal-purple" :horizontal="false">
       <nn-row>
         <nn-column size="100%">
-          <template v-for="nav in navigation">
-            <template v-if="!nav.route.includes($route.name)">
+          <template v-for="(nav, navIndex) in navigation">
+            <template v-if="nav.divider">
+              <hr :key="`navIndex-${navIndex}`" />
+            </template>
+            <template v-else-if="!nav.route.includes($route.name)">
               <btn
                 :to="{ name: nav.route[0] }"
                 :key="nav.route[0]"
@@ -28,83 +31,50 @@
               />
             </template>
           </template>
-          <template v-for="nav in navigationBuilder">
-            <template v-if="!nav.route.includes($route.name)">
-              <btn
-                :to="{ name: nav.route[0] }"
-                :key="nav.route[0]"
-                mode="nav"
-                color="shamrock"
-                :title="nav.tooltip"
-                size="md"
-                :glyph="nav.icon"
-              />
-            </template>
-            <template v-else>
-              <btn
-                :key="nav.route[0]"
-                mode="nav"
-                color="shamrock"
-                size="md"
-                :title="nav.tooltip"
-                @click="toggleValue('panel'), playSound()"
-                :glyph="nav.icon"
-                active
-              />
-            </template>
-          </template>
-          <hr />
-          <btn
-            tag="a"
-            :href="linkLinkedin"
-            mode="nav"
-            color="royal-purple"
-            size="md"
-            title="Linkedin button"
-            glyph="linkedin"
-            target="_blank"
-          />
-          <hr />
-          <btn
-            color="gold-tips"
-            size="md"
-            mode="nav"
-            title="Switch to English"
-            text="EN"
-            @click="switchLanguage('en')"
-            :active="$i18n.locale === 'en'"
-          />
-          <btn
-            color="gold-tips"
-            size="md"
-            mode="nav"
-            title="Switch to Spanish"
-            text="ES"
-            @click="switchLanguage('es')"
-            :active="$i18n.locale === 'es'"
-          />
-          <btn
-            color="gold-tips"
-            size="md"
-            mode="nav"
-            title="Switch to Portuguese"
-            text="PT"
-            @click="switchLanguage('pt')"
-            :active="$i18n.locale === 'pt'"
-          />
-          <hr />
-          <btn
-            color="gold-tips"
-            size="md"
-            mode="nav"
-            title="Toggle theme button"
-            glyph="brightness"
-            @click="toggleValue('theme'), playSound()"
-            :active="theme"
-          />
         </nn-column>
       </nn-row>
     </nn-scroll-area>
+    <nn-row>
+      <nn-column size="100%">
+        <btn
+          color="gold-tips"
+          size="md"
+          mode="nav"
+          title="Switch to English"
+          text="EN"
+          @click="switchLanguage('en')"
+          :active="$i18n.locale === 'en'"
+        />
+        <btn
+          color="gold-tips"
+          size="md"
+          mode="nav"
+          title="Switch to Spanish"
+          text="ES"
+          @click="switchLanguage('es')"
+          :active="$i18n.locale === 'es'"
+        />
+        <btn
+          color="gold-tips"
+          size="md"
+          mode="nav"
+          title="Switch to Portuguese"
+          text="PT"
+          @click="switchLanguage('pt')"
+          :active="$i18n.locale === 'pt'"
+        />
+        <hr />
+        <btn
+          color="gold-tips"
+          size="md"
+          mode="nav"
+          title="Toggle theme button"
+          glyph="brightness"
+          @click="toggleValue('theme'), playSound()"
+          :active="theme"
+        />
+      </nn-column>
+    </nn-row>
   </nn-column>
 </template>
 
@@ -120,9 +90,9 @@ export default Vue.extend({
   data: () => ({
     navigation: [
       {
-        tooltip: i18n.t("projects.navTitle"),
+        tooltip: i18n.t("projects.title"),
         icon: "duck",
-        route: ["projects", "list", "statistics", "github"],
+        route: ["projects"],
       },
       {
         tooltip: "Resume",
@@ -130,17 +100,140 @@ export default Vue.extend({
         route: ["resume"],
       },
       {
-        tooltip: i18n.t("galleries.navTitle"),
-        icon: "collections",
-        route: ["gallery", "images", "videos", "fake-audience"],
+        tooltip: i18n.t("statistics.title"),
+        icon: "chart",
+        route: ["statistics"],
       },
       {
-        tooltip: i18n.t("ui.navTitle"),
+        tooltip: i18n.t("githubOrg"),
+        icon: "github",
+        route: ["github"],
+      },
+      {
+        divider: true,
+      },
+      {
+        tooltip: i18n.t("images.title"),
+        icon: "collections",
+        route: ["images"],
+      },
+      {
+        tooltip: i18n.t("videos.title"),
+        icon: "movie",
+        route: ["videos"],
+      },
+      {
+        divider: true,
+      },
+      {
+        tooltip: i18n.t("dollhouse.title"),
+        icon: "home",
+        route: ["dollhouse"],
+      },
+      {
+        tooltip: i18n.t("map.title"),
+        icon: "airplane",
+        route: ["locations"],
+      },
+      {
+        tooltip: i18n.t("avatar.title"),
+        icon: "person",
+        route: ["avatar"],
+      },
+      {
+        tooltip: i18n.t("gearBuilder.title"),
+        icon: "cog",
+        route: ["gear"],
+      },
+      {
+        tooltip: i18n.t("colorWheel.title"),
+        icon: "palette",
+        route: ["wheel"],
+      },
+      {
+        tooltip: i18n.t("pixelEditor.title"),
+        icon: "category",
+        route: ["pixel"],
+      },
+      {
+        divider: true,
+      },
+      {
+        tooltip: i18n.t("three.section.cube.title"),
+        icon: "cube",
+        route: ["cube"],
+      },
+      {
+        tooltip: i18n.t("three.section.spirit.title"),
+        icon: "monster",
+        route: ["spirit"],
+      },
+      {
+        tooltip: i18n.t("three.section.drakkar.title"),
+        icon: "boat",
+        route: ["drakkar"],
+      },
+      {
+        tooltip: i18n.t("three.section.car.title"),
+        icon: "car",
+        route: ["car"],
+      },
+      {
+        tooltip: i18n.t("three.section.xwing.title"),
+        icon: "rocket",
+        route: ["xwing"],
+      },
+      {
+        tooltip: i18n.t("three.section.2017.title"),
+        icon: "book",
+        route: ["portfolio2017"],
+      },
+      {
+        tooltip: i18n.t("three.section.audio.title"),
+        icon: "book",
+        route: ["audio2"],
+      },
+      {
+        divider: true,
+      },
+      {
+        tooltip: i18n.t("css.section.house.title"),
+        icon: "home",
+        route: ["house"],
+      },
+      {
+        tooltip: i18n.t("css.section.window.title"),
+        icon: "window",
+        route: ["window"],
+      },
+      {
+        tooltip: i18n.t("css.section.minivan.title"),
+        icon: "bus",
+        route: ["minivan"],
+      },
+      {
+        tooltip: i18n.t("css.section.pills.title"),
+        icon: "medical",
+        route: ["pills"],
+      },
+      {
+        divider: true,
+      },
+      {
+        tooltip: i18n.t("fake-audience.title"),
+        icon: "moon",
+        route: ["soundboard"],
+      },
+      {
+        tooltip: i18n.t("ui.title"),
         icon: "color",
         route: ["ui", "colors", "icons"],
       },
       {
-        tooltip: i18n.t("timeline.navTitle"),
+        divider: true,
+      },
+      {
+        tooltip: i18n.t("timeline.title"),
         icon: "clock",
         route: [
           "timeline",
@@ -157,42 +250,6 @@ export default Vue.extend({
           "2018-bpr",
           "2022",
         ],
-      },
-    ],
-    navigationBuilder: [
-      {
-        tooltip: i18n.t("canvas.navTitle"),
-        icon: "window",
-        route: [
-          "canvas",
-          "dollhouse",
-          "locations",
-          "avatar",
-          "gear",
-          "wheel",
-          "pixel",
-          "stargazer",
-        ],
-      },
-      {
-        tooltip: i18n.t("three.navTitle"),
-        icon: "move",
-        route: [
-          "threejs",
-          "cube",
-          "spirit",
-          "car",
-          "xwing",
-          "drakkar",
-          "portfolio2017",
-          "audio2",
-          "carrousel",
-        ],
-      },
-      {
-        tooltip: i18n.t("css.navTitle"),
-        icon: "css3",
-        route: ["css", "house", "pills", "minivan", "window"],
       },
     ],
     playSound,

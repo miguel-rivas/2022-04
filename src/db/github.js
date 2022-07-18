@@ -20,6 +20,16 @@ export const githubDB = [
       tool.sass,
       tool.pug,
       tool.haml,
+      tool.webComponents,
+    ],
+  },
+  {
+    title: "Nano Grid Org",
+    link: "https://github.com/nano-grid",
+    description: "All the modules composing Nano Grid.",
+    summary: [
+      tool.sass,
+      tool.webComponents,
     ],
   },
   {

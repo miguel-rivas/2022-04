@@ -1,8 +1,8 @@
 <template lang="pug">
-.capsule
+nn-scroll-area(color="royal-purple")
   nn-row.row-block
     nn-column(size="100%")
-      legend {{ $t('canvas.section.map.panel.locations.legend') }}
+      legend {{ $t('map.panel.locations.legend') }}
       nn-row
         nn-column(size="100%")
           ul.summary

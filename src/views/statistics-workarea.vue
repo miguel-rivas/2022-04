@@ -2,26 +2,26 @@
 nn-scroll-area(color="royal-purple")
   nn-container(size="1450", spacing="4")
     article.nano-box
-      h1 {{ $t('projects.section.statistics.workarea.yearlyAverage') }}
+      h1 {{ $t('statistics.workarea.yearlyAverage') }}
       br
       line-chart(:chart-data="allDates()")
 
     article.nano-box
-      h1 {{ $t('projects.section.statistics.workarea.skillsUsed') }}
+      h1 {{ $t('statistics.workarea.skillsUsed') }}
       br
       bar-chart(:chart-data="allTools()")
 
     article.nano-box
-      h1 {{ $t('projects.section.statistics.workarea.database') }}
+      h1 {{ $t('statistics.workarea.database') }}
       hr
 
       .table(role="table")
         .table-head(role="rowgroup")
           nn-row(breakpoint="lg", table-element)
-            nn-column(size="40%", table-element) {{ $t('projects.section.statistics.workarea.table.name') }}
-            nn-column(size="20%", table-element) {{ $t('projects.section.statistics.workarea.table.type') }}
-            nn-column(size="20%", table-element) {{ $t('projects.section.statistics.workarea.table.date') }}
-            nn-column(size="20-35%", table-element) {{ $t('projects.section.statistics.workarea.table.client') }}
+            nn-column(size="40%", table-element) {{ $t('statistics.workarea.table.name') }}
+            nn-column(size="20%", table-element) {{ $t('statistics.workarea.table.type') }}
+            nn-column(size="20%", table-element) {{ $t('statistics.workarea.table.date') }}
+            nn-column(size="20-35%", table-element) {{ $t('statistics.workarea.table.client') }}
             nn-column(size="35")
 
         .table-body(role="rowgroup")

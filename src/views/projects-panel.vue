@@ -1,8 +1,8 @@
 <template lang="pug">
-.capsule
+nn-scroll-area(color="royal-purple")
   nn-row.row-block.row-block
     nn-column(size="100%")
-      legend {{ $t('projects.section.list.panel.filter.legend') }}
+      legend {{ $t('projects.panel.filter.legend') }}
 
       nn-row
         nn-column(size="100%")
@@ -12,7 +12,7 @@
                 label.nn-btn.nn-flat.nn-charcoal(
                   :class="{ 'nn-active': selection.filterData == 'companies' }"
                 )
-                  | {{ $t('projects.section.list.panel.filter.companies') }}
+                  | {{ $t('projects.panel.filter.companies') }}
                   input(
                     type="radio",
                     name="filter",
@@ -25,7 +25,7 @@
                 label.nn-btn.nn-flat.nn-charcoal(
                   :class="{ 'nn-active': selection.filterData == 'experiments' }"
                 )
-                  | {{ $t('projects.section.list.panel.filter.experiments') }}
+                  | {{ $t('projects.panel.filter.experiments') }}
                   input(
                     type="radio",
                     name="filter",
@@ -38,7 +38,7 @@
                 label.nn-btn.nn-flat.nn-charcoal(
                   :class="{ 'nn-active': selection.filterData == 'homework' }"
                 )
-                  | {{ $t('projects.section.list.panel.filter.homework') }}
+                  | {{ $t('projects.panel.filter.homework') }}
                   input(
                     type="radio",
                     name="filter",
@@ -48,8 +48,10 @@
 
             li: nn-row
               nn-column(size="100%")
-                label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.filterData == 'all' }")
-                  | {{ $t('projects.section.list.panel.filter.all') }}
+                label.nn-btn.nn-flat.nn-charcoal(
+                  :class="{ 'nn-active': selection.filterData == 'all' }"
+                )
+                  | {{ $t('projects.panel.filter.all') }}
                   input(
                     type="radio",
                     name="filter",

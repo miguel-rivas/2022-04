@@ -1,11 +1,11 @@
 <template lang="pug">
-.capsule
+nn-scroll-area(color="royal-purple")
   nn-row.row-block
     nn-column(size="100%")
-      legend {{ $t('canvas.section.gearBuilder.panel.properties.legend') }}
+      legend {{ $t('gearBuilder.panel.properties.legend') }}
 
       slider#corner-amount(
-        :label="$t('canvas.section.gearBuilder.panel.properties.teethAmount')",
+        :label="$t('gearBuilder.panel.properties.teethAmount')",
         min="3",
         max="50",
         step="1",
@@ -14,7 +14,7 @@
       )
 
       slider#outter-circle-radius(
-        :label="$t('canvas.section.gearBuilder.panel.properties.pitchRadius')",
+        :label="$t('gearBuilder.panel.properties.pitchRadius')",
         min="3",
         max="50",
         step="1",
@@ -23,7 +23,7 @@
       )
 
       slider#inner-circle-radius(
-        :label="$t('canvas.section.gearBuilder.panel.properties.baseCircleRadius')",
+        :label="$t('gearBuilder.panel.properties.baseCircleRadius')",
         min="3",
         max="50",
         step="1",
@@ -32,7 +32,7 @@
       )
 
       slider#main-perforation-radius(
-        :label="$t('canvas.section.gearBuilder.panel.properties.axisRadius')",
+        :label="$t('gearBuilder.panel.properties.axisRadius')",
         min="3",
         max="50",
         step="1",
@@ -41,7 +41,7 @@
       )
 
       slider#side-perforation-amount(
-        :label="$t('canvas.section.gearBuilder.panel.properties.sidePerforationAmount')",
+        :label="$t('gearBuilder.panel.properties.sidePerforationAmount')",
         min="3",
         max="50",
         step="1",
@@ -50,7 +50,7 @@
       )
 
       slider#side-perforation-radius(
-        :label="$t('canvas.section.gearBuilder.panel.properties.sidePerforationRadius')",
+        :label="$t('gearBuilder.panel.properties.sidePerforationRadius')",
         min="3",
         max="50",
         step="1",
@@ -59,7 +59,7 @@
       )
 
       slider#side-perforation-distance(
-        :label="$t('canvas.section.gearBuilder.panel.properties.sidePerforationDistance')",
+        :label="$t('gearBuilder.panel.properties.sidePerforationDistance')",
         min="3",
         max="50",
         step="1",

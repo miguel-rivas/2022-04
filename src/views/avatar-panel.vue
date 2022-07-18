@@ -1,8 +1,8 @@
 <template lang="pug">
-.capsule
+nn-scroll-area(color="royal-purple")
   nn-row.row-block
     nn-column(size="100%")
-      legend {{ $t('canvas.section.avatar.panel.presets.legend') }}
+      legend {{ $t('avatar.panel.presets.legend') }}
 
       nn-row
         nn-column(size="100%")
@@ -12,7 +12,7 @@
         nn-column(size="100%")
           btn(
             color="gold-tips",
-            :text="$t('canvas.section.avatar.panel.presets.90')",
+            :text="$t('avatar.panel.presets.90')",
             @click="baggy()"
           )
 
@@ -20,7 +20,7 @@
         nn-column(size="100%")
           btn(
             color="gold-tips",
-            :text="$t('canvas.section.avatar.panel.presets.work')",
+            :text="$t('avatar.panel.presets.work')",
             @click="monday()"
           )
 
@@ -28,7 +28,7 @@
         nn-column(size="100%")
           btn(
             color="gold-tips",
-            :text="$t('canvas.section.avatar.panel.presets.sunday')",
+            :text="$t('avatar.panel.presets.sunday')",
             @click="sunday()"
           )
 
@@ -36,7 +36,7 @@
         nn-column(size="100%")
           btn(
             color="gold-tips",
-            :text="$t('canvas.section.avatar.panel.presets.pooh')",
+            :text="$t('avatar.panel.presets.pooh')",
             @click="pooh()"
           )
 
@@ -44,7 +44,7 @@
         nn-column(size="100%")
           btn(
             color="gold-tips",
-            :text="$t('canvas.section.avatar.panel.presets.dc')",
+            :text="$t('avatar.panel.presets.dc')",
             @click="dcBoi()"
           )
 
@@ -52,7 +52,7 @@
         nn-column(size="100%")
           btn(
             color="gold-tips",
-            :text="$t('canvas.section.avatar.panel.presets.pool')",
+            :text="$t('avatar.panel.presets.pool')",
             @click="summer()"
           )
 
@@ -60,16 +60,16 @@
         nn-column(size="100%")
           btn(
             color="gold-tips",
-            :text="$t('canvas.section.avatar.panel.presets.franciscano')",
+            :text="$t('avatar.panel.presets.franciscano')",
             @click="franciscano()"
           )
 
   nn-row.row-block
     nn-column(size="100%")
-      legend {{ $t('canvas.section.avatar.panel.general.legend') }}
+      legend {{ $t('avatar.panel.general.legend') }}
 
       slider#height(
-        :label="$t('canvas.section.avatar.panel.general.height')",
+        :label="$t('avatar.panel.general.height')",
         min="0.80",
         max="1",
         step="0.01",
@@ -79,62 +79,62 @@
 
       nn-row: nn-column(size="100%"): btn(
         color="gold-tips",
-        :text="$t('canvas.section.avatar.panel.general.porcelain')",
+        :text="$t('avatar.panel.general.porcelain')",
         @click="tan('#e9ceb2ff', '#e9957bff', '#e9957bff')"
       )
 
       nn-row: nn-column(size="100%"): btn(
         color="gold-tips",
-        :text="$t('canvas.section.avatar.panel.general.honey')",
+        :text="$t('avatar.panel.general.honey')",
         @click="tan('#daad7fff', '#d28d5fff', '#d28d5fff')"
       )
 
       nn-row: nn-column(size="100%"): btn(
         color="gold-tips",
-        :text="$t('canvas.section.avatar.panel.general.caramel')",
+        :text="$t('avatar.panel.general.caramel')",
         @click="tan('#b68450ff', '#916d56ff', '#916d56ff')"
       )
 
       nn-row: nn-column(size="100%"): btn(
         color="gold-tips",
-        :text="$t('canvas.section.avatar.panel.general.umber')",
+        :text="$t('avatar.panel.general.umber')",
         @click="tan('#8b653dff', '#513b3bff', '#513b3bff')"
       )
 
       nn-row: nn-column(size="100%"): btn(
         color="gold-tips",
-        :text="$t('canvas.section.avatar.panel.general.sable')",
+        :text="$t('avatar.panel.general.sable')",
         @click="tan('#383028ff', '#4c433eff', '#4c433eff')"
       )
 
       nn-row: nn-column(size="100%"): btn(
         color="gold-tips",
-        :text="$t('canvas.section.avatar.panel.general.avatar')",
+        :text="$t('avatar.panel.general.avatar')",
         @click="tan('#1d2847ff', '#26345eff', '#26345eff')"
       )
 
       nn-row: nn-column(size="100%"): btn(
         color="gold-tips",
-        :text="$t('canvas.section.avatar.panel.general.hellboy')",
+        :text="$t('avatar.panel.general.hellboy')",
         @click="tan('#541e21ff', '#773636ff', '#773636ff')"
       )
 
       nn-row: nn-column(size="100%"): btn(
         color="gold-tips",
-        :text="$t('canvas.section.avatar.panel.general.bubblegum')",
+        :text="$t('avatar.panel.general.bubblegum')",
         @click="tan('#ad7b9cff', '#875a7dff', '#875a7dff')"
       )
 
       nn-row: nn-column(size="100%"): btn(
         color="gold-tips",
-        :text="$t('canvas.section.avatar.panel.general.green')",
+        :text="$t('avatar.panel.general.green')",
         @click="tan('#284426ff', '#1d281eff', '#1d281eff')"
       )
 
       nn-row: nn-column(size="100%")
         toggle-row.toggle-input(breakpoint="lg")
           template(v-slot:header)
-            nn-column(size="100%-35") {{ $t('canvas.section.avatar.panel.general.skinColor') }}
+            nn-column(size="100%-35") {{ $t('avatar.panel.general.skinColor') }}
           template(v-slot:more)
             nn-column(size="100%")
               color-picker(
@@ -146,7 +146,7 @@
       nn-row: nn-column(size="100%")
         toggle-row.toggle-input(breakpoint="lg")
           template(v-slot:header)
-            nn-column(size="100%-35") {{ $t('canvas.section.avatar.panel.general.skinColor2') }}
+            nn-column(size="100%-35") {{ $t('avatar.panel.general.skinColor2') }}
           template(v-slot:more)
             nn-column(size="100%")
               color-picker(
@@ -157,84 +157,84 @@
 
   nn-row.row-block
     nn-column(size="100%")
-      legend {{ $t('canvas.section.avatar.panel.face.legend') }}
+      legend {{ $t('avatar.panel.face.legend') }}
 
       nn-row: nn-column(size="100%"): btn(
         color="gold-tips",
-        :text="$t('canvas.section.avatar.panel.face.raven')",
+        :text="$t('avatar.panel.face.raven')",
         @click="dyeHair('#444444ff')"
       )
 
       nn-row: nn-column(size="100%"): btn(
         color="gold-tips",
-        :text="$t('canvas.section.avatar.panel.face.brunette')",
+        :text="$t('avatar.panel.face.brunette')",
         @click="dyeHair('#6d5542ff')"
       )
 
       nn-row: nn-column(size="100%"): btn(
         color="gold-tips",
-        :text="$t('canvas.section.avatar.panel.face.blonde')",
+        :text="$t('avatar.panel.face.blonde')",
         @click="dyeHair('#a8723aff')"
       )
 
       nn-row: nn-column(size="100%"): btn(
         color="gold-tips",
-        :text="$t('canvas.section.avatar.panel.face.ginger')",
+        :text="$t('avatar.panel.face.ginger')",
         @click="dyeHair('#a34026ff')"
       )
 
       nn-row: nn-column(size="100%"): btn(
         color="gold-tips",
-        :text="$t('canvas.section.avatar.panel.face.silver')",
+        :text="$t('avatar.panel.face.silver')",
         @click="dyeHair('#abababff')"
       )
 
       nn-row: nn-column(size="100%"): btn(
         color="gold-tips",
-        :text="$t('canvas.section.avatar.panel.face.blue')",
+        :text="$t('avatar.panel.face.blue')",
         @click="dyeHair('#191823ff')"
       )
 
       nn-row: nn-column(size="100%"): btn(
         color="gold-tips",
-        :text="$t('canvas.section.avatar.panel.face.red')",
+        :text="$t('avatar.panel.face.red')",
         @click="dyeHair('#3C1414ff')"
       )
 
       nn-row: nn-column(size="100%"): btn(
         color="gold-tips",
-        :text="$t('canvas.section.avatar.panel.face.bubblegum')",
+        :text="$t('avatar.panel.face.bubblegum')",
         @click="dyeHair('#913f76ff')"
       )
 
       nn-row: nn-column(size="100%"): btn(
         color="gold-tips",
-        :text="$t('canvas.section.avatar.panel.face.green')",
+        :text="$t('avatar.panel.face.green')",
         @click="dyeHair('#123524ff')"
       )
 
       nn-row
         nn-column(size="100%")
           label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.topHair }")
-            | {{ $t('canvas.section.avatar.panel.face.topHair') }}
+            | {{ $t('avatar.panel.face.topHair') }}
             input(type="checkbox", v-model="selection.topHair")
 
       nn-row
         nn-column(size="100%")
           label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.sideHair }")
-            | {{ $t('canvas.section.avatar.panel.face.sideHair') }}
+            | {{ $t('avatar.panel.face.sideHair') }}
             input(type="checkbox", v-model="selection.sideHair")
 
       nn-row
         nn-column(size="100%")
           label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.beard }")
-            | {{ $t('canvas.section.avatar.panel.face.beard') }}
+            | {{ $t('avatar.panel.face.beard') }}
             input(type="checkbox", v-model="selection.beard")
 
       nn-row: nn-column(size="100%")
         toggle-row.toggle-input(breakpoint="lg")
           template(v-slot:header)
-            nn-column(size="100%-35") {{ $t('canvas.section.avatar.panel.face.hairColor') }}
+            nn-column(size="100%-35") {{ $t('avatar.panel.face.hairColor') }}
           template(v-slot:more)
             nn-column(size="100%", table-element)
               color-picker(
@@ -246,7 +246,7 @@
       nn-row: nn-column(size="100%")
         toggle-row.toggle-input(breakpoint="lg")
           template(v-slot:header)
-            nn-column(size="100%-35", table-element) {{ $t('canvas.section.avatar.panel.face.hairSideColor') }}
+            nn-column(size="100%-35", table-element) {{ $t('avatar.panel.face.hairSideColor') }}
           template(v-slot:more)
             nn-column(size="100%", table-element)
               color-picker(
@@ -258,7 +258,7 @@
       nn-row: nn-column(size="100%")
         toggle-row.toggle-input(breakpoint="lg")
           template(v-slot:header)
-            nn-column(size="100%-35", table-element) {{ $t('canvas.section.avatar.panel.face.beardColor') }}
+            nn-column(size="100%-35", table-element) {{ $t('avatar.panel.face.beardColor') }}
           template(v-slot:more)
             nn-column(size="100%", table-element)
               color-picker(
@@ -270,7 +270,7 @@
       nn-row: nn-column(size="100%")
         toggle-row.toggle-input(breakpoint="lg")
           template(v-slot:header)
-            nn-column(size="100%-35", table-element) {{ $t('canvas.section.avatar.panel.face.lipsColor') }}
+            nn-column(size="100%-35", table-element) {{ $t('avatar.panel.face.lipsColor') }}
           template(v-slot:more)
             nn-column(size="100%", table-element)
               color-picker(
@@ -280,7 +280,7 @@
               )
 
       slider#happiness(
-        :label="$t('canvas.section.avatar.panel.face.happiness')",
+        :label="$t('avatar.panel.face.happiness')",
         min="-20",
         max="20",
         step="0.1",
@@ -290,32 +290,32 @@
 
   nn-row.row-block
     nn-column(size="100%")
-      legend {{ $t('canvas.section.avatar.panel.shirt.legend') }}
+      legend {{ $t('avatar.panel.shirt.legend') }}
 
       nn-row
         nn-column(size="100%")
           label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.shirt }")
-            | {{ $t('canvas.section.avatar.panel.shirt.shirt') }}
+            | {{ $t('avatar.panel.shirt.shirt') }}
             input(type="checkbox", v-model="selection.shirt")
 
       nn-row
         nn-column(size="50%")
           label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.leftPocket }")
-            | {{ $t('canvas.section.avatar.panel.shirt.lPockect') }}
+            | {{ $t('avatar.panel.shirt.lPockect') }}
             input(type="checkbox", v-model="selection.leftPocket")
         nn-column(size="50%")
           label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.rightPocket }")
-            | {{ $t('canvas.section.avatar.panel.shirt.rPockect') }}
+            | {{ $t('avatar.panel.shirt.rPockect') }}
             input(type="checkbox", v-model="selection.rightPocket")
 
       nn-row
         nn-column(size="100%")
           label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.buttons }")
-            | {{ $t('canvas.section.avatar.panel.shirt.buttons') }}
+            | {{ $t('avatar.panel.shirt.buttons') }}
             input(type="checkbox", v-model="selection.buttons")
 
       slider#shirt-length(
-        :label="$t('canvas.section.avatar.panel.shirt.length')",
+        :label="$t('avatar.panel.shirt.length')",
         min="0",
         max="2.25",
         step="0.01",
@@ -324,7 +324,7 @@
       )
 
       slider#sleeve-length(
-        :label="$t('canvas.section.avatar.panel.shirt.sleeve')",
+        :label="$t('avatar.panel.shirt.sleeve')",
         min="0",
         max="0.95",
         step="0.01",
@@ -335,7 +335,7 @@
       nn-row: nn-column(size="100%")
         toggle-row.toggle-input(breakpoint="lg")
           template(v-slot:header)
-            nn-column(size="100%-35") {{ $t('canvas.section.avatar.panel.shirt.shirtColor') }}
+            nn-column(size="100%-35") {{ $t('avatar.panel.shirt.shirtColor') }}
           template(v-slot:more)
             nn-column(size="100%", table-element)
               color-picker(
@@ -347,7 +347,7 @@
       nn-row: nn-column(size="100%")
         toggle-row.toggle-input(breakpoint="lg")
           template(v-slot:header)
-            nn-column(size="100%-35") {{ $t('canvas.section.avatar.panel.shirt.sleeveColor') }}
+            nn-column(size="100%-35") {{ $t('avatar.panel.shirt.sleeveColor') }}
           template(v-slot:more)
             nn-column(size="100%", table-element)
               color-picker(
@@ -359,7 +359,7 @@
       nn-row: nn-column(size="100%")
         toggle-row.toggle-input(breakpoint="lg")
           template(v-slot:header)
-            nn-column(size="100%-35") {{ $t('canvas.section.avatar.panel.shirt.pockectsColor') }}
+            nn-column(size="100%-35") {{ $t('avatar.panel.shirt.pockectsColor') }}
           template(v-slot:more)
             nn-column(size="100%", table-element)
               color-picker(
@@ -370,22 +370,22 @@
 
   nn-row.row-block
     nn-column(size="100%")
-      legend {{ $t('canvas.section.avatar.panel.pants.legend') }}
+      legend {{ $t('avatar.panel.pants.legend') }}
 
       nn-row
         nn-column(size="100%")
           label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.pants }")
-            | {{ $t('canvas.section.avatar.panel.pants.pants') }}
+            | {{ $t('avatar.panel.pants.pants') }}
             input(type="checkbox", v-model="selection.pants")
 
       nn-row
         nn-column(size="100%")
           label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.belt }")
-            | {{ $t('canvas.section.avatar.panel.pants.belt') }}
+            | {{ $t('avatar.panel.pants.belt') }}
             input(type="checkbox", v-model="selection.belt")
 
       slider#pants-length(
-        :label="$t('canvas.section.avatar.panel.pants.length')",
+        :label="$t('avatar.panel.pants.length')",
         min="0",
         max="1",
         step="0.01",
@@ -394,7 +394,7 @@
       )
 
       slider#pants-fit(
-        :label="$t('canvas.section.avatar.panel.pants.fit')",
+        :label="$t('avatar.panel.pants.fit')",
         min="0",
         max="31",
         step="1",
@@ -405,7 +405,7 @@
       nn-row: nn-column(size="100%")
         toggle-row.toggle-input(breakpoint="lg")
           template(v-slot:header)
-            nn-column(size="100%-35") {{ $t('canvas.section.avatar.panel.pants.pantsColor') }}
+            nn-column(size="100%-35") {{ $t('avatar.panel.pants.pantsColor') }}
           template(v-slot:more)
             nn-column(size="100%", table-element)
               color-picker(
@@ -417,7 +417,7 @@
       nn-row: nn-column(size="100%")
         toggle-row.toggle-input(breakpoint="lg")
           template(v-slot:header)
-            nn-column(size="100%-35") {{ $t('canvas.section.avatar.panel.pants.legsColor') }}
+            nn-column(size="100%-35") {{ $t('avatar.panel.pants.legsColor') }}
           template(v-slot:more)
             nn-column(size="100%", table-element)
               color-picker(
@@ -429,7 +429,7 @@
       nn-row: nn-column(size="100%")
         toggle-row.toggle-input(breakpoint="lg")
           template(v-slot:header)
-            nn-column(size="100%-35") {{ $t('canvas.section.avatar.panel.pants.beltColor') }}
+            nn-column(size="100%-35") {{ $t('avatar.panel.pants.beltColor') }}
           template(v-slot:more)
             nn-column(size="100%", table-element)
               color-picker(
@@ -440,18 +440,18 @@
 
   nn-row.row-block
     nn-column(size="100%")
-      legend {{ $t('canvas.section.avatar.panel.shoes.legend') }}
+      legend {{ $t('avatar.panel.shoes.legend') }}
 
       nn-row
         nn-column(size="100%")
           label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.shoes }")
-            | {{ $t('canvas.section.avatar.panel.shoes.shoes') }}
+            | {{ $t('avatar.panel.shoes.shoes') }}
             input(type="checkbox", v-model="selection.shoes")
 
       nn-row: nn-column(size="100%")
         toggle-row.toggle-input(breakpoint="lg")
           template(v-slot:header)
-            nn-column(size="100%-35") {{ $t('canvas.section.avatar.panel.shoes.shoesColor') }}
+            nn-column(size="100%-35") {{ $t('avatar.panel.shoes.shoesColor') }}
           template(v-slot:more)
             nn-column(size="100%", table-element)
               color-picker(

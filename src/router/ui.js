@@ -21,7 +21,7 @@ export default {
     panel: Vue.extend({
       props: {
         panelTitle: {
-          default: "ui.navTitle"
+          default: "ui.title"
         },
         links: {
           default: () => ([

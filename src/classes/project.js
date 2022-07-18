@@ -53,8 +53,8 @@ export class Group {
     this.children = children;
     this.filter = filter;
     this.id = getNewID(client, date);
-    this.description = `canvas.section.map.modal.${description}.position`;
-    this.list = `canvas.section.map.modal.${description}.summary`;
+    this.description = `map.modal.${description}.position`;
+    this.list = `map.modal.${description}.summary`;
     this.position = position
   }
 }

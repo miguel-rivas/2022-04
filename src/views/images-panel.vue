@@ -1,11 +1,11 @@
 <template lang="pug">
-.capsule
+nn-scroll-area(color="royal-purple")
   nn-row.row-block
     nn-column(size="100%")
-      legend {{ $t('galleries.section.images.panel.controller.legend') }}
+      legend {{ $t('images.panel.controller.legend') }}
 
       slider#outter-circle-radius(
-        :label="$t('galleries.section.images.panel.controller.rotationDelay')",
+        :label="$t('images.panel.controller.rotationDelay')",
         min="50",
         max="600",
         step="50",

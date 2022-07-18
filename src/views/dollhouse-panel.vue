@@ -1,5 +1,5 @@
 <template>
-  <div class="capsule">
+  <nn-scroll-area color="royal-purple">
     <nn-row class="row-block">
       <nn-column size="100%">
         <legend>{{ $t(`dollhouse.panel.controller.legend`) }}</legend>
@@ -25,7 +25,7 @@
         </nn-row>
       </nn-column>
     </nn-row>
-  </div>
+  </nn-scroll-area>
 </template>
 
 <script>

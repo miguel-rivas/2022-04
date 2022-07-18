@@ -1,8 +1,8 @@
 <template lang="pug">
-.capsule
+nn-scroll-area(color="royal-purple")
   nn-row.row-block
     nn-column(size="100%")
-      legend {{ $t('canvas.section.pixelEditor.panel.general.legend') }}
+      legend {{ $t('pixelEditor.panel.general.legend') }}
 
       nn-row
         nn-column(size="100%")
@@ -11,7 +11,7 @@
               btn(glyph="plus", color="burn-orange", @click="newImage()")
             nn-column(size="100%-35")
               btn(
-                :text="$t('canvas.section.pixelEditor.panel.general.new')",
+                :text="$t('pixelEditor.panel.general.new')",
                 color="gold-tips",
                 @click="newImage()"
               )
@@ -21,7 +21,7 @@
           btn(glyph="open", color="burn-orange", @click="openImage()")
         nn-column(size="100%-35")
           label.nn-btn.nn-flat.nn-gold-tips
-            | {{ $t('canvas.section.pixelEditor.panel.general.open') }}
+            | {{ $t('pixelEditor.panel.general.open') }}
             input(
               type="file",
               ref="file",
@@ -36,7 +36,7 @@
               btn(glyph="save", color="burn-orange", @click="saveJson()")
             nn-column(size="100%-35")
               btn(
-                :text="$t('canvas.section.pixelEditor.panel.general.save')",
+                :text="$t('pixelEditor.panel.general.save')",
                 color="gold-tips",
                 @click="saveJson()"
               )
@@ -48,14 +48,14 @@
               btn(glyph="download", color="burn-orange", @click="saveImage()")
             nn-column(size="100%-35")
               btn(
-                :text="$t('canvas.section.pixelEditor.panel.general.export')",
+                :text="$t('pixelEditor.panel.general.export')",
                 color="gold-tips",
                 @click="saveImage()"
               )
 
   nn-row.row-block
     nn-column(size="100%")
-      legend {{ $t('canvas.section.pixelEditor.panel.tools.legend') }}
+      legend {{ $t('pixelEditor.panel.tools.legend') }}
 
       nn-row
         nn-column(size="100%")
@@ -68,7 +68,7 @@
               )
             nn-column(size="100%-35")
               btn(
-                :text="$t('canvas.section.pixelEditor.panel.tools.lock')",
+                :text="$t('pixelEditor.panel.tools.lock')",
                 color="gold-tips",
                 @click="lockWorkarea()",
                 :active="selection.lock"
@@ -85,7 +85,7 @@
               )
             nn-column(size="100%-35")
               btn(
-                :text="$t('canvas.section.pixelEditor.panel.tools.dropper')",
+                :text="$t('pixelEditor.panel.tools.dropper')",
                 color="gold-tips",
                 @click="pickDropper()",
                 :active="selection.tool === 'dropper'"
@@ -102,7 +102,7 @@
               )
             nn-column(size="100%-35")
               btn(
-                :text="$t('canvas.section.pixelEditor.panel.tools.eraser')",
+                :text="$t('pixelEditor.panel.tools.eraser')",
                 color="gold-tips",
                 @click="eraser()",
                 :active="selection.currentColor.spinalCase === 'empty'"
@@ -110,7 +110,7 @@
 
   nn-row.row-block
     nn-column(size="100%")
-      legend {{ $t('canvas.section.pixelEditor.panel.palette.legend') }}
+      legend {{ $t('pixelEditor.panel.palette.legend') }}
 
       nn-row
         nn-column(size="100%-40")
@@ -140,7 +140,7 @@
             nn-column(size="100%")
               toggle-row.toggle-input(breakpoint="lg")
                 template(v-slot:header)
-                  nn-column(size="100%-35") {{ $t('canvas.section.pixelEditor.panel.palette.more') }}
+                  nn-column(size="100%-35") {{ $t('pixelEditor.panel.palette.more') }}
                 template(v-slot:more)
                   template(v-for="color in wikiColors")
                     nn-column(size="20%")
