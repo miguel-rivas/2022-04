@@ -7,6 +7,7 @@ import "./modules/commons";
 import VueKonva from "vue-konva";
 import 'nano-grid/components';
 import { getZapp } from "./modules/helpers";
+import { defineCustomElements as defineIonPhaser } from '@ion-phaser/core/loader';
 
 //-- db
 
@@ -24,6 +25,9 @@ Vue.use(globalManager);
 
 Vue.use(VueKonva);
 Vue.config.productionTip = false;
+Vue.config.ignoredElements = [/ion-\w*/];
+
+defineIonPhaser(window);
 
 new Vue({
   router,

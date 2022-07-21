@@ -42,12 +42,21 @@ import ThreeWorkareaView from '../views/three-workarea.vue';
 import FlipbookWorkareaView from '../views/flipbook-workarea.vue';
 import FlipbookPanelView from '../views/flipbook-panel.vue';
 
+import GameWorkareaView from '../views/game-workarea.vue';
+
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: '/',
-    redirect: '/projects',
+    redirect: '/game',
+  },
+  {
+    name: 'game',
+    path: '/game',
+    components: {
+      workarea: GameWorkareaView,
+    },
   },
   {
     name: 'resume',
