@@ -16,7 +16,7 @@ export default Vue.extend({
       type: Phaser.AUTO,
       scene: [mainScene],
       scale: {
-        zoom: 2,
+        zoom: 1,
       },
       physics: {
         default: "matter",

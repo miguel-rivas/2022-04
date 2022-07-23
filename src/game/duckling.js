@@ -17,7 +17,7 @@ export default class Duckling extends Phaser.Physics.Matter.Sprite {
     this.setExistingBody(compoundBody);
     this.setFixedRotation();
 
-    this.play(`${texture}_walk`);
+    this.play(`${texture}_idle`);
   }
 
   static preload(scene) {
@@ -45,8 +45,8 @@ export default class Duckling extends Phaser.Physics.Matter.Sprite {
         frames: scene.anims.generateFrameNumbers(item, {
           frames: [3],
         }),
-        frameRate: 8,
-        repeat: -1,
+        frameRate: 1,
+        repeat: 0,
       });
     });
   }

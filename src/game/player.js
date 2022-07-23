@@ -39,13 +39,13 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
     //   frames: scene.anims.generateFrameNumbers("goose", {
     //     frames: [0],
     //   }),
-    //   frameRate: 8,
+    //   frameRate: 1,
     //   repeat: 0,
     // });
   }
 
   update() {
-    const speed = 2.5;
+    const speed = 7;
 
     let playerVelocity = new Phaser.Math.Vector2();
     if (this.inputKeys.left.isDown) {
