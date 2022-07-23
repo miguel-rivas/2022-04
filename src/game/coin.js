@@ -2,8 +2,8 @@ import Phaser from "phaser";
 
 export default class Coin extends Phaser.Physics.Matter.Sprite {
   constructor(data) {
-    let { scene, x, y, texture, frame } = data;
-    super(scene.matter.world, x, y, texture, frame);
+    let { scene, x, y} = data;
+    super(scene.matter.world, x, y, "coin", undefined);
     this.scene.add.existing(this);
 
     const {Body, Bodies} = Phaser.Physics.Matter.Matter;

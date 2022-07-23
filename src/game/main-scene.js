@@ -35,15 +35,33 @@ export default {
     Player.create(this);
     Duckling.create(this);
 
-    // this.coin = new Coin({
-    //   scene: this,
-    //   x: 10,
-    //   y: 10,
-    //   texture: "coin",
-    // });
+    this.coins = [
+      new Coin({
+        scene: this,
+        x: 1000,
+        y: 1500,
+      }),
+
+      new Coin({
+        scene: this,
+        x: 1500,
+        y: 1000,
+      }),
+
+      new Coin({
+        scene: this,
+        x: 800,
+        y: 800,
+      }),
+
+      new Coin({
+        scene: this,
+        x: 100,
+        y: 100,
+      }),
+    ];
 
     this.ducklings = {
-
       duck: new Duckling({
         scene: this,
         x: 430,
@@ -81,7 +99,7 @@ export default {
       }),
     };
 
-    this.player = new Player({
+    this.goose = new Player({
       scene: this,
       x: 1180,
       y: 1080,
@@ -89,16 +107,16 @@ export default {
       frame: 0,
     });
 
-    this.player.inputKeys = this.input.keyboard.addKeys({
+    this.goose.inputKeys = this.input.keyboard.addKeys({
       up: Phaser.Input.Keyboard.KeyCodes.W,
       left: Phaser.Input.Keyboard.KeyCodes.A,
       right: Phaser.Input.Keyboard.KeyCodes.D,
       down: Phaser.Input.Keyboard.KeyCodes.S,
     });
 
-    this.player.setMass(1500);
-    this.lastDuckling = this.player;
-    this.player.followers = [];
+    this.goose.setMass(1500);
+    this.lastDuckling = this.goose;
+    this.goose.followers = [];
 
     Object.values(this.ducklings).forEach((item, index) => {
       item.setMass(20);
@@ -111,15 +129,17 @@ export default {
 
     this.matter.world.on('collisionstart', (event) => {
       const bodyA = event.source.pairs.list[0].bodyA.gameObject;
-      // bodyA.body.parts[1] = undefined;
       if (bodyA instanceof Duckling) {
-        this.player.followers.push(bodyA);
-        this.matter.add.joint(this.lastDuckling, bodyA, this.lastDuckling.width, 0.5 - 0.1 * this.player.followers.length);
-
+        // add current duckling to the group of the player's followers so it move according to the player's direction
+        this.goose.followers.push(bodyA);
+        // follow the last duckling added
+        this.matter.add.joint(this.lastDuckling, bodyA, this.lastDuckling.width, 0.5 - 0.1 * this.goose.followers.length);
+        // remove duckling's sensor
         bodyA.body.parts = [];
 
         // bodyA.body.parts[1].circleRadius = 16;
         // bodyA.body.parts[2].circleRadius = 3;
+
         // const ducklingCollider = Phaser.Physics.Matter.Matter.Bodies.circle(this.x, this.y, 16, { isSensor: false, label: 'ducklingCollider' });
         // const compoundBody = Phaser.Physics.Matter.Matter.Body.create({
         //   parts: [ducklingCollider],
@@ -128,24 +148,25 @@ export default {
         bodyA.play(`${bodyA.texture.key}_walk`);
         this.lastDuckling = bodyA;
       }
+
+      if (bodyA instanceof Coin) {
+        bodyA.destroy();
+      }
+
     });
 
-    // this.player.play("goose_walk");
+    // this.goose.play("goose_walk");
 
     // this.add.image(100, 200, "goose_coin");
     // this.add.image(200, 300, "brick");
     // this.add.image(300, 300, "brick_2");
 
-    this.coins = this.add.group({
-      key: 'coin',
-      repeat: 11,
-      setXY: { x: 1000, y: 1000, stepX: 70 }
-    });
+
 
     // this.coins.children.iterate(function (child) {
     //   // child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
     // });
-    // Phaser.Physics.Matter.Matter.World.add.overlap(this.player, this.coins, collectCoin, null, this);
+    // Phaser.Physics.Matter.Matter.World.add.overlap(this.goose, this.coins, collectCoin, null, this);
 
     // function collectCoin(player, coin) {
     //   coin.disableBody(true, true);
@@ -154,10 +175,10 @@ export default {
     this.matter.world.setBounds(0, 0, map.widthInPixels, map.heightInPixels);
     this.cameras.main.setBackgroundColor("#eee");
     this.cameras.main.setBounds(0, 0, map.widthInPixels, map.heightInPixels);
-    this.cameras.main.startFollow(this.player);
+    this.cameras.main.startFollow(this.goose);
 
   },
   update() {
-    this.player.update();
+    this.goose.update();
   },
 };
