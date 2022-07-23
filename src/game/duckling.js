@@ -1,6 +1,6 @@
 import Phaser from "phaser";
 
-const ducklings = ['chicken', 'duck', 'kiwi', 'phoenix', 'quail'];
+const ducklings = ['raven', 'duck', 'kiwi', 'phoenix', 'quail'];
 
 export default class Duckling extends Phaser.Physics.Matter.Sprite {
   constructor(data) {
@@ -38,7 +38,7 @@ export default class Duckling extends Phaser.Physics.Matter.Sprite {
         frames: scene.anims.generateFrameNumbers(item, {
           frames: [0, 1, 0, 2],
         }),
-        frameRate: 8,
+        frameRate: 16,
         repeat: -1,
       });
 

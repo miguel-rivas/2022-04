@@ -28,7 +28,7 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
       frames: scene.anims.generateFrameNumbers("goose", {
         frames: [0, 1, 0, 2],
       }),
-      frameRate: 8,
+      frameRate: 16,
       repeat: -1,
     });
 
@@ -44,19 +44,18 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
 
   update() {
     const speed = 7;
-    // console.log(this.followers)
     let playerVelocity = new Phaser.Math.Vector2();
     if (this.inputKeys.left.isDown) {
       this.setScale(1, 1);
-      
-      this.followers.forEach(item=> {
+
+      this.followers.forEach(item => {
         item.setScale(1, 1);
       })
       playerVelocity.x = -1;
     } else if (this.inputKeys.right.isDown) {
       playerVelocity.x = 1;
       this.setScale(-1, 1);
-      this.followers.forEach(item=> {
+      this.followers.forEach(item => {
         item.setScale(-1, 1);
       })
     }
@@ -73,9 +72,9 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
     this.setFixedRotation();
 
     if (Math.abs(this.body.velocity.x) > 0.1 || Math.abs(this.body.velocity.y) > 0.1) {
-      this.play('goose_walk');
+      this.play('goose_walk', true);
     } else {
-      this.play('goose_idle');
+      this.play('goose_idle', true);
     }
   }
 }

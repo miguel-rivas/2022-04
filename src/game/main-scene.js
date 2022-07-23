@@ -83,11 +83,11 @@ export default {
         texture: "phoenix",
         frame: 0,
       }),
-      chicken: new Duckling({
+      raven: new Duckling({
         scene: this,
         x: 1900,
         y: 700,
-        texture: "chicken",
+        texture: "raven",
         frame: 0,
       }),
       quail: new Duckling({
@@ -120,12 +120,7 @@ export default {
 
     Object.values(this.ducklings).forEach((item, index) => {
       item.setMass(20);
-      //   this.matter.add.joint(this.lastDuckling, item, 30, 0.9);
-      //   item.play(`${item.texture.key}_walk`);
-      //   this.lastDuckling = item;
     });
-
-
 
     this.matter.world.on('collisionstart', (event) => {
       const bodyA = event.source.pairs.list[0].bodyA.gameObject;
