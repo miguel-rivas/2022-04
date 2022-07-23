@@ -103,8 +103,9 @@ export default {
     // this.add.image(200, 300, "brick");
     // this.add.image(300, 300, "brick_2");
 
+    this.matter.world.setBounds(0, 0, map.widthInPixels, map.heightInPixels);
     this.cameras.main.setBackgroundColor("#eee");
-    this.cameras.main.setBounds(0,0,map.widthInPixels, map.heightInPixels);
+    this.cameras.main.setBounds(0, 0, map.widthInPixels, map.heightInPixels);
     this.cameras.main.startFollow(this.player);
 
   },
