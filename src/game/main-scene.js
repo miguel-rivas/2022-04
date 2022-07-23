@@ -12,7 +12,7 @@ export default {
     this.load.image("goose_coin", "/img/svg/coin_goose_pixel.svg");
     this.load.image("brick", "/img/svg/bricks_pixel.svg");
     this.load.image("brick_2", "/img/svg/bricks_2_pixel.svg");
-    this.load.image("tiles", "/img/map.svg");
+    this.load.image("tiles", "/img/nature.png");
     this.load.tilemapTiledJSON('map', "/img/map.json");
   },
   create() {
@@ -25,12 +25,12 @@ export default {
       map.createLayer('bridges', tileset, 0, 0),
     ];
 
-    layers.forEach(
-      item => {
-        item.setCollisionByProperty({collides: true});
-        this.matter.world.convertTilemapLayer(item);
-      }
-    )
+    // layers.forEach(
+    //   item => {
+    //     item.setCollisionByProperty({ collides: true });
+    //     this.matter.world.convertTilemapLayer(item);
+    //   }
+    // )
 
     Player.create(this);
     Duckling.create(this);
@@ -42,45 +42,44 @@ export default {
     //   texture: "coin",
     // });
 
-    this.duck = new Duckling({
-      scene: this,
-      x: 430,
-      y: 230,
-      texture: "duck",
-      frame: 0,
-    });
+    this.ducklings = {
 
-    this.kiwi = new Duckling({
-      scene: this,
-      x: 1600,
-      y: 1220,
-      texture: "kiwi",
-      frame: 0,
-    });
-
-    this.phoenix = new Duckling({
-      scene: this,
-      x: 150,
-      y: 1700,
-      texture: "phoenix",
-      frame: 0,
-    });
-
-    this.chicken = new Duckling({
-      scene: this,
-      x: 1900,
-      y: 700,
-      texture: "chicken",
-      frame: 0,
-    });
-
-    this.quail = new Duckling({
-      scene: this,
-      x: 1420,
-      y: 1860,
-      texture: "quail",
-      frame: 0,
-    });
+      duck: new Duckling({
+        scene: this,
+        x: 430,
+        y: 230,
+        texture: "duck",
+        frame: 0,
+      }),
+      kiwi: new Duckling({
+        scene: this,
+        x: 1600,
+        y: 1220,
+        texture: "kiwi",
+        frame: 0,
+      }),
+      phoenix: new Duckling({
+        scene: this,
+        x: 150,
+        y: 1700,
+        texture: "phoenix",
+        frame: 0,
+      }),
+      chicken: new Duckling({
+        scene: this,
+        x: 1900,
+        y: 700,
+        texture: "chicken",
+        frame: 0,
+      }),
+      quail: new Duckling({
+        scene: this,
+        x: 1420,
+        y: 1860,
+        texture: "quail",
+        frame: 0,
+      }),
+    };
 
     this.player = new Player({
       scene: this,
@@ -97,11 +96,60 @@ export default {
       down: Phaser.Input.Keyboard.KeyCodes.S,
     });
 
-    this.player.play("goose_walk");
+    this.player.setMass(1500);
+    this.lastDuckling = this.player;
+    this.player.followers = [];
+
+    Object.values(this.ducklings).forEach((item, index) => {
+      item.setMass(20);
+      //   this.matter.add.joint(this.lastDuckling, item, 30, 0.9);
+      //   item.play(`${item.texture.key}_walk`);
+      //   this.lastDuckling = item;
+    });
+
+
+
+    this.matter.world.on('collisionstart', (event) => {
+      const bodyA = event.source.pairs.list[0].bodyA.gameObject;
+      // bodyA.body.parts[1] = undefined;
+      if (bodyA instanceof Duckling) {
+        this.player.followers.push(bodyA);
+        this.matter.add.joint(this.lastDuckling, bodyA, this.lastDuckling.width, 0.5 - 0.1 * this.player.followers.length);
+
+        bodyA.body.parts = [];
+
+        // bodyA.body.parts[1].circleRadius = 16;
+        // bodyA.body.parts[2].circleRadius = 3;
+        // const ducklingCollider = Phaser.Physics.Matter.Matter.Bodies.circle(this.x, this.y, 16, { isSensor: false, label: 'ducklingCollider' });
+        // const compoundBody = Phaser.Physics.Matter.Matter.Body.create({
+        //   parts: [ducklingCollider],
+        // });
+        // bodyA.setExistingBody(compoundBody);
+        bodyA.play(`${bodyA.texture.key}_walk`);
+        this.lastDuckling = bodyA;
+      }
+    });
+
+    // this.player.play("goose_walk");
 
     // this.add.image(100, 200, "goose_coin");
     // this.add.image(200, 300, "brick");
     // this.add.image(300, 300, "brick_2");
+
+    this.coins = this.add.group({
+      key: 'coin',
+      repeat: 11,
+      setXY: { x: 1000, y: 1000, stepX: 70 }
+    });
+
+    // this.coins.children.iterate(function (child) {
+    //   // child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
+    // });
+    // Phaser.Physics.Matter.Matter.World.add.overlap(this.player, this.coins, collectCoin, null, this);
+
+    // function collectCoin(player, coin) {
+    //   coin.disableBody(true, true);
+    // }
 
     this.matter.world.setBounds(0, 0, map.widthInPixels, map.heightInPixels);
     this.cameras.main.setBackgroundColor("#eee");

@@ -9,10 +9,12 @@ export default class Duckling extends Phaser.Physics.Matter.Sprite {
     this.scene.add.existing(this);
 
     const { Body, Bodies } = Phaser.Physics.Matter.Matter;
-    var ducklingSensor = Bodies.circle(this.x, this.y, 20, { isSensor: true, label: 'ducklingSensor' });
+    // const ducklingCollider = Bodies.circle(this.x, this.y, 3, { isSensor: false, label: 'ducklingCollider' });
+    const ducklingSensor = Bodies.circle(this.x, this.y, 20, { isSensor: true, label: 'ducklingSensor' });
     const compoundBody = Body.create({
-      parts: [ducklingSensor],
-      friction: 0.35,
+      parts: [
+        // ducklingCollider,
+        ducklingSensor],
     });
     this.setExistingBody(compoundBody);
     this.setFixedRotation();
