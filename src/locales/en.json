@@ -428,5 +428,8 @@
         "title": "Pills"
       }
     }
+  },
+  "game": {
+    "title": "Game"
   }
 }

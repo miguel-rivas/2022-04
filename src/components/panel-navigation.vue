@@ -90,6 +90,11 @@ export default Vue.extend({
   data: () => ({
     navigation: [
       {
+        tooltip: i18n.t("game.title"),
+        icon: "duck",
+        route: ["game"],
+      },
+      {
         tooltip: i18n.t("projects.title"),
         icon: "duck",
         route: ["projects"],
