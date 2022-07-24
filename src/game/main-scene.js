@@ -119,10 +119,14 @@ export default {
     });
 
     this.goose.inputKeys = this.input.keyboard.addKeys({
-      up: Phaser.Input.Keyboard.KeyCodes.W,
-      left: Phaser.Input.Keyboard.KeyCodes.A,
-      right: Phaser.Input.Keyboard.KeyCodes.D,
-      down: Phaser.Input.Keyboard.KeyCodes.S,
+      up: Phaser.Input.Keyboard.KeyCodes.UP,
+      left: Phaser.Input.Keyboard.KeyCodes.LEFT,
+      right: Phaser.Input.Keyboard.KeyCodes.RIGHT,
+      down: Phaser.Input.Keyboard.KeyCodes.DOWN,
+      upWASD: Phaser.Input.Keyboard.KeyCodes.W,
+      leftWASD: Phaser.Input.Keyboard.KeyCodes.A,
+      rightWASD: Phaser.Input.Keyboard.KeyCodes.D,
+      downWASD: Phaser.Input.Keyboard.KeyCodes.S,
     });
 
     this.goose.setMass(500);

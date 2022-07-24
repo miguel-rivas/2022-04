@@ -45,14 +45,14 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
   update() {
     const speed = 7;
     let playerVelocity = new Phaser.Math.Vector2();
-    if (this.inputKeys.left.isDown) {
+    if (this.inputKeys.left.isDown || this.inputKeys.leftWASD.isDown) {
       this.setScale(1, 1);
 
       this.followers.forEach(item => {
         item.setScale(1, 1);
       });
       playerVelocity.x = -1;
-    } else if (this.inputKeys.right.isDown) {
+    } else if (this.inputKeys.right.isDown || this.inputKeys.rightWASD.isDown) {
       playerVelocity.x = 1;
       this.setScale(-1, 1);
       this.followers.forEach(item => {
@@ -60,9 +60,9 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
       });
     }
 
-    if (this.inputKeys.up.isDown) {
+    if (this.inputKeys.up.isDown || this.inputKeys.upWASD.isDown) {
       playerVelocity.y = -1;
-    } else if (this.inputKeys.down.isDown) {
+    } else if (this.inputKeys.down.isDown || this.inputKeys.downWASD.isDown) {
       playerVelocity.y = 1;
     }
 
