@@ -8,7 +8,7 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
 
     const { Body, Bodies } = Phaser.Physics.Matter.Matter;
     const playerCollider = Bodies.circle(this.x, this.y, 32, { isSensor: false, label: 'playerCollider' });
-    const playerSensor = Bodies.circle(this.x, this.y, 38, { isSensor: true, label: 'playerSensor' });
+    const playerSensor = Bodies.circle(this.x, this.y, 50, { isSensor: true, label: 'playerSensor' });
     const compoundBody = Body.create({
       parts: [playerCollider, playerSensor],
     });
@@ -16,7 +16,7 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
   }
 
   static preload(scene) {
-    scene.load.spritesheet('goose', '/img/goose.svg', {
+    scene.load.spritesheet('goose', '/img/goose.png', {
       frameHeight: 64,
       frameWidth: 64,
     });
@@ -50,14 +50,14 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
 
       this.followers.forEach(item => {
         item.setScale(1, 1);
-      })
+      });
       playerVelocity.x = -1;
     } else if (this.inputKeys.right.isDown) {
       playerVelocity.x = 1;
       this.setScale(-1, 1);
       this.followers.forEach(item => {
         item.setScale(-1, 1);
-      })
+      });
     }
 
     if (this.inputKeys.up.isDown) {
@@ -70,6 +70,9 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
     playerVelocity.scale(speed);
     this.setVelocity(playerVelocity.x, playerVelocity.y);
     this.setFixedRotation();
+    this.followers.forEach(item => {
+      item.setFixedRotation();
+    });
 
     if (Math.abs(this.body.velocity.x) > 0.1 || Math.abs(this.body.velocity.y) > 0.1) {
       this.play('goose_walk', true);
