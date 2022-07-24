@@ -1,5 +1,5 @@
 import Phaser from "phaser";
-
+import { getZapp } from "../modules/helpers";
 export default class Player extends Phaser.Physics.Matter.Sprite {
   constructor(data) {
     let { scene, x, y, texture, frame } = data;
@@ -16,7 +16,7 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
   }
 
   static preload(scene) {
-    scene.load.spritesheet('goose', '/img/goose.png', {
+    scene.load.spritesheet('goose', getZapp('img/game/goose.png'), {
       frameHeight: 64,
       frameWidth: 64,
     });

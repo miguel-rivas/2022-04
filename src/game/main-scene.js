@@ -2,6 +2,7 @@ import Phaser from "phaser";
 import Player from "../game/player";
 import Coin from "../game/coin";
 import Duckling from "../game/duckling";
+import { getZapp } from "../modules/helpers";
 
 export default {
   preload() {
@@ -9,9 +10,9 @@ export default {
     Coin.preload(this);
     Duckling.preload(this);
 
-    this.load.image("goose_coin", "/img/coin_goose.png");
-    this.load.image("tiles", "/img/nature.png");
-    this.load.tilemapTiledJSON('map', "/img/map.json");
+    this.load.image("goose_coin", getZapp("img/game/coin_goose.png"));
+    this.load.image("tiles", getZapp("img/game/nature.png"));
+    this.load.tilemapTiledJSON("map", getZapp("img/game/map.json"));
   },
   create() {
     const map = this.make.tilemap({ key: 'map' });

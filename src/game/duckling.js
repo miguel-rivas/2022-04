@@ -1,4 +1,5 @@
 import Phaser from "phaser";
+import { getZapp } from "../modules/helpers";
 
 const ducklings = ['raven', 'duck', 'kiwi', 'phoenix', 'quail'];
 
@@ -23,7 +24,7 @@ export default class Duckling extends Phaser.Physics.Matter.Sprite {
 
   static preload(scene) {
     ducklings.forEach(item => {
-      scene.load.spritesheet(item, `/img/${item}.png`, {
+      scene.load.spritesheet(item, getZapp(`img/game/${item}.png`), {
         frameHeight: 36,
         frameWidth: 36,
       });

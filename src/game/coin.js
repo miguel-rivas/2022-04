@@ -1,8 +1,9 @@
 import Phaser from "phaser";
+import { getZapp } from "../modules/helpers";
 
 export default class Coin extends Phaser.Physics.Matter.Sprite {
   constructor(data) {
-    let { scene, x, y, texture = "coin", size=10 } = data;
+    let { scene, x, y, texture = "coin", size = 10 } = data;
     super(scene.matter.world, x, y, texture);
     this.scene.add.existing(this);
 
@@ -17,6 +18,6 @@ export default class Coin extends Phaser.Physics.Matter.Sprite {
   }
 
   static preload(scene) {
-    scene.load.image("coin", "/img/coin.png");
+    scene.load.image("coin", getZapp("img/game/coin.png"));
   }
 }
