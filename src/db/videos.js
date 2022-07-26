@@ -2,6 +2,17 @@ import { tool } from "../enums/tools";
 
 export const videos = [
   {
+    url: "videos/game.mp4",
+    width: 325,
+    height: 580,
+    title: "2D Game",
+    soundtrack: { artist: "Georgel, Katzu Oso", song: "Casa" },
+    skills: [
+      tool.phaser,
+      tool.inkscape,
+    ],
+  },
+  {
     url: "videos/mr-universe.mp4",
     width: 325,
     height: 580,
