@@ -23,7 +23,7 @@
 <script>
 import Vue from "vue";
 import toggleRow from "../components/toggle-row.vue";
-import { linksDB } from "../db/github";
+import { linksDB } from "../db/links";
 
 export default Vue.extend({
   components: { toggleRow },

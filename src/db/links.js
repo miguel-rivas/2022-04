@@ -1,9 +1,7 @@
-import { tool } from "../enums/tools";
-
 export const linksDB = [
   {
     title: "Portfolio",
-    link: "https://miguel-rivas.github.io/matryoshka/game",
+    link: "https://miguel-rivas.github.io",
     color: "shamrock",
     glyph: "monster"
   },
