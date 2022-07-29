@@ -46,6 +46,7 @@ export const tool = {
   i18n: "vue-i18n",
   tweenMax: "TweenMax",
   redux: "Redux",
+  phaser: "Phaser",
   
   gulp: "Gulp",
   grunt: "GruntJS",

@@ -5,6 +5,25 @@ import { Project, Children, Link, LinkCodepen, LinkVimeo, LinkGithub, LinkWeb, P
 
 const pj = [
   new Project(
+    "2022/07/20",
+    "Game",
+    type.app,
+    client.miguelRivas,
+    [
+      toolEnum.vue,
+      toolEnum.phaser,
+      toolEnum.inkscape,
+    ],
+    undefined,
+    [
+    ],
+    [
+      new Children(client.miguelRivas, "2021/12/10"),
+    ],
+    undefined
+  ),
+
+  new Project(
     "2022/04/11",
     "Portfolio Matryoshka",
     type.app,

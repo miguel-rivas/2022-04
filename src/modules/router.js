@@ -49,7 +49,7 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: '/',
-    redirect: '/game',
+    redirect: '/locations',
   },
   {
     name: 'game',
@@ -63,7 +63,6 @@ const routes = [
     path: '/resume',
     components: {
       workarea: ResumeWorkareaView,
-      panel: DefaultPanelView,
     },
   },
   {
@@ -82,8 +81,8 @@ const routes = [
     },
   },
   {
-    name: 'github',
-    path: '/github',
+    name: 'links',
+    path: '/links',
     components: {
       workarea: GithubWorkareaView,
     },

@@ -90,11 +90,6 @@ export default Vue.extend({
   data: () => ({
     navigation: [
       {
-        tooltip: i18n.t("game.title"),
-        icon: "duck",
-        route: ["game"],
-      },
-      {
         tooltip: i18n.t("projects.title"),
         icon: "duck",
         route: ["projects"],
@@ -108,11 +103,6 @@ export default Vue.extend({
         tooltip: i18n.t("statistics.title"),
         icon: "chart",
         route: ["statistics"],
-      },
-      {
-        tooltip: i18n.t("githubOrg"),
-        icon: "github",
-        route: ["github"],
       },
       {
         divider: true,
@@ -139,6 +129,11 @@ export default Vue.extend({
         tooltip: i18n.t("dollhouse.title"),
         icon: "home",
         route: ["dollhouse"],
+      },
+      {
+        tooltip: i18n.t("game.title"),
+        icon: "move",
+        route: ["game"],
       },
       {
         tooltip: i18n.t("avatar.title"),
