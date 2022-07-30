@@ -6,7 +6,7 @@
         <template v-for="(item, itemIndex) in database">
           <nn-row :key="`itemIndex-${itemIndex}`">
             <nn-column size="100%">
-              <nn-btn
+              <btn
                 size="md"
                 :color="item.color"
                 :text="item.title"
@@ -21,13 +21,7 @@
 
       <footer class="nn-shade">
         <nn-crayon color="sunglow">
-          <a href="mailto:miguel.portfolio.gi7pt@simplelogin.fr"
-            >miguel.portfolio.gi7pt</a
-          >
-        </nn-crayon>
-        <wbr>
-        <nn-crayon color="gold-tips">
-          <a href="mailto:miguel.portfolio.gi7pt@simplelogin.fr">@simplelogin.fr</a>
+          <a :href="`mailto:${user.email}`">{{ user.email }}</a>
         </nn-crayon>
       </footer>
     </nn-container>
@@ -38,11 +32,13 @@
 import Vue from "vue";
 import toggleRow from "../components/toggle-row.vue";
 import { linksDB } from "../db/links";
+import { user } from "../db/user";
 
 export default Vue.extend({
   components: { toggleRow },
   data: () => ({
     database: linksDB,
+    user,
   }),
 });
 </script>

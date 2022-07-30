@@ -91,6 +91,7 @@ main {
 @import "views/2016";
 @import "views/2018";
 @import "views/resume";
+@import "views/mineros";
 
 @import "components/app";
 @import "components/table";
@@ -100,8 +101,6 @@ main {
 @import "components/gallery";
 @import "components/modal";
 @import "components/alert";
-@import "components/area-box";
-@import "components/loading";
 @import "components/toggle-input";
 
 @import "core/vue-theme";
