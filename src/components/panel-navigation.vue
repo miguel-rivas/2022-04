@@ -105,6 +105,11 @@ export default Vue.extend({
         route: ["statistics"],
       },
       {
+        tooltip: "Contact",
+        icon: "paper-plane",
+        route: ["links"],
+      },
+      {
         divider: true,
       },
       {
@@ -116,6 +121,14 @@ export default Vue.extend({
         tooltip: i18n.t("videos.title"),
         icon: "movie",
         route: ["videos"],
+      },
+      {
+        divider: true,
+      },
+      {
+        tooltip: "Apap",
+        icon: "robot",
+        route: ["mineros"],
       },
       {
         divider: true,

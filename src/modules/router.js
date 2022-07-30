@@ -1,8 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-import DefaultPanelView from '../views/default-panel.vue';
-
 import ResumeWorkareaView from '../views/resume-workarea.vue';
 import UiRouter from '../router/ui';
 import TimelineRouter from '../router/timeline';
@@ -10,7 +8,7 @@ import TimelineRouter from '../router/timeline';
 import ProjectsWorkareaView from '../views/projects-workarea.vue';
 import ProjectsPanelView from '../views/projects-panel.vue';
 import StatisticsWorkareaView from '../views/statistics-workarea.vue';
-import GithubWorkareaView from '../views/github-workarea.vue';
+import ContactWorkareaView from '../views/contact-workarea.vue';
 
 import ImagesWorkareaView from '../views/images-workarea.vue';
 import ImagesPanelView from '../views/images-panel.vue';
@@ -43,6 +41,7 @@ import FlipbookWorkareaView from '../views/flipbook-workarea.vue';
 import FlipbookPanelView from '../views/flipbook-panel.vue';
 
 import GameWorkareaView from '../views/game-workarea.vue';
+import ApapWorkareaView from '../views/mineros-workarea.vue';
 
 Vue.use(VueRouter);
 
@@ -50,6 +49,13 @@ const routes = [
   {
     path: '/',
     redirect: '/locations',
+  },
+  {
+    name: 'mineros',
+    path: '/mineros',
+    components: {
+      workarea: ApapWorkareaView,
+    },
   },
   {
     name: 'game',
@@ -84,7 +90,7 @@ const routes = [
     name: 'links',
     path: '/links',
     components: {
-      workarea: GithubWorkareaView,
+      workarea: ContactWorkareaView,
     },
   },
 
