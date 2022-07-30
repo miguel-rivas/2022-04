@@ -24,6 +24,11 @@ files=(
 
   "dollhouse"
   "drakkar"
+
+  "formability-401"
+  "formability-404"
+  "formability-500"
+  "formability-demo"
     
   "gallery"
   "game"
