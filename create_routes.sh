@@ -1,6 +1,69 @@
 cd dist
 
-files=("mineros" "dollhouse" "game" "stargazer" "soundboard" "projects" "list" "locations" "statistics" "links" "gallery" "images" "videos" "ui" "colors" "icons" "grid" "grid-gallery" "timeline" "2014" "2014-home" "2014-projects" "2014-contact" "2016" "2018" "2018-home" "2018-presidente" "2018-drlogic" "2018-apap" "2018-bpr" "2022" "threejs" "cube" "spirit" "car" "xwing" "drakkar" "portfolio2017" "audio2" "carrousel" "css" "house" "pills" "minivan" "window" "resume")
+files=(
+  "2014"
+  "2014-home"
+  "2014-projects"
+  "2014-contact"
+  "2016"
+  "2018"
+  "2018-home"
+  "2018-presidente"
+  "2018-drlogic"
+  "2018-apap"
+  "2018-bpr"
+  "2022"
+
+  "audio2"
+
+  "car"
+  "carrousel"
+  "colors"
+  "cube"
+  "css"
+
+  "dollhouse"
+  "drakkar"
+    
+  "gallery"
+  "game"
+  "grid"
+  "grid-gallery"
+
+  "icons"
+  "images"
+
+  "house"
+  
+  "mineros"
+  "minivan"
+
+  "links"
+  "list"
+  "locations"
+  
+  "pills"
+  "portfolio2017"
+  "projects"
+
+  "resume"
+  
+  "soundboard"
+  "spirit"
+  "stargazer"
+  "statistics"
+  
+  "timeline"
+  "threejs"
+
+  "ui"
+
+  "videos"
+  
+  "window"
+
+  "xwing"
+)
 
 for f in ${files[@]}; do
   rm -r -f -v ${f}.html
