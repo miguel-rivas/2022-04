@@ -127,8 +127,28 @@ export default Vue.extend({
       },
       {
         tooltip: "Apap",
-        icon: "robot",
+        icon: "person",
         route: ["mineros"],
+      },
+      {
+        tooltip: "Formability Demo",
+        icon: "robot",
+        route: ["formability-demo"],
+      },
+      {
+        tooltip: "Formability 401",
+        icon: "lock",
+        route: ["formability-401"],
+      },
+      {
+        tooltip: "Formability 404",
+        icon: "lock",
+        route: ["formability-404"],
+      },
+      {
+        tooltip: "Formability 500",
+        icon: "lock",
+        route: ["formability-500"],
       },
       {
         divider: true,

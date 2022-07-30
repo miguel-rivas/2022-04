@@ -43,12 +43,45 @@ import FlipbookPanelView from '../views/flipbook-panel.vue';
 import GameWorkareaView from '../views/game-workarea.vue';
 import ApapWorkareaView from '../views/mineros-workarea.vue';
 
+import Form401WorkareaView from '../views/formability-401-workarea.vue';
+import Form404WorkareaView from '../views/formability-404-workarea.vue';
+import Form500WorkareaView from '../views/formability-500-workarea.vue';
+import FormDemoWorkareaView from '../views/formability-demo-workarea.vue';
+
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: '/',
     redirect: '/locations',
+  },
+  {
+    name: 'formability-401',
+    path: '/formability-401',
+    components: {
+      workarea: Form401WorkareaView,
+    },
+  },
+  {
+    name: 'formability-404',
+    path: '/formability-404',
+    components: {
+      workarea: Form404WorkareaView,
+    },
+  },
+  {
+    name: 'formability-500',
+    path: '/formability-500',
+    components: {
+      workarea: Form500WorkareaView,
+    },
+  },
+  {
+    name: 'formability-demo',
+    path: '/formability-demo',
+    components: {
+      workarea: FormDemoWorkareaView,
+    },
   },
   {
     name: 'mineros',
