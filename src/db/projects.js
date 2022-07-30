@@ -16,6 +16,7 @@ const pj = [
     ],
     undefined,
     [
+      new LinkWeb("matryoshka/game", "App"),
     ],
     [
       new Children(client.miguelRivas, "2021/12/10"),
@@ -2053,8 +2054,7 @@ const pj = [
     new Preview("apap"),
     [
 
-      new LinkWeb("apap-mineriza-familia", "App"),
-      new LinkGithub("apap-mineriza-familia"),
+      new LinkWeb("matryoshka/mineros", "App"),
     ],
     [
       new Children(client.miguelRivas, "2017/04/04"),
