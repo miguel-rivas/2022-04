@@ -2141,10 +2141,7 @@ const pj = [
     [
       new LinkVimeo("207152756", "Video"),
     ],
-    [
-      new Children(client.drLogic, "2016/03/08"),
-      new Children(client.miguelRivas, "2017/03/06"),
-    ],
+    undefined,
     ["no-listing"]
   ),
 

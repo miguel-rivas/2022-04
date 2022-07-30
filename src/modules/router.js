@@ -10,7 +10,7 @@ import TimelineRouter from '../router/timeline';
 import ProjectsWorkareaView from '../views/projects-workarea.vue';
 import ProjectsPanelView from '../views/projects-panel.vue';
 import StatisticsWorkareaView from '../views/statistics-workarea.vue';
-import GithubWorkareaView from '../views/github-workarea.vue';
+import ContactWorkareaView from '../views/contact-workarea.vue';
 
 import ImagesWorkareaView from '../views/images-workarea.vue';
 import ImagesPanelView from '../views/images-panel.vue';
@@ -84,7 +84,7 @@ const routes = [
     name: 'links',
     path: '/links',
     components: {
-      workarea: GithubWorkareaView,
+      workarea: ContactWorkareaView,
     },
   },
 

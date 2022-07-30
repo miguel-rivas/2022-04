@@ -243,6 +243,27 @@ main {
 }
 
 /*------------------------*/
+
+nn-crayon {
+  a {
+    color: inherit;
+  }
+}
+
+.section-links {
+  footer {
+    text-align: center;
+  }
+  nn-crayon {
+    a {
+      font-size: 0.85rem;
+      text-decoration: none;
+      letter-spacing: 1px;
+      word-break: break-word;
+    }
+  } 
+}
+
 .section-soundboard {
   .workarea {
     text-align: center;
