@@ -30,18 +30,18 @@ files=(
   "grid"
   "grid-gallery"
 
+  "house"
+
   "icons"
   "images"
-
-  "house"
-  
-  "mineros"
-  "minivan"
 
   "links"
   "list"
   "locations"
   
+  "mineros"
+  "minivan"
+
   "pills"
   "portfolio2017"
   "projects"
