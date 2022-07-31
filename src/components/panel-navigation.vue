@@ -83,9 +83,9 @@
 <script>
 import Vue from "vue";
 import { mapGetters, mapMutations } from "vuex";
-import { linkGithub, linkLinkedin } from "../db/user";
+import { linkGithub, linkLinkedin } from "@/db/user";
 import i18n from "../i18n";
-import { playSound } from "../modules/helpers";
+import { playSound } from "@/modules/helpers";
 
 export default Vue.extend({
   components: {},

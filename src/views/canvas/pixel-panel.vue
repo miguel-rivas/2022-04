@@ -154,10 +154,10 @@ nn-scroll-area(color="royal-purple")
 
 <script>
 import Vue from "vue";
-import { pixelColors, wikiColors, allColors } from "../db/wiki-colors";
-import { wikiColor } from "../enums/wikicolors";
-import { decToHex, hexToDec } from "../modules/helpers";
-import ToggleRow from "../components/toggle-row.vue";
+import { pixelColors, wikiColors, allColors } from "@/db/wiki-colors";
+import { wikiColor } from "@/enums/wikicolors";
+import { decToHex, hexToDec } from "@/modules/helpers";
+import ToggleRow from "@/components/toggle-row.vue";
 
 export default Vue.extend({
   components: { ToggleRow },

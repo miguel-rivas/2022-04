@@ -17,7 +17,7 @@
 
 <script>
 import Vue from "vue";
-import { gColorsDB } from "../db/colors";
+import { gColorsDB } from "@/db/colors";
 
 export default Vue.extend({
   data: () => ({

@@ -17,8 +17,8 @@
 
 <script>
 import Vue from "vue";
-import { colorsType, directionsType } from "../modules/types";
-import { nano, titleCase } from "../modules/helpers";
+import { colorsType, directionsType } from "@/modules/types";
+import { nano, titleCase } from "@/modules/helpers";
 
 export default Vue.extend({
   props: {

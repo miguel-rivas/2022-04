@@ -37,7 +37,7 @@
 
 <script>
 import Vue from "vue";
-import { allDBListWithImages } from "../../modules/format-db";
+import { allDBListWithImages } from "@/modules/format-db";
 import { mapGetters } from "vuex";
 
 export default Vue.extend({

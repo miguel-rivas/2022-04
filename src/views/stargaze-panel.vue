@@ -16,7 +16,7 @@
 
 <script>
 import Vue from "vue";
-import Slider from "../mixins/slider";
+import Slider from "@/mixins/slider";
 
 export default Vue.extend({
   mixins: [Slider],

@@ -5,7 +5,7 @@ nn-scroll-area(color="royal-purple")
 
 <script>
 import Vue from "vue";
-import PieChart from "../components/pie-chart.vue";
+import PieChart from "@/components/pie-chart.vue";
 
 export default Vue.extend({
   components: {

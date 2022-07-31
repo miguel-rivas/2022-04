@@ -464,8 +464,8 @@ nn-scroll-area(color="royal-purple")
 <script>
 import Vue from "vue";
 import ColorPicker from "mr-vue-color/src/components/Simple.vue";
-import ToggleRow from "../components/toggle-row.vue";
-import Slider from "../mixins/slider";
+import ToggleRow from "@/components/toggle-row.vue";
+import Slider from "@/mixins/slider";
 
 export default Vue.extend({
   mixins: [Slider],

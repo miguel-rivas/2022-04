@@ -1,4 +1,4 @@
-import { spinalCase, pascalCase, titleCase } from "../modules/helpers";
+import { spinalCase, pascalCase, titleCase } from "@/modules/helpers";
 
 export class gColor {
   label;

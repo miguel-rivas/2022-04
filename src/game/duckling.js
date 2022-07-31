@@ -1,5 +1,5 @@
 import Phaser from "phaser";
-import { getZapp } from "../modules/helpers";
+import { getZapp } from "@/modules/helpers";
 
 const ducklings = ['raven', 'duck', 'kiwi', 'phoenix', 'quail'];
 

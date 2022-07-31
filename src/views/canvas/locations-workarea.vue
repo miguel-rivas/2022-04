@@ -35,10 +35,10 @@
 <script>
 import Vue from "vue";
 import { mapGetters } from "vuex";
-import Modal from "../components/modal.vue";
-import { client } from "../enums/clients";
-import Carrousel from "../components/carrousel-konva.vue";
-import { locationsDBList } from "../modules/format-db";
+import Modal from "@/components/modal.vue";
+import { client } from "@/enums/clients";
+import Carrousel from "@/components/carrousel-konva.vue";
+import { locationsDBList } from "@/modules/format-db";
 
 export default Vue.extend({
   components: { Modal, Carrousel },

@@ -5,9 +5,9 @@
 <script>
 import Vue from "vue";
 import * as THREE from "three";
-import { wikiColors } from "../db/wiki-colors";
-import ThreeScene from "../mixins/three-scene";
-import { rad } from "../modules/helpers";
+import { wikiColors } from "@/db/wiki-colors";
+import ThreeScene from "@/mixins/three-scene";
+import { rad } from "@/modules/helpers";
 
 export default Vue.extend({
   mixins: [ThreeScene],

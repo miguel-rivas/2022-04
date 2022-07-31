@@ -67,7 +67,7 @@
 <script>
 import Vue from "vue";
 import toggleRow from "./toggle-row.vue";
-import { allDBObj } from "../modules/format-db";
+import { allDBObj } from "@/modules/format-db";
 
 export default Vue.extend({
   components: { toggleRow },

@@ -16,7 +16,7 @@ nn-scroll-area(color="royal-purple")
 
 <script>
 import Vue from "vue";
-import { allColors } from "../db/wiki-colors";
+import { allColors } from "@/db/wiki-colors";
 
 export default Vue.extend({
   data: () => ({

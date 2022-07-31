@@ -1,4 +1,4 @@
-import { allColors } from "../db/wiki-colors";
+import { allColors } from "@/db/wiki-colors";
 
 export const pixelState = {
   gridSize: 32,

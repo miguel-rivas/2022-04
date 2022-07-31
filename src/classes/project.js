@@ -1,6 +1,6 @@
-import { getZapp, turingDate, getNewID } from "../modules/helpers";
-import { user } from "../db/user";
-import { toolR } from "../enums/tools";
+import { getZapp, turingDate, getNewID } from "@/modules/helpers";
+import { user } from "@/db/user";
+import { toolR } from "@/enums/tools";
 
 export class Project {
   date;

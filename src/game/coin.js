@@ -1,5 +1,5 @@
 import Phaser from "phaser";
-import { getZapp } from "../modules/helpers";
+import { getZapp } from "@/modules/helpers";
 
 export default class Coin extends Phaser.Physics.Matter.Sprite {
   constructor(data) {

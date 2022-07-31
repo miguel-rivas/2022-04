@@ -1,6 +1,6 @@
-import { dateToNumber, turingDate, getNewID } from "../modules/helpers";
-import { projectsDB as rawDB } from "../db/projects";
-import { groupsDB as rawGroupsDB } from "../db/groups";
+import { dateToNumber, turingDate, getNewID } from "@/modules/helpers";
+import { projectsDB as rawDB } from "@/db/projects";
+import { groupsDB as rawGroupsDB } from "@/db/groups";
 
 export function sortByDate(a, b) {
   return dateToNumber(b.date) - dateToNumber(a.date);

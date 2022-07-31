@@ -6,8 +6,8 @@
 import Vue from "vue";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import StudioLight from "../mixins/three-studio-light";
-import { getZapp, rad } from "../modules/helpers";
+import StudioLight from "@/mixins/three-studio-light";
+import { getZapp, rad } from "@/modules/helpers";
 import { mapGetters } from "vuex";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 

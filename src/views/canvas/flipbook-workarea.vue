@@ -5,9 +5,9 @@
 <script>
 import Vue from "vue";
 import * as THREE from "three";
-import ThreeScene from "../mixins/three-scene";
-import StudioLight from "../mixins/three-studio-light";
-import { rad } from "../modules/helpers";
+import ThreeScene from "@/mixins/three-scene";
+import StudioLight from "@/mixins/three-studio-light";
+import { rad } from "@/modules/helpers";
 
 export default Vue.extend({
   mixins: [ThreeScene, StudioLight],

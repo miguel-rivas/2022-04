@@ -40,7 +40,7 @@
 
 <script>
 import Vue from "vue";
-import { getIcon } from "../modules/helpers";
+import { getIcon } from "@/modules/helpers";
 
 export default Vue.extend({
   props: {

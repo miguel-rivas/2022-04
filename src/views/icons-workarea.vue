@@ -13,7 +13,7 @@ nn-scroll-area(color="royal-purple")
 
 <script>
 import Vue from "vue";
-import { icons } from "../db/icons";
+import { icons } from "@/db/icons";
 
 export default Vue.extend({
   data: () => ({

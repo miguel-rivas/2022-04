@@ -1,4 +1,4 @@
-import {sortByDate} from "../modules/format-db";
+import {sortByDate} from "@/modules/format-db";
 
 export const db2018 = [
   {

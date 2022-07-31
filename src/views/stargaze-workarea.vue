@@ -15,8 +15,8 @@
 <script>
 import Vue from "vue";
 import { mapGetters } from "vuex";
-import mountains from "../components/mountains.vue";
-import { currentTuringDate } from "../modules/helpers";
+import mountains from "@/components/mountains.vue";
+import { currentTuringDate } from "@/modules/helpers";
 
 export default Vue.extend({
   components: { mountains },

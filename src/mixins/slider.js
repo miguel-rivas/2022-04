@@ -1,5 +1,5 @@
 import Vue from "vue";
-import slider from "../components/slider.vue";
+import slider from "@/components/slider.vue";
 
 export default Vue.extend({
   components: { slider },

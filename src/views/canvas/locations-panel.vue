@@ -25,7 +25,7 @@ nn-scroll-area(color="royal-purple")
 
 <script>
 import Vue from "vue";
-import { locationsDBList } from "../modules/format-db";
+import { locationsDBList } from "@/modules/format-db";
 
 export default Vue.extend({
   data: () => ({

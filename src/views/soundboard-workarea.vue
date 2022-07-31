@@ -23,8 +23,8 @@
 
 <script>
 import Vue from "vue";
-import toggleRow from "../components/toggle-row.vue";
-import { getZapp } from "../modules/helpers";
+import toggleRow from "@/components/toggle-row.vue";
+import { getZapp } from "@/modules/helpers";
 
 export default Vue.extend({
   components: { toggleRow },

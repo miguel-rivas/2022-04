@@ -17,32 +17,33 @@ import ImagesPanelView from '../views/2022/images-panel.vue';
 import VideosWorkareaView from '../views/2022/video-workarea.vue';
 
 import CanvasNavbarView from '../views/canvas/navbar.vue';
-import GearWorkareaView from '../views/gear-workarea.vue';
-import GearPanelView from '../views/gear-panel.vue';
-import WheelWorkareaView from '../views/wheel-workarea.vue';
-import WheelPanelView from '../views/wheel-panel.vue';
-import LocationsPanelView from '../views/locations-panel.vue';
-import LocationsWorkareaView from '../views/locations-workarea.vue';
-import AvatarWorkareaView from '../views/avatar-workarea.vue';
-import AvatarPanelView from '../views/avatar-panel.vue';
-import PixelWorkareaView from '../views/pixel-workarea.vue';
-import PixelPanelView from '../views/pixel-panel.vue';
-import DollhouseWorkareaView from '../views/dollhouse-workarea.vue';
-import DollhousePanelView from '../views/dollhouse-panel.vue';
+import GearWorkareaView from '../views/canvas/gear-workarea.vue';
+import GearPanelView from '../views/canvas/gear-panel.vue';
+import WheelWorkareaView from '../views/canvas/wheel-workarea.vue';
+import WheelPanelView from '../views/canvas/wheel-panel.vue';
+import LocationsPanelView from '../views/canvas/locations-panel.vue';
+import LocationsWorkareaView from '../views/canvas/locations-workarea.vue';
+import AvatarWorkareaView from '../views/canvas/avatar-workarea.vue';
+import AvatarPanelView from '../views/canvas/avatar-panel.vue';
+import PixelWorkareaView from '../views/canvas/pixel-workarea.vue';
+import PixelPanelView from '../views/canvas/pixel-panel.vue';
+import DollhouseWorkareaView from '../views/canvas/dollhouse-workarea.vue';
+import DollhousePanelView from '../views/canvas/dollhouse-panel.vue';
+import GameWorkareaView from '../views/canvas/game-workarea.vue';
+
+import CubeWorkareaView from '../views/canvas/cube-workarea.vue';
+import CubePanelView from '../views/canvas/cube-panel.vue';
+import ThreePanelView from '../views/canvas/three-panel.vue';
+import ThreeWorkareaView from '../views/canvas/three-workarea.vue';
+import FlipbookWorkareaView from '../views/canvas/flipbook-workarea.vue';
+import FlipbookPanelView from '../views/canvas/flipbook-panel.vue';
 
 import HouseWorkareaView from '../views/house-workarea.vue';
 import WindowWorkareaView from '../views/window-workarea.vue';
 import MinivanWorkareaView from '../views/minivan-workarea.vue';
 import PillsWorkareaView from '../views/pills-workarea.vue';
 
-import CubeWorkareaView from '../views/cube-workarea.vue';
-import CubePanelView from '../views/cube-panel.vue';
-import ThreePanelView from '../views/three-panel.vue';
-import ThreeWorkareaView from '../views/three-workarea.vue';
-import FlipbookWorkareaView from '../views/flipbook-workarea.vue';
-import FlipbookPanelView from '../views/flipbook-panel.vue';
 
-import GameWorkareaView from '../views/game-workarea.vue';
 import ApapWorkareaView from '../views/apap/mineros.vue';
 import ApapNavbarView from '../views/apap/navbar.vue';
 

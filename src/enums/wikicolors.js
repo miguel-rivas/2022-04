@@ -1,4 +1,4 @@
-import Enumerator from "../modules/enumerator";
+import Enumerator from "@/modules/enumerator";
 
 export const wikiColor = new Enumerator(
   'empty',

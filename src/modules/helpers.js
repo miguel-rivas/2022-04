@@ -1,5 +1,5 @@
 import { DateTime } from "luxon";
-import { icons } from "../db/icons";
+import { icons } from "@/db/icons";
 
 const initialDate = { years: 1990, months: 5, days: 5, hours: 13, };
 

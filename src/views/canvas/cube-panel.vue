@@ -24,11 +24,17 @@ nn-scroll-area(color="royal-purple")
           label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.pause }")
             | {{ $t('three.panel.controller.pause') }}
             input(type="checkbox", v-model="selection.pause")
+
+      nn-row
+        nn-column(size="100%")
+          label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.lines }")
+            | {{ $t('three.panel.controller.lines') }}
+            input(type="checkbox", v-model="selection.lines")
 </template>
 
 <script>
 import Vue from "vue";
-import Slider from "../mixins/slider";
+import Slider from "@/mixins/slider";
 
 export default Vue.extend({
   mixins: [Slider],

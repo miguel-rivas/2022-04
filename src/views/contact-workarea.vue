@@ -30,9 +30,9 @@
 
 <script>
 import Vue from "vue";
-import toggleRow from "../components/toggle-row.vue";
-import { linksDB } from "../db/links";
-import { user } from "../db/user";
+import toggleRow from "@/components/toggle-row.vue";
+import { linksDB } from "@/db/links";
+import { user } from "@/db/user";
 
 export default Vue.extend({
   components: { toggleRow },

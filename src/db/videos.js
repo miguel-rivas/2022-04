@@ -1,4 +1,4 @@
-import { tool } from "../enums/tools";
+import { tool } from "@/enums/tools";
 
 export const videos = [
   {

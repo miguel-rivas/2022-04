@@ -91,8 +91,8 @@
 <script>
 import Vue from "vue";
 import summaryRow from "./summary.vue";
-import { getNewID } from "../modules/helpers";
-import { allDBObj } from "../modules/format-db";
+import { getNewID } from "@/modules/helpers";
+import { allDBObj } from "@/modules/format-db";
 
 export default Vue.extend({
   components: { summaryRow },
