@@ -4,6 +4,9 @@
       <p>Miguel Rivas</p>
       <ul>
         <li>
+          <router-link to="2022-home">Home</router-link>
+        </li>
+        <li>
           <router-link to="2022-projects">Projects</router-link>
         </li>
         <li>

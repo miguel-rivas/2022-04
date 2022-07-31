@@ -93,8 +93,8 @@ export default Vue.extend({
     navigation: [
       {
         tooltip: "Portfolio 2022",
-        title: "22",
-        route: ["2022-projects", "2022-statistics", "2022-resume"],
+        icon: "monster",
+        route: ["2022-home", "2022-projects", "2022-statistics", "2022-resume"],
       },
       {
         divider: true,
@@ -135,6 +135,11 @@ export default Vue.extend({
         ],
       },
       {
+        tooltip: "CSS",
+        icon: "category",
+        route: ["house", "window", "minivan", "pills"],
+      },
+      {
         tooltip: "Portfolio 2014",
         title: "14",
         route: ["2014-home", "2014-projects", "2014-contact"],
@@ -159,29 +164,6 @@ export default Vue.extend({
         divider: true,
       },
       {
-        tooltip: i18n.t("css.section.house.title"),
-        icon: "home",
-        route: ["house"],
-      },
-      {
-        tooltip: i18n.t("css.section.window.title"),
-        icon: "window",
-        route: ["window"],
-      },
-      {
-        tooltip: i18n.t("css.section.minivan.title"),
-        icon: "bus",
-        route: ["minivan"],
-      },
-      {
-        tooltip: i18n.t("css.section.pills.title"),
-        icon: "medical",
-        route: ["pills"],
-      },
-      {
-        divider: true,
-      },
-      {
         tooltip: i18n.t("fake-audience.title"),
         icon: "moon",
         route: ["soundboard"],
@@ -190,11 +172,6 @@ export default Vue.extend({
         tooltip: i18n.t("ui.title"),
         icon: "color",
         route: ["ui", "colors", "icons"],
-      },
-      {
-        tooltip: "Contact",
-        icon: "paper-plane",
-        route: ["links"],
       },
       {
         divider: true,

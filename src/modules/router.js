@@ -1,81 +1,82 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-import UiRouter from '../router/ui';
+import UiRouter from '@/router/ui';
 
-import ContactWorkareaView from '../views/contact-workarea.vue';
+import ContactWorkareaView from '@/views/contact-workarea.vue';
 
-import SoundboardWorkareaView from '../views/soundboard-workarea.vue';
+import SoundboardWorkareaView from '@/views/soundboard-workarea.vue';
 
-import ProjectsWorkareaView from '../views/2022/projects-workarea.vue';
-import ProjectsPanelView from '../views/2022/projects-panel.vue';
-import StatisticsWorkareaView from '../views/2022/statistics-workarea.vue';
-import ResumeWorkareaView from '../views/2022/resume-workarea.vue';
-import P2022NavbarView from '../views/2022/navbar.vue';
-import ImagesWorkareaView from '../views/2022/images-workarea.vue';
-import ImagesPanelView from '../views/2022/images-panel.vue';
-import VideosWorkareaView from '../views/2022/video-workarea.vue';
+import StargazerWorkareaView from '@/views/2022/stargazer-workarea.vue';
+import StargazerPanelView from '@/views/2022/stargazer-panel.vue';
+import ProjectsWorkareaView from '@/views/2022/projects-workarea.vue';
+import ProjectsPanelView from '@/views/2022/projects-panel.vue';
+import StatisticsWorkareaView from '@/views/2022/statistics-workarea.vue';
+import ResumeWorkareaView from '@/views/2022/resume-workarea.vue';
+import P2022NavbarView from '@/views/2022/navbar.vue';
+import ImagesWorkareaView from '@/views/2022/images-workarea.vue';
+import ImagesPanelView from '@/views/2022/images-panel.vue';
+import VideosWorkareaView from '@/views/2022/video-workarea.vue';
 
-import CanvasNavbarView from '../views/canvas/navbar.vue';
-import GearWorkareaView from '../views/canvas/gear-workarea.vue';
-import GearPanelView from '../views/canvas/gear-panel.vue';
-import WheelWorkareaView from '../views/canvas/wheel-workarea.vue';
-import WheelPanelView from '../views/canvas/wheel-panel.vue';
-import LocationsPanelView from '../views/canvas/locations-panel.vue';
-import LocationsWorkareaView from '../views/canvas/locations-workarea.vue';
-import AvatarWorkareaView from '../views/canvas/avatar-workarea.vue';
-import AvatarPanelView from '../views/canvas/avatar-panel.vue';
-import PixelWorkareaView from '../views/canvas/pixel-workarea.vue';
-import PixelPanelView from '../views/canvas/pixel-panel.vue';
-import DollhouseWorkareaView from '../views/canvas/dollhouse-workarea.vue';
-import DollhousePanelView from '../views/canvas/dollhouse-panel.vue';
-import GameWorkareaView from '../views/canvas/game-workarea.vue';
+import CanvasNavbarView from '@/views/canvas/navbar.vue';
+import GearWorkareaView from '@/views/canvas/gear-workarea.vue';
+import GearPanelView from '@/views/canvas/gear-panel.vue';
+import WheelWorkareaView from '@/views/canvas/wheel-workarea.vue';
+import WheelPanelView from '@/views/canvas/wheel-panel.vue';
+import LocationsPanelView from '@/views/canvas/locations-panel.vue';
+import LocationsWorkareaView from '@/views/canvas/locations-workarea.vue';
+import AvatarWorkareaView from '@/views/canvas/avatar-workarea.vue';
+import AvatarPanelView from '@/views/canvas/avatar-panel.vue';
+import PixelWorkareaView from '@/views/canvas/pixel-workarea.vue';
+import PixelPanelView from '@/views/canvas/pixel-panel.vue';
+import DollhouseWorkareaView from '@/views/canvas/dollhouse-workarea.vue';
+import DollhousePanelView from '@/views/canvas/dollhouse-panel.vue';
+import GameWorkareaView from '@/views/canvas/game-workarea.vue';
+import CubeWorkareaView from '@/views/canvas/cube-workarea.vue';
+import CubePanelView from '@/views/canvas/cube-panel.vue';
+import ThreePanelView from '@/views/canvas/three-panel.vue';
+import ThreeWorkareaView from '@/views/canvas/three-workarea.vue';
+import FlipbookWorkareaView from '@/views/canvas/flipbook-workarea.vue';
+import FlipbookPanelView from '@/views/canvas/flipbook-panel.vue';
 
-import CubeWorkareaView from '../views/canvas/cube-workarea.vue';
-import CubePanelView from '../views/canvas/cube-panel.vue';
-import ThreePanelView from '../views/canvas/three-panel.vue';
-import ThreeWorkareaView from '../views/canvas/three-workarea.vue';
-import FlipbookWorkareaView from '../views/canvas/flipbook-workarea.vue';
-import FlipbookPanelView from '../views/canvas/flipbook-panel.vue';
+import CSSNavbarView from '@/views/css/navbar.vue';
+import HouseWorkareaView from '@/views/css/house-workarea.vue';
+import WindowWorkareaView from '@/views/css/window-workarea.vue';
+import MinivanWorkareaView from '@/views/css/minivan-workarea.vue';
+import PillsWorkareaView from '@/views/css/pills-workarea.vue';
 
-import HouseWorkareaView from '../views/house-workarea.vue';
-import WindowWorkareaView from '../views/window-workarea.vue';
-import MinivanWorkareaView from '../views/minivan-workarea.vue';
-import PillsWorkareaView from '../views/pills-workarea.vue';
+import ApapWorkareaView from '@/views/apap/mineros.vue';
+import ApapNavbarView from '@/views/apap/navbar.vue';
 
+import Form401WorkareaView from '@/views/formability/401.vue';
+import Form404WorkareaView from '@/views/formability/404.vue';
+import Form500WorkareaView from '@/views/formability/500.vue';
+import FormDemoWorkareaView from '@/views/formability/demo.vue';
+import FormNavbarWorkareaView from '@/views/formability/navbar.vue';
 
-import ApapWorkareaView from '../views/apap/mineros.vue';
-import ApapNavbarView from '../views/apap/navbar.vue';
+import P2014HomeView from '@/views/2014/home.vue';
+import P2014ProjectsView from '@/views/2014/projects.vue';
+import P2014ContactView from '@/views/2014/contact.vue';
+import P2014NavbarView from '@/views/2014/navbar.vue';
 
-import Form401WorkareaView from '../views/formability/401.vue';
-import Form404WorkareaView from '../views/formability/404.vue';
-import Form500WorkareaView from '../views/formability/500.vue';
-import FormDemoWorkareaView from '../views/formability/demo.vue';
-import FormNavbarWorkareaView from '../views/formability/navbar.vue';
+import P2016WorkareaView from '@/views/2016/index.vue';
+import P2016NavbarView from '@/views/2016/navbar.vue';
 
-import P2014HomeView from '../views/2014/home.vue';
-import P2014ProjectsView from '../views/2014/projects.vue';
-import P2014ContactView from '../views/2014/contact.vue';
-import P2014NavbarView from '../views/2014/navbar.vue';
+import P2018HomeView from '@/views/2018/home.vue';
+import P2018DrLogicView from '@/views/2018/drlogic.vue';
+import P2018ApapView from '@/views/2018/apap.vue';
+import P2018BPRBankView from '@/views/2018/bpr.vue';
+import P2018PresidenteView from '@/views/2018/presidente.vue';
+import P2018NavbarView from '@/views/2018/navbar.vue';
 
-import P2016WorkareaView from '../views/2016/index.vue';
-import P2016NavbarView from '../views/2016/navbar.vue';
-
-import P2018HomeView from '../views/2018/home.vue';
-import P2018DrLogicView from '../views/2018/drlogic.vue';
-import P2018ApapView from '../views/2018/apap.vue';
-import P2018BPRBankView from '../views/2018/bpr.vue';
-import P2018PresidenteView from '../views/2018/presidente.vue';
-import P2018NavbarView from '../views/2018/navbar.vue';
-
-import DrlogicHomeView from '../views/drlogic/index.vue';
+import DrlogicHomeView from '@/views/drlogic/index.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: '/',
-    redirect: '/locations',
+    redirect: '/map',
   },
   {
     name: 'drlogic',
@@ -203,6 +204,15 @@ const routes = [
     path: '/2022-videos',
     components: {
       workarea: VideosWorkareaView,
+      navbar: P2022NavbarView,
+    },
+  },
+  {
+    name: '2022-home',
+    path: '/2022-home',
+    components: {
+      workarea: StargazerWorkareaView,
+      panel: StargazerPanelView,
       navbar: P2022NavbarView,
     },
   },
@@ -475,6 +485,7 @@ const routes = [
     path: '/house',
     components: {
       workarea: HouseWorkareaView,
+      navbar: CSSNavbarView,
     },
   },
   {
@@ -482,6 +493,7 @@ const routes = [
     path: '/window',
     components: {
       workarea: WindowWorkareaView,
+      navbar: CSSNavbarView,
     }
   },
   {
@@ -489,6 +501,7 @@ const routes = [
     path: '/pills',
     components: {
       workarea: PillsWorkareaView,
+      navbar: CSSNavbarView,
     }
   },
   {
@@ -496,6 +509,7 @@ const routes = [
     path: '/minivan',
     components: {
       workarea: MinivanWorkareaView,
+      navbar: CSSNavbarView,
     }
   },
   {
