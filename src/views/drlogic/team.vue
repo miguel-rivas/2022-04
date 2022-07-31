@@ -36,12 +36,12 @@ nn-scroll-area(color="royal-purple")
               .sub-description
                 hr
                 p
-                  span.fa.fa-desktop
-                    strong First Device:
+                  nn-icon(glyph="chair-school")
+                    strong First Device:&nbsp;
                   | {{ person.device }}
                 p
-                  span.fa.fa-music
-                    strong First Record:
+                  nn-icon(glyph="boat")
+                    strong First Record:&nbsp;
                   | {{ person.record }}
 
     drlogic-call-us(color="yellow")
@@ -64,7 +64,7 @@ export default Vue.extend({
         title: "Founder",
         experience: "Apple-Certified Support Professional",
         joined: "2003",
-        device: "Apple &#93;&#91;e",
+        device: "Apple ][",
         record: "Bobby Brown - Don’t be Cruel",
       },
       {
@@ -79,8 +79,8 @@ export default Vue.extend({
       {
         color: "purple",
         name: "Karina Gonzalez",
-        title: "Marketing &amp; Operations Manager",
-        experience: "Contract Publishing &amp; Marketing.",
+        title: "Marketing & Operations Manager",
+        experience: "Contract Publishing & Marketing.",
         joined: "2015",
         device: "Mac Classic",
         record: "Duran Duran - Rio",
@@ -101,7 +101,7 @@ export default Vue.extend({
         device: "White iBook G3",
         record: "Oasis - (What's the Story) Morning Glory?",
         experience:
-          "Worked at Apple, Music &amp; Mac, then technician for Higher Educations colleges.",
+          "Worked at Apple, Music & Mac, then technician for Higher Educations colleges.",
         joined: "2013",
       },
       {
