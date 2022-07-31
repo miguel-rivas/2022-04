@@ -131,8 +131,8 @@ export default Vue.extend({
         tooltip: "Canvas",
         icon: "move",
         route: [
-          "dollhouse",
           "game",
+          "dollhouse",
           "avatar",
           "gear",
           "wheel",

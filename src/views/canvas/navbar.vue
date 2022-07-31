@@ -3,14 +3,14 @@
     <nav>
       <p>Canvas</p>
       <ul>
-        <li>
+        <!-- <li>
           <router-link to="map">Map</router-link>
+        </li> -->
+        <li>
+          <router-link to="game">Game</router-link>
         </li>
         <li>
           <router-link to="dollhouse">Doll House</router-link>
-        </li>
-        <li>
-          <router-link to="game">Game</router-link>
         </li>
         <li>
           <router-link to="avatar">Avatar</router-link>
