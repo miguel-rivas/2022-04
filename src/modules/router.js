@@ -69,7 +69,14 @@ import P2018BPRBankView from '@/views/2018/bpr.vue';
 import P2018PresidenteView from '@/views/2018/presidente.vue';
 import P2018NavbarView from '@/views/2018/navbar.vue';
 
+import DrlogicNavbarView from '@/views/drlogic/navbar.vue';
 import DrlogicHomeView from '@/views/drlogic/index.vue';
+import DrlogicTeamView from '@/views/drlogic/team.vue';
+import DrlogicTestimonialsView from '@/views/drlogic/testimonials.vue';
+import DrlogicContactView from '@/views/drlogic/contact.vue';
+import DrlogicServicesView from '@/views/drlogic/services.vue';
+import DrlogicSupportView from '@/views/drlogic/support.vue';
+import Drlogic404View from '@/views/drlogic/404.vue';
 
 Vue.use(VueRouter);
 
@@ -79,10 +86,59 @@ const routes = [
     redirect: '/map',
   },
   {
-    name: 'drlogic',
-    path: '/drlogic',
+    name: 'drlogic-home',
+    path: '/drlogic-home',
     components: {
       workarea: DrlogicHomeView,
+      navbar: DrlogicNavbarView,
+    },
+  },
+  {
+    name: 'drlogic-team',
+    path: '/drlogic-team',
+    components: {
+      workarea: DrlogicTeamView,
+      navbar: DrlogicNavbarView,
+    },
+  },
+  {
+    name: 'drlogic-testimonials',
+    path: '/drlogic-testimonials',
+    components: {
+      workarea: DrlogicTestimonialsView,
+      navbar: DrlogicNavbarView,
+    },
+  },
+  {
+    name: 'drlogic-contact',
+    path: '/drlogic-contact',
+    components: {
+      workarea: DrlogicContactView,
+      navbar: DrlogicNavbarView,
+    },
+  },
+  {
+    name: 'drlogic-404',
+    path: '/drlogic-404',
+    components: {
+      workarea: Drlogic404View,
+      navbar: DrlogicNavbarView,
+    },
+  },
+  {
+    name: 'drlogic-services',
+    path: '/drlogic-services',
+    components: {
+      workarea: DrlogicServicesView,
+      navbar: DrlogicNavbarView,
+    },
+  },
+  {
+    name: 'drlogic-support',
+    path: '/drlogic-support',
+    components: {
+      workarea: DrlogicSupportView,
+      navbar: DrlogicNavbarView,
     },
   },
 
@@ -268,7 +324,7 @@ const routes = [
       workarea: ContactWorkareaView,
     },
   },
-  
+
   {
     name: 'soundboard',
     path: '/soundboard',
@@ -478,7 +534,7 @@ const routes = [
       navbar: CanvasNavbarView,
     },
   },
-  
+
 
   {
     name: 'house',

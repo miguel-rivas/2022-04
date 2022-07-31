@@ -100,6 +100,19 @@ export default Vue.extend({
         divider: true,
       },
       {
+        tooltip: "DrLogic",
+        title: "Dr",
+        route: [
+          "drlogic-home",
+          "drlogic-404",
+          "drlogic-contact",
+          "drlogic-team",
+          "drlogic-testimonials",
+          "drlogic-services",
+          "drlogic-support",
+        ],
+      },
+      {
         tooltip: "Apap",
         icon: "person",
         route: ["mineros"],
