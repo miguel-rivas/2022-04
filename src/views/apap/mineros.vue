@@ -240,7 +240,7 @@ export default Vue.extend({
 
       cacheDom: function () {
         this.$window = $(window);
-        this.$main = $(".workarea");
+        this.$main = $(".nano-workarea");
 
         this.actualBk = 1;
         this.maxBk = this.$main.find("#preview .mobile a").length;
@@ -311,7 +311,7 @@ export default Vue.extend({
       // ------------------ Extra Functions // Navigation
 
       loading: function () {
-        $(".workarea #home img")
+        $(".nano-workarea #home img")
           .animate({ bottom: 0 }, 1000)
           .parent()
           .find(".info")

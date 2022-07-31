@@ -9,19 +9,27 @@
           <router-view name="panel" />
         </nn-column>
 
-        <nn-column size="0" class="panel-bar">
+        <nn-column size="35" class="panel-bar">
           <nn-btn
             class="panel-ctrl"
             title="Toggle panel button"
             glyph="chevron"
+            color="charcoal"
             :direction="panel ? 'left' : 'right'"
             @click="toggleValue('panel'), playSound()"
           />
         </nn-column>
       </template>
 
-      <nn-column :size="panel && hasPanel ? panelSize[1] : '100%-50'" class="workarea">
-        <router-view name="workarea" />
+      <nn-column :size="workareaSize">
+        <nn-row class="nano-content">
+          <nn-column size="100%" class="nano-navbar" v-if="hasNavbar">
+            <router-view name="navbar" />
+          </nn-column>
+          <nn-column size="100%" class="nano-workarea">
+            <router-view name="workarea" />
+          </nn-column>
+        </nn-row>
       </nn-column>
     </nn-row>
   </main>
@@ -56,6 +64,18 @@ export default Vue.extend({
     },
     hasPanel() {
       return this.$route.matched[0].components.panel !== undefined;
+    },
+    hasNavbar(){
+      return this.$route.matched[0].components.navbar !== undefined;
+    },
+    workareaSize() {
+      if (this.panel && this.hasPanel) {
+        return this.panelSize[1];
+      } else if(this.hasPanel) {
+        return "100%-50-35";
+      } else {
+        return "100%-50";
+      }
     },
   },
   created() {

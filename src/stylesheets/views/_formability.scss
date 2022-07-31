@@ -19,19 +19,19 @@
 }
 
 main.section-formability-401 {
-  .workarea {
+  .nano-workarea {
     background-image: linear-gradient(to right, #af5cf5, #c84ea4);
   }
 }
 
 main.section-formability-404 {
-  .workarea {
+  .nano-workarea {
     background-image: linear-gradient(to left, #2885dc, #0da57f);
   }
 }
 
 main.section-formability-500 {
-  .workarea {
+  .nano-workarea {
     background-image: linear-gradient(to right, #f55c61, #c84ea4);
   }
 }
@@ -40,25 +40,26 @@ main.section-formability-401,
 main.section-formability-404,
 main.section-formability-500,
 main.section-formability-demo {
-  font-family: "Nunito", Helvetica, Arial, Tahoma, sans-serif;
+  .nano-workarea {
+    font-family: "Nunito", Helvetica, Arial, Tahoma, sans-serif;
+    h1 {
+      text-transform: none;
+      font-weight: 700;
+      font-size: 2rem;
+      letter-spacing: 0;
+    }
 
-  h1 {
-    text-transform: none;
-    font-weight: 700;
-    font-size: 2rem;
-    letter-spacing: 0;
-  }
-
-  h1,
-  p {
-    color: #fff;
+    h1,
+    p {
+      color: #fff;
+    }
   }
 }
 
 main.section-formability-401,
 main.section-formability-404,
 main.section-formability-500 {
-  .workarea {
+  .nano-workarea {
     font-weight: normal;
     text-align: center;
   }
@@ -138,7 +139,7 @@ main.section-formability-500 {
 }
 
 main.section-formability-demo {
-  .workarea {
+  .nano-workarea {
     > footer {
       display: none;
     }

@@ -1,0 +1,31 @@
+main.section-drlogic-home,
+main.section-drlogic-contact,
+main.section-drlogic-us,
+main.section-drlogic-portfolio,
+main.section-drlogic-support,
+main.section-drlogic-services,
+main.section-drlogic-testimoninals {
+  @import "loader";
+
+  @import "base/variables";
+  @import "base/base";
+  @import "base/typography";
+
+  @import "mixins/main";
+  @import "mixins/navbar";
+  @import "mixins/testimonials";
+  @import "mixins/about";
+
+  @import "main/main";
+  @import "main/navbar";
+  @import "main/footer";
+
+  @import "sections/home";
+  @import "sections/contact";
+  @import "sections/about";
+  @import "sections/testimonials";
+
+  @import "keyframes/home";
+  @import "keyframes/contact";
+  @import "keyframes/testimonials";
+}

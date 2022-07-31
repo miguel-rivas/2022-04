@@ -93,6 +93,12 @@ main {
 @import "views/resume";
 @import "views/mineros";
 @import "views/formability";
+@import "views/soundboard";
+@import "views/links";
+
+// @import "views/drlogic/drlogic";
+// @import "views/drlogic/404";
+// @import "views/drlogic/loader";
 
 @import "components/app";
 @import "components/table";
@@ -247,53 +253,6 @@ main {
 nn-crayon {
   a {
     color: inherit;
-  }
-}
-
-.section-links {
-  footer {
-    text-align: center;
-  }
-  nn-crayon {
-    a {
-      font-size: 0.85rem;
-      text-decoration: none;
-      letter-spacing: 1px;
-      word-break: break-word;
-    }
-  } 
-}
-
-.section-soundboard {
-  .workarea {
-    text-align: center;
-
-    .title {
-      margin: 4rem auto;
-      width: min(500px, 100%);
-    }
-
-    h1 {
-      font-size: 35px;
-    }
-    p {
-      font-size: 14px;
-    }
-
-    button {
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-
-      img {
-        width: 65px;
-        pointer-events: none;
-      }
-    }
   }
 }
 

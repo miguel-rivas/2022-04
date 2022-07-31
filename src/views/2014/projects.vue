@@ -31,7 +31,7 @@
 
 <script>
 import Vue from "vue";
-import { allDBListWithImages } from "../modules/format-db";
+import { allDBListWithImages } from "../../modules/format-db";
 
 export default Vue.extend({
   data: () => ({

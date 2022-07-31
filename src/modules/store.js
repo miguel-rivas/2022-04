@@ -12,7 +12,7 @@ Vue.use(Vuex);
 export const store = new Vuex.Store({
   state: {
     panel: false,
-    panelSize: ['300', '100%-350'],
+    panelSize: ['300', '100%-300-50-35'],
     theme: false,
     alert: {
       message: "",

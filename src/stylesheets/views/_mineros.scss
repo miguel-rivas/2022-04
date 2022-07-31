@@ -11,7 +11,7 @@
 }
 
 main.section-mineros {
-  .workarea {
+  .nano-workarea {
     $yellowBrand: #f4d242;
     $buttonBackground: $yellowBrand;
     $buttonTextColor: #0168b3;
@@ -23,9 +23,6 @@ main.section-mineros {
     background: radial-gradient(#{$lighBlue}, #{$darkBlue} 70%);
     background-repeat: no-repeat;
     background-position: center;
-    position: relative;
-    width: 100%;
-    height: 100%;
     z-index: 2;
 
     a {

@@ -1,0 +1,32 @@
+.section-soundboard {
+  .nano-workarea {
+    text-align: center;
+
+    .title {
+      margin: 4rem auto;
+      width: min(500px, 100%);
+    }
+
+    h1 {
+      font-size: 35px;
+    }
+    p {
+      font-size: 14px;
+    }
+
+    button {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 65px;
+        pointer-events: none;
+      }
+    }
+  }
+}

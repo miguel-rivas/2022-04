@@ -41,12 +41,16 @@ import FlipbookWorkareaView from '../views/flipbook-workarea.vue';
 import FlipbookPanelView from '../views/flipbook-panel.vue';
 
 import GameWorkareaView from '../views/game-workarea.vue';
-import ApapWorkareaView from '../views/mineros-workarea.vue';
+import ApapWorkareaView from '../views/apap/mineros.vue';
+import ApapNavbarView from '../views/apap/navbar.vue';
 
-import Form401WorkareaView from '../views/formability-401-workarea.vue';
-import Form404WorkareaView from '../views/formability-404-workarea.vue';
-import Form500WorkareaView from '../views/formability-500-workarea.vue';
-import FormDemoWorkareaView from '../views/formability-demo-workarea.vue';
+import Form401WorkareaView from '../views/formability/401.vue';
+import Form404WorkareaView from '../views/formability/404.vue';
+import Form500WorkareaView from '../views/formability/500.vue';
+import FormDemoWorkareaView from '../views/formability/demo.vue';
+import FormNavbarWorkareaView from '../views/formability/navbar.vue';
+
+import DrlogicHomeView from '../views/drlogic/index.vue';
 
 Vue.use(VueRouter);
 
@@ -56,10 +60,18 @@ const routes = [
     redirect: '/locations',
   },
   {
+    name: 'drlogic',
+    path: '/drlogic',
+    components: {
+      workarea: DrlogicHomeView,
+    },
+  },
+  {
     name: 'formability-401',
     path: '/formability-401',
     components: {
       workarea: Form401WorkareaView,
+      navbar: FormNavbarWorkareaView,
     },
   },
   {
@@ -67,6 +79,7 @@ const routes = [
     path: '/formability-404',
     components: {
       workarea: Form404WorkareaView,
+      navbar: FormNavbarWorkareaView,
     },
   },
   {
@@ -74,6 +87,7 @@ const routes = [
     path: '/formability-500',
     components: {
       workarea: Form500WorkareaView,
+      navbar: FormNavbarWorkareaView,
     },
   },
   {
@@ -81,6 +95,7 @@ const routes = [
     path: '/formability-demo',
     components: {
       workarea: FormDemoWorkareaView,
+      navbar: FormNavbarWorkareaView,
     },
   },
   {
@@ -88,6 +103,7 @@ const routes = [
     path: '/mineros',
     components: {
       workarea: ApapWorkareaView,
+      navbar: ApapNavbarView,
     },
   },
   {

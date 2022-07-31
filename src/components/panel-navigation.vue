@@ -131,24 +131,9 @@ export default Vue.extend({
         route: ["mineros"],
       },
       {
-        tooltip: "Formability Demo",
+        tooltip: "Formability",
         icon: "robot",
-        route: ["formability-demo"],
-      },
-      {
-        tooltip: "Formability 401",
-        icon: "lock",
-        route: ["formability-401"],
-      },
-      {
-        tooltip: "Formability 404",
-        icon: "lock",
-        route: ["formability-404"],
-      },
-      {
-        tooltip: "Formability 500",
-        icon: "lock",
-        route: ["formability-500"],
+        route: ["formability-demo", "formability-401", "formability-404", "formability-500"],
       },
       {
         divider: true,
