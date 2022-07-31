@@ -82,8 +82,8 @@
 
 <script>
 import Vue from "vue";
-import { user } from "../db/user";
-import { tool } from "../enums/tools";
+import { user } from "@/db/user";
+import { tool } from "@/enums/tools";
 
 const separator = "";
 

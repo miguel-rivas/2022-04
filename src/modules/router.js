@@ -1,17 +1,20 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-import ResumeWorkareaView from '../views/resume-workarea.vue';
 import UiRouter from '../router/ui';
 
-import ProjectsWorkareaView from '../views/projects-workarea.vue';
-import ProjectsPanelView from '../views/projects-panel.vue';
-import StatisticsWorkareaView from '../views/statistics-workarea.vue';
+import ProjectsWorkareaView from '../views/2022/projects-workarea.vue';
+import ProjectsPanelView from '../views/2022/projects-panel.vue';
+import StatisticsWorkareaView from '../views/2022/statistics-workarea.vue';
+import ResumeWorkareaView from '../views/2022/resume-workarea.vue';
+import P2022NavbarView from '../views/2022/navbar.vue';
+
 import ContactWorkareaView from '../views/contact-workarea.vue';
 
-import ImagesWorkareaView from '../views/images-workarea.vue';
-import ImagesPanelView from '../views/images-panel.vue';
-import VideosWorkareaView from '../views/video-workarea.vue';
+import ImagesWorkareaView from '../views/2022/images-workarea.vue';
+import ImagesPanelView from '../views/2022/images-panel.vue';
+import VideosWorkareaView from '../views/2022/video-workarea.vue';
+
 import SoundboardWorkareaView from '../views/soundboard-workarea.vue';
 
 import GearWorkareaView from '../views/gear-workarea.vue';
@@ -80,7 +83,6 @@ const routes = [
       workarea: DrlogicHomeView,
     },
   },
-
   {
     name: '2014-home',
     path: '/2014-home',
@@ -154,6 +156,48 @@ const routes = [
     },
   },
   {
+    name: '2022-resume',
+    path: '/2022-resume',
+    components: {
+      workarea: ResumeWorkareaView,
+      navbar: P2022NavbarView,
+    },
+  },
+  {
+    name: '2022-projects',
+    path: '/2022-projects',
+    components: {
+      workarea: ProjectsWorkareaView,
+      panel: ProjectsPanelView,
+      navbar: P2022NavbarView,
+    },
+  },
+  {
+    name: '2022-statistics',
+    path: '/2022-statistics',
+    components: {
+      workarea: StatisticsWorkareaView,
+      navbar: P2022NavbarView,
+    },
+  },
+  {
+    name: '2022-images',
+    path: '/2022-images',
+    components: {
+      workarea: ImagesWorkareaView,
+      panel: ImagesPanelView,
+      navbar: P2022NavbarView,
+    },
+  },
+  {
+    name: '2022-videos',
+    path: '/2022-videos',
+    components: {
+      workarea: VideosWorkareaView,
+      navbar: P2022NavbarView,
+    },
+  },
+  {
     name: 'formability-401',
     path: '/formability-401',
     components: {
@@ -201,50 +245,13 @@ const routes = [
     },
   },
   {
-    name: 'resume',
-    path: '/resume',
-    components: {
-      workarea: ResumeWorkareaView,
-    },
-  },
-  {
-    name: 'projects',
-    path: '/projects',
-    components: {
-      workarea: ProjectsWorkareaView,
-      panel: ProjectsPanelView,
-    },
-  },
-  {
-    name: 'statistics',
-    path: '/statistics',
-    components: {
-      workarea: StatisticsWorkareaView,
-    },
-  },
-  {
     name: 'links',
     path: '/links',
     components: {
       workarea: ContactWorkareaView,
     },
   },
-
-  {
-    name: 'images',
-    path: '/images',
-    components: {
-      workarea: ImagesWorkareaView,
-      panel: ImagesPanelView,
-    },
-  },
-  {
-    name: 'videos',
-    path: '/videos',
-    components: {
-      workarea: VideosWorkareaView,
-    },
-  },
+  
   {
     name: 'soundboard',
     path: '/soundboard',
@@ -252,8 +259,6 @@ const routes = [
       workarea: SoundboardWorkareaView,
     },
   },
-
-
   {
     name: 'dollhouse',
     path: '/dollhouse',
@@ -278,7 +283,6 @@ const routes = [
       panel: AvatarPanelView,
     },
   },
-
   {
     name: 'gear',
     path: '/gear',
@@ -334,7 +338,6 @@ const routes = [
       panel: ThreePanelView,
     },
   },
-
   {
     name: 'drakkar',
     path: '/drakkar',
@@ -438,9 +441,6 @@ const routes = [
       panel: ThreePanelView,
     },
   },
-
-
-
   {
     name: 'house',
     path: '/house',
@@ -469,8 +469,6 @@ const routes = [
       workarea: MinivanWorkareaView,
     }
   },
-
-
   {
     path: '*',
     redirect: '/'

@@ -92,37 +92,13 @@ export default Vue.extend({
   data: () => ({
     navigation: [
       {
-        tooltip: i18n.t("projects.title"),
-        icon: "duck",
-        route: ["projects"],
-      },
-      {
-        tooltip: "Resume",
-        icon: "person",
-        route: ["resume"],
-      },
-      {
-        tooltip: i18n.t("statistics.title"),
-        icon: "chart",
-        route: ["statistics"],
-      },
-      {
-        tooltip: "Contact",
-        icon: "paper-plane",
-        route: ["links"],
-      },
-      {
-        divider: true,
-      },
-      {
-        tooltip: i18n.t("images.title"),
-        icon: "collections",
-        route: ["images"],
-      },
-      {
-        tooltip: i18n.t("videos.title"),
-        icon: "movie",
-        route: ["videos"],
+        tooltip: "Portfolio 2022",
+        title: "22",
+        route: [
+          "2022-projects",
+          "2022-statistics",
+          "2022-resume",
+        ],
       },
       {
         divider: true,
@@ -274,6 +250,11 @@ export default Vue.extend({
         tooltip: i18n.t("ui.title"),
         icon: "color",
         route: ["ui", "colors", "icons"],
+      },
+      {
+        tooltip: "Contact",
+        icon: "paper-plane",
+        route: ["links"],
       },
       {
         divider: true,

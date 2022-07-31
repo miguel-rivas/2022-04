@@ -42,10 +42,10 @@ nn-scroll-area(color="royal-purple")
 
 <script>
 import Vue from "vue";
-import LineChart from "../components/line-chart.vue";
-import BarChart from "../components/bar-chart.vue";
-import ToggleRow from "../components/toggle-row.vue";
-import { projectsDBList, allTools, allDates } from "../modules/format-db";
+import LineChart from "@/components/line-chart.vue";
+import BarChart from "@/components/bar-chart.vue";
+import ToggleRow from "@/components/toggle-row.vue";
+import { projectsDBList, allTools, allDates } from "@/modules/format-db";
 
 export default Vue.extend({
   components: {

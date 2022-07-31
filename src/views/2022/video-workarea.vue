@@ -24,8 +24,8 @@ nn-scroll-area(color="royal-purple")
 
 <script>
 import Vue from "vue";
-import { videos } from "../db/videos";
-import ToggleRow from "../components/toggle-row.vue";
+import { videos } from "@/db/videos";
+import ToggleRow from "@/components/toggle-row.vue";
 
 export default Vue.extend({
   components: { ToggleRow },

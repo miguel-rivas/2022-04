@@ -5,9 +5,9 @@ nn-scroll-area(color="royal-purple", :horizontal="false")
 
 <script>
 import Vue from "vue";
-import Gallery from "../components/gallery.vue";
-import { client } from "../enums/clients";
-import { allDBListVisible } from "../modules/format-db";
+import Gallery from "@/components/gallery.vue";
+import { client } from "@/enums/clients";
+import { allDBListVisible } from "@/modules/format-db";
 
 export default Vue.extend({
   components: {
