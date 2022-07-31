@@ -50,6 +50,13 @@ import Form500WorkareaView from '../views/formability/500.vue';
 import FormDemoWorkareaView from '../views/formability/demo.vue';
 import FormNavbarWorkareaView from '../views/formability/navbar.vue';
 
+import P2018HomeView from '../views/2018/home.vue';
+import P2018DrLogicView from '../views/2018/drlogic.vue';
+import P2018ApapView from '../views/2018/apap.vue';
+import P2018BPRBankView from '../views/2018/bpr.vue';
+import P2018PresidenteView from '../views/2018/presidente.vue';
+import P2018NavbarView from '../views/2018/navbar.vue';
+
 import DrlogicHomeView from '../views/drlogic/index.vue';
 
 Vue.use(VueRouter);
@@ -66,6 +73,49 @@ const routes = [
       workarea: DrlogicHomeView,
     },
   },
+
+  {
+    name: '2018-home',
+    path: '/2018-home',
+    components: {
+      workarea: P2018HomeView,
+      navbar: P2018NavbarView,
+    },
+  },
+  {
+    name: '2018-drlogic',
+    path: '/2018-drlogic',
+    components: {
+      workarea: P2018DrLogicView,
+      navbar: P2018NavbarView,
+    },
+  },
+  {
+    name: '2018-apap',
+    path: '/2018-apap',
+    components: {
+      workarea: P2018ApapView,
+      navbar: P2018NavbarView,
+    },
+  },
+  {
+    name: '2018-presidente',
+    path: '/2018-presidente',
+    components: {
+      workarea: P2018PresidenteView,
+      navbar: P2018NavbarView,
+    },
+  },
+  {
+    name: '2018-bpr',
+    path: '/2018-bpr',
+    components: {
+      workarea: P2018BPRBankView,
+      navbar: P2018NavbarView,
+    },
+  },
+
+
   {
     name: 'formability-401',
     path: '/formability-401',

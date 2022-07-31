@@ -12,13 +12,7 @@ import P2014PanelView from '../views/2014/index-panel.vue';
 import P2016WorkareaView from '../views/2016/index.vue';
 import P2016PanelView from '../views/2016/index-panel.vue';
 
-import P2018HomeView from '../views/2018/home.vue';
-import P2018DrLogicView from '../views/2018/drlogic.vue';
-import P2018ApapView from '../views/2018/apap.vue';
-import P2018BPRBankView from '../views/2018/bpr.vue';
-import P2018PresidenteView from '../views/2018/presidente.vue';
-import P2018WorkareaView from '../views/2018/index.vue';
-import P2018PanelView from '../views/2018/index-panel.vue';
+
 
 import P2022WorkareaView from '../views/stargaze-workarea.vue';
 import P2022PanelView from '../views/stargaze-panel.vue';
@@ -108,51 +102,6 @@ export default {
         workarea2: P2016WorkareaView,
         panel2: P2016PanelView,
       },
-    },
-    {
-      name: '2018',
-      path: '/2018',
-      components: {
-        workarea2: P2018WorkareaView,
-        panel2: P2018PanelView,
-      },
-      children: [
-        {
-          name: '2018-home',
-          path: '/2018-home',
-          components: {
-            workarea3: P2018HomeView,
-          },
-        },
-        {
-          name: '2018-drlogic',
-          path: '/2018-drlogic',
-          components: {
-            workarea3: P2018DrLogicView,
-          },
-        },
-        {
-          name: '2018-apap',
-          path: '/2018-apap',
-          components: {
-            workarea3: P2018ApapView,
-          },
-        },
-        {
-          name: '2018-presidente',
-          path: '/2018-presidente',
-          components: {
-            workarea3: P2018PresidenteView,
-          },
-        },
-        {
-          name: '2018-bpr',
-          path: '/2018-bpr',
-          components: {
-            workarea3: P2018BPRBankView,
-          },
-        },
-      ],
     },
     {
       name: '2022',

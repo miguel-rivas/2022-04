@@ -16,6 +16,7 @@
                 size="md"
                 :title="nav.tooltip"
                 :glyph="nav.icon"
+                :text="nav.title"
               />
             </template>
             <template v-else>
@@ -27,6 +28,7 @@
                 :title="nav.tooltip"
                 @click="toggleValue('panel'), playSound()"
                 :glyph="nav.icon"
+                :text="nav.title"
                 active
               />
             </template>
@@ -134,6 +136,11 @@ export default Vue.extend({
         tooltip: "Formability",
         icon: "robot",
         route: ["formability-demo", "formability-401", "formability-404", "formability-500"],
+      },
+      {
+        tooltip: "Portfolio 2018",
+        title: "18",
+        route: ["2018-home", "2018-presidente", "2018-drlogic", "2018-bpr", "2018-apap"],
       },
       {
         divider: true,

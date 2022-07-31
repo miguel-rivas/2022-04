@@ -1,28 +1,26 @@
-.nested-app.p2018 {
-  $transition: 500ms;
+$transition: 500ms;
 
-  $orange: #f1b323;
-  $purple: #546583;
-  $dark_purple: #071429;
-  $pink: #e76573;
-  $green: #99d658;
-  $cyan: #3dae9f;
+$orange: #f1b323;
+$purple: #546583;
+$dark_purple: #071429;
+$pink: #e76573;
+$green: #99d658;
+$cyan: #3dae9f;
 
-  $darker_purple: #1d222a;
+$darker_purple: #1d222a;
 
-  $largeScreen: 1400px;
-  $MediumScreen: 1120px;
-  $SmallScreen: 800px;
+$largeScreen: 1400px;
+$MediumScreen: 1120px;
+$SmallScreen: 800px;
 
-  @import "2018/apap";
-  @import "2018/application_cases";
-  @import "2018/bpr";
-  @import "2018/drlogic";
-  @import "2018/gallery";
-  @import "2018/home";
-  @import "2018/presidente";
-
-  background: #fff;
+main.section-2018-home,
+main.section-2018-presidente,
+main.section-2018-apap,
+main.section-2018-drlogic,
+main.section-2018-bpr {
+  .nano-workarea {
+    background: #fff;
+  }
 
   h1,
   h2,
@@ -85,4 +83,13 @@
       }
     }
   }
+
+  @import "2018/application_cases";
+  @import "2018/gallery";
 }
+
+  @import "2018/home";
+  @import "2018/apap";
+  @import "2018/bpr";
+  @import "2018/drlogic";
+  @import "2018/presidente";
