@@ -1,31 +1,36 @@
 main.section-drlogic-home,
 main.section-drlogic-contact,
-main.section-drlogic-us,
-main.section-drlogic-portfolio,
+main.section-drlogic-team,
 main.section-drlogic-support,
 main.section-drlogic-services,
-main.section-drlogic-testimoninals {
-  @import "loader";
+main.section-drlogic-testimonials {
+  .nano-workarea {
+    @import "base/variables";
+    @import "base/base";
+    @import "base/typography";
+  
+    @import "mixins/main";
+    @import "mixins/testimonials";
+    @import "mixins/about";
+  
+    @import "main/main";
+    @import "main/footer";
+  
+    @import "sections/home";
+    @import "sections/contact";
+    @import "sections/about";
+    @import "sections/testimonials";
+    @import "sections/other-services";
+    @import "sections/services";
+  
+    @import "keyframes/home";
+    @import "keyframes/contact";
+    @import "keyframes/testimonials";
 
-  @import "base/variables";
-  @import "base/base";
-  @import "base/typography";
-
-  @import "mixins/main";
-  @import "mixins/navbar";
-  @import "mixins/testimonials";
-  @import "mixins/about";
-
-  @import "main/main";
-  @import "main/navbar";
-  @import "main/footer";
-
-  @import "sections/home";
-  @import "sections/contact";
-  @import "sections/about";
-  @import "sections/testimonials";
-
-  @import "keyframes/home";
-  @import "keyframes/contact";
-  @import "keyframes/testimonials";
+    margin: 0;
+    padding: 0;
+    font-family: $base-font-family;
+    letter-spacing: .8pt;
+    background-color: #fff;
+  }
 }

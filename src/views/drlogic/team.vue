@@ -1,2 +1,166 @@
-<template>
+<template lang="pug">
+nn-scroll-area(color="royal-purple")
+  section#about-us
+    section.intro
+      .container
+        h1 Meet our team of Mac IT experts
+
+        .row
+          .column
+            p In 1986, Dr Logic got his hands on his first Mac and so began a lifelong obsession with Apple. In 2003 he started Dr Logic and over time, gathered together like-minded techies who wanted to do cool stuff with IT.
+            p Dr Logic has built a reputation for helping creative companies with all things Mac-related. And for being that little bit different. We’re based in Clerkenwell and we support companies across London.
+
+    section.body
+      .bend
+        .animation-intro
+          img.image-resposive.base(
+            :src="getZapp('img/drlogic/about-us/base.png')"
+          )
+          img.image-resposive.manager(
+            :src="getZapp('img/drlogic/about-us/manager.png')"
+          )
+        .container
+          .copywrite
+            h2 Did we mention highly qualified?
+            p We’re members of the lovely Apple Consultants Network, a community of professional service providers specialising in both Apple and third-party solutions. Our senior staff are Apple & Casper certified technicians and Dr Logic is a member of the Service Desk Institute. Last but not least, we are also Meraki and Google Apps for Work certified partners.
+
+          template(v-for="(person, personIndex) in team")
+            article.people(:key="personIndex", :class="person.color")
+              img(:src="getZapp('img/drlogic/us/random.jpg')", width="250")
+              .description
+                h3(v-html="person.name")
+                h4(v-html="person.title")
+                .main
+                  p(v-html="person.experience")
+                  small Joined Dr Logic in {{ person.joined }}
+              .sub-description
+                hr
+                p
+                  span.fa.fa-desktop
+                    strong First Device:
+                  | {{ person.device }}
+                p
+                  span.fa.fa-music
+                    strong First Record:
+                  | {{ person.record }}
+
+    drlogic-call-us(color="yellow")
+    drlogic-footer
 </template>
+
+<script>
+import Vue from "vue";
+import $ from "jquery";
+import drlogicCallUs from "./drlogic-call-us.vue";
+import drlogicFooter from "./drlogic-footer.vue";
+
+export default Vue.extend({
+  components: { drlogicFooter, drlogicCallUs },
+  data: () => ({
+    team: [
+      {
+        color: "red",
+        name: "Anna Yamashita",
+        title: "Founder",
+        experience: "Apple-Certified Support Professional",
+        joined: "2003",
+        device: "Apple &#93;&#91;e",
+        record: "Bobby Brown - Don’t be Cruel",
+      },
+      {
+        color: "cyan",
+        name: "Marco Pires",
+        title: "Senior Support Engineer",
+        experience: "Apple ACTC, Cisco CMNA, JAMF CCA, JAMF CMA.",
+        joined: "2016",
+        device: "Amiga 500",
+        record: "Led Zeppelin - Led Zeppelin III",
+      },
+      {
+        color: "purple",
+        name: "Karina Gonzalez",
+        title: "Marketing &amp; Operations Manager",
+        experience: "Contract Publishing &amp; Marketing.",
+        joined: "2015",
+        device: "Mac Classic",
+        record: "Duran Duran - Rio",
+      },
+      {
+        color: "blue",
+        name: "Tatiana Kosovo",
+        title: "Support Engineer",
+        device: "iMac DV Indigo",
+        record: "Do the bartman 7” Vinyl",
+        experience: "Apple-Certified Support Professional.",
+        joined: "2012",
+      },
+      {
+        color: "green",
+        name: "Marcela Markaj",
+        title: "First Line Support",
+        device: "White iBook G3",
+        record: "Oasis - (What's the Story) Morning Glory?",
+        experience:
+          "Worked at Apple, Music &amp; Mac, then technician for Higher Educations colleges.",
+        joined: "2013",
+      },
+      {
+        color: "orange",
+        name: "Tiago Martes",
+        title: "Office Manager",
+        device: "Sony PSP",
+        record: "Madness - It’s Madness",
+        experience: "University of Sheffield History Graduate.",
+        joined: "2016",
+      },
+    ],
+  }),
+  methods: {
+    cursorXY(w) {
+      var dw =
+        $(window).width() ||
+        document.width ||
+        document.documentElement.clientWidth ||
+        document.innerWidth ||
+        window.innerWidth ||
+        screen.width;
+
+      if (!w) var w = window.event;
+      if (
+        w.pageX ||
+        w.pageY ||
+        w.clientX ||
+        w.clientY ||
+        w.pageXOffset ||
+        w.pageYOffset
+      ) {
+        var cy = w.pageY || w.clientY || w.pageYOffset;
+      }
+
+      var fobj = ["img.base", "img.manager"];
+
+      var pointX = 0;
+      if (dw < 500) {
+        pointX = 75;
+      }
+
+      $(fobj[0]).css({
+        left: pointX + cy * 0.009,
+      });
+
+      $(fobj[1]).css({
+        left: 200 + cy * -0.05,
+      });
+    },
+  },
+  mounted() {
+    this.cursorXY(e);
+    $(window).mousemove((e) => {
+      this.cursorXY(e);
+    });
+    $(window).resize((e) => {
+      this.cursorXY(e);
+    });
+  },
+});
+</script>

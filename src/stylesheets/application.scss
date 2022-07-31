@@ -95,9 +95,8 @@ main {
 @import "views/soundboard";
 @import "views/links";
 
-// @import "views/drlogic/drlogic";
-// @import "views/drlogic/404";
-// @import "views/drlogic/loader";
+@import "views/drlogic/drlogic";
+@import "views/drlogic/404";
 
 @import "components/app";
 @import "components/table";

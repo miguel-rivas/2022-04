@@ -316,13 +316,13 @@
       &.img {
         text-align: center;
         height: 100%;
-        @include make-md-column(4, 0px);
+        // @include make-md-column(4, 0px);
       }
       &.text {
         @media (min-width: $screen-sm-min) {
           padding: 40px 0;
         }
-        @include make-md-column(8, 0px);
+        // @include make-md-column(8, 0px);
       }
     }
   }
@@ -521,7 +521,7 @@ $screen-info-min: 1190px;
 
     .container {
       @media (min-width: $screen-info-min) {
-        background: #f3f7fb image-url("services/diagram-contract.png") center 60px no-repeat;
+        background: #f3f7fb url(get-zapp('img/drlogic/services/diagram-contract.png')) center 60px no-repeat;
         background-size: 650px;
         height: 1100px;
       }

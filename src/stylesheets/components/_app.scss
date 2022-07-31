@@ -151,6 +151,7 @@
         }
 
         &.router-link-active {
+          color: hsl(149deg, 61%, 71%);
           opacity: 1;
         }
       }
