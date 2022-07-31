@@ -94,7 +94,7 @@ export default Vue.extend({
       {
         tooltip: "Portfolio 2022",
         icon: "monster",
-        route: ["2022-home", "2022-projects", "2022-statistics", "2022-resume"],
+        route: ["map", "2022-projects", "2022-statistics", "2022-resume"],
       },
       {
         divider: true,
@@ -131,7 +131,6 @@ export default Vue.extend({
         tooltip: "Canvas",
         icon: "move",
         route: [
-          "map",
           "dollhouse",
           "game",
           "avatar",
@@ -150,7 +149,7 @@ export default Vue.extend({
       {
         tooltip: "CSS",
         icon: "category",
-        route: ["house", "window", "minivan", "pills"],
+        route: ["house", "window", "minivan", "pills", "stargazer"],
       },
       {
         tooltip: "Portfolio 2014",

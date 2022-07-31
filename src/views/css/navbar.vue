@@ -15,6 +15,9 @@
         <li>
           <router-link to="minivan">Minivan</router-link>
         </li>
+        <li>
+          <router-link to="stargazer">Stargazer</router-link>
+        </li>
       </ul>
     </nav>
   </nn-container>

@@ -7,8 +7,9 @@ import ContactWorkareaView from '@/views/contact-workarea.vue';
 
 import SoundboardWorkareaView from '@/views/soundboard-workarea.vue';
 
-import StargazerWorkareaView from '@/views/2022/stargazer-workarea.vue';
-import StargazerPanelView from '@/views/2022/stargazer-panel.vue';
+import StargazerWorkareaView from '@/views/css/stargazer-workarea.vue';
+import StargazerPanelView from '@/views/css/stargazer-panel.vue';
+
 import ProjectsWorkareaView from '@/views/2022/projects-workarea.vue';
 import ProjectsPanelView from '@/views/2022/projects-panel.vue';
 import StatisticsWorkareaView from '@/views/2022/statistics-workarea.vue';
@@ -17,14 +18,14 @@ import P2022NavbarView from '@/views/2022/navbar.vue';
 import ImagesWorkareaView from '@/views/2022/images-workarea.vue';
 import ImagesPanelView from '@/views/2022/images-panel.vue';
 import VideosWorkareaView from '@/views/2022/video-workarea.vue';
+import LocationsPanelView from '@/views/canvas/locations-panel.vue';
+import LocationsWorkareaView from '@/views/canvas/locations-workarea.vue';
 
 import CanvasNavbarView from '@/views/canvas/navbar.vue';
 import GearWorkareaView from '@/views/canvas/gear-workarea.vue';
 import GearPanelView from '@/views/canvas/gear-panel.vue';
 import WheelWorkareaView from '@/views/canvas/wheel-workarea.vue';
 import WheelPanelView from '@/views/canvas/wheel-panel.vue';
-import LocationsPanelView from '@/views/canvas/locations-panel.vue';
-import LocationsWorkareaView from '@/views/canvas/locations-workarea.vue';
 import AvatarWorkareaView from '@/views/canvas/avatar-workarea.vue';
 import AvatarPanelView from '@/views/canvas/avatar-panel.vue';
 import PixelWorkareaView from '@/views/canvas/pixel-workarea.vue';
@@ -264,12 +265,12 @@ const routes = [
     },
   },
   {
-    name: '2022-home',
-    path: '/2022-home',
+    name: 'stargazer',
+    path: '/stargazer',
     components: {
       workarea: StargazerWorkareaView,
       panel: StargazerPanelView,
-      navbar: P2022NavbarView,
+      navbar: CSSNavbarView,
     },
   },
 
@@ -347,7 +348,7 @@ const routes = [
     components: {
       workarea: LocationsWorkareaView,
       panel: LocationsPanelView,
-      navbar: CanvasNavbarView,
+      navbar: P2022NavbarView,
     },
   },
   {
