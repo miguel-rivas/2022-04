@@ -135,12 +135,38 @@ export default Vue.extend({
       {
         tooltip: "Formability",
         icon: "robot",
-        route: ["formability-demo", "formability-401", "formability-404", "formability-500"],
+        route: [
+          "formability-demo",
+          "formability-401",
+          "formability-404",
+          "formability-500",
+        ],
+      },
+      {
+        tooltip: "Portfolio 2014",
+        title: "14",
+        route: ["2014-home", "2014-projects", "2014-contact"],
+      },
+      {
+        tooltip: "Portfolio 2016",
+        title: "16",
+        route: ["2016-home"],
       },
       {
         tooltip: "Portfolio 2018",
         title: "18",
-        route: ["2018-home", "2018-presidente", "2018-drlogic", "2018-bpr", "2018-apap"],
+        route: [
+          "2018-home",
+          "2018-presidente",
+          "2018-drlogic",
+          "2018-bpr",
+          "2018-apap",
+        ],
+      },
+      {
+        tooltip: "Portfolio 2022",
+        title: "22",
+        route: ["stargazer"],
       },
       {
         divider: true,
@@ -256,25 +282,6 @@ export default Vue.extend({
       },
       {
         divider: true,
-      },
-      {
-        tooltip: i18n.t("timeline.title"),
-        icon: "clock",
-        route: [
-          "timeline",
-          "2014",
-          "2014-home",
-          "2014-projects",
-          "2014-contact",
-          "2016",
-          "2018",
-          "2018-home",
-          "2018-presidente",
-          "2018-drlogic",
-          "2018-apap",
-          "2018-bpr",
-          "2022",
-        ],
       },
     ],
     playSound,

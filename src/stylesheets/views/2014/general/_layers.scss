@@ -1,16 +1,16 @@
 $layers: (
   //----Bottom
-  '&.clock .bk-ornament',
-  '&.underwater .bk-ornament',
-  '&.dragon .bk-ornament',
-  '&.dragon-night .bk-ornament',
-  '&.night .bk-ornament',
-  '&.sunset .bk-ornament',
+  '.clock .bk-ornament',
+  '.underwater .bk-ornament',
+  '.dragon .bk-ornament',
+  '.dragon-night .bk-ornament',
+  '.night .bk-ornament',
+  '.sunset .bk-ornament',
   '.clouds',
   '.mountains',
   '.city',
 
-  '> section',
+  '.nano-workarea section',
   //----Front
 );
 

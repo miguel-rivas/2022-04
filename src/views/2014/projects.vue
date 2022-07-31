@@ -1,6 +1,6 @@
 <template>
-  <section class="projects">
-    <nn-scroll-area color="burn-orange">
+  <nn-scroll-area color="royal-purple" :class="theme">
+    <section class="projects">
       <nn-container width="1450" class="gallery">
         <template v-for="(entry, entryIndex) in allDBListWithImages">
           <article class="nano-box" :key="entryIndex">
@@ -17,7 +17,7 @@
                 </h5>
                 <ul class="skills" v-if="entry.tools.length > 0">
                   <template v-for="(li, liIndex) in entry.tools">
-                    <li :key="liIndex">{{li}}</li>
+                    <li :key="liIndex">{{ li }}</li>
                   </template>
                 </ul>
               </nn-column>
@@ -25,17 +25,29 @@
           </article>
         </template>
       </nn-container>
-    </nn-scroll-area>
-  </section>
+    </section>
+    <div class="bk-ornament" />
+    <footer>
+      <div class="clouds" />
+      <div class="city" />
+      <div class="mountains" />
+    </footer>
+  </nn-scroll-area>
 </template>
 
 <script>
 import Vue from "vue";
 import { allDBListWithImages } from "../../modules/format-db";
+import { mapGetters } from "vuex";
 
 export default Vue.extend({
   data: () => ({
     allDBListWithImages,
   }),
+  computed: {
+    ...mapGetters({
+      theme: "getTheme2014",
+    }),
+  },
 });
 </script>

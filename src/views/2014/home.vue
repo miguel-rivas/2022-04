@@ -1,77 +1,87 @@
 <template>
-  <section class="home">
-    <div class="monitor">
-      <nn-container>
-        <h1 v-html="contentDB[contentIndex].header" />
-        <template v-if="contentDB[contentIndex].content">
-          <p v-html="contentDB[contentIndex].content" />
-        </template>
+  <nn-scroll-area color="royal-purple" :class="theme">
+    <section class="home">
+      <div class="monitor">
+        <nn-container>
+          <h1 v-html="contentDB[contentIndex].header" />
+          <template v-if="contentDB[contentIndex].content">
+            <p v-html="contentDB[contentIndex].content" />
+          </template>
 
-        <button class="scrn_btn prev" @click="movePage(-1)">
-          <nn-icon direction="left" glyph="chevron" />
-        </button>
-        <button class="scrn_btn next" @click="movePage(1)">
-          <nn-icon direction="right" glyph="chevron" />
-        </button>
+          <button class="scrn_btn prev" @click="movePage(-1)">
+            <nn-icon direction="left" glyph="chevron" />
+          </button>
+          <button class="scrn_btn next" @click="movePage(1)">
+            <nn-icon direction="right" glyph="chevron" />
+          </button>
 
-        <web-gear
-          side-perforation-radius="5"
-          side-perforation-distance="32"
-          side-perforation-amount="7"
-          width="180"
-          className="rtr g1"
-        />
-        <web-gear
-          axis-radius="10"
-          side-perforation-radius="8"
-          side-perforation-amount="3"
-          width="160"
-          class="rtr g2"
-        />
-        <web-gear
-          teeth-amount="25"
-          axis-radius="15"
-          side-perforation-radius="8"
-          side-perforation-amount="0"
-          width="52"
-          class="rtl g3"
-        />
-        <web-gear teeth-amount="25" width="100" class="rtl g4" />
-        <web-gear
-          teeth-amount="30"
-          axis-radius="8"
-          side-perforation-radius="3"
-          side-perforation-distance="35"
-          side-perforation-amount="10"
-          width="180"
-          class="rtr g5"
-        />
-        <web-gear
-          axis-radius="3"
-          side-perforation-radius="8"
-          side-perforation-amount="5"
-          width="165"
-          class="rtl g6"
-        />
-      </nn-container>
-      <div class="screen-container">
-        <div class="bone">
+          <web-gear
+            side-perforation-radius="5"
+            side-perforation-distance="32"
+            side-perforation-amount="7"
+            width="180"
+            className="rtr g1"
+          />
+          <web-gear
+            axis-radius="10"
+            side-perforation-radius="8"
+            side-perforation-amount="3"
+            width="160"
+            class="rtr g2"
+          />
           <web-gear
             teeth-amount="25"
             axis-radius="15"
             side-perforation-radius="8"
             side-perforation-amount="0"
             width="52"
+            class="rtl g3"
           />
-          <div class="screen" />
+          <web-gear teeth-amount="25" width="100" class="rtl g4" />
+          <web-gear
+            teeth-amount="30"
+            axis-radius="8"
+            side-perforation-radius="3"
+            side-perforation-distance="35"
+            side-perforation-amount="10"
+            width="180"
+            class="rtr g5"
+          />
+          <web-gear
+            axis-radius="3"
+            side-perforation-radius="8"
+            side-perforation-amount="5"
+            width="165"
+            class="rtl g6"
+          />
+        </nn-container>
+        <div class="screen-container">
+          <div class="bone">
+            <web-gear
+              teeth-amount="25"
+              axis-radius="15"
+              side-perforation-radius="8"
+              side-perforation-amount="0"
+              width="52"
+            />
+            <div class="screen" />
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <div class="bk-ornament" />
+    <footer>
+      <div class="clouds" />
+      <div class="city" />
+      <div class="mountains" />
+    </footer>
+  </nn-scroll-area>
 </template>
 
 <script>
 import Vue from "vue";
+import { mapGetters } from "vuex";
 
 export default Vue.extend({
   components: {},
@@ -102,6 +112,11 @@ export default Vue.extend({
         this.contentIndex += movement;
       }
     },
+  },
+  computed: {
+    ...mapGetters({
+      theme: "getTheme2014",
+    }),
   },
 });
 </script>

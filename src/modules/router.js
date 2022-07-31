@@ -50,6 +50,11 @@ import Form500WorkareaView from '../views/formability/500.vue';
 import FormDemoWorkareaView from '../views/formability/demo.vue';
 import FormNavbarWorkareaView from '../views/formability/navbar.vue';
 
+import P2014HomeView from '../views/2014/home.vue';
+import P2014ProjectsView from '../views/2014/projects.vue';
+import P2014ContactView from '../views/2014/contact.vue';
+import P2014NavbarView from '../views/2014/navbar.vue';
+
 import P2018HomeView from '../views/2018/home.vue';
 import P2018DrLogicView from '../views/2018/drlogic.vue';
 import P2018ApapView from '../views/2018/apap.vue';
@@ -71,6 +76,31 @@ const routes = [
     path: '/drlogic',
     components: {
       workarea: DrlogicHomeView,
+    },
+  },
+
+  {
+    name: '2014-home',
+    path: '/2014-home',
+    components: {
+      workarea: P2014HomeView,
+      navbar: P2014NavbarView,
+    },
+  },
+  {
+    name: '2014-projects',
+    path: '/2014-projects',
+    components: {
+      workarea: P2014ProjectsView,
+      navbar: P2014NavbarView,
+    },
+  },
+  {
+    name: '2014-contact',
+    path: '/2014-contact',
+    components: {
+      workarea: P2014ContactView,
+      navbar: P2014NavbarView,
     },
   },
 
@@ -114,8 +144,6 @@ const routes = [
       navbar: P2018NavbarView,
     },
   },
-
-
   {
     name: 'formability-401',
     path: '/formability-401',

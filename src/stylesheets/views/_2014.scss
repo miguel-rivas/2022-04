@@ -1,11 +1,9 @@
-.nested-app.p2014 {
+.section-2014-home,
+.section-2014-projects,
+.section-2014-contact {
   @import "2014/general/layers";
   @import "2014/general/fonts";
   @import "2014/general/footer";
-
-  @import "2014/desktop/home";
-  @import "2014/desktop/portfolio";
-  @import "2014/desktop/contacts";
 
   @import "2014/skins/clock";
   @import "2014/skins/dragon-night";
@@ -14,14 +12,25 @@
   @import "2014/skins/sunset";
   @import "2014/skins/underwater";
 
-  ::-webkit-input-placeholder { color: #3c523c; }
-  ::-moz-placeholder { color: #3c523c; }
-  :-ms-input-placeholder { color: #3c523c; }
-  :-moz-placeholder { color: #3c523c; }
+  ::-webkit-input-placeholder {
+    color: #3c523c;
+  }
+  ::-moz-placeholder {
+    color: #3c523c;
+  }
+  :-ms-input-placeholder {
+    color: #3c523c;
+  }
+  :-moz-placeholder {
+    color: #3c523c;
+  }
 
-  > section {
-    position: relative;
+  nn-scroll-area {
     height: 100%;
+  }
+
+  section {
+    position: relative;
   }
 
   .nano-box {
@@ -51,5 +60,47 @@
       margin-bottom: 0;
     }
   }
+}
 
+.section-2014-home {
+  @import "2014/desktop/home";
+
+  footer {
+    .city {
+      background-position-x: 1000px;
+      background-position-y: -70px;
+    }
+    .mountains {
+      background-position-x: 500px;
+      background-position-y: -75px;
+    }
+  }
+}
+
+.section-2014-projects {
+  footer {
+    .city {
+      background-position-x: 10px;
+      background-position-y: -75px;
+    }
+    .mountains {
+      background-position-x: 20px;
+      background-position-y: -70px;
+    }
+  }
+}
+
+.section-2014-contact {
+  @import "2014/desktop/contacts";
+
+  footer {
+    .city {
+      background-position-x: 500px;
+      background-position-y: -80px;
+    }
+    .mountains {
+      background-position-x: 200px;
+      background-position-y: -75px;
+    }
+  }
 }
