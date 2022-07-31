@@ -164,11 +164,6 @@ export default Vue.extend({
         ],
       },
       {
-        tooltip: "Portfolio 2022",
-        title: "22",
-        route: ["stargazer"],
-      },
-      {
         divider: true,
       },
       {

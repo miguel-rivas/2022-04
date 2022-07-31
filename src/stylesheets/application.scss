@@ -256,6 +256,10 @@ nn-crayon {
   }
 }
 
+nn-scroll-area[horizontal]{
+  overflow-x: hidden;
+}
+
 /*------------------------*/
 
 .#{$nano}btn.arcade {

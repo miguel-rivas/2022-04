@@ -3,7 +3,6 @@ import VueRouter from 'vue-router';
 
 import ResumeWorkareaView from '../views/resume-workarea.vue';
 import UiRouter from '../router/ui';
-import TimelineRouter from '../router/timeline';
 
 import ProjectsWorkareaView from '../views/projects-workarea.vue';
 import ProjectsPanelView from '../views/projects-panel.vue';
@@ -55,6 +54,9 @@ import P2014ProjectsView from '../views/2014/projects.vue';
 import P2014ContactView from '../views/2014/contact.vue';
 import P2014NavbarView from '../views/2014/navbar.vue';
 
+import P2016WorkareaView from '../views/2016/index.vue';
+import P2016NavbarView from '../views/2016/navbar.vue';
+
 import P2018HomeView from '../views/2018/home.vue';
 import P2018DrLogicView from '../views/2018/drlogic.vue';
 import P2018ApapView from '../views/2018/apap.vue';
@@ -103,7 +105,14 @@ const routes = [
       navbar: P2014NavbarView,
     },
   },
-
+  {
+    name: '2016-home',
+    path: '/2016-home',
+    components: {
+      workarea: P2016WorkareaView,
+      navbar: P2016NavbarView,
+    },
+  },
   {
     name: '2018-home',
     path: '/2018-home',
@@ -470,7 +479,6 @@ const routes = [
   /* ---------------------- nested ---------------------- */
 
   UiRouter,
-  TimelineRouter,
 ];
 
 const router = new VueRouter({

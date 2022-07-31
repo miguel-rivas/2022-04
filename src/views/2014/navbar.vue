@@ -28,7 +28,7 @@
 
 <script>
 import Vue from "vue";
-import { mapMutations, mapGetters } from "vuex";
+import { mapMutations } from "vuex";
 
 export default Vue.extend({
   data: () => ({
@@ -66,18 +66,11 @@ export default Vue.extend({
     ],
     theme: undefined,
   }),
-  computed: {
-    ...mapGetters({
-      theme14: "getTheme2014",
-    }),
-  },
   methods: {
     ...mapMutations(["setTheme2014"]),
   },
   created() {
     this.theme = this.$store.getters.getTheme2014;
-    // console.log(this.$store.getters.getTheme2014)
-    // this.theme = "";
   },
   watch: {
     theme: function (e) {
