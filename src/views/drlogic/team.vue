@@ -116,30 +116,10 @@ export default Vue.extend({
     ],
   }),
   methods: {
-    cursorXY(w) {
-      var dw =
-        $(window).width() ||
-        document.width ||
-        document.documentElement.clientWidth ||
-        document.innerWidth ||
-        window.innerWidth ||
-        screen.width;
-
-      if (!w) var w = window.event;
-      if (
-        w.pageX ||
-        w.pageY ||
-        w.clientX ||
-        w.clientY ||
-        w.pageXOffset ||
-        w.pageYOffset
-      ) {
-        var cy = w.pageY || w.clientY || w.pageYOffset;
-      }
-
-      var fobj = ["#about-us img.base", "#about-us img.manager"];
-
-      var pointX = 0;
+    cursorXY(e) {
+      let cy = e.clientY;
+      let fobj = ["#about-us img.base", "#about-us img.manager"];
+      let pointX = 0;
       if (dw < 500) {
         pointX = 75;
       }
@@ -153,13 +133,13 @@ export default Vue.extend({
       });
     },
   },
-  mounted() {
-    $(window).mousemove((e) => {
-      this.cursorXY(e);
-    });
-    $(window).resize((e) => {
-      this.cursorXY(e);
-    });
+ mounted() {
+    window.addEventListener("mousemove", this.cursorXY());
+    window.addEventListener("resize", this.cursorXY());
+  },
+  beforeDestroy() {
+    window.removeEventListener("mousemove", this.cursorXY());
+    window.removeEventListener("resize", this.cursorXY());
   },
 });
 </script>

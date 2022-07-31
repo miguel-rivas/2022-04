@@ -84,36 +84,23 @@ import drlogicFooter from "./drlogic-footer.vue";
 export default Vue.extend({
   components: { drlogicFooter, drlogicCallUs },
   methods: {
-    cursorXY(w) {
-      if (!w) var w = window.event;
-      if (
-        w.pageX ||
-        w.pageY ||
-        w.clientX ||
-        w.clientY ||
-        w.pageXOffset ||
-        w.pageYOffset
-      ) {
-        var cx = w.pageX || w.clientX || w.pageXOffset;
-        var cy = w.pageY || w.clientY || w.pageYOffset;
-      }
-
-      var fobj = ["#home .wireframe"];
-
-      var pointY = -50;
-
+    cursorXY(e) {
+      let cx = e.clientX;
+      let cy = e.clientY;
+      let fobj = ["#home .wireframe"];
+      let pointY = -50;
       $(fobj[0]).css({
         bottom: pointY + (cy + cx) * 0.01,
       });
     },
   },
   mounted() {
-    $(window).mousemove((e) => {
-      this.cursorXY(e);
-    });
-    $(window).resize((e) => {
-      this.cursorXY(e);
-    });
+    window.addEventListener("mousemove", this.cursorXY());
+    window.addEventListener("resize", this.cursorXY());
+  },
+  beforeDestroy() {
+    window.removeEventListener("mousemove", this.cursorXY());
+    window.removeEventListener("resize", this.cursorXY());
   },
 });
 </script>
