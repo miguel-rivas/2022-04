@@ -50,6 +50,9 @@ export default Vue.extend({
     panelsSize() {
       return this.panel ? 350 : 50;
     },
+    hasPanel() {
+      return this.$route.matched[0].components.panel !== undefined ? 1 : 0;
+    },
   },
   methods: {
     render() {
@@ -90,7 +93,7 @@ export default Vue.extend({
         far: 1000,
       }
     ) {
-      this.winWidth = window.innerWidth - this.panelsSize;
+      this.winWidth = window.innerWidth - this.panelsSize * this.hasPanel;
       this.scene = new THREE.Scene();
       this.scene.position.y = -4;
       this.scene.position.x = 5;
@@ -127,7 +130,7 @@ export default Vue.extend({
       this.$refs.threeScene.appendChild(this.renderer.domElement);
     },
     resizeWindow() {
-      this.winWidth = window.innerWidth - this.panelsSize;
+      this.winWidth = window.innerWidth - this.panelsSize * this.hasPanel;
       this.renderer.setSize(this.winWidth, this.winHeight);
       this.camera.aspect = this.winWidth / this.winHeight;
       this.camera.updateProjectionMatrix();

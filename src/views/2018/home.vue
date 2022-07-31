@@ -41,8 +41,8 @@
 
 <script>
 import Vue from "vue";
-import ThreeObj from "../../components/three-obj.vue";
-import { db2018 } from "../../db/projects-2018";
+import ThreeObj from "@/components/three-obj.vue";
+import { db2018 } from "@/db/projects-2018";
 
 export default Vue.extend({
   components: { ThreeObj },

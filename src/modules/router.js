@@ -3,20 +3,20 @@ import VueRouter from 'vue-router';
 
 import UiRouter from '../router/ui';
 
+import ContactWorkareaView from '../views/contact-workarea.vue';
+
+import SoundboardWorkareaView from '../views/soundboard-workarea.vue';
+
 import ProjectsWorkareaView from '../views/2022/projects-workarea.vue';
 import ProjectsPanelView from '../views/2022/projects-panel.vue';
 import StatisticsWorkareaView from '../views/2022/statistics-workarea.vue';
 import ResumeWorkareaView from '../views/2022/resume-workarea.vue';
 import P2022NavbarView from '../views/2022/navbar.vue';
-
-import ContactWorkareaView from '../views/contact-workarea.vue';
-
 import ImagesWorkareaView from '../views/2022/images-workarea.vue';
 import ImagesPanelView from '../views/2022/images-panel.vue';
 import VideosWorkareaView from '../views/2022/video-workarea.vue';
 
-import SoundboardWorkareaView from '../views/soundboard-workarea.vue';
-
+import CanvasNavbarView from '../views/canvas/navbar.vue';
 import GearWorkareaView from '../views/gear-workarea.vue';
 import GearPanelView from '../views/gear-panel.vue';
 import WheelWorkareaView from '../views/wheel-workarea.vue';
@@ -83,6 +83,8 @@ const routes = [
       workarea: DrlogicHomeView,
     },
   },
+
+
   {
     name: '2014-home',
     path: '/2014-home',
@@ -107,6 +109,8 @@ const routes = [
       navbar: P2014NavbarView,
     },
   },
+
+
   {
     name: '2016-home',
     path: '/2016-home',
@@ -115,6 +119,8 @@ const routes = [
       navbar: P2016NavbarView,
     },
   },
+
+
   {
     name: '2018-home',
     path: '/2018-home',
@@ -155,6 +161,8 @@ const routes = [
       navbar: P2018NavbarView,
     },
   },
+
+
   {
     name: '2022-resume',
     path: '/2022-resume',
@@ -197,6 +205,8 @@ const routes = [
       navbar: P2022NavbarView,
     },
   },
+
+
   {
     name: 'formability-401',
     path: '/formability-401',
@@ -229,6 +239,8 @@ const routes = [
       navbar: FormNavbarWorkareaView,
     },
   },
+
+
   {
     name: 'mineros',
     path: '/mineros',
@@ -237,13 +249,7 @@ const routes = [
       navbar: ApapNavbarView,
     },
   },
-  {
-    name: 'game',
-    path: '/game',
-    components: {
-      workarea: GameWorkareaView,
-    },
-  },
+
   {
     name: 'links',
     path: '/links',
@@ -265,14 +271,24 @@ const routes = [
     components: {
       workarea: DollhouseWorkareaView,
       panel: DollhousePanelView,
+      navbar: CanvasNavbarView,
     },
   },
   {
-    name: 'locations',
-    path: '/locations',
+    name: 'map',
+    path: '/map',
     components: {
       workarea: LocationsWorkareaView,
       panel: LocationsPanelView,
+      navbar: CanvasNavbarView,
+    },
+  },
+  {
+    name: 'game',
+    path: '/game',
+    components: {
+      workarea: GameWorkareaView,
+      navbar: CanvasNavbarView,
     },
   },
   {
@@ -281,6 +297,7 @@ const routes = [
     components: {
       workarea: AvatarWorkareaView,
       panel: AvatarPanelView,
+      navbar: CanvasNavbarView,
     },
   },
   {
@@ -289,6 +306,7 @@ const routes = [
     components: {
       workarea: GearWorkareaView,
       panel: GearPanelView,
+      navbar: CanvasNavbarView,
     },
   },
   {
@@ -297,6 +315,7 @@ const routes = [
     components: {
       workarea: WheelWorkareaView,
       panel: WheelPanelView,
+      navbar: CanvasNavbarView,
     },
   },
   {
@@ -305,6 +324,7 @@ const routes = [
     components: {
       workarea: PixelWorkareaView,
       panel: PixelPanelView,
+      navbar: CanvasNavbarView,
     },
   },
 
@@ -314,6 +334,7 @@ const routes = [
     components: {
       workarea: CubeWorkareaView,
       panel: CubePanelView,
+      navbar: CanvasNavbarView,
     },
   },
   {
@@ -336,6 +357,7 @@ const routes = [
         extends: ThreeWorkareaView,
       }),
       panel: ThreePanelView,
+      navbar: CanvasNavbarView,
     },
   },
   {
@@ -358,6 +380,7 @@ const routes = [
         extends: ThreeWorkareaView,
       }),
       panel: ThreePanelView,
+      navbar: CanvasNavbarView,
     },
   },
   {
@@ -376,6 +399,7 @@ const routes = [
         extends: FlipbookWorkareaView,
       }),
       panel: FlipbookPanelView,
+      navbar: CanvasNavbarView,
     },
   },
   {
@@ -394,9 +418,9 @@ const routes = [
         extends: FlipbookWorkareaView,
       }),
       panel: FlipbookPanelView,
+      navbar: CanvasNavbarView,
     },
   },
-
   {
     name: 'car',
     path: '/car',
@@ -417,6 +441,7 @@ const routes = [
         extends: ThreeWorkareaView,
       }),
       panel: ThreePanelView,
+      navbar: CanvasNavbarView,
     },
   },
   {
@@ -439,8 +464,11 @@ const routes = [
         extends: ThreeWorkareaView,
       }),
       panel: ThreePanelView,
+      navbar: CanvasNavbarView,
     },
   },
+  
+
   {
     name: 'house',
     path: '/house',

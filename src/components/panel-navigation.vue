@@ -94,11 +94,7 @@ export default Vue.extend({
       {
         tooltip: "Portfolio 2022",
         title: "22",
-        route: [
-          "2022-projects",
-          "2022-statistics",
-          "2022-resume",
-        ],
+        route: ["2022-projects", "2022-statistics", "2022-resume"],
       },
       {
         divider: true,
@@ -116,6 +112,26 @@ export default Vue.extend({
           "formability-401",
           "formability-404",
           "formability-500",
+        ],
+      },
+      {
+        tooltip: "Canvas",
+        icon: "move",
+        route: [
+          "map",
+          "dollhouse",
+          "game",
+          "avatar",
+          "gear",
+          "wheel",
+          "pixel",
+          "cube",
+          "spirit",
+          "drakkar",
+          "car",
+          "xwing",
+          "portfolio2017",
+          "audio2",
         ],
       },
       {
@@ -138,82 +154,6 @@ export default Vue.extend({
           "2018-bpr",
           "2018-apap",
         ],
-      },
-      {
-        divider: true,
-      },
-      {
-        tooltip: i18n.t("map.title"),
-        icon: "airplane",
-        route: ["locations"],
-      },
-      {
-        tooltip: i18n.t("dollhouse.title"),
-        icon: "home",
-        route: ["dollhouse"],
-      },
-      {
-        tooltip: i18n.t("game.title"),
-        icon: "move",
-        route: ["game"],
-      },
-      {
-        tooltip: i18n.t("avatar.title"),
-        icon: "person",
-        route: ["avatar"],
-      },
-      {
-        tooltip: i18n.t("gearBuilder.title"),
-        icon: "cog",
-        route: ["gear"],
-      },
-      {
-        tooltip: i18n.t("colorWheel.title"),
-        icon: "palette",
-        route: ["wheel"],
-      },
-      {
-        tooltip: i18n.t("pixelEditor.title"),
-        icon: "category",
-        route: ["pixel"],
-      },
-      {
-        divider: true,
-      },
-      {
-        tooltip: i18n.t("three.section.cube.title"),
-        icon: "cube",
-        route: ["cube"],
-      },
-      {
-        tooltip: i18n.t("three.section.spirit.title"),
-        icon: "monster",
-        route: ["spirit"],
-      },
-      {
-        tooltip: i18n.t("three.section.drakkar.title"),
-        icon: "boat",
-        route: ["drakkar"],
-      },
-      {
-        tooltip: i18n.t("three.section.car.title"),
-        icon: "car",
-        route: ["car"],
-      },
-      {
-        tooltip: i18n.t("three.section.xwing.title"),
-        icon: "rocket",
-        route: ["xwing"],
-      },
-      {
-        tooltip: i18n.t("three.section.2017.title"),
-        icon: "book",
-        route: ["portfolio2017"],
-      },
-      {
-        tooltip: i18n.t("three.section.audio.title"),
-        icon: "book",
-        route: ["audio2"],
       },
       {
         divider: true,
