@@ -15,7 +15,6 @@ footer {
         margin: 1px 5px;
         height: 63px;
       }
-
     }
   }
 
@@ -29,7 +28,10 @@ footer {
     display: block;
     font-size: 8pt;
 
-    &:active, &:hover, &:link, & {
+    &:active,
+    &:hover,
+    &:link,
+    & {
       color: $brand-blue;
     }
 
@@ -77,7 +79,7 @@ footer {
     width: 166px;
     margin-left: -83px;
 
-    a {
+    nn-icon {
       font-size: 12pt;
       padding: 13px;
       display: inline-block;
@@ -90,12 +92,18 @@ footer {
       transition: all 500ms;
       box-sizing: content-box;
 
-      &.fa-twitter { background-color: #5ecdf3;}
-      &.fa-facebook { background-color: #4e7ac0;}
-      &.fa-linkedin { background-color: #0076b7;}
+      &.nn-twitter {
+        background-color: #5ecdf3;
+      }
+      &.nn-facebook {
+        background-color: #4e7ac0;
+      }
+      &.nn-linkedin {
+        background-color: #0076b7;
+      }
 
       &:hover {
-        color: #0076B7;
+        color: #0076b7;
         background-color: #fff;
       }
     }

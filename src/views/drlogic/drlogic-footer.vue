@@ -1,9 +1,9 @@
 <template lang="pug">
 footer
   .social-networks
-    a.fa.fa-twitter(href="#")
-    a.fa.fa-facebook(href="#")
-    a.fa.fa-linkedin(href="#")
+    nn-icon(glyph="twitter")
+    nn-icon(glyph="facebook")
+    nn-icon(glyph="linkedin")
   .bend
     address
       .container
@@ -33,6 +33,6 @@ footer
         small Registered in England and Wales. Company no. 4947299. VAT no. 848448189.
 
         a.terms(href="#")
-          p Terms &amp; Conditions
-          span.fa.fa-book
+          p Terms &amp; Conditions&nbsp;
+          nn-icon(glyph="book")
 </template>

@@ -12,12 +12,30 @@ nn-scroll-area(color="royal-purple")
             p To find out how we can help you improve the way your business operates and to take the aches and pains out of IT support, please drop Dr Logic a line or pick up the phone.
 
       .animation-intro
-        img.plane.p01(:src="getZapp('img/drlogic/contact/plane1.png')", width="100")
-        img.plane.p02(:src="getZapp('img/drlogic/contact/plane2.png')", width="100")
-        img.plane.p03(:src="getZapp('img/drlogic/contact/plane3.png')", width="100")
-        img.plane.p04(:src="getZapp('img/drlogic/contact/plane4.png')", width="100")
-        img.plane.p05(:src="getZapp('img/drlogic/contact/plane5.png')", width="100")
-        img.plane.p06(:src="getZapp('img/drlogic/contact/plane6.png')", width="100")
+        img.plane.p01(
+          :src="getZapp('img/drlogic/contact/plane1.png')",
+          width="100"
+        )
+        img.plane.p02(
+          :src="getZapp('img/drlogic/contact/plane2.png')",
+          width="100"
+        )
+        img.plane.p03(
+          :src="getZapp('img/drlogic/contact/plane3.png')",
+          width="100"
+        )
+        img.plane.p04(
+          :src="getZapp('img/drlogic/contact/plane4.png')",
+          width="100"
+        )
+        img.plane.p05(
+          :src="getZapp('img/drlogic/contact/plane5.png')",
+          width="100"
+        )
+        img.plane.p06(
+          :src="getZapp('img/drlogic/contact/plane6.png')",
+          width="100"
+        )
 
     section#main.body
       .bend
@@ -31,9 +49,7 @@ nn-scroll-area(color="royal-purple")
                     img(:src="getZapp('img/drlogic/contact/phone.png')")
 
                 p
-                  a.smooth.mail(
-                    href="#"
-                  )
+                  a.smooth.mail(href="#")
                     img(:src="getZapp('img/drlogic/contact/mail.png')")
                     span hello@drlogic.com
 
@@ -47,59 +63,58 @@ nn-scroll-area(color="royal-purple")
               form(data-toggle="validator", role="form")
                 legend Send us a message
 
-                .form-group.has-feedback
-                  span.fa.fa-user.input-group-addon
+                .form-group
+                  nn-icon(glyph="person")
                   input.form-control(
                     type="text",
                     placeholder="Full name*",
                     required="required",
                     data-error="Fill this field"
                   )
-                  .help-block.with-errors
 
-                .form-group.has-feedback
-                  span.fa.fa-building.input-group-addon
+                .form-group
+                  nn-icon(glyph="home")
                   input.form-control(
                     type="text",
                     placeholder="Company Name*",
                     required="required",
                     data-error="Fill this field"
                   )
-                  .help-block.with-errors
 
-                .form-group.has-feedback
-                  span.fa.fa-envelope.input-group-addon
+                .form-group
+                  nn-icon(glyph="paper-plane")
                   input.form-control(
                     type="email",
                     placeholder="Email Address*",
                     required="required",
                     data-error="Fill this field"
                   )
-                  .help-block.with-errors
 
-                .form-group.has-feedback
-                  span.fa.fa-phone-square.input-group-addon
+                .form-group
+                  nn-icon(glyph="paper-plane")
                   input.form-control(
                     type="tel",
                     placeholder="Phone Number",
                     data-error="Fill this field"
                   )
-                  .help-block.with-errors
 
-                .form-group.txt-area.has-feedback
-                  span.fa.fa-pencil.input-group-addon
+                .form-group.txt-area
+                  nn-icon(glyph="leaf")
                   textarea.form-control(
                     placeholder="Your Message*",
                     required="required",
                     data-error="Fill this field"
                   )
-                  .help-block.with-errors
 
                 button.btn.btn-primary.orange(type="Submit") Submit
 
     section#location
       h2 Where to find us
       section#map
+        aside.overlay
+          img(:src="getZapp('img/drlogic/map-logo.png')", width="60")
+          br
+          span.point
 
     drlogic-footer
 </template>

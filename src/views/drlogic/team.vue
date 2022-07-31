@@ -137,7 +137,7 @@ export default Vue.extend({
         var cy = w.pageY || w.clientY || w.pageYOffset;
       }
 
-      var fobj = ["img.base", "img.manager"];
+      var fobj = ["#about-us img.base", "#about-us img.manager"];
 
       var pointX = 0;
       if (dw < 500) {

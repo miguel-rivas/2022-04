@@ -1,6 +1,6 @@
 #services {
   .btn {
-        @media (max-width: $screen-sm-min) {
+    @media (max-width: $screen-sm-min) {
       font-size: 8pt;
       padding: 10px 10px;
     }
@@ -52,7 +52,6 @@
       width: 390px;
       height: 380px;
     }
-
   }
 
   .animation-intro {
@@ -88,13 +87,14 @@
         animation: dataTransferTablet 8s ease-in-out normal infinite;
         display: block;
       }
-
     }
 
     .globe {
       width: 36px;
       height: auto;
-      @media (min-width: $screen-sm-min) { width: 60px; }
+      @media (min-width: $screen-sm-min) {
+        width: 60px;
+      }
     }
 
     .woman-globe {
@@ -176,7 +176,6 @@
     display: inline-block;
     border: none;
 
-
     li {
       font-size: 15pt;
       padding: 0 7px;
@@ -191,7 +190,6 @@
         &:before {
           opacity: 1;
         }
-
       }
 
       a {
@@ -267,11 +265,9 @@
     }
   }
 
-
   .textDesktop {
     margin: auto;
     display: none;
-
 
     @media (min-width: $screen-md-min) {
       display: block;
@@ -312,44 +308,43 @@
     }
 
     .column {
-
       &.img {
         text-align: center;
         height: 100%;
-        // @include make-md-column(4, 0px);
       }
       &.text {
         @media (min-width: $screen-sm-min) {
           padding: 40px 0;
         }
-        // @include make-md-column(8, 0px);
       }
     }
   }
 
   table {
-
     margin: 65px 0;
 
     img {
       width: 17px;
       margin: 6px 6px 6px 0;
-      @media (max-width: $screen-sm-min){
+      @media (max-width: $screen-sm-min) {
         display: none;
       }
     }
 
-    td,th,tr {
+    td,
+    th,
+    tr {
       border: none;
-      @media (max-width: $screen-sm-min){
+      @media (max-width: $screen-sm-min) {
         font-size: 9pt;
       }
     }
 
-    td, th {
+    td,
+    th {
       &:first-child {
         width: 100px;
-        @media (min-width: $screen-sm-min){
+        @media (min-width: $screen-sm-min) {
           width: 210px;
         }
       }
@@ -374,12 +369,11 @@
       }
 
       &:hover {
-        background-color: #A4DDFF;
-        border-bottom: 2px solid #5EA3C5;
+        background-color: #a4ddff;
+        border-bottom: 2px solid #5ea3c5;
       }
     }
   }
-
 }
 
 $screen-info-min: 1190px;
@@ -414,8 +408,8 @@ $screen-info-min: 1190px;
     }
   }
 
-  .image-box, .txt-box {
-
+  .image-box,
+  .txt-box {
     display: inline-block;
     vertical-align: middle;
   }
@@ -435,7 +429,6 @@ $screen-info-min: 1190px;
     height: 235px;
     transition: all 500ms;
     transform: translate(0) rotateZ(0deg);
-
   }
 
   img {
@@ -463,7 +456,6 @@ $screen-info-min: 1190px;
     &.n0 {
       display: none;
     }
-
   }
 
   article {
@@ -487,7 +479,8 @@ $screen-info-min: 1190px;
         top: 51px;
         left: 63px;
       }
-      .image-box, .txt-box {
+      .image-box,
+      .txt-box {
         @media (min-width: $screen-info-min) {
           float: left;
         }
@@ -499,18 +492,17 @@ $screen-info-min: 1190px;
         top: 34px;
         left: 198px;
       }
-      .image-box, .txt-box {
+      .image-box,
+      .txt-box {
         @media (min-width: $screen-info-min) {
           float: right;
         }
       }
     }
-
   }
 }
 
 #contract {
-
   .copywrite {
     .btn {
       margin: 30px auto 0;
@@ -518,37 +510,46 @@ $screen-info-min: 1190px;
   }
 
   .infogram {
-
     .container {
       @media (min-width: $screen-info-min) {
-        background: #f3f7fb url(get-zapp('img/drlogic/services/diagram-contract.png')) center 60px no-repeat;
+        background: #f3f7fb url(get-zapp("img/drlogic/services/diagram-contract.png")) center 60px no-repeat;
         background-size: 650px;
         height: 1100px;
       }
     }
 
     article {
-      &.sec1 { top: 360px; left: -52%; }
-      &.sec2 { top: 560px; right: 20%; }
-      &.sec3 { top: 810px; left: 50%; }
-      &.sec2, &.sec3 {
+      &.sec1 {
+        top: 360px;
+        left: -19%;
+      }
+      &.sec2 {
+        top: 560px;
+        right: 20%;
+      }
+      &.sec3 {
+        top: 810px;
+        left: 50%;
+      }
+      &.sec2,
+      &.sec3 {
         @media (min-width: $screen-info-min) {
-          margin-left: ((-572/2) - 120)#{"px"};
-          margin-right: ((-572/2) - 120)#{"px"};
+          margin-left: #{((-572/2) - 120)}#{"px"};
+          margin-right: #{((-572/2) - 120)}#{"px"};
         }
       }
     }
 
     .number {
       &.n1 {
-        background-color: #00C4B4;
+        background-color: #00c4b4;
       }
       &.n2 {
-        background-color: #FFC600;
+        background-color: #ffc600;
       }
       &.n3 {
-        background-color: #004E78;
-               top: 51px;
+        background-color: #004e78;
+        top: 51px;
         left: 63px;
       }
     }

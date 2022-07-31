@@ -5,32 +5,55 @@ main.section-drlogic-support,
 main.section-drlogic-services,
 main.section-drlogic-testimonials {
   .nano-workarea {
+    @import "mini-bootstrap";
     @import "base/variables";
-    @import "base/base";
     @import "base/typography";
-  
+
     @import "mixins/main";
-    @import "mixins/testimonials";
-    @import "mixins/about";
-  
     @import "main/main";
     @import "main/footer";
-  
-    @import "sections/home";
-    @import "sections/contact";
-    @import "sections/about";
-    @import "sections/testimonials";
-    @import "sections/other-services";
-    @import "sections/services";
-  
-    @import "keyframes/home";
-    @import "keyframes/contact";
-    @import "keyframes/testimonials";
 
     margin: 0;
     padding: 0;
     font-family: $base-font-family;
-    letter-spacing: .8pt;
+    letter-spacing: 0.8pt;
     background-color: #fff;
+    color: #333;
   }
+}
+
+main.section-drlogic-home .nano-workarea {
+  @import "base/variables";
+  @import "sections/home";
+  @import "keyframes/home";
+}
+
+main.section-drlogic-contact .nano-workarea {
+  @import "base/variables";
+  @import "sections/contact";
+  @import "keyframes/contact";
+}
+
+main.section-drlogic-team .nano-workarea {
+  @import "base/variables";
+  @import "mixins/about";
+  @import "sections/about";
+}
+
+main.section-drlogic-support .nano-workarea {
+  @import "base/variables";
+  @import "keyframes/services";
+  @import "sections/services";
+}
+
+main.section-drlogic-services .nano-workarea {
+  @import "base/variables";
+  @import "sections/other-services";
+}
+
+main.section-drlogic-testimonials .nano-workarea {
+  @import "base/variables";
+  @import "mixins/testimonials";
+  @import "sections/testimonials";
+  @import "keyframes/testimonials";
 }

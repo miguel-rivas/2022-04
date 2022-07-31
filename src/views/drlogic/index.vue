@@ -1,7 +1,7 @@
 <template lang="pug">
 nn-scroll-area(color="royal-purple")
   section#home
-    section.intro
+    section.intro.home
       .copywrite
         h1 Mac IT support
         p We provide Mac IT support for nice companies who like to do things differently.

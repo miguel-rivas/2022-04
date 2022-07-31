@@ -85,7 +85,6 @@ body.about-us, html.about-us
 
 article.people {
 	width: 250px;
-	text-align: center;
 	display: inline-block;
 	margin: 16px;
 	z-index: 1;
@@ -100,7 +99,7 @@ article.people {
 	@include people_box( "cyan", $brand-cyan );
 	@include people_box( "orange", $brand-orange );
 
-	.main {min-height: 130px;}
+	.main {min-height: 80px;}
 
 	.description {
 		padding: 5px 40px 0;
