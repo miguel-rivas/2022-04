@@ -108,7 +108,6 @@ export default Vue.extend({
     },
   },
   mounted() {
-    this.cursorXY(e);
     $(window).mousemove((e) => {
       this.cursorXY(e);
     });
