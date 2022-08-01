@@ -1,0 +1,74 @@
+.section-presidente-verano-loader {
+  .nano-workarea {
+    $minScreenSize: 760px;
+    $size: 150px;
+    background: #007820 url(get-zapp("img/extras/presidente.jpg")) center repeat;
+
+    aside {
+      top: 0;
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      z-index: 99;
+      perspective: 1000px;
+
+      div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: $size;
+        height: $size;
+        margin: -$size/2;
+        box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
+        border-radius: 50%;
+
+        animation-name: flipCap;
+        animation-duration: 200ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-direction: normal;
+      }
+
+      span {
+        position: absolute;
+        width: $size;
+        height: $size;
+        background: url(get-zapp('img/presidente/cap.png')) center no-repeat;
+
+        animation-name: rotZ;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-direction: normal;
+      }
+    }
+
+    @keyframes rotZ {
+      0% {
+        transform: rotateZ(0deg);
+      }
+      100% {
+        transform: rotateZ(-360deg);
+      }
+    }
+
+    $degree: 20deg;
+    @keyframes flipCap {
+      0% {
+        transform: rotateX(-$degree) rotateY(-$degree);
+      }
+      25% {
+        transform: rotateX(-$degree) rotateY($degree);
+      }
+      50% {
+        transform: rotateX($degree) rotateY($degree);
+      }
+      75% {
+        transform: rotateX($degree) rotateY(-$degree);
+      }
+      100% {
+        transform: rotateX(-$degree) rotateY(-$degree);
+      }
+    }
+  }
+}

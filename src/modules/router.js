@@ -81,7 +81,12 @@ import Drlogic404View from '@/views/drlogic/404.vue';
 
 import presidenteNavbarView from '@/views/presidente/navbar.vue';
 import presidenteFilterView from '@/views/presidente/carnaval-filter.vue';
+import presidenteLoaderView from '@/views/presidente/verano-loader.vue';
 import presidenteCarnavalView from '@/views/presidente/carnaval-home.vue';
+
+import pixelptNavbarView from '@/views/ppt/navbar.vue';
+import pixelpt404View from '@/views/ppt/404.vue';
+import pixelpt500View from '@/views/ppt/500.vue';
 
 Vue.use(VueRouter);
 
@@ -91,6 +96,31 @@ const routes = [
     redirect: '/map',
   },
 
+  {
+    name: 'pixelpt-404',
+    path: '/pixelpt-404',
+    components: {
+      workarea: pixelpt404View,
+      navbar: pixelptNavbarView,
+    },
+  },
+  {
+    name: 'pixelpt-500',
+    path: '/pixelpt-500',
+    components: {
+      workarea: pixelpt500View,
+      navbar: pixelptNavbarView,
+    },
+  },
+
+  {
+    name: 'presidente-verano-loader',
+    path: '/presidente-verano-loader',
+    components: {
+      workarea: presidenteLoaderView,
+      navbar: presidenteNavbarView,
+    },
+  },
   {
     name: 'presidente-carnaval-filter',
     path: '/presidente-carnaval-filter',

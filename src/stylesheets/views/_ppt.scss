@@ -1,0 +1,101 @@
+main.section-pixelpt-404 {
+  .nano-workarea {
+    background-color: #fbb03b;
+  }
+}
+
+main.section-pixelpt-500 {
+  .nano-workarea {
+    background-color: #29ABE2;
+  }
+}
+
+main.section-pixelpt-500,
+main.section-pixelpt-404 {
+  .nano-workarea {
+    color: #2e2f30;
+    text-align: center;
+    font-family: "Montserrat", helvetica, sans-serif;
+    margin: 0;
+
+    &:before {
+      content: "";
+      display: block;
+      position: fixed;
+      background-color: rgba(0, 0, 0, 0.1);
+      width: 450%;
+      height: 270%;
+      bottom: -183%;
+      right: -240%;
+      transform: rotate(-35deg);
+    }
+
+    div.dialog {
+      width: 530px;
+      height: 304px;
+      margin-top: -152px;
+      margin-left: -275px;
+      top: 50%;
+      left: 50%;
+      color: #222;
+      line-height: 1.2;
+      position: absolute;
+    }
+
+    @media (max-width: 550px) {
+      img {
+        height: 80px;
+      }
+
+      div.dialog {
+        width: 250px;
+        margin-left: -125px;
+      }
+    }
+
+    p {
+      margin: 25px auto;
+    }
+
+    a {
+      background-color: #dc4126;
+      display: block;
+      margin: auto;
+      width: 200px;
+      font-size: 12pt;
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 0;
+      box-shadow: 0px 3px 0px #af3f2b;
+      transition: background-color 500ms ease;
+
+      &:hover {
+        background-color: #b93119;
+      }
+    }
+
+    .ruby {
+      margin: 0 -10px;
+      transition: margin 500ms ease;
+    }
+
+    div.images {
+      text-align: center;
+      &:hover {
+        & > img.ruby {
+          margin: 0 -20px;
+          animation: shake 100ms linear infinite alternate;
+        }
+      }
+    }
+
+    @keyframes shake {
+      from {
+        transform: rotate(-5deg);
+      }
+      to {
+        transform: rotate(5deg);
+      }
+    }
+  }
+}

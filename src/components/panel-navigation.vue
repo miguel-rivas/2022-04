@@ -118,6 +118,7 @@ export default Vue.extend({
         route: [
           "presidente-carnaval-filter",
           "presidente-carnaval-home",
+          "presidente-verano-loader",
         ],
       },
       {
@@ -133,6 +134,14 @@ export default Vue.extend({
           "formability-401",
           "formability-404",
           "formability-500",
+        ],
+      },
+      {
+        tooltip: "Pixel Perfect Tree",
+        icon: "leaf",
+        route: [
+          "pixelpt-404",
+          "pixelpt-500",
         ],
       },
       {

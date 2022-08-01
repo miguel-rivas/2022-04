@@ -2,7 +2,7 @@
 	nn-scroll-area {
     scroll-behavior: smooth;
   }
-	
+
 	.nano-workarea {
 		$f_oswald: "Oswald", helvetica, sans-serif, verdana;
 		$f_helvetica: helvetica, sans-serif, verdana;
@@ -27,7 +27,7 @@
 			-webkit-animation: wave_animation linear 5s infinite;
 			animation: wave_animation linear 5s infinite;
 
-			background: #265501 url(get-zapp("img/presidente/pt_01.png")) repeat;
+			background: #265501 url(get-zapp("img/extras/presidente-waves.png")) repeat;
 			background-position: 0 0;
 		}
 
