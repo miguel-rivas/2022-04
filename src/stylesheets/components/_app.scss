@@ -191,4 +191,17 @@
     transition: all 200ms ease;
     background-color: var(--color-workarea-background);
   }
+
+  .nano-header {
+    text-align: center;
+    nn-container {
+      padding: 6rem 1rem;
+    }
+
+    h1 {
+      font-weight: 600;
+      color: var(--color-foreground);
+      font-size: 3rem;
+    }
+  }
 }

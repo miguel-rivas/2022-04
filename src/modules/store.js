@@ -37,9 +37,6 @@ export const store = new Vuex.Store({
           y: 0,
         },
       },
-      projects: {
-        filterData: 'companies',
-      },
       timeline: {
         theme2014: 'clock',
         theme2016: '',
@@ -96,7 +93,6 @@ export const store = new Vuex.Store({
     getGearSelection: state => state.selection.gearState,
     getWheelSelection: state => state.selection.wheel,
     getLocationSelection: state => state.selection.locations,
-    getFilterData: state => state.selection.projects,
     getMeshSelection: state => state.selection.threeState,
     getProjects3DSelection: state => state.selection.projects3d,
     getAvatarSelection: state => state.selection.avatarState,

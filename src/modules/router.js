@@ -11,7 +11,6 @@ import StargazerWorkareaView from '@/views/css/stargazer-workarea.vue';
 import StargazerPanelView from '@/views/css/stargazer-panel.vue';
 
 import ProjectsWorkareaView from '@/views/2022/projects-workarea.vue';
-import ProjectsPanelView from '@/views/2022/projects-panel.vue';
 import StatisticsWorkareaView from '@/views/2022/statistics-workarea.vue';
 import ResumeWorkareaView from '@/views/2022/resume-workarea.vue';
 import P2022NavbarView from '@/views/2022/navbar.vue';
@@ -288,7 +287,6 @@ const routes = [
     path: '/2022-projects',
     components: {
       workarea: ProjectsWorkareaView,
-      panel: ProjectsPanelView,
       navbar: P2022NavbarView,
     },
   },
