@@ -101,7 +101,7 @@ export default Vue.extend({
       },
       {
         tooltip: "DrLogic",
-        title: "Dr",
+        icon: "save",
         route: [
           "drlogic-home",
           "drlogic-404",
@@ -113,8 +113,16 @@ export default Vue.extend({
         ],
       },
       {
+        tooltip: "Presidente",
+        icon: "beer",
+        route: [
+          "presidente-carnaval-filter",
+          "presidente-carnaval-home",
+        ],
+      },
+      {
         tooltip: "Apap",
-        icon: "person",
+        icon: "coin-dollar",
         route: ["mineros"],
       },
       {
@@ -126,6 +134,9 @@ export default Vue.extend({
           "formability-404",
           "formability-500",
         ],
+      },
+      {
+        divider: true,
       },
       {
         tooltip: "Canvas",

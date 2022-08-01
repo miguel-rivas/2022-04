@@ -95,12 +95,12 @@ export default Vue.extend({
     },
   },
   mounted() {
-    window.addEventListener("mousemove", this.cursorXY());
-    window.addEventListener("resize", this.cursorXY());
+    window.addEventListener("mousemove", this.cursorXY);
+    window.addEventListener("resize", this.cursorXY);
   },
   beforeDestroy() {
-    window.removeEventListener("mousemove", this.cursorXY());
-    window.removeEventListener("resize", this.cursorXY());
+    window.removeEventListener("mousemove", this.cursorXY);
+    window.removeEventListener("resize", this.cursorXY);
   },
 });
 </script>

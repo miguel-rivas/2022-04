@@ -117,6 +117,14 @@ export default Vue.extend({
   }),
   methods: {
     cursorXY(e) {
+      let dw =
+        $(window).width() ||
+        document.width ||
+        document.documentElement.clientWidth ||
+        document.innerWidth ||
+        window.innerWidth ||
+        screen.width;
+
       let cy = e.clientY;
       let fobj = ["#about-us img.base", "#about-us img.manager"];
       let pointX = 0;
@@ -133,13 +141,13 @@ export default Vue.extend({
       });
     },
   },
- mounted() {
-    window.addEventListener("mousemove", this.cursorXY());
-    window.addEventListener("resize", this.cursorXY());
+  mounted() {
+    window.addEventListener("mousemove", this.cursorXY);
+    window.addEventListener("resize", this.cursorXY);
   },
   beforeDestroy() {
-    window.removeEventListener("mousemove", this.cursorXY());
-    window.removeEventListener("resize", this.cursorXY());
+    window.removeEventListener("mousemove", this.cursorXY);
+    window.removeEventListener("resize", this.cursorXY);
   },
 });
 </script>

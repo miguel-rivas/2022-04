@@ -1,18 +1,21 @@
 cd dist
 
 files=(
-  "2014"
   "2014-home"
   "2014-projects"
   "2014-contact"
-  "2016"
-  "2018"
+  "2016-home"
   "2018-home"
   "2018-presidente"
   "2018-drlogic"
   "2018-apap"
   "2018-bpr"
-  "2022"
+  
+  "2022-projects"
+  "2022-statistics"
+  "2022-images"
+  "2022-videos"
+  "2022-resume"
 
   "audio2"
 
@@ -21,6 +24,14 @@ files=(
   "colors"
   "cube"
   "css"
+
+  "drlogic-home"
+  "drlogic-team"
+  "drlogic-services"
+  "drlogic-support"
+  "drlogic-contact"
+  "drlogic-404"
+  "drlogic-testimonials"
 
   "dollhouse"
   "drakkar"
@@ -38,7 +49,6 @@ files=(
   "house"
 
   "icons"
-  "images"
 
   "links"
   "list"
@@ -49,21 +59,20 @@ files=(
 
   "pills"
   "portfolio2017"
-  "projects"
 
-  "resume"
+  "presidente-carnaval-filter"
+  "presidente-carnaval-home"
   
   "soundboard"
   "spirit"
   "stargazer"
-  "statistics"
   
   "timeline"
   "threejs"
 
   "ui"
 
-  "videos"
+  
   
   "window"
 

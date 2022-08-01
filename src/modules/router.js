@@ -79,6 +79,10 @@ import DrlogicServicesView from '@/views/drlogic/services.vue';
 import DrlogicSupportView from '@/views/drlogic/support.vue';
 import Drlogic404View from '@/views/drlogic/404.vue';
 
+import presidenteNavbarView from '@/views/presidente/navbar.vue';
+import presidenteFilterView from '@/views/presidente/carnaval-filter.vue';
+import presidenteCarnavalView from '@/views/presidente/carnaval-home.vue';
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -86,6 +90,25 @@ const routes = [
     path: '/',
     redirect: '/map',
   },
+
+  {
+    name: 'presidente-carnaval-filter',
+    path: '/presidente-carnaval-filter',
+    components: {
+      workarea: presidenteFilterView,
+      navbar: presidenteNavbarView,
+    },
+  },
+  {
+    name: 'presidente-carnaval-home',
+    path: '/presidente-carnaval-home',
+    components: {
+      workarea: presidenteCarnavalView,
+      navbar: presidenteNavbarView,
+    },
+  },
+
+
   {
     name: 'drlogic-home',
     path: '/drlogic-home',
@@ -264,6 +287,7 @@ const routes = [
       navbar: P2022NavbarView,
     },
   },
+
   {
     name: 'stargazer',
     path: '/stargazer',

@@ -921,10 +921,25 @@
     "@babel/helper-validator-identifier" "^7.16.7"
     to-fast-properties "^2.0.0"
 
+"@fontsource/crimson-text@^4.2.2":
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/@fontsource/crimson-text/-/crimson-text-4.5.3.tgz#8cfac11bd98db326ac7eae8cbb167670b54c8543"
+  integrity sha512-eu6GLOY0ydi99dkCzdoKsMAz+w7v54Fl86VZ676TaAjIAcLGxxKC3x2YxkwGjXMAarh5eKv/fNOFjA94UWjBug==
+
 "@fontsource/montserrat@^4.2.2":
   version "4.5.2"
   resolved "https://registry.yarnpkg.com/@fontsource/montserrat/-/montserrat-4.5.2.tgz#95c38172b134db4ed7d2d728513c0abbef54fdb1"
   integrity sha512-RRrXoTlHYLg5CA+RaxVVnosU2RDO4NiZgRmgD1o1d6lm07Dvuzsr0JPALcm5I4VqZw5bzx4nIz2u+T5LOR7W7w==
+
+"@fontsource/nunito@^4.2.2":
+  version "4.5.9"
+  resolved "https://registry.yarnpkg.com/@fontsource/nunito/-/nunito-4.5.9.tgz#90c89de1bcf40fd1ec1ae2c75392fbe20e45a59c"
+  integrity sha512-HlCPb5MSCSEx5KhIYsIU6JqlOtvfFnTT2RB0Gcz3Pdht9rkShEYaYKVvlgYQV03+Eom8HUAYQJcDT5gaRbm6AQ==
+
+"@fontsource/oswald@^4.2.2":
+  version "4.5.9"
+  resolved "https://registry.yarnpkg.com/@fontsource/oswald/-/oswald-4.5.9.tgz#204990e6601c7c18ae3defe2c530dd24469d16b2"
+  integrity sha512-+VDR5CB8aYbAEltbPzbnQrkLcxDYEyipiVpDnQDYlo8y/Jgvf57LvEP8KezQNnx6M+SucwfqVGsaoig/fCRHzA==
 
 "@fontsource/quicksand@^4.2.2":
   version "4.5.6"
