@@ -14,36 +14,32 @@
             <dt>Website</dt>
             <dd>
               <a :href="'https://' + user.website">
-                <nn-icon glyph="home" />&nbsp;{{ user.website }}
+                {{ user.website }}
               </a>
             </dd>
             <dt>Email</dt>
             <dd>
               <a :href="'mailto:' + user.email">
-                <nn-icon glyph="paper-plane" />&nbsp;{{ user.email }}
+                {{ user.email }}
               </a>
             </dd>
             <dt>Location</dt>
             <dd>
               <a :href="city" target="_blank">
-                <nn-icon glyph="airplane" />&nbsp;{{ user.location.city }},
+                {{ user.location.city }},
                 {{ user.location.state }}
               </a>
             </dd>
             <dt>Phone Number</dt>
             <dd>
-              <a :href="'tel:' + user.phoneLink"
-                ><nn-icon glyph="boat" />&nbsp;{{ user.phone }}</a
-              >
+              <a :href="'tel:' + user.phoneLink">{{ user.phone }}</a>
             </dd>
             <dt>Github</dt>
             <dd>
               <a
                 :href="`https://github.com/${user.media.github.user}`"
                 target="_blank"
-              >
-                <nn-icon glyph="github" />&nbsp;{{ user.media.github.user }}</a
-              >
+              >{{ user.media.github.user }}</a>
             </dd>
           </dl>
         </address>
