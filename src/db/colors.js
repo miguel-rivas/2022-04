@@ -1,4 +1,4 @@
-import { gColor } from "../classes/gcolor";
+import { gColor } from "@/classes/gcolor";
 
 export const gColorsDB = [
   new gColor('shamrock', '#34ce7e'),

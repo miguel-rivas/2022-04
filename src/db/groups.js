@@ -1,6 +1,6 @@
 import { toolEnum } from "@/enums/tools";
 import { client } from "@/enums/clients";
-import { Group, Children, Position, Preview } from "../classes/project";
+import { Group, Children, Position, Preview } from "@/classes/project";
 
 const groups = [
   new Group(

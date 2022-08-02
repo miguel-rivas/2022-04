@@ -13,17 +13,37 @@
           <dl>
             <dt>Website</dt>
             <dd>
-              <a :href="user.website" v-html="user.website" />
+              <a :href="'https://' + user.website">
+                <nn-icon glyph="home" />&nbsp;{{ user.website }}
+              </a>
             </dd>
             <dt>Email</dt>
             <dd>
-              <a :href="'mailto:' + user.email" v-html="user.email" />
+              <a :href="'mailto:' + user.email">
+                <nn-icon glyph="paper-plane" />&nbsp;{{ user.email }}
+              </a>
             </dd>
             <dt>Location</dt>
-            <dd>{{ user.location.city }}, {{ user.location.state }}</dd>
+            <dd>
+              <a :href="city" target="_blank">
+                <nn-icon glyph="airplane" />&nbsp;{{ user.location.city }},
+                {{ user.location.state }}
+              </a>
+            </dd>
             <dt>Phone Number</dt>
             <dd>
-              <a :href="'tel:' + user.phone" v-html="user.phone" />
+              <a :href="'tel:' + user.phoneLink"
+                ><nn-icon glyph="boat" />&nbsp;{{ user.phone }}</a
+              >
+            </dd>
+            <dt>Github</dt>
+            <dd>
+              <a
+                :href="`https://github.com/${user.media.github.user}`"
+                target="_blank"
+              >
+                <nn-icon glyph="github" />&nbsp;{{ user.media.github.user }}</a
+              >
             </dd>
           </dl>
         </address>
@@ -84,12 +104,13 @@
 import Vue from "vue";
 import { user } from "@/db/user";
 import { tool } from "@/enums/tools";
+import { LinkWeb } from "@/classes/project";
 
 const separator = "";
 
 export default Vue.extend({
-  components: {},
   data: () => ({
+    city: new LinkWeb("matryoshka/map", "App").path,
     locations: [
       "enovational",
       "plantTherapy",

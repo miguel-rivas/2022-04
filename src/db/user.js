@@ -4,8 +4,9 @@ const user = {
   "lastName": "Rivas",
   "title": "Frontend Developer",
   "website": "miguel-rivas.github.io",
-  "email": "miguel.portfolio.gi7pt@simplelogin.fr",
-  "phone": "2029830839",
+  "email": "miguel.nr273@aleeas.com",
+  "phone": "(202) 983-0839",
+  "phoneLink": "2029830839",
   "location": {
     "city": "Washington",
     "state": "DC"

@@ -1,7 +1,7 @@
 import { toolEnum } from "@/enums/tools";
 import { type } from "@/enums/types";
 import { client } from "@/enums/clients";
-import { Project, Children, Link, LinkCodepen, LinkVimeo, LinkGithub, LinkWeb, Preview, Document } from "../classes/project";
+import { Project, Children, Link, LinkCodepen, LinkVimeo, LinkGithub, LinkWeb, Preview, Document } from "@/classes/project";
 
 const pj = [
   new Project(
