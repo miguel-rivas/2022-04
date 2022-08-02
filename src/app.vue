@@ -1,5 +1,5 @@
 <template>
-  <main class="vue-theme" :class="classes">
+  <main :class="classes">
     <alert />
     <nn-row class="nano-app">
       <panel-navigation />

@@ -8,75 +8,76 @@
     display: inline-flex;
     min-width: 250px + 16 * 2;
   }
-}
-
-.item {
-  background-color: var(--color-palette);
-  padding: 1rem;
-  margin: 1rem;
-  box-shadow: 2px 2px 5px rgb(0 0 0 / 25%);
-
-  video {
-    margin-bottom: 0.5rem;
-  }
-
-  .nano-shade-box {
-    width: 325px;
-
-    h2 {
-      font-size: 16px;
-      text-transform: uppercase;
-    }
-
-    small {
-      font-size: 10px;
-      letter-spacing: 1px;
-    }
-  }
-
-  &.swatch,
-  &.icon-item {
-    transition: transform 200ms ease-in-out;
-    &,
-    h1 {
-      color: var(--color-foreground);
-    }
-
-    h1 {
-      font-size: 16px;
-    }
-
-    h1,
-    p {
-      margin: 0 0 0.5rem;
-    }
-
-    &:hover {
-      transform: rotate(2deg);
-    }
-  }
-
-  &.icon-item {
-    #{wc("column", "", ":first-child")} {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 40px;
-      background-color: var(--color-table-background-2);
+  
+  .item {
+    background-color: var(--color-palette);
+    padding: 1rem;
+    margin: 1rem;
+    box-shadow: 2px 2px 5px rgb(0 0 0 / 25%);
+  
+    video {
       margin-bottom: 0.5rem;
     }
-    h1 {
-      margin-bottom: 0;
+  
+    .nano-shade-box {
+      width: 325px;
+  
+      h2 {
+        font-size: 16px;
+        text-transform: uppercase;
+      }
+  
+      small {
+        font-size: 10px;
+        letter-spacing: 1px;
+      }
     }
-  }
-
-  &.swatch {
-    .color {
-      border: 1px solid var(--color-border);
-      margin-bottom: 1rem;
+  
+    &.swatch,
+    &.icon-item {
+      transition: transform 200ms ease-in-out;
+      &,
+      h1 {
+        color: var(--color-foreground);
+      }
+  
+      h1 {
+        font-size: 16px;
+      }
+  
+      h1,
+      p {
+        margin: 0 0 0.5rem;
+      }
+  
+      &:hover {
+        transform: rotate(2deg);
+      }
+    }
+  
+    &.icon-item {
+      #{wc("column", "", ":first-child")} {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        background-color: var(--color-table-background-2);
+        margin-bottom: 0.5rem;
+      }
+      h1 {
+        margin-bottom: 0;
+      }
+    }
+  
+    &.swatch {
+      .color {
+        border: 1px solid var(--color-border);
+        margin-bottom: 1rem;
+      }
     }
   }
 }
+
 
 /* --------------------------- */
 
