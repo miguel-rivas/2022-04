@@ -52,8 +52,8 @@ files=(
 
   "links"
   "list"
-  "locations"
-  
+
+  "map"
   "mineros"
   "minivan"
 
@@ -72,8 +72,6 @@ files=(
 
   "ui"
 
-  
-  
   "window"
 
   "xwing"
