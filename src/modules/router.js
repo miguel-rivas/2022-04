@@ -83,6 +83,7 @@ import presidenteFilterView from '@/views/presidente/carnaval-filter.vue';
 import presidenteLoaderView from '@/views/presidente/verano-loader.vue';
 import presidenteCarnavalView from '@/views/presidente/carnaval-home.vue';
 import presidenteVeranoFilterView from '@/views/presidente/verano-filter.vue';
+import presidenteDestapaView from '@/views/presidente/destapa.vue';
 
 import pixelptNavbarView from '@/views/ppt/navbar.vue';
 import pixelpt404View from '@/views/ppt/404.vue';
@@ -112,7 +113,14 @@ const routes = [
       navbar: pixelptNavbarView,
     },
   },
-
+  {
+    name: 'presidente-destapa',
+    path: '/presidente-destapa',
+    components: {
+      workarea: presidenteDestapaView,
+      navbar: presidenteNavbarView,
+    },
+  },
   {
     name: 'presidente-verano-loader',
     path: '/presidente-verano-loader',
