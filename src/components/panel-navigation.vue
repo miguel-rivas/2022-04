@@ -94,7 +94,7 @@ export default Vue.extend({
       {
         tooltip: "Portfolio 2022",
         icon: "monster",
-        route: ["map", "2022-projects", "2022-statistics", "2022-resume"],
+        route: ["map", "2022-projects", "2022-statistics", "2022-resume", "2022-images", "2022-videos"],
       },
       {
         divider: true,
