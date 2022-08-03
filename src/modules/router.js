@@ -1,14 +1,17 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-import UiRouter from '@/router/ui';
-
 import ContactWorkareaView from '@/views/contact-workarea.vue';
 
 import SoundboardWorkareaView from '@/views/soundboard-workarea.vue';
 
 import StargazerWorkareaView from '@/views/css/stargazer-workarea.vue';
 import StargazerPanelView from '@/views/css/stargazer-panel.vue';
+
+import ColorsWorkareaView from '../views/popkern/colors-workarea.vue';
+import IconsWorkareaView from '../views/popkern/icons-workarea.vue';
+import PopkernHomeView from '../views/popkern/home.vue';
+import PopkernNavbar from '../views/popkern/navbar.vue';
 
 import ProjectsWorkareaView from '@/views/2022/projects-workarea.vue';
 import StatisticsWorkareaView from '@/views/2022/statistics-workarea.vue';
@@ -95,6 +98,31 @@ const routes = [
   {
     path: '/',
     redirect: '/map',
+  },
+
+  {
+    name: 'popkern-home',
+    path: '/popkern-home',
+    components: {
+      workarea: PopkernHomeView,
+      navbar: PopkernNavbar,
+    },
+  },
+  {
+    name: 'popkern-colors',
+    path: '/popkern-colors',
+    components: {
+      workarea: ColorsWorkareaView,
+      navbar: PopkernNavbar,
+    },
+  },
+  {
+    name: 'popkern-icons',
+    path: '/popkern-icons',
+    components: {
+      workarea: IconsWorkareaView,
+      navbar: PopkernNavbar,
+    },
   },
 
   {
@@ -642,10 +670,6 @@ const routes = [
     path: '*',
     redirect: '/'
   },
-
-  /* ---------------------- nested ---------------------- */
-
-  UiRouter,
 ];
 
 const router = new VueRouter({

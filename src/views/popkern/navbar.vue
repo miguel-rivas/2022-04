@@ -3,9 +3,9 @@
     <nav>
       <p>Popkern</p>
       <ul>
-        <li>
+        <!-- <li>
           <router-link to="popkern-home">Home</router-link>
-        </li>
+        </li> -->
         <li>
           <router-link to="popkern-icons">Icons</router-link>
         </li>

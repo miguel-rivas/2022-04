@@ -119,6 +119,8 @@ export default Vue.extend({
           "presidente-carnaval-filter",
           "presidente-carnaval-home",
           "presidente-verano-loader",
+          "presidente-verano-filter",
+          "presidente-destapa",
         ],
       },
       {
@@ -137,12 +139,18 @@ export default Vue.extend({
         ],
       },
       {
+        tooltip: "Popkern",
+        icon: "color",
+        route: [
+          // "popkern-home",
+          "popkern-icons",
+          "popkern-colors",
+        ],
+      },
+      {
         tooltip: "Pixel Perfect Tree",
         icon: "leaf",
-        route: [
-          "pixelpt-404",
-          "pixelpt-500",
-        ],
+        route: ["pixelpt-404", "pixelpt-500"],
       },
       {
         divider: true,
@@ -169,7 +177,7 @@ export default Vue.extend({
       {
         tooltip: "CSS",
         icon: "category",
-        route: ["house", "window", "minivan", "pills", "stargazer"],
+        route: ["window", "minivan", "pills", "house", "stargazer"],
       },
       {
         tooltip: "Portfolio 2014",
@@ -199,11 +207,6 @@ export default Vue.extend({
         tooltip: i18n.t("fake-audience.title"),
         icon: "moon",
         route: ["soundboard"],
-      },
-      {
-        tooltip: i18n.t("ui.title"),
-        icon: "color",
-        route: ["ui", "colors", "icons"],
       },
       {
         divider: true,
