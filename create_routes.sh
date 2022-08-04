@@ -10,7 +10,7 @@ files=(
   "2018-drlogic"
   "2018-apap"
   "2018-bpr"
-  
+
   "2022-projects"
   "2022-statistics"
   "2022-images"
@@ -21,7 +21,6 @@ files=(
 
   "car"
   "carrousel"
-  "colors"
   "cube"
   "css"
 
@@ -40,15 +39,13 @@ files=(
   "formability-404"
   "formability-500"
   "formability-demo"
-    
+
   "gallery"
   "game"
   "grid"
   "grid-gallery"
 
   "house"
-
-  "icons"
 
   "links"
   "list"
@@ -60,13 +57,16 @@ files=(
   "pills"
   "portfolio2017"
 
+  "popkern-icons"
+  "popkern-colors"
+
   "presidente-carnaval-filter"
   "presidente-carnaval-home"
-  
+
   "soundboard"
   "spirit"
   "stargazer"
-  
+
   "timeline"
   "threejs"
 
@@ -79,5 +79,5 @@ files=(
 
 for f in ${files[@]}; do
   rm -r -f -v ${f}.html
-  echo "<meta http-equiv='refresh' content='0; URL=index.html?route=${f}'>" >> ${f}.html
+  echo "<meta http-equiv='refresh' content='0; URL=index.html?route=${f}'>" >>${f}.html
 done
