@@ -41,7 +41,7 @@ nn-scroll-area(color="royal-purple")
                     p.nn-label(
                       :class="checkContrast(color.hex, bk.hex) >= 7 ? 'nn-shamrock' : 'nn-persian-red'",
                       :title="checkContrast(color.hex, bk.hex) >= 7 ? 'Enough Contrast' : 'Not Enough Contrast'"
-                    ) {{ checkContrast(color.hex, bk.hex) }}
+                    ) {{ checkContrast(color.hex, bk.hex).toFixed(2) }}
 </template>
 
 <script>
