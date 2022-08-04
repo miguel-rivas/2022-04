@@ -12,7 +12,7 @@
   .item {
     background-color: var(--color-palette);
     padding: 1rem;
-    margin: 1rem;
+    margin: 1rem !important;
     box-shadow: 2px 2px 5px rgb(0 0 0 / 25%);
   
     video {

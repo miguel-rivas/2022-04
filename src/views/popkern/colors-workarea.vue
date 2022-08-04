@@ -29,10 +29,6 @@ nn-scroll-area(color="royal-purple")
                   p.nn-label.nn-charcoal Lightness
                 nn-column(size="1/2")
                   p.nn-label.nn-gravel {{ color.lightness.toFixed(2) }}
-                nn-column(size="1/2")
-                  p.nn-label.nn-charcoal Shade
-                nn-column(size="1/2")
-                  p.nn-label.nn-gravel {{ 'Blue' }}
 
               p.nn-label.nn-denim Background Contrast
               nn-row
@@ -42,29 +38,26 @@ nn-scroll-area(color="royal-purple")
                   nn-column(size="70%-35", :key="`bkIndex2${bkIndex}`")
                     p.nn-label.nn-charcoal {{ bk.label }}
                   nn-column(size="30%", :key="`bkIndex3${bkIndex}`")
-                    p.nn-label.nn-gravel {{ checkContrast(color.hex, bk.hex) }}
+                    p.nn-label(
+                      :class="checkContrast(color.hex, bk.hex) >= 7 ? 'nn-shamrock' : 'nn-persian-red'",
+                      :title="checkContrast(color.hex, bk.hex) >= 7 ? 'Enough Contrast' : 'Not Enough Contrast'"
+                    ) {{ checkContrast(color.hex, bk.hex) }}
 </template>
 
 <script>
 import Vue from "vue";
-import { allColors } from "@/db/wiki-colors";
+import { wikiColors, paletteColors } from "@/db/wiki-colors";
 import { bkColors } from "@/db/colors";
 
 export default Vue.extend({
   data: () => ({
     bkColors,
-    gColorsDB: Object.values(allColors)
+    gColorsDB: Object.values({ ...wikiColors, ...paletteColors })
       .sort((a, b) => {
         return a.lightness - b.lightness;
       })
       .sort((a, b) => {
-        return b.saturation - a.saturation;
-      })
-      .sort((a, b) => {
         return a.hue - b.hue;
-      })
-      .sort((a, b) => {
-        return a.opacity - b.opacity;
       }),
   }),
   methods: {
