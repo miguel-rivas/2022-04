@@ -1,17 +1,17 @@
 <template lang="pug">
 nn-scroll-area(color="royal-purple")
   nn-container(size="1450", spacing="4")
-    article.nano-box
+    article.nn-box
       h1 {{ $t('statistics.workarea.yearlyAverage') }}
       br
       line-chart(:chart-data="allDates()")
 
-    article.nano-box
+    article.nn-box
       h1 {{ $t('statistics.workarea.skillsUsed') }}
       br
       bar-chart(:chart-data="allTools()")
 
-    article.nano-box
+    article.nn-box
       h1 {{ $t('statistics.workarea.database') }}
       hr
 

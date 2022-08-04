@@ -35,7 +35,11 @@
   
     &.swatch,
     &.icon-item {
-      transition: transform 200ms ease-in-out;
+      &,
+      & > nn-row {  
+        width: 320px;
+      }
+
       &,
       h1 {
         color: var(--color-foreground);
@@ -49,14 +53,10 @@
       p {
         margin: 0 0 0.5rem;
       }
-  
-      &:hover {
-        transform: rotate(2deg);
-      }
     }
   
     &.icon-item {
-      #{wc("column", "", ":first-child")} {
+      #{wc("column", "", ".preview")} {
         display: flex;
         align-items: center;
         justify-content: center;

@@ -3,7 +3,7 @@
     <section class="projects">
       <nn-container width="1450" class="gallery">
         <template v-for="(entry, entryIndex) in allDBListWithImages">
-          <article class="nano-box" :key="entryIndex">
+          <article class="nn-box" :key="entryIndex">
             <nn-row spacing="4" breakpoint="lg">
               <nn-column size="3/5">
                 <img :src="entry.image.src" :alt="entry.header + ' preview'" />

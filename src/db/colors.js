@@ -33,3 +33,10 @@ export const gColorsDB = [
   new gColor('charcoal', '#444444'),
   new gColor('cod-grey', '#1b1b1b'),
 ];
+
+export const bkColors = {
+	'primary-background-dark': new gColor('Primary Dark', '#202028'),
+	'secondary-background-dark': new gColor('Secondary Dark', '#272735'),
+	'primary-background-light': new gColor('Primary Light', '#f8f7fb'),
+	'secondary-background-light': new gColor('Secondary Light', '#edecf3'),
+};

@@ -6,7 +6,7 @@ export class gColor {
 
   constructor(label, hex) {
     this.label = label;
-    this.hex = hex;
+    this.hex = hex.toUpperCase();
   }
 
   get opacity() {
