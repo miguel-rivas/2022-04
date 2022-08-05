@@ -56,6 +56,10 @@ files=(
   "mineros"
   "minivan"
 
+  "nanogrid-home"
+  "nanogrid-documentation"
+  "nanogrid-tests"
+
   "pixelpt-404"
   "pixelpt-500"
 
