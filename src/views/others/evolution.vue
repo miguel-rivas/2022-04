@@ -39,6 +39,7 @@ nn-scroll-area(color="royal-purple")
           :data-stellar-ratio="item.img.ratio"
         )
         svg-border(v-if="item.article.classes.includes('beginning')")
+        mountain(v-if="item.article.classes.includes('header')")
 </template>
 
 <script>
@@ -46,9 +47,10 @@ import Vue from "vue";
 import $ from "jquery";
 import { news } from "@/db/evolution";
 import svgBorder from "@/svg/border";
+import mountain from "@/svg/mountain";
 
 export default Vue.extend({
-  components: { svgBorder },
+  components: { svgBorder, mountain },
   data: () => ({
     news: news,
   }),

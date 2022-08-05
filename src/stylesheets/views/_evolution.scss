@@ -1,5 +1,27 @@
 .section-evolution {
   .nano-workarea {
+
+    $layers: (
+      //----Bottom
+      '.svg-border',
+      '#bk',
+      '.significante.back',
+      '.mountain',
+      'h1, h2, h3, p',
+      '.significante.front',
+      'nav',
+      '#texture',
+      //----Front
+    );
+    
+    $index: 10;
+    @each $layer in $layers {
+      $index: $index + 1;
+      #{$layer} {
+        z-index: $index;
+      }
+    }
+
     $f_amatic: "Amatic SC", helvetica, sans-serif, verdana;
     $alizarin: #fc4e53;
     $alizarin2: #bd3b3e;
@@ -11,13 +33,6 @@
     $brown: #764623;
     $blue: #4369bb;
     $purple: #401652;
-
-    @mixin svgCorner($color) {
-    }
-
-    @mixin svgMountain($color) {
-      background-image: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><polygon fill='#{$color}' points='0,100 100,100 85,0 65,50 50,20 35,60 15,50'></polygon></svg>");
-    }
 
     width: 20000px;
     height: 100vh;
@@ -40,7 +55,6 @@
 
     #bk {
       position: absolute;
-      z-index: 4;
       pointer-events: none;
 
       @include position(0, 0, 0, 0);
@@ -51,7 +65,6 @@
 
     #texture {
       position: absolute;
-      z-index: 11;
       pointer-events: none;
 
       @include position(0, 0, 0, 0);
@@ -95,12 +108,6 @@
         border: none;
         outline: none;
       }
-    }
-
-    #logo {
-      position: fixed;
-      z-index: 12;
-      @include position(0, x, x, 0);
     }
 
     .y60 {
@@ -196,48 +203,39 @@
       }
     }
 
-    // .header::after {
-    //   content: "";
-    //   display: block;
-    //   position: absolute;
-    //   z-index: 2;
-    //   @include position(x, x, 0, 40%);
-    //   @include size(540px, x, 520px, x);
-    //   margin: 0;
-    //   padding: 0;
-    //   transform-origin: 100% 0;
-    //   animation: dancingMountain 1500ms alternate infinite;
-    // }
+    .mountain {
+      animation: dancingMountain 1500ms alternate infinite;
+      transform-origin: 100% 0;
+    }
 
-    // .header.y60::after {
-    //   @include svgMountain(darken($brown, 13%));
-    // }
-    // .header.y80::after {
-    //   @include svgMountain(darken($blue, 30%));
-    // }
-    // .header.y90::after {
-    //   @include svgMountain(darken($purple, 13%));
-    // }
-    // .header.y2k::after {
-    //   @include svgMountain(darken($aqua2, 30%));
-    // }
-    // .header.y2k1::after {
-    //   @include svgMountain(darken($alizarin, 30%));
-    // }
+    .header.y60 .mountain{
+      polygon { fill: darken($brown, 13%); }
+    }
+    .header.y80 .mountain{
+      polygon { fill: darken($blue, 30%); }
+    }
+    .header.y90 .mountain{
+      polygon { fill: darken($purple, 13%); }
+    }
+    .header.y2k .mountain{
+      polygon { fill: darken($aqua2, 30%); }
+    }
+    .header.y2k1 .mountain{
+      polygon { fill: darken($alizarin, 30%); }
+    }
 
-    // @keyframes dancingMountain {
-    //   from {
-    //     transform: scaleY(1) translateY(0px);
-    //   }
-    //   to {
-    //     transform: scaleY(0.9) translateY(12%);
-    //   }
-    // }
+    @keyframes dancingMountain {
+      from {
+        transform: scaleY(1) translateY(0px);
+      }
+      to {
+        transform: scaleY(0.9) translateY(12%);
+      }
+    }
 
     nav {
       font-size: 20pt;
       position: fixed;
-      z-index: 15;
       width: 100%;
       bottom: 1rem;
       cursor: default;
@@ -246,7 +244,6 @@
 
       a {
         cursor: pointer;
-        -webkit-transition: 100ms;
         transition: 100ms;
         &:hover {
           font-size: 25pt;
@@ -268,11 +265,8 @@
       }
 
       a {
-        -webkit-transition: 500ms;
         transition: 500ms;
-
         color: #d7d7d7;
-
         &:hover {
           color: #ffe800;
         }
@@ -287,12 +281,8 @@
       font: normal 207pt/0 $f_amatic;
       display: block;
       position: absolute;
-      z-index: 3;
-
       width: 100%;
-
       text-align: center;
-
       color: #fff;
     }
 
@@ -311,18 +301,9 @@
 
     .significante {
       position: absolute;
-      z-index: 3;
       left: 20%;
       margin: 0;
       padding: 0;
-
-      &.back {
-        z-index: -1;
-      }
-
-      &.front {
-        z-index: 4;
-      }
     }
   }
 }
