@@ -123,7 +123,7 @@ main.section-descubria {
       @include position(x, 130px, 1230px, x);
       @include buildBlock(204px, 246px);
       background-position: 0 -27px;
-      animation: floating ease 2000ms alternate infinite;
+      animation: descubria-floating ease 2000ms alternate infinite;
       &:hover {
         background-position-x: -223px;
       }
@@ -227,15 +227,6 @@ main.section-descubria {
       background-position: 0 -2783px;
       &:hover > .city_gate {
         transform: scale(1, 0.1);
-      }
-    }
-
-    @keyframes floating {
-      from {
-        bottom: 1230px;
-      }
-      to {
-        bottom: 1240px;
       }
     }
 

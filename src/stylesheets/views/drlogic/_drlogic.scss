@@ -8,7 +8,6 @@ main.section-drlogic-testimonials {
     @import "mini-bootstrap";
     @import "base/variables";
     @import "base/typography";
-
     @import "mixins/main";
     @import "main/main";
     @import "main/footer";
@@ -25,13 +24,11 @@ main.section-drlogic-testimonials {
 main.section-drlogic-home .nano-workarea {
   @import "base/variables";
   @import "sections/home";
-  @import "keyframes/home";
 }
 
 main.section-drlogic-contact .nano-workarea {
   @import "base/variables";
   @import "sections/contact";
-  @import "keyframes/contact";
 }
 
 main.section-drlogic-team .nano-workarea {
@@ -42,7 +39,6 @@ main.section-drlogic-team .nano-workarea {
 
 main.section-drlogic-support .nano-workarea {
   @import "base/variables";
-  @import "keyframes/services";
   @import "sections/services";
 }
 
@@ -55,5 +51,4 @@ main.section-drlogic-testimonials .nano-workarea {
   @import "base/variables";
   @import "mixins/testimonials";
   @import "sections/testimonials";
-  @import "keyframes/testimonials";
 }

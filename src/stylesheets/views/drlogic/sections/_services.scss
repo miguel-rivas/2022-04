@@ -84,7 +84,7 @@
       display: none;
 
       @media (min-width: $screen-sm-min) {
-        animation: dataTransferTablet 8s ease-in-out normal infinite;
+        animation: drlogic-services-data-transfer-tablet 8s ease-in-out normal infinite;
         display: block;
       }
     }
@@ -99,7 +99,7 @@
 
     .woman-globe {
       transform: scaleX(-1);
-      animation: globeShaking 500ms ease-in-out alternate infinite;
+      animation: drlogic-services-globe-shaking 500ms ease-in-out alternate infinite;
       top: 200px;
       left: 60px;
 
@@ -110,7 +110,7 @@
     }
 
     .man-globe {
-      animation: globeShaking2 500ms ease-in-out alternate infinite;
+      animation: drlogic-services-globe-shaking-2 500ms ease-in-out alternate infinite;
       top: 205px;
       right: 30px;
 

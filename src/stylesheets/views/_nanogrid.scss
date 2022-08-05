@@ -76,9 +76,7 @@ main.nn-dark.section-nanogrid-tests {
 .section-nanogrid-home {
   .nano-workarea {
     @import "nanogrid/core/font-styles";
-    @import "nanogrid/core/animations";
     @import "nanogrid/core/layers";
-
     @import "nanogrid/components/app";
     @import "nanogrid/components/table";
     @import "nanogrid/components/footer";
@@ -87,7 +85,6 @@ main.nn-dark.section-nanogrid-tests {
 
     main {
       color: var(--color-foreground);
-      // --color-panel-background: #23232f;
       --title-shadow: 0;
       --color-shadow: rgb(0 0 0 / 65%);
       --shadow-depth: 2px 2px 5px;

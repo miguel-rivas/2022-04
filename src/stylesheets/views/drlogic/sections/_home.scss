@@ -213,7 +213,7 @@
 		left: 160px;
 		transform: rotateZ(0deg);
 		transform-origin: 5% 100%;
-		animation: clicking_01 600ms alternate infinite;
+		animation: drlogic-home-clicking-01 600ms alternate infinite;
 	}
 
 	&.hand02 {
@@ -221,7 +221,7 @@
 		left: 166px;
 		transform: rotateZ(0deg);
 		transform-origin: 5% 100%;
-		animation: clicking_02 600ms reverse 50ms infinite;
+		animation: drlogic-home-clicking-02 600ms reverse 50ms infinite;
 	}
 
 	&.hand03 {
@@ -229,7 +229,7 @@
 		left: 785px;
 		transform: rotateZ(0deg);
 		transform-origin: 85% 100%;
-		animation: knocking 300ms alternate infinite;
+		animation: drlogic-home-knocking 300ms alternate infinite;
 	}
 
 	&.hand04 {
@@ -243,7 +243,7 @@
 	&.leg {
 		top: 238px;
 		left: 660px;
-		animation: shaking 200ms alternate infinite;
+		animation: drlogic-home-shaking 200ms alternate infinite;
 	}
 
 	&.guy {
@@ -255,13 +255,13 @@
 		bottom: 202px;
 		left: 322px;
 		transform: rotateZ(7deg);
-		animation: watching 5s alternate infinite;
+		animation: drlogic-home-watching 5s alternate infinite;
 	}
 
 	&.head-02 {
 		top: 0px;
 		left: 900px;
-		animation: nodding 2s alternate infinite;
+		animation: drlogic-home-nodding 2s alternate infinite;
 	}
 
 	&.pc {
@@ -273,13 +273,13 @@
 	&.folder {
 		bottom: 263px;
 		left: 420px;
-		animation: folder_open 15s infinite;
+		animation: drlogic-home-folder-open 15s infinite;
 	}
 
 	&.pointer {
 		bottom: 253px;
 		left: 549px;
-		animation: cursor_moving 15s infinite;
+		animation: drlogic-home-cursor-moving 15s infinite;
 	}
 
 }

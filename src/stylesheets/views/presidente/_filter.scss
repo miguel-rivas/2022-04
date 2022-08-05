@@ -95,17 +95,12 @@
 
     #entrar {
       font: 18pt $f_oswald;
-
       position: absolute;
       right: 250px;
       bottom: 85px;
-
       width: 90px;
-
-      -webkit-transition: 200ms;
       transition: 200ms;
       text-align: center;
-
       color: #276b02;
 
       &:hover {
