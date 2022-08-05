@@ -12,7 +12,7 @@ $nano: "nn-";
 @import "~@fontsource/oswald/latin-300.css";
 @import "~@fontsource/oswald/latin-500.css";
 
-@import "~@fontsource/amatic-sc/latin-700.css";
+@import "~@fontsource/amatic-sc/700.css";
 
 @import "~@fontsource/crimson-text/latin-600-italic.css";
 
@@ -101,13 +101,13 @@ main {
 }
 
 @import "core/functions";
+@import "core/mixins";
 @import "core/font-styles";
 @import "core/icomoon";
 @import "core/animations";
 @import "core/layers";
 @import "core/shortcuts";
 @import "core/inputs";
-@import "core/mixins";
 
 @import "views/stargaze";
 @import "views/dollhouse";

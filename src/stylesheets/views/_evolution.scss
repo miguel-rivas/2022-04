@@ -1,26 +1,19 @@
 .section-evolution {
   .nano-workarea {
-
-    $layers: (
-      //----Bottom
-      '.svg-border',
-      '#bk',
-      '.significante.back',
-      '.mountain',
-      'h1, h2, h3, p',
-      '.significante.front',
-      'nav',
-      '#texture',
-      //----Front
+    @include orgLayers(
+      (
+        //----Bottom
+        ".svg-border",
+        "#bk",
+        ".significante.back",
+        ".mountain",
+        "h1, h2, h3, p",
+        ".significante.front",
+        "nav",
+        "#texture",
+        //----Front
+      )
     );
-    
-    $index: 10;
-    @each $layer in $layers {
-      $index: $index + 1;
-      #{$layer} {
-        z-index: $index;
-      }
-    }
 
     $f_amatic: "Amatic SC", helvetica, sans-serif, verdana;
     $alizarin: #fc4e53;
@@ -42,6 +35,7 @@
     background-color: #222;
     color: #fff;
     font-family: $f_amatic;
+    text-align: center;
 
     nn-scroll-area {
       scroll-behavior: smooth;
@@ -56,23 +50,18 @@
     #bk {
       position: absolute;
       pointer-events: none;
-
       @include position(0, 0, 0, 0);
       @include size(100%, x, 100%, x);
-
       background: url(get-zapp("img/evolution/03_bk.png")) bottom repeat-x;
     }
 
     #texture {
       position: absolute;
       pointer-events: none;
-
       @include position(0, 0, 0, 0);
       @include size(100%, x, 100%, x);
-
       opacity: 0.2;
       background: url(get-zapp("img/extras/paper.jpg")) bottom repeat;
-
       filter: alpha(opacity=20);
     }
 
@@ -92,8 +81,8 @@
       height: 100%;
       overflow: hidden;
       vertical-align: top;
-      text-align: center;
       flex-wrap: wrap;
+      padding: 0 2rem;
     }
 
     a,
@@ -107,6 +96,55 @@
       &:focus {
         border: none;
         outline: none;
+      }
+    }
+
+    p {
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 207pt;
+      display: block;
+      position: absolute;
+      width: 100%;
+      color: #fff;
+    }
+
+    h1,
+    h3 {
+      font-size: 60pt;
+      display: block;
+      margin: 0;
+    }
+
+    h4 {
+      font-size: 35pt;
+      display: block;
+      margin: 0 0 12px 0;
+    }
+
+    .significante {
+      position: absolute;
+      left: 20%;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      font-size: 20pt;
+      position: fixed;
+      width: 100%;
+      bottom: 1rem;
+      cursor: default;
+      color: #fff;
+
+      a {
+        cursor: pointer;
+        transition: 100ms;
+        &:hover {
+          font-size: 25pt;
+        }
       }
     }
 
@@ -194,6 +232,40 @@
       }
     }
 
+    .mountain {
+      animation: dancingMountain 1500ms alternate infinite;
+      transform-origin: 100% 0;
+      bottom: -50px;
+      height: 50vw;
+      position: absolute;
+    }
+
+    .header.y60 .mountain {
+      polygon {
+        fill: darken($brown, 13%);
+      }
+    }
+    .header.y80 .mountain {
+      polygon {
+        fill: darken($blue, 30%);
+      }
+    }
+    .header.y90 .mountain {
+      polygon {
+        fill: darken($purple, 13%);
+      }
+    }
+    .header.y2k .mountain {
+      polygon {
+        fill: darken($aqua2, 30%);
+      }
+    }
+    .header.y2k1 .mountain {
+      polygon {
+        fill: darken($alizarin, 30%);
+      }
+    }
+
     @keyframes dancingCorners {
       25% {
         transform: skewY(10deg) translateY(-10px) scaleY(1.1);
@@ -203,27 +275,6 @@
       }
     }
 
-    .mountain {
-      animation: dancingMountain 1500ms alternate infinite;
-      transform-origin: 100% 0;
-    }
-
-    .header.y60 .mountain{
-      polygon { fill: darken($brown, 13%); }
-    }
-    .header.y80 .mountain{
-      polygon { fill: darken($blue, 30%); }
-    }
-    .header.y90 .mountain{
-      polygon { fill: darken($purple, 13%); }
-    }
-    .header.y2k .mountain{
-      polygon { fill: darken($aqua2, 30%); }
-    }
-    .header.y2k1 .mountain{
-      polygon { fill: darken($alizarin, 30%); }
-    }
-
     @keyframes dancingMountain {
       from {
         transform: scaleY(1) translateY(0px);
@@ -231,79 +282,6 @@
       to {
         transform: scaleY(0.9) translateY(12%);
       }
-    }
-
-    nav {
-      font-size: 20pt;
-      position: fixed;
-      width: 100%;
-      bottom: 1rem;
-      cursor: default;
-      text-align: center;
-      color: #fff;
-
-      a {
-        cursor: pointer;
-        transition: 100ms;
-        &:hover {
-          font-size: 25pt;
-        }
-      }
-    }
-
-    .smoke {
-      table {
-        font-size: 14pt;
-        line-height: 25pt;
-
-        width: 935px;
-        margin: auto;
-
-        text-align: center;
-
-        border: 2px dashed #fff;
-      }
-
-      a {
-        transition: 500ms;
-        color: #d7d7d7;
-        &:hover {
-          color: #ffe800;
-        }
-      }
-    }
-
-    p {
-      margin: 0;
-    }
-
-    h2 {
-      font: normal 207pt/0 $f_amatic;
-      display: block;
-      position: absolute;
-      width: 100%;
-      text-align: center;
-      color: #fff;
-    }
-
-    h1,
-    h3 {
-      font: normal 60pt/100% $f_amatic;
-      display: block;
-      margin: 0;
-    }
-
-    h4 {
-      font: normal 35pt/100% $f_amatic;
-      display: block;
-      margin: 0 0 12px 0;
-    }
-
-    .significante {
-      position: absolute;
-      left: 20%;
-      margin: 0;
-      padding: 0;
     }
   }
 }

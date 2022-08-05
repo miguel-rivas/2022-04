@@ -1,31 +1,41 @@
 @mixin position($t, $r, $b, $l) {
-  @if ($t != x) {
-      top: $t;
-  }
-  @if ($r != x) {
-      right: $r;
-  }
-  @if ($b != x) {
-      bottom: $b;
-  }
-  @if ($l != x) {
-      left: $l;
-  }
+    @if ($t != x) {
+        top: $t;
+    }
+    @if ($r != x) {
+        right: $r;
+    }
+    @if ($b != x) {
+        bottom: $b;
+    }
+    @if ($l != x) {
+        left: $l;
+    }
 }
 
 @mixin size($w, $mW, $h, $mH) {
-  @if ($w != x) {
-      @if ($mW == x) {
-          width: $w;
-      } @else {
-          #{$mW}-width: $w;
-      }
-  }
-  @if ($h != x) {
-      @if ($mH == x) {
-          height: $h;
-      } @else {
-          #{$mH}-height: $h;
-      }
-  }
+    @if ($w != x) {
+        @if ($mW == x) {
+            width: $w;
+        } @else {
+            #{$mW}-width: $w;
+        }
+    }
+    @if ($h != x) {
+        @if ($mH == x) {
+            height: $h;
+        } @else {
+            #{$mH}-height: $h;
+        }
+    }
+}
+
+@mixin orgLayers($layers) {
+    $index: 10;
+    @each $layer in $layers {
+        $index: $index + 1;
+        #{$layer} {
+            z-index: $index;
+        }
+    }
 }

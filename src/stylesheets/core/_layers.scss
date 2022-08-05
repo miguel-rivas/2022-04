@@ -1,20 +1,14 @@
-$layers: (
-  //----Bottom
-  '.section-home .content',
-  '.nano-workarea',
-  '.nano-app .main-panel',
-  '.panel',
-  '.panel-bar',
-  '.nano-navbar',
-  '.modal-bk',
-  '.alert',
-  //----Front
+@include orgLayers(
+  (
+    //----Bottom
+    ".section-home .content",
+    ".nano-workarea",
+    ".nano-app .main-panel",
+    ".panel",
+    ".panel-bar",
+    ".nano-navbar",
+    ".modal-bk",
+    ".alert",
+    //----Front
+  )
 );
-
-$index: 10;
-@each $layer in $layers {
-  $index: $index + 1;
-  #{$layer} {
-    z-index: $index;
-  }
-}

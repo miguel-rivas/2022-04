@@ -5,7 +5,6 @@ export const news = [
       classes: ["smoke"],
     },
     h1: "Evolution of The Web",
-    p: [],
   },
   {
     article: {
@@ -13,7 +12,6 @@ export const news = [
       classes: ["beginning", "y60", "header"],
     },
     h2: "1969",
-    p: [],
   },
   {
     article: {
@@ -30,9 +28,6 @@ export const news = [
       classes: ["beginning", "y80", "header"],
     },
     h2: "1980",
-    p: [
-
-    ],
   },
   {
     article: {
@@ -45,31 +40,24 @@ export const news = [
       ratio: 0.5,
     },
     h3: "Guido van Rossum conceived Python.",
-    p: [
-
-    ],
   },
   {
     article: {
       classes: ["y80", "header"],
     },
     h2: "1985",
-    p: [
-
-    ],
   },
-
   {
     article: {
       classes: ["y80"],
     },
     img: {
       id: "e02",
-      classes: [["back"]],
+      frontPos: false,
       ratio: 2,
       style: "bottom: -50px;"
     },
-    h3: "October 4:",
+    h3: "October 4",
     p: [
       "The Free Software Foundation is founded by",
       "Richard Matthew Stallman.",
@@ -85,7 +73,7 @@ export const news = [
     article: {
       classes: ["y80"],
     },
-    h3: "October:",
+    h3: "October",
     p: [
       "SGML (The Standard Generalized Markup Language)",
       "was accepted followed by a minor Technical Corrigendum.",
@@ -138,7 +126,7 @@ export const news = [
       ratio: 0.7,
       style: "top: -30px;"
     },
-    h3: "December:",
+    h3: "December",
     p: [
       "Python implementation start."
     ],
@@ -182,7 +170,7 @@ export const news = [
     article: {
       classes: ["y90"],
     },
-    h3: "December 25:",
+    h3: "December 25",
     p: [
       'Berners-Lee made the first web browser "WorldWideWeb".',
       '[ later renamed to Nexus to avoid confusion ].',
@@ -198,7 +186,7 @@ export const news = [
     article: {
       classes: ["y90"],
     },
-    h3: "April 15:",
+    h3: "April 15",
     p: [
       'Born "Erwise" the first web browser with a graphical user interface.',
       '[ project initiated by Robert Cailliau ]',
@@ -214,7 +202,7 @@ export const news = [
     article: {
       classes: ["y90"],
     },
-    h3: "January 23:",
+    h3: "January 23",
     p: [
       'Born "Mosaic" the web browser credited by popularizing',
       'the World Wide Web.',
@@ -230,7 +218,7 @@ export const news = [
       ratio: 0.6,
       style: "bottom: 0px;"
     },
-    h3: "June 8:",
+    h3: "June 8",
     p: [
       'Born The first Microsoft Windows browser under the name of "Cello".',
     ],
@@ -262,7 +250,7 @@ export const news = [
     article: {
       classes: ["y90"],
     },
-    h3: "October:",
+    h3: "October",
     p: [
       "It's founded by Tim Berners-Lee the World Wide Web Consortium (W3C),",
       'the main international standards organization',
@@ -273,7 +261,7 @@ export const news = [
     article: {
       classes: ["y90"],
     },
-    h3: "October 10:",
+    h3: "October 10",
     p: [
       'CSS (Cascading Style Sheets)',
       'was proposed by H&Aring;kon Wium Lie.',
@@ -289,7 +277,7 @@ export const news = [
       ratio: 0.7,
       style: "bottom: -60px;"
     },
-    h3: "December 15:",
+    h3: "December 15",
     p: [
       'Netscape Navigator (based on Mosaic Web Browser)',
       'made his firsts steps.',
@@ -338,7 +326,7 @@ export const news = [
     article: {
       classes: ["y90"],
     },
-    h3: "March 1:",
+    h3: "March 1",
     p: [
       'Born "Yahoo! Search".',
       'The word "Yahoo" is an acronym for "Yet Another Hierarchical Officious Oracle".',
@@ -354,7 +342,7 @@ export const news = [
       ratio: 0.6,
       style: "bottom: -30px;"
     },
-    h3: "August 16:",
+    h3: "August 16",
     p: [
       "Internet Explorer was released."
     ],
@@ -363,7 +351,7 @@ export const news = [
     article: {
       classes: ["y90"],
     },
-    h3: "December 15:",
+    h3: "December 15",
     p: [
       `It's Founded AltaVista (the web search engine).`,
       `[ whom later in July 8 of 2003 was purchased by Yahoo! ].`,
@@ -389,7 +377,7 @@ export const news = [
     article: {
       classes: ["y90"],
     },
-    h3: "January:",
+    h3: "January",
     p: [
       'As a research project by Larry Page and Sergey Brin born "Google".',
     ],
@@ -398,7 +386,7 @@ export const news = [
     article: {
       classes: ["y90"],
     },
-    h3: "August-November:",
+    h3: "August-November",
     p: [
       `The first Working Draft of an XML specification was published.`,
       `XML (Extensible Markup Language) an application profile of SGML.`,
@@ -414,7 +402,7 @@ export const news = [
       ratio: 0.6,
       style: "bottom: -30px;"
     },
-    h3: "October 14:",
+    h3: "October 14",
     p: [
       `KDE created "Konqueror" under the KHTML layout engine.`,
     ],
@@ -429,7 +417,7 @@ export const news = [
     article: {
       classes: ["y90"],
     },
-    h3: "December:",
+    h3: "December",
     p: [
       `HTML 4.0 was published as a W3C Recommendation`,
       `with three variations:`,
@@ -456,7 +444,7 @@ export const news = [
     article: {
       classes: ["y90"],
     },
-    h3: "February 10:",
+    h3: "February 10",
     p: [
       `XML 1.0 became a W3C Recommendation.`,
     ],
@@ -465,7 +453,7 @@ export const news = [
     article: {
       classes: ["y90"],
     },
-    h3: "April:",
+    h3: "April",
     p: [
       `MathML 1 (Mathematical Markup Language)`,
       `was released as a W3C recommendation as the first`,
@@ -497,7 +485,7 @@ export const news = [
     article: {
       classes: ["y90"],
     },
-    h3: "June:",
+    h3: "June",
     p: [
       "The earliest CSS 3 drafts were published."
     ],
@@ -513,7 +501,7 @@ export const news = [
     article: {
       classes: ["y2k"],
     },
-    h3: "January 26:",
+    h3: "January 26",
     p: [
       "XHTML 1.0 became a W3C Recommendation."
     ],
@@ -522,7 +510,7 @@ export const news = [
     article: {
       classes: ["y2k"],
     },
-    h3: "July:",
+    h3: "July",
     p: [
       `C# was publicly announced!! they use the number sign because the sharp symbol`,
       `is not available on the standard keyboard. "sharp" resembles a ligature of`,
@@ -551,7 +539,7 @@ export const news = [
       ratio: 0.7,
       style: "bottom: -10px;"
     },
-    h3: "January 15:",
+    h3: "January 15",
     p: [
       "Jimmy Wales and Larry Sanger launched Wikipedia."
     ],
@@ -560,7 +548,7 @@ export const news = [
     article: {
       classes: ["y2k"],
     },
-    h3: "February:",
+    h3: "February",
     p: [
       "Appeared MathML 2.0."
     ],
@@ -569,7 +557,7 @@ export const news = [
     article: {
       classes: ["y2k"],
     },
-    h3: "May 31:",
+    h3: "May 31",
     p: [
       "XHTML 1.1 became a W3C Recommendation."
     ],
@@ -590,7 +578,7 @@ export const news = [
       ratio: 0.7,
       style: "bottom: -10px;"
     },
-    h3: "September 23:",
+    h3: "September 23",
     p: [
       "Under the name of Phoneix born Firefox."
     ],
@@ -611,7 +599,7 @@ export const news = [
       ratio: 0,
       style: "bottom: -140px;"
     },
-    h3: "January 7:",
+    h3: "January 7",
     p: [
       `Safari is released as a public beta.`,
       `It was based on Apple's internal fork of the KHTML rendering engine`,
@@ -622,7 +610,7 @@ export const news = [
     article: {
       classes: ["y2k"],
     },
-    h3: "October:",
+    h3: "October",
     p: [
       `MathML 2.0 was published as the final release`,
       `by the W3C math working group.`,
@@ -638,7 +626,7 @@ export const news = [
       ratio: 0.7,
       style: "bottom: -50px;"
     },
-    h3: "May 27:",
+    h3: "May 27",
     p: [
       "Born Wordpress by Matt Mullenweg and Mike Little."
     ],
@@ -673,7 +661,7 @@ export const news = [
     article: {
       classes: ["y2k"],
     },
-    h3: "June:",
+    h3: "June",
     p: [
       "WebKit was released as open source."
     ],
@@ -696,7 +684,7 @@ export const news = [
     article: {
       classes: ["y2k"],
     },
-    h3: "August 26:",
+    h3: "August 26",
     p: [
       'Influenced by cssQuery Was Released Jquery 1.0',
       'by John Resig at BarCamp.',
@@ -732,7 +720,7 @@ export const news = [
       ratio: 0.8,
       style: "bottom: -30px;"
     },
-    h3: "October 28:",
+    h3: "October 28",
     p: [
       `HTML5 is completed and standardized.`
     ],
@@ -747,7 +735,7 @@ export const news = [
       ratio: 0.7,
       style: "bottom: -30px;"
     },
-    h3: "September 2:",
+    h3: "September 2",
     p: [
       `Google Chrome was released as a beta version.`,
       `[ Under the WebKit layout engine that was already open source ]`,
@@ -798,7 +786,7 @@ export const news = [
     article: {
       classes: ["y2k1"],
     },
-    h3: "October:",
+    h3: "October",
     p: [
       `MathML 3 specification was released as a`,
       `W3C Recommendation.`,
@@ -814,7 +802,7 @@ export const news = [
     article: {
       classes: ["y2k1"],
     },
-    h3: "June 7:",
+    h3: "June 7",
     p: [
       `CSS 2.1 was published as a W3C Recommendation.`
     ],
@@ -829,7 +817,7 @@ export const news = [
     article: {
       classes: ["y2k1"],
     },
-    h3: "February 12:",
+    h3: "February 12",
     p: [
       `Opera announced it would drop`,
       `its own Presto engine in favour of WebKit.`,
@@ -839,7 +827,7 @@ export const news = [
     article: {
       classes: ["y2k1"],
     },
-    h3: "April 3:",
+    h3: "April 3",
     p: [
       `Google announced that it would form`,
       `a new rendering engine known as Blink.`,
@@ -850,7 +838,7 @@ export const news = [
     article: {
       classes: ["y2k1"],
     },
-    h3: "April 18:",
+    h3: "April 18",
     p: [
       `Jquery Dropped support for IE[6-8] for performance`,
       `improvements and reduction in filesize,`,
@@ -867,7 +855,7 @@ export const news = [
     article: {
       classes: ["y2k1"],
     },
-    h3: "October:",
+    h3: "October",
     p: [
       "HTML 5 was published as a W3C Recommendation."
     ],
