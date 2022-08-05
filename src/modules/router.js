@@ -97,6 +97,8 @@ import pixelpt500View from '@/views/ppt/500.vue';
 
 import nanogridNavbarView from '@/views/nanogrid/navbar.vue';
 import nanogridHomeView from '@/views/nanogrid/home.vue';
+import nanogridTestsView from '@/views/nanogrid/tests.vue';
+import nanogridDocumentationView from '@/views/nanogrid/documentation.vue';
 
 Vue.use(VueRouter);
 
@@ -107,10 +109,26 @@ const routes = [
   },
 
   {
+    name: 'nanogrid-documentation',
+    path: '/nanogrid-documentation',
+    components: {
+      workarea: nanogridDocumentationView,
+      navbar: nanogridNavbarView,
+    },
+  },
+  {
     name: 'nanogrid-home',
     path: '/nanogrid-home',
     components: {
       workarea: nanogridHomeView,
+      navbar: nanogridNavbarView,
+    },
+  },
+  {
+    name: 'nanogrid-tests',
+    path: '/nanogrid-tests',
+    components: {
+      workarea: nanogridTestsView,
       navbar: nanogridNavbarView,
     },
   },

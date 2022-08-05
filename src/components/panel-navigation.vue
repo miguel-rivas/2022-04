@@ -147,7 +147,7 @@ export default Vue.extend({
       {
         tooltip: "Nano Grid",
         title: "NN",
-        route: ["nanogrid-home"],
+        route: ["nanogrid-home", "nanogrid-documentation", "nanogrid-tests"],
       },
       {
         tooltip: "Popkern",
