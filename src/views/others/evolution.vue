@@ -44,7 +44,6 @@ nn-scroll-area(color="royal-purple")
 
 <script>
 import Vue from "vue";
-import $ from "jquery";
 import { news } from "@/db/evolution";
 import svgBorder from "@/svg/border";
 import mountain from "@/svg/mountain";
@@ -56,11 +55,9 @@ export default Vue.extend({
   }),
   mounted() {
     let npag = news.length;
-
-    $(".evolution, #bk, #texture")
-      .stop()
-      .css({ width: `${100 * npag}vw` });
-    $(".mt1, mt2").stop().css({ top: "auto" });
+    document
+      .querySelectorAll(".evolution, #bk, #texture")
+      .forEach((item) => (item.style.width = `${100 * npag}vw`));
   },
   methods: {},
 });
