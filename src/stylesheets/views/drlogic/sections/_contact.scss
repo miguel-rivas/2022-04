@@ -98,37 +98,37 @@ section.body {
 
 			&.p01 {
 				left: 40%;
-				animation-name: flying_plane_01;
+				animation-name: drlogic-contact-flying-plane-01;
 				animation-duration: 2900ms + $more-time;
 			}
 
 			&.p02 {
 				left: 45%;
-				animation-name: flying_plane_02;
+				animation-name: drlogic-contact-flying-plane-02;
 				animation-duration: 1700ms + $more-time;
 			}
 
 			&.p03 {
 				left: 47%;
-				animation-name: flying_plane_03;
+				animation-name: drlogic-contact-flying-plane-03;
 				animation-duration: 3400ms + $more-time;
 			}
 
 			&.p04 {
 				left: 47%;
-				animation-name: flying_plane_04;
+				animation-name: drlogic-contact-flying-plane-04;
 				animation-duration: 2800ms + $more-time;
 			}
 
 			&.p05 {
 				left: 54%;
-				animation-name: flying_plane_05;
+				animation-name: drlogic-contact-flying-plane-05;
 				animation-duration: 2300ms + $more-time;
 			}
 
 			&.p06 {
 				left: 58%;
-				animation-name: flying_plane_06;
+				animation-name: drlogic-contact-flying-plane-06;
 				animation-duration: 2100ms + $more-time;
 			}
 		}
@@ -242,7 +242,7 @@ section.body {
 			line-height: 80px;
 			animation-iteration-count: infinite;
 			animation-timing-function: ease-in;
-			animation-name: glowing_mark;
+			animation-name: drlogic-contact-glowing-mark;
 			animation-duration: 1000ms;
 
 			&:before {

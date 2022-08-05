@@ -195,34 +195,11 @@
       width: 100%;
       height: 100%;
       z-index: 3;
-
       font-weight: 400;
       font-size: 10pt;
       letter-spacing: 1pt;
-
       transform: background-position;
-      -ms-transform: background-position; /* IE 9 */
-      -webkit-transform: background-position; /* Opera, Chrome, and Safari */
-
-      animation: an01 linear 5s infinite;
-      -webkit-animation: an01 linear 5s infinite; /* Safari and Chrome */
-    }
-
-    @keyframes an01 {
-      from {
-        background-position: 0 0;
-      }
-      to {
-        background-position: 85 0;
-      }
-    }
-    @-webkit-keyframes an01 {
-      from {
-        background-position: 0 0;
-      }
-      to {
-        background-position: 85 0;
-      }
+      animation: presidente-wave-animation linear 5s infinite;
     }
 
     .NDP {

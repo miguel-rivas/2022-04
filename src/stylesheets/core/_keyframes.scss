@@ -1,30 +1,3 @@
-@keyframes rotate-y {
-  from {
-    transform: rotateZ(0deg);
-  }
-  to {
-    transform: rotateZ(360deg);
-  }
-}
-
-@keyframes chaos {
-  from {
-    transform: rotateY(0deg) rotateZ(0deg);
-  }
-  to {
-    transform: rotateY(360deg) rotateZ(360deg);
-  }
-}
-
-@keyframes swim {
-  from {
-    transform: rotateZ(-10deg);
-  }
-  to {
-    transform: rotateZ(10deg);
-  }
-}
-
 @keyframes rtr {
   from {
     transform: rotateZ(0deg);
@@ -43,23 +16,390 @@
   }
 }
 
-@keyframes clouds {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 1200px 1200px;
-  }
-}
+/* -------------------------------- 2014 */
 
-/* -------------------------------- portfolio 2014 */
-
-@keyframes sky-2014 {
+@keyframes p2014-sky {
   from {
     background-position: 0 0;
   }
   to {
     background-position: 800px 0;
+  }
+}
+
+@keyframes p2014-static {
+  0% {
+    background-position: 0% 0%;
+  }
+  20% {
+    background-position: 0% 50%;
+  }
+  40% {
+    background-position: 50% 0%;
+  }
+  60% {
+    background-position: 0% 0%;
+  }
+  80% {
+    background-position: 50% 50%;
+  }
+}
+
+@keyframes p2014-mud {
+  from {
+    bottom: 70px;
+  }
+  to {
+    bottom: 90px;
+  }
+}
+
+@keyframes p2014-mud-2 {
+  from {
+    bottom: 60px;
+  }
+  to {
+    bottom: 80px;
+  }
+}
+
+/* -------------------------------- 2016 */
+
+@keyframes p2016-flying-cloud {
+  from {
+    left: -690px;
+  }
+  to {
+    left: 300%;
+  }
+}
+
+@keyframes p2016-shake {
+  25% {
+    transform: rotateZ(-1deg);
+  }
+  50% {
+    transform: rotateZ(1deg);
+  }
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
+/* -------------------------------- 2018 */
+
+@keyframes p2018-presidente-waves {
+  from {
+    background-position: 0 100%;
+  }
+
+  to {
+    background-position: 159px 100%;
+  }
+}
+
+@keyframes p2018-presidente-floating-beer-big {
+  from {
+    bottom: -350px;
+    right: 250px;
+    transform: rotate(17deg);
+  }
+
+  to {
+    bottom: -320px;
+    right: 245px;
+    transform: rotate(13deg);
+  }
+}
+
+@keyframes p2018-presidente-floating-beer-small {
+  from {
+    bottom: -150px;
+    left: 250px;
+    transform: rotate(-23deg);
+  }
+
+  to {
+    bottom: -130px;
+    left: 248px;
+    transform: rotate(-17deg);
+  }
+}
+
+/* -------------------------------- formability */
+
+@keyframes formability-x-translation {
+  0% {
+    left: 120%;
+  }
+  100% {
+    left: -20%;
+  }
+}
+
+@keyframes formability-background-chameleon {
+  0% {
+    background-position: 79% 0;
+  }
+  50% {
+    background-position: 22% 100%;
+  }
+  100% {
+    background-position: 79% 0;
+  }
+}
+
+@keyframes formability-arm-bone-1 {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  20% {
+    transform: rotateZ(40deg);
+  }
+  45% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+@keyframes formability-arm-bone-2 {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  20% {
+    transform: rotateZ(20deg);
+  }
+  45% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+/* -------------------------------- css */
+
+@keyframes css-minivan-rolling-01 {
+  0% {
+    right: 50px;
+    bottom: -50px;
+  }
+  25% {
+    right: 45px;
+    bottom: -45px;
+  }
+  50% {
+    right: 50px;
+    bottom: -45px;
+  }
+  75% {
+    right: 45px;
+    bottom: -50px;
+  }
+}
+
+@keyframes css-minivan-rolling-02 {
+  0% {
+    left: 50px;
+    bottom: -50px;
+  }
+  25% {
+    left: 45px;
+    bottom: -45px;
+  }
+  50% {
+    left: 50px;
+    bottom: -45px;
+  }
+  75% {
+    left: 45px;
+    bottom: -50px;
+  }
+}
+
+@keyframes css-minivan-rolling-03 {
+  0% {
+    bottom: -55px;
+  }
+  25% {
+    bottom: -60px;
+  }
+  50% {
+    bottom: -50px;
+  }
+  75% {
+    bottom: -55px;
+  }
+}
+
+@keyframes css-house-gallery {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes css-pills-bottle-jump {
+  0% {
+    top: 0px;
+  }
+
+  10% {
+    top: -60px;
+  }
+
+  20% {
+    top: 0px;
+    transform: rotate(0deg);
+  }
+
+  30% {
+    top: -40px;
+    transform: rotate(-10deg);
+  }
+
+  40% {
+    top: 0px;
+    transform: rotate(0deg);
+  }
+
+  50% {
+    top: -20px;
+    transform: rotate(6deg);
+  }
+
+  60% {
+    top: 0px;
+    transform: rotate(0deg);
+  }
+
+  70% {
+    top: 0px;
+    transform: rotate(-2deg);
+  }
+
+  80% {
+    top: 0px;
+    transform: rotate(0deg);
+  }
+
+  90% {
+    top: 0px;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes css-pills-shadow-jump {
+  0% {
+    width: 100%;
+    left: 0%;
+    opacity: 1;
+  }
+
+  10% {
+    width: 70%;
+    left: 15%;
+    opacity: 0.5;
+  }
+
+  20% {
+    width: 100%;
+    left: 0%;
+    opacity: 1;
+  }
+
+  30% {
+    width: 140%;
+    left: -40%;
+    opacity: 0.7;
+  }
+
+  40% {
+    width: 100%;
+    left: 0%;
+    opacity: 1;
+  }
+
+  50% {
+    width: 130%;
+    left: 0%;
+    opacity: 0.8;
+  }
+
+  60% {
+    width: 100%;
+    left: 0%;
+    opacity: 1;
+  }
+
+  70% {
+    width: 105%;
+    left: -5%;
+    opacity: 1;
+  }
+
+  80% {
+    width: 100%;
+    left: 0%;
+    opacity: 1;
+  }
+
+  90% {
+    width: 100%;
+    left: 0%;
+    opacity: 1;
+  }
+
+  100% {
+    width: 100%;
+    left: 0%;
+    opacity: 1;
+  }
+}
+
+/* -------------------------------- descubria */
+
+@keyframes descubria-floating {
+  from {
+    bottom: 1230px;
+  }
+  to {
+    bottom: 1240px;
+  }
+}
+
+/* -------------------------------- evolution */
+
+@keyframes evolution-dancing-corners {
+  25% {
+    transform: skewY(10deg) translateY(-10px) scaleY(1.1);
+  }
+  75% {
+    transform: skewY(-10deg) translateY(10px) scaleY(1.1);
+  }
+}
+
+@keyframes evolution-dancing-mountain {
+  from {
+    transform: scaleY(1) translateY(0px);
+  }
+  to {
+    transform: scaleY(0.9) translateY(12%);
+  }
+}
+
+/* -------------------------------- pixelpt */
+
+@keyframes pixelpt-shake {
+  from {
+    transform: rotate(-5deg);
+  }
+  to {
+    transform: rotate(5deg);
   }
 }
 
@@ -76,42 +416,417 @@
   }
 }
 
+/* -------------------------------- drlogic */
+
+@keyframes drlogic-404-dancing-border {
+  0% {
+    border: 3vmax solid #156993;
+  }
+  50% {
+    border: 16vmax solid #156993;
+  }
+}
+
+$max-heigh: -1570px;
+
+@keyframes drlogic-contact-flying-plane-01 {
+  100% {
+    transform: translate(-750px, $max-heigh);
+  }
+}
+
+@keyframes drlogic-contact-flying-plane-02 {
+  100% {
+    transform: translate(-850px, $max-heigh);
+  }
+}
+
+@keyframes drlogic-contact-flying-plane-03 {
+  100% {
+    transform: translate(-450px, $max-heigh);
+  }
+}
+
+@keyframes drlogic-contact-flying-plane-04 {
+  100% {
+    transform: translate(700px, $max-heigh);
+  }
+}
+
+@keyframes drlogic-contact-flying-plane-05 {
+  100% {
+    transform: translate(1200px, $max-heigh);
+  }
+}
+
+@keyframes drlogic-contact-flying-plane-06 {
+  100% {
+    transform: translate(1000px, $max-heigh);
+  }
+}
+
+@keyframes drlogic-contact-glowing-mark {
+  0% {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1, 1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5, 1.5);
+  }
+}
+
+@keyframes drlogic-home-clicking-01 {
+  0% {
+    transform: rotateZ(-3deg) translateX(2px);
+  }
+  20% {
+    transform: rotateZ(5deg) translateX(2px);
+  }
+  40% {
+    transform: rotateZ(-3deg) translateX(2px);
+  }
+  60% {
+    transform: rotateZ(-3deg) translateX(3px);
+  }
+  80% {
+    transform: rotateZ(5deg) translateX(3px);
+  }
+  100% {
+    transform: rotateZ(-3deg) translateX(3px);
+  }
+}
+
+@keyframes drlogic-home-clicking-02 {
+  0% {
+    transform: rotateZ(-3deg) translateX(0);
+  }
+  20% {
+    transform: rotateZ(5deg) translateX(0);
+  }
+  40% {
+    transform: rotateZ(-3deg) translateX(0);
+  }
+  60% {
+    transform: rotateZ(-3deg) translateX(3px);
+  }
+  80% {
+    transform: rotateZ(5deg) translateX(3px);
+  }
+  100% {
+    transform: rotateZ(-3deg) translateX(3px);
+  }
+}
+
+@keyframes drlogic-home-cursor-moving {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  10% {
+    transform: translate(0px, 0px);
+  }
+  30% {
+    transform: translate(0px, -79px);
+  }
+  32% {
+    transform: translate(0px, -79px);
+  }
+  55% {
+    transform: translate(-90px, -59px);
+  }
+  58% {
+    transform: translate(-90px, -59px);
+  }
+  82% {
+    transform: translate(-25px, -76px);
+  }
+  85% {
+    transform: translate(-25px, -76px);
+  }
+  95% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes drlogic-home-folder-open {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  32% {
+    opacity: 1;
+  }
+  82% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes drlogic-home-knocking {
+  from {
+    transform: rotateZ(-4deg);
+  }
+  to {
+    transform: rotateZ(6deg);
+  }
+}
+
+@keyframes drlogic-home-nodding {
+  from {
+    transform: rotateZ(-4deg);
+  }
+  to {
+    transform: rotateZ(8deg);
+  }
+}
+
+@keyframes drlogic-home-shaking {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(5px);
+  }
+}
+
+@keyframes drlogic-home-watching {
+  0% {
+    transform: rotateZ(7deg);
+  }
+  20% {
+    transform: rotateZ(-2deg);
+  }
+  95% {
+    transform: rotateZ(-2deg);
+  }
+}
+
+@keyframes drlogic-testimonials-rising {
+  0% {
+    top: 0;
+    transform: rotateZ(10deg);
+  }
+  50% {
+    transform: rotateZ(30deg);
+    top: 90%;
+  }
+  100% {
+    transform: rotateZ(30deg);
+    top: 90%;
+  }
+}
+
+@keyframes drlogic-services-globe-shaking {
+  from {
+    transform: scaleX(-1) rotateZ(0deg) rotateX(0deg);
+  }
+  to {
+    transform: scaleX(-1) rotateZ(10deg) rotateX(10deg);
+  }
+}
+
+@keyframes drlogic-services-globe-shaking-2 {
+  from {
+    transform: rotateZ(0deg) rotateX(0deg);
+  }
+  to {
+    transform: rotateZ(-10deg) rotateX(10deg);
+  }
+}
+
+@keyframes drlogic-services-data-transfer-tablet {
+  $steps: 22;
+  $fx: (100 / 22);
+  $kounter: 0;
+
+  #{ $fx * $kounter }% {
+    top: 169px;
+    left: 153px;
+    opacity: 1;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 226px;
+    left: 153px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 226px;
+    left: 231px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 277px;
+    left: 231px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 277px;
+    left: 165px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 371px;
+    left: 165px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 371px;
+    left: 310px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 371px;
+    left: 475px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 280px;
+    left: 475px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 280px;
+    left: 405px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 207px;
+    left: 405px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 207px;
+    left: 460px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 164px;
+    left: 460px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 207px;
+    left: 460px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 207px;
+    left: 405px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 280px;
+    left: 405px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 280px;
+    left: 475px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 371px;
+    left: 475px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 371px;
+    left: 310px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 261px;
+    left: 310px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 261px;
+    left: 350px;
+  }
+
+  $kounter: $kounter + 1;
+  #{ $fx * $kounter }% {
+    top: 106px;
+    left: 350px;
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    top: 106px;
+    left: 350px;
+  }
+}
+
 /* -------------------------------- presidente */
 
-@keyframes waves-beer {
+@keyframes presidente-wave-animation {
   from {
-    background-position: 0 100%;
+    background-position: 0 0;
   }
-
   to {
-    background-position: 159px 100%;
+    background-position: 85px 0;
   }
 }
 
-@keyframes floating-beer-big {
-  from {
-    bottom: -350px;
-    right: 250px;
-    transform: rotate(17deg);
+$degree: 20deg;
+@keyframes presidente-flip-cap {
+  0% {
+    transform: rotateX(-$degree) rotateY(-$degree);
   }
-
-  to {
-    bottom: -320px;
-    right: 245px;
-    transform: rotate(13deg);
+  25% {
+    transform: rotateX(-$degree) rotateY($degree);
+  }
+  50% {
+    transform: rotateX($degree) rotateY($degree);
+  }
+  75% {
+    transform: rotateX($degree) rotateY(-$degree);
+  }
+  100% {
+    transform: rotateX(-$degree) rotateY(-$degree);
   }
 }
 
-@keyframes floating-beer-small {
-  from {
-    bottom: -150px;
-    left: 250px;
-    transform: rotate(-23deg);
-  }
+/* -------------------------------- nanogrid */
 
-  to {
-    bottom: -130px;
-    left: 248px;
-    transform: rotate(-17deg);
+@keyframes nanogrid-beating-heart {
+  0% {
+    transform: rotate(45deg) scale(1);
+  }
+  100% {
+    transform: rotate(45deg) scale(1.15);
   }
 }

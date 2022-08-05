@@ -27,7 +27,7 @@ main.section-2018-presidente {
 				position: absolute;
 
 				&.big {
-					animation: floating-beer-big linear 1s infinite alternate;
+					animation: p2018-presidente-floating-beer-big linear 1s infinite alternate;
 					bottom: -320px;
 					right: 250px;
 					transform: rotate(17deg);
@@ -38,7 +38,7 @@ main.section-2018-presidente {
 				}
 
 				&.small {
-					animation: floating-beer-small linear 1200ms infinite alternate;
+					animation: p2018-presidente-floating-beer-small linear 1200ms infinite alternate;
 					width: 70px;
 					bottom: -130px;
 					left: 250px;
@@ -62,7 +62,7 @@ main.section-2018-presidente {
 				width: 100%;
 				height: 159px;
 				background: url(get-zapp("img/2018/waves.webp")) repeat-x bottom;
-				animation: waves-beer linear 5s infinite;
+				animation: p2018-presidente-waves linear 5s infinite;
 			}
 
 			article {

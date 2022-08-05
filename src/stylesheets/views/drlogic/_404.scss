@@ -18,7 +18,7 @@ main.section-drlogic-404 {
 			min-height: 110vmax;
 			min-width: 110vmax;
 			box-sizing: border-box;
-			animation: dancing-border 2000ms infinite ease-in-out alternate;
+			animation: drlogic-404-dancing-border 2000ms infinite ease-in-out alternate;
 		}
 
 		.info {
@@ -64,7 +64,8 @@ main.section-drlogic-404 {
 			}
 		}
 
-		h1, h2 {
+		h1,
+		h2 {
 			letter-spacing: 0;
 			font-weight: bold;
 		}
@@ -110,22 +111,9 @@ main.section-drlogic-404 {
 			}
 		}
 
-		@keyframes dancing-border {
-			0% {
-				border: 3vmax solid #156993;
-			}
-			50% {
-				border: 16vmax solid #156993;
-			}
-		}
-
 		@media (max-width: 900px) {
 			.numbers {
 				font-size: 180px;
-
-				span {
-					// margin: 0 -22px;
-				}
 			}
 
 			h1 {

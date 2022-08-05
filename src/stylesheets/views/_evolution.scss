@@ -172,7 +172,7 @@
       left: -10px;
       transform-origin: 100% 50%;
       transform: skewY(0deg) translateY(0px) scaleY(1.1);
-      animation: dancingCorners 2s alternate infinite;
+      animation: evolution-dancing-corners 2s alternate infinite;
     }
 
     .beginning {
@@ -233,7 +233,7 @@
     }
 
     .mountain {
-      animation: dancingMountain 1500ms alternate infinite;
+      animation: evolution-dancing-mountain 1500ms alternate infinite;
       transform-origin: 100% 0;
       bottom: -50px;
       height: 50vw;
@@ -263,24 +263,6 @@
     .header.y2k1 .mountain {
       polygon {
         fill: darken($alizarin, 30%);
-      }
-    }
-
-    @keyframes dancingCorners {
-      25% {
-        transform: skewY(10deg) translateY(-10px) scaleY(1.1);
-      }
-      75% {
-        transform: skewY(-10deg) translateY(10px) scaleY(1.1);
-      }
-    }
-
-    @keyframes dancingMountain {
-      from {
-        transform: scaleY(1) translateY(0px);
-      }
-      to {
-        transform: scaleY(0.9) translateY(12%);
       }
     }
   }

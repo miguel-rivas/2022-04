@@ -135,11 +135,11 @@ main.section-minivan {
 
       &.r01 {
         right: 50px;
-        animation: rolling_01 $time alternate infinite;
+        animation: css-minivan-rolling-01 $time alternate infinite;
       }
       &.r02 {
         left: 50px;
-        animation: rolling_02 $time alternate infinite;
+        animation: css-minivan-rolling-02 $time alternate infinite;
       }
     }
 
@@ -165,61 +165,8 @@ main.section-minivan {
       position: absolute;
       border-radius: 20px;
       background-color: rgba(34, 34, 34, 0.45);
-      animation: rolling_03 $time alternate infinite;
+      animation: css-minivan-rolling-03 $time alternate infinite;
       z-index: -1;
-    }
-  }
-
-  @keyframes rolling_01 {
-    0% {
-      right: 50px;
-      bottom: -50px;
-    }
-    25% {
-      right: 45px;
-      bottom: -45px;
-    }
-    50% {
-      right: 50px;
-      bottom: -45px;
-    }
-    75% {
-      right: 45px;
-      bottom: -50px;
-    }
-  }
-
-  @keyframes rolling_02 {
-    0% {
-      left: 50px;
-      bottom: -50px;
-    }
-    25% {
-      left: 45px;
-      bottom: -45px;
-    }
-    50% {
-      left: 50px;
-      bottom: -45px;
-    }
-    75% {
-      left: 45px;
-      bottom: -50px;
-    }
-  }
-
-  @keyframes rolling_03 {
-    0% {
-      bottom: -55px;
-    }
-    25% {
-      bottom: -60px;
-    }
-    50% {
-      bottom: -50px;
-    }
-    75% {
-      bottom: -55px;
     }
   }
 }

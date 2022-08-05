@@ -1,5 +1,4 @@
 .nested-app.p2016 {
-  @import "2016/general/keyframes";
   @import "2016/general/layers";
   @import "2016/general/fonts";
 
@@ -22,7 +21,7 @@
   }
 
   &.earthquake {
-    animation-name: shake;
+    animation-name: p2016-shake;
     animation-duration: 200ms;
     animation-iteration-count: 14;
   

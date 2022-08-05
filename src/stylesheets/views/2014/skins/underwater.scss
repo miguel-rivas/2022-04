@@ -6,7 +6,7 @@
 		bottom: 50px;
 		width: 450px;
 		height: 370px;
-		animation: mud ease-in-out 3s infinite alternate;
+		animation: p2014-mud-2 ease-in-out 3s infinite alternate;
 		background-image: url(get-zapp("img/2014/bk_b4_city.webp"));
 		background-repeat: no-repeat;
 		background-position: center center;
@@ -14,14 +14,5 @@
 
 	.bird {
 		background-image: url(get-zapp("img/2014/sprites-06.webp")) !important;
-	}
-
-	@keyframes mud {
-		from {
-			bottom: 60px;
-		}
-		to {
-			bottom: 80px;
-		}
 	}
 }

@@ -77,24 +77,6 @@ section.home {
 		}
 	}
 
-	@keyframes static {
-		0% {
-			background-position: 0% 0%;
-		}
-		20% {
-			background-position: 0% 50%;
-		}
-		40% {
-			background-position: 50% 0%;
-		}
-		60% {
-			background-position: 0% 0%;
-		}
-		80% {
-			background-position: 50% 50%;
-		}
-	}
-
 	.screen-container {
 		position: absolute;
 		z-index: -2;
@@ -111,7 +93,7 @@ section.home {
 			border: 11px solid #222;
 			background-color: #333;
 			background-image: url(get-zapp("img/2014/static.webp"));
-			animation: static steps(1) 320ms infinite;
+			animation: p2014-static steps(1) 320ms infinite;
 			background-repeat: repeat;
 			background-position: 0% 0%;
 			z-index: 0;

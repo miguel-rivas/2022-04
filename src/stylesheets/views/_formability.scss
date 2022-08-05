@@ -1,23 +1,3 @@
-// @font-face {
-//   font-family: "Nunito";
-//   font-style: normal;
-//   font-weight: 600;
-//   src: local("Nunito SemiBold"), local("Nunito-SemiBold"),
-//     url(https://fonts.gstatic.com/s/nunito/v9/XRXW3I6Li01BKofA6sKUYevIWzgPDA.woff2) format("woff2");
-//   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC,
-//     U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-// }
-
-// @font-face {
-//   font-family: "Nunito";
-//   font-style: normal;
-//   font-weight: 800;
-//   src: local("Nunito ExtraBold"), local("Nunito-ExtraBold"),
-//     url(https://fonts.gstatic.com/s/nunito/v9/XRXW3I6Li01BKofAksCUYevIWzgPDA.woff2) format("woff2");
-//   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC,
-//     U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-// }
-
 main.section-formability-401 {
   .nano-workarea {
     background-image: linear-gradient(to right, #af5cf5, #c84ea4);
@@ -152,7 +132,7 @@ main.section-formability-demo {
       flex-wrap: wrap;
       background: linear-gradient(331deg, #cb407d, #5c4fc4);
       background-size: 400% 400%;
-      animation: background-chameleon 15s ease infinite;
+      animation: formability-background-chameleon 15s ease infinite;
 
       > .content {
         text-align: center;
@@ -238,10 +218,10 @@ main.section-formability-demo {
             width: 60px;
             transform-origin: 83% 60%;
             pointer-events: all;
-            animation: arm-bone-1 10s ease-in-out infinite;
+            animation: formability-arm-bone-1 10s ease-in-out infinite;
 
             > .anthena {
-              animation: arm-bone-2 10s ease-in-out infinite;
+              animation: formability-arm-bone-2 10s ease-in-out infinite;
             }
 
             &,
@@ -271,7 +251,7 @@ main.section-formability-demo {
 
         .cloud {
           position: absolute;
-          animation: x_translation linear infinite;
+          animation: formability-x-translation linear infinite;
           left: -200px;
           opacity: 1;
           transition: all ease-in-out 400ms;
@@ -348,59 +328,6 @@ main.section-formability-demo {
           }
         }
       }
-    }
-  }
-
-  /* ------------------ keyframes */
-
-  @keyframes x_translation {
-    0% {
-      left: 120%;
-    }
-    100% {
-      left: -20%;
-    }
-  }
-
-  @keyframes background-chameleon {
-    0% {
-      background-position: 79% 0;
-    }
-    50% {
-      background-position: 22% 100%;
-    }
-    100% {
-      background-position: 79% 0;
-    }
-  }
-
-  @keyframes arm-bone-1 {
-    0% {
-      transform: rotateZ(0deg);
-    }
-    20% {
-      transform: rotateZ(40deg);
-    }
-    45% {
-      transform: rotateZ(0deg);
-    }
-    100% {
-      transform: rotateZ(0deg);
-    }
-  }
-
-  @keyframes arm-bone-2 {
-    0% {
-      transform: rotateZ(0deg);
-    }
-    20% {
-      transform: rotateZ(20deg);
-    }
-    45% {
-      transform: rotateZ(0deg);
-    }
-    100% {
-      transform: rotateZ(0deg);
     }
   }
 }

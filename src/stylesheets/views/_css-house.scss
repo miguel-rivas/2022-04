@@ -1,15 +1,6 @@
 @use "sass:math";
 
 main.section-house {
-  @keyframes gallery {
-    from {
-      transform: rotateY(0deg);
-    }
-    to {
-      transform: rotateY(360deg);
-    }
-  }
-
   $width: 400px;
   $height: 200px;
   $door-width: 140px;
@@ -43,7 +34,7 @@ main.section-house {
     perspective: 6000px;
     width: $width;
     height: $height;
-    animation: gallery 20s infinite linear;
+    animation: css-house-gallery 20s infinite linear;
     transform-style: preserve-3d;
 
     * {
