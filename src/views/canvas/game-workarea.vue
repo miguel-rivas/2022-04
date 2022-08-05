@@ -5,7 +5,7 @@
 <script>
 import Vue from "vue";
 import Phaser from "phaser";
-import mainScene from "@/game/main-scene";
+import mainScene from "@/modules/game/main-scene";
 
 export default Vue.extend({
   data: () => ({

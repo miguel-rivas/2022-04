@@ -1,5 +1,6 @@
 import Phaser from "phaser";
 import { getZapp } from "@/modules/helpers";
+
 export default class Player extends Phaser.Physics.Matter.Sprite {
   constructor(data) {
     let { scene, x, y, texture, frame } = data;

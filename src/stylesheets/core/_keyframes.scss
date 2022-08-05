@@ -1,0 +1,117 @@
+@keyframes rotate-y {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes chaos {
+  from {
+    transform: rotateY(0deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+@keyframes swim {
+  from {
+    transform: rotateZ(-10deg);
+  }
+  to {
+    transform: rotateZ(10deg);
+  }
+}
+
+@keyframes rtr {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes rtl {
+  from {
+    transform: rotateZ(360deg);
+  }
+  to {
+    transform: rotateZ(0deg);
+  }
+}
+
+@keyframes clouds {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 1200px 1200px;
+  }
+}
+
+/* -------------------------------- portfolio 2014 */
+
+@keyframes sky-2014 {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 800px 0;
+  }
+}
+
+/* -------------------------------- stargazer */
+
+@keyframes stargaze {
+  from {
+    background-position-y: 500px;
+    background-position-x: 0;
+  }
+  to {
+    background-position-y: 0;
+    background-position-x: 500px;
+  }
+}
+
+/* -------------------------------- presidente */
+
+@keyframes waves-beer {
+  from {
+    background-position: 0 100%;
+  }
+
+  to {
+    background-position: 159px 100%;
+  }
+}
+
+@keyframes floating-beer-big {
+  from {
+    bottom: -350px;
+    right: 250px;
+    transform: rotate(17deg);
+  }
+
+  to {
+    bottom: -320px;
+    right: 245px;
+    transform: rotate(13deg);
+  }
+}
+
+@keyframes floating-beer-small {
+  from {
+    bottom: -150px;
+    left: 250px;
+    transform: rotate(-23deg);
+  }
+
+  to {
+    bottom: -130px;
+    left: 248px;
+    transform: rotate(-17deg);
+  }
+}

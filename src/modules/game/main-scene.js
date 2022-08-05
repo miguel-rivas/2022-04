@@ -1,7 +1,7 @@
 import Phaser from "phaser";
-import Player from "../game/player";
-import Coin from "../game/coin";
-import Duckling from "../game/duckling";
+import Player from "@/classes/game/player";
+import Coin from "@/classes/game/coin";
+import Duckling from "@/classes/game/duckling";
 import { getZapp } from "@/modules/helpers";
 
 export default {
