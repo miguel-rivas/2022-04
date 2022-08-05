@@ -1,4 +1,4 @@
-import codeWebcomponent from "./code-webcomponent"
+import codeWebcomponent from "@/db/nanogrid/code-webcomponent"
 
 const cssVars = `.nn-light {
   --nn-color-foreground: hsl(240deg 11% 17%);

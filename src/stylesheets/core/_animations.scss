@@ -100,3 +100,43 @@
     background-position-x: 500px;
   }
 }
+
+/* -------------------------------- presidente */
+
+@keyframes waves-beer {
+  from {
+    background-position: 0 100%;
+  }
+
+  to {
+    background-position: 159px 100%;
+  }
+}
+
+@keyframes floating-beer-big {
+  from {
+    bottom: -350px;
+    right: 250px;
+    transform: rotate(17deg);
+  }
+
+  to {
+    bottom: -320px;
+    right: 245px;
+    transform: rotate(13deg);
+  }
+}
+
+@keyframes floating-beer-small {
+  from {
+    bottom: -150px;
+    left: 250px;
+    transform: rotate(-23deg);
+  }
+
+  to {
+    bottom: -130px;
+    left: 248px;
+    transform: rotate(-17deg);
+  }
+}

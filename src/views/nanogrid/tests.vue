@@ -232,7 +232,6 @@
               </div>
             </div>
           </article>
-          <br />
         </template>
       </div>
 
@@ -244,7 +243,7 @@
 <script>
 import Vue from "vue";
 import { getVals } from "nano-grid/modules/columns-manager";
-import nanoFooter from "@/components/footer.vue";
+import nanoFooter from "@/components/nanogrid/footer.vue";
 
 export default Vue.extend({
   components: { nanoFooter },

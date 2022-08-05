@@ -191,8 +191,8 @@
 
 <script>
 import Vue from "vue";
-import nanoFooter from "@/components/footer.vue";
-import * as installation from "@/db/installation";
+import nanoFooter from "@/components/nanogrid/footer.vue";
+import * as installation from "@/db/nanogrid/installation";
 
 export default Vue.extend({
   components: { nanoFooter },

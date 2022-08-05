@@ -25,7 +25,7 @@
 
 <script>
 import Vue from "vue";
-import { db2018 } from "@/db/projects-2018";
+import { db2018 } from "@/db/2018/projects";
 
 export default Vue.extend({
   data: () => ({

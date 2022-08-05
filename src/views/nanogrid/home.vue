@@ -391,10 +391,10 @@
 import Vue from "vue";
 import Spirit from "@/components/spirit.vue";
 import { gColorsDB } from "@/db/colors";
-import def from "@/db/grid-settings";
+import def from "@/db/nanogrid/grid-settings";
 import logo from "@/svg/nano-grid.vue";
-import nanoFooter from "@/components/footer.vue";
-import installBoxMode from "@/db/install-box";
+import nanoFooter from "@/components/nanogrid/footer.vue";
+import installBoxMode from "@/db/nanogrid/install-box";
 
 export default Vue.extend({
   components: { Spirit, logo, nanoFooter },

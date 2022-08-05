@@ -1,4 +1,4 @@
-import { Column } from "../classes/column";
+import { Column } from "@/classes/column";
 
 export default {
   searchBar: [
