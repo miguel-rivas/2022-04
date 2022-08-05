@@ -3,6 +3,9 @@
     <nav>
       <p>Other Apps</p>
       <ul>
+         <li>
+          <router-link to="descubria">Descubria</router-link>
+        </li>
         <li>
           <router-link to="evolution">Evolution</router-link>
         </li>

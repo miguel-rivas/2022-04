@@ -6,6 +6,7 @@ import ContactWorkareaView from '@/views/contact-workarea.vue';
 import OthersNavbarView from '@/views/others/navbar.vue';
 import SoundboardWorkareaView from '@/views/others/soundboard-workarea.vue';
 import EvolutionWorkareaView from '@/views/others/evolution.vue';
+import DescubriaView from '@/views/others/descubria.vue';
 
 import StargazerWorkareaView from '@/views/css/stargazer-workarea.vue';
 import StargazerPanelView from '@/views/css/stargazer-panel.vue';
@@ -101,7 +102,14 @@ const routes = [
     path: '/',
     redirect: '/map',
   },
-
+  {
+    name: 'descubria',
+    path: '/descubria',
+    components: {
+      workarea: DescubriaView,
+      navbar: OthersNavbarView,
+    },
+  },
   {
     name: 'evolution',
     path: '/evolution',

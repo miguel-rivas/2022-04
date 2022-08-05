@@ -1,0 +1,281 @@
+main.section-descubria {
+  .nano-workarea {
+    @mixin buildBlock($w, $h) {
+      width: $w;
+      height: $h;
+    }
+
+    nn-scroll-area {
+      background-color: #85d8f7;
+      transition: background-color 1000ms ease;
+
+      &.sunset {
+        background-color: #ffd290;
+      }
+
+      &.night {
+        background-color: #747cbb;
+        .planes {
+          background-image: url(get-zapp("img/descubria/stars.png"));
+        }
+      }
+    }
+
+    a,
+    button {
+      cursor: pointer;
+      outline: none;
+    }
+
+    nav.hour {
+      position: fixed;
+      bottom: 10px;
+      right: 8px;
+      z-index: 5;
+
+      &.on > ul {
+        height: 205px;
+      }
+
+      button {
+        opacity: 1;
+        background: none;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        transition: opacity ease 500ms;
+
+        &:hover {
+          opacity: 0.2;
+        }
+      }
+
+      img {
+        width: 70px;
+      }
+      ul {
+        transition: height ease 200ms;
+        overflow: hidden;
+        bottom: 0;
+        height: 0;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+    }
+
+    .city {
+      position: relative;
+      width: 1050px;
+      height: 1770px;
+      background: url(get-zapp("img/descubria/background.png")) 70% 100% no-repeat;
+      margin: auto;
+      overflow: hidden;
+      z-index: 1;
+
+      a {
+        background-image: url(get-zapp("img/descubria/city.png"));
+        background-repeat: no-repeat;
+      }
+
+      a,
+      div {
+        display: block;
+        position: absolute;
+        background-repeat: no-repeat;
+      }
+    }
+
+    .bk_city {
+      position: relative;
+      height: 1770px;
+    }
+
+    .sky_section {
+      position: relative;
+      top: 0;
+      width: 915px;
+      height: 500px;
+      margin-right: -170px;
+    }
+
+    .planes {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-image: url(get-zapp("img/descubria/planes.png"));
+      background-repeat: no-repeat;
+      transition: background-image 2000ms ease;
+
+      &.p01 {
+        background-position: 0 -5px;
+      }
+      &.p02 {
+        background-position: 0 -595px;
+      }
+      &.p03 {
+        background-position: 0 -1204px;
+      }
+    }
+
+    .informatica {
+      @include position(x, 130px, 1230px, x);
+      @include buildBlock(204px, 246px);
+      background-position: 0 -27px;
+      animation: floating ease 2000ms alternate infinite;
+      &:hover {
+        background-position-x: -223px;
+      }
+    }
+
+    .aeropuerto {
+      @include position(x, 36%, 1153px, x);
+      @include buildBlock(458px, 256px);
+      background-position: -12px -609px;
+      &:hover {
+        background-position-x: -536px;
+      }
+    }
+
+    .arte {
+      @include position(x, 29%, 928px, x);
+      @include buildBlock(259px, 180px);
+      background-position: 0 -2162px;
+      z-index: 1;
+      &:hover {
+        background-position-x: -278px;
+      }
+    }
+
+    .banco {
+      @include position(x, 29%, 7px, x);
+      @include buildBlock(259px, 395px);
+      background-position: 0 -2363px;
+      &:hover {
+        background-position-x: -281px;
+      }
+    }
+
+    .bomberos {
+      @include position(x, 62%, 559px, x);
+      @include buildBlock(384px, 312px);
+      background-position: 0 -285px;
+      &:hover {
+        background-position-x: -406px;
+      }
+    }
+
+    .cocinita {
+      @include position(x, 9%, 929px, x);
+      @include buildBlock(335px, 324px);
+      background-position: 0 -1825px;
+      &:hover {
+        background-position-x: -353px;
+      }
+    }
+
+    .construccion {
+      @include position(x, 64%, 888px, x);
+      @include buildBlock(351px, 168px);
+      background-position: -44px -874px;
+      &:hover {
+        background-position-x: -514px;
+      }
+    }
+
+    .farmacia {
+      @include position(x, 23%, 410px, x);
+      @include buildBlock(318px, 162px);
+      background-position: 0 -1416px;
+      &:hover {
+        background-position-x: -337px;
+      }
+    }
+
+    .supermercado {
+      @include position(x, 16%, 584px, x);
+      @include buildBlock(398px, 212px);
+      background-position: 0 -1595px;
+      &:hover {
+        background-position-x: -422px;
+      }
+    }
+
+    .teatro {
+      @include position(x, 61%, -28px, x);
+      @include buildBlock(270px, 347px);
+      background-position: 0 -1051px;
+      &:hover {
+        background-position-x: -289px;
+      }
+    }
+
+    .city_gate {
+      @include position(x, 11px, 0, x);
+      width: 100%;
+      height: 65px !important;
+      background-image: url(get-zapp("img/descubria/gate.png"));
+      background-position: center;
+      transition: transform ease 500ms;
+      transform-origin: 100% 100%;
+    }
+
+    .base {
+      @include position(x, 35%, -3px, x);
+      @include buildBlock(454px, 228px);
+      background-position: 0 -2783px;
+      &:hover > .city_gate {
+        transform: scale(1, 0.1);
+      }
+    }
+
+    @keyframes floating {
+      from {
+        bottom: 1230px;
+      }
+      to {
+        bottom: 1240px;
+      }
+    }
+
+    .gate_section {
+      cursor: pointer;
+      position: relative;
+      bottom: 397px;
+      width: 40%;
+      height: 100px;
+
+      &:hover > .gate {
+        bottom: 50px;
+        transform: scale(1, 0.5);
+      }
+
+      &:hover > .car {
+        background-position-x: -190px;
+      }
+    }
+
+    .gate {
+      @include position(x, x, 0, 13px);
+      @include buildBlock(100%, 80px);
+      background-image: url(get-zapp("img/descubria/car.png"));
+      background-position: 0 -94px;
+      transition: all ease 500ms;
+    }
+
+    .car {
+      @include position(x, x, 0, 0);
+      @include buildBlock(100%, 80px);
+      background-image: url(get-zapp("img/descubria/car.png"));
+      background-position: 0 -1px;
+      transition: background-position-x ease 500ms;
+    }
+
+    .ground {
+      width: 100%;
+      height: 100px;
+      background-color: #5cc52e;
+    }
+  }
+}

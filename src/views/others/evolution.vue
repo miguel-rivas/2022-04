@@ -59,6 +59,5 @@ export default Vue.extend({
       .querySelectorAll(".evolution, #bk, #texture")
       .forEach((item) => (item.style.width = `${100 * npag}vw`));
   },
-  methods: {},
 });
 </script>
