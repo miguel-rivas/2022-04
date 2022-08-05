@@ -95,6 +95,9 @@ import pixelptNavbarView from '@/views/ppt/navbar.vue';
 import pixelpt404View from '@/views/ppt/404.vue';
 import pixelpt500View from '@/views/ppt/500.vue';
 
+import nanogridNavbarView from '@/views/nanogrid/navbar.vue';
+import nanogridHomeView from '@/views/nanogrid/home.vue';
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -102,6 +105,16 @@ const routes = [
     path: '/',
     redirect: '/map',
   },
+
+  {
+    name: 'nanogrid-home',
+    path: '/nanogrid-home',
+    components: {
+      workarea: nanogridHomeView,
+      navbar: nanogridNavbarView,
+    },
+  },
+
   {
     name: 'descubria',
     path: '/descubria',

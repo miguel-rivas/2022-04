@@ -20,7 +20,11 @@ $nano: "nn-";
 
 // ------------------ Modules
 @import "nano-grid/scss/nano-grid";
+
 @import "nano-grid/scss/btn-nav";
+@import "nano-grid/scss/btn-ghost";
+@import "nano-grid/scss/btn-outline";
+@import "nano-spirit/scss/nano-spirit";
 
 * {
   box-sizing: border-box;
@@ -131,6 +135,7 @@ main {
 @import "views/drlogic/404";
 @import "views/evolution";
 @import "views/descubria";
+@import "views/nanogrid";
 
 @import "components/app";
 @import "components/table";

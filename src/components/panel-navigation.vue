@@ -93,7 +93,14 @@ export default Vue.extend({
       {
         tooltip: "Portfolio 2022",
         icon: "monster",
-        route: ["map", "2022-projects", "2022-statistics", "2022-resume", "2022-images", "2022-videos"],
+        route: [
+          "map",
+          "2022-projects",
+          "2022-statistics",
+          "2022-resume",
+          "2022-images",
+          "2022-videos",
+        ],
       },
       {
         divider: true,
@@ -138,6 +145,11 @@ export default Vue.extend({
         ],
       },
       {
+        tooltip: "Nano Grid",
+        title: "NN",
+        route: ["nanogrid-home"],
+      },
+      {
         tooltip: "Popkern",
         icon: "color",
         route: [
@@ -178,14 +190,10 @@ export default Vue.extend({
         icon: "category",
         route: ["window", "minivan", "pills", "house", "stargazer"],
       },
-       {
+      {
         tooltip: "Others",
         icon: "duck",
-        route: [
-          "descubria",
-          "evolution",
-          "soundboard",
-          ],
+        route: ["descubria", "evolution", "soundboard"],
       },
       {
         tooltip: "Portfolio 2014",
