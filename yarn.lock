@@ -921,6 +921,11 @@
     "@babel/helper-validator-identifier" "^7.16.7"
     to-fast-properties "^2.0.0"
 
+"@fontsource/amatic-sc@^4.2.2":
+  version "4.5.7"
+  resolved "https://registry.yarnpkg.com/@fontsource/amatic-sc/-/amatic-sc-4.5.7.tgz#e1aa8c633efa3939d41b95238d349a71c5f11774"
+  integrity sha512-+CT7vgwBjPoCoT1BP7D+E9LZGAbd2HdsWnyXe1AS5tHsCyptl/eH6Og9mEUESeU431I15VJn+FNXfejs0z2s1g==
+
 "@fontsource/crimson-text@^4.2.2":
   version "4.5.3"
   resolved "https://registry.yarnpkg.com/@fontsource/crimson-text/-/crimson-text-4.5.3.tgz#8cfac11bd98db326ac7eae8cbb167670b54c8543"

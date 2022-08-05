@@ -12,6 +12,8 @@ $nano: "nn-";
 @import "~@fontsource/oswald/latin-300.css";
 @import "~@fontsource/oswald/latin-500.css";
 
+@import "~@fontsource/amatic-sc/latin-700.css";
+
 @import "~@fontsource/crimson-text/latin-600-italic.css";
 
 @import "~@fontsource/quicksand/latin-700.css";
@@ -127,6 +129,7 @@ main {
 @import "views/ppt";
 @import "views/drlogic/drlogic";
 @import "views/drlogic/404";
+@import "views/evolution";
 
 @import "components/app";
 @import "components/table";

@@ -3,7 +3,9 @@ import VueRouter from 'vue-router';
 
 import ContactWorkareaView from '@/views/contact-workarea.vue';
 
-import SoundboardWorkareaView from '@/views/soundboard-workarea.vue';
+import OthersNavbarView from '@/views/others/navbar.vue';
+import SoundboardWorkareaView from '@/views/others/soundboard-workarea.vue';
+import EvolutionWorkareaView from '@/views/others/evolution.vue';
 
 import StargazerWorkareaView from '@/views/css/stargazer-workarea.vue';
 import StargazerPanelView from '@/views/css/stargazer-panel.vue';
@@ -98,6 +100,23 @@ const routes = [
   {
     path: '/',
     redirect: '/map',
+  },
+
+  {
+    name: 'evolution',
+    path: '/evolution',
+    components: {
+      workarea: EvolutionWorkareaView,
+      navbar: OthersNavbarView,
+    },
+  },
+  {
+    name: 'soundboard',
+    path: '/soundboard',
+    components: {
+      workarea: SoundboardWorkareaView,
+      navbar: OthersNavbarView,
+    },
   },
 
   {
@@ -420,14 +439,6 @@ const routes = [
     path: '/links',
     components: {
       workarea: ContactWorkareaView,
-    },
-  },
-
-  {
-    name: 'soundboard',
-    path: '/soundboard',
-    components: {
-      workarea: SoundboardWorkareaView,
     },
   },
   {

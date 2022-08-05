@@ -84,7 +84,6 @@
 import Vue from "vue";
 import { mapGetters, mapMutations } from "vuex";
 import { linkGithub, linkLinkedin } from "@/db/user";
-import i18n from "../i18n";
 import { playSound } from "@/modules/helpers";
 
 export default Vue.extend({
@@ -204,9 +203,12 @@ export default Vue.extend({
         divider: true,
       },
       {
-        tooltip: i18n.t("fake-audience.title"),
+        tooltip: "Others",
         icon: "moon",
-        route: ["soundboard"],
+        route: [
+          "evolution",
+          "soundboard",
+          ],
       },
       {
         divider: true,

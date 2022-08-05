@@ -11,6 +11,7 @@
     "start": "vue-cli-service serve"
   },
   "dependencies": {
+    "@fontsource/amatic-sc": "^4.2.2",
     "@fontsource/crimson-text": "^4.2.2",
     "@fontsource/montserrat": "^4.2.2",
     "@fontsource/nunito": "^4.2.2",

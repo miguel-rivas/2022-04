@@ -35,6 +35,8 @@ files=(
   "dollhouse"
   "drakkar"
 
+  "evolution"
+
   "formability-401"
   "formability-404"
   "formability-500"
@@ -54,6 +56,9 @@ files=(
   "mineros"
   "minivan"
 
+  "pixelpt-404"
+  "pixelpt-500"
+
   "pills"
   "portfolio2017"
 
@@ -62,6 +67,9 @@ files=(
 
   "presidente-carnaval-filter"
   "presidente-carnaval-home"
+  "presidente-verano-filter"
+  "presidente-verano-loader"
+  "presidente-destapa"
 
   "soundboard"
   "spirit"
