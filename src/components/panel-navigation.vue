@@ -178,6 +178,14 @@ export default Vue.extend({
         icon: "category",
         route: ["window", "minivan", "pills", "house", "stargazer"],
       },
+       {
+        tooltip: "Others",
+        icon: "duck",
+        route: [
+          "evolution",
+          "soundboard",
+          ],
+      },
       {
         tooltip: "Portfolio 2014",
         title: "14",
@@ -198,17 +206,6 @@ export default Vue.extend({
           "2018-bpr",
           "2018-apap",
         ],
-      },
-      {
-        divider: true,
-      },
-      {
-        tooltip: "Others",
-        icon: "moon",
-        route: [
-          "evolution",
-          "soundboard",
-          ],
       },
       {
         divider: true,
