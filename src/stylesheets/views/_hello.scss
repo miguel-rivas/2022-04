@@ -1,0 +1,139 @@
+main.section-hello {
+  .nano-workarea {
+    @import "hello/vars";
+    @import "hello/main";
+    @import "hello/header";
+    @import "hello/letter";
+    @import "hello/projects";
+    @import "hello/footer";
+
+    color: #000;
+
+    // berlin default
+    header {
+      background-color: #ef5b42;
+      h1 {
+        color: #671406;
+      }
+    }
+
+    .city {
+      width: 120%;
+      position: absolute;
+      bottom: -50px;
+      left: -10%;
+      z-index: 1;
+      height: 890px;
+      background: url(get-zapp("img/hello/berlin.png")) no-repeat bottom center;
+      background-size: contain;
+
+      @media (max-width: 500px) {
+        bottom: -25px;
+      }
+    }
+
+    footer {
+      background-color: #b5a591;
+      padding: 70px 0 20px;
+    }
+
+    .melbourne {
+      header {
+        background-color: #22b573;
+        h1 {
+          color: #000;
+        }
+      }
+
+      .city {
+        bottom: -230px;
+        left: -10%;
+        height: 890px;
+        background: url(get-zapp("img/hello/melbourne.png")) no-repeat bottom center;
+
+        @media (max-width: 500px) {
+          bottom: -100px;
+        }
+      }
+
+      footer {
+        padding: 260px 0 20px;
+        background-color: #eaad5c;
+      }
+    }
+
+    .texas {
+      header {
+        background-color: #3680d0;
+        h1 {
+          color: #000;
+        }
+      }
+
+      .city {
+        bottom: -230px;
+        left: -10%;
+        height: 1300px;
+        background: url(get-zapp("img/hello/texas.png")) no-repeat bottom left;
+
+        @media (max-width: 500px) {
+          bottom: -100px;
+        }
+      }
+
+      footer {
+        background-color: #887c6b;
+        padding: 260px 0 20px;
+      }
+    }
+
+    .schwangau {
+      header {
+        background-color: #4eb6de;
+        h1 {
+          color: #00222f;
+        }
+      }
+      .city {
+        bottom: -230px;
+        left: -10%;
+        height: 1300px;
+        background: url(get-zapp("img/hello/neuschwanstein.png")) no-repeat bottom left;
+
+        @media (max-width: 500px) {
+          bottom: -100px;
+        }
+      }
+      footer {
+        background-color: #004807;
+        color: #fff;
+        padding: 260px 0 20px;
+      }
+    }
+
+    .dusseldorf {
+      header {
+        background-color: #e8ab5e;
+        h1 {
+          color: #562406;
+        }
+      }
+
+      .city {
+        bottom: 0;
+        left: -10%;
+        height: 1500px;
+        background: url(get-zapp("img/hello/dusseldorf.png")) no-repeat bottom center;
+      }
+
+      footer {
+        background: #207bb7 url(get-zapp("img/hello/dusseldorf_inverse.png")) top center no-repeat;
+        padding: 60px 0 20px;
+
+        .icon {
+          background-color: #981111;
+        }
+      }
+    }
+  }
+}

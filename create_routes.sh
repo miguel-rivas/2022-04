@@ -47,6 +47,7 @@ files=(
   "grid"
   "grid-gallery"
 
+  "hello"
   "house"
   "html"
 

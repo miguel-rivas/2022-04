@@ -1,0 +1,58 @@
+footer {
+	text-align: center;
+	font-size: 10pt;
+	position: relative;
+
+	@media (max-width: 500px) {
+		padding: 120px 0 20px;
+	}
+
+	a {
+		color: #D9E021;
+		text-decoration: none;
+	}
+
+	.mail {
+		color: #000;
+		text-decoration: none;
+
+		@media (max-width: 500px) {
+			font-size: 9pt;
+		}
+	}
+
+	.icon {
+		padding: 14px 16px;
+		background-color: #245a73;
+		border-radius: 50%;
+		text-decoration: none;
+		font-size: 13pt;
+		margin: 0 6px 20px;
+		color: #fff;
+		display: inline-block;
+
+		@media (max-width: 500px) {
+			font-size: 11pt;
+			margin: 0 5px 17px;
+			padding: 10px 12px;
+		}
+
+		&:hover {
+			color: #245a73;
+			background-color: #fff;
+		}
+
+		&.website {
+			padding: 18px 16px 10px;
+			position: relative;
+			top: 4px;
+
+			@media (max-width: 500px) {
+				padding: 14px 12px 6px;
+				top: 4px;
+			}
+
+		}
+
+	}
+}

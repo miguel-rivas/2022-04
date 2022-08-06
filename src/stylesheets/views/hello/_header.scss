@@ -1,0 +1,30 @@
+header {
+	background: url(get-zapp('img/2016/landing_cloud_top.webp')) bottom left no-repeat;
+	position: relative;
+	background-size: 100% !important;
+	min-height: 100vh;
+
+	h1 {
+		margin: 0;
+		font-size: 127pt;
+		text-align: center;
+		position: absolute;
+		width: 100%;
+		top: 180px;
+
+		@media (max-width: 500px) {
+			font-size: 72pt;
+		}
+
+		strong {
+			font-size: 46pt;
+			display: block;
+			text-transform: uppercase;
+
+			@media (max-width: 500px) {
+				font-size: 26pt;
+			}
+		}
+	}
+
+}

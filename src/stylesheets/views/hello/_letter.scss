@@ -1,0 +1,43 @@
+section.letter {
+	position: relative;
+	background-color: #fff;
+
+	.container {
+		max-width: 512px;
+		margin: 30px auto;
+		padding: 20px;
+		position: relative;
+		z-index: 5;
+
+		p:first-child {
+			font-family: $f_bpreplay;
+			font-size: 38pt;
+			font-weight: bold;
+			line-height: 1;
+			margin: 15px 18px 0px 0px;
+			float: left;
+			text-transform: uppercase;
+		}
+
+		strong {
+			color: #006b1c;
+			font-style: normal;
+		}
+
+		a {
+			color: #003bc1;
+			text-decoration: none;
+			font-weight: 700;
+			padding: 2px 6px;
+			border-radius: 7px;
+			padding: 2px 6px;
+			border-radius: 7px;
+			background-color: #dee6f9;
+
+			&:hover {
+				background-color: #003bc1;
+				color: #fff;
+			}
+		}
+	}
+}

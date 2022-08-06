@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 import ContactWorkareaView from '@/views/contact-workarea.vue';
+import helloView from '@/views/hello.vue';
 
 import OthersNavbarView from '@/views/others/navbar.vue';
 import SoundboardWorkareaView from '@/views/others/soundboard-workarea.vue';
@@ -108,7 +109,20 @@ const routes = [
     path: '/',
     redirect: '/map',
   },
-
+  {
+    name: 'hello',
+    path: '/hello',
+    components: {
+      workarea: helloView,
+    },
+  },
+  {
+    name: 'links',
+    path: '/links',
+    components: {
+      workarea: ContactWorkareaView,
+    },
+  },
   {
     name: 'nanogrid-documentation',
     path: '/nanogrid-documentation',
@@ -271,8 +285,6 @@ const routes = [
       navbar: presidenteNavbarView,
     },
   },
-
-
   {
     name: 'drlogic-home',
     path: '/drlogic-home',
@@ -502,14 +514,6 @@ const routes = [
     components: {
       workarea: ApapWorkareaView,
       navbar: OthersNavbarView,
-    },
-  },
-
-  {
-    name: 'links',
-    path: '/links',
-    components: {
-      workarea: ContactWorkareaView,
     },
   },
   {

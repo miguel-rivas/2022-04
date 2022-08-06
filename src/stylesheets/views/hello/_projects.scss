@@ -1,0 +1,48 @@
+section.projects {
+	text-align: center;
+	color: $cyan;
+	background: #fff url(get-zapp('img/2016/landing_cloud_middle.webp')) bottom left no-repeat;
+	background-size: contain;
+	padding-top: 80px;
+	min-height: 590px;
+	position: relative;
+
+	@media (max-width: 500px) {
+		padding-top: 0;
+		padding-bottom: 120px;
+	}
+
+	a {
+		text-align: left;
+		vertical-align: top;
+		display: inline-block;
+		border: none;
+		background-color: transparent;
+		width: 200px;
+		box-sizing: border-box;
+		padding: 0;
+		transform: rotateZ(0deg);
+		transition: all $transition ease;
+		margin: 10px 20px 30px;
+		cursor: pointer;
+		position: relative;
+		z-index: 2;
+
+		@media (max-width: 500px) {
+			margin: 10px 10px 30px;
+		}
+
+		&:hover {
+			transform: rotateZ(5deg);
+		}
+
+		&:focus, &:active {
+			outline: none;
+		}
+
+		img {
+			width: 100%;
+			box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.31);
+		}
+	}
+}
