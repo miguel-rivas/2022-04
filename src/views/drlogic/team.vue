@@ -36,11 +36,11 @@ nn-scroll-area(color="royal-purple")
               .sub-description
                 hr
                 p
-                  nn-icon(glyph="chair-school")
+                  nn-icon(glyph="desktop")
                     strong First Device:&nbsp;
                   | {{ person.device }}
                 p
-                  nn-icon(glyph="boat")
+                  nn-icon(glyph="music")
                     strong First Record:&nbsp;
                   | {{ person.record }}
 

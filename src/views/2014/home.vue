@@ -9,10 +9,10 @@
           </template>
 
           <button class="scrn_btn prev" @click="movePage(-1)">
-            <nn-icon direction="left" glyph="chevron" />
+            <nn-icon direction="left" glyph="angle-down" />
           </button>
           <button class="scrn_btn next" @click="movePage(1)">
-            <nn-icon direction="right" glyph="chevron" />
+            <nn-icon direction="right" glyph="angle-down" />
           </button>
 
           <web-gear

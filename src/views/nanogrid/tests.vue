@@ -63,7 +63,7 @@
                       "
                     >
                       <span class="nn-label nn-gold-tips" title="Test Passing">
-                        <nn-icon glyph="boat" />
+                        <nn-icon glyph="star" />
                       </span>
                     </template>
                     <template v-else>
@@ -102,7 +102,7 @@
                       "
                     >
                       <span class="nn-label nn-gold-tips" title="Test Passing">
-                        <nn-icon glyph="boat" />
+                        <nn-icon glyph="star" />
                       </span>
                     </template>
                     <template v-else>
@@ -140,7 +140,7 @@
                       "
                     >
                       <span class="nn-label nn-gold-tips" title="Test Passing">
-                        <nn-icon glyph="boat" />
+                        <nn-icon glyph="star" />
                       </span>
                     </template>
                     <template v-else>
@@ -178,7 +178,7 @@
                       "
                     >
                       <span class="nn-label nn-gold-tips" title="Test Passing">
-                        <nn-icon glyph="boat" />
+                        <nn-icon glyph="star" />
                       </span>
                     </template>
                     <template v-else>
@@ -216,7 +216,7 @@
                       "
                     >
                       <span class="nn-label nn-gold-tips" title="Test Passing">
-                        <nn-icon glyph="boat" />
+                        <nn-icon glyph="star" />
                       </span>
                     </template>
                     <template v-else>

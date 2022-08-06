@@ -3,7 +3,7 @@
     <slot name="header"/>
     <nn-column table-element size="35" class="controllers">
       <btn
-        glyph="chevron"
+        glyph="angle-down"
         :direction="showData ? 'up' : 'down'"
         :active="showData"
         @click="toggleDataView()"

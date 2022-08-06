@@ -9,7 +9,7 @@
               <nn-column size="35">
                 <btn
                   color="burn-orange"
-                  glyph="rotate"
+                  glyph="rotate-left"
                   @click="$store.commit('toggleViewSide')"
                 />
               </nn-column>

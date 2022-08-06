@@ -11,7 +11,7 @@ nn-scroll-area(color="royal-purple")
           a.social_networks#twitter(href="#"): nn-icon(glyph="twitter")
           a.social_networks#facebook(href="#"): nn-icon(glyph="facebook")
           a.social_networks#instagram(href="#"): nn-icon(glyph="instagram")
-          a.social_networks#youtube(href="#"): nn-icon(glyph="movie")
+          a.social_networks#youtube(href="#"): nn-icon(glyph="youtube-play")
           .links
             a(href='#primer_carnaval') CARNAVAL PRESIDENTE 2015
             a(href='#destinos') DESTINOS

@@ -9,13 +9,7 @@ nn-scroll-area(color="royal-purple")
             template(v-for="(location, locationIndex) in locationsDBList")
               li(:key="locationIndex")
                 nn-row
-                  nn-column(size="35")
-                    btn(
-                      @click="centerMap(location.position)",
-                      color="burn-orange",
-                      glyph="gps-fixed"
-                    )
-                  nn-column(size="100%-35")
+                  nn-column(size="100%")
                     btn(
                       @click="openModal(location.client)",
                       color="gold-tips",
@@ -38,11 +32,6 @@ export default Vue.extend({
     this.modal = this.$store.getters.getModal;
   },
   methods: {
-    centerMap(position) {
-      this.$store.commit("centerMap", {
-        position: position,
-      });
-    },
     openModal(filter) {
       this.modal.data = locationsDBList.find((item) => item.client === filter);
       this.modal.hidden = false;

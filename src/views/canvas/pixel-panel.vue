@@ -18,7 +18,7 @@ nn-scroll-area(color="royal-purple")
 
       nn-row
         nn-column(size="35")
-          btn(glyph="open", color="burn-orange", @click="openImage()")
+          btn(glyph="folder-open", color="burn-orange", @click="openImage()")
         nn-column(size="100%-35")
           label.nn-btn.nn-flat.nn-gold-tips
             | {{ $t('pixelEditor.panel.general.open') }}
@@ -33,7 +33,7 @@ nn-scroll-area(color="royal-purple")
         nn-column(size="100%")
           nn-row
             nn-column(size="35")
-              btn(glyph="save", color="burn-orange", @click="saveJson()")
+              btn(glyph="floppy-o", color="burn-orange", @click="saveJson()")
             nn-column(size="100%-35")
               btn(
                 :text="$t('pixelEditor.panel.general.save')",

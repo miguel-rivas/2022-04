@@ -13,7 +13,7 @@
           <nn-btn
             class="panel-ctrl"
             title="Toggle panel button"
-            glyph="chevron"
+            glyph="angle-down"
             color="charcoal"
             :direction="panel ? 'left' : 'right'"
             @click="toggleValue('panel'), playSound()"

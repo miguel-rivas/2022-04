@@ -64,7 +64,7 @@ nn-scroll-area(color="royal-purple")
                 legend Send us a message
 
                 .form-group
-                  nn-icon(glyph="person")
+                  nn-icon(glyph="user")
                   input.form-control(
                     type="text",
                     placeholder="Full name*",
@@ -73,7 +73,7 @@ nn-scroll-area(color="royal-purple")
                   )
 
                 .form-group
-                  nn-icon(glyph="home")
+                  nn-icon(glyph="building-o")
                   input.form-control(
                     type="text",
                     placeholder="Company Name*",
@@ -82,7 +82,7 @@ nn-scroll-area(color="royal-purple")
                   )
 
                 .form-group
-                  nn-icon(glyph="paper-plane")
+                  nn-icon(glyph="envelope")
                   input.form-control(
                     type="email",
                     placeholder="Email Address*",
@@ -91,7 +91,7 @@ nn-scroll-area(color="royal-purple")
                   )
 
                 .form-group
-                  nn-icon(glyph="paper-plane")
+                  nn-icon(glyph="phone")
                   input.form-control(
                     type="tel",
                     placeholder="Phone Number",
@@ -99,7 +99,7 @@ nn-scroll-area(color="royal-purple")
                   )
 
                 .form-group.txt-area
-                  nn-icon(glyph="leaf")
+                  nn-icon(glyph="pencil")
                   textarea.form-control(
                     placeholder="Your Message*",
                     required="required",

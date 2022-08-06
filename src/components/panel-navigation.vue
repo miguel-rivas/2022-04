@@ -71,7 +71,7 @@
           size="md"
           mode="nav"
           title="Toggle theme button"
-          glyph="brightness"
+          :glyph="theme ? 'sun-o' : 'moon-o'"
           @click="toggleValue('theme'), playSound()"
           :active="theme"
         />
@@ -92,7 +92,7 @@ export default Vue.extend({
     navigation: [
       {
         tooltip: "Portfolio 2022",
-        icon: "monster",
+        icon: "spirit1",
         route: [
           "map",
           "2022-projects",
@@ -107,7 +107,7 @@ export default Vue.extend({
       },
       {
         tooltip: "DrLogic",
-        icon: "save",
+        icon: "desktop",
         route: [
           "drlogic-home",
           "drlogic-404",
@@ -131,7 +131,7 @@ export default Vue.extend({
       },
       {
         tooltip: "Formability",
-        icon: "robot",
+        icon: "shield",
         route: [
           "formability-demo",
           "formability-401",
@@ -146,7 +146,7 @@ export default Vue.extend({
       },
       {
         tooltip: "Popkern",
-        icon: "color",
+        icon: "paint-brush",
         route: [
           // "popkern-home",
           "popkern-icons",
@@ -155,7 +155,7 @@ export default Vue.extend({
       },
       {
         tooltip: "Pixel Perfect Tree",
-        icon: "leaf",
+        icon: "diamond",
         route: ["pixelpt-404", "pixelpt-500"],
       },
       {
@@ -163,7 +163,7 @@ export default Vue.extend({
       },
       {
         tooltip: "Canvas",
-        icon: "move",
+        icon: "gamepad",
         route: [
           "game",
           "dollhouse",
@@ -182,12 +182,12 @@ export default Vue.extend({
       },
       {
         tooltip: "CSS",
-        icon: "category",
+        icon: "css3",
         route: ["window", "minivan", "pills", "house"],
       },
       {
         tooltip: "Others",
-        icon: "duck",
+        icon: "cubes",
         route: [
           "mineros",
           "descubria",
