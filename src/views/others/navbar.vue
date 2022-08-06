@@ -4,6 +4,9 @@
       <p>Other Apps</p>
       <ul>
         <li>
+          <router-link to="mineros">Mineros</router-link>
+        </li>
+        <li>
           <router-link to="descubria">Descubria</router-link>
         </li>
         <li>
@@ -17,6 +20,9 @@
         </li>
         <li>
           <router-link to="evolution">Evolution</router-link>
+        </li>
+        <li>
+          <router-link to="stargazer">Stargazer</router-link>
         </li>
         <li>
           <router-link to="html">HTML</router-link>

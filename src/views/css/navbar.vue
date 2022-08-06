@@ -15,9 +15,6 @@
         <li>
           <router-link to="house">House</router-link>
         </li>
-        <li>
-          <router-link to="stargazer">Stargazer</router-link>
-        </li>
       </ul>
     </nav>
   </nn-container>

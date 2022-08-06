@@ -10,7 +10,6 @@ files=(
   "2018-drlogic"
   "2018-apap"
   "2018-bpr"
-
   "2022-projects"
   "2022-statistics"
   "2022-images"
@@ -25,6 +24,8 @@ files=(
   "cube"
   "css"
 
+  "dollhouse"
+  "drakkar"
   "drlogic-home"
   "drlogic-team"
   "drlogic-services"
@@ -33,13 +34,9 @@ files=(
   "drlogic-404"
   "drlogic-testimonials"
 
-  "dollhouse"
-  "drakkar"
-
   "evolution"
 
   "flat"
-
   "formability-401"
   "formability-404"
   "formability-500"
@@ -60,19 +57,16 @@ files=(
   "mineros"
   "minivan"
 
-  "nanogrid-home"
   "nanogrid-documentation"
+  "nanogrid-home"
   "nanogrid-tests"
 
+  "pills"
   "pixelpt-404"
   "pixelpt-500"
-
-  "pills"
   "portfolio2017"
-
   "popkern-icons"
   "popkern-colors"
-
   "presidente-carnaval-filter"
   "presidente-carnaval-home"
   "presidente-verano-filter"
@@ -83,10 +77,12 @@ files=(
   "spirit"
   "stargazer"
 
-  "timeline"
   "threejs"
+  "timeline"
 
   "ui"
+
+  "voxel"
 
   "window"
 

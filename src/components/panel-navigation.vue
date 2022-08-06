@@ -130,11 +130,6 @@ export default Vue.extend({
         ],
       },
       {
-        tooltip: "Apap",
-        icon: "coin-dollar",
-        route: ["mineros"],
-      },
-      {
         tooltip: "Formability",
         icon: "robot",
         route: [
@@ -188,12 +183,22 @@ export default Vue.extend({
       {
         tooltip: "CSS",
         icon: "category",
-        route: ["window", "minivan", "pills", "house", "stargazer"],
+        route: ["window", "minivan", "pills", "house"],
       },
       {
         tooltip: "Others",
         icon: "duck",
-        route: ["descubria", "capital", "html", "voxel", "flat", "evolution", "soundboard"],
+        route: [
+          "mineros",
+          "descubria",
+          "capital",
+          "html",
+          "voxel",
+          "flat",
+          "evolution",
+          "stargazer",
+          "soundboard",
+        ],
       },
       {
         tooltip: "Portfolio 2014",

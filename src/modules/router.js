@@ -11,9 +11,9 @@ import CapitalView from '@/views/others/capital.vue';
 import HtmlView from '@/views/others/html.vue';
 import FlatView from '@/views/others/flat.vue';
 import voxelView from '@/views/others/voxel.vue';
-
-import StargazerWorkareaView from '@/views/css/stargazer-workarea.vue';
-import StargazerPanelView from '@/views/css/stargazer-panel.vue';
+import StargazerWorkareaView from '@/views/others/stargazer-workarea.vue';
+import StargazerPanelView from '@/views/others/stargazer-panel.vue';
+import ApapWorkareaView from '@/views/others/mineros.vue';
 
 import ColorsWorkareaView from '../views/popkern/colors-workarea.vue';
 import IconsWorkareaView from '../views/popkern/icons-workarea.vue';
@@ -54,9 +54,6 @@ import HouseWorkareaView from '@/views/css/house-workarea.vue';
 import WindowWorkareaView from '@/views/css/window-workarea.vue';
 import MinivanWorkareaView from '@/views/css/minivan-workarea.vue';
 import PillsWorkareaView from '@/views/css/pills-workarea.vue';
-
-import ApapWorkareaView from '@/views/apap/mineros.vue';
-import ApapNavbarView from '@/views/apap/navbar.vue';
 
 import Form401WorkareaView from '@/views/formability/401.vue';
 import Form404WorkareaView from '@/views/formability/404.vue';
@@ -460,7 +457,7 @@ const routes = [
     components: {
       workarea: StargazerWorkareaView,
       panel: StargazerPanelView,
-      navbar: CSSNavbarView,
+      navbar: OthersNavbarView,
     },
   },
 
@@ -504,7 +501,7 @@ const routes = [
     path: '/mineros',
     components: {
       workarea: ApapWorkareaView,
-      navbar: ApapNavbarView,
+      navbar: OthersNavbarView,
     },
   },
 
