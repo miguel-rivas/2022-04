@@ -7,7 +7,7 @@
           <router-link to="descubria">Descubria</router-link>
         </li>
         <li>
-          <router-link to="capital">Capital 403</router-link>
+          <router-link to="capital">Capital 401</router-link>
         </li>
         <li>
           <router-link to="evolution">Evolution</router-link>
