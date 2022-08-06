@@ -12,6 +12,8 @@ $nano: "nn-";
 @import "~@fontsource/oswald/latin-300.css";
 @import "~@fontsource/oswald/latin-500.css";
 
+@import "~@fontsource/raleway/latin-200.css";
+
 @import "~@fontsource/amatic-sc/700.css";
 
 @import "~@fontsource/crimson-text/latin-600-italic.css";
@@ -137,6 +139,7 @@ main {
 @import "views/evolution";
 @import "views/descubria";
 @import "views/nanogrid";
+@import "views/capital";
 
 @import "components/app";
 @import "components/table";

@@ -1,0 +1,57 @@
+main.section-capital {
+  .nano-workarea {
+    background-color: #fff;
+
+    nn-scroll-area {
+      height: 100%;
+    }
+
+    #txt {
+      width: 400px;
+      height: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+      position: relative;
+      top: 0px;
+      left: 120px;
+      z-index: 1;
+    }
+
+    #tit {
+      width: 100%;
+      font-size: 24pt;
+      color: #222;
+      font-family: "Raleway", sans-serif, helvetica, verdana;
+      font-weight: 200;
+      text-transform: uppercase;
+    }
+
+    #filltxt {
+      width: 100%;
+      font-size: 9pt;
+      color: #000;
+      font-family: "Raleway", sans-serif, helvetica, verdana;
+      font-weight: 500;
+    }
+
+    #logo {
+      width: 186px;
+      height: 56px;
+      background: url(get-zapp("img/capital/dbg.png")) center center no-repeat;
+      position: absolute;
+      bottom: 40px;
+      left: 20px;
+    }
+
+    #star {
+      width: 816px;
+      height: 777px;
+      background: url(get-zapp("img/capital/star.jpg")) center center no-repeat;
+      position: fixed;
+      bottom: -250px;
+      right: -250px;
+      transform: rotate(0deg);
+      animation: rtr 90s infinite;
+    }
+  }
+}
