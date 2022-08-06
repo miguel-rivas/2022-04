@@ -458,7 +458,6 @@ export default Vue.extend({
       }
       if (property === "group" && this.rowSettings.group) {
         this.rowSettings.round = false;
-        console.log(this.rowSettings.round)
       }
       if (property === "grid") {
         this.rowSettings.spacing = 0;
