@@ -10,6 +10,9 @@
           <router-link to="capital">Capital 401</router-link>
         </li>
         <li>
+          <router-link to="flat">FlatCSS</router-link>
+        </li>
+        <li>
           <router-link to="evolution">Evolution</router-link>
         </li>
         <li>

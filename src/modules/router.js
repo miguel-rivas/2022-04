@@ -9,6 +9,7 @@ import EvolutionWorkareaView from '@/views/others/evolution.vue';
 import DescubriaView from '@/views/others/descubria.vue';
 import CapitalView from '@/views/others/capital.vue';
 import HtmlView from '@/views/others/html.vue';
+import FlatView from '@/views/others/flat.vue';
 
 import StargazerWorkareaView from '@/views/css/stargazer-workarea.vue';
 import StargazerPanelView from '@/views/css/stargazer-panel.vue';
@@ -132,6 +133,14 @@ const routes = [
     components: {
       workarea: nanogridTestsView,
       navbar: nanogridNavbarView,
+    },
+  },
+  {
+    name: 'flat',
+    path: '/flat',
+    components: {
+      workarea: FlatView,
+      navbar: OthersNavbarView,
     },
   },
   {
