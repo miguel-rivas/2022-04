@@ -8,6 +8,7 @@ import SoundboardWorkareaView from '@/views/others/soundboard-workarea.vue';
 import EvolutionWorkareaView from '@/views/others/evolution.vue';
 import DescubriaView from '@/views/others/descubria.vue';
 import CapitalView from '@/views/others/capital.vue';
+import HtmlView from '@/views/others/html.vue';
 
 import StargazerWorkareaView from '@/views/css/stargazer-workarea.vue';
 import StargazerPanelView from '@/views/css/stargazer-panel.vue';
@@ -133,7 +134,14 @@ const routes = [
       navbar: nanogridNavbarView,
     },
   },
-
+  {
+    name: 'html',
+    path: '/html',
+    components: {
+      workarea: HtmlView,
+      navbar: OthersNavbarView,
+    },
+  },
   {
     name: 'capital',
     path: '/capital',

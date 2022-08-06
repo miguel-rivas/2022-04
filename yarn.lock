@@ -956,6 +956,11 @@
   resolved "https://registry.yarnpkg.com/@fontsource/raleway/-/raleway-4.5.9.tgz#850cf0bf4e0ba624210d60b13337108d9bffbb76"
   integrity sha512-K0GFmuJ5mlEX2czTzRHLyiO2dJDS+GGdtPkPOempss4ElgkYLYpgyqBMcJno5WeSOC9ABGMmtSJ6RtVVljUBzw==
 
+"@fontsource/saira-extra-condensed@^4.2.2":
+  version "4.5.9"
+  resolved "https://registry.yarnpkg.com/@fontsource/saira-extra-condensed/-/saira-extra-condensed-4.5.9.tgz#6a726b55cb1b849eb5fa7c19e6d65ce5d657d2de"
+  integrity sha512-lnFnqel5I+e6EE1bqTwynz1eoxT1PPJsnT4hj1VGxqWakShzmoSfGTCTKMkmJ9gLuo6HqLiIbv3/fPBid64JgA==
+
 "@hapi/address@2.x.x":
   version "2.1.4"
   resolved "https://registry.npmjs.org/@hapi/address/-/address-2.1.4.tgz"

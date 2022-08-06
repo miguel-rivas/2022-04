@@ -830,3 +830,20 @@ $degree: 20deg;
     transform: rotate(45deg) scale(1.15);
   }
 }
+
+/* -------------------------------- html */
+
+@keyframes html-slide-animation-1
+{
+	from { left: 55%; } to { left: 10%; }
+}
+
+@keyframes html-slide-animation-2
+{
+	from { left: -10%; } to { left: 0%; }
+}
+
+@keyframes html-slide-animation-3
+{
+	from { left: 50%; } to { left: -1%; }
+}

@@ -13,6 +13,9 @@
           <router-link to="evolution">Evolution</router-link>
         </li>
         <li>
+          <router-link to="html">HTML</router-link>
+        </li>
+        <li>
           <router-link to="soundboard">Fake Audience</router-link>
         </li>
       </ul>

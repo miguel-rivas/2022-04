@@ -1,0 +1,80 @@
+#oldFriends {
+	background-color: #000;
+	color: #fff;
+	padding-bottom: 240px;
+
+	.ball,
+	.line {
+		background-color: $orange;
+		position: absolute;
+		z-index: -1;
+		display: block;
+	}
+
+	.ball {
+		top: 0px;
+		left: -10%;
+		width: 520px;
+		height: 520px;
+		border-radius: 50%;
+		animation: html-slide-animation-2 linear 8s infinite alternate;
+	}
+
+	.line_01 {
+		top: 200px;
+		height: 14px;
+		transform: rotate(-36deg);
+		right: -28%;
+		width: 120%;
+
+		&:before {
+			background-color: $orange;
+			content: "";
+			display: block;
+			position: relative;
+			top: -400%;
+			left: -1%;
+			width: 140px;
+			height: 140px;
+			border-radius: 50%;
+			transition: 1000ms, left;
+			animation: slideAnimation3 linear 9s infinite alternate;
+		}
+	}
+
+	.line_02 {
+		top: 230px;
+		height: 55px;
+		transform: rotate(-36deg);
+		right: -28%;
+		width: 80%;
+	}
+
+	.letter_01,
+	.letter_02 {
+		position: absolute;
+		font-family: $f_title;
+		font-size: 1340pt;
+		color: rgba(255, 255, 255, 1);
+		bottom: -970px;
+		z-index: -1;
+	}
+
+	.letter_01 {
+		left: 5%;
+	}
+
+	.letter_02 {
+		right: 5%;
+		transform: scaleX(-1);
+	}
+
+	.txtInfo {
+		color: $yellow;
+		margin: 200px auto;
+	}
+
+	.mainTitle {
+		margin: 0 0 270px;
+	}
+}

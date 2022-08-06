@@ -1,0 +1,32 @@
+#newFriends {
+	background-color: #000;
+	color: #fff;
+	padding: 240px 0;
+
+	.txtInfo {
+		color: $yellow;
+		margin: 200px auto;
+	}
+
+	.mainTitle {
+		margin: 0 0 270px;
+	}
+
+	span {
+		position: absolute;
+		font-family: $f_title;
+		font-size: 1340pt;
+		color: rgba(255, 255, 255, 0.1);
+	}
+
+	.letter_01 {
+		top: 0;
+		left: 10%;
+	}
+
+	.letter_02 {
+		top: 960px;
+		right: 10%;
+		transform: scaleX(-1);
+	}
+}

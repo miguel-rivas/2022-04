@@ -20,6 +20,8 @@ $nano: "nn-";
 
 @import "~@fontsource/quicksand/latin-700.css";
 
+@import "~@fontsource/saira-extra-condensed/latin-600.css";
+
 // ------------------ Modules
 @import "nano-grid/scss/nano-grid";
 
@@ -140,6 +142,7 @@ main {
 @import "views/descubria";
 @import "views/nanogrid";
 @import "views/capital";
+@import "views/html";
 
 @import "components/app";
 @import "components/table";
