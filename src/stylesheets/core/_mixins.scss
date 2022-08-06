@@ -29,13 +29,3 @@
         }
     }
 }
-
-@mixin orgLayers($layers) {
-    $index: 10;
-    @each $layer in $layers {
-        $index: $index + 1;
-        #{$layer} {
-            z-index: $index;
-        }
-    }
-}

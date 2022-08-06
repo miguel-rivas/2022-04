@@ -2,6 +2,10 @@
   @return "https://miguel-rivas.github.io/zapp/#{$path}";
 }
 
-@function wc($name, $prefix: "", $suffix: "") {
+@function nn-wc($name, $prefix: "", $suffix: "") {
   @return unquote("#{$prefix} #{$nano}#{$name}#{$suffix}, #{$prefix} .#{$nano}#{$name}#{$suffix}");
+}
+
+@function g-icon($key) {
+  @return map-get($icons, $key);
 }

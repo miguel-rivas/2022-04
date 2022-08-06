@@ -7,7 +7,7 @@
   background-color: hsl(130deg 67% 77%);
   border-bottom: 1px solid;
   color: hsl(130deg 86% 13%);
-  #{wc("column", ">")} {
+  #{nn-wc("column", ">")} {
     padding: 1rem;
   }
   &.warning {

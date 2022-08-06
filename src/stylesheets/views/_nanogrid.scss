@@ -49,7 +49,7 @@ main.nn-dark.section-nanogrid-tests {
 .section-nanogrid-home {
   .nano-workarea {
     .grid-row-preview {
-      #{wc("column")} {
+      #{nn-wc("column")} {
         transition: all ease 500ms;
         nn-btn,
         .nn-btn {
@@ -62,7 +62,7 @@ main.nn-dark.section-nanogrid-tests {
 
 .section-nanogrid-tests {
   .nano-workarea {
-    #{wc("row")} {
+    #{nn-wc("row")} {
       align-items: stretch;
       .nn-label {
         height: 100%;

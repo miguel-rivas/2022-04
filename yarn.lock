@@ -6234,10 +6234,10 @@ nan@^2.12.1:
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.15.0.tgz#3f34a473ff18e15c1b5626b62903b5ad6e665fee"
   integrity sha512-8ZtvEnA2c5aYCZYd1cvgdnU6cqwixRoYg70xPLWUws5ORTa/lnw+u4amixRS/Ac5U5mQVgp9pnlSUnbNWFaWZQ==
 
-nano-grid@3.2.5:
-  version "3.2.5"
-  resolved "https://registry.yarnpkg.com/nano-grid/-/nano-grid-3.2.5.tgz#8125bfa41a31916a44e91c2f169ded786d4bc832"
-  integrity sha512-D0UTQC+4A9M9nqqdUZ1hFLzytzNQ5miclt8552P7aRunMO6ADqhdtfa3F5ycTNFOE92FXIti/7ru9a9vJ+Asbw==
+nano-grid@3.2.8:
+  version "3.2.8"
+  resolved "https://registry.yarnpkg.com/nano-grid/-/nano-grid-3.2.8.tgz#aadf98c61224c1589814f096a98fd0d032877383"
+  integrity sha512-9CcuuLfFLvBGfsc3L459LzQcKX/R94L4kkz/JCLzTe2SGSUOtPn/sSw9jKDLopVE9ZDAf/OPg10yaKfiMfWcIQ==
 
 nano-spirit@1.0.1:
   version "1.0.1"

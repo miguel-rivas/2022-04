@@ -56,7 +56,7 @@
     }
   
     &.icon-item {
-      #{wc("column", "", ".preview")} {
+      #{nn-wc("column", "", ".preview")} {
         display: flex;
         align-items: center;
         justify-content: center;

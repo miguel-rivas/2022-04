@@ -95,7 +95,7 @@ main.section-2018-presidente {
 						padding: 10px 0;
 					}
 
-					#{wc("column")} {
+					#{nn-wc("column")} {
 						border-left: 1px solid #000;
 						&:first-child {
 							border-width: 0;

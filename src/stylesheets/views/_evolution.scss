@@ -1,6 +1,6 @@
 .section-evolution {
   .nano-workarea {
-    @include orgLayers(
+    @include nn-org-layers(
       (
         //----Bottom
         ".svg-border",

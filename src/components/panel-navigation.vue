@@ -92,7 +92,7 @@ export default Vue.extend({
     navigation: [
       {
         tooltip: "Portfolio 2022",
-        icon: "spirit1",
+        icon: "spirit",
         route: [
           "map",
           "2022-projects",
