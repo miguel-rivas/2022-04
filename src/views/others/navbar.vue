@@ -7,6 +7,9 @@
           <router-link to="descubria">Descubria</router-link>
         </li>
         <li>
+          <router-link to="voxel">Voxel</router-link>
+        </li>
+        <li>
           <router-link to="capital">Capital 401</router-link>
         </li>
         <li>

@@ -193,7 +193,7 @@ export default Vue.extend({
       {
         tooltip: "Others",
         icon: "duck",
-        route: ["descubria", "capital", "html", "flat", "evolution", "soundboard"],
+        route: ["descubria", "capital", "html", "voxel", "flat", "evolution", "soundboard"],
       },
       {
         tooltip: "Portfolio 2014",
