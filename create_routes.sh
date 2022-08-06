@@ -19,6 +19,7 @@ files=(
 
   "audio2"
 
+  "capital"
   "car"
   "carrousel"
   "cube"
@@ -48,6 +49,7 @@ files=(
   "grid-gallery"
 
   "house"
+  "html"
 
   "links"
   "list"
