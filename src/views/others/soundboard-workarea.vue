@@ -1,13 +1,6 @@
 <template>
   <nn-scroll-area color="royal-purple">
     <nn-container size="900">
-      <div class="title">
-        <h1>Fake Audience</h1>
-        <p>
-          For those people who are alone in this pandemic and just want someone
-          who laugh at their jokes.
-        </p>
-      </div>
       <nn-row class="btn-gallery" grid>
         <template v-for="(item, itemIndex) in database">
           <nn-column size="200, 200" :key="itemIndex">
