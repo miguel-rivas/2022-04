@@ -453,6 +453,13 @@ export default Vue.extend({
     },
     toggleRowSettings(property) {
       this.rowSettings[property] = !this.rowSettings[property];
+      if (property === "round" && this.rowSettings.round) {
+        this.rowSettings.group = false;
+      }
+      if (property === "group" && this.rowSettings.group) {
+        this.rowSettings.round = false;
+        console.log(this.rowSettings.round)
+      }
       if (property === "grid") {
         this.rowSettings.spacing = 0;
       }
