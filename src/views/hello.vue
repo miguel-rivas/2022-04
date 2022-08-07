@@ -10,12 +10,12 @@
       <img :src="getZapp(`img/2016/cloud.webp`)" class="cloud c02" />
     </header>
     <section class="letter">
-      <div class="container">
+      <nn-container size="600">
         <p>hi!</p>
         <template v-for="(paragraph, index) in letter">
           <p :key="index" v-html="paragraph" />
         </template>
-      </div>
+      </nn-container>
     </section>
     <section class="projects">
       <img :src="getZapp(`img/2016/cloud.webp`)" class="cloud c03" />
@@ -25,13 +25,13 @@
     <footer>
       <div class="link">
         <a :href="user.website" target="_blank" class="icon">
-          <nn-icon glyph="globe"/>
+          <nn-icon glyph="globe" />
         </a>
         <a :href="user.codepen" target="_blank" class="icon">
-          <nn-icon glyph="codepen"/>
+          <nn-icon glyph="codepen" />
         </a>
         <a :href="user.linkedin" target="_blank" class="icon">
-          <nn-icon glyph="linkedin"/>
+          <nn-icon glyph="linkedin" />
         </a>
       </div>
     </footer>

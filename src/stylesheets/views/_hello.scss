@@ -8,6 +8,7 @@ main.section-hello {
     @import "hello/footer";
 
     color: #000;
+    background-color: #fff;
 
     // berlin default
     header {
@@ -25,7 +26,7 @@ main.section-hello {
       z-index: 1;
       height: 890px;
       background: url(get-zapp("img/hello/berlin.png")) no-repeat bottom center;
-      background-size: contain;
+      background-size: contain !important;
 
       @media (max-width: 500px) {
         bottom: -25px;
