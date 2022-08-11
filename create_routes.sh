@@ -92,5 +92,7 @@ files=(
 
 for f in ${files[@]}; do
   rm -r -f -v ${f}.html
-  echo "<meta http-equiv='refresh' content='0; URL=index.html?route=${f}'>" >>${f}.html
+  echo "<script>
+  window.location.replace('index.html?route=${f}&' + window.location.search.substring(1));
+</script>">>${f}.html
 done

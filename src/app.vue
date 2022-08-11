@@ -65,13 +65,13 @@ export default Vue.extend({
     hasPanel() {
       return this.$route.matched[0].components.panel !== undefined;
     },
-    hasNavbar(){
+    hasNavbar() {
       return this.$route.matched[0].components.navbar !== undefined;
     },
     workareaSize() {
       if (this.panel && this.hasPanel) {
         return this.panelSize[1];
-      } else if(this.hasPanel) {
+      } else if (this.hasPanel) {
         return "100%-50-35";
       } else {
         return "100%-50";
@@ -82,12 +82,16 @@ export default Vue.extend({
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const currentRoute = urlParams.get("route");
+    const params = ["name", "city"];
+    params.forEach((item) => {
+      this.setParam(item);
+    });
     if (currentRoute) {
       this.$router.push(`/${currentRoute}`);
     }
   },
   methods: {
-    ...mapMutations(["toggleValue"]),
+    ...mapMutations(["toggleValue", "setParam"]),
   },
 });
 </script>

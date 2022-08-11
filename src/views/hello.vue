@@ -1,10 +1,9 @@
 <template>
-  <nn-scroll-area color="royal-purple" :class="getCity" horizontal="false">
-    <title>Hello {{ getName }}</title>
+  <nn-scroll-area color="royal-purple" :class="params.city" horizontal="false">
     <aside class="texture"></aside>
     <header>
       <h1>
-        Hello<strong>{{ getName }}</strong>
+        Hello<strong>{{ params.name }}</strong>
       </h1>
       <img :src="getZapp(`img/2016/cloud.webp`)" class="cloud c01" />
       <img :src="getZapp(`img/2016/cloud.webp`)" class="cloud c02" />
@@ -24,13 +23,21 @@
 
     <footer>
       <div class="link">
-        <a :href="user.website" target="_blank" class="icon">
+        <a :href="`https://${user.website}`" target="_blank" class="icon">
           <nn-icon glyph="globe" />
         </a>
-        <a :href="user.codepen" target="_blank" class="icon">
+        <a
+          :href="`https://codepen.io/${user.media.codepen.user}`"
+          target="_blank"
+          class="icon"
+        >
           <nn-icon glyph="codepen" />
         </a>
-        <a :href="user.linkedin" target="_blank" class="icon">
+        <a
+          :href="`https://www.linkedin.com/in/${user.media.linkedin.user}`"
+          target="_blank"
+          class="icon"
+        >
           <nn-icon glyph="linkedin" />
         </a>
       </div>
@@ -40,9 +47,9 @@
 
 <script>
 import Vue from "vue";
-import { letter, user } from "@/db/hello";
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
+import { letter } from "@/db/hello";
+import { user } from "@/db/user";
+import { mapGetters } from "vuex";
 
 export default Vue.extend({
   data: () => ({
@@ -50,12 +57,9 @@ export default Vue.extend({
     user,
   }),
   computed: {
-    getCity() {
-      return urlParams.get("city");
-    },
-    getName() {
-      return urlParams.get("name");
-    },
+    ...mapGetters({
+      params: "getParams",
+    }),
   },
 });
 </script>

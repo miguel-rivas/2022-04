@@ -14,6 +14,10 @@ export const store = new Vuex.Store({
     panel: false,
     panelSize: ['300', '100%-300-50-35'],
     theme: false,
+    params: {
+      city: "berlin",
+      name: "",
+    },
     alert: {
       message: "",
       status: "",
@@ -53,6 +57,11 @@ export const store = new Vuex.Store({
     },
   },
   mutations: {
+    setParam(state, payload) {
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      state.params[payload] = urlParams.get(payload);
+    },
     setValue(state, payload) {
       state[payload.name] = payload.value;
     },
@@ -81,6 +90,7 @@ export const store = new Vuex.Store({
     },
   },
   getters: {
+    getParams: state => state.params,
     getGridSize: state => state.selection.pixelState.gridSize,
     getPanelVisibility: state => state.panel,
     getPanelSize: state => state.panelSize,
