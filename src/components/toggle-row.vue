@@ -1,8 +1,9 @@
 <template>
-  <nn-row table-element :breakpoint="breakpoint">
-    <slot name="header"/>
+  <nn-row :table-element="tableElement" :breakpoint="breakpoint">
+    <slot name="header" />
     <nn-column table-element size="35" class="controllers">
-      <btn
+      <nn-btn
+        :round="btnRound"
         glyph="angle-down"
         :direction="showData ? 'up' : 'down'"
         :active="showData"
@@ -13,7 +14,7 @@
       />
     </nn-column>
     <template v-if="showData">
-      <slot name="more"/>
+      <slot name="more" />
     </template>
   </nn-row>
 </template>
@@ -27,8 +28,16 @@ export default Vue.extend({
       type: Object,
     },
     breakpoint: {
-      type: String
-    }
+      type: String,
+    },
+    tableElement: {
+      type: Boolean,
+      default: true,
+    },
+    btnRound: {
+      type: Boolean,
+      default: false,
+    },
   },
   data: () => ({
     showData: false,

@@ -193,6 +193,7 @@ export default Vue.extend({
           "descubria",
           "capital",
           "html",
+          "css-study",
           "voxel",
           "flat",
           "evolution",

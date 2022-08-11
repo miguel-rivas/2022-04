@@ -29,6 +29,7 @@
     "nano-grid": "3.2.8",
     "nano-spirit": "1.0.1",
     "phaser": "^3.55.2",
+    "sweetalert2": "^11.4.26",
     "three": "^0.131.3",
     "vue": "^2.6.11",
     "vue-chartjs": "^3.5.1",

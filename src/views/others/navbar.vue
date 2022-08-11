@@ -16,6 +16,9 @@
           <router-link to="capital">Capital 401</router-link>
         </li>
         <li>
+          <router-link to="css-study">CSS Study</router-link>
+        </li>
+        <li>
           <router-link to="flat">FlatCSS</router-link>
         </li>
         <li>

@@ -15,6 +15,7 @@ import voxelView from '@/views/others/voxel.vue';
 import StargazerWorkareaView from '@/views/others/stargazer-workarea.vue';
 import StargazerPanelView from '@/views/others/stargazer-panel.vue';
 import ApapWorkareaView from '@/views/others/mineros.vue';
+import cssStudyView from '@/views/others/css-study.vue';
 
 import ColorsWorkareaView from '../views/popkern/colors-workarea.vue';
 import IconsWorkareaView from '../views/popkern/icons-workarea.vue';
@@ -507,7 +508,14 @@ const routes = [
     },
   },
 
-
+  {
+    name: 'css-study',
+    path: '/css-study',
+    components: {
+      workarea: cssStudyView,
+      navbar: OthersNavbarView,
+    },
+  },
   {
     name: 'mineros',
     path: '/mineros',

@@ -23,6 +23,7 @@ files=(
   "carrousel"
   "cube"
   "css"
+  "css-study"
 
   "dollhouse"
   "drakkar"
