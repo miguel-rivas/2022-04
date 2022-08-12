@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @keyframes rtr {
   from {
     transform: rotateZ(0deg);
@@ -647,7 +649,7 @@ $max-heigh: -1570px;
 
 @keyframes drlogic-services-data-transfer-tablet {
   $steps: 22;
-  $fx: (100 / 22);
+  $fx: math.div(100, 22);
   $kounter: 0;
 
   #{ $fx * $kounter }% {

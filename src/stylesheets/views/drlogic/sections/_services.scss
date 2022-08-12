@@ -1,3 +1,5 @@
+@use "sass:math";
+
 #services {
   .btn {
     @media (max-width: $screen-sm-min) {
@@ -534,8 +536,8 @@ $screen-info-min: 1190px;
       &.sec2,
       &.sec3 {
         @media (min-width: $screen-info-min) {
-          margin-left: #{((-572/2) - 120)}#{"px"};
-          margin-right: #{((-572/2) - 120)}#{"px"};
+          margin-left: #{(math.div(-572, 2) - 120)}#{"px"};
+          margin-right: #{(math.div(-572, 2) - 120)}#{"px"};
         }
       }
     }

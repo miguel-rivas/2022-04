@@ -1,5 +1,7 @@
+@use "sass:math";
+
 // Typography
-$base-font-family: 'Montserrat', helvetica, 'open-sans', sans-serif, verdana;
+$base-font-family: "Montserrat", helvetica, "open-sans", sans-serif, verdana;
 $heading-font-family: $base-font-family;
 
 // Font Sizes
@@ -12,7 +14,7 @@ $heading-line-height: 1.2;
 // Other Sizes
 $base-border-radius: 3px;
 $base-spacing: $base-line-height * 1em;
-$small-spacing: $base-spacing / 2;
+$small-spacing: math.div($base-spacing, 2);
 $base-z-index: 0;
 
 // Colors
@@ -28,7 +30,7 @@ $brand-red: #d73333;
 $brand-cyan: #38c7d2;
 $brand-yellow: #ffcf5d;
 $brand-purple: #64429c;
-$brand-purple2: #8843A2;
+$brand-purple2: #8843a2;
 $brand-green: #5acf57;
 $brand-orange: #f9722e;
 $brand-orange2: #f9ae3c;
@@ -44,7 +46,6 @@ $base-border: 1px solid $base-border-color;
 // Background Colors
 $base-background-color: #fff;
 $secondary-background-color: tint($base-border-color, 75%);
-
 
 // Animations
 $base-duration: 500ms;
