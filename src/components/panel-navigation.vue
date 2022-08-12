@@ -199,6 +199,7 @@ export default Vue.extend({
           "evolution",
           "stargazer",
           "soundboard",
+          "journey",
         ],
       },
       {
