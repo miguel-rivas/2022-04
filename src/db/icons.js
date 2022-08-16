@@ -1,5 +1,4 @@
 export const icons = {
-
   "angle-down": "\a1",
   "angle-double-down": "\a2",
   "chevron-circle-down": "\a3",
