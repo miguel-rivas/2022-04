@@ -10,6 +10,7 @@
     "i18n:report": "vue-cli-service i18n:report --src \"./src/**/*.?(js|vue)\" --locales \"./src/locales/**/*.json\"",
     "s": "vue-cli-service serve",
     "start": "vue-cli-service serve"
+    "test": "vue-cli-service test:e2e"
   },
   "dependencies": {
     "@fontsource/amatic-sc": "^4.2.2",
