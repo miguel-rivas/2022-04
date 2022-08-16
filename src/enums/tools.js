@@ -81,6 +81,7 @@ export const tool = {
   
   jest: "Jest",
   cucumber: "Cucumber",
+  cypress: "Cypress",
   
   mysql: "MySQL",
   firebase: "Firebase",

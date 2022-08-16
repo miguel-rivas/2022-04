@@ -40,7 +40,8 @@ const pj = [
       toolEnum.konva,
       toolEnum.pug,
       toolEnum.i18n,
-      toolEnum.webComponents
+      toolEnum.webComponents,
+      toolEnum.cypress,
     ],
     new Preview("2022"),
     [

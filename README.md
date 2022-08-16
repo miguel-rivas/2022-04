@@ -1,16 +1,6 @@
-## Add upstream
-```sh
-git remote add upstream git@github.com:miguel-rivas/2022-04.git
-```
-
 ## Project setup
 ```sh
 yarn install
-```
-
-### Vue Cli
-```sh
-vue ui
 ```
 
 ### Compiles and hot-reloads for development
@@ -27,7 +17,7 @@ yarn start
 yarn build
 ```
 
-### Lints and fixes files
+### Run Cypress (e2e Testing)
 ```
-yarn lint
+yarn test
 ```
