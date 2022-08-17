@@ -9,8 +9,7 @@ const getZapp = (path) => {
 export default create({
   base: 'dark',
 
-  colorPrimary: 'hotpink',
-  colorSecondary: 'deepskyblue',
+  colorSecondary: 'rgb(56 70 122)',
 
   // UI
   appBg: '#23232f',
