@@ -1,7 +1,13 @@
+@import "~@fontsource/montserrat/latin-700.css";
+
 @import "nano-grid/scss/nano-grid";
-@import "nano-grid/scss/btn-nav";
 @import "nano-grid/scss/btn-ghost";
 @import "nano-grid/scss/btn-outline";
+
 @import "../stylesheets/core/functions";
 @import "../stylesheets/core/mixins";
 @import "../stylesheets/core/icomoon";
+
+.nn-btn {
+  font-family: "Montserrat", Helvetica, Arial, Tahoma, sans-serif;
+}

@@ -66,11 +66,6 @@ Ghost.args = {
   mode: "ghost"
 };
 
-export const Nav = Template.bind({});
-Nav.args = {
-  mode: "nav"
-};
-
 export const Icon = Template.bind({});
 Icon.args = {
   glyph: "search",
