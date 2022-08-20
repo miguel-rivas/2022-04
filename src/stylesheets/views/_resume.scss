@@ -46,8 +46,8 @@ main.section-2022-resume {
       font-weight: 300;
     }
 
-    h6 {
-      font-size: 0.65rem;
+    time {
+      // font-size: 0.65rem;
       font-weight: 400;
       letter-spacing: 2px;
     }
@@ -66,12 +66,14 @@ main.section-2022-resume {
 
     ul {
       padding-inline-start: 1rem;
+      margin: 0;
     }
 
     dt,
     dd,
     li {
       font-size: 0.75rem;
+      margin-bottom: 0.25rem;
     }
 
     header {
@@ -86,7 +88,7 @@ main.section-2022-resume {
       vertical-align: top;
 
       &.left {
-        width: 40%;
+        width: 35%;
         padding-right: 2rem;
 
         li {
@@ -102,13 +104,30 @@ main.section-2022-resume {
       }
 
       &.right {
-        width: 60%;
+        width: 65%;
         padding-left: 1rem;
         border-left: 1px dotted var(--color-foreground);
 
-        article {
-          margin-bottom: 2rem;
+        h3 {
+          display: none;
         }
+
+        article {
+          margin-bottom: 1.25rem;
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    footer {
+      margin-top: 2rem;
+      margin-bottom: 0;
+      nn-btn {
+        max-width: 300px;
+        margin: auto;
+        display: block;
       }
     }
   }
@@ -116,6 +135,11 @@ main.section-2022-resume {
 
 @media print {
   body {
+    &,
+    .nano-app {
+      background-color: #fff;
+    }
+
     overflow: auto;
     .nano-app {
       .nano-navbar,
@@ -126,6 +150,10 @@ main.section-2022-resume {
       }
 
       .nano-workarea {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
         width: 100%;
         flex-basis: 100%;
         max-width: 100%;
@@ -135,10 +163,44 @@ main.section-2022-resume {
           overflow: auto;
           max-height: none;
 
-          // > nn-container {
-          //   width: 100%;
-          //   max-width: 100%;
-          // }
+          > nn-container {
+            padding: 0 1rem;
+          }
+
+          li,
+          p,
+          dd,
+          dt,
+          h2,
+          h5,
+          a {
+            color: #202028;
+          }
+
+          h1 {
+            font-size: 1.75rem;
+          }
+
+          h1,
+          h3,
+          h4 {
+            color: hsl(211deg 71% 41%);
+          }
+
+          h3,
+          header,
+          .column.right,
+          li:empty {
+            border-color: #333 !important;
+          }
+
+          header {
+            margin: 0 0 1rem;
+          }
+
+          footer {
+            display: none;
+          }
         }
       }
     }

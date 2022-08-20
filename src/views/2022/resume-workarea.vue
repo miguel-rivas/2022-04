@@ -39,7 +39,8 @@
               <a
                 :href="`https://github.com/${user.media.github.user}`"
                 target="_blank"
-              >{{ user.media.github.user }}</a>
+                >{{ user.media.github.user }}</a
+              >
             </dd>
           </dl>
         </address>
@@ -58,34 +59,11 @@
 
         <template v-for="(location, index) in locations">
           <article :key="location + index">
-            <h4 v-html="$t(location.title)" />
-            <h5 v-html="$t(location.position)" />
-            <h6>
-              <time v-html="dates[location]" />
-            </h6>
+            <h4 v-html="location.title" />
+            <h5>{{ location.position }} -- <time v-html="location.date" /></h5>
+            <h6></h6>
             <ul>
-              <template
-                v-for="(p, pIndex) in $t(location.summary)"
-              >
-                <li :key="location + pIndex" v-html="p" />
-              </template>
-            </ul>
-          </article>
-        </template>
-
-        <h3>{{ $t(`resume.education`) }}</h3>
-
-        <template v-for="(location, index) in education">
-          <article :key="location + index">
-            <h4 v-html="$t(`map.modal.${location}.title`)" />
-            <h5 v-html="$t(`map.modal.${location}.position`)" />
-            <h6>
-              <time v-html="dates[location]" />
-            </h6>
-            <ul>
-              <template
-                v-for="(p, pIndex) in $t(`map.modal.${location}.summary`)"
-              >
+              <template v-for="(p, pIndex) in location.summary">
                 <li :key="location + pIndex" v-html="p" />
               </template>
             </ul>
@@ -93,6 +71,9 @@
         </template>
       </section>
     </nn-container>
+    <footer class="nn-shade">
+      <nn-btn color="gold-tips" text="Download Resume" @click="printPage()" />
+    </footer>
   </nn-scroll-area>
 </template>
 
@@ -109,77 +90,91 @@ export default Vue.extend({
     city: new LinkWeb("matryoshka/map", "App").path,
     locations: [
       {
-        "title": "Enovational",
-        "position": "Frontend Developer",
-        "summary": [
-          "Build government apps with HTML/Slim, SCSS, Bootstrap, jQuery/Vue.js on a Ruby on Rails environment with Webpack.",
-          "Make sure applications are following conventions and extending them according to the complexity of the project and frameworks being used.",
-          "Collaborate with UI/UX Designers, Full Stack Developers, Project Managers, QA Testers and Business Analysts to improve usability.",
-        ]
+        title: "Enovational",
+        date: "2018/04/01",
+        position: "Frontend Developer",
+        summary: [
+          `Build government apps with ${tool.html}/${tool.slim}, ${tool.sass}, ${tool.bootstrap} and ${tool.jQuery}/${tool.vue} on a ${tool.rails} environment with ${tool.webpack}.`,
+          `Make sure applications are following conventions and extending them according to the complexity of the project and frameworks being used.`,
+          `Collaborate with UI/UX Designers, Full Stack Developers, Project Managers, QA Testers and Business Analysts to improve usability.`,
+        ],
       },
       {
-        "title": "Plant Therapy",
-        "position": "Graphic Web Designer",
-        "summary": [
-          "Build prototypes and landing pages with Pug, SCSS, jQuery and Miva.",
-          "Maintain and optimize the website.",
-          "Create wireframes and users flow with Adobe Illustrator."
-        ]
+        title: "Plant Therapy",
+        date: "2017/07/01",
+        position: "Graphic Web Designer",
+        summary: [
+          `Build prototypes and landing pages with ${tool.pug}, ${tool.sass}, ${tool.jQuery} and ${tool.miva}.`,
+          `Maintain and optimize the website.`,
+          `Create wireframes and users flow with ${tool.illustrator}.`,
+        ],
       },
       {
-        "title": "Pixel Perfect Tree",
-        "position": "Frontend Developer",
-        "summary": [
-          "Design and develop applications with Haml, SCSS, Bootstrap, jQuery/React on a Ruby on Rails environment with Webpack.",
-          "Collaborate with Full Stack Developers and Project Managers to improve usability.",
-        ]
+        title: "Pixel Perfect Tree",
+        date: "2016/01/01",
+        position: "Frontend Developer",
+        summary: [
+          `Design and develop applications with ${tool.haml}, ${tool.sass}, ${tool.bootstrap}, ${tool.jQuery}/${tool.react} on a ${tool.rails} environment with ${tool.webpack}.`,
+          `Collaborate with Full Stack Developers and Project Managers to improve usability.`,
+        ],
       },
       {
-        "title": "Capital",
-        "position": "Frontend Developer",
-        "summary": [
-          "Build applications with Pug, SCSS, jQuery on a PHP environment with GruntJS.",
-          "Create wireframes and users flow with Adobe Illustrator.",
-          "Collaborate with Backend Developers, Designers and Project Managers to improve usability.",
-          "Animate ad banners for websites with Adobe Flash.",
-          "Create motion graphics for social media with Adobe Flash."
-        ]
+        title: "Capital",
+        date: "2014/05/01",
+        position: "Frontend Developer",
+        summary: [
+          `Build applications with ${tool.pug}, ${tool.sass}, ${tool.jQuery} on a ${tool.php} environment with ${tool.grunt}.`,
+          `Create wireframes and users flow with ${tool.illustrator}.`,
+          `Collaborate with Backend Developers, Designers and Project Managers to improve usability.`,
+          `Animate ad banners for websites with ${tool.flash}.`,
+          `Create motion graphics for social media with ${tool.flash}.`,
+        ],
       },
       {
-        "title": "Avante Marketing",
-        "position": "Web Designer",
-        "summary": [
-          "Design and build applications with HTML, CSS, jQuery on a PHP environment.",
-        ]
+        title: "Avante Marketing",
+        date: "2013/07/05",
+        position: "Web Designer",
+        summary: [
+          `Design and build applications with ${tool.html}, ${tool.css}, ${tool.jQuery} on a ${tool.php} environment.`,
+        ],
       },
       {
-        "title": "Social Network",
-        "position": "Web Designer",
-        "summary": [
-          "Design applications UI with Adobe Illustrator.",
-          "Design social media assets with Adobe Illustrator, Adobe Photoshop and Adobe Indesign."
-        ]
+        title: "Social Network",
+        date: "2013/05/01",
+        position: "Web Designer",
+        summary: [
+          `Design applications UI with ${tool.illustrator}.`,
+          `Design social media assets with ${tool.illustrator}, ${tool.photoshop} and ${tool.indesign}.`,
+        ],
       },
       {
-        "title": "Studio Several",
-        "position": "Graphic Designer",
-        "summary": [
-          "Retouch pictures with Adobe Photoshop",
-          "Design yearbooks with Adobe Indesign and Adobe Photoshop"
-        ]
+        title: "Studio Several",
+        date: "2013/01/01",
+        position: "Graphic Designer",
+        summary: [
+          `Retouch pictures with ${tool.photoshop}`,
+          `Design yearbooks with ${tool.indesign} and ${tool.photoshop}`,
+        ],
+      },
+      {
+        title: "Instituto Tecnologico de las Americas",
+        date: "2009/09/01",
+        position: "Asociates of Art, Multimedia",
+        summary: [
+          "Digital Illustration",
+          "Visual Communication",
+          "Bitmap Graphics",
+          "Vector Graphics",
+          "Desktop Publishing",
+          "Digital Video",
+          "Website Creation",
+          "Flash Animation with Action Script",
+          "3D Graphics & Animation",
+          "Digital Audio",
+          "Branding",
+        ],
       },
     ],
-    dates: {
-      enovational: "2018/04/01",
-      plantTherapy: "2017/07/01",
-      pixel: "2016/01/01",
-      capital: "2014/05/01",
-      avante: "2013/07/05",
-      social: "2013/05/01",
-      several: "2013/01/01",
-      itla: "2009/09/01",
-    },
-    education: ["itla"],
     user,
     skills: [
       tool.html,
@@ -226,5 +221,10 @@ export default Vue.extend({
       tool.blender,
     ],
   }),
+  methods: {
+    printPage() {
+      window.print();
+    },
+  },
 });
 </script>

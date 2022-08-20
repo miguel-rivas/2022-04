@@ -29,7 +29,7 @@
         </v-group>
         <v-group @click="moveMatrix(0, -1)">
           <ctrl
-            glyph="angle-down"
+            glyph="arrow-angle"
             :x="1"
             :y="-1"
             :width="gridSize"
@@ -39,7 +39,7 @@
         </v-group>
         <v-group @click="moveMatrix(0, 1)">
           <ctrl
-            glyph="angle-down"
+            glyph="arrow-angle"
             :x="1"
             :y="gridSize + 2"
             :width="gridSize"
@@ -49,7 +49,7 @@
         </v-group>
         <v-group @click="moveMatrix(-1, 0)">
           <ctrl
-            glyph="angle-down"
+            glyph="arrow-angle"
             :x="-1"
             :y="1"
             :width="1"
@@ -61,7 +61,7 @@
         </v-group>
         <v-group @click="moveMatrix(1, 0)">
           <ctrl
-            glyph="angle-down"
+            glyph="arrow-angle"
             :x="gridSize + 2"
             :y="1"
             :width="1"
@@ -74,7 +74,7 @@
         <template v-for="pixel in gridSize">
           <v-group :key="`buttonTop${pixel}`" @click="moveLine('top', pixel)">
             <ctrl
-              glyph="angle-down"
+              glyph="arrow-angle"
               :x="pixel"
               :y="0"
               :width="1"
@@ -87,7 +87,7 @@
             @click="moveLine('bottom', pixel)"
           >
             <ctrl
-              glyph="angle-down"
+              glyph="arrow-angle"
               :x="pixel"
               :y="gridSize + 1"
               :width="1"
@@ -97,7 +97,7 @@
           </v-group>
           <v-group :key="`buttonLeft${pixel}`" @click="moveLine('left', pixel)">
             <ctrl
-              glyph="angle-down"
+              glyph="arrow-angle"
               :x="0"
               :y="pixel"
               :width="1"
@@ -110,7 +110,7 @@
             @click="moveLine('right', pixel)"
           >
             <ctrl
-              glyph="angle-down"
+              glyph="arrow-angle"
               :x="gridSize + 1"
               :y="pixel"
               :width="1"
