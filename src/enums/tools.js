@@ -108,6 +108,9 @@ export const tool = {
   dreamweaver: "Adobe Dreamweaver",
   as2: "ActionScript 2",
   as3: "ActionScript 3",
+
+  storybook: "Storybook",
+  figma: "Figma",
 };
 
 export const toolR = Object.values(tool);

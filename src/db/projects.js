@@ -42,6 +42,7 @@ const pj = [
       toolEnum.i18n,
       toolEnum.webComponents,
       toolEnum.cypress,
+      toolEnum.storybook,
     ],
     new Preview("2022"),
     [

@@ -5,14 +5,12 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
     "i18n:report": "vue-cli-service i18n:report --src \"./src/**/*.?(js|vue)\" --locales \"./src/locales/**/*.json\"",
-    "s": "vue-cli-service serve",
     "start": "vue-cli-service serve",
     "storybook": "vue-cli-service storybook:serve -p 6006 -c config/storybook",
     "storybook:build": "vue-cli-service storybook:build -c config/storybook",
-    "test": "vue-cli-service test:e2e"
+    "cypress": "vue-cli-service test:e2e"
   },
   "dependencies": {
     "@fontsource/amatic-sc": "^4.2.2",
@@ -30,7 +28,7 @@
     "konva": "^8.3.2",
     "luxon": "^2.3.0",
     "mr-vue-color": "file:../../app_web_module_vue-color-fork",
-    "nano-grid": "3.2.8",
+    "nano-grid": "3.2.10",
     "nano-spirit": "1.0.1",
     "phaser": "^3.55.2",
     "sweetalert2": "^11.4.26",

@@ -17,7 +17,12 @@ yarn start
 yarn build
 ```
 
-### Run Cypress (e2e Testing)
+### Run Cypress (e2e Testing :8081)
 ```
-yarn test
+yarn cypress
+```
+
+### Run Storybook (:6006)
+```
+yarn storybook
 ```

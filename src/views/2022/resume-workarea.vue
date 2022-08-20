@@ -58,14 +58,14 @@
 
         <template v-for="(location, index) in locations">
           <article :key="location + index">
-            <h4 v-html="$t(`map.modal.${location}.title`)" />
-            <h5 v-html="$t(`map.modal.${location}.position`)" />
+            <h4 v-html="$t(location.title)" />
+            <h5 v-html="$t(location.position)" />
             <h6>
               <time v-html="dates[location]" />
             </h6>
             <ul>
               <template
-                v-for="(p, pIndex) in $t(`map.modal.${location}.summary`)"
+                v-for="(p, pIndex) in $t(location.summary)"
               >
                 <li :key="location + pIndex" v-html="p" />
               </template>
@@ -108,13 +108,66 @@ export default Vue.extend({
   data: () => ({
     city: new LinkWeb("matryoshka/map", "App").path,
     locations: [
-      "enovational",
-      "plantTherapy",
-      "pixel",
-      "capital",
-      "avante",
-      // "social",
-      "several",
+      {
+        "title": "Enovational",
+        "position": "Frontend Developer",
+        "summary": [
+          "Build government apps with HTML/Slim, SCSS, Bootstrap, jQuery/Vue.js on a Ruby on Rails environment with Webpack.",
+          "Make sure applications are following conventions and extending them according to the complexity of the project and frameworks being used.",
+          "Collaborate with UI/UX Designers, Full Stack Developers, Project Managers, QA Testers and Business Analysts to improve usability.",
+        ]
+      },
+      {
+        "title": "Plant Therapy",
+        "position": "Graphic Web Designer",
+        "summary": [
+          "Build prototypes and landing pages with Pug, SCSS, jQuery and Miva.",
+          "Maintain and optimize the website.",
+          "Create wireframes and users flow with Adobe Illustrator."
+        ]
+      },
+      {
+        "title": "Pixel Perfect Tree",
+        "position": "Frontend Developer",
+        "summary": [
+          "Design and develop applications with Haml, SCSS, Bootstrap, jQuery/React on a Ruby on Rails environment with Webpack.",
+          "Collaborate with Full Stack Developers and Project Managers to improve usability.",
+        ]
+      },
+      {
+        "title": "Capital",
+        "position": "Frontend Developer",
+        "summary": [
+          "Build applications with Pug, SCSS, jQuery on a PHP environment with GruntJS.",
+          "Create wireframes and users flow with Adobe Illustrator.",
+          "Collaborate with Backend Developers, Designers and Project Managers to improve usability.",
+          "Animate ad banners for websites with Adobe Flash.",
+          "Create motion graphics for social media with Adobe Flash."
+        ]
+      },
+      {
+        "title": "Avante Marketing",
+        "position": "Web Designer",
+        "summary": [
+          "Design and build applications with HTML, CSS, jQuery on a PHP environment.",
+        ]
+      },
+      {
+        "title": "Social Network",
+        "position": "Web Designer",
+        "summary": [
+          "Design applications UI with Adobe Illustrator.",
+          "Design social media assets with Adobe Illustrator, Adobe Photoshop and Adobe Indesign."
+        ]
+      },
+      {
+        "title": "Studio Several",
+        "position": "Graphic Designer",
+        "summary": [
+          "Retouch pictures with Adobe Photoshop",
+          "Design yearbooks with Adobe Indesign and Adobe Photoshop"
+        ]
+      },
     ],
     dates: {
       enovational: "2018/04/01",
@@ -131,29 +184,30 @@ export default Vue.extend({
     skills: [
       tool.html,
       tool.pug,
-      tool.slim,
-      tool.haml,
+      // tool.slim,
+      // tool.haml,
       separator,
       tool.css,
       tool.scss,
       separator,
       tool.javascript,
       tool.vue,
-      tool.vuex,
-      tool.vueRouter,
+      // tool.vuex,
+      // tool.vueRouter,
       tool.svelte,
       tool.react,
-      tool.redux,
-      tool.angular,
-      tool.jQuery,
+      // tool.redux,
+      // tool.angular,
+      // tool.jQuery,
       separator,
       tool.git,
       separator,
       tool.cypress,
+      tool.storybook,
       separator,
       tool.firebase,
-      separator,
-      tool.rails,
+      // separator,
+      // tool.rails,
       separator,
       tool.grunt,
       tool.gulp,
@@ -161,12 +215,13 @@ export default Vue.extend({
       separator,
       tool.bootstrap,
       separator,
+      tool.figma,
       tool.photoshop,
       tool.gimp,
       tool.illustrator,
       tool.inkscape,
-      tool.indesign,
-      tool.scribus,
+      // tool.indesign,
+      // tool.scribus,
       tool.flash,
       tool.blender,
     ],

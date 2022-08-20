@@ -1,11 +1,14 @@
+import "./button.scss";
+
 import BtnComponent from "nano-grid/components/btn";
 import IconComponent from "nano-grid/components/icon";
-import "./button.scss";
+
 import ColorsType from "@/enums/colors";
 import IconsType from "@/enums/icons";
 
 window.customElements.define('nn-icon', IconComponent);
 window.customElements.define('nn-btn', BtnComponent);
+
 
 export default {
   title: 'Button',
@@ -35,7 +38,7 @@ export default {
     glyph: "",
     flip: false,
     active: false,
-  }
+  },
 };
 
 const Template = ({ color, text, mode, direction, glyph, flip, active }) => ({
