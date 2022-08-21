@@ -17,6 +17,7 @@ files=(
   "2022-resume"
 
   "audio2"
+  "avatar"
 
   "capital"
   "car"
