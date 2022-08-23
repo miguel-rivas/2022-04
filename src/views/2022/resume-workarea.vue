@@ -6,70 +6,75 @@
         <h2 v-html="$t('position')" />
       </header>
 
-      <section class="column left">
-        <h3>{{ $t(`resume.contact`) }}</h3>
+      <nn-row breakpoint="md">
+        <nn-column size="35%">
+          <h3>{{ $t(`resume.contact`) }}</h3>
 
-        <address>
-          <dl>
-            <dt>Website</dt>
-            <dd>
-              <a :href="'https://' + user.website">
-                {{ user.website }}
-              </a>
-            </dd>
-            <dt>Email</dt>
-            <dd>
-              <a :href="'mailto:' + user.email">
-                {{ user.email }}
-              </a>
-            </dd>
-            <dt>Location</dt>
-            <dd>
-              <a :href="city" target="_blank">
-                {{ user.location.city }},
-                {{ user.location.state }}
-              </a>
-            </dd>
-            <dt>Phone Number</dt>
-            <dd>
-              <a :href="'tel:' + user.phoneLink">{{ user.phone }}</a>
-            </dd>
-            <dt>Github</dt>
-            <dd>
-              <a
-                :href="`https://github.com/${user.media.github.user}`"
-                target="_blank"
-                >{{ user.media.github.user }}</a
-              >
-            </dd>
-          </dl>
-        </address>
+          <address>
+            <dl>
+              <dt>Website</dt>
+              <dd>
+                <a :href="'https://' + user.website">
+                  {{ user.website }}
+                </a>
+              </dd>
+              <dt>Email</dt>
+              <dd>
+                <a :href="'mailto:' + user.email">
+                  {{ user.email }}
+                </a>
+              </dd>
+              <dt>Location</dt>
+              <dd>
+                <a :href="city" target="_blank">
+                  {{ user.location.city }},
+                  {{ user.location.state }}
+                </a>
+              </dd>
+              <dt>Phone Number</dt>
+              <dd>
+                <a :href="'tel:' + user.phoneLink">{{ user.phone }}</a>
+              </dd>
+              <dt>Github</dt>
+              <dd>
+                <a
+                  :href="`https://github.com/${user.media.github.user}`"
+                  target="_blank"
+                  >{{ user.media.github.user }}</a
+                >
+              </dd>
+            </dl>
+          </address>
 
-        <h3>{{ $t(`resume.skills`) }}</h3>
+          <h3>{{ $t(`resume.skills`) }}</h3>
 
-        <ul>
-          <template v-for="(skill, pIndex) in skills">
-            <li :key="skill + pIndex" v-html="skill" />
+          <ul>
+            <template v-for="(skill, pIndex) in skills">
+              <li :key="skill + pIndex" v-html="skill" />
+            </template>
+          </ul>
+        </nn-column>
+
+        <nn-column size="65%">
+          <h3 class="sr-only">{{ $t(`resume.experience`) }}</h3>
+
+          <template v-for="(location, index) in locations">
+            <article :key="location + index">
+              <h3 v-html="location.title" />
+              <h4>
+                {{ location.position }}
+              <time :class="`date${location.date.split('/')[0]}`" v-html="location.date.split('/')[0]" />
+              </h4>
+              <ul>
+                <template v-for="(p, pIndex) in location.summary">
+                  <li :key="location + pIndex" v-html="p" />
+                </template>
+              </ul>
+              <nn-icon glyph="circle-o" />
+            </article>
           </template>
-        </ul>
-      </section>
-
-      <section class="column right">
-        <h3>{{ $t(`resume.experience`) }}</h3>
-
-        <template v-for="(location, index) in locations">
-          <article :key="location + index">
-            <h4 v-html="location.title" />
-            <h5>{{ location.position }} -- <time v-html="location.date" /></h5>
-            <h6></h6>
-            <ul>
-              <template v-for="(p, pIndex) in location.summary">
-                <li :key="location + pIndex" v-html="p" />
-              </template>
-            </ul>
-          </article>
-        </template>
-      </section>
+        </nn-column>
+      </nn-row>
     </nn-container>
     <footer class="nn-shade">
       <nn-btn color="gold-tips" text="Download Resume" @click="printPage()" />
@@ -181,10 +186,10 @@ export default Vue.extend({
       tool.pug,
       // tool.slim,
       // tool.haml,
-      separator,
+      // separator,
       tool.css,
       tool.scss,
-      separator,
+      // separator,
       tool.javascript,
       tool.vue,
       // tool.vuex,
@@ -194,22 +199,22 @@ export default Vue.extend({
       // tool.redux,
       // tool.angular,
       // tool.jQuery,
-      separator,
+      // separator,
       tool.git,
-      separator,
+      // separator,
       tool.cypress,
       tool.storybook,
-      separator,
+      // separator,
       tool.firebase,
       // separator,
       // tool.rails,
-      separator,
+      // separator,
       tool.grunt,
       tool.gulp,
       tool.webpack,
-      separator,
+      // separator,
       tool.bootstrap,
-      separator,
+      // separator,
       tool.figma,
       tool.photoshop,
       tool.gimp,
