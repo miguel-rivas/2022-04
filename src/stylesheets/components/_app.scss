@@ -179,6 +179,59 @@
       li {
         margin: 0;
       }
+
+      .menu-toggle {
+        display: none;
+      }
+
+      @media only screen and (max-width: 992px) {
+        & {
+          .menu-toggle {
+            display: block;
+            nn-icon {
+              font-size: 25px;
+            }
+          }
+          .open-menu {
+            + ul {
+              display: block;
+              position: absolute;
+              top: 60px;
+              right: 0;
+              left: 0;
+              width: 100%;
+              max-width: 100%;
+              background-color: hsl(240deg 5% 12%);
+              border: 1px solid var(--nn-border-color);
+
+              li {
+                display: block;
+              }
+
+              a {
+                display: block;
+                padding: 0.75rem 1rem;
+                width: 100%;
+                font-weight: 600;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+
+                &:hover {
+                  background-color: hsl(251deg 17% 20%);
+                }
+
+                &.router-link-active {
+                  background-color: #88e2b4;
+                  color: var(--color-panel-background);
+                }
+              }
+            }
+          }
+          ul {
+            display: none;
+          }
+        }
+      }
     }
 
     + .nano-workarea {

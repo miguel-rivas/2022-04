@@ -1,27 +1,40 @@
 <template>
-  <nn-container>
-    <nav>
-      <p>Miguel Rivas</p>
-      <ul>
-        <li>
-          <router-link to="map">Home</router-link>
-        </li>
-        <li>
-          <router-link to="2022-projects">Projects</router-link>
-        </li>
-        <li>
-          <router-link to="2022-videos">Videos</router-link>
-        </li>
-        <li>
-          <router-link to="2022-images">Gallery</router-link>
-        </li>
-        <li>
-          <router-link to="2022-statistics">Statistics</router-link>
-        </li>
-        <li>
-          <router-link to="2022-resume">Resume</router-link>
-        </li>
-      </ul>
-    </nav>
-  </nn-container>
+  <navbar title="Miguel Rivas" :links="links" />
 </template>
+
+<script>
+import Vue from "vue";
+import navbar from "@/components/navbar.vue";
+
+export default Vue.extend({
+  components: { navbar },
+  data: () => ({
+    links: [
+      {
+        route: "map",
+        caption: "Home",
+      },
+      {
+        route: "2022-projects",
+        caption: "Projects",
+      },
+      {
+        route: "2022-videos",
+        caption: "Videos",
+      },
+      {
+        route: "2022-images",
+        caption: "Gallery",
+      },
+      {
+        route: "2022-statistics",
+        caption: "Statistics",
+      },
+      {
+        route: "2022-resume",
+        caption: "Resume",
+      },
+    ],
+  }),
+});
+</script>

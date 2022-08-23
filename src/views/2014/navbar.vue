@@ -1,37 +1,39 @@
 <template>
-  <nn-container>
-    <nav>
-      <p>Portfolio 2014</p>
-      <ul>
-        <li>
-          <router-link to="2014-home">Home</router-link>
-        </li>
-        <li>
-          <router-link to="2014-projects">Projects</router-link>
-        </li>
-        <li>
-          <router-link to="2014-contact">Contact</router-link>
-        </li>
-        <li>
-          <select class="nn-input" v-model="theme">
-            <template v-for="(theme, themeIndex) in themes">
-              <option :key="themeIndex" :value="theme.name">
-                {{ theme.text }}
-              </option>
-            </template>
-          </select>
-        </li>
-      </ul>
-    </nav>
-  </nn-container>
+  <navbar title="Portfolio 2014" :links="links">
+    <li>
+      <select class="nn-input" v-model="theme">
+        <template v-for="(theme, themeIndex) in themes">
+          <option :key="themeIndex" :value="theme.name">
+            {{ theme.text }}
+          </option>
+        </template>
+      </select>
+    </li>
+  </navbar>
 </template>
 
 <script>
 import Vue from "vue";
+import navbar from "@/components/navbar.vue";
 import { mapMutations } from "vuex";
 
 export default Vue.extend({
+  components: { navbar },
   data: () => ({
+    links: [
+      {
+        route: "2014-home",
+        caption: "Home",
+      },
+      {
+        route: "2014-projects",
+        caption: "Projects",
+      },
+      {
+        route: "2014-contact",
+        caption: "Contact",
+      },
+    ],
     themes: [
       {
         icon: "leaf",
