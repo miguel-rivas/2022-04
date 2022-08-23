@@ -26,7 +26,7 @@
               </dd>
               <dt>Location</dt>
               <dd>
-                <a :href="city" target="_blank">
+                <a href="https://www.google.com/maps/@38.9107121,-77.0471487,16z" target="_blank">
                   {{ user.location.city }},
                   {{ user.location.state }}
                 </a>
