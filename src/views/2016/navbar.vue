@@ -1,34 +1,36 @@
 <template>
-  <nn-container>
-    <nav>
-      <p>Portfolio 2016</p>
-      <ul>
-        <li>
-          <router-link to="2016-home">Home</router-link>
-        </li>
-        <li>
-          <nn-btn
-            text="Dig"
-            color="gold-tips"
-            :active="theme === 'earthquake'"
-            @click="
-              $store.commit('toggleTheme', {
-                name: 'theme2016',
-                value: 'earthquake',
-              })
-            "
-          />
-        </li>
-      </ul>
-    </nav>
-  </nn-container>
+  <navbar title="Portfolio 2016" :links="links">
+    <li>
+      <nn-btn
+        text="Dig"
+        color="gold-tips"
+        :active="theme === 'earthquake'"
+        @click="
+          $store.commit('toggleTheme', {
+            name: 'theme2016',
+            value: 'earthquake',
+          })
+        "
+      />
+    </li>
+  </navbar>
 </template>
 
 <script>
 import Vue from "vue";
+import navbar from "@/components/navbar.vue";
 import { mapMutations, mapGetters } from "vuex";
 
 export default Vue.extend({
+  components: { navbar },
+  data: () => ({
+    links: [
+      {
+        route: "2016-home",
+        caption: "Home",
+      },
+    ],
+  }),
   computed: {
     ...mapGetters({
       theme: "getTheme2016",

@@ -1,15 +1,24 @@
 <template>
-  <nn-container>
-    <nav>
-      <p>Pixel Perfect Tree</p>
-      <ul>
-        <li>
-          <router-link to="pixelpt-404">Error 404</router-link>
-        </li>
-        <li>
-          <router-link to="pixelpt-500">Error 500</router-link>
-        </li>
-      </ul>
-    </nav>
-  </nn-container>
+  <navbar title="Pixel Perfect Tree" :links="links" />
 </template>
+
+<script>
+import Vue from "vue";
+import navbar from "@/components/navbar.vue";
+
+export default Vue.extend({
+  components: { navbar },
+  data: () => ({
+    links: [
+      {
+        route: "pixelpt-404",
+        caption: "Error 404",
+      },
+      {
+        route: "pixelpt-500",
+        caption: "Error 500",
+      },
+    ],
+  }),
+});
+</script>

@@ -1,21 +1,32 @@
 <template>
-  <nn-container>
-    <nav>
-      <p>CSS Animation</p>
-      <ul>
-        <li>
-          <router-link to="window">Window</router-link>
-        </li>
-        <li>
-          <router-link to="pills">Pills</router-link>
-        </li>
-        <li>
-          <router-link to="minivan">Minivan</router-link>
-        </li>
-        <li>
-          <router-link to="house">House</router-link>
-        </li>
-      </ul>
-    </nav>
-  </nn-container>
+  <navbar title="CSS Animation" :links="links" />
 </template>
+
+<script>
+import Vue from "vue";
+import navbar from "@/components/navbar.vue";
+
+export default Vue.extend({
+  components: { navbar },
+  data: () => ({
+    links: [
+      {
+        route: "window",
+        caption: "Window",
+      },
+      {
+        route: "pills",
+        caption: "Pills",
+      },
+      {
+        route: "minivan",
+        caption: "Minivan",
+      },
+      {
+        route: "house",
+        caption: "House",
+      },
+    ],
+  }),
+});
+</script>

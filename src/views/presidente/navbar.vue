@@ -1,26 +1,36 @@
 <template>
-  <nn-container>
-    <nav>
-      <p>Presidente</p>
-      <ul>
-        <li>
-          <router-link to="presidente-carnaval-filter"
-            >Carnaval Filter</router-link
-          >
-        </li>
-        <li>
-          <router-link to="presidente-carnaval-home">Carnaval 2015</router-link>
-        </li>
-        <li>
-          <router-link to="presidente-verano-loader">Verano 2015 Loader</router-link>
-        </li>
-        <li>
-          <router-link to="presidente-verano-filter">Verano 2015 Filter</router-link>
-        </li>
-         <li>
-          <router-link to="presidente-destapa">Destapa el Coro</router-link>
-        </li>
-      </ul>
-    </nav>
-  </nn-container>
+  <navbar title="Presidente" :links="links" />
 </template>
+
+<script>
+import Vue from "vue";
+import navbar from "@/components/navbar.vue";
+
+export default Vue.extend({
+  components: { navbar },
+  data: () => ({
+    links: [
+      {
+        route: "presidente-carnaval-filter",
+        caption: "Carnaval Filter",
+      },
+      {
+        route: "presidente-carnaval-home",
+        caption: "Carnaval 2015",
+      },
+      {
+        route: "presidente-verano-loader",
+        caption: "Verano 2015 Loader",
+      },
+      {
+        route: "presidente-verano-filter",
+        caption: "Verano 2015 Filter",
+      },
+      {
+        route: "presidente-destapa",
+        caption: "Destapa el Coro",
+      },
+    ],
+  }),
+});
+</script>
