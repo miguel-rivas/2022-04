@@ -203,6 +203,10 @@
               max-width: 100%;
               background-color: hsl(240deg 5% 12%);
               border: 1px solid var(--nn-border-color);
+              max-height: calc(100vh - 60px);
+              overflow: auto;
+              @include scrollbar-base();
+              @include scrollbar();
 
               li {
                 display: block;
