@@ -20,6 +20,7 @@ import journeyView from '@/views/others/journey.vue';
 
 import ColorsWorkareaView from '../views/popkern/colors-workarea.vue';
 import IconsWorkareaView from '../views/popkern/icons-workarea.vue';
+import IconsPanelView from '../views/popkern/icons-panel.vue';
 import PopkernHomeView from '../views/popkern/home.vue';
 import PopkernNavbar from '../views/popkern/navbar.vue';
 
@@ -227,6 +228,7 @@ const routes = [
     path: '/popkern-icons',
     components: {
       workarea: IconsWorkareaView,
+      panel: IconsPanelView,
       navbar: PopkernNavbar,
     },
   },

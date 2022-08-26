@@ -11,7 +11,7 @@
               <slot name="header" />
             </nn-column>
             <nn-column size="35">
-              <btn color="persian-red" glyph="close" @click="closeModal" />
+              <btn color="persian-red" glyph="times" @click="closeModal" />
             </nn-column>
           </nn-row>
         </div>

@@ -3,7 +3,7 @@ nn-row.alert.fixed(:class="alert.status", v-if="alert.message !== ''")
   nn-column(size="100%-35") {{ alert.message }}
   nn-column(size="35")
     button.close-btn(@click="closeAlert()")
-      nn-icon(glyph="close")
+      nn-icon(glyph="times")
 </template>
 
 <script>

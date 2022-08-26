@@ -14,6 +14,7 @@ export const store = new Vuex.Store({
     panel: false,
     panelSize: ['300', '100%-300-50-35'],
     theme: false,
+    fallBackIcons: false,
     params: {
       city: "berlin",
       name: "",
@@ -90,6 +91,7 @@ export const store = new Vuex.Store({
     },
   },
   getters: {
+    getFallBackValue: state => state.fallBackIcons,
     getParams: state => state.params,
     getGridSize: state => state.selection.pixelState.gridSize,
     getPanelVisibility: state => state.panel,

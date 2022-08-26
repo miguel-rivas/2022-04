@@ -3,7 +3,7 @@
     <nav>
       <p>{{ title }}</p>
       <nn-btn
-        :glyph="openMenu ? 'close' : 'bars'"
+        :glyph="openMenu ? 'times' : 'bars'"
         mode="ghost"
         :color="openMenu ? 'persian-red' : 'shamrock'"
         class="menu-toggle"
