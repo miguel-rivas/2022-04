@@ -6,7 +6,7 @@
   li,
   li > nn-row {
     display: inline-flex;
-    min-width: 250px + 16 * 2;
+    max-width: 100%;
   }
   
   .item {
@@ -17,10 +17,13 @@
   
     video {
       margin-bottom: 0.5rem;
+      max-width: 100%;
+      max-height: 111vw;
     }
   
     .nano-shade-box {
       width: 325px;
+      max-width: 100%;
   
       h2 {
         font-size: 16px;
