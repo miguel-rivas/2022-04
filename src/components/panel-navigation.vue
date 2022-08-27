@@ -33,40 +33,7 @@
               />
             </template>
           </template>
-        </nn-column>
-      </nn-row>
-    </nn-scroll-area>
-    <nn-row>
-      <nn-column size="100%">
-        <btn
-          color="gold-tips"
-          size="md"
-          mode="nav"
-          title="Switch to English"
-          text="EN"
-          @click="switchLanguage('en')"
-          :active="$i18n.locale === 'en'"
-        />
-        <btn
-          color="gold-tips"
-          size="md"
-          mode="nav"
-          title="Switch to Spanish"
-          text="ES"
-          @click="switchLanguage('es')"
-          :active="$i18n.locale === 'es'"
-        />
-        <btn
-          color="gold-tips"
-          size="md"
-          mode="nav"
-          title="Switch to Portuguese"
-          text="PT"
-          @click="switchLanguage('pt')"
-          :active="$i18n.locale === 'pt'"
-        />
-        <hr />
-        <btn
+          <btn
           color="gold-tips"
           size="md"
           mode="nav"
@@ -75,8 +42,9 @@
           @click="toggleValue('theme'), playSound()"
           :active="theme"
         />
-      </nn-column>
-    </nn-row>
+        </nn-column>
+      </nn-row>
+    </nn-scroll-area>
   </nn-column>
 </template>
 
