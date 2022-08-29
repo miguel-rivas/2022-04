@@ -9,3 +9,7 @@
 @function g-icon($key) {
   @return map-get($icons, $key);
 }
+
+@function mr-section($name) {
+  @return unquote("main.section-#{$name} .nano-workarea")
+}

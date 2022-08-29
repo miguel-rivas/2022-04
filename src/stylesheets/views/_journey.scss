@@ -1,260 +1,256 @@
 @use "sass:math";
 $panel-size: 50px;
 
-main.section-journey {
-  .nano-workarea {
+#{mr-section(journey)} {
+  @include nn-org-layers(
+    (
+      //----Bottom
+      ".road",
+      "#plane",
+      ".house",
+      "aside.texture" //----Front
+    )
+  );
 
-    @include nn-org-layers(
-      (
-        //----Bottom
-        ".road",
-        "#plane",
-        ".house",
-        "aside.texture"
-        //----Front
-      )
-    );    
+  aside.texture {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(get-zapp("img/extras/paper.jpg"));
+    opacity: 0.2;
+    pointer-events: none;
+  }
 
-    aside.texture {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url(get-zapp("img/extras/paper.jpg"));
-      opacity: 0.2;
-      pointer-events: none;
+  section {
+    p,
+    h1 {
+      font-family: "Montserrat", sans-serif;
+      color: #fff;
+      margin: 0;
     }
-
-    section {
-      p,
-      h1 {
-        font-family: "Montserrat", sans-serif;
-        color: #fff;
-        margin: 0;
-      }
-      h1 {
-        font-size: 20pt;
-        text-transform: uppercase;
-        font-weight: bold;
-        letter-spacing: 2pt;
-      }
-      p {
-        font-size: 12pt;
-        font-weight: normal;
-        letter-spacing: 1pt;
-      }
+    h1 {
+      font-size: 20pt;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 2pt;
     }
+    p {
+      font-size: 12pt;
+      font-weight: normal;
+      letter-spacing: 1pt;
+    }
+  }
 
-    /* ------------- Attributes ------------- */
+  /* ------------- Attributes ------------- */
 
-    .contrain {
-      max-width: 900px;
-      margin: auto;
+  .contrain {
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+    height: 100%;
+  }
+
+  /* ------------- Sections ------------- */
+
+  #woods {
+    background: #2d7a4d url(get-zapp("img/journey/pt_woodsPattern.png"));
+    height: 800px;
+  }
+
+  #plane {
+    $planeSize: 200px;
+    display: block;
+    width: $planeSize;
+    height: $planeSize;
+    background: url(get-zapp("img/journey/pt_plane.png")) center no-repeat;
+    left: calc(50% - #{math.div($planeSize, 2) - math.div($panel-size, 2)});
+    top: 265px;
+    position: fixed;
+  }
+
+  #base {
+    $houseSize: 240px;
+    $roadSize: 150px;
+    position: relative;
+    width: 100%;
+    height: 220px;
+    top: 240px;
+    .house {
       position: relative;
-      height: 100%;
-    }
-
-    /* ------------- Sections ------------- */
-
-    #woods {
-      background: #2d7a4d url(get-zapp("img/journey/pt_woodsPattern.png"));
-      height: 800px;
-    }
-
-    #plane {
-      $planeSize: 200px;
+      margin: auto;
       display: block;
-      width: $planeSize;
-      height: $planeSize;
-      background: url(get-zapp("img/journey/pt_plane.png")) center no-repeat;
-      left: calc(50% - #{math.div($planeSize, 2) - math.div($panel-size, 2)});
-      top: 265px;
-      position: fixed;
+      width: 240px;
     }
-
-    #base {
-      $houseSize: 240px;
-      $roadSize: 150px;
+    .road {
       position: relative;
-      width: 100%;
-      height: 220px;
-      top: 240px;
-      .house {
-        position: relative;
-        margin: auto;
-        display: block;
-        width: 240px;
-      }
-      .road {
-        position: relative;
-        top: math.div(-$houseSize, 2);
-        margin: auto;
-        display: block;
-        width: $roadSize;
-      }
-    }
-
-    #mountains {
-      background: #67a37f;
-      height: 1060px;
-
-      .mountain_01 {
-        position: absolute;
-        top: 4%;
-        right: 0;
-      }
-      .mountain_02 {
-        position: absolute;
-        bottom: 4%;
-        left: 0;
-      }
-    }
-
-    #sea {
-      background: #29abe2;
-      height: 2000px;
-      .boat_02 {
-        position: absolute;
-        top: 200px;
-        right: 5%;
-      }
-      .turtle {
-        position: absolute;
-        top: 120px;
-        left: 7%;
-        transform: rotate(0deg);
-        animation: journey_turtle linear 4s infinite;
-      }
-      .whirlpool {
-        position: absolute;
-        top: 460px;
-        left: 0;
-        animation: rtr linear 4s infinite;
-      }
-    }
-
-    #island {
-      position: relative;
+      top: math.div(-$houseSize, 2);
       margin: auto;
-      max-width: 887px;
-      height: 861px;
-      top: 830px;
-      background: url(get-zapp("img/journey/pt_island.png")) center no-repeat;
-      .boat_01 {
-        position: absolute;
-        top: 130px;
-        right: 240px;
-      }
-      .house_01 {
-        position: absolute;
-        top: 521px;
-        left: 80px;
-      }
-      .house_02 {
-        position: absolute;
-        top: 266px;
-        left: 180px;
-      }
-      .house_03 {
-        position: absolute;
-        top: 650px;
-        right: 190px;
-      }
-      .house_04 {
-        position: absolute;
-        top: 390px;
-        right: 130px;
-      }
+      display: block;
+      width: $roadSize;
     }
+  }
 
-    #cloudBarrier {
-      position: relative;
-      width: 100%;
-      height: 220px;
-      background: #fff;
+  #mountains {
+    background: #67a37f;
+    height: 1060px;
 
-      &:before,
-      &:after {
-        content: "";
-        position: absolute;
-        display: block;
-        width: 100%;
-        height: 74px;
-        background-repeat: repeat-x;
-      }
-
-      &:before {
-        top: -68px;
-        background-image: url(get-zapp("img/journey/pt_cloudPattern_02.png"));
-        background-position: left;
-      }
-      &:after {
-        bottom: -68px;
-        background-position: right;
-        background-image: url(get-zapp("img/journey/pt_cloudPattern_03.png"));
-      }
-    }
-
-    #sky {
-      background: #29abe2 url(get-zapp("img/journey/pt_birds.png")) center 71px no-repeat;
-      background-attachment: fixed;
-      height: 1600px;
-
-      .cloud_01 {
-        position: absolute;
-        top: 90px;
-        left: 0;
-      }
-      .cloud_02 {
-        position: absolute;
-        top: 638px;
-        right: 0;
-      }
-      .cloud_03 {
-        position: absolute;
-        top: 810px;
-        left: 0;
-      }
-    }
-
-    #land {
-      position: relative;
-      background: #dda664;
-      height: 1080px;
-
-      .umbrella_01 {
-        position: absolute;
-        top: 280px;
-        left: 30%;
-        animation: journey_umbrella alternate 1s infinite;
-      }
-      .umbrella_02 {
-        position: absolute;
-        top: 300px;
-        right: 14%;
-        animation: journey_umbrella alternate 1s infinite;
-      }
-      .umbrella_03 {
-        position: absolute;
-        top: 750px;
-        right: 2%;
-        animation: journey_umbrella alternate 1s infinite;
-      }
-      .umbrella_04 {
-        position: absolute;
-        top: 800px;
-        left: 0;
-        animation: journey_umbrella alternate 1s infinite;
-      }
-    }
-
-    #cave {
+    .mountain_01 {
       position: absolute;
-      width: 100%;
-      height: 90px;
-      top: 90px;
-      background: url(get-zapp("img/journey/pt_finish_pattern.png")) center repeat;
+      top: 4%;
+      right: 0;
     }
+    .mountain_02 {
+      position: absolute;
+      bottom: 4%;
+      left: 0;
+    }
+  }
+
+  #sea {
+    background: #29abe2;
+    height: 2000px;
+    .boat_02 {
+      position: absolute;
+      top: 200px;
+      right: 5%;
+    }
+    .turtle {
+      position: absolute;
+      top: 120px;
+      left: 7%;
+      transform: rotate(0deg);
+      animation: journey_turtle linear 4s infinite;
+    }
+    .whirlpool {
+      position: absolute;
+      top: 460px;
+      left: 0;
+      animation: rtr linear 4s infinite;
+    }
+  }
+
+  #island {
+    position: relative;
+    margin: auto;
+    max-width: 887px;
+    height: 861px;
+    top: 830px;
+    background: url(get-zapp("img/journey/pt_island.png")) center no-repeat;
+    .boat_01 {
+      position: absolute;
+      top: 130px;
+      right: 240px;
+    }
+    .house_01 {
+      position: absolute;
+      top: 521px;
+      left: 80px;
+    }
+    .house_02 {
+      position: absolute;
+      top: 266px;
+      left: 180px;
+    }
+    .house_03 {
+      position: absolute;
+      top: 650px;
+      right: 190px;
+    }
+    .house_04 {
+      position: absolute;
+      top: 390px;
+      right: 130px;
+    }
+  }
+
+  #cloudBarrier {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    background: #fff;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 74px;
+      background-repeat: repeat-x;
+    }
+
+    &:before {
+      top: -68px;
+      background-image: url(get-zapp("img/journey/pt_cloudPattern_02.png"));
+      background-position: left;
+    }
+    &:after {
+      bottom: -68px;
+      background-position: right;
+      background-image: url(get-zapp("img/journey/pt_cloudPattern_03.png"));
+    }
+  }
+
+  #sky {
+    background: #29abe2 url(get-zapp("img/journey/pt_birds.png")) center 71px no-repeat;
+    background-attachment: fixed;
+    height: 1600px;
+
+    .cloud_01 {
+      position: absolute;
+      top: 90px;
+      left: 0;
+    }
+    .cloud_02 {
+      position: absolute;
+      top: 638px;
+      right: 0;
+    }
+    .cloud_03 {
+      position: absolute;
+      top: 810px;
+      left: 0;
+    }
+  }
+
+  #land {
+    position: relative;
+    background: #dda664;
+    height: 1080px;
+
+    .umbrella_01 {
+      position: absolute;
+      top: 280px;
+      left: 30%;
+      animation: journey_umbrella alternate 1s infinite;
+    }
+    .umbrella_02 {
+      position: absolute;
+      top: 300px;
+      right: 14%;
+      animation: journey_umbrella alternate 1s infinite;
+    }
+    .umbrella_03 {
+      position: absolute;
+      top: 750px;
+      right: 2%;
+      animation: journey_umbrella alternate 1s infinite;
+    }
+    .umbrella_04 {
+      position: absolute;
+      top: 800px;
+      left: 0;
+      animation: journey_umbrella alternate 1s infinite;
+    }
+  }
+
+  #cave {
+    position: absolute;
+    width: 100%;
+    height: 90px;
+    top: 90px;
+    background: url(get-zapp("img/journey/pt_finish_pattern.png")) center repeat;
   }
 }

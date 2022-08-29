@@ -1,6 +1,6 @@
-.section-2014-home,
-.section-2014-projects,
-.section-2014-contact {
+#{mr-section(2014-home)},
+#{mr-section(2014-projects)},
+#{mr-section(2014-contact)} {
   @import "2014/general/layers";
   @import "2014/general/fonts";
   @import "2014/general/footer";
@@ -62,7 +62,7 @@
   }
 }
 
-.section-2014-home {
+#{mr-section(2014-home)} {
   @import "2014/desktop/home";
 
   footer {
@@ -77,7 +77,7 @@
   }
 }
 
-.section-2014-projects {
+#{mr-section(2014-projects)} {
   footer {
     .city {
       background-position-x: 10px;
@@ -90,7 +90,7 @@
   }
 }
 
-.section-2014-contact {
+#{mr-section(2014-contact)} {
   @import "2014/desktop/contacts";
 
   footer {

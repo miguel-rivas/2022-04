@@ -1,304 +1,302 @@
 .swal2-container {
-  font-family: 'Amatic SC';
+  font-family: "Amatic SC";
   .swal2-popup {
     align-self: center !important;
     justify-self: center !important;
   }
 }
 
-main.section-css-study {
-  .nano-workarea {
-    @import "sweetalert2/src/sweetalert2.scss";
+#{mr-section(css-study)} {
+  @import "sweetalert2/src/sweetalert2.scss";
 
-    nn-scroll-area {
-      $f_amatic: "Amatic SC", helvetica, sans-serif, verdana;
+  nn-scroll-area {
+    $f_amatic: "Amatic SC", helvetica, sans-serif, verdana;
 
+    background-color: rgb(0, 197, 137);
+    transition: background-color 500ms ease;
+
+    &.theme-all {
       background-color: rgb(0, 197, 137);
-      transition: background-color 500ms ease;
+    }
+    &.theme-1 {
+      background-color: #5d5d5d;
+    }
+    &.theme-2 {
+      background-color: #8cc63f;
+    }
+    &.theme-3 {
+      background-color: #00a99d;
+    }
 
-      &.theme-all {
-        background-color: rgb(0, 197, 137);
-      }
-      &.theme-1 {
-        background-color: #5d5d5d;
-      }
-      &.theme-2 {
-        background-color: #8cc63f;
-      }
-      &.theme-3 {
-        background-color: #00a99d;
-      }
+    &,
+    button,
+    input {
+      font-family: $f_amatic;
+    }
 
-      &,
-      button,
-      input {
-        font-family: $f_amatic;
+    button {
+      border: none;
+      background-color: transparent;
+
+      &:hover {
+        cursor: pointer;
       }
+    }
+
+    ::selection {
+      background-color: #f90;
+      color: #000;
+    }
+
+    #texture {
+      position: fixed;
+      z-index: 0;
+      @include position(0, x, x, 0);
+      width: 100%;
+      height: 100%;
+      opacity: 0.2;
+      background: url(get-zapp("img/extras/paper.jpg")) bottom repeat;
+      pointer-events: none;
+    }
+
+    img {
+      border: none;
+
+      &:focus {
+        border: none;
+        outline: none;
+      }
+    }
+
+    main {
+      margin-bottom: 120px;
+    }
+
+    header {
+      font-size: 200pt;
+      width: 560px\9;
+      max-width: 560px;
+      margin: 25px auto 0;
+      cursor: default;
+      text-align: center;
+      color: #000;
+    }
+
+    #logo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 5;
+    }
+
+    #vs {
+      position: relative;
+      display: inline;
+      cursor: default;
+      color: #fff;
 
       button {
-        border: none;
-        background-color: transparent;
-
-        &:hover {
-          cursor: pointer;
-        }
-      }
-
-      ::selection {
-        background-color: #f90;
-        color: #000;
-      }
-
-      #texture {
-        position: fixed;
-        z-index: 0;
-        @include position(0, x, x, 0);
-        width: 100%;
-        height: 100%;
-        opacity: 0.2;
-        background: url(get-zapp("img/extras/paper.jpg")) bottom repeat;
-        pointer-events: none;
-      }
-
-      img {
-        border: none;
-
-        &:focus {
-          border: none;
-          outline: none;
-        }
-      }
-
-      main {
-        margin-bottom: 120px;
-      }
-
-      header {
-        font-size: 200pt;
-        width: 560px\9;
-        max-width: 560px;
-        margin: 25px auto 0;
-        cursor: default;
-        text-align: center;
-        color: #000;
-      }
-
-      #logo {
+        font-size: 1.75rem;
         position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 5;
-      }
-
-      #vs {
-        position: relative;
-        display: inline;
-        cursor: default;
-        color: #fff;
-
-        button {
-          font-size: 1.75rem;
-          position: absolute;
-          display: block;
-          width: 50px;
-          height: 50px;
-          transition: 200ms;
-          color: #fff;
-          border-radius: 50%;
-          background-color: #404eb1;
-
-          &:hover {
-            color: #fff;
-            background-color: #00d1ff;
-          }
-        }
-      }
-
-      #op1 {
-        @include position(10px, 50px, x, x);
-      }
-      #op2 {
-        @include position(0, -10px, x, x);
-      }
-      #op3 {
-        @include position(40px, -60px, x, x);
-      }
-      #op4 {
-        @include position(106px, -60px, x, x);
-      }
-
-      #sel {
-        display: inline;
-        transition: 200ms;
-      }
-
-      #query {
-        font-size: 30pt;
         display: block;
-        width: 100%;
-        margin: auto;
-        transition: 800ms;
-        text-align: center;
-        text-transform: lowercase;
-        color: #000;
-        border: 1px solid #fff;
-        border-radius: 10px;
-        background: #fff;
+        width: 50px;
+        height: 50px;
+        transition: 200ms;
+        color: #fff;
+        border-radius: 50%;
+        background-color: #404eb1;
 
-        &:focus {
-          outline: none;
-        }
         &:hover {
           color: #fff;
-          border-radius: 35px;
-          background: transparent;
+          background-color: #00d1ff;
         }
       }
+    }
 
-      .selected {
-        border: 2px solid #f0a;
+    #op1 {
+      @include position(10px, 50px, x, x);
+    }
+    #op2 {
+      @include position(0, -10px, x, x);
+    }
+    #op3 {
+      @include position(40px, -60px, x, x);
+    }
+    #op4 {
+      @include position(106px, -60px, x, x);
+    }
+
+    #sel {
+      display: inline;
+      transition: 200ms;
+    }
+
+    #query {
+      font-size: 30pt;
+      display: block;
+      width: 100%;
+      margin: auto;
+      transition: 800ms;
+      text-align: center;
+      text-transform: lowercase;
+      color: #000;
+      border: 1px solid #fff;
+      border-radius: 10px;
+      background: #fff;
+
+      &:focus {
+        outline: none;
+      }
+      &:hover {
+        color: #fff;
+        border-radius: 35px;
+        background: transparent;
+      }
+    }
+
+    .selected {
+      border: 2px solid #f0a;
+      background: rgba(52, 52, 52, 0.2);
+    }
+
+    .info {
+      font-size: 20pt;
+      position: relative;
+      display: block;
+      max-width: 900px;
+      margin: 25px auto;
+      transition: 500ms;
+      border: 1px dashed rgba(52, 52, 52, 1);
+      border-radius: 15px;
+
+      &:hover {
+        color: #000;
         background: rgba(52, 52, 52, 0.2);
       }
 
-      .info {
-        font-size: 20pt;
-        position: relative;
+      ul {
+        list-style: none;
+        padding: 0 10px;
+        margin: 0;
+      }
+
+      li {
+        border-bottom: 1px dashed #fff;
+        padding: 10px 0;
+      }
+
+      li:last-child {
+        border: 0;
+      }
+
+      .toggle {
         display: block;
-        max-width: 900px;
-        margin: 25px auto;
-        transition: 500ms;
-        border: 1px dashed rgba(52, 52, 52, 1);
-        border-radius: 15px;
+        padding: 10px;
 
-        &:hover {
+        strong {
           color: #000;
-          background: rgba(52, 52, 52, 0.2);
         }
 
-        ul {
-          list-style: none;
-          padding: 0 10px;
-          margin: 0;
+        &:hover > strong {
+          color: #fff !important;
+        }
+      }
+
+      > nn-row {
+        margin-bottom: 0;
+        padding: 0.5rem;
+
+        .nn-label {
+          font-size: 1.5rem;
+          background-color: transparent;
+          box-shadow: 0 0 0 transparent;
+          color: #000;
+          // justify-content: flex-start;
         }
 
-        li {
-          border-bottom: 1px dashed #fff;
-          padding: 10px 0;
-        }
-
-        li:last-child {
-          border: 0;
-        }
-
-        .toggle {
-          display: block;
-          padding: 10px;
-
-          strong {
-            color: #000;
-          }
-
-          &:hover > strong {
-            color: #fff !important;
-          }
-        }
-
-        > nn-row {
-          margin-bottom: 0;
+        .more {
           padding: 0.5rem;
 
-          .nn-label {
-            font-size: 1.5rem;
-            background-color: transparent;
-            box-shadow: 0 0 0 transparent;
-            color: #000;
-            // justify-content: flex-start;
-          }
-
-          .more {
-            padding: 0.5rem;
-
-            color: #fff;
-            background: rgba(27, 27, 27, 1);
-          }
-        }
-      }
-
-      em {
-        display: inline-block;
-        margin: 10px 5px 2px;
-        padding: 2px 18px 5px;
-        transition: 500ms;
-        border-radius: 35px;
-        background-color: #006fb3;
-        font-style: normal;
-
-        &:hover {
-          background-color: #f60;
-        }
-      }
-
-      hr {
-        border: 1px dashed #fff;
-      }
-
-      aside.studylist {
-        position: absolute;
-        @include position(x, x, 0, 0);
-        @include size(100%, x, 51px, x);
-        text-align: center;
-        background: rgba(52, 52, 52, 1);
-        font-size: 20pt;
-
-        &.show_list {
-          @include size(x, x, 100%, x);
-        }
-
-        button {
           color: #fff;
-          font-size: 1.5rem;
-          padding: 0.5rem 1rem;
-
-          nn-icon {
-            margin-right: 0.5rem;
-            vertical-align: middle;
-          }
+          background: rgba(27, 27, 27, 1);
         }
+      }
+    }
 
-        .board {
-          text-align: left;
-          position: relative;
-          @include size(88%, x, 83%, x);
-          margin: auto;
-          padding: 6px;
-          border: 18px solid rgb(216, 163, 93);
-          margin-top: 10px;
-          background: rgb(86, 114, 92);
-          columns: 2;
-          overflow: auto;
-          ul {
-            margin: 0;
-            button {
-              transition: 500ms;
-              &:hover {
-                color: #ffe800;
-              }
+    em {
+      display: inline-block;
+      margin: 10px 5px 2px;
+      padding: 2px 18px 5px;
+      transition: 500ms;
+      border-radius: 35px;
+      background-color: #006fb3;
+      font-style: normal;
+
+      &:hover {
+        background-color: #f60;
+      }
+    }
+
+    hr {
+      border: 1px dashed #fff;
+    }
+
+    aside.studylist {
+      position: absolute;
+      @include position(x, x, 0, 0);
+      @include size(100%, x, 51px, x);
+      text-align: center;
+      background: rgba(52, 52, 52, 1);
+      font-size: 20pt;
+
+      &.show_list {
+        @include size(x, x, 100%, x);
+      }
+
+      button {
+        color: #fff;
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+
+        nn-icon {
+          margin-right: 0.5rem;
+          vertical-align: middle;
+        }
+      }
+
+      .board {
+        text-align: left;
+        position: relative;
+        @include size(88%, x, 83%, x);
+        margin: auto;
+        padding: 6px;
+        border: 18px solid rgb(216, 163, 93);
+        margin-top: 10px;
+        background: rgb(86, 114, 92);
+        columns: 2;
+        overflow: auto;
+        ul {
+          margin: 0;
+          button {
+            transition: 500ms;
+            &:hover {
+              color: #ffe800;
             }
           }
         }
       }
+    }
 
-      #showLi {
-        transition: 500ms;
-        opacity: 0.5;
-        &:hover {
-          opacity: 1;
-        }
+    #showLi {
+      transition: 500ms;
+      opacity: 0.5;
+      &:hover {
+        opacity: 1;
       }
+    }
 
-      .doneLi {
-        text-decoration: line-through;
-      }
+    .doneLi {
+      text-decoration: line-through;
     }
   }
 }

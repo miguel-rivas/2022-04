@@ -1,15 +1,13 @@
-main.section-gear {
-  .nano-workarea {
-    nn-scroll-area {
-      height: 100%;
-      display: flex;
-      overflow-x: hidden;
-      padding: 1rem;
-      canvas {
-        margin: auto;
-        display: block;
-        max-width: 100%;
-      }
+#{mr-section(gear)} {
+  nn-scroll-area {
+    height: 100%;
+    display: flex;
+    overflow-x: hidden;
+    padding: 1rem;
+    canvas {
+      margin: auto;
+      display: block;
+      max-width: 100%;
     }
   }
 }

@@ -1,116 +1,114 @@
-main.section-html {
-	.nano-workarea {
-		$f_title: "Saira Extra Condensed", helvetica, sans-serif, verdana;
-		$f_body: "Montserrat", helvetica, sans-serif, verdana;
-		$orange: #ff7400;
-		$yellow: #ffcb00;
+#{mr-section(html)} {
+	$f_title: "Saira Extra Condensed", helvetica, sans-serif, verdana;
+	$f_body: "Montserrat", helvetica, sans-serif, verdana;
+	$orange: #ff7400;
+	$yellow: #ffcb00;
 
-		text-align: left;
-		background-color: #fff;
+	text-align: left;
+	background-color: #fff;
 
-		head {
-			display: none;
-		}
+	head {
+		display: none;
+	}
 
-		br {
-			display: block;
-		}
+	br {
+		display: block;
+	}
 
-		div {
-			padding: 0;
-			display: block;
-			margin: auto;
-		}
+	div {
+		padding: 0;
+		display: block;
+		margin: auto;
+	}
 
-		section {
-			text-decoration: none;
-		}
+	section {
+		text-decoration: none;
+	}
 
-		.container,
-		.txtInfo {
-			max-width: 560px;
-		}
+	.container,
+	.txtInfo {
+		max-width: 560px;
+	}
 
-		h1 {
-			quotes: none;
-			font-size: 145pt;
-			line-height: 1;
-			color: #fff;
-
-			em {
-				display: block;
-				color: $orange;
-				font-weight: normal;
-			}
-		}
-
-		h2 {
-			font-size: 135pt;
-			line-height: 0.8;
-			text-align: center;
-		}
-
-		h3 {
-			font-size: 80pt;
-			line-height: 0.8;
-		}
-
-		h4 {
-			font-size: 23pt;
-			line-height: 1;
-		}
-
-		h1,
-		h2,
-		h3,
-		h4 {
-			margin: 0 auto;
-			text-transform: uppercase;
-			display: block;
-			font-family: $f_title;
-			font-weight: normal;
-		}
-
-		p {
-			border: none;
-			background-color: transparent;
-			display: block;
-			padding: 0;
-			font-family: $f_body;
-			margin: 0 auto;
-			text-align: center;
-		}
+	h1 {
+		quotes: none;
+		font-size: 145pt;
+		line-height: 1;
+		color: #fff;
 
 		em {
-			font-weight: bold;
-			display: inline;
-			font-style: normal;
+			display: block;
+			color: $orange;
+			font-weight: normal;
 		}
-
-		section {
-			position: relative;
-			z-index: 1;
-		}
-
-		.txtInfo {
-			&:nth-child(odd) {
-				text-align: right;
-			}
-
-			&:nth-child(even) {
-				text-align: left;
-			}
-
-			p,
-			h3 {
-				text-align: inherit;
-			}
-		}
-
-		@import "html/intro";
-		@import "html/newFriends";
-		@import "html/oldFriends";
-		@import "html/notFriends";
-		@import "html/footer";
 	}
+
+	h2 {
+		font-size: 135pt;
+		line-height: 0.8;
+		text-align: center;
+	}
+
+	h3 {
+		font-size: 80pt;
+		line-height: 0.8;
+	}
+
+	h4 {
+		font-size: 23pt;
+		line-height: 1;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		margin: 0 auto;
+		text-transform: uppercase;
+		display: block;
+		font-family: $f_title;
+		font-weight: normal;
+	}
+
+	p {
+		border: none;
+		background-color: transparent;
+		display: block;
+		padding: 0;
+		font-family: $f_body;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	em {
+		font-weight: bold;
+		display: inline;
+		font-style: normal;
+	}
+
+	section {
+		position: relative;
+		z-index: 1;
+	}
+
+	.txtInfo {
+		&:nth-child(odd) {
+			text-align: right;
+		}
+
+		&:nth-child(even) {
+			text-align: left;
+		}
+
+		p,
+		h3 {
+			text-align: inherit;
+		}
+	}
+
+	@import "html/intro";
+	@import "html/newFriends";
+	@import "html/oldFriends";
+	@import "html/notFriends";
+	@import "html/footer";
 }

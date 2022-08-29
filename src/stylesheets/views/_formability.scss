@@ -1,48 +1,38 @@
-main.section-formability-401 {
-  .nano-workarea {
-    background-image: linear-gradient(to right, #af5cf5, #c84ea4);
+#{mr-section(formability-401)} {
+  background-image: linear-gradient(to right, #af5cf5, #c84ea4);
+}
+
+#{mr-section(formability-404)} {
+  background-image: linear-gradient(to left, #2885dc, #0da57f);
+}
+
+#{mr-section(formability-500)} {
+  background-image: linear-gradient(to right, #f55c61, #c84ea4);
+}
+
+#{mr-section(formability-401)},
+#{mr-section(formability-404)},
+#{mr-section(formability-500)},
+#{mr-section(formability-demo)} {
+  font-family: "Nunito", Helvetica, Arial, Tahoma, sans-serif;
+  h1 {
+    text-transform: none;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 0;
+  }
+
+  h1,
+  p {
+    color: #fff;
   }
 }
 
-main.section-formability-404 {
-  .nano-workarea {
-    background-image: linear-gradient(to left, #2885dc, #0da57f);
-  }
-}
-
-main.section-formability-500 {
-  .nano-workarea {
-    background-image: linear-gradient(to right, #f55c61, #c84ea4);
-  }
-}
-
-main.section-formability-401,
-main.section-formability-404,
-main.section-formability-500,
-main.section-formability-demo {
-  .nano-workarea {
-    font-family: "Nunito", Helvetica, Arial, Tahoma, sans-serif;
-    h1 {
-      text-transform: none;
-      font-weight: 700;
-      font-size: 2rem;
-      letter-spacing: 0;
-    }
-
-    h1,
-    p {
-      color: #fff;
-    }
-  }
-}
-
-main.section-formability-401,
-main.section-formability-404,
-main.section-formability-500 {
-  .nano-workarea {
-    font-weight: normal;
-    text-align: center;
-  }
+#{mr-section(formability-401)},
+#{mr-section(formability-404)},
+#{mr-section(formability-500)} {
+  font-weight: normal;
+  text-align: center;
 
   .grid {
     display: flex;
@@ -118,214 +108,212 @@ main.section-formability-500 {
   }
 }
 
-main.section-formability-demo {
-  .nano-workarea {
-    > footer {
-      display: none;
+#{mr-section(formability-demo)} {
+  > footer {
+    display: none;
+  }
+
+  section {
+    height: 100vh;
+    padding-top: 65px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: linear-gradient(331deg, #cb407d, #5c4fc4);
+    background-size: 400% 400%;
+    animation: formability-background-chameleon 15s ease infinite;
+
+    > .content {
+      text-align: center;
+      flex-basis: 100%;
+      align-self: center;
+      color: #fff;
+      margin-bottom: 50px;
+
+      h1 {
+        font-size: 60px;
+        margin: 0;
+      }
+
+      time {
+        font-size: 23px;
+        font-weight: 400;
+      }
     }
 
-    section {
-      height: 100vh;
-      padding-top: 65px;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      background: linear-gradient(331deg, #cb407d, #5c4fc4);
-      background-size: 400% 400%;
-      animation: formability-background-chameleon 15s ease infinite;
+    > figure {
+      flex-basis: 100%;
+      align-self: flex-end;
 
-      > .content {
-        text-align: center;
-        flex-basis: 100%;
-        align-self: center;
-        color: #fff;
-        margin-bottom: 50px;
-
-        h1 {
-          font-size: 60px;
-          margin: 0;
-        }
-
-        time {
-          font-size: 23px;
-          font-weight: 400;
-        }
-      }
-
-      > figure {
-        flex-basis: 100%;
-        align-self: flex-end;
-
-        .hq {
-          z-index: 1;
-          bottom: 0;
-          position: relative;
-          pointer-events: none;
-          width: 760px;
-          margin: -80px auto 0;
-          max-width: 100%;
-          font-size: 0;
-
-          .light {
-            width: 53px;
-            height: 258px;
-            position: absolute;
-            top: 159px;
-            left: 233px;
-            transform: rotateZ(-3deg);
-
-            &:before,
-            &:after {
-              content: "";
-              display: block;
-              position: absolute;
-              background-color: rgba(255, 200, 0, 0.95);
-              border-radius: 13px;
-              filter: blur(4px);
-              opacity: 0;
-              pointer-events: all;
-              transition: opacity 800ms ease-out;
-              transform: rotate(-4deg);
-            }
-
-            &:before {
-              width: 26px;
-              height: 144px;
-              top: 6px;
-              left: 13px;
-              transform: rotateZ(-2deg);
-            }
-
-            &:after {
-              width: 26px;
-              height: 41px;
-              top: 210px;
-              left: 12px;
-            }
-
-            &:hover {
-              &:before,
-              &:after {
-                opacity: 1;
-              }
-            }
-          }
-
-          .arm {
-            position: relative;
-            top: 33px;
-            left: 242px;
-            width: 60px;
-            transform-origin: 83% 60%;
-            pointer-events: all;
-            animation: formability-arm-bone-1 10s ease-in-out infinite;
-
-            > .anthena {
-              animation: formability-arm-bone-2 10s ease-in-out infinite;
-            }
-
-            &,
-            & > .anthena {
-              transform: rotateZ(0deg);
-              animation-delay: 30s;
-            }
-          }
-
-          .anthena {
-            position: absolute;
-            top: -53px;
-            left: -83px;
-            width: 100px;
-            transform-origin: 100% 60%;
-          }
-        }
-      }
-
-      > .clouds {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
+      .hq {
+        z-index: 1;
         bottom: 0;
-        overflow: hidden;
+        position: relative;
+        pointer-events: none;
+        width: 760px;
+        margin: -80px auto 0;
+        max-width: 100%;
+        font-size: 0;
 
-        .cloud {
+        .light {
+          width: 53px;
+          height: 258px;
           position: absolute;
-          animation: formability-x-translation linear infinite;
-          left: -200px;
-          opacity: 1;
-          transition: all ease-in-out 400ms;
-          transform-origin: 50% 50%;
-          filter: brightness(1.2);
-          transform: rotate(0) scale(0.8);
+          top: 159px;
+          left: 233px;
+          transform: rotateZ(-3deg);
 
-          img {
-            width: 100%;
+          &:before,
+          &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            background-color: rgba(255, 200, 0, 0.95);
+            border-radius: 13px;
+            filter: blur(4px);
+            opacity: 0;
+            pointer-events: all;
+            transition: opacity 800ms ease-out;
+            transform: rotate(-4deg);
           }
 
-          @media (max-width: 840px) {
-            display: none;
+          &:before {
+            width: 26px;
+            height: 144px;
+            top: 6px;
+            left: 13px;
+            transform: rotateZ(-2deg);
+          }
+
+          &:after {
+            width: 26px;
+            height: 41px;
+            top: 210px;
+            left: 12px;
           }
 
           &:hover {
-            opacity: 0.95;
-          }
-
-          &.c02,
-          &.c03 {
-            z-index: 2;
-            &:hover {
-              transform: rotate(-5deg) scale(0.9);
+            &:before,
+            &:after {
+              opacity: 1;
             }
           }
+        }
 
-          &.c01,
-          &.c05,
-          &.c06,
-          &.c04 {
-            &:hover {
-              transform: rotate(5deg) scale(0.9);
-            }
-          }
+        .arm {
+          position: relative;
+          top: 33px;
+          left: 242px;
+          width: 60px;
+          transform-origin: 83% 60%;
+          pointer-events: all;
+          animation: formability-arm-bone-1 10s ease-in-out infinite;
 
-          // small clouds
-          &.c01 {
-            width: 85px;
-            animation-duration: 50s;
-            bottom: 20%;
-          }
-          &.c05 {
-            width: 100px;
-            animation-duration: 52s;
-            animation-delay: 5s;
-            bottom: 15%;
-          }
-          &.c04 {
-            width: 105px;
-            animation-duration: 54s;
-            animation-delay: 10s;
-            bottom: 10%;
-          }
-          &.c06 {
-            width: 90px;
-            animation-duration: 56s;
-            animation-delay: 15s;
-            bottom: 25%;
+          > .anthena {
+            animation: formability-arm-bone-2 10s ease-in-out infinite;
           }
 
-          //big clouds
-          &.c02 {
-            width: 140px;
-            animation-duration: 20s;
-            animation-delay: 2s;
-            bottom: 50%;
+          &,
+          & > .anthena {
+            transform: rotateZ(0deg);
+            animation-delay: 30s;
           }
-          &.c03 {
-            width: 130px;
-            animation-duration: 20s;
-            animation-delay: 17s;
-            bottom: 70%;
+        }
+
+        .anthena {
+          position: absolute;
+          top: -53px;
+          left: -83px;
+          width: 100px;
+          transform-origin: 100% 60%;
+        }
+      }
+    }
+
+    > .clouds {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      overflow: hidden;
+
+      .cloud {
+        position: absolute;
+        animation: formability-x-translation linear infinite;
+        left: -200px;
+        opacity: 1;
+        transition: all ease-in-out 400ms;
+        transform-origin: 50% 50%;
+        filter: brightness(1.2);
+        transform: rotate(0) scale(0.8);
+
+        img {
+          width: 100%;
+        }
+
+        @media (max-width: 840px) {
+          display: none;
+        }
+
+        &:hover {
+          opacity: 0.95;
+        }
+
+        &.c02,
+        &.c03 {
+          z-index: 2;
+          &:hover {
+            transform: rotate(-5deg) scale(0.9);
           }
+        }
+
+        &.c01,
+        &.c05,
+        &.c06,
+        &.c04 {
+          &:hover {
+            transform: rotate(5deg) scale(0.9);
+          }
+        }
+
+        // small clouds
+        &.c01 {
+          width: 85px;
+          animation-duration: 50s;
+          bottom: 20%;
+        }
+        &.c05 {
+          width: 100px;
+          animation-duration: 52s;
+          animation-delay: 5s;
+          bottom: 15%;
+        }
+        &.c04 {
+          width: 105px;
+          animation-duration: 54s;
+          animation-delay: 10s;
+          bottom: 10%;
+        }
+        &.c06 {
+          width: 90px;
+          animation-duration: 56s;
+          animation-delay: 15s;
+          bottom: 25%;
+        }
+
+        //big clouds
+        &.c02 {
+          width: 140px;
+          animation-duration: 20s;
+          animation-delay: 2s;
+          bottom: 50%;
+        }
+        &.c03 {
+          width: 130px;
+          animation-duration: 20s;
+          animation-delay: 17s;
+          bottom: 70%;
         }
       }
     }

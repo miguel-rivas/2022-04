@@ -1,6 +1,6 @@
 @use "sass:math";
 
-main.section-house {
+#{mr-section(house)} {
   $width: 400px;
   $height: 200px;
   $door-width: 140px;
@@ -20,14 +20,12 @@ main.section-house {
   $fence-spacing: 4px;
   $pieces: 20;
 
-  .nano-workarea {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-    background: #2a374c;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: #2a374c;
 
   .house {
     position: relative;
@@ -50,7 +48,8 @@ main.section-house {
         background-color: #462323;
       }
       > .right {
-        transform: translateZ(#{math.div(-$chimney-width, 2)}) translateX(#{math.div(-$chimney-width, 2)}) rotateY(90deg);
+        transform: translateZ(#{math.div(-$chimney-width, 2)}) translateX(#{math.div(-$chimney-width, 2)})
+          rotateY(90deg);
       }
       > .left {
         transform: translateZ(#{math.div(-$chimney-width, 2)}) translateX(#{math.div($chimney-width, 2)}) rotateY(90deg);

@@ -1,269 +1,267 @@
-.section-evolution {
-  .nano-workarea {
-    @include nn-org-layers(
-      (
-        //----Bottom
-        ".svg-border",
-        "#bk",
-        ".significante.back",
-        ".mountain",
-        "h1, h2, h3, p",
-        ".significante.front",
-        "nav",
-        "#texture",
-        //----Front
-      )
-    );
+#{mr-section(evolution)} {
+  @include nn-org-layers(
+    (
+      //----Bottom
+      ".svg-border",
+      "#bk",
+      ".significante.back",
+      ".mountain",
+      "h1, h2, h3, p",
+      ".significante.front",
+      "nav",
+      "#texture",
+      //----Front
+    )
+  );
 
-    $f_amatic: "Amatic SC", helvetica, sans-serif, verdana;
-    $alizarin: #fc4e53;
-    $alizarin2: #bd3b3e;
-    $chartreuse: #d6de23;
-    $chartreuse2: #a3cd39;
-    $aqua: #21e097;
-    $aqua2: #11c766;
-    $mustard: #edcc0a;
-    $brown: #764623;
-    $blue: #4369bb;
-    $purple: #401652;
+  $f_amatic: "Amatic SC", helvetica, sans-serif, verdana;
+  $alizarin: #fc4e53;
+  $alizarin2: #bd3b3e;
+  $chartreuse: #d6de23;
+  $chartreuse2: #a3cd39;
+  $aqua: #21e097;
+  $aqua2: #11c766;
+  $mustard: #edcc0a;
+  $brown: #764623;
+  $blue: #4369bb;
+  $purple: #401652;
 
-    width: 20000px;
-    height: 100vh;
+  width: 20000px;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-color: #222;
+  color: #fff;
+  font-family: $f_amatic;
+  text-align: center;
+
+  nn-scroll-area {
+    scroll-behavior: smooth;
+  }
+
+  nn-scroll-area,
+  .evolution {
+    height: 100%;
+    background-color: #222;
+  }
+
+  #bk {
+    position: absolute;
+    pointer-events: none;
+    @include position(0, 0, 0, 0);
+    @include size(100%, x, 100%, x);
+    background: url(get-zapp("img/evolution/03_bk.png")) bottom repeat-x;
+  }
+
+  #texture {
+    position: absolute;
+    pointer-events: none;
+    @include position(0, 0, 0, 0);
+    @include size(100%, x, 100%, x);
+    opacity: 0.2;
+    background: url(get-zapp("img/extras/paper.jpg")) bottom repeat;
+    filter: alpha(opacity=20);
+  }
+
+  ::selection {
+    background-color: transparent;
+    color: #f90;
+  }
+
+  article {
+    font-size: 40pt;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: inline-flex;
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+    vertical-align: top;
+    flex-wrap: wrap;
+    padding: 0 2rem;
+  }
+
+  a,
+  a:link,
+  a:hover,
+  a:visited,
+  a:active {
+    text-decoration: none;
+    color: #fff;
+    border: none;
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 207pt;
+    display: block;
+    position: absolute;
+    width: 100%;
+    color: #fff;
+  }
+
+  h1,
+  h3 {
+    font-size: 60pt;
+    display: block;
+    margin: 0;
+  }
+
+  h4 {
+    font-size: 35pt;
+    display: block;
+    margin: 0 0 12px 0;
+  }
+
+  .significante {
+    position: absolute;
+    left: 20%;
     margin: 0;
     padding: 0;
-    position: relative;
-    background-color: #222;
+  }
+
+  nav {
+    font-size: 20pt;
+    position: fixed;
+    width: 100%;
+    bottom: 1rem;
+    cursor: default;
     color: #fff;
-    font-family: $f_amatic;
-    text-align: center;
 
-    nn-scroll-area {
-      scroll-behavior: smooth;
-    }
-
-    nn-scroll-area,
-    .evolution {
-      height: 100%;
-      background-color: #222;
-    }
-
-    #bk {
-      position: absolute;
-      pointer-events: none;
-      @include position(0, 0, 0, 0);
-      @include size(100%, x, 100%, x);
-      background: url(get-zapp("img/evolution/03_bk.png")) bottom repeat-x;
-    }
-
-    #texture {
-      position: absolute;
-      pointer-events: none;
-      @include position(0, 0, 0, 0);
-      @include size(100%, x, 100%, x);
-      opacity: 0.2;
-      background: url(get-zapp("img/extras/paper.jpg")) bottom repeat;
-      filter: alpha(opacity=20);
-    }
-
-    ::selection {
-      background-color: transparent;
-      color: #f90;
-    }
-
-    article {
-      font-size: 40pt;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      display: inline-flex;
-      width: 100vw;
-      height: 100%;
-      overflow: hidden;
-      vertical-align: top;
-      flex-wrap: wrap;
-      padding: 0 2rem;
-    }
-
-    a,
-    a:link,
-    a:hover,
-    a:visited,
-    a:active {
-      text-decoration: none;
-      color: #fff;
-      border: none;
-      &:focus {
-        border: none;
-        outline: none;
+    a {
+      cursor: pointer;
+      transition: 100ms;
+      &:hover {
+        font-size: 25pt;
       }
     }
+  }
 
-    p {
-      margin: 0;
-    }
+  .y60 {
+    background-color: $brown;
+  }
+  .y80 {
+    background-color: $blue;
+  }
+  .y90 {
+    background-color: $purple;
+  }
+  .y2k {
+    background-color: $aqua2;
+  }
+  .y2k1 {
+    background-color: $alizarin;
+  }
 
-    h2 {
-      font-size: 207pt;
-      display: block;
-      position: absolute;
-      width: 100%;
-      color: #fff;
-    }
+  .svg-border {
+    position: absolute;
+    display: block;
+    width: 170px;
+    height: 120%;
+    left: -10px;
+    transform-origin: 100% 50%;
+    transform: skewY(0deg) translateY(0px) scaleY(1.1);
+    animation: evolution-dancing-corners 2s alternate infinite;
+  }
 
-    h1,
-    h3 {
-      font-size: 60pt;
-      display: block;
-      margin: 0;
-    }
+  .beginning {
+    &.y60 {
+      .svg-border {
+        background-color: #222;
 
-    h4 {
-      font-size: 35pt;
-      display: block;
-      margin: 0 0 12px 0;
-    }
-
-    .significante {
-      position: absolute;
-      left: 20%;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav {
-      font-size: 20pt;
-      position: fixed;
-      width: 100%;
-      bottom: 1rem;
-      cursor: default;
-      color: #fff;
-
-      a {
-        cursor: pointer;
-        transition: 100ms;
-        &:hover {
-          font-size: 25pt;
+        polygon {
+          fill: $brown;
         }
       }
     }
+    &.y80 {
+      .svg-border {
+        background-color: $brown;
 
-    .y60 {
-      background-color: $brown;
-    }
-    .y80 {
-      background-color: $blue;
-    }
-    .y90 {
-      background-color: $purple;
-    }
-    .y2k {
-      background-color: $aqua2;
-    }
-    .y2k1 {
-      background-color: $alizarin;
-    }
-
-    .svg-border {
-      position: absolute;
-      display: block;
-      width: 170px;
-      height: 120%;
-      left: -10px;
-      transform-origin: 100% 50%;
-      transform: skewY(0deg) translateY(0px) scaleY(1.1);
-      animation: evolution-dancing-corners 2s alternate infinite;
-    }
-
-    .beginning {
-      &.y60 {
-        .svg-border {
-          background-color: #222;
-
-          polygon {
-            fill: $brown;
-          }
-        }
-      }
-      &.y80 {
-        .svg-border {
-          background-color: $brown;
-
-          polygon {
-            fill: $blue;
-          }
-        }
-      }
-      &.y90 {
-        .svg-border {
-          background-color: $blue;
-
-          polygon {
-            fill: $purple;
-          }
-        }
-      }
-      &.y2k {
-        .svg-border {
-          background-color: $purple;
-
-          polygon {
-            fill: $aqua2;
-          }
-        }
-      }
-      &.y2k1 {
-        .svg-border {
-          background-color: $aqua2;
-
-          polygon {
-            fill: $alizarin;
-          }
-        }
-      }
-      &.smoke {
-        .svg-border {
-          background-color: $alizarin;
-
-          polygon {
-            fill: #222;
-          }
+        polygon {
+          fill: $blue;
         }
       }
     }
+    &.y90 {
+      .svg-border {
+        background-color: $blue;
 
-    .mountain {
-      animation: evolution-dancing-mountain 1500ms alternate infinite;
-      transform-origin: 100% 0;
-      bottom: -50px;
-      height: 50vw;
-      position: absolute;
+        polygon {
+          fill: $purple;
+        }
+      }
     }
+    &.y2k {
+      .svg-border {
+        background-color: $purple;
 
-    .header.y60 .mountain {
-      polygon {
-        fill: darken($brown, 13%);
+        polygon {
+          fill: $aqua2;
+        }
       }
     }
-    .header.y80 .mountain {
-      polygon {
-        fill: darken($blue, 30%);
+    &.y2k1 {
+      .svg-border {
+        background-color: $aqua2;
+
+        polygon {
+          fill: $alizarin;
+        }
       }
     }
-    .header.y90 .mountain {
-      polygon {
-        fill: darken($purple, 13%);
+    &.smoke {
+      .svg-border {
+        background-color: $alizarin;
+
+        polygon {
+          fill: #222;
+        }
       }
     }
-    .header.y2k .mountain {
-      polygon {
-        fill: darken($aqua2, 30%);
-      }
+  }
+
+  .mountain {
+    animation: evolution-dancing-mountain 1500ms alternate infinite;
+    transform-origin: 100% 0;
+    bottom: -50px;
+    height: 50vw;
+    position: absolute;
+  }
+
+  .header.y60 .mountain {
+    polygon {
+      fill: darken($brown, 13%);
     }
-    .header.y2k1 .mountain {
-      polygon {
-        fill: darken($alizarin, 30%);
-      }
+  }
+  .header.y80 .mountain {
+    polygon {
+      fill: darken($blue, 30%);
+    }
+  }
+  .header.y90 .mountain {
+    polygon {
+      fill: darken($purple, 13%);
+    }
+  }
+  .header.y2k .mountain {
+    polygon {
+      fill: darken($aqua2, 30%);
+    }
+  }
+  .header.y2k1 .mountain {
+    polygon {
+      fill: darken($alizarin, 30%);
     }
   }
 }

@@ -1,23 +1,6 @@
 @use "sass:math";
 
-main.section-window {
-  @mixin size($w, $mW, $h, $mH) {
-    @if ($w != x) {
-      @if ($mW == x) {
-        width: $w;
-      } @else {
-        #{$mW}-width: $w;
-      }
-    }
-    @if ($h != x) {
-      @if ($mH == x) {
-        height: $h;
-      } @else {
-        #{$mH}-height: $h;
-      }
-    }
-  }
-
+#{mr-section(window)} {
   $zValue: 10px;
 
   $doorColor: #04aaea;
@@ -37,12 +20,10 @@ main.section-window {
   $flowerpotDepth: 50px;
   $flowerpotColor: #9d5f31;
 
-  .nano-workarea {
-    background: #222;
+  background: #222;
 
-    * {
-      box-sizing: content-box;
-    }
+  * {
+    box-sizing: content-box;
   }
 
   #background {

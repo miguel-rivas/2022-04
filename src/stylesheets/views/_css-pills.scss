@@ -1,12 +1,10 @@
-main.section-pills {
-  .nano-workarea {
-    background: #b28256;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-  }
+#{mr-section(pills)} {
+  background: #b28256;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
 
   .box {
     width: 200px;

@@ -13,14 +13,12 @@ $largeScreen: 1400px;
 $MediumScreen: 1120px;
 $SmallScreen: 800px;
 
-main.section-2018-home,
-main.section-2018-presidente,
-main.section-2018-apap,
-main.section-2018-drlogic,
-main.section-2018-bpr {
-  .nano-workarea {
-    background: #fff;
-  }
+#{mr-section(2018-home)},
+#{mr-section(2018-presidente)},
+#{mr-section(2018-apap)},
+#{mr-section(2018-drlogic)},
+#{mr-section(2018-bpr)} {
+  background: #fff;
 
   h1,
   h2,
@@ -88,8 +86,8 @@ main.section-2018-bpr {
   @import "2018/gallery";
 }
 
-  @import "2018/home";
-  @import "2018/apap";
-  @import "2018/bpr";
-  @import "2018/drlogic";
-  @import "2018/presidente";
+@import "2018/home";
+@import "2018/apap";
+@import "2018/bpr";
+@import "2018/drlogic";
+@import "2018/presidente";

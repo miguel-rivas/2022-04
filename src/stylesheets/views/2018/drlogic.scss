@@ -1,4 +1,4 @@
-.section-2018-drlogic {
+#{mr-section(2018-drlogic)} {
 	header {
 		background: #3961d3 url(get-zapp("img/2018/headers/drlogic.webp")) bottom no-repeat;
 	}
@@ -106,7 +106,7 @@
 			font-size: 10pt;
 			padding: 85px 5px 85px;
 			position: relative;
-			
+
 			p {
 				line-height: 2;
 			}

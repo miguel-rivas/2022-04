@@ -10,8 +10,7 @@
   font-display: block;
 }
 
-main.section-mineros {
-  .nano-workarea {
+#{mr-section(mineros)} {
     $yellowBrand: #f4d242;
     $buttonBackground: $yellowBrand;
     $buttonTextColor: #0168b3;
@@ -525,7 +524,7 @@ main.section-mineros {
         }
       }
     }
-  }
+  
 
   // ------------ icomoon
 

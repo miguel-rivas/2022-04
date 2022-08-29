@@ -1,14 +1,12 @@
-main.section-wheel {
-  .nano-workarea {
-    nn-scroll-area {
-      height: 100%;
-      display: flex;
-      padding: 1rem;
-      > div {
-        margin: auto;
-        display: block;
-        max-width: 100%;
-      }
+#{mr-section(wheel)} {
+  nn-scroll-area {
+    height: 100%;
+    display: flex;
+    padding: 1rem;
+    > div {
+      margin: auto;
+      display: block;
+      max-width: 100%;
     }
   }
 }

@@ -1,33 +1,29 @@
-main.section-popkern-icons {
-  .nano-workarea {
-    .fall-back {
-      nn-icon {
-        font-family: Verdana, Geneva, Tahoma, sans-serif !important;
-      }
+#{mr-section(popkern-icons)} {
+  .fall-back {
+    nn-icon {
+      font-family: Verdana, Geneva, Tahoma, sans-serif !important;
     }
   }
 }
 
-main.section-popkern-ruler {
-  .nano-workarea {
-    nn-scroll-area {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      flex-wrap: wrap;
-      flex-direction: column;
-    }
-    h2,
-    h3 {
-      font-size: 3rem;
-      margin: 0;
-      color: hsl(0, 0, 50%);
-      font-weight: 300;
-      span {
-        font-weight: 600;
-        color: #edcc0a;
-      }
+#{mr-section(popkern-ruler)} {
+  nn-scroll-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  h2,
+  h3 {
+    font-size: 3rem;
+    margin: 0;
+    color: hsl(0, 0, 50%);
+    font-weight: 300;
+    span {
+      font-weight: 600;
+      color: #edcc0a;
     }
   }
 }
