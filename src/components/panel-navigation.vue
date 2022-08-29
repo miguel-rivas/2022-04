@@ -120,6 +120,7 @@ export default Vue.extend({
           "popkern-icons",
           "popkern-colors",
           "popkern-links",
+          "popkern-ruler",
         ],
       },
       {

@@ -10,7 +10,7 @@ nn-scroll-area(color="royal-purple")
               :style="`background-color: ${color.hex}`"
             )
             nn-column(size="100%")
-              p.nn-label.nn-gold-tips {{ color.titleCase }}
+              p.nn-label.nn-gravel {{ color.titleCase }}
 
               nn-row
                 nn-column(size="1/2")
@@ -30,13 +30,13 @@ nn-scroll-area(color="royal-purple")
                 nn-column(size="1/2")
                   p.nn-label.nn-gravel {{ color.lightness.toFixed(2) }}
 
-              p.nn-label.nn-denim Background Contrast
+              p.nn-label.nn-charcoal Background Contrast
               nn-row
                 template(v-for="(bk, bkIndex) in bkColors")
                   nn-column(size="35", :key="`bkIndex1${bkIndex}`")
                     .nn-label(:style="setBallBk(bk.hex)")
                   nn-column(size="70%-35", :key="`bkIndex2${bkIndex}`")
-                    p.nn-label.nn-charcoal {{ bk.label }}
+                    p.nn-label.nn-gravel {{ bk.label }}
                   nn-column(size="30%", :key="`bkIndex3${bkIndex}`")
                     p.nn-label(
                       :class="checkContrast(color.hex, bk.hex) >= 7 ? 'nn-shamrock' : 'nn-persian-red'",

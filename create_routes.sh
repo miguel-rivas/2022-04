@@ -70,6 +70,8 @@ files=(
   "portfolio2017"
   "popkern-icons"
   "popkern-colors"
+  "popkern-links"
+  "popkern-ruler"
   "presidente-carnaval-filter"
   "presidente-carnaval-home"
   "presidente-verano-filter"

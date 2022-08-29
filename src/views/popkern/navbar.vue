@@ -22,6 +22,10 @@ export default Vue.extend({
         route: "popkern-links",
         caption: "Resources",
       },
+      {
+        route: "popkern-ruler",
+        caption: "Ruler",
+      },
     ],
   }),
 });
