@@ -8,7 +8,7 @@ nn-scroll-area(color="royal-purple")
         @click="toggleValue('fallBackIcons')",
         text="Test Fallback Icons",
         color="gold-tips"
-        :active="fallBackIcon"
+        :active="fallBackIcons"
       )
 </template>
 

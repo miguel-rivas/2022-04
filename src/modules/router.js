@@ -23,6 +23,7 @@ import IconsWorkareaView from '../views/popkern/icons-workarea.vue';
 import IconsPanelView from '../views/popkern/icons-panel.vue';
 import PopkernHomeView from '../views/popkern/home.vue';
 import PopkernNavbar from '../views/popkern/navbar.vue';
+import PopkernLinksView from '../views/popkern/links.vue';
 
 import ProjectsWorkareaView from '@/views/2022/projects-workarea.vue';
 import StatisticsWorkareaView from '@/views/2022/statistics-workarea.vue';
@@ -212,6 +213,14 @@ const routes = [
     path: '/popkern-home',
     components: {
       workarea: PopkernHomeView,
+      navbar: PopkernNavbar,
+    },
+  },
+  {
+    name: 'popkern-links',
+    path: '/popkern-links',
+    components: {
+      workarea: PopkernLinksView,
       navbar: PopkernNavbar,
     },
   },

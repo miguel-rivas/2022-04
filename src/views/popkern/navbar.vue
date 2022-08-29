@@ -18,6 +18,10 @@ export default Vue.extend({
         route: "popkern-colors",
         caption: "Colors",
       },
+      {
+        route: "popkern-links",
+        caption: "Links",
+      },
     ],
   }),
 });

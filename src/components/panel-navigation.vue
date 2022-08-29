@@ -34,14 +34,14 @@
             </template>
           </template>
           <btn
-          color="gold-tips"
-          size="md"
-          mode="nav"
-          title="Toggle theme button"
-          :glyph="theme ? 'sun-o' : 'moon-o'"
-          @click="toggleValue('theme'), playSound()"
-          :active="theme"
-        />
+            color="gold-tips"
+            size="md"
+            mode="nav"
+            title="Toggle theme button"
+            :glyph="theme ? 'sun-o' : 'moon-o'"
+            @click="toggleValue('theme'), playSound()"
+            :active="theme"
+          />
         </nn-column>
       </nn-row>
     </nn-scroll-area>
@@ -119,6 +119,7 @@ export default Vue.extend({
           // "popkern-home",
           "popkern-icons",
           "popkern-colors",
+          "popkern-links",
         ],
       },
       {
