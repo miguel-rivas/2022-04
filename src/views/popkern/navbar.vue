@@ -20,7 +20,7 @@ export default Vue.extend({
       },
       {
         route: "popkern-links",
-        caption: "Links",
+        caption: "Resources",
       },
     ],
   }),
