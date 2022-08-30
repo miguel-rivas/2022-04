@@ -1,53 +1,51 @@
-main.section-drlogic-home,
-main.section-drlogic-contact,
-main.section-drlogic-team,
-main.section-drlogic-support,
-main.section-drlogic-services,
-main.section-drlogic-testimonials {
-  .mr-workarea {
-    @import "mini-bootstrap";
-    @import "base/variables";
-    @import "base/typography";
-    @import "mixins/main";
-    @import "main/main";
-    @import "main/footer";
+#{mr-section(drlogic-home)},
+#{mr-section(drlogic-contact)},
+#{mr-section(drlogic-team)},
+#{mr-section(drlogic-support)},
+#{mr-section(drlogic-services)},
+#{mr-section(drlogic-testimonials)} {
+  @import "mini-bootstrap";
+  @import "base/variables";
+  @import "base/typography";
+  @import "mixins/main";
+  @import "main/main";
+  @import "main/footer";
 
-    margin: 0;
-    padding: 0;
-    font-family: $base-font-family;
-    letter-spacing: 0.8pt;
-    background-color: #fff;
-    color: #333;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: $base-font-family;
+  letter-spacing: 0.8pt;
+  background-color: #fff;
+  color: #333;
 }
 
-main.section-drlogic-home .mr-workarea {
+#{mr-section(drlogic-home)} {
   @import "base/variables";
   @import "sections/home";
 }
 
-main.section-drlogic-contact .mr-workarea {
+#{mr-section(drlogic-contact)} {
   @import "base/variables";
   @import "sections/contact";
 }
 
-main.section-drlogic-team .mr-workarea {
+#{mr-section(drlogic-team)} {
   @import "base/variables";
   @import "mixins/about";
   @import "sections/about";
 }
 
-main.section-drlogic-support .mr-workarea {
+#{mr-section(drlogic-support)} {
   @import "base/variables";
   @import "sections/services";
 }
 
-main.section-drlogic-services .mr-workarea {
+#{mr-section(drlogic-services)} {
   @import "base/variables";
   @import "sections/other-services";
 }
 
-main.section-drlogic-testimonials .mr-workarea {
+#{mr-section(drlogic-testimonials)} {
   @import "base/variables";
   @import "mixins/testimonials";
   @import "sections/testimonials";

@@ -1,14 +1,12 @@
-main.section-dollhouse {
-  &.nn-dark {
-    .mr-workarea {
-      background: linear-gradient(169deg, #42204c 0%, #15121c 100%);
-    }
-  }
-  &.nn-light {
-    .mr-workarea {
-      background: linear-gradient(169deg, #7a5383 0%, #312032 100%);
-    }
-  }
+#{mr-section("dollhouse.nn-dark")} {
+  background: linear-gradient(169deg, #42204c 0%, #15121c 100%);
+}
+
+#{mr-section("dollhouse.nn-light")} {
+  background: linear-gradient(169deg, #7a5383 0%, #312032 100%);
+}
+
+#{mr-section(dollhouse)} {
   .map {
     background-image: url(get-zapp("img/extras/stars.svg"));
     background-repeat: repeat;

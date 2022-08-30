@@ -1,331 +1,329 @@
-.section-presidente-destapa {
-  .mr-workarea {
-    background: url(get-zapp("img/presidente/destapa/pt_05.png")) top left repeat;
+#{mr-section(presidente-destapa)} {
+  background: url(get-zapp("img/presidente/destapa/pt_05.png")) top left repeat;
 
-    a {
-      text-decoration: none;
-      display: inline-block;
-      vertical-align: middle;
-    }
+  a {
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+  }
 
-    .logo {
-      position: static;
-      width: 225px;
-      height: 220px;
-      margin: 60px auto 20px auto;
-    }
+  .logo {
+    position: static;
+    width: 225px;
+    height: 220px;
+    margin: 60px auto 20px auto;
+  }
 
-    .btn {
-      background: none;
-      position: scroll;
-      width: 140px;
-      border: 3px solid #03512f;
-      -moz-border-radius: 3px;
-      border-radius: 3px;
-      color: #03512f;
-      text-align: center;
-      font-size: 12pt;
-      margin: 9px auto auto auto;
-      padding: 10px;
-      cursor: pointer;
-    }
+  .btn {
+    background: none;
+    position: scroll;
+    width: 140px;
+    border: 3px solid #03512f;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #03512f;
+    text-align: center;
+    font-size: 12pt;
+    margin: 9px auto auto auto;
+    padding: 10px;
+    cursor: pointer;
+  }
 
-    .btn:hover {
-      background-color: #03512f;
-      color: #fff;
-    }
+  .btn:hover {
+    background-color: #03512f;
+    color: #fff;
+  }
 
-    .btn_n01 {
-      font-size: 9pt;
-      font-weight: 700;
-      border: none;
-    }
+  .btn_n01 {
+    font-size: 9pt;
+    font-weight: 700;
+    border: none;
+  }
 
-    .btn_n02 {
-      font-size: 9pt;
-      font-weight: 700;
-    }
+  .btn_n02 {
+    font-size: 9pt;
+    font-weight: 700;
+  }
 
-    .btn2 {
-      background: none;
-      position: scroll;
-      width: 140px;
-      border: 3px solid #fff;
-      -moz-border-radius: 3px;
-      border-radius: 3px;
-      color: #fff;
-      text-align: center;
-      font-size: 10pt;
-      margin: 9px auto auto auto;
-      padding: 10px;
-      cursor: pointer;
-    }
+  .btn2 {
+    background: none;
+    position: scroll;
+    width: 140px;
+    border: 3px solid #fff;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #fff;
+    text-align: center;
+    font-size: 10pt;
+    margin: 9px auto auto auto;
+    padding: 10px;
+    cursor: pointer;
+  }
 
-    .btn2:hover {
-      border: 3px solid #f9ed3b;
-      color: #f9ed3b;
-    }
+  .btn2:hover {
+    border: 3px solid #f9ed3b;
+    color: #f9ed3b;
+  }
 
-    .btn3 {
-      background: none;
-      position: scroll;
-      width: 275px;
-      -moz-border-radius: 3px;
-      border-radius: 3px;
-      border: none;
-      color: #fff;
-      text-align: center;
-      font-size: 8pt;
-      margin: 9px auto auto auto;
-      cursor: pointer;
-    }
+  .btn3 {
+    background: none;
+    position: scroll;
+    width: 275px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-size: 8pt;
+    margin: 9px auto auto auto;
+    cursor: pointer;
+  }
 
-    .btn3:hover {
-      color: #f9ed3b;
-    }
+  .btn3:hover {
+    color: #f9ed3b;
+  }
 
-    .txt {
-      background: #03512f;
-      position: scroll;
-      width: 200px;
-      height: 30px;
-      border: 3px solid #03512f;
-      -moz-border-radius: 3px;
-      border-radius: 3px;
-      color: #fff;
-      text-align: center;
-      font-size: 10pt;
-    }
+  .txt {
+    background: #03512f;
+    position: scroll;
+    width: 200px;
+    height: 30px;
+    border: 3px solid #03512f;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #fff;
+    text-align: center;
+    font-size: 10pt;
+  }
 
-    .txt2 {
-      background: #fff;
-      position: scroll;
-      width: 170px;
-      height: 42px;
-      border: 3px solid #03512f;
-      -moz-border-radius: 3px;
-      border-radius: 3px;
-      color: #03512f;
-      text-align: center;
-      font-size: 10pt;
-      margin: 9px;
-    }
+  .txt2 {
+    background: #fff;
+    position: scroll;
+    width: 170px;
+    height: 42px;
+    border: 3px solid #03512f;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #03512f;
+    text-align: center;
+    font-size: 10pt;
+    margin: 9px;
+  }
 
-    .winCode {
-      background: #f9ed3b;
-      color: #000;
-      cursor: pointer;
-    }
+  .winCode {
+    background: #f9ed3b;
+    color: #000;
+    cursor: pointer;
+  }
 
-    .txt_head {
-      font-size: 12pt;
-      text-transform: uppercase;
-      font-weight: 700;
-      letter-spacing: 1pt;
-    }
+  .txt_head {
+    font-size: 12pt;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1pt;
+  }
 
-    .txt_head2 {
-      font-size: 18pt;
-      letter-spacing: 10pt;
-      font-weight: 400;
-    }
+  .txt_head2 {
+    font-size: 18pt;
+    letter-spacing: 10pt;
+    font-weight: 400;
+  }
 
-    .txt_head3 {
-      font-size: 12pt;
-      letter-spacing: 8.5pt;
-      font-weight: 400;
-    }
+  .txt_head3 {
+    font-size: 12pt;
+    letter-spacing: 8.5pt;
+    font-weight: 400;
+  }
 
-    .txt_sub {
-      font-size: 8pt;
-      text-transform: uppercase;
-      font-weight: 700;
-      letter-spacing: 1pt;
-    }
+  .txt_sub {
+    font-size: 8pt;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1pt;
+  }
 
-    #box_app {
-      background: url(get-zapp("img/presidente/destapa/bk_01.png")) top left no-repeat;
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      position: relative;
-      top: 0;
-      left: 0;
-      text-align: center;
-      z-index: 0;
-      margin: auto;
-      overflow: hidden;
-    }
+  #box_app {
+    background: url(get-zapp("img/presidente/destapa/bk_01.png")) top left no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 0;
+    margin: auto;
+    overflow: hidden;
+  }
 
-    .box {
-      width: 100%;
-      height: 100%;
-      color: #03512f;
-    }
+  .box {
+    width: 100%;
+    height: 100%;
+    color: #03512f;
+  }
 
-    .preview {
-      background: #ffc600;
-      width: 390px;
-      border: 15px solid #03512f;
-      -moz-border-radius: 25px;
-      border-radius: 25px;
-      color: #03512f;
-      text-align: center;
-      font-size: 30pt;
-      margin: 30px auto 10px auto;
-      padding: 15px;
-      text-transform: uppercase;
-      vertical-align: center;
-      font-weight: 700;
-    }
+  .preview {
+    background: #ffc600;
+    width: 390px;
+    border: 15px solid #03512f;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    color: #03512f;
+    text-align: center;
+    font-size: 30pt;
+    margin: 30px auto 10px auto;
+    padding: 15px;
+    text-transform: uppercase;
+    vertical-align: center;
+    font-weight: 700;
+  }
 
-    .al_box {
-      display: table-cell;
-    }
+  .al_box {
+    display: table-cell;
+  }
 
-    /* ------------------- Group Pop ------------------- */
+  /* ------------------- Group Pop ------------------- */
 
-    .pop {
-      color: #fff;
-      position: fixed;
-      background: url(get-zapp("img/presidente/destapa/pt_05.png")) repeat;
-      background-position: 0 0;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 3;
-      font-weight: 400;
-      font-size: 10pt;
-      letter-spacing: 1pt;
-      transform: background-position;
-      animation: presidente-wave-animation linear 5s infinite;
-    }
+  .pop {
+    color: #fff;
+    position: fixed;
+    background: url(get-zapp("img/presidente/destapa/pt_05.png")) repeat;
+    background-position: 0 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    font-weight: 400;
+    font-size: 10pt;
+    letter-spacing: 1pt;
+    transform: background-position;
+    animation: presidente-wave-animation linear 5s infinite;
+  }
 
-    .NDP {
-      display: none;
-    }
+  .NDP {
+    display: none;
+  }
 
-    #pt1,
-    #pt2 {
-      position: absolute;
-      width: 417px;
-      height: 524px;
-      background: url(get-zapp("img/presidente/destapa/pt_01.png")) center center no-repeat;
-      z-index: -1;
-      display: none;
-    }
+  #pt1,
+  #pt2 {
+    position: absolute;
+    width: 417px;
+    height: 524px;
+    background: url(get-zapp("img/presidente/destapa/pt_01.png")) center center no-repeat;
+    z-index: -1;
+    display: none;
+  }
 
-    #pt3,
-    #pt4 {
-      position: absolute;
-      width: 417px;
-      height: 524px;
-      background: url(get-zapp("img/presidente/destapa/pt_02.png")) center center no-repeat;
-      z-index: -1;
-      display: none;
-    }
+  #pt3,
+  #pt4 {
+    position: absolute;
+    width: 417px;
+    height: 524px;
+    background: url(get-zapp("img/presidente/destapa/pt_02.png")) center center no-repeat;
+    z-index: -1;
+    display: none;
+  }
 
-    /* ------------------- Box 01 ------------------- */
-    #pt1,
-    #pt2,
-    #pt3,
-    #pt4 {
-      transition: all ease 500ms;
-    }
+  /* ------------------- Box 01 ------------------- */
+  #pt1,
+  #pt2,
+  #pt3,
+  #pt4 {
+    transition: all ease 500ms;
+  }
 
-    #pt1 {
-      top: -250px;
-      left: 0;
-    }
-    #pt3 {
-      top: -250px;
-      right: 0;
-    }
-    #pt2 {
-      bottom: -220px;
-      right: -100px;
-    }
-    #pt4 {
-      bottom: -220px;
-      left: -100px;
-    }
+  #pt1 {
+    top: -250px;
+    left: 0;
+  }
+  #pt3 {
+    top: -250px;
+    right: 0;
+  }
+  #pt2 {
+    bottom: -220px;
+    right: -100px;
+  }
+  #pt4 {
+    bottom: -220px;
+    left: -100px;
+  }
 
-    /* ------------------- Box 06 ------------------- */
+  /* ------------------- Box 06 ------------------- */
 
-    #box_06 {
-      font-size: 8pt;
-    }
+  #box_06 {
+    font-size: 8pt;
+  }
 
-    #box_06 #btn_01 {
-      font-size: 10pt;
-      width: 194px;
-      padding: 0;
-      margin: 0;
-      margin-top: 14px;
-      height: 24px;
-    }
+  #box_06 #btn_01 {
+    font-size: 10pt;
+    width: 194px;
+    padding: 0;
+    margin: 0;
+    margin-top: 14px;
+    height: 24px;
+  }
 
-    /* ------------------- Box 07 ------------------- */
+  /* ------------------- Box 07 ------------------- */
 
-    #box_07 #btn_00 {
-      width: 20px;
-      padding: 2px;
-      margin: 0;
-    }
+  #box_07 #btn_00 {
+    width: 20px;
+    padding: 2px;
+    margin: 0;
+  }
 
-    #box_07 #fixSize {
-      text-align: center;
-      margin: auto;
-      height: 132px;
-      width: 500px;
-      overflow-y: auto;
-    }
+  #box_07 #fixSize {
+    text-align: center;
+    margin: auto;
+    height: 132px;
+    width: 500px;
+    overflow-y: auto;
+  }
 
-    /* ------------------- Box 08 ------------------- */
+  /* ------------------- Box 08 ------------------- */
 
-    #box_08 {
-      width: 50%;
-      text-align: right;
-      margin-left: 370px;
-    }
+  #box_08 {
+    width: 50%;
+    text-align: right;
+    margin-left: 370px;
+  }
 
-    #box_08 #pt5 {
-      cursor: pointer;
-      background: url(get-zapp("img/presidente/destapa/gran.png")) center left no-repeat;
-      height: 546px;
-      width: 428px;
-      z-index: 1;
-      display: block;
-      left: 0;
-      top: 70px;
-      position: absolute;
-    }
+  #box_08 #pt5 {
+    cursor: pointer;
+    background: url(get-zapp("img/presidente/destapa/gran.png")) center left no-repeat;
+    height: 546px;
+    width: 428px;
+    z-index: 1;
+    display: block;
+    left: 0;
+    top: 70px;
+    position: absolute;
+  }
 
-    /* ------------------- Box 10 ------------------- */
+  /* ------------------- Box 10 ------------------- */
 
-    #box_10 {
-      font-weight: 700;
-    }
+  #box_10 {
+    font-weight: 700;
+  }
 
-    #box_10 .txt_head {
-      letter-spacing: 5pt;
-    }
+  #box_10 .txt_head {
+    letter-spacing: 5pt;
+  }
 
-    /* ------------------- Pop 02 ------------------- */
+  /* ------------------- Pop 02 ------------------- */
 
-    #pop_02 .btn2 {
-      width: 140px;
-    }
+  #pop_02 .btn2 {
+    width: 140px;
+  }
 
-    #pop_02 .txt_head {
-      font-size: 24pt;
-    }
+  #pop_02 .txt_head {
+    font-size: 24pt;
+  }
 
-    #pop_07,
-    #pop_08,
-    #pop_09 {
-      text-align: center;
-    }
+  #pop_07,
+  #pop_08,
+  #pop_09 {
+    text-align: center;
   }
 }

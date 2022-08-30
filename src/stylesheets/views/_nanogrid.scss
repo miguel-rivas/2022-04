@@ -1,49 +1,45 @@
-main.nn-light.section-nanogrid-documentation,
-main.nn-light.section-nanogrid-home,
-main.nn-light.section-nanogrid-tests {
-  .mr-workarea {
-    --color-title: #214e67;
-    --color-background: #ffffff;
-    --color-foreground: #202028;
-    --color-workarea-background: #f8f7fb;
-    --color-panel-details-background: #ffffff;
-    --color-panel-border-separator: #cccccc;
-    --color-border: #e2e2e2;
-    --color-palette: #f7f7f7;
-    --color-label: #104e86;
-    --color-legend: #9c330a;
-    --color-background-input: #dadada;
-    --color-background-input2: #d7d7d7;
-    --color-table-background: hsl(240deg 20% 80% / 0.2);
-    --color-table-background-2: hsl(240deg 20% 85% / 0.2);
-    --color-table-background-hover: hsl(240deg 35% 90% / 0.2);
-    --color-nano-box: hsl(240deg 10% 83% / 27%);
-    --spirit-background: #dadde5;
-  }
+#{mr-section("nanogrid-documentation.nn-light")},
+#{mr-section("nanogrid-home.nn-light")},
+#{mr-section("nanogrid-tests.nn-light")} {
+  --color-title: #214e67;
+  --color-background: #ffffff;
+  --color-foreground: #202028;
+  --color-workarea-background: #f8f7fb;
+  --color-panel-details-background: #ffffff;
+  --color-panel-border-separator: #cccccc;
+  --color-border: #e2e2e2;
+  --color-palette: #f7f7f7;
+  --color-label: #104e86;
+  --color-legend: #9c330a;
+  --color-background-input: #dadada;
+  --color-background-input2: #d7d7d7;
+  --color-table-background: hsl(240deg 20% 80% / 0.2);
+  --color-table-background-2: hsl(240deg 20% 85% / 0.2);
+  --color-table-background-hover: hsl(240deg 35% 90% / 0.2);
+  --color-nano-box: hsl(240deg 10% 83% / 27%);
+  --spirit-background: #dadde5;
 }
 
-main.nn-dark.section-nanogrid-documentation,
-main.nn-dark.section-nanogrid-home,
-main.nn-dark.section-nanogrid-tests {
-  .mr-workarea {
-    --color-title: #97da6f;
-    --color-background: #222;
-    --color-foreground: #eee;
-    --color-workarea-background: #202028;
-    --color-panel-details-background: #1d1d26;
-    --color-panel-border-separator: #19191d;
-    --color-border: #444444;
-    --color-palette: #272727;
-    --color-label: #4ca1ef;
-    --color-legend: #b9b90e;
-    --color-background-input: #272731;
-    --color-background-input2: #232323;
-    --color-table-background: hsl(240deg 5% 25% / 0.2);
-    --color-table-background-2: hsl(240deg 5% 30% / 0.2);
-    --color-table-background-hover: hsl(240deg 20% 35% / 0.2);
-    --color-nano-box: hsl(240deg 12% 10% / 27%);
-    --spirit-background: #1a1a1a;
-  }
+#{mr-section("nanogrid-documentation.nn-dark")},
+#{mr-section("nanogrid-home.nn-dark")},
+#{mr-section("nanogrid-tests.nn-dark")} {
+  --color-title: #97da6f;
+  --color-background: #222;
+  --color-foreground: #eee;
+  --color-workarea-background: #202028;
+  --color-panel-details-background: #1d1d26;
+  --color-panel-border-separator: #19191d;
+  --color-border: #444444;
+  --color-palette: #272727;
+  --color-label: #4ca1ef;
+  --color-legend: #b9b90e;
+  --color-background-input: #272731;
+  --color-background-input2: #232323;
+  --color-table-background: hsl(240deg 5% 25% / 0.2);
+  --color-table-background-2: hsl(240deg 5% 30% / 0.2);
+  --color-table-background-hover: hsl(240deg 20% 35% / 0.2);
+  --color-nano-box: hsl(240deg 12% 10% / 27%);
+  --spirit-background: #1a1a1a;
 }
 
 #{mr-section(nanogrid-home)} {
@@ -67,29 +63,27 @@ main.nn-dark.section-nanogrid-tests {
   }
 }
 
-.section-nanogrid-documentation,
-.section-nanogrid-tests,
-.section-nanogrid-home {
-  .mr-workarea {
-    @import "nanogrid/core/font-styles";
-    @import "nanogrid/core/layers";
-    @import "nanogrid/components/app";
-    @import "nanogrid/components/table";
-    @import "nanogrid/components/footer";
-    @import "nanogrid/components/header";
+#{mr-section("nanogrid-documentation")},
+#{mr-section("nanogrid-home")},
+#{mr-section("nanogrid-tests")} {
+  @import "nanogrid/core/font-styles";
+  @import "nanogrid/core/layers";
+  @import "nanogrid/components/app";
+  @import "nanogrid/components/table";
+  @import "nanogrid/components/footer";
+  @import "nanogrid/components/header";
 
-    main {
-      color: var(--color-foreground);
-      --title-shadow: 0;
-      --color-shadow: rgb(0 0 0 / 65%);
-      --shadow-depth: 2px 2px 5px;
-    }
+  main {
+    color: var(--color-foreground);
+    --title-shadow: 0;
+    --color-shadow: rgb(0 0 0 / 65%);
+    --shadow-depth: 2px 2px 5px;
+  }
 
-    /*------------------------*/
+  /*------------------------*/
 
-    .demo-row {
-      background-color: var(--nn-track-color);
-      margin-bottom: 0;
-    }
+  .demo-row {
+    background-color: var(--nn-track-color);
+    margin-bottom: 0;
   }
 }
