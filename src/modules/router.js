@@ -94,6 +94,7 @@ import Drlogic404View from '@/views/drlogic/404.vue';
 import presidenteNavbarView from '@/views/presidente/navbar.vue';
 import presidenteFilterView from '@/views/presidente/carnaval-filter.vue';
 import presidenteLoaderView from '@/views/presidente/verano-loader.vue';
+import presidenteCarnavalLoaderView from '@/views/presidente/carnaval-loader.vue';
 import presidenteCarnavalView from '@/views/presidente/carnaval-home.vue';
 import presidenteVeranoFilterView from '@/views/presidente/verano-filter.vue';
 import presidenteDestapaView from '@/views/presidente/destapa.vue';
@@ -283,6 +284,14 @@ const routes = [
       navbar: presidenteNavbarView,
     },
   },
+  {
+    name: 'presidente-carnaval-loader',
+    path: '/presidente-carnaval-loader',
+    components: {
+      workarea: presidenteCarnavalLoaderView,
+      navbar: presidenteNavbarView,
+    },
+  },  
   {
     name: 'presidente-verano-filter',
     path: '/presidente-verano-filter',

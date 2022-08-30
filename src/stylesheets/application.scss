@@ -47,7 +47,7 @@ main {
   &.nn-light,
   &.nn-dark {
     .panel,
-    .main-panel {
+    .mr-primary-navbar {
       --color-background: #222;
       --color-foreground: #eee;
       --color-label: hsl(50deg 50% 50%);
@@ -64,7 +64,7 @@ main {
   }
 
   &.nn-light {
-    .nano-workarea {
+    .mr-workarea {
       --color-title: hsl(155deg 50% 25%);
       --color-background: #ffffff;
       --color-foreground: #202028;
@@ -82,7 +82,7 @@ main {
     }
   }
   &.nn-dark {
-    .nano-workarea {
+    .mr-workarea {
       --color-title: hsl(155deg 50% 50%);
       --color-background: #222;
       --color-foreground: #eee;
@@ -103,7 +103,7 @@ main {
   --title-shadow: 0;
   --color-shadow: rgb(0 0 0 / 65%);
   --shadow-depth: 2px 2px 5px;
-  .nano-workarea {
+  .mr-workarea {
     color: var(--color-foreground);
   }
 }
@@ -205,7 +205,7 @@ main {
 
 /*------------------------*/
 
-.nano-app {
+.mr-app {
   .#{$nano}btn.#{$nano}flat {
     &-vue {
       &,

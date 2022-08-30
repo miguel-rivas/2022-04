@@ -11,5 +11,5 @@
 }
 
 @function mr-section($name) {
-  @return unquote("main.section-#{$name} .nano-workarea")
+  @return unquote("main.section-#{$name} .mr-workarea")
 }

@@ -1,7 +1,7 @@
 // https://docs.cypress.io/api/table-of-contents
 
 function checkPanelRoutes(linkTitle, navbar) {
-  cy.get(`.main-panel a[title="${linkTitle}"]`).click();
+  cy.get(`.mr-primary-navbar a[title="${linkTitle}"]`).click();
   navbar.forEach(item => {
     cy.contains('nav', item);
   });

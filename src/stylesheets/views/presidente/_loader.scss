@@ -1,7 +1,7 @@
 @use "sass:math";
 
 .section-presidente-verano-loader {
-  .nano-workarea {
+  .mr-workarea {
     $minScreenSize: 760px;
     $size: 150px;
     background: #007820 url(get-zapp("img/extras/presidente.jpg")) center repeat;

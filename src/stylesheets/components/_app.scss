@@ -1,16 +1,16 @@
-.nano-app {
+.mr-app {
   height: 100vh;
   margin-bottom: 0;
   align-items: stretch;
 
   &,
-  .main-panel,
+  .mr-primary-navbar,
   .panel,
-  .nano-workarea {
+  .mr-workarea {
     max-height: 100vh;
   }
 
-  .panel-bar {
+  .mr-toggle-panel {
     display: flex;
 
     .#{$nano}btn {
@@ -25,7 +25,7 @@
     }
   }
 
-  .main-panel {
+  .mr-primary-navbar {
     position: relative;
     background: var(--color-panel-background);
     border-right: 1px solid #222;
@@ -107,7 +107,7 @@
     }
   }
 
-  .nano-navbar {
+  .mr-secondary-navbar {
     position: relative;
     height: 60px;
     background-color: #1e1e1e;
@@ -230,12 +230,12 @@
       }
     }
 
-    + .nano-workarea {
+    + .mr-workarea {
       height: calc(100vh - 60px);
     }
   }
 
-  .nano-workarea {
+  .mr-workarea {
     position: relative;
     height: 100vh;
     background-color: var(--color-workarea-background);

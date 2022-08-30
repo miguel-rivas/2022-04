@@ -1,7 +1,7 @@
 <template>
   <main :class="classes">
     <alert />
-    <nn-row class="nano-app">
+    <nn-row class="mr-app">
       <panel-navigation />
 
       <template v-if="hasPanel">
@@ -9,7 +9,7 @@
           <router-view name="panel" />
         </nn-column>
 
-        <nn-column size="35" class="panel-bar">
+        <nn-column size="35" class="mr-toggle-panel">
           <nn-btn
             class="panel-ctrl"
             title="Toggle panel button"
@@ -23,10 +23,10 @@
 
       <nn-column :size="workareaSize">
         <nn-row class="nano-content">
-          <nn-column size="100%" class="nano-navbar" v-if="hasNavbar">
+          <nn-column size="100%" class="mr-secondary-navbar" v-if="hasNavbar">
             <router-view name="navbar" />
           </nn-column>
-          <nn-column size="100%" class="nano-workarea">
+          <nn-column size="100%" class="mr-workarea">
             <router-view name="workarea" />
           </nn-column>
         </nn-row>

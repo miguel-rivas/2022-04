@@ -1,9 +1,5 @@
 <template lang="pug">
 nn-scroll-area(color="royal-purple")
-
-  aside#block: div
-  aside#cover: div
-
   #wsite
     section#home.box
       .all_content
@@ -75,14 +71,3 @@ nn-scroll-area(color="royal-purple")
         .fright WEBSITE BY CAPITAL DBG
 
 </template>
-
-<script>
-import Vue from "vue";
-import $ from "jquery";
-
-export default Vue.extend({
-  mounted(){
-    $('aside#cover').fadeOut(500);
-  }
-});
-</script>

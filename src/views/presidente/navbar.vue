@@ -18,6 +18,10 @@ export default Vue.extend({
         route: "presidente-carnaval-home",
         caption: "Carnaval 2015",
       },
+       {
+        route: "presidente-carnaval-loader",
+        caption: "Carnaval Loader 2015",
+      },
       {
         route: "presidente-verano-loader",
         caption: "Verano 2015 Loader",

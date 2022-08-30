@@ -4,7 +4,7 @@ main.section-drlogic-team,
 main.section-drlogic-support,
 main.section-drlogic-services,
 main.section-drlogic-testimonials {
-  .nano-workarea {
+  .mr-workarea {
     @import "mini-bootstrap";
     @import "base/variables";
     @import "base/typography";
@@ -21,33 +21,33 @@ main.section-drlogic-testimonials {
   }
 }
 
-main.section-drlogic-home .nano-workarea {
+main.section-drlogic-home .mr-workarea {
   @import "base/variables";
   @import "sections/home";
 }
 
-main.section-drlogic-contact .nano-workarea {
+main.section-drlogic-contact .mr-workarea {
   @import "base/variables";
   @import "sections/contact";
 }
 
-main.section-drlogic-team .nano-workarea {
+main.section-drlogic-team .mr-workarea {
   @import "base/variables";
   @import "mixins/about";
   @import "sections/about";
 }
 
-main.section-drlogic-support .nano-workarea {
+main.section-drlogic-support .mr-workarea {
   @import "base/variables";
   @import "sections/services";
 }
 
-main.section-drlogic-services .nano-workarea {
+main.section-drlogic-services .mr-workarea {
   @import "base/variables";
   @import "sections/other-services";
 }
 
-main.section-drlogic-testimonials .nano-workarea {
+main.section-drlogic-testimonials .mr-workarea {
   @import "base/variables";
   @import "mixins/testimonials";
   @import "sections/testimonials";

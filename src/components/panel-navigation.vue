@@ -1,5 +1,5 @@
 <template>
-  <nn-column size="50" class="main-panel">
+  <nn-column size="50" class="mr-primary-navbar">
     <nn-scroll-area color="royal-purple" :horizontal="false">
       <nn-row>
         <nn-column size="100%">
@@ -92,6 +92,7 @@ export default Vue.extend({
         route: [
           "presidente-carnaval-filter",
           "presidente-carnaval-home",
+          "presidente-carnaval-loader",
           "presidente-verano-loader",
           "presidente-verano-filter",
           "presidente-destapa",

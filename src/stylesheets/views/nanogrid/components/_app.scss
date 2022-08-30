@@ -1,15 +1,15 @@
-.nano-app {
+.mr-app {
   height: 100vh;
   margin-bottom: 0;
   align-items: stretch;
 
   &,
-  .main-panel,
+  .mr-primary-navbar,
   .workarea {
     max-height: 100vh;
   }
 
-  .main-panel {
+  .mr-primary-navbar {
     position: relative;
     background: var(--color-panel-background);
     border-right: 1px solid #222;

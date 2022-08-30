@@ -1,7 +1,7 @@
 main.nn-light.section-nanogrid-documentation,
 main.nn-light.section-nanogrid-home,
 main.nn-light.section-nanogrid-tests {
-  .nano-workarea {
+  .mr-workarea {
     --color-title: #214e67;
     --color-background: #ffffff;
     --color-foreground: #202028;
@@ -25,7 +25,7 @@ main.nn-light.section-nanogrid-tests {
 main.nn-dark.section-nanogrid-documentation,
 main.nn-dark.section-nanogrid-home,
 main.nn-dark.section-nanogrid-tests {
-  .nano-workarea {
+  .mr-workarea {
     --color-title: #97da6f;
     --color-background: #222;
     --color-foreground: #eee;
@@ -70,7 +70,7 @@ main.nn-dark.section-nanogrid-tests {
 .section-nanogrid-documentation,
 .section-nanogrid-tests,
 .section-nanogrid-home {
-  .nano-workarea {
+  .mr-workarea {
     @import "nanogrid/core/font-styles";
     @import "nanogrid/core/layers";
     @import "nanogrid/components/app";
