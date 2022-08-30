@@ -5,6 +5,7 @@ import ContactWorkareaView from '@/views/contact-workarea.vue';
 import helloView from '@/views/hello.vue';
 
 import OthersNavbarView from '@/views/others/navbar.vue';
+import tetravexView from '@/views/others/tetravex.vue';
 import SoundboardWorkareaView from '@/views/others/soundboard-workarea.vue';
 import EvolutionWorkareaView from '@/views/others/evolution.vue';
 import DescubriaView from '@/views/others/descubria.vue';
@@ -158,6 +159,14 @@ const routes = [
     path: '/voxel',
     components: {
       workarea: voxelView,
+      navbar: OthersNavbarView,
+    },
+  },
+  {
+    name: 'tetravex',
+    path: '/tetravex',
+    components: {
+      workarea: tetravexView,
       navbar: OthersNavbarView,
     },
   },

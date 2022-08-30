@@ -15,6 +15,10 @@ export default Vue.extend({
         caption: "Mineros",
       },
       {
+        route: "tetravex",
+        caption: "Tetravex",
+      },
+      {
         route: "descubria",
         caption: "Descubria",
       },
