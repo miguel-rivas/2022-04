@@ -1,32 +1,33 @@
 <template lang="pug">
-main
-  aside#rules
+nn-scroll-area(color="royal-purple", horizontal="false")
+  aside#rules.ND
     img(:src="getZapp('img/tetravex/crown.png')")
     h1 HOW TO SOLVE
     p The player is presented with a grid full of pieces, each piece have a number on each edge. The objective of the game is to place the pieces in the grid in the proper position. Two pieces should only be placed next to each other if the numbers on adjacent faces match.
-    button Okay Now I Get It
+    button Gotcha
 
-  section#home.fullScreen
+  section#home
     span.pencil.red
     span.pencil.black
     span.pencil.brown
     span.pencil.blue
     span.pencil.gray
 
-    span.tambora.t
-    span.tambora.e
-    span.tambora.t
-    span.tambora.r
-    span.tambora.a
-    span.tambora.v
-    span.tambora.e
-    span.tambora.x
+    .title
+      span.tambora.t
+      span.tambora.e
+      span.tambora.t
+      span.tambora.r
+      span.tambora.a
+      span.tambora.v
+      span.tambora.e
+      span.tambora.x
 
     .btnBox
       button#btn_instructions How Should i Play?
       button#btn_chooseLevel Play
 
-  section#chooseLevel.adaptative.ND
+  section#chooseLevel.ND
     h1 Choose Your Level
     .arrow.right.ND
     .arrow.left
@@ -34,7 +35,7 @@ main
   section#final.ND
     .arrow.left
 
-  #levels.ND
+  #levels
 </template>
 
 
@@ -45,17 +46,19 @@ import Sizzle from "sizzle";
 import _ from "lodash";
 
 export default Vue.extend({
-  data: () => ({}),
-  mounted() {
-    var matrixSolved = [],
-      matrixUnsolved = [],
-      clickStatus = [],
-      level = 0,
-      saveStatus = [],
-      positions = ["top", "right", "bottom", "left"],
-      winCounter = [];
-
-    var bkColors = {
+  data: () => ({
+    matrixSolved: [],
+    matrixUnsolved: [],
+    clickStatus: [],
+    level: 0,
+    saveStatus: [],
+    winCounter: [],
+    home: undefined,
+    rules: undefined,
+    finalStage: undefined,
+    chooseLevel: undefined,
+    positions: ["top", "right", "bottom", "left"],
+    bkColors: {
       0: ["#000000", "#fff"],
       1: ["rgb(255, 0, 82)", "#fff"],
       2: ["#FF7A00", "#fff"],
@@ -66,9 +69,8 @@ export default Vue.extend({
       7: ["rgb(125, 64, 11)", "#fff"],
       8: ["#015F6C", "#fff"],
       9: ["#555", "#fff"],
-    };
-
-    var medalColors = {
+    },
+    medalColors: {
       2: {
         wheel: "#333",
         stroke: "#29ABE2",
@@ -150,13 +152,13 @@ export default Vue.extend({
         ribbonShadow: "#680202",
         winText: "white",
       },
-    };
+    },
+  }),
 
-    //------------------------------------
-
-    function makeWheel(o) {
+  methods: {
+    makeWheel(o) {
       /* ----------- Vars ----------- */
-      var nm = document.querySelectorAll(o.id)[0],
+      let nm = document.querySelectorAll(o.id)[0],
         w = nm.width /* canvas weight */,
         h = nm.height /* canvas height */,
         mx = h < w ? h : w /* valor maximo a considerar */,
@@ -233,11 +235,10 @@ export default Vue.extend({
         p.fill();
         p.closePath();
       }
-    }
-
-    function makeRibbon(o) {
+    },
+    makeRibbon(o) {
       /* ----------- Vars ----------- */
-      var nm = document.querySelectorAll(o.id)[0],
+      let nm = document.querySelectorAll(o.id)[0],
         p = nm.getContext("2d");
 
       p.beginPath();
@@ -268,16 +269,10 @@ export default Vue.extend({
       p.fillStyle = o.colors.ribbon;
       p.fill();
       p.closePath();
-
-      /*p.font = "30px Amatic SC";
-	p.textAlign = "center";
-	p.fillStyle = o.colors.winText;
-	p.fillText("Congratulations", nm.width/2, 55);*/
-    }
-
-    function makeShape(o) {
+    },
+    makeShape(o) {
       /* ----------- Vars ----------- */
-      var nm = document.querySelectorAll(o.id)[0],
+      let nm = document.querySelectorAll(o.id)[0],
         w = nm.width /* canvas weight */,
         h = nm.height /* canvas height */,
         mx = h < w ? h : w /* valor maximo a considerar */,
@@ -290,19 +285,7 @@ export default Vue.extend({
         /* ----------- Poligon 1 ----------- */
         r = o.p1Radius * per,
         px = new Array(),
-        py = new Array(),
-        /* ----------- Poligon 2 ----------- */
-        r2 = o.p2Radius * per,
-        px2 = new Array(),
-        py2 = new Array(),
-        /* ----------- Inner Circle ----------- */
-        r3 = o.circDistances * per /* distance of circles */,
-        r4 = o.circRadius * per /* radius of circle */,
-        sd2 = o.nCirc /* number of circles */,
-        px3 = new Array(),
-        py3 = new Array(),
-        /* ----------- Inner Circle ----------- */
-        r5 = o.innerCircDiam;
+        py = new Array();
 
       for (let kk = 0; kk <= sd - 1; kk++) {
         px[kk] = Math.cos((360 / sd) * kk * ang) * r;
@@ -317,661 +300,640 @@ export default Vue.extend({
       }
 
       p.lineTo(x + px[0], y + py[0]);
-      /*p.lineTo( x + px[ 1 ] , y + py[ 1 ] );*/
 
       p.strokeStyle = o.colors.stroke;
       p.lineWidth = 2;
       p.setLineDash([5, 5]);
       p.stroke();
       p.closePath();
-    }
+    },
+    addNode(obj) {
+      let attr = [],
+        node,
+        text;
+      obj.parentNode = obj.parentNode || document;
+      obj.txt = obj.txt || "";
+      obj.attributes = obj.attributes || "";
 
-    var ornaments = {
-      deco1: function (actualLevel) {
-        var world = document.getElementById("world_" + actualLevel);
-        main.addNode({
-          parentNode: world,
-          type: "span",
-          attributes: [
-            { attribute: "class", value: "pencil caramel ornament a" },
-          ],
-        });
+      node = document.createElement(obj.type);
+      text = document.createTextNode(obj.txt);
+      node.appendChild(text);
 
-        main.addNode({
-          parentNode: world,
-          type: "span",
-          attributes: [
-            { attribute: "class", value: "pencil redOrange ornament b" },
-          ],
-        });
-
-        main.addNode({
-          parentNode: world,
-          type: "span",
-          attributes: [
-            { attribute: "class", value: "pencil darkViolet ornament c" },
-          ],
-        });
-      },
-
-      deco2: function (actualLevel) {
-        var world = document.getElementById("world_" + actualLevel);
-        main.addNode({
-          parentNode: world,
-          type: "span",
-          attributes: [{ attribute: "class", value: "pencil red ornament d" }],
-        });
-
-        main.addNode({
-          parentNode: world,
-          type: "img",
-          attributes: [
-            { attribute: "class", value: "ornament e" },
-            { attribute: "src", value: "img/cartabon.png" },
-          ],
-        });
-      },
-
-      deco3: function (actualLevel) {
-        var world = document.getElementById("world_" + actualLevel);
-        main.addNode({
-          parentNode: world,
-          type: "span",
-          attributes: [
-            { attribute: "class", value: "pencil lightBlue ornament f" },
-          ],
-        });
-
-        main.addNode({
-          parentNode: world,
-          type: "span",
-          attributes: [{ attribute: "class", value: "pencil mint ornament g" }],
-        });
-      },
-    };
-
-    //------------------------------------
-
-    var main = {
-      addNode: function (obj) {
-        var attr = [],
-          node,
-          text;
-        obj.parentNode = obj.parentNode || document;
-        obj.txt = obj.txt || "";
-        obj.attributes = obj.attributes || "";
-
-        node = document.createElement(obj.type);
-        text = document.createTextNode(obj.txt);
-        node.appendChild(text);
-
-        if (obj.attributes != "") {
-          for (var k in obj.attributes) {
-            attr = document.createAttribute(obj.attributes[k].attribute);
-            attr.value = obj.attributes[k].value;
-            node.setAttributeNode(attr);
-          }
+      if (obj.attributes != "") {
+        for (let k in obj.attributes) {
+          attr = document.createAttribute(obj.attributes[k].attribute);
+          attr.value = obj.attributes[k].value;
+          node.setAttributeNode(attr);
         }
-
-        obj.parentNode.appendChild(node);
-        return node;
-      },
-
-      sortingArray: function (array) {
-        var tmpArray = array;
-        var newArray = [];
-
-        while (tmpArray.length != 0) {
-          var number = Math.floor(Math.random() * (tmpArray.length - 1));
-          var newElement = tmpArray.splice(number, 1)[0];
-          newArray.push(newElement);
-        }
-        return newArray;
-      },
-
-      convertToArray: function (array) {
-        var newMatrix = [];
-        for (var k = 0; k < array.length; k++) {
-          var newArray = [];
-          newArray.push(
-            array[k].topValue.toString(),
-            array[k].rightValue.toString(),
-            array[k].bottomValue.toString(),
-            array[k].leftValue.toString()
-          );
-
-          newMatrix.push(newArray);
-        }
-        return newMatrix;
-      },
-
-      generateNumbers: function (limit) {
-        var array = [];
-        for (var k = 0; k < limit * limit; k++) {
-          var number = Math.floor(Math.random() * 10);
-          array.push(number, number);
-        }
-        var swap = array.pop();
-        array.unshift(swap);
-        return array;
-      },
-
-      creatingPuzzle: function (rows, columns, levelNumber) {
-        var result = {},
-          tmpRows = [],
-          tmpColumns = [];
-
-        for (var k = 0; k < rows.length; k += 2) {
-          tmpRows.push({ leftValue: rows[k], rightValue: rows[k + 1] });
-        }
-
-        for (
-          var newPieceOrder = 0, alternate = 0, kount = 0;
-          alternate < levelNumber;
-          newPieceOrder += levelNumber, kount += 2
-        ) {
-          if (newPieceOrder > levelNumber * levelNumber - 1) {
-            alternate++;
-            newPieceOrder = alternate;
-          }
-
-          if (alternate != levelNumber) {
-            tmpColumns[newPieceOrder] = {
-              topValue: columns[kount],
-              bottomValue: columns[kount + 1],
-            };
-          }
-        }
-
-        /* patch :: the last element of the columns its missing */
-        tmpColumns[levelNumber * levelNumber] = {
-          topValue: columns[levelNumber * levelNumber * 2 - 2],
-          bottomValue: columns[levelNumber * levelNumber * 2 - 1],
-        };
-
-        tmpColumns.pop();
-
-        for (var k in tmpRows) {
-          result = _.merge(tmpRows, tmpColumns);
-        }
-
-        return result;
-      },
-
-      generatePieces: function (world, path, array) {
-        var actualPiece;
-
-        for (var k = 1; k <= world * world; k++) {
-          /* -- creating piece -- */
-          actualPiece = main.addNode({
-            parentNode: path,
-            type: "a",
-            attributes: [
-              { attribute: "href", value: "javascript:void(0)" },
-              { attribute: "class", value: "piece_" + k + " piece" },
-            ],
-          });
-
-          /* -- creating parts of the piece -- */
-
-          main.addNode({
-            parentNode: actualPiece,
-            type: "div",
-            txt: array[world][k - 1][0],
-            attributes: [{ attribute: "class", value: "top" }],
-          });
-          main.addNode({
-            parentNode: actualPiece,
-            type: "div",
-            txt: array[world][k - 1][1],
-            attributes: [{ attribute: "class", value: "right" }],
-          });
-          main.addNode({
-            parentNode: actualPiece,
-            type: "div",
-            txt: array[world][k - 1][2],
-            attributes: [{ attribute: "class", value: "bottom" }],
-          });
-          main.addNode({
-            parentNode: actualPiece,
-            type: "div",
-            txt: array[world][k - 1][3],
-            attributes: [{ attribute: "class", value: "left" }],
-          });
-        }
-        return 0;
-      },
-
-      generateLevels: function (begin, end) {
-        var actualWorld, puzzleSolved, puzzleUnsolved, medal, btn;
-        for (var levelNumber = begin; levelNumber <= end; levelNumber++) {
-          if (typeof localStorage.getItem("saveData9") !== "string") {
-            winCounter.push(levelNumber);
-          }
-
-          /* -- creating buttons for link to a level -- */
-          btn = main.addNode({
-            parentNode: document.getElementById("chooseLevel"),
-            type: "button",
-            attributes: [
-              { attribute: "id", value: "btn_" + levelNumber },
-              { attribute: "type", value: "button" },
-            ],
-          });
-
-          main.addNode({
-            parentNode: btn,
-            type: "canvas",
-            attributes: [
-              { attribute: "width", value: "150px" },
-              { attribute: "height", value: "150px" },
-            ],
-          });
-
-          main.addNode({
-            parentNode: btn,
-            type: "p",
-            txt: "level " + levelNumber,
-          });
-
-          makeShape({
-            id: "#btn_" + levelNumber + " canvas",
-            p1Radius: 48,
-            p1Sides: levelNumber,
-            colors: medalColors[levelNumber],
-          });
-
-          /* -- creating the base of the level -- */
-          actualWorld = main.addNode({
-            parentNode: document.getElementById("levels"),
-            type: "section",
-            attributes: [
-              { attribute: "id", value: "world_" + levelNumber },
-              { attribute: "class", value: "adaptative ND" },
-            ],
-          });
-
-          main.addNode({
-            parentNode: actualWorld,
-            type: "h1",
-            txt: "Level " + levelNumber,
-            attributes: [{ attribute: "class", value: "levelName" }],
-          });
-
-          medal = main.addNode({
-            parentNode: actualWorld,
-            type: "div",
-            attributes: [{ attribute: "class", value: "medal" }],
-          });
-
-          main.addNode({
-            parentNode: medal,
-            type: "canvas",
-            attributes: [
-              { attribute: "class", value: "body" },
-              { attribute: "width", value: "300px" },
-              { attribute: "height", value: "300px" },
-            ],
-          });
-
-          main.addNode({
-            parentNode: medal,
-            type: "canvas",
-            attributes: [
-              { attribute: "class", value: "ribbon" },
-              { attribute: "width", value: "420px" },
-              { attribute: "height", value: "95px" },
-            ],
-          });
-
-          main.addNode({
-            parentNode: medal,
-            type: "span",
-            attributes: [
-              { attribute: "class", value: "number " + "n" + levelNumber },
-            ],
-          });
-
-          main.addNode({
-            parentNode: medal,
-            type: "span",
-            txt: "Congratulations",
-            attributes: [
-              {
-                attribute: "class",
-                value: "winText " + medalColors[levelNumber].winText,
-              },
-            ],
-          });
-
-          main.addNode({
-            parentNode: medal,
-            type: "span",
-            attributes: [{ attribute: "class", value: "regla a" }],
-          });
-
-          main.addNode({
-            parentNode: medal,
-            type: "span",
-            attributes: [{ attribute: "class", value: "regla b" }],
-          });
-
-          makeWheel({
-            id: "#world_" + levelNumber + " .medal .body",
-            p1Radius: 48,
-            p1Sides: 45,
-            p2Radius: 44,
-            circDistances: 35,
-            circRadius: 3,
-            nCirc: 12,
-            innerCircDiam: 70,
-            colors: medalColors[levelNumber],
-          });
-
-          makeRibbon({
-            id: "#world_" + levelNumber + " .medal .ribbon",
-            colors: medalColors[levelNumber],
-          });
-
-          /* -- creating rows and columns -- */
-          var rows = main.generateNumbers(levelNumber);
-          var columns = main.generateNumbers(levelNumber);
-
-          //console.log(columns);
-
-          /* -- mixing rows and columns -- */
-          matrixSolved[levelNumber] = main.creatingPuzzle(
-            rows,
-            columns,
-            levelNumber
-          );
-          matrixSolved[levelNumber] = main.convertToArray(
-            matrixSolved[levelNumber]
-          );
-          var matrixTmp = matrixSolved[levelNumber].slice(0);
-          matrixUnsolved[levelNumber] = main.sortingArray(matrixTmp);
-
-          /* -- creating the base of the puzzle unsolved -- */
-          puzzleUnsolved = main.addNode({
-            parentNode: actualWorld,
-            type: "div",
-            attributes: [{ attribute: "class", value: "puzzle pUnsolved" }],
-          });
-          main.generatePieces(levelNumber, puzzleUnsolved, matrixUnsolved);
-
-          /* -- creating the base of the puzzle Solved -- */
-          puzzleSolved = main.addNode({
-            parentNode: actualWorld,
-            type: "div",
-            attributes: [{ attribute: "class", value: "puzzle pSolved" }],
-          });
-          main.generatePieces(levelNumber, puzzleSolved, matrixSolved);
-
-          matrixSolved[levelNumber] = _.flattenDeep(
-            matrixSolved[levelNumber]
-          ).join("");
-
-          /* -- creating arrow -- */
-          main.addNode({
-            parentNode: actualWorld,
-            type: "div",
-            attributes: [{ attribute: "class", value: "arrow back" }],
-          });
-
-          if (levelNumber % 4 == 0) {
-            ornaments.deco1(levelNumber);
-          } else if (levelNumber % 3 == 0) {
-            ornaments.deco2(levelNumber);
-          } else {
-            ornaments.deco3(levelNumber);
-          }
-        }
-
-        return 0;
-      },
-
-      giveMeYourClickAndBeAwesome: function (query, fn) {
-        var clickMe = document.querySelectorAll(query);
-        for (var k = 0; k < clickMe.length; k++) {
-          clickMe.item(k).onclick = fn;
-        }
-      },
-
-      checkWonLevels: function (start, end) {
-        for (var levelNumber = start; levelNumber <= end; levelNumber++) {
-          if (winCounter.indexOf(levelNumber) == -1) {
-            main.winLevel(levelNumber);
-          }
-        }
-      },
-
-      checkBk: function (query) {
-        for (var actualColor = 0; actualColor < 10; actualColor++) {
-          (function (color) {
-            var setBk = function (element, index, array) {
-              element.style.backgroundColor = bkColors[color][0];
-              element.style.color = bkColors[color][1];
-            };
-
-            var numberArray = Sizzle(
-              query + " div:not(.pUnsolved):contains(" + color + ")"
-            );
-
-            numberArray.forEach(setBk);
-          })(actualColor);
-        }
-      },
-
-      winLevel: function (actualLevel) {
-        var tmpIndex = _.findIndex(winCounter, function (number) {
-            return number == actualLevel;
-          }),
-          actualWorld = document
-            .getElementById("world_" + actualLevel)
-            .getElementsByClassName("puzzle"),
-          medal = document
-            .getElementById("world_" + actualLevel)
-            .getElementsByClassName("medal")[0],
-          hiddenArrow = document
-            .getElementById("chooseLevel")
-            .getElementsByClassName("right")[0],
-          body = medal.getElementsByClassName("body")[0],
-          regla_A = medal.getElementsByClassName("regla a")[0],
-          regla_B = medal.getElementsByClassName("regla b")[0],
-          number_txt = medal.getElementsByClassName("number")[0],
-          ribbon = medal.getElementsByClassName("ribbon")[0],
-          ribbon_txt = medal.getElementsByClassName("winText")[0];
-
-        _.pull(winCounter, winCounter[tmpIndex]);
-        Velocity(actualWorld, { opacity: 0 }, { display: "none" }, 500);
-
-        Velocity(body, { rotateZ: 300, scale: 0.2 }, 0);
-        Velocity(
-          regla_A,
-          {
-            opacity: 0,
-            rotateZ: 45,
-            scale: 0.8,
-            translateX: -14,
-            translateY: -96,
-          },
-          0
-        );
-        Velocity(
-          regla_B,
-          {
-            opacity: 0,
-            rotateZ: -45,
-            scale: 0.8,
-            translateX: -14,
-            translateY: -96,
-          },
-          0
-        );
-        Velocity(ribbon, { opacity: 0, scale: 0.8, translateY: 10 }, 0);
-        Velocity(ribbon_txt, { opacity: 0, translateY: 10 }, 0);
-        Velocity(number_txt, { opacity: 0, scale: 0.2 }, 0);
-
-        Velocity(
-          body,
-          { opacity: 1, rotateZ: 385, scale: 0.8 },
-          700,
-          function () {
-            Velocity(
-              regla_A,
-              {
-                opacity: 1,
-                rotateZ: 45,
-                scale: 0.8,
-                translateX: 0,
-                translateY: 0,
-              },
-              200
-            );
-            Velocity(
-              regla_B,
-              {
-                opacity: 1,
-                rotateZ: -45,
-                scale: 0.8,
-                translateX: 0,
-                translateY: 0,
-              },
-              200,
-              function () {
-                Velocity(
-                  ribbon,
-                  { opacity: 1, scale: 0.8, translateY: 0 },
-                  500
-                );
-                Velocity(
-                  ribbon_txt,
-                  { opacity: 1, translateY: 0 },
-                  500,
-                  function () {
-                    Velocity(number_txt, { opacity: 1, scale: 1 }, 500);
-                    medal.className += " stopAnimation";
-                  }
-                );
-              }
-            );
-          }
-        );
-
-        localStorage.setItem("saveData9", winCounter);
-
-        if (winCounter != 0) {
-          console.log("you beat level " + actualLevel);
-          console.log(
-            "you need to beat the level " +
-              winCounter +
-              " to win the whole game"
-          );
-        } else {
-          console.log("you win the whole game");
-          Velocity(hiddenArrow, "fadeIn", 0);
-        }
-      },
-    };
-
-    //------------------------------------
-
-    var core = (function () {
-      if (typeof localStorage.getItem("saveData9") === "string") {
-        winCounter = localStorage.getItem("saveData9");
       }
 
-      main.generateLevels(3, 10);
+      obj.parentNode.appendChild(node);
+      return node;
+    },
+    sortingArray(array) {
+      let tmpArray = array;
+      let newArray = [];
 
-      main.giveMeYourClickAndBeAwesome(".arrow.right", function () {
-        Velocity(this.parentNode, "fadeOut", { duration: 500 });
-        Velocity(this.parentNode.nextSibling.nextSibling, "fadeIn", {
-          duration: 500,
-        });
-      });
+      while (tmpArray.length != 0) {
+        let number = Math.floor(Math.random() * (tmpArray.length - 1));
+        let newElement = tmpArray.splice(number, 1)[0];
+        newArray.push(newElement);
+      }
+      return newArray;
+    },
+    convertToArray(array) {
+      let newMatrix = [];
+      for (let k = 0; k < array.length; k++) {
+        let newArray = [];
+        newArray.push(
+          array[k].topValue.toString(),
+          array[k].rightValue.toString(),
+          array[k].bottomValue.toString(),
+          array[k].leftValue.toString()
+        );
 
-      main.giveMeYourClickAndBeAwesome(".arrow.left", function () {
-        Velocity(this.parentNode, "fadeOut", { duration: 500 });
-        Velocity(this.parentNode.previousSibling.previousSibling, "fadeIn", {
-          duration: 500,
-        });
-      });
+        newMatrix.push(newArray);
+      }
+      return newMatrix;
+    },
+    generateNumbers(limit) {
+      let array = [];
+      for (let k = 0; k < limit * limit; k++) {
+        let number = Math.floor(Math.random() * 10);
+        array.push(number, number);
+      }
+      let swap = array.pop();
+      array.unshift(swap);
+      return array;
+    },
+    creatingPuzzle(rows, columns, levelNumber) {
+      let result = {},
+        tmpRows = [],
+        tmpColumns = [];
 
-      main.giveMeYourClickAndBeAwesome(".arrow.back", function () {
-        Velocity(this.parentNode, "fadeOut", { duration: 500 });
-        Velocity(Sizzle("#chooseLevel")[0], "fadeIn", { duration: 500 });
-      });
+      for (let k = 0; k < rows.length; k += 2) {
+        tmpRows.push({ leftValue: rows[k], rightValue: rows[k + 1] });
+      }
 
-      main.giveMeYourClickAndBeAwesome("#btn_instructions", function () {
-        Velocity(Sizzle("#home")[0], "fadeOut", { duration: 500 });
-        Velocity(Sizzle("#rules")[0], "fadeIn", { duration: 500 });
-      });
-
-      main.giveMeYourClickAndBeAwesome("#btn_chooseLevel", function () {
-        Velocity(Sizzle("#home")[0], "fadeOut", { duration: 500 });
-        Velocity(Sizzle("#chooseLevel")[0], "fadeIn", { duration: 500 });
-      });
-
-      main.giveMeYourClickAndBeAwesome("#rules button", function () {
-        Velocity(Sizzle("#rules")[0], "fadeOut", { duration: 500 });
-        Velocity(Sizzle("#home")[0], "fadeIn", { duration: 500 });
-      });
-
-      main.giveMeYourClickAndBeAwesome("#chooseLevel button", function () {
-        level = this.getAttribute("id").split("_")[1];
-        Velocity(this.parentNode, "fadeOut", { duration: 500 });
-        Velocity(Sizzle("#levels")[0], "fadeIn", { duration: 500 });
-        Velocity(Sizzle("#world_" + level)[0], "fadeIn", { duration: 500 });
-      });
-
-      main.giveMeYourClickAndBeAwesome(".piece", function () {
-        var pieceNumber = this.getAttribute("class")
-          .split(" ")[0]
-          .split("_")[1];
-        if (saveStatus[level] != pieceNumber) {
-          clickStatus[level] = !clickStatus[level];
-
-          if (clickStatus[level] == true) {
-            saveStatus[level] = pieceNumber;
-            this.className += " selected";
-          } else {
-            var piece_A =
-                "#world_" + level + " .piece_" + parseInt(saveStatus[level]),
-              piece_B = "#world_" + level + " .piece_" + parseInt(pieceNumber);
-
-            var newClass = Sizzle(piece_A)[0].className.split(" ");
-            newClass.pop();
-            newClass = newClass.join(" ");
-
-            Sizzle(piece_A)[0].className = newClass;
-
-            for (var k in positions) {
-              var a = Sizzle(piece_A + " ." + positions[k])[0].innerHTML,
-                b = Sizzle(piece_B + " ." + positions[k])[0].innerHTML;
-
-              Sizzle(piece_A + " ." + positions[k])[0].innerHTML =
-                matrixUnsolved[level][saveStatus[level] - 1][k] = b;
-
-              Sizzle(piece_B + " ." + positions[k])[0].innerHTML =
-                matrixUnsolved[level][pieceNumber - 1][k] = a;
-            }
-
-            var tmpArrayA = _.uniq(matrixUnsolved[level]);
-            var unsolved = _.flattenDeep(tmpArrayA).join("");
-
-            if (matrixSolved[level] == unsolved) {
-              main.winLevel(level);
-            }
-
-            saveStatus[level] = "NaN";
-            main.checkBk("#world_" + level);
-          }
+      for (
+        let newPieceOrder = 0, alternate = 0, kount = 0;
+        alternate < levelNumber;
+        newPieceOrder += levelNumber, kount += 2
+      ) {
+        if (newPieceOrder > levelNumber * levelNumber - 1) {
+          alternate++;
+          newPieceOrder = alternate;
         }
+
+        if (alternate != levelNumber) {
+          tmpColumns[newPieceOrder] = {
+            topValue: columns[kount],
+            bottomValue: columns[kount + 1],
+          };
+        }
+      }
+
+      /* patch :: the last element of the columns its missing */
+      tmpColumns[levelNumber * levelNumber] = {
+        topValue: columns[levelNumber * levelNumber * 2 - 2],
+        bottomValue: columns[levelNumber * levelNumber * 2 - 1],
+      };
+
+      tmpColumns.pop();
+
+      for (let k in tmpRows) {
+        result = _.merge(tmpRows, tmpColumns);
+      }
+
+      return result;
+    },
+    generatePieces(world, path, array) {
+      let actualPiece;
+
+      for (let k = 1; k <= world * world; k++) {
+        /* -- creating piece -- */
+        actualPiece = this.addNode({
+          parentNode: path,
+          type: "a",
+          attributes: [
+            { attribute: "href", value: "javascript:void(0)" },
+            { attribute: "class", value: "piece_" + k + " piece" },
+          ],
+        });
+
+        /* -- creating parts of the piece -- */
+
+        this.addNode({
+          parentNode: actualPiece,
+          type: "div",
+          txt: array[world][k - 1][0],
+          attributes: [{ attribute: "class", value: "top" }],
+        });
+        this.addNode({
+          parentNode: actualPiece,
+          type: "div",
+          txt: array[world][k - 1][1],
+          attributes: [{ attribute: "class", value: "right" }],
+        });
+        this.addNode({
+          parentNode: actualPiece,
+          type: "div",
+          txt: array[world][k - 1][2],
+          attributes: [{ attribute: "class", value: "bottom" }],
+        });
+        this.addNode({
+          parentNode: actualPiece,
+          type: "div",
+          txt: array[world][k - 1][3],
+          attributes: [{ attribute: "class", value: "left" }],
+        });
+      }
+      return 0;
+    },
+    generateLevels(begin, end) {
+      let actualWorld, puzzleSolved, puzzleUnsolved, medal, btn;
+      for (let levelNumber = begin; levelNumber <= end; levelNumber++) {
+        if (typeof localStorage.getItem("saveData9") !== "string") {
+          this.winCounter.push(levelNumber);
+        }
+
+        /* -- creating buttons for link to a level -- */
+        btn = this.addNode({
+          parentNode: document.getElementById("chooseLevel"),
+          type: "button",
+          attributes: [
+            { attribute: "id", value: "btn_" + levelNumber },
+            { attribute: "type", value: "button" },
+          ],
+        });
+
+        this.addNode({
+          parentNode: btn,
+          type: "canvas",
+          attributes: [
+            { attribute: "width", value: "150px" },
+            { attribute: "height", value: "150px" },
+          ],
+        });
+
+        this.addNode({
+          parentNode: btn,
+          type: "p",
+          txt: "level " + levelNumber,
+        });
+
+        this.makeShape({
+          id: "#btn_" + levelNumber + " canvas",
+          p1Radius: 48,
+          p1Sides: levelNumber,
+          colors: this.medalColors[levelNumber],
+        });
+
+        /* -- creating the base of the level -- */
+        actualWorld = this.addNode({
+          parentNode: document.getElementById("levels"),
+          type: "section",
+          attributes: [
+            { attribute: "id", value: "world_" + levelNumber },
+            { attribute: "class", value: "ND" },
+          ],
+        });
+
+        this.addNode({
+          parentNode: actualWorld,
+          type: "h1",
+          txt: "Level " + levelNumber,
+          attributes: [{ attribute: "class", value: "levelName" }],
+        });
+
+        medal = this.addNode({
+          parentNode: actualWorld,
+          type: "div",
+          attributes: [{ attribute: "class", value: "medal" }],
+        });
+
+        this.addNode({
+          parentNode: medal,
+          type: "canvas",
+          attributes: [
+            { attribute: "class", value: "body" },
+            { attribute: "width", value: "300px" },
+            { attribute: "height", value: "300px" },
+          ],
+        });
+
+        this.addNode({
+          parentNode: medal,
+          type: "canvas",
+          attributes: [
+            { attribute: "class", value: "ribbon" },
+            { attribute: "width", value: "420px" },
+            { attribute: "height", value: "95px" },
+          ],
+        });
+
+        this.addNode({
+          parentNode: medal,
+          type: "span",
+          attributes: [
+            { attribute: "class", value: "number " + "n" + levelNumber },
+          ],
+        });
+
+        this.addNode({
+          parentNode: medal,
+          type: "span",
+          txt: "Congratulations",
+          attributes: [
+            {
+              attribute: "class",
+              value: "winText " + this.medalColors[levelNumber].winText,
+            },
+          ],
+        });
+
+        this.addNode({
+          parentNode: medal,
+          type: "span",
+          attributes: [{ attribute: "class", value: "regla a" }],
+        });
+
+        this.addNode({
+          parentNode: medal,
+          type: "span",
+          attributes: [{ attribute: "class", value: "regla b" }],
+        });
+
+        this.makeWheel({
+          id: "#world_" + levelNumber + " .medal .body",
+          p1Radius: 48,
+          p1Sides: 45,
+          p2Radius: 44,
+          circDistances: 35,
+          circRadius: 3,
+          nCirc: 12,
+          innerCircDiam: 70,
+          colors: this.medalColors[levelNumber],
+        });
+
+        this.makeRibbon({
+          id: "#world_" + levelNumber + " .medal .ribbon",
+          colors: this.medalColors[levelNumber],
+        });
+
+        /* -- creating rows and columns -- */
+        let rows = this.generateNumbers(levelNumber);
+        let columns = this.generateNumbers(levelNumber);
+
+        /* -- mixing rows and columns -- */
+        this.matrixSolved[levelNumber] = this.creatingPuzzle(
+          rows,
+          columns,
+          levelNumber
+        );
+        this.matrixSolved[levelNumber] = this.convertToArray(
+          this.matrixSolved[levelNumber]
+        );
+        let matrixTmp = this.matrixSolved[levelNumber].slice(0);
+        this.matrixUnsolved[levelNumber] = this.sortingArray(matrixTmp);
+
+        /* -- creating the base of the puzzle unsolved -- */
+        puzzleUnsolved = this.addNode({
+          parentNode: actualWorld,
+          type: "div",
+          attributes: [{ attribute: "class", value: "puzzle pUnsolved" }],
+        });
+        this.generatePieces(levelNumber, puzzleUnsolved, this.matrixUnsolved);
+
+        /* -- creating the base of the puzzle Solved -- */
+        puzzleSolved = this.addNode({
+          parentNode: actualWorld,
+          type: "div",
+          attributes: [{ attribute: "class", value: "puzzle pSolved" }],
+        });
+        this.generatePieces(levelNumber, puzzleSolved, this.matrixSolved);
+
+        this.matrixSolved[levelNumber] = _.flattenDeep(
+          this.matrixSolved[levelNumber]
+        ).join("");
+
+        /* -- creating arrow -- */
+        this.addNode({
+          parentNode: actualWorld,
+          type: "div",
+          attributes: [{ attribute: "class", value: "arrow back" }],
+        });
+
+        if (levelNumber % 4 == 0) {
+          this.ornamentDeco1(levelNumber);
+        } else if (levelNumber % 3 == 0) {
+          this.ornamentDeco2(levelNumber);
+        } else {
+          this.ornamentDeco3(levelNumber);
+        }
+      }
+
+      return 0;
+    },
+    giveMeYourClickAndBeAwesome(query, fn) {
+      let clickMe = document.querySelectorAll(query);
+      for (let k = 0; k < clickMe.length; k++) {
+        clickMe.item(k).onclick = fn;
+      }
+    },
+    checkWonLevels(start, end) {
+      for (let levelNumber = start; levelNumber <= end; levelNumber++) {
+        if (this.winCounter.indexOf(levelNumber) == -1) {
+          this.winLevel(levelNumber);
+        }
+      }
+    },
+    checkBk(query) {
+      for (let actualColor = 0; actualColor < 10; actualColor++) {
+        ((color) => {
+          let setBk = (element, index, array) => {
+            element.style.backgroundColor = this.bkColors[color][0];
+            element.style.color = this.bkColors[color][1];
+          };
+
+          let numberArray = Sizzle(
+            query + " div:not(.pUnsolved):contains(" + color + ")"
+          );
+
+          numberArray.forEach(setBk);
+        })(actualColor);
+      }
+    },
+    winLevel(actualLevel) {
+      let tmpIndex = _.findIndex(this.winCounter, function (number) {
+          return number == actualLevel;
+        }),
+        actualWorld = document
+          .getElementById("world_" + actualLevel)
+          .getElementsByClassName("puzzle"),
+        medal = document
+          .getElementById("world_" + actualLevel)
+          .getElementsByClassName("medal")[0],
+        hiddenArrow = document
+          .getElementById("chooseLevel")
+          .getElementsByClassName("right")[0],
+        body = medal.getElementsByClassName("body")[0],
+        regla_A = medal.getElementsByClassName("regla a")[0],
+        regla_B = medal.getElementsByClassName("regla b")[0],
+        number_txt = medal.getElementsByClassName("number")[0],
+        ribbon = medal.getElementsByClassName("ribbon")[0],
+        ribbon_txt = medal.getElementsByClassName("winText")[0];
+
+      _.pull(this.winCounter, this.winCounter[tmpIndex]);
+      Velocity(actualWorld, { opacity: 0 }, { display: "none" }, 500);      
+      medal.style.display = "block";
+
+      Velocity(body, { rotateZ: 300, scale: 0.2 }, 0);
+      Velocity(
+        regla_A,
+        {
+          opacity: 0,
+          rotateZ: 45,
+          scale: 0.8,
+          translateX: -14,
+          translateY: -96,
+        },
+        0
+      );
+      Velocity(
+        regla_B,
+        {
+          opacity: 0,
+          rotateZ: -45,
+          scale: 0.8,
+          translateX: -14,
+          translateY: -96,
+        },
+        0
+      );
+      Velocity(ribbon, { opacity: 0, scale: 0.8, translateY: 10 }, 0);
+      Velocity(ribbon_txt, { opacity: 0, translateY: 10 }, 0);
+      Velocity(number_txt, { opacity: 0, scale: 0.2 }, 0);
+
+      Velocity(
+        body,
+        { opacity: 1, rotateZ: 385, scale: 0.8 },
+        700,
+        function () {
+          Velocity(
+            regla_A,
+            {
+              opacity: 1,
+              rotateZ: 45,
+              scale: 0.8,
+              translateX: 0,
+              translateY: 0,
+            },
+            200
+          );
+          Velocity(
+            regla_B,
+            {
+              opacity: 1,
+              rotateZ: -45,
+              scale: 0.8,
+              translateX: 0,
+              translateY: 0,
+            },
+            200,
+            function () {
+              Velocity(ribbon, { opacity: 1, scale: 0.8, translateY: 0 }, 500);
+              Velocity(
+                ribbon_txt,
+                { opacity: 1, translateY: 0 },
+                500,
+                function () {
+                  Velocity(number_txt, { opacity: 1, scale: 1 }, 500);
+                  medal.className += " stopAnimation";
+                }
+              );
+            }
+          );
+        }
+      );
+
+      localStorage.setItem("saveData9", this.winCounter);
+
+      if (this.winCounter != 0) {
+        console.log("you beat level " + actualLevel);
+        console.log(
+          "you need to beat the level " +
+            this.winCounter +
+            " to win the whole game"
+        );
+      } else {
+        console.log("you win the whole game");
+        Velocity(hiddenArrow, "fadeIn", 0);
+      }
+    },
+    ornamentDeco1(actualLevel) {
+      let world = document.getElementById("world_" + actualLevel);
+      this.addNode({
+        parentNode: world,
+        type: "span",
+        attributes: [
+          { attribute: "class", value: "pencil caramel ornament a" },
+        ],
       });
 
-      main.checkBk(".pUnsolved");
-      main.checkWonLevels(3, 10);
-    })();
+      this.addNode({
+        parentNode: world,
+        type: "span",
+        attributes: [
+          { attribute: "class", value: "pencil redOrange ornament b" },
+        ],
+      });
+
+      this.addNode({
+        parentNode: world,
+        type: "span",
+        attributes: [
+          { attribute: "class", value: "pencil darkViolet ornament c" },
+        ],
+      });
+    },
+    ornamentDeco2(actualLevel) {
+      let world = document.getElementById("world_" + actualLevel);
+      this.addNode({
+        parentNode: world,
+        type: "span",
+        attributes: [{ attribute: "class", value: "pencil red ornament d" }],
+      });
+
+      this.addNode({
+        parentNode: world,
+        type: "img",
+        attributes: [
+          { attribute: "class", value: "ornament e" },
+          { attribute: "src", value: "img/cartabon.png" },
+        ],
+      });
+    },
+    ornamentDeco3(actualLevel) {
+      let world = document.getElementById("world_" + actualLevel);
+      this.addNode({
+        parentNode: world,
+        type: "span",
+        attributes: [
+          { attribute: "class", value: "pencil lightBlue ornament f" },
+        ],
+      });
+
+      this.addNode({
+        parentNode: world,
+        type: "span",
+        attributes: [{ attribute: "class", value: "pencil mint ornament g" }],
+      });
+    },
+  },
+
+  mounted() {
+    this.home = Sizzle("#home")[0];
+    this.rules = Sizzle("#rules")[0];
+    this.chooseLevel = Sizzle("#chooseLevel")[0];
+    this.finalStage = Sizzle("#final")[0];
+
+    if (typeof localStorage.getItem("saveData9") === "string") {
+      this.winCounter = localStorage.getItem("saveData9");
+    }
+
+    this.generateLevels(3, 10);
+
+    this.giveMeYourClickAndBeAwesome(".arrow.right", (e) => {
+      this.chooseLevel.classList.toggle("ND");
+      this.finalStage.classList.toggle("ND");
+    });
+
+    this.giveMeYourClickAndBeAwesome(".arrow.left", (e) => {
+      e.target.parentNode.classList.toggle("ND");
+      e.target.parentNode.previousSibling.classList.toggle("ND");
+    });
+
+    this.giveMeYourClickAndBeAwesome(".arrow.back", (e) => {
+      e.target.parentNode.classList.toggle("ND");
+      this.chooseLevel.classList.toggle("ND");
+    });
+
+    this.giveMeYourClickAndBeAwesome("#btn_instructions", (e) => {
+      this.rules.classList.toggle("ND");
+      this.home.classList.toggle("ND");
+    });
+
+    this.giveMeYourClickAndBeAwesome("#btn_chooseLevel", (e) => {
+      this.chooseLevel.classList.toggle("ND");
+      this.home.classList.toggle("ND");
+    });
+
+    this.giveMeYourClickAndBeAwesome("#rules button", (e) => {
+      this.rules.classList.toggle("ND");
+      this.home.classList.toggle("ND");
+    });
+
+    this.giveMeYourClickAndBeAwesome("#chooseLevel button", (e) => {
+      this.level = e.target.getAttribute("id").split("_")[1];
+      this.chooseLevel.classList.toggle("ND");
+      Sizzle(`#world_${this.level}`)[0].classList.toggle("ND");
+    });
+
+    this.giveMeYourClickAndBeAwesome(".piece", (e) => {
+      const pieceNumber = e.target
+        .getAttribute("class")
+        .split(" ")[0]
+        .split("_")[1];
+
+      if (this.saveStatus[this.level] != pieceNumber) {
+        this.clickStatus[this.level] = !this.clickStatus[this.level];
+
+        if (this.clickStatus[this.level] == true) {
+          this.saveStatus[this.level] = pieceNumber;
+          this.className += " selected";
+        } else {
+          const piece_A = `#world_${this.level} .piece_${parseInt(
+            this.saveStatus[this.level]
+          )}`;
+          const piece_B = `#world_${this.level} .piece_${parseInt(
+            pieceNumber
+          )}`;
+
+          let newClass = Sizzle(piece_A)[0].className.split(" ");
+          newClass.unshift();
+          newClass = newClass.join(" ");
+
+          Sizzle(piece_A)[0].className = newClass;
+
+          for (let k in this.positions) {
+            let a = Sizzle(piece_A + " ." + this.positions[k])[0].innerHTML,
+              b = Sizzle(piece_B + " ." + this.positions[k])[0].innerHTML;
+
+            Sizzle(piece_A + " ." + this.positions[k])[0].innerHTML =
+              this.matrixUnsolved[this.level][this.saveStatus[this.level] - 1][
+                k
+              ] = b;
+
+            Sizzle(piece_B + " ." + this.positions[k])[0].innerHTML =
+              this.matrixUnsolved[this.level][pieceNumber - 1][k] = a;
+          }
+
+          const tmpArrayA = _.uniq(this.matrixUnsolved[this.level]);
+          const unsolved = _.flattenDeep(tmpArrayA).join("");
+
+          if (this.matrixSolved[this.level] == unsolved) {
+            this.winLevel(this.level);
+          }
+
+          this.saveStatus[this.level] = "NaN";
+          this.checkBk("#world_" + this.level);
+        }
+      }
+    });
+
+    this.checkBk(".pUnsolved");
+    this.checkWonLevels(3, 10);
   },
 });
 </script>

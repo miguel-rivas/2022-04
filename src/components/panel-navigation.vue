@@ -171,6 +171,7 @@ export default Vue.extend({
           "stargazer",
           "soundboard",
           "journey",
+          "tetravex",
         ],
       },
       {
