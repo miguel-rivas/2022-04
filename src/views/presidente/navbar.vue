@@ -34,6 +34,10 @@ export default Vue.extend({
         route: "presidente-destapa",
         caption: "Destapa el Coro",
       },
+       {
+        route: "presidente-retrobrindis",
+        caption: "Retro Brindis",
+      },
     ],
   }),
 });

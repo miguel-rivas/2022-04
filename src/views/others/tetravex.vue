@@ -773,7 +773,7 @@ export default Vue.extend({
       }
     },
     ornamentDeco1(actualLevel) {
-      let world = document.getElementById("world_" + actualLevel);
+      const world = document.getElementById("world_" + actualLevel);
       this.addNode({
         parentNode: world,
         type: "span",
@@ -799,7 +799,7 @@ export default Vue.extend({
       });
     },
     ornamentDeco2(actualLevel) {
-      let world = document.getElementById("world_" + actualLevel);
+      const world = document.getElementById("world_" + actualLevel);
       this.addNode({
         parentNode: world,
         type: "span",
@@ -816,7 +816,7 @@ export default Vue.extend({
       });
     },
     ornamentDeco3(actualLevel) {
-      let world = document.getElementById("world_" + actualLevel);
+      const world = document.getElementById("world_" + actualLevel);
       this.addNode({
         parentNode: world,
         type: "span",

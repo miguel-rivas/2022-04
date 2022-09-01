@@ -96,6 +96,7 @@ export default Vue.extend({
           "presidente-verano-loader",
           "presidente-verano-filter",
           "presidente-destapa",
+          "presidente-retrobrindis",
         ],
       },
       {

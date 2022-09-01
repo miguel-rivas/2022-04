@@ -1,0 +1,626 @@
+#{mr-section(presidente-retrobrindis)} {
+  $size: 150px;
+  $sansSerif: helvetica, verdana, sans-serif;
+  $customFont: "Oswald", $sansSerif;
+  $minScreenSize: 760px;
+  $orange: #febc3d;
+  $greenline: #117612;
+  $greenbkbtn: #137111;
+  $greenbkbtn2: #30b048; //subir foto
+  $greentextbtn: #003408;
+  $bk_btn: #0a310c; //escoge un logro
+  $txt_btn: #fdee37;
+  $facebook: #0069ba;
+  $twitter: #0097ee;
+
+  /* ------------------------------------------------------------- */
+  background: url(get-zapp("img/presidente/retrobrindis/bkg_center_glare.png")) center;
+
+  * {
+    text-transform: uppercase;
+  }
+
+  a,
+  button {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .btn {
+    font-family: $customFont;
+    font-size: 11pt;
+    color: #266502;
+    background-color: #f4da00;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.43);
+    text-transform: uppercase;
+    padding: 7px 28px;
+    &:hover {
+      color: #f4da00 !important;
+      background-color: #266502;
+    }
+  }
+
+  .highLight {
+    font-family: $customFont;
+    font-size: 10pt;
+    color: #fff;
+    background-color: #026206;
+    text-transform: uppercase;
+    padding: 3px 0;
+    width: 114px;
+    display: inline-block;
+    transition: 500ms;
+    text-align: center;
+
+    &:hover {
+      color: #026206;
+      background-color: #fff;
+    }
+  }
+
+  .limit {
+    max-width: 1110px;
+    margin: auto;
+  }
+
+  .table {
+    height: 100%;
+    font-size: 0;
+
+    .layer {
+      position: relative;
+    }
+    .cell {
+      vertical-align: top;
+      height: 0;
+      position: absolute;
+      top: 40%;
+      width: 50%;
+      box-sizing: border-box;
+      &.right {
+        right: 0;
+      }
+      &.left {
+        left: 0;
+      }
+    }
+    .img {
+      height: 100%;
+      top: 0;
+    }
+  }
+
+  #mainSite {
+    padding: 3rem 0 0;
+    a,
+    button {
+      transition: 500ms;
+    }
+
+    nav {
+      position: relative;
+      text-align: center;
+      color: #fff;
+      z-index: 1;
+
+      a {
+        &:hover {
+          color: #e2f63b;
+        }
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      &.socialNetworks {
+        background-color: #134e29;
+        padding: 10px 0;
+        li {
+          font-size: 16pt;
+          margin: 0 56px;
+        }
+      }
+      &.desktopScreen {
+        background: #006805 url(get-zapp("img/presidente/retrobrindis/bar.jpg")) center no-repeat;
+        height: 62px;
+        border-top: 1px solid #019e07;
+        border-bottom: 1px solid #019e07;
+        font-size: 11pt;
+        img {
+          height: 100px;
+          position: relative;
+          top: -9px;
+          vertical-align: -60px;
+          transition: 200ms;
+          &:hover {
+            transform: rotate(10deg);
+          }
+        }
+        li {
+          margin: 0 9px;
+        }
+      }
+
+      &.mobileScreen {
+        background-color: #038308;
+        border-bottom: 1px solid #019e07;
+
+        .toggleMenu {
+          font-size: 27pt;
+          background-color: #006d1c;
+          width: 100%;
+          display: block;
+          padding: 5px 0;
+        }
+        ul {
+          box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.14);
+          display: none;
+        }
+        li {
+          display: block;
+          line-height: 2;
+        }
+      }
+
+      &.socialNetworks,
+      &.desktopScreen {
+        li {
+          display: inline-block;
+        }
+      }
+
+      &.mobileScreen,
+      &.desktopScreen {
+        font-family: $customFont;
+        text-transform: uppercase;
+      }
+    }
+
+    footer {
+      font-family: $sansSerif;
+      text-align: center;
+      background-color: #134e29;
+      color: #fff;
+      font-size: 8pt;
+      text-transform: uppercase;
+      padding: 15px 0px;
+      position: relative;
+
+      img,
+      em {
+        display: block;
+      }
+      em {
+        margin: auto;
+        font-size: 10pt;
+      }
+      img {
+        margin: 5px auto;
+      }
+    }
+  }
+
+  .tabSection {
+    .tabs {
+      section {
+        display: none;
+        &.active {
+          display: block;
+        }
+      }
+    }
+  }
+
+  /* ------------------------- Media Query ------------------------- */
+
+  @media screen and (max-width: $minScreenSize) {
+    .desktopScreen {
+      display: none;
+    }
+
+    #mainSite {
+      nav {
+        &.socialNetworks {
+          li {
+            margin: 0 30px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $minScreenSize) {
+    .mobileScreen {
+      display: none;
+    }
+  }
+
+  /* ------------------------------------------------------------- */
+
+  #mainSite {
+    background: url(get-zapp("img/presidente/retrobrindis/bkg_scanlines_diagonal.png")) center;
+    nav {
+      .sNetwork {
+        margin-left: 80px !important;
+      }
+      &.desktopScreen {
+        height: 37px;
+        img {
+          height: 53px;
+          top: 5px;
+          vertical-align: -26px;
+        }
+      }
+    }
+
+    header {
+      max-width: 900px;
+      margin-inline: auto;
+      img {
+        margin: auto;
+        display: block;
+      }
+    }
+
+    section {
+      display: none;
+      max-width: 1030px;
+      margin-inline: auto;
+      text-align: center;
+      min-height: calc(100vh - 569px);
+
+      &.active {
+        display: block;
+      }
+    }
+
+    h1 {
+      font-family: $customFont;
+      font-size: 14pt;
+      color: $orange;
+      font-weight: 300;
+      letter-spacing: 2pt;
+      text-align: center;
+      margin: 0;
+    }
+    h2 {
+      font-family: $customFont;
+      font-size: 40pt;
+      color: $orange;
+      font-weight: 300;
+      letter-spacing: 2pt;
+      text-align: center;
+      margin: 60px 0 0;
+      display: block;
+    }
+    p {
+      font-family: $customFont;
+      font-size: 17pt;
+      color: #fff;
+      font-weight: 300;
+      letter-spacing: 2pt;
+      text-align: center;
+      margin: 0;
+    }
+    hr {
+      border-color: $greenline;
+      border-width: 1px;
+      border-style: solid;
+      width: 70%;
+    }
+    .mergeBox {
+      position: relative;
+      overflow: hidden;
+      .profile {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 0;
+        width: 200px;
+        transform: rotate(0deg);
+      }
+      .marco {
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        opacity: 0.8;
+      }
+    }
+    .rightColumn,
+    .leftColumn {
+      display: inline-block;
+      vertical-align: top;
+      padding: 10px;
+    }
+
+    .rightColumn {
+      text-align: left;
+      width: 275px;
+      margin-left: 30px;
+
+      hr {
+        width: 100%;
+      }
+      p {
+        color: $orange;
+        font-size: 10pt;
+        letter-spacing: 1pt;
+        text-align: left;
+      }
+      button {
+        font-family: $customFont;
+        font-size: 14pt;
+        display: block;
+        width: 100%;
+        background: $greenbkbtn2;
+        color: $greentextbtn;
+        padding: 5px 0;
+        margin: 20px 0;
+        box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.41);
+      }
+    }
+    .leftColumn {
+      border: 2px solid #028b1f;
+    }
+    #setPicture .btnController {
+      border: 2px solid #04bc04;
+      color: #04bc04;
+      display: inline-block;
+      background: transparent;
+      width: 45px;
+      height: 45px;
+      text-align: center;
+      hr {
+        margin: 0;
+      }
+    }
+    .rotZ {
+      transform: rotate(-9deg);
+      display: block;
+    }
+    button {
+      background-color: transparent;
+      border: none;
+      transition: 500ms;
+      outline: none;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+    .hlight {
+      background-color: $greenbkbtn;
+      color: #fff;
+      padding: 5px 20px;
+      font-family: $customFont;
+      font-size: 11pt;
+      letter-spacing: 2pt;
+      font-weight: 300;
+      display: inline-block;
+    }
+    .hlight2 {
+      background-color: $bk_btn;
+      color: $txt_btn;
+      padding: 5px 20px;
+      font-family: $customFont;
+      font-size: 14pt;
+      letter-spacing: 2pt;
+      font-weight: 300;
+      display: inline-block;
+    }
+  }
+
+  #conectarFB {
+    button {
+      margin: 5rem auto;
+      display: block;
+    }
+  }
+  #chooseSex {
+    margin-bottom: 6rem;
+    .hlight {
+      margin: 70px auto 13px;
+    }
+  }
+  #chooseYear {
+    font-size: 0;
+    hr {
+      width: 100%;
+    }
+    h1 {
+      margin-top: -20px;
+    }
+    .hlight2 {
+      margin: 30px auto 50px;
+      box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.41);
+    }
+    .options {
+      margin-bottom: 130px;
+    }
+    a {
+      display: inline-block;
+      width: 235px;
+      height: 310px;
+      vertical-align: top;
+      border: 1px solid rgba(11, 230, 0, 0);
+      margin: 20px 0;
+      padding: 0 7px;
+
+      &:hover {
+        border: 1px solid #0be600;
+      }
+
+      &.a1973 {
+        img {
+          bottom: -10px;
+        }
+      }
+
+      div {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 203px;
+        margin-bottom: 10px;
+      }
+      img {
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+      }
+      span {
+        font-size: 14pt;
+        color: #fff;
+        font-family: $customFont;
+        letter-spacing: 2pt;
+        font-weight: 300;
+        margin-top: 10px;
+      }
+      p {
+        font-size: 9pt;
+        color: $orange;
+        letter-spacing: 1pt;
+      }
+    }
+  }
+
+  #uploadPicture,
+  #setPicture,
+  #sharePicture {
+    hr {
+      width: 100%;
+      margin: 20px 0;
+    }
+
+    hr:last-child {
+      margin-bottom: 110px;
+    }
+  }
+
+  #sharePicture {
+    .btn_facebook {
+      background: $facebook !important;
+      color: #fff !important;
+    }
+    .btn_twitter {
+      background: $twitter !important;
+      color: #fff !important;
+    }
+    .postal_marco {
+      position: relative;
+      z-index: 0;
+    }
+
+    .postal {
+      position: absolute;
+      z-index: 1;
+      transform: rotate(-7deg);
+      top: 99px;
+      left: 59px;
+      width: 505px;
+      height: 344px;
+      background: #222 url(get-zapp("img/presidente/retrobrindis/postal.png")) center;
+      background-size: cover;
+    }
+
+    .logo_brindis {
+      background: #005a12 url(get-zapp("img/presidente/retrobrindis/logo.png")) center no-repeat;
+      background-size: 89% auto;
+      position: absolute;
+      display: block;
+      width: 200px;
+      height: 200px;
+      box-shadow: -6px 2px 3px rgba(0, 0, 0, 0.6);
+      transform: rotate(-7deg);
+      bottom: 0;
+      right: 58px;
+      z-index: 2;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+
+    .fecha {
+      color: #fee3b7;
+      position: absolute;
+      top: 32px;
+      left: 119px;
+      z-index: 2;
+      letter-spacing: 8pt;
+    }
+  }
+
+  .vdGallery {
+    position: relative;
+    font-size: 0;
+    display: block;
+
+    &:before {
+      font-size: 32pt;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -16px;
+      margin-top: -16px;
+    }
+  }
+
+  nav {
+    &.socialNetworks {
+      display: none;
+    }
+  }
+
+  /* ------------------------- Media Query ------------------------- */
+
+  @media screen and (max-width: 750px) {
+    nav {
+      &.socialNetworks {
+        display: block;
+      }
+    }
+
+    #mainSite {
+      h1 {
+        font-size: 9pt;
+      }
+      p {
+        font-size: 11pt;
+      }
+      header {
+        img {
+          width: 230px;
+        }
+      }
+      .mergeBox {
+        img {
+          width: 265px;
+        }
+      }
+    }
+    #sharePicture {
+      .logo_brindis {
+        width: 87px;
+        height: 78px;
+        right: 26px;
+      }
+      .postal {
+        top: 49px;
+        left: 36px;
+        width: 215px;
+        height: 151px;
+      }
+      .fecha {
+        font-size: 8pt;
+        top: 20px;
+        left: 54px;
+        letter-spacing: 2pt;
+      }
+    }
+  }
+}

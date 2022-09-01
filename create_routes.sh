@@ -77,6 +77,7 @@ files=(
   "presidente-verano-filter"
   "presidente-verano-loader"
   "presidente-destapa"
+  "presidente-retrobrindis"
 
   "soundboard"
   "spirit"
@@ -99,5 +100,5 @@ for f in ${files[@]}; do
   rm -r -f -v ${f}.html
   echo "<script>
   window.location.replace('index.html?route=${f}&' + window.location.search.substring(1));
-</script>">>${f}.html
+</script>" >>${f}.html
 done

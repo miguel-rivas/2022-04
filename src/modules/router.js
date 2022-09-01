@@ -99,6 +99,7 @@ import presidenteCarnavalLoaderView from '@/views/presidente/carnaval-loader.vue
 import presidenteCarnavalView from '@/views/presidente/carnaval-home.vue';
 import presidenteVeranoFilterView from '@/views/presidente/verano-filter.vue';
 import presidenteDestapaView from '@/views/presidente/destapa.vue';
+import presidenteRetrobrindisView from '@/views/presidente/retrobrindis.vue';
 
 import pixelptNavbarView from '@/views/ppt/navbar.vue';
 import pixelpt404View from '@/views/ppt/404.vue';
@@ -286,6 +287,14 @@ const routes = [
     },
   },
   {
+    name: 'presidente-retrobrindis',
+    path: '/presidente-retrobrindis',
+    components: {
+      workarea: presidenteRetrobrindisView,
+      navbar: presidenteNavbarView,
+    },
+  },
+  {
     name: 'presidente-verano-loader',
     path: '/presidente-verano-loader',
     components: {
@@ -300,7 +309,7 @@ const routes = [
       workarea: presidenteCarnavalLoaderView,
       navbar: presidenteNavbarView,
     },
-  },  
+  },
   {
     name: 'presidente-verano-filter',
     path: '/presidente-verano-filter',
