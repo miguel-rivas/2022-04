@@ -44,6 +44,7 @@ import Vue from "vue";
 import Velocity from "velocity-animate";
 import Sizzle from "sizzle";
 import _ from "lodash";
+import { getZapp } from "@/modules/helpers";
 
 export default Vue.extend({
   data: () => ({
@@ -810,7 +811,7 @@ export default Vue.extend({
         type: "img",
         attributes: [
           { attribute: "class", value: "ornament e" },
-          { attribute: "src", value: "img/cartabon.png" },
+          { attribute: "src", value: getZapp("img/tetravex/cartabon.png") },
         ],
       });
     },
