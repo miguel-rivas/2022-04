@@ -1,3 +1,5 @@
+@use "sass:math";
+
 #{mr-section(tetravex)} {
   $typo: "Monserrat", helvetica, sans-serif, verdana;
   $typo_2: "Amatic SC", helvetica, sans-serif, verdana;
@@ -407,8 +409,8 @@
 
     .right,
     .left {
-      margin-top: -$partSize/2;
-      margin-bottom: -$partSize/2;
+      margin-top: math.div(-$partSize, 2);
+      margin-bottom: math.div(-$partSize, 2);
       width: $partSize;
       height: $partSize;
       z-index: 2;
