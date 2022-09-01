@@ -288,13 +288,7 @@ import $ from "jquery";
 
 export default Vue.extend({
   mounted() {
-    const btn = {
-      next: $(".btn_next"),
-    };
-
-    /* --------- controladores --------- */
-
-    btn["next"].click(function () {
+    $(".btn_next").click(function () {
       var obj = $("#mainSite").find("section.active");
       obj.removeClass("active");
       obj.next().addClass("active");
