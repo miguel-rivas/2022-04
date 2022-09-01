@@ -187,7 +187,6 @@
     max-width: 560px;
     color: #fff;
     margin: 50px auto;
-    box-sizing: border-box;
     padding: 50px 35px;
 
     button {
@@ -389,7 +388,6 @@
   .piece {
     width: $widthPiece;
     height: $widthPiece;
-    box-sizing: border-box;
     margin: 0;
     display: inline-block;
     position: relative;
@@ -602,13 +600,11 @@
   .levelName {
     font: 38pt $typo_2;
     display: block;
-    position: absolute;
     width: 120px;
     height: 71px;
-    top: 0;
-    left: 40px;
     text-align: left;
     border-bottom: 3px dashed #888;
     color: #ff7a00;
+    margin: 0 0 1rem;
   }
 }

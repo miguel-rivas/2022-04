@@ -83,6 +83,7 @@ files=(
   "stargazer"
 
   "threejs"
+  "tetravex"
   "timeline"
 
   "ui"
