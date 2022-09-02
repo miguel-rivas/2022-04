@@ -2,8 +2,9 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 import ContactWorkareaView from '@/views/contact-workarea.vue';
-import helloView from '@/views/hello.vue';
 
+import helloView from '@/views/others/hello.vue';
+import hello2View from '@/views/others/hello2.vue';
 import OthersNavbarView from '@/views/others/navbar.vue';
 import tetravexView from '@/views/others/tetravex.vue';
 import SoundboardWorkareaView from '@/views/others/soundboard-workarea.vue';
@@ -122,6 +123,15 @@ const routes = [
     path: '/hello',
     components: {
       workarea: helloView,
+      navbar: OthersNavbarView,
+    },
+  },
+  {
+    name: 'hello2',
+    path: '/hello2',
+    components: {
+      workarea: hello2View,
+      navbar: OthersNavbarView,
     },
   },
   {

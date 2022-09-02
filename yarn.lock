@@ -1943,6 +1943,11 @@
   resolved "https://registry.npmjs.org/@fontsource/nunito/-/nunito-4.5.9.tgz"
   integrity sha512-HlCPb5MSCSEx5KhIYsIU6JqlOtvfFnTT2RB0Gcz3Pdht9rkShEYaYKVvlgYQV03+Eom8HUAYQJcDT5gaRbm6AQ==
 
+"@fontsource/orbitron@^4.2.2":
+  version "4.5.9"
+  resolved "https://registry.yarnpkg.com/@fontsource/orbitron/-/orbitron-4.5.9.tgz#0065dd05270df44d321cc7019ceb12b1e7eb04fb"
+  integrity sha512-quc+TWeZylfJzm+RqcPce/gWWULjNfr4WaiD9WSrpR24LL2HhdSArJrgeDIRp83zn+Cwn70OsAPZwINJSJ9wpw==
+
 "@fontsource/oswald@^4.2.2":
   version "4.5.9"
   resolved "https://registry.npmjs.org/@fontsource/oswald/-/oswald-4.5.9.tgz"

@@ -929,3 +929,23 @@ $degree: 20deg;
     transform: rotate(0deg);
   }
 }
+
+/* -------------------------------- hello2 */
+
+@keyframes hello2-saturn-rotation {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(10deg);
+  }
+}
+
+@keyframes hello2-wave {
+  from {
+    transform: translateY(0) rotateZ(2deg);
+  }
+  to {
+    transform: translateY(25px) translateX(-5px) rotateZ(5deg);
+  }
+}

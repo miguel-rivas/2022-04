@@ -31,6 +31,14 @@ export default Vue.extend({
         caption: "Capital 401",
       },
       {
+        route: "hello",
+        caption: "Hello",
+      },
+      {
+        route: "hello2",
+        caption: "Hello 2",
+      },
+      {
         route: "journey",
         caption: "Journey",
       },

@@ -173,6 +173,8 @@ export default Vue.extend({
           "soundboard",
           "journey",
           "tetravex",
+          "hello",
+          "hello2",
         ],
       },
       {
