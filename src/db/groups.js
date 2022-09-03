@@ -1,4 +1,4 @@
-import { toolEnum } from "@/enums/tools";
+import { tool, toolEnum } from "@/enums/tools";
 import { client } from "@/enums/clients";
 import { Group, Children, Position, Preview } from "@/classes/project";
 
@@ -41,8 +41,26 @@ const groups = [
       new Children(client.itesa, "2008/12/05"),
     ],
     ["group", "location"],
-    "itesa",
-    new Position(-2269, -671)
+    "Computer Science, Highschool",
+    new Position(-2269, -671),
+    [
+      tool.html,
+      tool.css,
+      tool.javascript,
+      tool.flash,
+      tool.fireworks,
+      tool.dreamweaver,
+      tool.pascal,
+      tool.c,
+      tool.vb,
+      tool.vfoxpro,
+      tool.bash,
+      tool.linux,
+      tool.excel,
+      tool.word,
+      tool.powerpoint,
+      tool.as2,
+    ],
   ),
 
   new Group(
@@ -117,9 +135,22 @@ const groups = [
       new Children(client.itla, "2012/11/26"),
       new Children(client.itla, "2013/03/21"),
     ],
-    ["group", "location"],
-    'itla',
+    ["group", "location", "resume"],
+    'Asociates of Art, Multimedia',
     new Position(-2511, -806),
+    [
+      "Digital Illustration",
+      "Visual Communication",
+      "Bitmap Graphics",
+      "Vector Graphics",
+      "Desktop Publishing",
+      "Digital Video",
+      "Website Creation",
+      "Flash Animation with Action Script",
+      "3D Graphics & Animation",
+      "Digital Audio",
+      "Branding",
+    ]
   ),
 
   new Group(
@@ -152,9 +183,13 @@ const groups = [
       new Children(client.itla, "2012/11/26"),
       new Children(client.itla, "2013/03/21"),
     ],
-    ["group", "location", "no-listing"],
-    'several',
+    ["group", "location", "no-listing", "resume"],
+    "Graphic Designer",
     new Position(-1945, -1000),
+    [
+      `Retouch pictures with ${tool.photoshop}`,
+      `Design yearbooks with ${tool.indesign} and ${tool.photoshop}`,
+    ],
   ),
 
   new Group(
@@ -174,9 +209,13 @@ const groups = [
       new Children(client.harinaBlanquita, "2013/06/27"),
       new Children(client.highschool, "2013/06/18"),
     ],
-    ["group", "location"],
-    'social',
+    ["group", "location", "resume"],
+    "Web Designer",
     new Position(-1945, -1000),
+    [
+      `Design applications UI with ${tool.illustrator}.`,
+      `Design social media assets with ${tool.illustrator}, ${tool.photoshop} and ${tool.indesign}.`,
+    ],
   ),
 
   new Group(
@@ -238,9 +277,16 @@ const groups = [
       new Children(client.apap, "2015/11/12"),
       new Children(client.presidente, "2015/12/16"),
     ],
-    ["group", "location"],
-    'capital',
+    ["group", "location", "resume"],
+    "Frontend Developer",
     new Position(-1380, -856),
+    [
+      `Build applications with ${tool.pug}, ${tool.sass}, ${tool.jQuery} on a ${tool.php} environment with ${tool.grunt}.`,
+      `Create wireframes and users flow with ${tool.illustrator}.`,
+      `Collaborate with Backend Developers, Designers and Project Managers to improve usability.`,
+      `Animate ad banners for websites with ${tool.flash}.`,
+      `Create motion graphics for social media with ${tool.flash}.`,
+    ],
   ),
 
   new Group(
@@ -267,9 +313,13 @@ const groups = [
       new Children(client.voxel, "2016/06/30"),
       new Children(client.drLogic, "2016/02/22"),
     ],
-    ["group", "location"],
-    'pixel',
+    ["group", "location", "resume"],
+    "Frontend Developer",
     new Position(-804, -1097),
+    [
+      `Design and develop applications with ${tool.haml}, ${tool.sass}, ${tool.bootstrap}, ${tool.jQuery}/${tool.react} on a ${tool.rails} environment with ${tool.webpack}.`,
+      `Collaborate with Full Stack Developers and Project Managers to improve usability.`,
+    ],
   ),
 
   new Group(
@@ -291,9 +341,12 @@ const groups = [
       new Children(client.delJardin, "2013/12/06"),
       new Children(client.descubria, "2014/01/14"),
     ],
-    ["group", "location"],
-    'avante',
+    ["group", "location", "resume"],
+    "Web Designer",
     new Position(-1501, -1170),
+    [
+      `Design and build applications with ${tool.html}, ${tool.css}, ${tool.jQuery} on a ${tool.php} environment.`,
+    ],
   ),
 
   new Group(
@@ -315,11 +368,15 @@ const groups = [
       new Children(client.plantTherapy, "2017/09/20"),
       new Children(client.plantTherapy, "2017/12/01"),
     ],
-    ["group", "location"],
-    'plantTherapy',
+    ["group", "location", "resume"],
+    "Graphic Web Designer",
     new Position(-1230, -515),
+    [
+      `Build prototypes and landing pages with ${tool.pug}, ${tool.sass}, ${tool.jQuery} and ${tool.miva}.`,
+      `Maintain and optimize the website.`,
+      `Create wireframes and users flow with ${tool.illustrator}.`,
+    ],
   ),
-
 
   new Group(
     "2021/03/29",
@@ -370,9 +427,14 @@ const groups = [
       new Children(client.enovational, "2018/09/04"),
       new Children(client.enovational, "2019/01/01"),
     ],
-    ["group", "location"],
-    'enovational',
+    ["group", "location", "resume"],
+    "Frontend Developer",
     new Position(-2368, -299),
+    [
+      `Build government apps with ${tool.html}/${tool.slim}, ${tool.sass}, ${tool.bootstrap} and ${tool.jQuery}/${tool.vue} on a ${tool.rails} environment with ${tool.webpack}.`,
+      `Make sure applications are following conventions and extending them according to the complexity of the project and frameworks being used.`,
+      `Collaborate with UI/UX Designers, Full Stack Developers, Project Managers, QA Testers and Business Analysts to improve usability.`,
+    ],
   ),
 ];
 

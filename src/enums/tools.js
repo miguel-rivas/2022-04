@@ -67,7 +67,7 @@ export const tool = {
   inkscape: "Inkscape",
   scribus: "Scribus",
   sk1: "SK1",
-  fireworks: "Fireworks",
+  fireworks: "Adobe Fireworks",
   corelDraw: "Corel Draw",
   autocad: "Autocad",
   gimp: "Gimp",

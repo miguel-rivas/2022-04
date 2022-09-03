@@ -3,13 +3,13 @@
   modal(:ctaCaption="$t('map.modal.removeCTA')")
     template(v-slot:header)
       h1(v-if="modal.data.title") {{ modal.data.title }}
-      h2(v-if="modal.data.description") {{ $t(modal.data.description) }}
+      h2(v-if="modal.data.jobTitle") {{ modal.data.jobTitle }}
       h3(v-if="modal.data.turingDate")
         time {{ modal.data.turingDate }}
 
     template(v-slot:body)
       ul.list(v-if="modal.data.list.length > 0")
-        template(v-for="(item, index) in $t(modal.data.list)")
+        template(v-for="(item, index) in modal.data.list")
           li(:key="`locationList${index}`") {{ item }}
       ul.skills(v-if="modal.data.tools.length > 0")
         template(v-for="(item, index) in modal.data.tools")

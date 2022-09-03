@@ -43,7 +43,7 @@ export class Group {
   list;
   position;
 
-  constructor(date, client, tools, image, children, filter = [], description, position) {
+  constructor(date, client, tools, image, children, filter = [], jobTitle, position, list) {
     this.date = date;
     this.title = client;
     this.turingDate = turingDate(date);
@@ -53,8 +53,8 @@ export class Group {
     this.children = children;
     this.filter = filter;
     this.id = getNewID(client, date);
-    this.description = `map.modal.${description}.position`;
-    this.list = `map.modal.${description}.summary`;
+    this.jobTitle = jobTitle;
+    this.list = list;
     this.position = position
   }
 }

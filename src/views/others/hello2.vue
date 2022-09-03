@@ -4,7 +4,7 @@ nn-scroll-area(color="royal-purple", horizontal="false")
     img.flyObj.spaceship(:src="getZapp('img/hello2/spaceship.png')")
     h1
       | Hello
-      strong {{ params.name }}
+      strong {{ params.name || "human" }}
 
   main
     section.planets
@@ -60,13 +60,11 @@ nn-scroll-area(color="royal-purple", horizontal="false")
 <script>
 import Vue from "vue";
 import { letter } from "@/db/hello";
-import { user } from "@/db/user";
 import { mapGetters } from "vuex";
 
 export default Vue.extend({
   data: () => ({
-    letter,
-    user,
+    letter
   }),
   computed: {
     ...mapGetters({

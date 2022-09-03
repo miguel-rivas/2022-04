@@ -98,6 +98,7 @@ export const groupsDBObj = uncompressGroupsDBtoJSON(rawGroupsDB);
 export const groupsDBList = Object.values(groupsDBObj).sort(sortByDate);
 
 export const locationsDBList = groupsDBList.filter((item) => item.filter.includes("location"));
+export const resumeDBList = groupsDBList.filter((item) => item.filter.includes("resume"));
 export const allDBObj = { ...projectsDBObj, ...groupsDBObj };
 export const allDBListVisible = Object.values(allDBObj).filter((item) => !item.filter.includes("no-listing")).sort(sortByDate);
 export const allDBListWithImages = Object.values(allDBObj).filter((item) => item.image).sort(sortByDate);
