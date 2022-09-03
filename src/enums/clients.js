@@ -29,4 +29,5 @@ export const client = {
   codepen: "Codepen",
   studioSeveral: "Studio Several",
   itesa: "ITESA",
+  teamUp: "TeamUp",
 };
