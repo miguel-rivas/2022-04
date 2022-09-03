@@ -2,7 +2,7 @@ export const client = {
   presidente: "Cerveza Presidente",
   drLogic: "DrLogic",
   descubria: "Descubria",
-  capitalDBG: "Capital DBG",
+  capitalDBG: "Capital",
   miguelRivas: "Miguel Rivas",
   pepsi: "Pepsi",
   redRock: "Red Rock",

@@ -209,7 +209,7 @@ const groups = [
       new Children(client.harinaBlanquita, "2013/06/27"),
       new Children(client.highschool, "2013/06/18"),
     ],
-    ["group", "location" ],
+    ["group", "location"],
     "Web Designer",
     new Position(-1945, -1000),
     [
@@ -254,7 +254,7 @@ const groups = [
       new Children(client.harinaBlanquita, "2013/06/27"),
       new Children(client.highschool, "2013/06/18"),
     ],
-    ["resume"],
+    ["resume", "no-listing"],
     "Graphic Designer / Web Designer",
     undefined,
     [
@@ -499,7 +499,7 @@ const groups = [
       toolEnum.storybook,
       toolEnum.figma,
     ],
-    undefined,
+    new Preview("teamup"),
     [],
     ["group", "location", "resume"],
     "Frontend Developer",
