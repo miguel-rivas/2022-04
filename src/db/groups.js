@@ -505,7 +505,7 @@ const groups = [
     "Frontend Developer",
     undefined,
     [
-      `Develop tools that improve frontend development productivity and minimize developer friction`,
+      `Develop tools that improve frontend development productivity and minimize developer friction.`,
     ],
   ),
 ];
