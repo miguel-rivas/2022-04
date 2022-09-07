@@ -4,7 +4,7 @@
     <nn-row class="mr-app">
       <panel-navigation />
 
-      <template v-if="hasPanel">
+      <template v-if="hasPanel && !fullscreen">
         <nn-column class="panel" :size="panel ? panelSize[0] : '0'">
           <router-view name="panel" />
         </nn-column>
@@ -23,7 +23,10 @@
 
       <nn-column :size="workareaSize">
         <nn-row class="nano-content">
-          <nn-column size="100%" class="mr-secondary-navbar" v-if="hasNavbar">
+          <nn-column
+          size="100%"
+          class="mr-secondary-navbar"
+          v-if="hasNavbar && !fullscreen">
             <router-view name="navbar" />
           </nn-column>
           <nn-column size="100%" class="mr-workarea">
@@ -55,12 +58,17 @@ export default Vue.extend({
       theme: "getTheme",
       panel: "getPanelVisibility",
       panelSize: "getPanelSize",
+      fullscreen: "getFullscreen",
     }),
     sectionName() {
       return `section-${this.$route.name}`;
     },
     classes() {
-      return [this.sectionName, this.theme ? "nn-light" : "nn-dark"];
+      return [
+        this.sectionName,
+        this.theme ? "nn-light" : "nn-dark",
+        { "mr-fullscreen": this.fullscreen },
+      ];
     },
     hasPanel() {
       return this.$route.matched[0].components.panel !== undefined;
@@ -69,9 +77,9 @@ export default Vue.extend({
       return this.$route.matched[0].components.navbar !== undefined;
     },
     workareaSize() {
-      if (this.panel && this.hasPanel) {
+      if (this.panel && this.hasPanel && !this.fullscreen) {
         return this.panelSize[1];
-      } else if (this.hasPanel) {
+      } else if (this.hasPanel && !this.fullscreen) {
         return "100%-50-35";
       } else {
         return "100%-50";

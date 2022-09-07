@@ -11,6 +11,10 @@ export default Vue.extend({
   data: () => ({
     links: [
       {
+        route: "home",
+        caption: "Home",
+      },
+      {
         route: "mineros",
         caption: "Mineros",
       },

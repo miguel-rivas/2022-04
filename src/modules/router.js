@@ -19,6 +19,7 @@ import StargazerPanelView from '@/views/others/stargazer-panel.vue';
 import ApapWorkareaView from '@/views/others/mineros.vue';
 import cssStudyView from '@/views/others/css-study.vue';
 import journeyView from '@/views/others/journey.vue';
+import homeView from '@/views/others/home.vue';
 
 import ColorsWorkareaView from '../views/popkern/colors-workarea.vue';
 import IconsWorkareaView from '../views/popkern/icons-workarea.vue';
@@ -117,6 +118,14 @@ const routes = [
   {
     path: '/',
     redirect: '/map',
+  },
+  {
+    name: 'home',
+    path: '/home',
+    components: {
+      workarea: homeView,
+      navbar: OthersNavbarView,
+    },
   },
   {
     name: 'hello',

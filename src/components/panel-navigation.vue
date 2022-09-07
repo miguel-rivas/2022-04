@@ -37,10 +37,19 @@
             color="gold-tips"
             size="md"
             mode="nav"
-            title="Toggle theme button"
+            title="Toggle theme"
             :glyph="theme ? 'sun-o' : 'moon-o'"
             @click="toggleValue('theme'), playSound()"
             :active="theme"
+          />
+          <btn
+            color="gold-tips"
+            size="md"
+            mode="nav"
+            title="Toggle Fullscreen"
+            :glyph="fullscreen ? 'compress' : 'expand'"
+            @click="toggleValue('fullscreen'), playSound()"
+            :active="fullscreen"
           />
         </nn-column>
       </nn-row>
@@ -175,6 +184,7 @@ export default Vue.extend({
           "tetravex",
           "hello",
           "hello2",
+          "home",
         ],
       },
       {
@@ -209,6 +219,7 @@ export default Vue.extend({
   computed: {
     ...mapGetters({
       theme: "getTheme",
+      fullscreen: "getFullscreen",
     }),
   },
   methods: {

@@ -14,6 +14,7 @@ export const store = new Vuex.Store({
     panel: false,
     panelSize: ['300', '100%-300-50-35'],
     theme: false,
+    fullscreen: false,
     fallBackIcons: false,
     params: {
       city: "berlin",
@@ -96,6 +97,7 @@ export const store = new Vuex.Store({
     getGridSize: state => state.selection.pixelState.gridSize,
     getPanelVisibility: state => state.panel,
     getPanelSize: state => state.panelSize,
+    getFullscreen: state => state.fullscreen,
     getTheme: state => state.theme,
     getTheme2014: state => state.selection.timeline.theme2014,
     getTheme2016: state => state.selection.timeline.theme2016,
