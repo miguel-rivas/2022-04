@@ -120,8 +120,8 @@ const routes = [
     redirect: '/map',
   },
   {
-    name: 'home',
-    path: '/home',
+    name: 'weather',
+    path: '/weather',
     components: {
       workarea: homeView,
       navbar: OthersNavbarView,

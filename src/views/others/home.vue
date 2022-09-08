@@ -1,14 +1,23 @@
 <template>
   <nn-scroll-area color="royal-purple">
     <img
+      v-if="weather"
       class="background"
       :src="getAsset(weather)"
       :alt="getDescription(weather)"
     />
     <div class="content">
-      <time v-if="time">{{ time.c.hour }}:{{ time.c.minute }}</time
+      <time class="time" v-if="time"
+        >{{ time.c.hour }}:{{ time.c.minute < 10 ? "0" : ""
+        }}{{ time.c.minute }}
+        <small class="date" v-if="time && weekday">
+          {{ weekday }}, {{ time.c.month }}/{{ time.c.day }}</small
+        >
+      </time>
+
+      <span v-if="degree" class="temperature"
+        >{{ degree }}<small>°f</small></span
       >
-      <span>{{ degree }}°</span>
     </div>
   </nn-scroll-area>
 </template>
@@ -19,9 +28,11 @@ import { DateTime } from "luxon";
 
 export default Vue.extend({
   data: () => ({
+    interval: undefined,
     time: undefined,
     degree: undefined,
     weather: undefined,
+    weekday: undefined,
     weatherDic: {
       cloudy: "cloudy",
       dreary: "cloudy",
@@ -62,33 +73,42 @@ export default Vue.extend({
   }),
   methods: {
     getAsset(name) {
-      return name ? this.getZapp(`img/home/${name}.png`) : "";
+      return this.getZapp(`img/home/${name}.png`);
     },
     getDescription(name) {
-      return name ? `${name} Weather` : "";
+      return `${name} Weather`;
+    },
+    getData() {
+      fetch("https://weatherdbi.herokuapp.com/data/weather/Spokane,WA", {
+        mode: "cors",
+      })
+        .then(function (response) {
+          return response.text();
+        })
+        .then((text) => {
+          const request = JSON.parse(text);
+          this.time = DateTime.now().setZone("UTC-7");
+          this.degree = request.currentConditions.temp.f;
+          this.weather =
+            this.weatherDic[request.currentConditions.comment.toLowerCase()] ||
+            "sunny";
+          this.weekday = request.next_days[0].day;
+
+          if (this.weather === "sunny" && this.time.c.hour < 6) {
+            this.weather = "night";
+          }
+        })
+        .catch(function (error) {
+          log("Request failed", error);
+        });
     },
   },
   mounted() {
-    fetch("https://weatherdbi.herokuapp.com/data/weather/Spokane,WA", {
-      mode: "cors",
-    })
-      .then(function (response) {
-        return response.text();
-      })
-      .then((text) => {
-        const request = JSON.parse(text);
-
-        this.time = DateTime.now().setZone("UTC-7");
-        this.degree = request.currentConditions.temp.f;
-        this.weather =
-          this.weatherDic[request.currentConditions.comment.toLowerCase()] ||
-          "sunny";
-
-        // console.log(request);
-      })
-      .catch(function (error) {
-        log("Request failed", error);
-      });
+    this.getData();
+    this.interval = setInterval(() => this.getData(), 1000);
+  },
+  beforeDestroy() {
+    clearInterval(this.interval);
   },
 });
 </script>

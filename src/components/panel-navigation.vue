@@ -170,6 +170,7 @@ export default Vue.extend({
         tooltip: "Others",
         icon: "cubes",
         route: [
+          "weather",
           "mineros",
           "descubria",
           "capital",
@@ -184,7 +185,6 @@ export default Vue.extend({
           "tetravex",
           "hello",
           "hello2",
-          "home",
         ],
       },
       {
