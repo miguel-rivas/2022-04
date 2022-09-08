@@ -99,7 +99,7 @@ export default Vue.extend({
           }
         })
         .catch(function (error) {
-          log("Request failed", error);
+          console.log("Request failed", error);
         });
     },
   },
