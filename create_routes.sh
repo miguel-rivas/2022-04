@@ -91,6 +91,7 @@ files=(
 
   "voxel"
 
+  "weather"
   "window"
 
   "xwing"
