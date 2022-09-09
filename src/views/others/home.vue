@@ -30,9 +30,9 @@ export default Vue.extend({
   data: () => ({
     interval: undefined,
     time: undefined,
-    degree: undefined,
-    weather: undefined,
-    weekday: undefined,
+    degree: "--",
+    weather: "sunny",
+    weekday: "--",
     weatherDic: {
       cloudy: "cloudy",
       dreary: "cloudy",
@@ -78,6 +78,9 @@ export default Vue.extend({
     getDescription(name) {
       return `${name} Weather`;
     },
+    getTime() {
+      this.time = DateTime.now().setZone("UTC-7");
+    },
     getData() {
       fetch("https://weatherdbi.herokuapp.com/data/weather/Spokane,WA", {
         mode: "cors",
@@ -87,15 +90,25 @@ export default Vue.extend({
         })
         .then((text) => {
           const request = JSON.parse(text);
-          this.time = DateTime.now().setZone("UTC-7");
+          console.log(request);
+
           this.degree = request.currentConditions.temp.f;
           this.weather =
             this.weatherDic[request.currentConditions.comment.toLowerCase()] ||
             "sunny";
           this.weekday = request.next_days[0].day;
 
-          if (this.weather === "sunny" && this.time.c.hour < 6) {
+          if (this.weather === "sunny" && (this.time.c.hour < 6 || this.time.c.hour > 19)) {
             this.weather = "night";
+          }
+
+          if (
+            (this.weather === "sunny" ||
+              this.weather === "night" ||
+              this.weather === "cloudy") &&
+            request.currentConditions.wind.mile >= 21
+          ) {
+            this.weather = "windy";
           }
         })
         .catch(function (error) {
@@ -104,11 +117,15 @@ export default Vue.extend({
     },
   },
   mounted() {
+    this.getTime();
     this.getData();
-    this.interval = setInterval(() => this.getData(), 1000);
+    this.interval = {
+      weather: setInterval(() => this.getData(), 5000),
+      time: setInterval(() => this.getTime(), 1000),
+    };
   },
   beforeDestroy() {
-    clearInterval(this.interval);
+    clearInterval(this.interval.weather, this.interval.time);
   },
 });
 </script>
