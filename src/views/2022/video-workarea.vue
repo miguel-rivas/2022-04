@@ -6,9 +6,15 @@ nn-scroll-area(color="royal-purple")
         li.item(:key="`gallery${itemIndex}`")
           nn-row
             nn-column(size="100%")
-              video(:width="item.width", :height="item.height", controls)
-                source(:src="getZapp(item.url)", type="video/mp4")
-                | Your browser does not support the video tag.
+              iframe(
+                :width="item.width",
+                :height="item.height",
+                :src="`https://www.youtube.com/embed/${item.url}`",
+                :title="item.title",
+                frameborder="0",
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+                allowfullscreen
+              )
               .nano-shade-box
                 toggle-row.toggle-input(breakpoint="lg")
                   template(v-slot:header)

@@ -117,8 +117,5 @@ export default Vue.extend({
       return this.db;
     },
   },
-  mounted() {
-    console.log(this.allDBObj);
-  },
 });
 </script>

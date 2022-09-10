@@ -31,7 +31,7 @@ export default Vue.extend({
     interval: undefined,
     time: undefined,
     degree: "--",
-    weather: "sunny",
+    weather: "warm",
     weekday: "--",
     weatherDic: {
       cloudy: "cloudy",
@@ -41,10 +41,10 @@ export default Vue.extend({
       "intermittent clouds": "cloudy",
       "mostly cloudy": "cloudy",
 
-      sunny: "sunny",
-      "partly sunny": "sunny",
-      "mostly sunny": "sunny",
-      "hazy sunshine": "sunny",
+      // sunny: "sunny",
+      // "partly sunny": "sunny",
+      // "mostly sunny": "sunny",
+      // "hazy sunshine": "sunny",
 
       rain: "rainy",
       rainy: "rainy",
@@ -90,25 +90,33 @@ export default Vue.extend({
         })
         .then((text) => {
           const request = JSON.parse(text);
-          console.log(request);
 
           this.degree = request.currentConditions.temp.f;
           this.weather =
             this.weatherDic[request.currentConditions.comment.toLowerCase()] ||
-            "sunny";
+            "warm";
           this.weekday = request.next_days[0].day;
 
-          if (this.weather === "sunny" && (this.time.c.hour < 6 || this.time.c.hour > 19)) {
+          if (this.weather === "warm" && (this.time.c.hour < 6 || this.time.c.hour > 19)) {
             this.weather = "night";
           }
 
           if (
-            (this.weather === "sunny" ||
+            (this.weather === "warm" ||
               this.weather === "night" ||
               this.weather === "cloudy") &&
             request.currentConditions.wind.mile >= 21
           ) {
             this.weather = "windy";
+          }
+
+          if (
+            (this.weather === "warm" ||
+              this.weather === "night" ||
+              this.weather === "cloudy") &&
+            request.currentConditions.temp.f <= 65
+          ) {
+            this.weather = "cold";
           }
         })
         .catch(function (error) {
