@@ -228,13 +228,13 @@ export default Vue.extend({
     playSound,
     linkGithub,
     linkLinkedin,
-    audioDB: [],
+    musicBox,
     radio: false,
     audio: {
       media: undefined,
       event: undefined,
-      counter: 0,
-      db: [],
+      counter: -1,
+      db: {},
     },
   }),
   computed: {
@@ -244,33 +244,37 @@ export default Vue.extend({
     }),
   },
   created() {
-    musicBox.forEach((item) => {
-      this.audio.db.push(new Audio(this.getZapp(`audio/weather/${item}.mp3`)));
-    });
-
-    this.audio.db.forEach((item) => {
-      item.addEventListener("ended", this.audioEnded);
-    });
-
-    this.audio.db.sort(() => (Math.random() > 0.5 ? 1 : -1));
+    this.musicBox.sort(() => (Math.random() > 0.5 ? 1 : -1));
   },
   methods: {
     ...mapMutations(["toggleValue"]),
-    audioEnded() {
+    audioStart() {
       this.audio.counter++;
-      if (this.audio.counter >= this.audio.db.length) {
+      if (this.audio.counter >= this.musicBox.length) {
         this.audio.counter = 0;
       }
-      this.audio.db[this.audio.counter].play();
+      const currentTrack = this.musicBox[this.audio.counter];
+      if (this.audio.db[currentTrack] === undefined) {
+        this.audio.db[currentTrack] = new Audio(
+          this.getZapp(`audio/weather/${currentTrack}.mp3`)
+        );
+        this.audio.db[currentTrack].addEventListener("ended", this.audioStart);
+      }
+      this.audio.db[currentTrack].play();
+    },
+    audioStop() {
+      const currentTrack = this.musicBox[this.audio.counter];
+      this.audio.db[currentTrack].pause();
+      this.audio.db[currentTrack].currentTime = 0;
+      this.audio.counter--;
     },
   },
   watch: {
     radio: function () {
       if (this.radio) {
-        this.audio.db[this.audio.counter].play();
+        this.audioStart();
       } else {
-        this.audio.db[this.audio.counter].pause();
-        this.audio.db[this.audio.counter].currentTime = 0;
+        this.audioStop();
       }
     },
   },
