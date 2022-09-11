@@ -22,7 +22,7 @@
                   v-html="project.client"
                 />
                 <h3>
-                  <date v-html="project.turingDate" />
+                  <time v-html="project.turingDate" />
                 </h3>
                 <ul class="list">
                   <template v-for="(li, liIndex) in project.list">

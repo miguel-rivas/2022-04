@@ -41,11 +41,6 @@ export default Vue.extend({
       "intermittent clouds": "cloudy",
       "mostly cloudy": "cloudy",
 
-      // sunny: "sunny",
-      // "partly sunny": "sunny",
-      // "mostly sunny": "sunny",
-      // "hazy sunshine": "sunny",
-
       rain: "rainy",
       rainy: "rainy",
       showers: "rainy",
@@ -97,26 +92,26 @@ export default Vue.extend({
             "warm";
           this.weekday = request.next_days[0].day;
 
-          if (this.weather === "warm" && (this.time.c.hour < 6 || this.time.c.hour > 19)) {
+          const isNightTime = this.time.c.hour < 6 || this.time.c.hour > 19;
+
+          if (this.weather === "warm" && isNightTime) {
             this.weather = "night";
           }
 
-          if (
-            (this.weather === "warm" ||
-              this.weather === "night" ||
-              this.weather === "cloudy") &&
-            request.currentConditions.wind.mile >= 21
-          ) {
-            this.weather = "windy";
-          }
+          const isRegularWeather =
+            this.weather === "warm" ||
+            this.weather === "night" ||
+            this.weather === "cloudy";
 
-          if (
-            (this.weather === "warm" ||
-              this.weather === "night" ||
-              this.weather === "cloudy") &&
-            request.currentConditions.temp.f <= 65
-          ) {
-            this.weather = "cold";
+          const isWindy = request.currentConditions.wind.mile >= 21;
+          const isCold = request.currentConditions.temp.f <= 65;
+
+          if (isRegularWeather) {
+            if (isWindy) {
+              this.weather = "windy";
+            } else if (isCold) {
+              this.weather = "cold";
+            }
           }
         })
         .catch(function (error) {

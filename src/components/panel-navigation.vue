@@ -46,6 +46,18 @@
             color="gold-tips"
             size="md"
             mode="nav"
+            title="Toggle radio"
+            glyph="music"
+            @click="
+              radio = !radio;
+              playSound();
+            "
+            :active="radio"
+          />
+          <btn
+            color="gold-tips"
+            size="md"
+            mode="nav"
             title="Toggle Fullscreen"
             :glyph="fullscreen ? 'compress' : 'expand'"
             @click="toggleValue('fullscreen'), playSound()"
@@ -62,6 +74,7 @@ import Vue from "vue";
 import { mapGetters, mapMutations } from "vuex";
 import { linkGithub, linkLinkedin } from "@/db/user";
 import { playSound } from "@/modules/helpers";
+import musicBox from "@/db/musicBox";
 
 export default Vue.extend({
   components: {},
@@ -215,6 +228,14 @@ export default Vue.extend({
     playSound,
     linkGithub,
     linkLinkedin,
+    audioDB: [],
+    radio: false,
+    audio: {
+      media: undefined,
+      event: undefined,
+      counter: 0,
+      db: [],
+    },
   }),
   computed: {
     ...mapGetters({
@@ -222,12 +243,36 @@ export default Vue.extend({
       fullscreen: "getFullscreen",
     }),
   },
+  created() {
+    musicBox.forEach((item) => {
+      this.audio.db.push(new Audio(this.getZapp(`audio/weather/${item}.mp3`)));
+    });
+
+    this.audio.db.forEach((item) => {
+      item.addEventListener("ended", this.audioEnded);
+    });
+
+    this.audio.db.sort(() => (Math.random() > 0.5 ? 1 : -1));
+  },
   methods: {
-    switchLanguage(lang) {
-      playSound();
-      this.$i18n.locale = lang;
-    },
     ...mapMutations(["toggleValue"]),
+    audioEnded() {
+      this.audio.counter++;
+      if (this.audio.counter >= this.audio.db.length) {
+        this.audio.counter = 0;
+      }
+      this.audio.db[this.audio.counter].play();
+    },
+  },
+  watch: {
+    radio: function () {
+      if (this.radio) {
+        this.audio.db[this.audio.counter].play();
+      } else {
+        this.audio.db[this.audio.counter].pause();
+        this.audio.db[this.audio.counter].currentTime = 0;
+      }
+    },
   },
 });
 </script>
