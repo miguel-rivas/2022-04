@@ -1,15 +1,15 @@
 <template lang="pug">
-nn-scroll-area(color="royal-purple")
+nn-scroll-area(nn-color="royal-purple")
   nn-row.row-block
-    nn-column(size="100%")
+    nn-column(nn-size="100%")
       legend {{ $t('avatar.panel.presets.legend') }}
 
       nn-row
-        nn-column(size="100%")
+        nn-column(nn-size="100%")
           btn(color="gold-tips", text="Miguel", @click="miguel()")
 
       nn-row
-        nn-column(size="100%")
+        nn-column(nn-size="100%")
           btn(
             color="gold-tips",
             :text="$t('avatar.panel.presets.90')",
@@ -17,7 +17,7 @@ nn-scroll-area(color="royal-purple")
           )
 
       nn-row
-        nn-column(size="100%")
+        nn-column(nn-size="100%")
           btn(
             color="gold-tips",
             :text="$t('avatar.panel.presets.work')",
@@ -25,7 +25,7 @@ nn-scroll-area(color="royal-purple")
           )
 
       nn-row
-        nn-column(size="100%")
+        nn-column(nn-size="100%")
           btn(
             color="gold-tips",
             :text="$t('avatar.panel.presets.sunday')",
@@ -33,7 +33,7 @@ nn-scroll-area(color="royal-purple")
           )
 
       nn-row
-        nn-column(size="100%")
+        nn-column(nn-size="100%")
           btn(
             color="gold-tips",
             :text="$t('avatar.panel.presets.pooh')",
@@ -41,7 +41,7 @@ nn-scroll-area(color="royal-purple")
           )
 
       nn-row
-        nn-column(size="100%")
+        nn-column(nn-size="100%")
           btn(
             color="gold-tips",
             :text="$t('avatar.panel.presets.dc')",
@@ -49,7 +49,7 @@ nn-scroll-area(color="royal-purple")
           )
 
       nn-row
-        nn-column(size="100%")
+        nn-column(nn-size="100%")
           btn(
             color="gold-tips",
             :text="$t('avatar.panel.presets.pool')",
@@ -57,7 +57,7 @@ nn-scroll-area(color="royal-purple")
           )
 
       nn-row
-        nn-column(size="100%")
+        nn-column(nn-size="100%")
           btn(
             color="gold-tips",
             :text="$t('avatar.panel.presets.franciscano')",
@@ -65,7 +65,7 @@ nn-scroll-area(color="royal-purple")
           )
 
   nn-row.row-block
-    nn-column(size="100%")
+    nn-column(nn-size="100%")
       legend {{ $t('avatar.panel.general.legend') }}
 
       slider#height(
@@ -77,78 +77,78 @@ nn-scroll-area(color="royal-purple")
         :value="selection.height"
       )
 
-      nn-row: nn-column(size="100%"): btn(
+      nn-row: nn-column(nn-size="100%"): btn(
         color="gold-tips",
         :text="$t('avatar.panel.general.porcelain')",
         @click="tan('#e9ceb2ff', '#e9957bff', '#e9957bff')"
       )
 
-      nn-row: nn-column(size="100%"): btn(
+      nn-row: nn-column(nn-size="100%"): btn(
         color="gold-tips",
         :text="$t('avatar.panel.general.honey')",
         @click="tan('#daad7fff', '#d28d5fff', '#d28d5fff')"
       )
 
-      nn-row: nn-column(size="100%"): btn(
+      nn-row: nn-column(nn-size="100%"): btn(
         color="gold-tips",
         :text="$t('avatar.panel.general.caramel')",
         @click="tan('#b68450ff', '#916d56ff', '#916d56ff')"
       )
 
-      nn-row: nn-column(size="100%"): btn(
+      nn-row: nn-column(nn-size="100%"): btn(
         color="gold-tips",
         :text="$t('avatar.panel.general.umber')",
         @click="tan('#8b653dff', '#513b3bff', '#513b3bff')"
       )
 
-      nn-row: nn-column(size="100%"): btn(
+      nn-row: nn-column(nn-size="100%"): btn(
         color="gold-tips",
         :text="$t('avatar.panel.general.sable')",
         @click="tan('#383028ff', '#4c433eff', '#4c433eff')"
       )
 
-      nn-row: nn-column(size="100%"): btn(
+      nn-row: nn-column(nn-size="100%"): btn(
         color="gold-tips",
         :text="$t('avatar.panel.general.avatar')",
         @click="tan('#1d2847ff', '#26345eff', '#26345eff')"
       )
 
-      nn-row: nn-column(size="100%"): btn(
+      nn-row: nn-column(nn-size="100%"): btn(
         color="gold-tips",
         :text="$t('avatar.panel.general.hellboy')",
         @click="tan('#541e21ff', '#773636ff', '#773636ff')"
       )
 
-      nn-row: nn-column(size="100%"): btn(
+      nn-row: nn-column(nn-size="100%"): btn(
         color="gold-tips",
         :text="$t('avatar.panel.general.bubblegum')",
         @click="tan('#ad7b9cff', '#875a7dff', '#875a7dff')"
       )
 
-      nn-row: nn-column(size="100%"): btn(
+      nn-row: nn-column(nn-size="100%"): btn(
         color="gold-tips",
         :text="$t('avatar.panel.general.green')",
         @click="tan('#284426ff', '#1d281eff', '#1d281eff')"
       )
 
-      nn-row: nn-column(size="100%")
-        toggle-row.toggle-input(breakpoint="lg")
+      nn-row: nn-column(nn-size="100%")
+        toggle-row.toggle-input(nn-breakpoint="lg")
           template(v-slot:header)
-            nn-column(size="100%-35") {{ $t('avatar.panel.general.skinColor') }}
+            nn-column(nn-size="100%-35") {{ $t('avatar.panel.general.skinColor') }}
           template(v-slot:more)
-            nn-column(size="100%")
+            nn-column(nn-size="100%")
               color-picker(
                 v-model="selection.skinColor",
                 :preset-colors="skinColors",
                 disable-fields
               )
 
-      nn-row: nn-column(size="100%")
-        toggle-row.toggle-input(breakpoint="lg")
+      nn-row: nn-column(nn-size="100%")
+        toggle-row.toggle-input(nn-breakpoint="lg")
           template(v-slot:header)
-            nn-column(size="100%-35") {{ $t('avatar.panel.general.skinColor2') }}
+            nn-column(nn-size="100%-35") {{ $t('avatar.panel.general.skinColor2') }}
           template(v-slot:more)
-            nn-column(size="100%")
+            nn-column(nn-size="100%")
               color-picker(
                 v-model="selection.skinColor2",
                 :preset-colors="skinColors2",
@@ -156,123 +156,123 @@ nn-scroll-area(color="royal-purple")
               )
 
   nn-row.row-block
-    nn-column(size="100%")
+    nn-column(nn-size="100%")
       legend {{ $t('avatar.panel.face.legend') }}
 
-      nn-row: nn-column(size="100%"): btn(
+      nn-row: nn-column(nn-size="100%"): btn(
         color="gold-tips",
         :text="$t('avatar.panel.face.raven')",
         @click="dyeHair('#444444ff')"
       )
 
-      nn-row: nn-column(size="100%"): btn(
+      nn-row: nn-column(nn-size="100%"): btn(
         color="gold-tips",
         :text="$t('avatar.panel.face.brunette')",
         @click="dyeHair('#6d5542ff')"
       )
 
-      nn-row: nn-column(size="100%"): btn(
+      nn-row: nn-column(nn-size="100%"): btn(
         color="gold-tips",
         :text="$t('avatar.panel.face.blonde')",
         @click="dyeHair('#a8723aff')"
       )
 
-      nn-row: nn-column(size="100%"): btn(
+      nn-row: nn-column(nn-size="100%"): btn(
         color="gold-tips",
         :text="$t('avatar.panel.face.ginger')",
         @click="dyeHair('#a34026ff')"
       )
 
-      nn-row: nn-column(size="100%"): btn(
+      nn-row: nn-column(nn-size="100%"): btn(
         color="gold-tips",
         :text="$t('avatar.panel.face.silver')",
         @click="dyeHair('#abababff')"
       )
 
-      nn-row: nn-column(size="100%"): btn(
+      nn-row: nn-column(nn-size="100%"): btn(
         color="gold-tips",
         :text="$t('avatar.panel.face.blue')",
         @click="dyeHair('#191823ff')"
       )
 
-      nn-row: nn-column(size="100%"): btn(
+      nn-row: nn-column(nn-size="100%"): btn(
         color="gold-tips",
         :text="$t('avatar.panel.face.red')",
         @click="dyeHair('#3C1414ff')"
       )
 
-      nn-row: nn-column(size="100%"): btn(
+      nn-row: nn-column(nn-size="100%"): btn(
         color="gold-tips",
         :text="$t('avatar.panel.face.bubblegum')",
         @click="dyeHair('#913f76ff')"
       )
 
-      nn-row: nn-column(size="100%"): btn(
+      nn-row: nn-column(nn-size="100%"): btn(
         color="gold-tips",
         :text="$t('avatar.panel.face.green')",
         @click="dyeHair('#123524ff')"
       )
 
       nn-row
-        nn-column(size="100%")
-          label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.topHair }")
+        nn-column(nn-size="100%")
+          label.nn-btn(nn-mode="flat",nn-color="charcoal",:class="{ 'nn-active': selection.topHair }")
             | {{ $t('avatar.panel.face.topHair') }}
             input(type="checkbox", v-model="selection.topHair")
 
       nn-row
-        nn-column(size="100%")
-          label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.sideHair }")
+        nn-column(nn-size="100%")
+          label.nn-btn(nn-mode="flat",nn-color="charcoal",:class="{ 'nn-active': selection.sideHair }")
             | {{ $t('avatar.panel.face.sideHair') }}
             input(type="checkbox", v-model="selection.sideHair")
 
       nn-row
-        nn-column(size="100%")
-          label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.beard }")
+        nn-column(nn-size="100%")
+          label.nn-btn(nn-mode="flat",nn-color="charcoal",:class="{ 'nn-active': selection.beard }")
             | {{ $t('avatar.panel.face.beard') }}
             input(type="checkbox", v-model="selection.beard")
 
-      nn-row: nn-column(size="100%")
-        toggle-row.toggle-input(breakpoint="lg")
+      nn-row: nn-column(nn-size="100%")
+        toggle-row.toggle-input(nn-breakpoint="lg")
           template(v-slot:header)
-            nn-column(size="100%-35") {{ $t('avatar.panel.face.hairColor') }}
+            nn-column(nn-size="100%-35") {{ $t('avatar.panel.face.hairColor') }}
           template(v-slot:more)
-            nn-column(size="100%", table-element)
+            nn-column(nn-size="100%", nn-table-element)
               color-picker(
                 v-model="selection.hairColor",
                 :preset-colors="hairColors",
                 disable-fields
               )
 
-      nn-row: nn-column(size="100%")
-        toggle-row.toggle-input(breakpoint="lg")
+      nn-row: nn-column(nn-size="100%")
+        toggle-row.toggle-input(nn-breakpoint="lg")
           template(v-slot:header)
-            nn-column(size="100%-35", table-element) {{ $t('avatar.panel.face.hairSideColor') }}
+            nn-column(nn-size="100%-35", nn-table-element) {{ $t('avatar.panel.face.hairSideColor') }}
           template(v-slot:more)
-            nn-column(size="100%", table-element)
+            nn-column(nn-size="100%", nn-table-element)
               color-picker(
                 v-model="selection.hairSideColor",
                 :preset-colors="hairColors",
                 disable-fields
               )
 
-      nn-row: nn-column(size="100%")
-        toggle-row.toggle-input(breakpoint="lg")
+      nn-row: nn-column(nn-size="100%")
+        toggle-row.toggle-input(nn-breakpoint="lg")
           template(v-slot:header)
-            nn-column(size="100%-35", table-element) {{ $t('avatar.panel.face.beardColor') }}
+            nn-column(nn-size="100%-35", nn-table-element) {{ $t('avatar.panel.face.beardColor') }}
           template(v-slot:more)
-            nn-column(size="100%", table-element)
+            nn-column(nn-size="100%", nn-table-element)
               color-picker(
                 v-model="selection.beardColor",
                 :preset-colors="hairColors",
                 disable-fields
               )
 
-      nn-row: nn-column(size="100%")
-        toggle-row.toggle-input(breakpoint="lg")
+      nn-row: nn-column(nn-size="100%")
+        toggle-row.toggle-input(nn-breakpoint="lg")
           template(v-slot:header)
-            nn-column(size="100%-35", table-element) {{ $t('avatar.panel.face.lipsColor') }}
+            nn-column(nn-size="100%-35", nn-table-element) {{ $t('avatar.panel.face.lipsColor') }}
           template(v-slot:more)
-            nn-column(size="100%", table-element)
+            nn-column(nn-size="100%", nn-table-element)
               color-picker(
                 v-model="selection.lipsColor",
                 :preset-colors="lipsColors",
@@ -289,28 +289,28 @@ nn-scroll-area(color="royal-purple")
       )
 
   nn-row.row-block
-    nn-column(size="100%")
+    nn-column(nn-size="100%")
       legend {{ $t('avatar.panel.shirt.legend') }}
 
       nn-row
-        nn-column(size="100%")
-          label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.shirt }")
+        nn-column(nn-size="100%")
+          label.nn-btn(nn-mode="flat",nn-color="charcoal",:class="{ 'nn-active': selection.shirt }")
             | {{ $t('avatar.panel.shirt.shirt') }}
             input(type="checkbox", v-model="selection.shirt")
 
       nn-row
-        nn-column(size="50%")
-          label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.leftPocket }")
+        nn-column(nn-size="50%")
+          label.nn-btn(nn-mode="flat",nn-color="charcoal",:class="{ 'nn-active': selection.leftPocket }")
             | {{ $t('avatar.panel.shirt.lPockect') }}
             input(type="checkbox", v-model="selection.leftPocket")
-        nn-column(size="50%")
-          label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.rightPocket }")
+        nn-column(nn-size="50%")
+          label.nn-btn(nn-mode="flat",nn-color="charcoal",:class="{ 'nn-active': selection.rightPocket }")
             | {{ $t('avatar.panel.shirt.rPockect') }}
             input(type="checkbox", v-model="selection.rightPocket")
 
       nn-row
-        nn-column(size="100%")
-          label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.buttons }")
+        nn-column(nn-size="100%")
+          label.nn-btn(nn-mode="flat",nn-color="charcoal",:class="{ 'nn-active': selection.buttons }")
             | {{ $t('avatar.panel.shirt.buttons') }}
             input(type="checkbox", v-model="selection.buttons")
 
@@ -332,36 +332,36 @@ nn-scroll-area(color="royal-purple")
         :value="selection.armSleeveLengthPercent"
       )
 
-      nn-row: nn-column(size="100%")
-        toggle-row.toggle-input(breakpoint="lg")
+      nn-row: nn-column(nn-size="100%")
+        toggle-row.toggle-input(nn-breakpoint="lg")
           template(v-slot:header)
-            nn-column(size="100%-35") {{ $t('avatar.panel.shirt.shirtColor') }}
+            nn-column(nn-size="100%-35") {{ $t('avatar.panel.shirt.shirtColor') }}
           template(v-slot:more)
-            nn-column(size="100%", table-element)
+            nn-column(nn-size="100%", nn-table-element)
               color-picker(
                 v-model="selection.shirtColor",
                 :preset-colors="fabricColors",
                 disable-fields
               )
 
-      nn-row: nn-column(size="100%")
-        toggle-row.toggle-input(breakpoint="lg")
+      nn-row: nn-column(nn-size="100%")
+        toggle-row.toggle-input(nn-breakpoint="lg")
           template(v-slot:header)
-            nn-column(size="100%-35") {{ $t('avatar.panel.shirt.sleeveColor') }}
+            nn-column(nn-size="100%-35") {{ $t('avatar.panel.shirt.sleeveColor') }}
           template(v-slot:more)
-            nn-column(size="100%", table-element)
+            nn-column(nn-size="100%", nn-table-element)
               color-picker(
                 v-model="selection.armSleeveColor",
                 :preset-colors="fabricColors",
                 disable-fields
               )
 
-      nn-row: nn-column(size="100%")
-        toggle-row.toggle-input(breakpoint="lg")
+      nn-row: nn-column(nn-size="100%")
+        toggle-row.toggle-input(nn-breakpoint="lg")
           template(v-slot:header)
-            nn-column(size="100%-35") {{ $t('avatar.panel.shirt.pockectsColor') }}
+            nn-column(nn-size="100%-35") {{ $t('avatar.panel.shirt.pockectsColor') }}
           template(v-slot:more)
-            nn-column(size="100%", table-element)
+            nn-column(nn-size="100%", nn-table-element)
               color-picker(
                 v-model="selection.pocketColor",
                 :preset-colors="fabricColors",
@@ -369,18 +369,18 @@ nn-scroll-area(color="royal-purple")
               )
 
   nn-row.row-block
-    nn-column(size="100%")
+    nn-column(nn-size="100%")
       legend {{ $t('avatar.panel.pants.legend') }}
 
       nn-row
-        nn-column(size="100%")
-          label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.pants }")
+        nn-column(nn-size="100%")
+          label.nn-btn(nn-mode="flat",nn-color="charcoal",:class="{ 'nn-active': selection.pants }")
             | {{ $t('avatar.panel.pants.pants') }}
             input(type="checkbox", v-model="selection.pants")
 
       nn-row
-        nn-column(size="100%")
-          label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.belt }")
+        nn-column(nn-size="100%")
+          label.nn-btn(nn-mode="flat",nn-color="charcoal",:class="{ 'nn-active': selection.belt }")
             | {{ $t('avatar.panel.pants.belt') }}
             input(type="checkbox", v-model="selection.belt")
 
@@ -402,36 +402,36 @@ nn-scroll-area(color="royal-purple")
         :value="selection.pantsFit"
       )
 
-      nn-row: nn-column(size="100%")
-        toggle-row.toggle-input(breakpoint="lg")
+      nn-row: nn-column(nn-size="100%")
+        toggle-row.toggle-input(nn-breakpoint="lg")
           template(v-slot:header)
-            nn-column(size="100%-35") {{ $t('avatar.panel.pants.pantsColor') }}
+            nn-column(nn-size="100%-35") {{ $t('avatar.panel.pants.pantsColor') }}
           template(v-slot:more)
-            nn-column(size="100%", table-element)
+            nn-column(nn-size="100%", nn-table-element)
               color-picker(
                 v-model="selection.pantsColor",
                 :preset-colors="fabricColors",
                 disable-fields
               )
 
-      nn-row: nn-column(size="100%")
-        toggle-row.toggle-input(breakpoint="lg")
+      nn-row: nn-column(nn-size="100%")
+        toggle-row.toggle-input(nn-breakpoint="lg")
           template(v-slot:header)
-            nn-column(size="100%-35") {{ $t('avatar.panel.pants.legsColor') }}
+            nn-column(nn-size="100%-35") {{ $t('avatar.panel.pants.legsColor') }}
           template(v-slot:more)
-            nn-column(size="100%", table-element)
+            nn-column(nn-size="100%", nn-table-element)
               color-picker(
                 v-model="selection.pantsLegColor",
                 :preset-colors="fabricColors",
                 disable-fields
               )
 
-      nn-row: nn-column(size="100%")
-        toggle-row.toggle-input(breakpoint="lg")
+      nn-row: nn-column(nn-size="100%")
+        toggle-row.toggle-input(nn-breakpoint="lg")
           template(v-slot:header)
-            nn-column(size="100%-35") {{ $t('avatar.panel.pants.beltColor') }}
+            nn-column(nn-size="100%-35") {{ $t('avatar.panel.pants.beltColor') }}
           template(v-slot:more)
-            nn-column(size="100%", table-element)
+            nn-column(nn-size="100%", nn-table-element)
               color-picker(
                 v-model="selection.beltColor",
                 :preset-colors="fabricColors",
@@ -439,21 +439,21 @@ nn-scroll-area(color="royal-purple")
               )
 
   nn-row.row-block
-    nn-column(size="100%")
+    nn-column(nn-size="100%")
       legend {{ $t('avatar.panel.shoes.legend') }}
 
       nn-row
-        nn-column(size="100%")
-          label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.shoes }")
+        nn-column(nn-size="100%")
+          label.nn-btn(nn-mode="flat",nn-color="charcoal",:class="{ 'nn-active': selection.shoes }")
             | {{ $t('avatar.panel.shoes.shoes') }}
             input(type="checkbox", v-model="selection.shoes")
 
-      nn-row: nn-column(size="100%")
-        toggle-row.toggle-input(breakpoint="lg")
+      nn-row: nn-column(nn-size="100%")
+        toggle-row.toggle-input(nn-breakpoint="lg")
           template(v-slot:header)
-            nn-column(size="100%-35") {{ $t('avatar.panel.shoes.shoesColor') }}
+            nn-column(nn-size="100%-35") {{ $t('avatar.panel.shoes.shoesColor') }}
           template(v-slot:more)
-            nn-column(size="100%", table-element)
+            nn-column(nn-size="100%", nn-table-element)
               color-picker(
                 v-model="selection.shoeColor",
                 :preset-colors="fabricColors",

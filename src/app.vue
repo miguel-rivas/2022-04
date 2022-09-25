@@ -5,31 +5,32 @@
       <panel-navigation />
 
       <template v-if="hasPanel && !fullscreen">
-        <nn-column class="panel" :size="panel ? panelSize[0] : '0'">
+        <nn-column class="panel" :nn-size="panel ? panelSize[0] : '0'">
           <router-view name="panel" />
         </nn-column>
 
-        <nn-column size="35" class="mr-toggle-panel">
+        <nn-column nn-size="35" class="mr-toggle-panel">
           <nn-btn
+            nn-mode="flat"
             class="panel-ctrl"
             title="Toggle panel button"
-            glyph="arrow-angle"
-            color="charcoal"
-            :direction="panel ? 'left' : 'right'"
+            nn-glyph="arrow-angle"
+            nn-color="charcoal"
+            :nn-direction="panel ? 'left' : 'right'"
             @click="toggleValue('panel'), playSound()"
           />
         </nn-column>
       </template>
 
-      <nn-column :size="workareaSize">
+      <nn-column :nn-size="workareaSize">
         <nn-row class="nano-content">
           <nn-column
-          size="100%"
+          nn-size="100%"
           class="mr-secondary-navbar"
           v-if="hasNavbar && !fullscreen">
             <router-view name="navbar" />
           </nn-column>
-          <nn-column size="100%" class="mr-workarea">
+          <nn-column nn-size="100%" class="mr-workarea">
             <router-view name="workarea" />
           </nn-column>
         </nn-row>

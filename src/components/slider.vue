@@ -1,10 +1,10 @@
 <template lang="pug">
 nn-row
-  nn-column(size="100%", v-if="label")
+  nn-column(nn-size="100%", v-if="label")
     label(:for="$attrs.id", v-html="label")
-  nn-column(size="100%")
+  nn-column(nn-size="100%")
     nn-row
-      nn-column(size="100%-60")
+      nn-column(nn-size="100%-60")
         input(
           :class="'nn-range ' + inputColor",
           v-bind="$attrs",
@@ -12,7 +12,7 @@ nn-row
           v-model="val",
           @change="updateValue()"
         )
-      nn-column(size="60")
+      nn-column(nn-size="60")
         input.nn-input(
           type="number",
           :min="$attrs.min",

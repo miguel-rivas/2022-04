@@ -1,5 +1,5 @@
 <template>
-  <nn-scroll-area color="royal-purple">
+  <nn-scroll-area nn-color="royal-purple">
     <h2>{ <span>{{ width }}</span> x <span>{{ height }}</span> }px</h2>
     <h3>[ <span>{{ ratio }}</span> ]</h3>
   </nn-scroll-area>

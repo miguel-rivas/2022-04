@@ -1,5 +1,5 @@
 <template>
-  <nn-scroll-area color="royal-purple">
+  <nn-scroll-area nn-color="royal-purple">
     <section id="mainSite">
       <header>
         <img
@@ -200,33 +200,33 @@
           <p>en el espacio.</p>
           <hr />
           <button class="btnController btn_zoom_in">
-            <nn-icon glyph="plus" />
+            <nn-icon nn-glyph="plus" />
           </button>
           <button class="btnController btn_zoom_out">
-            <nn-icon glyph="minus" />
+            <nn-icon nn-glyph="minus" />
           </button>
           <button class="btnController btn_rotate_left">
-            <nn-icon glyph="rotate-left" />
+            <nn-icon nn-glyph="rotate-left" />
           </button>
           <button class="btnController btn_rotate_right">
-            <nn-icon glyph="rotate-left" flip />
+            <nn-icon nn-glyph="rotate-left" flip />
           </button>
           <hr />
           <button class="btnController btn_left">
-            <nn-icon glyph="arrow-chevron" direction="left" />
+            <nn-icon nn-glyph="arrow-chevron" nn-direction="left" />
           </button>
           <button class="btnController btn_up">
-            <nn-icon glyph="arrow-chevron" direction="up" />
+            <nn-icon nn-glyph="arrow-chevron" nn-direction="up" />
           </button>
           <button class="btnController btn_down">
-            <nn-icon glyph="arrow-chevron" direction="down" />
+            <nn-icon nn-glyph="arrow-chevron" nn-direction="down" />
           </button>
           <button class="btnController btn_right">
-            <nn-icon glyph="arrow-chevron" direction="right" />
+            <nn-icon nn-glyph="arrow-chevron" nn-direction="right" />
           </button>
           <hr />
           <button class="btn_next">
-            <nn-icon glyph="check" /> Guardar imagen
+            <nn-icon nn-glyph="check" /> Guardar imagen
           </button>
         </div>
 
@@ -257,10 +257,10 @@
           <p>¡Ahora compártelo con el coro!</p>
           <hr />
           <button class="btn_facebook">
-            <nn-icon glyph="facebook" /> compartir
+            <nn-icon nn-glyph="facebook" /> compartir
           </button>
           <button class="btn_twitter">
-            <nn-icon glyph="twitter" /> twittear
+            <nn-icon nn-glyph="twitter" /> twittear
           </button>
         </div>
 

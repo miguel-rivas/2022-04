@@ -3,9 +3,9 @@
     <nav>
       <p>{{ title }}</p>
       <nn-btn
-        :glyph="openMenu ? 'times' : 'bars'"
-        mode="ghost"
-        :color="openMenu ? 'persian-red' : 'shamrock'"
+        :nn-glyph="openMenu ? 'times' : 'bars'"
+        nn-mode="ghost"
+        :nn-color="openMenu ? 'persian-red' : 'shamrock'"
         class="menu-toggle"
         :class="{ 'open-menu': openMenu }"
         @click="toggleMenu()"

@@ -1,5 +1,5 @@
 <template>
-  <nn-scroll-area color="royal-purple">
+  <nn-scroll-area nn-color="royal-purple">
     <nn-container>
       <header>
         <img

@@ -7,8 +7,11 @@
     :to="to"
     :title="computedLabel"
     @click.passive="$emit('click', $event)"
+    :nn-color="color"
+    :nn-mode="mode"
+    :nn-active="active"
   >
-    <nn-icon v-if="glyph !== ''" :glyph="glyph" :direction="iconDirection" />
+    <nn-icon v-if="glyph !== ''" :nn-glyph="glyph" :nn-direction="iconDirection" />
     <span class="caption" v-if="text">
       {{ text }}
     </span>

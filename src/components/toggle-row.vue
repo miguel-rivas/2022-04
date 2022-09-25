@@ -1,16 +1,17 @@
 <template>
-  <nn-row :table-element="tableElement" :breakpoint="breakpoint">
+  <nn-row :nn-table-element="tableElement" :nn-breakpoint="breakpoint">
     <slot name="header" />
-    <nn-column table-element size="35" class="controllers">
+    <nn-column nn-table-element nn-size="35" class="controllers">
       <nn-btn
-        :round="btnRound"
-        glyph="arrow-angle"
-        :direction="showData ? 'up' : 'down'"
-        :active="showData"
-        @click="toggleDataView()"
-        color="elf-green"
         title="Toggle row button"
-        tag="a"
+        @click="toggleDataView()"
+        :nn-round="btnRound"
+        nn-glyph="arrow-angle"
+        :nn-direction="showData ? 'up' : 'down'"
+        :nn-active="showData"
+        nn-color="elf-green"
+        nn-tag="a"
+        nn-mode="flat"
       />
     </nn-column>
     <template v-if="showData">

@@ -1,7 +1,7 @@
 <template lang="pug">
 nn-scroll-area(color="royal-purple")
   nn-row.row-block
-    nn-column(size="100%")
+    nn-column(nn-size="100%")
       legend {{ $t('images.panel.controller.legend') }}
 
       slider#outter-circle-radius(

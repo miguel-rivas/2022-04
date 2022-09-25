@@ -1,5 +1,5 @@
 <template lang="pug">
-nn-scroll-area(color="royal-purple", :class="{ 'fall-back': fallBackIcons }")
+nn-scroll-area(nn-color="royal-purple", :class="{ 'fall-back': fallBackIcons }")
   nn-container
     ul.img-gallery
       template(v-for="(icon, iconIndex) in iconsDB")

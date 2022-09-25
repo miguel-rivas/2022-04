@@ -1,8 +1,8 @@
 <template>
-  <nn-column size="50" class="mr-primary-navbar">
-    <nn-scroll-area color="royal-purple" :horizontal="false">
+  <nn-column nn-size="50" class="mr-primary-navbar">
+    <nn-scroll-area nn-color="royal-purple" nn-no-horizontal>
       <nn-row>
-        <nn-column size="100%">
+        <nn-column nn-size="100%">
           <template v-for="(nav, navIndex) in navigation">
             <template v-if="nav.divider">
               <hr :key="`navIndex-${navIndex}`" />
@@ -11,7 +11,7 @@
               <btn
                 :to="{ name: nav.route[0] }"
                 :key="nav.route[0]"
-                mode="nav"
+                nn-mode="nav"
                 color="shamrock"
                 size="md"
                 :title="nav.tooltip"
@@ -22,7 +22,7 @@
             <template v-else>
               <btn
                 :key="nav.route[0]"
-                mode="nav"
+                nn-mode="nav"
                 color="shamrock"
                 size="md"
                 :title="nav.tooltip"
@@ -36,7 +36,7 @@
           <btn
             color="gold-tips"
             size="md"
-            mode="nav"
+            nn-mode="nav"
             title="Toggle theme"
             :glyph="theme ? 'sun-o' : 'moon-o'"
             @click="toggleValue('theme'), playSound()"
@@ -45,7 +45,7 @@
           <btn
             color="gold-tips"
             size="md"
-            mode="nav"
+            nn-mode="nav"
             title="Toggle radio"
             glyph="music"
             @click="
@@ -57,7 +57,7 @@
           <btn
             color="gold-tips"
             size="md"
-            mode="nav"
+            nn-mode="nav"
             title="Toggle Fullscreen"
             :glyph="fullscreen ? 'compress' : 'expand'"
             @click="toggleValue('fullscreen'), playSound()"

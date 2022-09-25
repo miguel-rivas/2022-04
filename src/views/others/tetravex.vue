@@ -1,5 +1,5 @@
 <template lang="pug">
-nn-scroll-area(color="royal-purple", horizontal="false")
+nn-scroll-area(nn-color="royal-purple", nn-no-horizontal="false")
   aside#rules.ND
     img(:src="getZapp('img/tetravex/crown.png')")
     h1 HOW TO SOLVE
@@ -686,7 +686,7 @@ export default Vue.extend({
         ribbon_txt = medal.getElementsByClassName("winText")[0];
 
       _.pull(this.winCounter, this.winCounter[tmpIndex]);
-      Velocity(actualWorld, { opacity: 0 }, { display: "none" }, 500);      
+      Velocity(actualWorld, { opacity: 0 }, { display: "none" }, 500);
       medal.style.display = "block";
 
       Velocity(body, { rotateZ: 300, scale: 0.2 }, 0);

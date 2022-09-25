@@ -6,16 +6,16 @@
           <template v-if="!allDBObj[project].filter.includes('group')">
             <nn-column
               table-element
-              size="100%-35"
+              nn-size="100%-35"
               v-html="allDBObj[project].title"
             />
           </template>
           <template v-else>
-            <nn-column table-element size="100%-35" v-html="'Summary'" />
+            <nn-column table-element nn-size="100%-35" v-html="'Summary'" />
           </template>
         </template>
         <template v-slot:more>
-          <nn-column table-element size="100%" v-if="allDBObj[project]">
+          <nn-column table-element nn-size="100%" v-if="allDBObj[project]">
             <h2 v-html="allDBObj[project].client" />
             <h3
               v-if="!allDBObj[project].filter.includes('group')"
@@ -55,7 +55,7 @@
               </template>
             </ul>
           </nn-column>
-          <nn-column table-element size="100%" v-if="hasSlots">
+          <nn-column table-element nn-size="100%" v-if="hasSlots">
             <slot />
           </nn-column>
         </template>

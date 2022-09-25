@@ -1,5 +1,5 @@
 <template lang="pug">
-nn-scroll-area(color="royal-purple", :class="`theme-${currentVersion}`")
+nn-scroll-area(nn-color="royal-purple", :class="`theme-${currentVersion}`")
   #texture
   header CSS
     #vs
@@ -16,20 +16,24 @@ nn-scroll-area(color="royal-purple", :class="`theme-${currentVersion}`")
 
   main
     article.info(v-for="data in properties", v-if="is_check(data.version)")
-      toggle-row(breakpoint="lg", :table-element="false", :btn-round="true")
+      toggle-row(
+        nn-breakpoint="lg",
+        :nn-table-element="false",
+        :btn-round="true"
+      )
         template(v-slot:header)
-          nn-column(size="35")
+          nn-column(nn-size="35")
             nn-btn(
-              color="denim",
-              round,
-              glyph="plus",
+              nn-color="denim",
+              nn-round,
+              nn-glyph="plus",
               @click="addToArray(`${data.version} : ${data.dependency} ${data.name}`)"
             )
-          nn-column(size="100%-35*2")
+          nn-column(nn-size="100%-35*2")
             p.nn-label {{ data.version }}: {{ data.dependency }} {{ data.name }}
 
         template(v-slot:more)
-          nn-column(size="100%")
+          nn-column(nn-size="100%")
             .more
               ul
                 li(v-if="data.initial") Initial : {{ data.initial }}

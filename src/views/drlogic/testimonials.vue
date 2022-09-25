@@ -1,5 +1,5 @@
 <template lang="pug">
-nn-scroll-area(color="royal-purple")
+nn-scroll-area(nn-color="royal-purple")
   section#testimonial
     section.intro
       .container

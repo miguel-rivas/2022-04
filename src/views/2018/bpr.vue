@@ -3,7 +3,7 @@
     <section>
       <header>
         <nn-row>
-          <nn-column size="40%">
+          <nn-column nn-size="40%">
             <nn-container>
               <img :src="getZapp('img/2018/logo/bpr.webp')" />
               <h1>Website Development</h1>
@@ -13,7 +13,7 @@
         </nn-row>
       </header>
       <section class="content">
-        <nn-container size="600">
+        <nn-container nn-size="600">
           <section class="info">
             <h2>Brand Overview</h2>
             <p>

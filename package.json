@@ -30,7 +30,7 @@
     "lodash": "^4.17.21",
     "luxon": "^2.3.0",
     "mr-vue-color": "file:../../app_web_module_vue-color-fork",
-    "nano-grid": "3.2.10",
+    "nano-grid": "file:../../nano-grid",
     "nano-spirit": "1.0.1",
     "phaser": "^3.55.2",
     "sizzle": "^2.3.6",

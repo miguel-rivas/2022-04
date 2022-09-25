@@ -1,15 +1,15 @@
 <template lang="pug">
-nn-scroll-area(color="royal-purple")
+nn-scroll-area(nn-color="royal-purple")
   nn-row.row-block
-    nn-column(size="100%")
+    nn-column(nn-size="100%")
       legend {{ $t('pixelEditor.panel.general.legend') }}
 
       nn-row
-        nn-column(size="100%")
+        nn-column(nn-size="100%")
           nn-row
-            nn-column(size="35")
+            nn-column(nn-size="35")
               btn(glyph="plus", color="burn-orange", @click="newImage()")
-            nn-column(size="100%-35")
+            nn-column(nn-size="100%-35")
               btn(
                 :text="$t('pixelEditor.panel.general.new')",
                 color="gold-tips",
@@ -17,10 +17,10 @@ nn-scroll-area(color="royal-purple")
               )
 
       nn-row
-        nn-column(size="35")
+        nn-column(nn-size="35")
           btn(glyph="folder-open", color="burn-orange", @click="openImage()")
-        nn-column(size="100%-35")
-          label.nn-btn.nn-flat.nn-gold-tips
+        nn-column(nn-size="100%-35")
+          label.nn-btn(nn-mode="flat", nn-color="gold-tips")
             | {{ $t('pixelEditor.panel.general.open') }}
             input(
               type="file",
@@ -30,11 +30,11 @@ nn-scroll-area(color="royal-purple")
             )
 
       nn-row
-        nn-column(size="100%")
+        nn-column(nn-size="100%")
           nn-row
-            nn-column(size="35")
+            nn-column(nn-size="35")
               btn(glyph="floppy-o", color="burn-orange", @click="saveJson()")
-            nn-column(size="100%-35")
+            nn-column(nn-size="100%-35")
               btn(
                 :text="$t('pixelEditor.panel.general.save')",
                 color="gold-tips",
@@ -42,11 +42,11 @@ nn-scroll-area(color="royal-purple")
               )
 
       nn-row
-        nn-column(size="100%")
+        nn-column(nn-size="100%")
           nn-row
-            nn-column(size="35")
+            nn-column(nn-size="35")
               btn(glyph="download", color="burn-orange", @click="saveImage()")
-            nn-column(size="100%-35")
+            nn-column(nn-size="100%-35")
               btn(
                 :text="$t('pixelEditor.panel.general.export')",
                 color="gold-tips",
@@ -54,19 +54,19 @@ nn-scroll-area(color="royal-purple")
               )
 
   nn-row.row-block
-    nn-column(size="100%")
+    nn-column(nn-size="100%")
       legend {{ $t('pixelEditor.panel.tools.legend') }}
 
       nn-row
-        nn-column(size="100%")
+        nn-column(nn-size="100%")
           nn-row
-            nn-column(size="35")
+            nn-column(nn-size="35")
               btn(
                 :glyph="selection.lock ? 'lock' : 'unlock'",
                 :color="selection.lock ? 'green-pea' : 'burn-orange'",
                 @click="lockWorkarea()"
               )
-            nn-column(size="100%-35")
+            nn-column(nn-size="100%-35")
               btn(
                 :text="$t('pixelEditor.panel.tools.lock')",
                 color="gold-tips",
@@ -75,15 +75,15 @@ nn-scroll-area(color="royal-purple")
               )
 
       nn-row
-        nn-column(size="100%")
+        nn-column(nn-size="100%")
           nn-row
-            nn-column(size="35")
+            nn-column(nn-size="35")
               btn(
-                glyph="eyedropper",
+                nn-glyph="eyedropper",
                 :color="selection.tool === 'dropper' ? 'green-pea' : 'burn-orange'",
                 @click="pickDropper()"
               )
-            nn-column(size="100%-35")
+            nn-column(nn-size="100%-35")
               btn(
                 :text="$t('pixelEditor.panel.tools.dropper')",
                 color="gold-tips",
@@ -92,15 +92,15 @@ nn-scroll-area(color="royal-purple")
               )
 
       nn-row
-        nn-column(size="100%")
+        nn-column(nn-size="100%")
           nn-row
-            nn-column(size="35")
+            nn-column(nn-size="35")
               btn(
                 glyph="eraser",
                 :color="selection.currentColor.spinalCase === 'empty' ? 'green-pea' : 'burn-orange'",
                 @click="eraser()"
               )
-            nn-column(size="100%-35")
+            nn-column(nn-size="100%-35")
               btn(
                 :text="$t('pixelEditor.panel.tools.eraser')",
                 color="gold-tips",
@@ -109,25 +109,25 @@ nn-scroll-area(color="royal-purple")
               )
 
   nn-row.row-block
-    nn-column(size="100%")
+    nn-column(nn-size="100%")
       legend {{ $t('pixelEditor.panel.palette.legend') }}
 
       nn-row
-        nn-column(size="100%-40")
+        nn-column(nn-size="100%-40")
           p.nn-label {{ selection.currentColor.titleCase }}
-        nn-column(size="40")
+        nn-column(nn-size="40")
           span.shade.nn-label(
             :style="`background-color: ${selection.currentColor.rgb}`"
           )
 
       nn-row
-        nn-column(size="100%"): hr
+        nn-column(nn-size="100%"): hr
 
       nn-row
-        nn-column.palette(size="100%")
+        nn-column.palette(nn-size="100%")
           nn-row.palette
             template(v-for="color in pixelColors")
-              nn-column(size="20%")
+              nn-column(nn-size="20%")
                 button.nn-label.shade(
                   @click="changeColor(color)",
                   :style="`background-color: ${color.rgb}`",
@@ -135,15 +135,15 @@ nn-scroll-area(color="royal-purple")
                   :area-label="color.titleCase"
                 )
 
-            nn-column(size="100%"): hr
+            nn-column(nn-size="100%"): hr
 
-            nn-column(size="100%")
-              toggle-row.toggle-input(breakpoint="lg")
+            nn-column(nn-size="100%")
+              toggle-row.toggle-input(nn-breakpoint="lg")
                 template(v-slot:header)
-                  nn-column(size="100%-35") {{ $t('pixelEditor.panel.palette.more') }}
+                  nn-column(nn-size="100%-35") {{ $t('pixelEditor.panel.palette.more') }}
                 template(v-slot:more)
                   template(v-for="color in wikiColors")
-                    nn-column(size="20%")
+                    nn-column(nn-size="20%")
                       button.nn-label.shade(
                         @click="changeColor(color)",
                         :style="`background-color: ${color.rgb}`",

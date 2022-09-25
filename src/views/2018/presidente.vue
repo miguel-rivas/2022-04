@@ -3,7 +3,7 @@
     <section>
       <header>
         <nn-row>
-          <nn-column size="50%">
+          <nn-column nn-size="50%">
             <nn-container>
               <img :src="getZapp('img/2018/logo/carnaval.webp')" class="logo" />
               <h1>Event Landing Page</h1>
@@ -13,7 +13,7 @@
         </nn-row>
       </header>
       <section class="content">
-        <nn-container size="600">
+        <nn-container nn-size="600">
           <section class="info">
             <h2>Brand Overview</h2>
             <p>
@@ -68,23 +68,23 @@
 
         <template v-for="(item, index) in infographic">
           <article class="snetwork" :key="index">
-            <nn-container size="600">
+            <nn-container nn-size="600">
               <nn-row>
-                <nn-column size="100">
-                  <nn-icon :glyph="item.icon" />
+                <nn-column nn-size="100">
+                  <nn-icon :nn-glyph="item.icon" />
                 </nn-column>
 
-                <nn-column size="50%-75" v-if="item.engagement">
+                <nn-column nn-size="50%-75" v-if="item.engagement">
                   <h3>Engagement</h3>
                   <p>{{ item.engagement }}</p>
                 </nn-column>
 
-                <nn-column size="50%-25" v-if="item.accounts">
+                <nn-column nn-size="50%-25" v-if="item.accounts">
                   <h3>Accounts</h3>
                   <p>{{ item.accounts }}</p>
                 </nn-column>
 
-                <nn-column size="50%-75" v-if="item.interactions">
+                <nn-column nn-size="50%-75" v-if="item.interactions">
                   <h3>Interactions</h3>
                   <p>{{ item.interactions }}</p>
                 </nn-column>

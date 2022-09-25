@@ -1,10 +1,10 @@
 <template>
   <div class="gallery" v-if="database.length > 0">
-    <nn-container size="1450" spacing="4">
+    <nn-container nn-size="1450" nn-spacing="4">
       <template v-for="(project, projectIndex) in database">
         <article :key="projectIndex" class="nn-box">
-          <nn-row :spacing="100" breakpoint="lg">
-            <nn-column size="60%">
+          <nn-row :nn-spacing="100" nn-breakpoint="lg">
+            <nn-column nn-size="60%">
               <template>
                 <img
                   width="1050"
@@ -14,7 +14,7 @@
                 />
               </template>
             </nn-column>
-            <nn-column size="40%">
+            <nn-column nn-size="40%">
               <nn-scroll-area color="royal-purple">
                 <h1 v-html="project.title" />
                 <h2
@@ -90,7 +90,7 @@
     </nn-container>
   </div>
   <div v-else class="loading">
-    <nn-icon glyph="duck" />
+    <nn-icon nn-glyph="duck" />
     <p v-html="'Loading Projects'" />
   </div>
 </template>

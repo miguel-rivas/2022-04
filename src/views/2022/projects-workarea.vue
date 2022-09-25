@@ -1,11 +1,11 @@
 <template lang="pug">
-nn-scroll-area(color="royal-purple", :horizontal="false")
+nn-scroll-area(nn-color="royal-purple", nn-no-horizontal)
   header.nano-header
-    nn-container(size="900")
+    nn-container(nn-size="900")
       h1 Filter Projects
       br
       nn-row
-        nn-column(size="100%")
+        nn-column(nn-size="100%")
           select#search.nn-input(v-model="typeFilter")
             template(v-for="(option, optionIndex) in typeFilters")
               option(:value="option", :key="optionIndex") {{ option }}

@@ -1,20 +1,20 @@
 <template lang="pug">
-nn-scroll-area(color="royal-purple")
+nn-scroll-area(nn-color="royal-purple")
   nn-row.row-block
-    nn-column(size="100%")
+    nn-column(nn-size="100%")
       legend {{ $t('map.panel.locations.legend') }}
-      nn-row
-        nn-column(size="100%")
-          ul.summary
-            template(v-for="(location, locationIndex) in locationsDBList")
-              li(:key="locationIndex")
-                nn-row
-                  nn-column(size="100%")
-                    btn(
-                      @click="openModal(location.client)",
-                      color="gold-tips",
-                      :text="location.title"
-                    )
+      nn-row(nn-spacing="0.5")
+        //- nn-column(nn-size="100%")
+        //- ul.summary
+        template(v-for="(location, locationIndex) in locationsDBList")
+          //- li(:key="locationIndex")
+            //- nn-row
+          nn-column(nn-size="100%")
+            btn(
+              @click="openModal(location.client)",
+              color="gold-tips",
+              :text="location.title"
+            )
 </template>
 
 <script>

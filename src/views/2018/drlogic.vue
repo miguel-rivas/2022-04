@@ -2,8 +2,8 @@
   <nn-scroll-area color="royal-purple">
     <section>
       <header>
-        <nn-row breakpoint="md">
-          <nn-column size="40%">
+        <nn-row nn-breakpoint="md">
+          <nn-column nn-size="40%">
             <nn-container>
               <img :src="getZapp('img/2018/logo/drlogic.webp')" />
               <h1>Website Redesign</h1>
@@ -24,7 +24,7 @@
       </header>
       <section class="content">
         <section class="info">
-          <nn-container size="600">
+          <nn-container nn-size="600">
             <h2>Brand Overview</h2>
             <p>
               In 1986, Dr Logic got his hands on his first Mac and so began a
@@ -57,7 +57,7 @@
           />
         </section>
         <section class="info">
-          <nn-container size="600">
+          <nn-container nn-size="600">
             <h2>My Role<small>Web Designer at Pixel Perfect Tree</small></h2>
             <p>I was provided with a design mockup photoshop file initially.</p>
             <ul>

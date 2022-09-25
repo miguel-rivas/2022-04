@@ -1,5 +1,9 @@
 <template>
-  <nn-scroll-area color="royal-purple" :class="params.city" horizontal="false">
+  <nn-scroll-area
+    nn-color="royal-purple"
+    :class="params.city"
+    nn-no-horizontal="false"
+  >
     <aside class="texture"></aside>
     <header>
       <h1>
@@ -9,7 +13,7 @@
       <img :src="getZapp(`img/2016/cloud.webp`)" class="cloud c02" />
     </header>
     <section class="letter">
-      <nn-container size="600">
+      <nn-container nn-size="600">
         <p>hi!</p>
         <template v-for="(paragraph, index) in letter">
           <p :key="index" v-html="paragraph" />
@@ -24,21 +28,21 @@
     <footer>
       <div class="link">
         <a :href="`https://${user.website}`" target="_blank" class="icon">
-          <nn-icon glyph="globe" />
+          <nn-icon nn-glyph="globe" />
         </a>
         <a
           :href="`https://codepen.io/${user.media.codepen.user}`"
           target="_blank"
           class="icon"
         >
-          <nn-icon glyph="codepen" />
+          <nn-icon nn-glyph="codepen" />
         </a>
         <a
           :href="`https://www.linkedin.com/in/${user.media.linkedin.user}`"
           target="_blank"
           class="icon"
         >
-          <nn-icon glyph="linkedin" />
+          <nn-icon nn-glyph="linkedin" />
         </a>
       </div>
     </footer>

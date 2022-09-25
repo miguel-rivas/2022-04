@@ -1,7 +1,7 @@
 <template lang="pug">
-nn-scroll-area(color="royal-purple")
+nn-scroll-area(nn-color="royal-purple")
   nn-row.row-block
-    nn-column(size="100%")
+    nn-column(nn-size="100%")
       legend {{ $t('three.panel.controller.legend') }}
 
       slider#rotation(
@@ -14,20 +14,32 @@ nn-scroll-area(color="royal-purple")
       )
 
       nn-row
-        nn-column(size="100%")
-          label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.grid }")
+        nn-column(nn-size="100%")
+          label.nn-btn(
+            nn-mode="flat",
+            nn-color="charcoal",
+            :class="{ 'nn-active': selection.grid }"
+          )
             | {{ $t('three.panel.controller.grid') }}
             input(type="checkbox", v-model="selection.grid")
 
       nn-row
-        nn-column(size="100%")
-          label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.pause }")
+        nn-column(nn-size="100%")
+          label.nn-btn(
+            nn-mode="flat",
+            nn-color="charcoal",
+            :class="{ 'nn-active': selection.pause }"
+          )
             | {{ $t('three.panel.controller.pause') }}
             input(type="checkbox", v-model="selection.pause")
 
       nn-row
-        nn-column(size="100%")
-          label.nn-btn.nn-flat.nn-charcoal(:class="{ 'nn-active': selection.lines }")
+        nn-column(nn-size="100%")
+          label.nn-btn(
+            nn-mode="flat",
+            nn-color="charcoal",
+            :class="{ 'nn-active': selection.lines }"
+          )
             | {{ $t('three.panel.controller.lines') }}
             input(type="checkbox", v-model="selection.lines")
 </template>

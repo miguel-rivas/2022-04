@@ -1,6 +1,6 @@
 <template>
   <nn-row class="row-block">
-    <nn-column size="100%">
+    <nn-column nn-size="100%">
       <legend>
         {{
           getColumnSize({
@@ -34,10 +34,12 @@
       </legend>
 
       <nn-row>
-        <nn-column size="100%">
+        <nn-column nn-size="100%">
           <label
-            class="nn-btn nn-flat nn-charcoal"
-            :class="{ 'nn-active': absoluteWidth }"
+            class="nn-btn"
+            nn-mode="flat"
+            nn-color="charcoal"
+            :nn-active="absoluteWidth"
           >
             {{ $t("ui.section.gridBuilder.panel.columnStyle.absoluteWidth") }}
             <input type="checkbox" v-model="absoluteWidth" />
@@ -58,14 +60,14 @@
 
       <template v-else>
         <nn-row>
-          <nn-column size="100%">
+          <nn-column nn-size="100%">
             <label :for="`id-${name}-width`">{{
               $t("ui.section.gridBuilder.panel.columnStyle.width")
             }}</label>
           </nn-column>
-          <nn-column size="100%">
+          <nn-column nn-size="100%">
             <nn-row group>
-              <nn-column size="100%">
+              <nn-column nn-size="100%">
                 <input
                   :id="`id-${name}-width`"
                   type="range"
@@ -76,7 +78,7 @@
                   v-model="selection.columns[index].width"
                 />
               </nn-column>
-              <nn-column size="55%">
+              <nn-column nn-size="55%">
                 <p class="input-label">
                   {{ getWidth(selection.columns[index].width).fraction }}
                   <span v-if="getWidth(selection.columns[index].width).percent">
@@ -104,10 +106,12 @@
       </template>
 
       <nn-row>
-        <nn-column size="100%">
+        <nn-column nn-size="100%">
           <label
-            class="nn-btn nn-flat nn-charcoal"
-            :class="{ 'nn-active': absoluteHeight }"
+            class="nn-btn"
+            nn-mode="flat"
+            nn-color="charcoal"
+            :nn-active="absoluteHeight"
           >
             {{ $t("ui.section.gridBuilder.panel.columnStyle.absoluteHeight") }}
             <input type="checkbox" v-model="absoluteHeight" />
@@ -127,14 +131,14 @@
       />
 
       <nn-row v-else>
-        <nn-column size="100%">
+        <nn-column nn-size="100%">
           <label :for="`id-${name}-height`">{{
             $t("ui.section.gridBuilder.panel.columnStyle.height")
           }}</label>
         </nn-column>
-        <nn-column size="100%">
+        <nn-column nn-size="100%">
           <nn-row group>
-            <nn-column size="100%">
+            <nn-column nn-size="100%">
               <input
                 :id="`id-${name}-height`"
                 type="range"
@@ -145,7 +149,7 @@
                 v-model="selection.columns[index].height"
               />
             </nn-column>
-            <nn-column size="55%">
+            <nn-column nn-size="55%">
               <p class="input-label">
                 {{ getHeight(selection.columns[index].height).fraction }}
                 <span v-if="getHeight(selection.columns[index].height).percent">
@@ -160,7 +164,7 @@
       </nn-row>
 
       <nn-row>
-        <nn-column size="100%">
+        <nn-column nn-size="100%">
           <btn
             color="persian-red"
             :text="$t('ui.section.gridBuilder.panel.columnStyle.removeCTA')"

@@ -1,11 +1,11 @@
 <template lang="pug">
-nn-scroll-area(color="royal-purple")
+nn-scroll-area(nn-color="royal-purple")
   nn-container
     ul.img-gallery
       template(v-for="(item, itemIndex) in videosDB")
         li.item(:key="`gallery${itemIndex}`")
           nn-row
-            nn-column(size="100%")
+            nn-column(nn-size="100%")
               iframe(
                 :width="item.width",
                 :height="item.height",
@@ -16,12 +16,12 @@ nn-scroll-area(color="royal-purple")
                 allowfullscreen
               )
               .nano-shade-box
-                toggle-row.toggle-input(breakpoint="lg")
+                toggle-row.toggle-input
                   template(v-slot:header)
-                    nn-column(size="100%-35")
+                    nn-column(nn-size="100%-35")
                       h2 {{ item.title }}
                   template(v-slot:more)
-                    nn-column(size="100%", table-element)
+                    nn-column(nn-size="100%", table-element)
                       ul.skills
                         template(v-for="(skill, skillIndex) in item.skills")
                           li(:key="`gallerySkill${itemIndex}${skillIndex}`") {{ skill }}

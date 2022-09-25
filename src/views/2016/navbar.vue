@@ -2,9 +2,9 @@
   <navbar title="Portfolio 2016" :links="links">
     <li>
       <nn-btn
-        text="Dig"
-        color="gold-tips"
-        :active="theme === 'earthquake'"
+        nn-text="Dig"
+        nn-color="gold-tips"
+        :nn-active="theme === 'earthquake'"
         @click="
           $store.commit('toggleTheme', {
             name: 'theme2016',

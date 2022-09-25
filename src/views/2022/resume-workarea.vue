@@ -1,13 +1,13 @@
 <template>
-  <nn-scroll-area color="royal-purple">
-    <nn-container size="900">
+  <nn-scroll-area nn-color="royal-purple">
+    <nn-container nn-size="900">
       <header>
         <h1>{{ user.middleName }} {{ user.lastName }}</h1>
         <h2 v-html="user.title" />
       </header>
 
-      <nn-row breakpoint="md">
-        <nn-column size="35%">
+      <nn-row nn-breakpoint="md">
+        <nn-column nn-size="35%">
           <h3>Contact</h3>
 
           <address>
@@ -26,7 +26,10 @@
               </dd>
               <dt>Location</dt>
               <dd>
-                <a href="https://www.google.com/maps/@38.9107121,-77.0471487,16z" target="_blank">
+                <a
+                  href="https://www.google.com/maps/@38.9107121,-77.0471487,16z"
+                  target="_blank"
+                >
                   {{ user.location.city }},
                   {{ user.location.state }}
                 </a>
@@ -55,7 +58,7 @@
           </ul>
         </nn-column>
 
-        <nn-column size="65%">
+        <nn-column nn-size="65%">
           <h3 class="sr-only">Experience</h3>
 
           <template v-for="(location, index) in locations">
@@ -63,21 +66,29 @@
               <h3 v-html="location.title" />
               <h4>
                 {{ location.jobTitle }}
-              <time :class="`date${location.date.split('/')[0]}`" v-html="location.date.split('/')[0]" />
+                <time
+                  :class="`date${location.date.split('/')[0]}`"
+                  v-html="location.date.split('/')[0]"
+                />
               </h4>
               <ul>
                 <template v-for="(p, pIndex) in location.list">
                   <li :key="location + pIndex" v-html="p" />
                 </template>
               </ul>
-              <nn-icon glyph="circle-o" />
+              <nn-icon nn-glyph="circle-o" />
             </article>
           </template>
         </nn-column>
       </nn-row>
     </nn-container>
     <footer class="nn-shade">
-      <nn-btn color="gold-tips" text="Download Resume" @click="printPage()" />
+      <nn-btn
+        nn-mode="flat"
+        nn-color="gold-tips"
+        nn-text="Download Resume"
+        @click="printPage()"
+      />
     </footer>
   </nn-scroll-area>
 </template>

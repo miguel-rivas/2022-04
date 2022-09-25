@@ -1,6 +1,6 @@
 <template>
   <div id="box_app">
-    <nn-scroll-area color="royal-purple">
+    <nn-scroll-area nn-color="royal-purple">
       <img :src="getZapp(`img/presidente/destapa/logo.png`)" class="logo" />
 
       <div id="pt1"></div>
@@ -113,7 +113,7 @@
           >+</a
         ><br />
         <br />
-        <nn-scroll-area color="green-pea" id="fixSize">
+        <nn-scroll-area nn-color="green-pea" id="fixSize">
           <input class="txt" id="tt_01" TYPE="text" tabindex="1" READONLY />
           <input
             class="txt winCode"

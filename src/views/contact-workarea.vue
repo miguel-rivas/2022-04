@@ -5,7 +5,7 @@
       <div class="nn-box">
         <template v-for="(item, itemIndex) in database">
           <nn-row :key="`itemIndex-${itemIndex}`">
-            <nn-column size="100%">
+            <nn-column nn-size="100%">
               <btn
                 size="md"
                 :color="item.color"

@@ -7,10 +7,10 @@
       >
         <div class="modal-header">
           <nn-row>
-            <nn-column size="100%-35">
+            <nn-column nn-size="100%-35">
               <slot name="header" />
             </nn-column>
-            <nn-column size="35">
+            <nn-column nn-size="35">
               <btn color="persian-red" glyph="times" @click="closeModal" />
             </nn-column>
           </nn-row>

@@ -1,5 +1,5 @@
 <template>
-  <nn-scroll-area color="royal-purple">
+  <nn-scroll-area nn-color="royal-purple">
     <nn-container>
       <header>
         <logo class="mb-logo" />
@@ -26,39 +26,39 @@
           >.
         </p>
 
-        <nn-row breakpoint="lg" grid class="install-pills">
-          <nn-column size="1/4">
+        <nn-row nn-breakpoint="lg" nn-spacing="0.5" class="install-pills">
+          <nn-column nn-size="1/4">
             <nn-btn
-              text="Web Component"
               @click="switchInstallTab('webComponent')"
-              :color="
+              nn-text="Web Component"
+              :nn-color="
                 installBox.selected === 'webComponent'
                   ? 'green-pea'
                   : 'shamrock'
               "
             />
           </nn-column>
-          <nn-column size="1/4">
+          <nn-column nn-size="1/4">
             <nn-btn
-              text="CSS Variables"
               @click="switchInstallTab('cssVars')"
-              :color="
+              nn-text="CSS Variables"
+              :nn-color="
                 installBox.selected === 'cssVars' ? 'green-pea' : 'shamrock'
               "
             />
           </nn-column>
-          <nn-column size="1/4">
+          <nn-column nn-size="1/4">
             <nn-btn
-              text="Sass"
               @click="switchInstallTab('sass')"
-              :color="installBox.selected === 'sass' ? 'green-pea' : 'shamrock'"
+              nn-text="Sass"
+              :nn-color="installBox.selected === 'sass' ? 'green-pea' : 'shamrock'"
             />
           </nn-column>
-          <nn-column size="1/4">
+          <nn-column nn-size="1/4">
             <nn-btn
-              text="Flexbox"
               @click="switchInstallTab('flexbox')"
-              :color="
+              nn-text="Flexbox"
+              :nn-color="
                 installBox.selected === 'flexbox' ? 'green-pea' : 'shamrock'
               "
             />
@@ -70,8 +70,8 @@
           :lang="installBox.mode[installBox.selected].mode"
         />
 
-        <nn-row class="install" breakpoint="lg">
-          <nn-column size="100%-100*3">
+        <nn-row class="install" nn-breakpoint="lg">
+          <nn-column nn-size="100%-100*3">
             <span class="nn-label nn-input-color">
               <template v-if="pmanager === 'yarn'">
                 yarn add nano-grid
@@ -84,25 +84,25 @@
               </template>
             </span>
           </nn-column>
-          <nn-column size="100">
+          <nn-column nn-size="100">
             <nn-btn
-              text="Yarn"
+              nn-text="Yarn"
               @click="togglePackageManager('yarn')"
-              :color="pmanager === 'yarn' ? 'denim' : 'charcoal'"
+              :nn-color="pmanager === 'yarn' ? 'denim' : 'charcoal'"
             />
           </nn-column>
-          <nn-column size="100">
+          <nn-column nn-size="100">
             <nn-btn
-              text="NPM"
+              nn-text="NPM"
               @click="togglePackageManager('npm')"
-              :color="pmanager === 'npm' ? 'persian-red' : 'charcoal'"
+              :nn-color="pmanager === 'npm' ? 'persian-red' : 'charcoal'"
             />
           </nn-column>
-          <nn-column size="100">
+          <nn-column nn-size="100">
             <nn-btn
-              mode="flat"
-              text="Clone"
-              :color="pmanager === 'clone' ? 'royal-purple' : 'charcoal'"
+              nn-mode="flat"
+              nn-text="Clone"
+              :nn-color="pmanager === 'clone' ? 'royal-purple' : 'charcoal'"
               @click="togglePackageManager('clone')"
             />
           </nn-column>
@@ -114,17 +114,17 @@
 
         <div class="nn-shade grid-row-preview">
           <nn-row
-            :group="rowSettings.group"
-            :grid="rowSettings.grid"
-            :spacing="rowSettings.spacing"
+            :nn-group="rowSettings.group"
+            :nn-grid="rowSettings.grid"
+            :nn-spacing="rowSettings.spacing"
           >
             <template v-for="(row, rowIndex) in grid">
-              <nn-column :size="row.size" :key="'row-' + rowIndex">
+              <nn-column :nn-size="row.size" :key="'row-' + rowIndex">
                 <nn-btn
-                  :round="rowSettings.round"
-                  :mode="rowSettings.mode"
-                  :color="row.color"
-                  :text="'' + (rowIndex + 1)"
+                  :nn-round="rowSettings.round"
+                  :nn-mode="rowSettings.mode"
+                  :nn-color="row.color"
+                  :nn-text="'' + (rowIndex + 1)"
                   title="Remove Column"
                   @click.passive="removeRow(rowIndex)"
                 />
@@ -135,32 +135,32 @@
 
         <hr />
 
-        <nn-row class="nn-shade" breakpoint="lg">
-          <nn-column size="1/4">
+        <nn-row class="nn-shade" nn-breakpoint="lg">
+          <nn-column nn-size="1/4">
             <nn-container class="nn-box">
               <div class="nn-label">Row Settings</div>
               <nn-row>
-                <nn-column size="100%">
+                <nn-column nn-size="100%">
                   <nn-btn
-                    text="Group"
-                    color="burn-orange"
-                    :active="rowSettings.group"
+                    nn-text="Group"
+                    nn-color="burn-orange"
+                    :nn-active="rowSettings.group"
                     @click.passive="toggleRowSettings('group')"
                   />
                 </nn-column>
               </nn-row>
               <nn-row>
-                <nn-column size="100%">
+                <nn-column nn-size="100%">
                   <nn-btn
-                    text="Grid"
-                    color="burn-orange"
-                    :active="rowSettings.grid"
+                    nn-text="Grid"
+                    nn-color="burn-orange"
+                    :nn-active="rowSettings.grid"
                     @click.passive="toggleRowSettings('grid')"
                   />
                 </nn-column>
               </nn-row>
               <nn-row v-if="!rowSettings.grid">
-                <nn-column size="100%-50">
+                <nn-column nn-size="100%-50">
                   <input
                     type="range"
                     class="nn-range nn-cobalt-blue"
@@ -170,7 +170,7 @@
                     v-model="rowSettings.spacing"
                   />
                 </nn-column>
-                <nn-column size="50">
+                <nn-column nn-size="50">
                   <input
                     type="text"
                     class="nn-input"
@@ -182,11 +182,11 @@
               <hr />
               <div class="nn-label">Button Settings</div>
               <nn-row>
-                <nn-column size="100%">
+                <nn-column nn-size="100%">
                   <nn-btn
-                    text="Round"
-                    color="burn-orange"
-                    :active="rowSettings.round"
+                    nn-text="Round"
+                    nn-color="burn-orange"
+                    :nn-active="rowSettings.round"
                     @click.passive="toggleRowSettings('round')"
                   />
                 </nn-column>
@@ -195,41 +195,41 @@
               <hr />
 
               <nn-row>
-                <nn-column size="100%">
+                <nn-column nn-size="100%">
                   <nn-btn
-                    text="Flat"
-                    color="gold-tips"
-                    :active="rowSettings.mode === 'flat'"
+                    nn-text="Flat"
+                    nn-color="gold-tips"
+                    :nn-active="rowSettings.mode === 'flat'"
                     @click.passive="switchMode('flat')"
                   />
                 </nn-column>
               </nn-row>
               <nn-row>
-                <nn-column size="100%">
+                <nn-column nn-size="100%">
                   <nn-btn
-                    text="Outline"
-                    color="gold-tips"
-                    :active="rowSettings.mode === 'outline'"
+                    nn-text="Outline"
+                    nn-color="gold-tips"
+                    :nn-active="rowSettings.mode === 'outline'"
                     @click.passive="switchMode('outline')"
                   />
                 </nn-column>
               </nn-row>
               <nn-row>
-                <nn-column size="100%">
+                <nn-column nn-size="100%">
                   <nn-btn
-                    text="Ghost"
-                    color="gold-tips"
-                    :active="rowSettings.mode === 'ghost'"
+                    nn-text="Ghost"
+                    nn-color="gold-tips"
+                    :nn-active="rowSettings.mode === 'ghost'"
                     @click.passive="switchMode('ghost')"
                   />
                 </nn-column>
               </nn-row>
               <nn-row>
-                <nn-column size="100%">
+                <nn-column nn-size="100%">
                   <nn-btn
-                    text="Nav"
-                    color="gold-tips"
-                    :active="rowSettings.mode === 'nav'"
+                    nn-text="Nav"
+                    nn-color="gold-tips"
+                    :nn-active="rowSettings.mode === 'nav'"
                     @click.passive="switchMode('nav')"
                   />
                 </nn-column>
@@ -238,61 +238,61 @@
               <hr />
               <div class="nn-label">Presets</div>
               <nn-row>
-                <nn-column size="100%">
+                <nn-column nn-size="100%">
                   <nn-btn
-                    text="Search Bar"
-                    color="gold-tips"
-                    :active="isSimilarObject('searchBar')"
+                    nn-text="Search Bar"
+                    nn-color="gold-tips"
+                    :nn-active="isSimilarObject('searchBar')"
                     @click.passive="setGrid(def.searchBar)"
                   />
                 </nn-column>
               </nn-row>
               <nn-row>
-                <nn-column size="100%">
+                <nn-column nn-size="100%">
                   <nn-btn
-                    text="Pride"
-                    color="gold-tips"
-                    :active="isSimilarObject('rainbow')"
+                    nn-text="Pride"
+                    nn-color="gold-tips"
+                    :nn-active="isSimilarObject('rainbow')"
                     @click.passive="setGrid(def.rainbow)"
                   />
                 </nn-column>
               </nn-row>
               <nn-row>
-                <nn-column size="100%">
+                <nn-column nn-size="100%">
                   <nn-btn
-                    text="Magnet"
-                    color="gold-tips"
-                    :active="isSimilarObject('magnet')"
+                    nn-text="Magnet"
+                    nn-color="gold-tips"
+                    :nn-active="isSimilarObject('magnet')"
                     @click.passive="setGrid(def.magnet)"
                   />
                 </nn-column>
               </nn-row>
               <nn-row>
-                <nn-column size="100%">
+                <nn-column nn-size="100%">
                   <nn-btn
-                    text="Esperanto"
-                    color="gold-tips"
-                    :active="isSimilarObject('esperanto')"
+                    nn-text="Esperanto"
+                    nn-color="gold-tips"
+                    :nn-active="isSimilarObject('esperanto')"
                     @click.passive="setGrid(def.esperanto)"
                   />
                 </nn-column>
               </nn-row>
               <nn-row>
-                <nn-column size="100%">
+                <nn-column nn-size="100%">
                   <nn-btn
-                    text="Dominican Republic"
-                    color="gold-tips"
-                    :active="isSimilarObject('dr')"
+                    nn-text="Dominican Republic"
+                    nn-color="gold-tips"
+                    :nn-active="isSimilarObject('dr')"
                     @click.passive="setGrid(def.dr)"
                   />
                 </nn-column>
               </nn-row>
               <nn-row>
-                <nn-column size="100%">
+                <nn-column nn-size="100%">
                   <nn-btn
-                    text="All Colors"
-                    color="gold-tips"
-                    :active="isSimilarObject('all')"
+                    nn-text="All Colors"
+                    nn-color="gold-tips"
+                    :nn-active="isSimilarObject('all')"
                     @click.passive="setGrid(def.all)"
                   />
                 </nn-column>
@@ -301,10 +301,10 @@
               <hr />
 
               <nn-row>
-                <nn-column size="100%">
+                <nn-column nn-size="100%">
                   <nn-btn
-                    text="+ Add column"
-                    color="burn-orange"
+                    nn-text="+ Add column"
+                    nn-color="burn-orange"
                     @click.passive="addRow()"
                   />
                 </nn-column>
@@ -312,35 +312,35 @@
             </nn-container>
           </nn-column>
 
-          <nn-column size="3/4">
-            <nn-row breakpoint="lg">
+          <nn-column nn-size="3/4">
+            <nn-row nn-breakpoint="lg">
               <template v-for="(rowController, rowCIndex) in grid">
                 <nn-column
                   :key="'row-' + rowCIndex"
-                  :size="grid.length < 3 ? '1/' + grid.length : '1/3'"
+                  :nn-size="grid.length < 3 ? '1/' + grid.length : '1/3'"
                 >
                   <nn-container>
                     <nn-row>
-                      <nn-column size="100%">
+                      <nn-column nn-size="100%">
                         <nn-btn
                           title="Remove Column"
-                          :color="rowController.color"
-                          :round="rowSettings.round"
-                          :text="rowCIndex + 1"
-                          :mode="rowSettings.mode"
+                          :nn-color="rowController.color"
+                          :nn-round="rowSettings.round"
+                          :nn-text="rowCIndex + 1"
+                          :nn-mode="rowSettings.mode"
                           @click.passive="removeRow(rowCIndex)"
                         />
                       </nn-column>
                     </nn-row>
 
                     <nn-row>
-                      <nn-column size="70">
+                      <nn-column nn-size="70">
                         <label :for="`size-${rowCIndex}`" class="nn-label">
                           Size:
                         </label>
                       </nn-column>
 
-                      <nn-column size="100%-70">
+                      <nn-column nn-size="100%-70">
                         <input
                           class="nn-input"
                           type="text"
@@ -351,13 +351,13 @@
                     </nn-row>
 
                     <nn-row>
-                      <nn-column size="70">
+                      <nn-column nn-size="70">
                         <label :for="`color-${rowCIndex}`" class="nn-label">
                           Color:
                         </label>
                       </nn-column>
 
-                      <nn-column size="100%-70">
+                      <nn-column nn-size="100%-70">
                         <select
                           class="nn-input"
                           :id="`color-${rowCIndex}`"

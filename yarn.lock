@@ -10298,10 +10298,8 @@ nan@^2.12.1:
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.16.0.tgz#664f43e45460fb98faf00edca0bb0d7b8dce7916"
   integrity sha512-UdAqHyFngu7TfQKsCBgAA6pWDkT8MAO7d0jyOecVhN5354xbLqdn8mV9Tat9gepAupm0bt2DbeaSC8vS52MuFA==
 
-nano-grid@3.2.10:
-  version "3.2.10"
-  resolved "https://registry.yarnpkg.com/nano-grid/-/nano-grid-3.2.10.tgz#81c68f1a9b44c921eb9021a3e7edea4ae18a57a0"
-  integrity sha512-/OmLxoaWW1C7i88WTMtyNBFNxdQRwtHUD8q/gqb8+wheLeyAZ3nPHCAWmx6BzKbl5x3YtZLfyitECEoDqR1DTQ==
+"nano-grid@file:../../nano-grid":
+  version "4.0.0"
 
 nano-spirit@1.0.1:
   version "1.0.1"

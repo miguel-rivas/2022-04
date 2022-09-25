@@ -1,19 +1,19 @@
 <template>
-  <nn-scroll-area color="royal-purple">
+  <nn-scroll-area nn-color="royal-purple">
     <nn-row class="row-block">
-      <nn-column size="100%">
+      <nn-column nn-size="100%">
         <legend>{{ $t(`dollhouse.panel.controller.legend`) }}</legend>
         <nn-row>
-          <nn-column size="100%">
+          <nn-column nn-size="100%">
             <nn-row>
-              <nn-column size="35">
+              <nn-column nn-size="35">
                 <btn
                   color="burn-orange"
                   glyph="rotate-left"
                   @click="$store.commit('toggleViewSide')"
                 />
               </nn-column>
-              <nn-column size="100%-35">
+              <nn-column nn-size="100%-35">
                 <btn
                   color="gold-tips"
                   :text="$t(`dollhouse.panel.controller.rotate`)"

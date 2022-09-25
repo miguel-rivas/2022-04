@@ -1,9 +1,9 @@
 <template>
-  <nn-scroll-area color="royal-purple">
-    <nn-container size="900">
+  <nn-scroll-area nn-color="royal-purple">
+    <nn-container nn-size="900">
       <nn-row class="btn-gallery" grid>
         <template v-for="(item, itemIndex) in database">
-          <nn-column size="200, 200" :key="itemIndex">
+          <nn-column nn-size="200, 200" :key="itemIndex">
             <button class="nn-btn arcade" @click="playAudio(item)">
               <img :src="getZapp(`img/fakeaudience/${item}.svg`)" />
             </button>

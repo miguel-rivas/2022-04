@@ -1,43 +1,43 @@
 <template lang="pug">
-nn-scroll-area(color="royal-purple")
+nn-scroll-area(nn-color="royal-purple")
   nn-container
     ul.img-gallery
       template(v-for="(color, colorIndex) in gColorsDB")
         li.swatch.item(:key="colorIndex")
           nn-row
             nn-column.color(
-              size="100%, 250",
+              nn-size="100%, 250",
               :style="`background-color: ${color.hex}`"
             )
-            nn-column(size="100%")
+            nn-column(nn-size="100%")
               p.nn-label.nn-gravel {{ color.titleCase }}
 
               nn-row
-                nn-column(size="1/2")
+                nn-column(nn-size="1/2")
                   p.nn-label.nn-charcoal Hexadecimal
-                nn-column(size="1/2")
+                nn-column(nn-size="1/2")
                   p.nn-label.nn-gravel {{ color.hex }}
-                nn-column(size="1/2")
+                nn-column(nn-size="1/2")
                   p.nn-label.nn-charcoal Hue
-                nn-column(size="1/2")
+                nn-column(nn-size="1/2")
                   p.nn-label.nn-gravel {{ color.hue.toFixed(2) }}
-                nn-column(size="1/2")
+                nn-column(nn-size="1/2")
                   p.nn-label.nn-charcoal Saturation
-                nn-column(size="1/2")
+                nn-column(nn-size="1/2")
                   p.nn-label.nn-gravel {{ color.saturation.toFixed(2) }}
-                nn-column(size="1/2")
+                nn-column(nn-size="1/2")
                   p.nn-label.nn-charcoal Lightness
-                nn-column(size="1/2")
+                nn-column(nn-size="1/2")
                   p.nn-label.nn-gravel {{ color.lightness.toFixed(2) }}
 
               p.nn-label.nn-charcoal Background Contrast
               nn-row
                 template(v-for="(bk, bkIndex) in bkColors")
-                  nn-column(size="35", :key="`bkIndex1${bkIndex}`")
+                  nn-column(nn-size="35", :key="`bkIndex1${bkIndex}`")
                     .nn-label(:style="setBallBk(bk.hex)")
-                  nn-column(size="70%-35", :key="`bkIndex2${bkIndex}`")
+                  nn-column(nn-size="70%-35", :key="`bkIndex2${bkIndex}`")
                     p.nn-label.nn-gravel {{ bk.label }}
-                  nn-column(size="30%", :key="`bkIndex3${bkIndex}`")
+                  nn-column(nn-size="30%", :key="`bkIndex3${bkIndex}`")
                     p.nn-label(
                       :class="checkContrast(color.hex, bk.hex) >= 7 ? 'nn-shamrock' : 'nn-persian-red'",
                       :title="checkContrast(color.hex, bk.hex) >= 7 ? 'Enough Contrast' : 'Not Enough Contrast'"

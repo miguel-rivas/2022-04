@@ -1,5 +1,5 @@
 <template lang="pug">
-nn-scroll-area(horizontal="false", color="royal-purple")
+nn-scroll-area(nn-no-horizontal="false", nn-color="royal-purple")
   section#intro
     span.line.line_01
     span.line.line_02

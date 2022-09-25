@@ -1,5 +1,5 @@
 <template>
-  <nn-scroll-area color="royal-purple">
+  <nn-scroll-area nn-color="royal-purple">
     <main>
       <img :src="getZapp('img/presidente/verano/logo.png')" class="logo" />
       <h1>¿CUÁL es tu edad?</h1>

@@ -1,5 +1,5 @@
 <template lang="pug">
-nn-scroll-area(color="royal-purple", :class="theme")
+nn-scroll-area(nn-color="royal-purple", :class="theme")
   nav.hour(@click="openMenu = !openMenu", :class="{on: openMenu}")
     button.clock: img(:src="getZapp('img/descubria/clock.png')")
     ul
