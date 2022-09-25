@@ -1,7 +1,7 @@
 <template>
   <nn-scroll-area nn-color="royal-purple">
     <nn-container nn-size="900">
-      <nn-row class="btn-gallery" grid>
+      <nn-row class="btn-gallery" nn-grid>
         <template v-for="(item, itemIndex) in database">
           <nn-column nn-size="200, 200" :key="itemIndex">
             <button class="nn-btn arcade" @click="playAudio(item)">

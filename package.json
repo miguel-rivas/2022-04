@@ -31,7 +31,7 @@
     "luxon": "^2.3.0",
     "mr-vue-color": "file:../../app_web_module_vue-color-fork",
     "nano-grid": "file:../../nano-grid",
-    "nano-spirit": "1.0.1",
+    "nano-spirit": "file:../../nano-spirit",
     "phaser": "^3.55.2",
     "sizzle": "^2.3.6",
     "sweetalert2": "^11.4.26",

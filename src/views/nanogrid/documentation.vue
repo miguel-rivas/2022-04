@@ -7,7 +7,7 @@
       <div class="nn-box">
         <h2>Components</h2>
 
-        <nn-row nn-breakpoint="lg" grid>
+        <nn-row nn-breakpoint="lg" nn-grid>
           <template v-for="(item, itemIndex) in componentes">
             <nn-column nn-size="1/4" :key="'itemIndex' + itemIndex">
               <span class="nn-label">
@@ -22,22 +22,22 @@
         <h2>Row Settings</h2>
         <div class="table" role="table">
           <div class="table-head" role="rowgroup">
-            <nn-row table-element nn-breakpoint="lg">
-              <nn-column table-element nn-size="1/2">Keyword</nn-column>
-              <nn-column table-element nn-size="1/2">Description</nn-column>
+            <nn-row nn-table-element nn-breakpoint="lg">
+              <nn-column nn-table-element nn-size="1/2">Keyword</nn-column>
+              <nn-column nn-table-element nn-size="1/2">Description</nn-column>
             </nn-row>
           </div>
           <div class="table-body" role="rowgroup">
             <template v-for="(item, itemIndex) in rows">
               <nn-row
-                table-element
+                nn-table-element
                 nn-breakpoint="lg"
                 :key="'itemIndex' + itemIndex"
               >
-                <nn-column table-element nn-size="1/2">
+                <nn-column nn-table-element nn-size="1/2">
                   {{ item.key }}
                 </nn-column>
-                <nn-column table-element nn-size="1/2">
+                <nn-column nn-table-element nn-size="1/2">
                   {{ item.description }}
                 </nn-column>
               </nn-row>
@@ -50,22 +50,22 @@
         <h2>Column Settings</h2>
         <div class="table" role="table">
           <div class="table-head" role="rowgroup">
-            <nn-row table-element nn-breakpoint="lg">
-              <nn-column table-element nn-size="1/2">Keyword</nn-column>
-              <nn-column table-element nn-size="1/2">Description</nn-column>
+            <nn-row nn-table-element nn-breakpoint="lg">
+              <nn-column nn-table-element nn-size="1/2">Keyword</nn-column>
+              <nn-column nn-table-element nn-size="1/2">Description</nn-column>
             </nn-row>
           </div>
           <div class="table-body" role="rowgroup">
             <template v-for="(item, itemIndex) in columns">
               <nn-row
-                table-element
+                nn-table-element
                 nn-breakpoint="lg"
                 :key="'itemIndex' + itemIndex"
               >
-                <nn-column table-element nn-size="1/2">
+                <nn-column nn-table-element nn-size="1/2">
                   {{ item.key }}
                 </nn-column>
-                <nn-column table-element nn-size="1/2">
+                <nn-column nn-table-element nn-size="1/2">
                   <span v-html="item.description" />
                 </nn-column>
               </nn-row>
@@ -78,22 +78,22 @@
         <h2>Button Settings</h2>
         <div class="table" role="table">
           <div class="table-head" role="rowgroup">
-            <nn-row table-element nn-breakpoint="lg">
-              <nn-column table-element nn-size="1/2">Keyword</nn-column>
-              <nn-column table-element nn-size="1/2">Description</nn-column>
+            <nn-row nn-table-element nn-breakpoint="lg">
+              <nn-column nn-table-element nn-size="1/2">Keyword</nn-column>
+              <nn-column nn-table-element nn-size="1/2">Description</nn-column>
             </nn-row>
           </div>
           <div class="table-body" role="rowgroup">
             <template v-for="(item, itemIndex) in buttons">
               <nn-row
-                table-element
+                nn-table-element
                 nn-breakpoint="lg"
                 :key="'itemIndex' + itemIndex"
               >
-                <nn-column table-element nn-size="1/2">
+                <nn-column nn-table-element nn-size="1/2">
                   {{ item.key }}
                 </nn-column>
-                <nn-column table-element nn-size="1/2">
+                <nn-column nn-table-element nn-size="1/2">
                   {{ item.description }}
                 </nn-column>
               </nn-row>

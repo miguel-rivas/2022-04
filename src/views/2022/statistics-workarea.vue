@@ -26,7 +26,7 @@ nn-scroll-area(nn-color="royal-purple")
 
         .table-body(role="rowgroup")
           template(v-for="(project, projectIndex) in projectsDBList")
-            toggle-row(nn-breakpoint="lg", :key="projectIndex")
+            toggle-row(breakpoint="lg", :key="projectIndex")
               template(v-slot:header)
                 nn-column(nn-table-element, nn-size="40%") {{ project.title }}
                 nn-column(nn-table-element, nn-size="20%") {{ $t(project.type) }}
