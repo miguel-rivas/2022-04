@@ -112,12 +112,24 @@ import nanogridHomeView from '@/views/nanogrid/home.vue';
 import nanogridTestsView from '@/views/nanogrid/tests.vue';
 import nanogridDocumentationView from '@/views/nanogrid/documentation.vue';
 
+import familyWorkareaView from '@/views/others/family-workarea.vue';
+import familyPanelView from '@/views/others/family-panel.vue';
+
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: '/',
     redirect: '/map',
+  },
+  {
+    name: 'family',
+    path: '/family',
+    components: {
+      workarea: familyWorkareaView,
+      panel: familyPanelView,
+      navbar: OthersNavbarView,
+    },
   },
   {
     name: 'weather',

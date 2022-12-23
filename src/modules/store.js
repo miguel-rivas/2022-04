@@ -26,6 +26,11 @@ export const store = new Vuex.Store({
     },
     modalState,
     selection: {
+      family: {
+        layerSpacing: 8,
+        nodeSpacing: 8,
+        toggleOrientation: false,
+      },
       threeState,
       gearState,
       avatarState,
@@ -92,6 +97,7 @@ export const store = new Vuex.Store({
     },
   },
   getters: {
+    getFamilySelection: state => state.selection.family,
     getFallBackValue: state => state.fallBackIcons,
     getParams: state => state.params,
     getGridSize: state => state.selection.pixelState.gridSize,
