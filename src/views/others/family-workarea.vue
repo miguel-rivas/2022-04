@@ -1,6 +1,10 @@
+<template>
+  <div id="family-tree"/>
+</template>
+
 <script>
 import Vue from "vue";
-import d3 from "d3";
+import * as d3 from "d3/dist/d3.min";
 import ramirez from "@/db/family/ramirez.js";
 import rivas from "@/db/family/rivas.js";
 
@@ -55,7 +59,7 @@ export default Vue.extend({
 
     let initTransform = d3.zoomIdentity.translate(0, 0);
     let svg = d3
-      .select("body")
+      .select("#family-tree")
       .append("svg")
       .attr("width", 1)
       .attr("height", 1)
@@ -79,7 +83,7 @@ export default Vue.extend({
 
     let svgGroup = svg.append("g");
     svg.call(zoom.transform, initTransform);
-    let vertical = this.selection.toggleOrientation;
+    let vertical = this.selection.verticalOrientation;
 
     d3.select("#treedepth").on("change", function () {
       resfreshFamilyTree(this.value);
@@ -167,7 +171,7 @@ export default Vue.extend({
         .style("opacity", 0) // node.opacity=1
         .remove();
 
-      linksUpdate = svgGroup.selectAll("path.link").data(links, linkDataKey);
+      let linksUpdate = svgGroup.selectAll("path.link").data(links, linkDataKey);
 
       let linksEnter = linksUpdate
         .enter()

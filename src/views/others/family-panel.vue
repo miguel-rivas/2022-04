@@ -30,10 +30,10 @@
               class="nn-btn"
               nn-mode="flat"
               nn-color="charcoal"
-              :class="{ 'nn-active': selection.toggleOrientation }"
+              :class="{ 'nn-active': selection.verticalOrientation }"
             >
               Toggle Orientation
-              <input type="checkbox" v-model="selection.toggleOrientation" />
+              <input type="checkbox" v-model="selection.verticalOrientation" />
             </label>
           </nn-column>
         </nn-row>

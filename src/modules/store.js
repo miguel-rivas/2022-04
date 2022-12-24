@@ -29,7 +29,7 @@ export const store = new Vuex.Store({
       family: {
         layerSpacing: 8,
         nodeSpacing: 8,
-        toggleOrientation: false,
+        verticalOrientation: true,
       },
       threeState,
       gearState,
