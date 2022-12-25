@@ -38,6 +38,7 @@ files=(
 
   "evolution"
 
+  "family"
   "flat"
   "formability-401"
   "formability-404"

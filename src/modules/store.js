@@ -27,9 +27,9 @@ export const store = new Vuex.Store({
     modalState,
     selection: {
       family: {
-        layerSpacing: 8,
-        nodeSpacing: 8,
-        verticalOrientation: true,
+        layerSpacing: 16,
+        nodeSpacing: 32,
+        verticalOrientation: false,
       },
       threeState,
       gearState,

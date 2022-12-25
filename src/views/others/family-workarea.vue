@@ -1,50 +1,23 @@
 <template>
-  <div id="family-tree"/>
+  <div id="family-tree" />
 </template>
 
 <script>
 import Vue from "vue";
 import * as d3 from "d3/dist/d3.min";
-import ramirez from "@/db/family/ramirez.js";
-import rivas from "@/db/family/rivas.js";
+import familyData from "@/db/family-tree";
 
 export default Vue.extend({
   data: () => ({
     selection: {},
-    familyData: [
-      ...ramirez,
-      ...rivas,
-    ]
   }),
   created() {
     this.selection = this.$store.getters.getFamilySelection;
   },
   mounted() {
-    const createFamilyNode = (obj) => {
-      return {
-        id: obj?.id ? obj.id : "no-id",
-        name: obj?.name ? [...obj.name, ...obj.familyName].join(" ") : "user",
-        children: [],
-      };
-    };
-
-    let treeData = {};
-    let hasChildren = true;
-    let family = 0;
-
-    treeData = createFamilyNode(ramirez[0]);
-
-    ramirez[0].spouse.forEach((item) => {
-      treeData.children.push(createFamilyNode(item));
-    });
-
-    console.log(treeData);
-
-    /* ----------------------------------------------- */
-
     let root;
     let boxWidth = 250,
-      boxHeight = 40,
+      boxHeight = 60,
       duration = 250;
     let layerSpacing = 28;
     let nodeSpacing = 28;
@@ -93,7 +66,7 @@ export default Vue.extend({
       resfreshFamilyTree();
     });
 
-    drawHierarchicalData(treeData);
+    drawHierarchicalData(familyData);
 
     function drawHierarchicalData(hierarchicalData) {
       root = d3.hierarchy(hierarchicalData);
@@ -118,11 +91,17 @@ export default Vue.extend({
         links = treeData.links();
 
       let nodesUpdate = svgGroup.selectAll("g.person").data(nodes, nodeDataKey);
-
+      
       let nodesEnter = nodesUpdate
         .enter()
         .append("g")
-        .attr("class", "person")
+        .attr("class", function (datum) {
+          const classes = ['person'];
+          if(datum?.data?.group){
+            classes.push(datum.data.group);
+          }
+          return classes.join(' ');
+        })
         .attr(
           "transform",
           "translate(" +
@@ -136,13 +115,20 @@ export default Vue.extend({
       setNodeRectLayout(nodesEnter.append("rect"));
       nodesEnter
         .append("text")
-        .attr("dx", -(boxWidth / 2) + 10)
-        .attr("dy", 4)
-        .attr("text-anchor", "start")
+        .attr("dy", -4)
+        .attr("text-anchor", "middle")
         .attr("class", "name")
         .text(function (datum) {
-          return datum.data.name;
-        });
+          return datum?.data?.name?.length ? datum.data.name.join(' ') : '--';
+        })
+        nodesEnter
+        .append("text")
+        .attr("dy", 14)
+        .attr("text-anchor", "middle")
+        .attr("class", "family-name")
+        .text(function (datum) {
+          return datum?.data?.familyName?.length ? datum.data.familyName.join(' ') : '--';
+        })
       {
         nodesUpdate
           .merge(nodesEnter)
@@ -155,7 +141,7 @@ export default Vue.extend({
               ")"
             );
           })
-          .style("opacity", 1); // node.opacity=1
+          .style("opacity", 1);
       }
       nodesUpdate
         .exit()
@@ -168,10 +154,12 @@ export default Vue.extend({
             ")"
           );
         })
-        .style("opacity", 0) // node.opacity=1
+        .style("opacity", 0)
         .remove();
 
-      let linksUpdate = svgGroup.selectAll("path.link").data(links, linkDataKey);
+      let linksUpdate = svgGroup
+        .selectAll("path.link")
+        .data(links, linkDataKey);
 
       let linksEnter = linksUpdate
         .enter()
