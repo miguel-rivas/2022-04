@@ -80,6 +80,7 @@ const fn = {
 
 const fernandoRivasChildren = [
   {
+    id: "s32",
     name: ["Rocio", "Cristal"],
     familyName: [fn.rivas, fn.santos],
     children: [
@@ -114,6 +115,7 @@ const fernandoRivasChildren = [
       {
         group: "pareja",
         name: ["Yeimi", "del Carmen"],
+        preferedName: "Yeimi",
         familyName: [fn.tejada],
         children: [
           {
@@ -1059,6 +1061,7 @@ export default {
                     },
                     {
                       name: ["Niyra", "Raydhiris"],
+                      preferedName: "Niyra",
                       familyName: [fn.castillo, fn.ramirez],
                       children: [
                         {

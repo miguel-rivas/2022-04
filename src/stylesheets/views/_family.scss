@@ -7,6 +7,11 @@
       font: 14px sans-serif;
       cursor: pointer;
 
+      &.hover {
+        fill: #9191c6;
+        stroke: #3A3885;
+      }
+
       &.asociado {
         rect {
           stroke: #2995ff;
