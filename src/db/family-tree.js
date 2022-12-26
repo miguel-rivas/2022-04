@@ -1,4 +1,6 @@
 const fn = {
+  null: "--",
+
   abreu: "Abreu",
   acosta: "Acosta",
   albayaty: "Albayaty",
@@ -39,6 +41,7 @@ const fn = {
   lugo: "Lugo",
   luna: "Luna",
 
+  malony: "Malony",
   marte: "Marte",
   martinez: "Martinez",
   matias: "Matías",
@@ -49,7 +52,6 @@ const fn = {
   molina: "Molina",
   mueses: "Mueses",
 
-  nova: "Nova",
   nunez: "Nuñez",
 
   parra: "Parra",
@@ -85,6 +87,10 @@ const assignID = () => {
   return `id-${globalIDcount}`;
 }
 
+const ghost = (name) => {
+  return `(${name})`
+};
+
 const rp = {
   fernandoRivas: {
     id: assignID(),
@@ -94,7 +100,7 @@ const rp = {
   },
   carmenSantos: {
     id: assignID(),
-    name: ["María", "del Carmen"],
+    name: ["María", "Del Carmen"],
     familyName: [fn.santos, fn.ramirez],
   },
   virgiliaRamirez: {
@@ -117,8 +123,29 @@ const rp = {
     id: assignID(),
     name: ["Pedro", "Antonio"],
     familyName: [fn.ramirez, fn.grullon],
+  },
+  amableRamirez: {
+    id: assignID(),
+    name: ["Amable"],
+    familyName: [fn.ramirez, fn.rivas],
+  },
+  trinaRamirez: {
+    id: assignID(),
+    name: ["Ana", "Trinidad"],
+    familyName: [fn.ramirez, fn.mendoza],
+    nickname: "Trina",
+  },
+  antoniaRamirez: {
+    id: assignID(),
+    name: ["Antonia"],
+    familyName: [fn.ramirez, fn.rivas],
+  },
+  alcidesRamirez: {
+    id: assignID(),
+    name: ["Alcides", "Guadalupe"],
+    familyName: [fn.ramirez, fn.mendoza],
   }
-}
+};
 
 const fernandoRivasChildren = [
   {
@@ -134,7 +161,7 @@ const fernandoRivasChildren = [
         children: [
           {
             id: assignID(),
-            name: ["Shadday"],
+            name: ["Shadday", "Noemi"],
             familyName: [fn.estevez, fn.rivas],
           }
         ]
@@ -162,7 +189,7 @@ const fernandoRivasChildren = [
       {
         id: assignID(),
         group: "pareja",
-        name: ["Yeimi", "del Carmen"],
+        name: ["Yeimi", "Del Carmen"],
         preferedName: "Yeimi",
         familyName: [fn.tejada],
         children: [
@@ -226,7 +253,7 @@ const virgiliaRamirezChildren = [
         id: assignID(),
         group: "pareja",
         name: ["Judith"],
-        familyName: ["Malony"],
+        familyName: [fn.malony],
         children: [
           {
             id: assignID(),
@@ -354,301 +381,207 @@ const anaRitaChildren = [
     name: ["Leonora"],
     familyName: [fn.ramirez, fn.rivas],
   },
-]
+];
+
+const trinaRamirezChildren = [
+  {
+    id: assignID(),
+    name: ["Amaury", "Germán"],
+    familyName: [fn.ramirez, fn.ramirez],
+    children: [
+      {
+        id: assignID(),
+        group: "pareja",
+        name: [],
+        familyName: [],
+        children: [
+          {
+            id: assignID(),
+            name: [],
+            familyName: [fn.ramirez],
+          },
+          {
+            id: assignID(),
+            name: [],
+            familyName: [fn.ramirez],
+          },
+        ],
+      }
+    ],
+  },
+  {
+    id: assignID(),
+    name: ["Lissette"],
+    familyName: [fn.ramirez, fn.ramirez],
+    children: [
+      {
+        id: assignID(),
+        group: "pareja",
+        name: [],
+        familyName: [],
+        children: [
+          {
+            id: assignID(),
+            name: [],
+            familyName: [],
+          },
+          {
+            id: assignID(),
+            name: [],
+            familyName: [],
+          },
+        ],
+      }
+    ],
+  },
+];
+
+const alcidesRamirezChildren = [
+  {
+    id: assignID(),
+    name: ["Carmen", "Elsa"],
+    familyName: [fn.ramirez],
+    children: [
+      {
+        id: assignID(),
+        group: "pareja",
+        name: [],
+        familyName: [],
+        children: [
+          {
+            id: assignID(),
+            name: ["Danel"],
+            familyName: []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: assignID(),
+    name: ["Luz", "Del Alba"],
+    familyName: [fn.ramirez],
+    nickname: "Muñeca",
+  },
+  {
+    id: assignID(),
+    name: ["José", "Rafael"],
+    familyName: [fn.ramirez],
+    nickname: "Felo",
+    children: [
+      {
+        id: assignID(),
+        group: "pareja",
+        name: ["Jossie"],
+        familyName: [fn.piantini],
+        children: [
+          {
+            id: assignID(),
+            name: ["Kisayris"],
+            familyName: [fn.ramirez, fn.piantini],
+          },
+          {
+            id: assignID(),
+            name: ["Josue", "Rafael"],
+            familyName: [fn.ramirez, fn.piantini],
+            children: [
+              {
+                id: assignID(),
+                group: "pareja",
+                name: ["Lidia"],
+                familyName: [fn.castillo],
+                children: [
+                  {
+                    id: assignID(),
+                    name: ["Gabriela"],
+                    familyName: [fn.ramirez, fn.castillo]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            id: assignID(),
+            name: ["Carlos"],
+            familyName: [fn.ramirez, fn.piantini],
+          },
+          {
+            id: assignID(),
+            name: ["Nathalie"],
+            familyName: [fn.ramirez, fn.piantini],
+          },
+          {
+            id: assignID(),
+            name: ["Priscila"],
+            familyName: [fn.ramirez, fn.piantini],
+          },
+          {
+            id: assignID(),
+            name: ["Monica"],
+            familyName: [fn.ramirez, fn.piantini],
+          },
+        ]
+      }
+    ],
+  },
+];
 
 export default {
   name: ["Family"],
   familyName: ["Tree"],
   children: [
     {
-      ...rp.pedroRamirezGrullon,
+      name: [],
+      familyName: [fn.ramirez, fn.grullon],
       children: [
         {
           group: "pareja",
-          ...rp.anaRita,
-          children: anaRitaChildren,
-        },
-        {
-          group: "pareja",
-          name: ["María", "Emilia"],
-          familyName: ['-' + fn.fabre, fn.mendoza],
           children: [
             {
-              name: ["Alcides", "Guadalupe"],
-              familyName: [fn.ramirez, fn.mendoza],
+              ...rp.pedroRamirezGrullon,
               children: [
                 {
                   group: "pareja",
-                  name: ["Antonia"],
-                  familyName: [fn.ramirez],
-                  children: [
-                    {
-                      name: ["Carmen", "Elsa"],
-                      familyName: [fn.ramirez],
-                      children: [
-                        {
-                          group: "pareja",
-                          name: [],
-                          familyName: [],
-                          children: [
-                            {
-                              name: ["Danel"],
-                              familyName: []
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      name: ["Luz", "Del Alba"],
-                      familyName: [fn.ramirez],
-                      nickname: "Muñeca",
-                    },
-                    {
-                      name: ["José", "Rafael"],
-                      familyName: [fn.ramirez],
-                      nickname: "Felo",
-                      children: [
-                        {
-                          group: "pareja",
-                          name: ["Jossie"],
-                          familyName: [fn.piantini],
-                          children: [
-                            {
-                              name: ["Kisayris"],
-                              familyName: [fn.ramirez, fn.piantini],
-                            },
-                            {
-                              name: ["Josue", "Rafael"],
-                              familyName: [fn.ramirez, fn.piantini],
-                              children: [
-                                {
-                                  group: "pareja",
-                                  name: ["Lidia"],
-                                  familyName: [fn.castillo],
-                                  children: [
-                                    {
-                                      name: ["Gabriela"],
-                                      familyName: [fn.ramirez, fn.castillo]
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              name: ["Carlos"],
-                              familyName: [fn.ramirez, fn.piantini],
-                            },
-                            {
-                              name: ["Nathalie"],
-                              familyName: [fn.ramirez, fn.piantini],
-                            },
-                            {
-                              name: ["Priscila"],
-                              familyName: [fn.ramirez, fn.piantini],
-                            },
-                            {
-                              name: ["Monica"],
-                              familyName: [fn.ramirez, fn.piantini],
-                            },
-                          ]
-                        }
-                      ],
-                    },
-                  ],
+                  ...rp.anaRita,
+                  children: anaRitaChildren,
                 },
-              ],
-            },
-            {
-              name: ["Ana", "Luz"],
-              familyName: [fn.ramirez, fn.mendoza],
-              nickname: "Tía Luz",
-            },
-            {
-              name: ["Pedro", "Antonio"],
-              familyName: [fn.ramirez, fn.mendoza],
-              nickname: "Pepe",
-              children: [
                 {
                   group: "pareja",
-                  name: ["Valencia"],
-                  familyName: [fn.perez],
+                  name: ["Emilia"],
+                  familyName: [ghost(fn.fabre), fn.mendoza],
                   children: [
                     {
-                      name: ["Yaquelin", "Helena"],
-                      familyName: [fn.ramirez, fn.perez],
-                    },
-                    {
-                      name: ["Pedro"],
-                      familyName: [fn.ramirez, fn.perez],
+                      ...rp.alcidesRamirez,
                       children: [
                         {
                           group: "pareja",
-                          name: [],
-                          familyName: [],
-                          children: [
-                            {
-                              name: ["Liza"],
-                              familyName: [fn.ramirez],
-                            },
-                            {
-                              name: ["Miguel"],
-                              familyName: [fn.ramirez],
-                            },
-                            {
-                              name: ["Eric"],
-                              familyName: [fn.ramirez],
-                            },
-                          ],
-                        }
-                      ],
-                    },
-                    {
-                      name: ["Angela", "Altagracia"],
-                      familyName: [fn.ramirez, fn.perez],
-                    },
-                    {
-                      name: ["Ursinio", "De Jesus"],
-                      familyName: [fn.ramirez, fn.perez],
-                    },
-                  ],
-                }
-              ],
-            },
-            {
-              name: ["Maria"],
-              familyName: [fn.ramirez, fn.mendoza],
-              nickname: "Maro",
-              children: [
-                {
-                  group: "pareja",
-                  name: ["Nicolas"],
-                  familyName: [fn.nunez, fn.escobosa],
-                  children: [
-                    {
-                      name: ["Eunice", "Del Carmen"],
-                      familyName: [fn.nunez, fn.ramirez],
-                      children: [
-                        {
-                          group: "pareja",
-                          name: [],
-                          familyName: [fn.contreras],
-                          children: [
-                            {
-                              name: ["Geraldine"],
-                              familyName: [fn.contreras, fn.nunez],
-                            },
-                            {
-                              name: ["Anderis"],
-                              familyName: [fn.contreras, fn.nunez],
-                            },
-                            {
-                              name: ["Endira"],
-                              familyName: [fn.contreras, fn.nunez],
-                            },
-                          ]
+                          ...rp.antoniaRamirez,
+                          children: alcidesRamirezChildren,
                         }
                       ]
                     },
                     {
-                      name: ["Jose", "Luis"],
-                      familyName: [fn.nunez, fn.ramirez],
+                      name: ["Ana", "Luz"],
+                      familyName: [fn.ramirez, fn.mendoza],
+                      nickname: "Tía Luz",
+                    },
+                    {
+                      name: ["Pedro", "Antonio"],
+                      familyName: [fn.ramirez, fn.mendoza],
+                      nickname: "Pepe",
                       children: [
                         {
                           group: "pareja",
-                          name: [],
-                          familyName: [],
+                          name: ["Valencia"],
+                          familyName: [fn.perez],
                           children: [
                             {
-                              name: ["Jocelyn"],
-                              familyName: [fn.nunez],
-                            }
-                          ],
-                        },
-                        {
-                          group: "pareja",
-                          name: [],
-                          familyName: [],
-                          nickname: "Cruzita",
-                          children: [
-                            {
-                              group: "asociado",
-                              name: ["Elizabeth"],
-                              familyName: [fn.nunez],
+                              name: ["Yaquelin", "Helena"],
+                              familyName: [fn.ramirez, fn.perez],
                             },
                             {
-                              name: ["Denisse"],
-                              familyName: [fn.nunez],
-                            },
-                            {
-                              name: ["Michelle"],
-                              familyName: [fn.nunez],
-                            },
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      name: ["Rosa", "Virginia"],
-                      familyName: [fn.nunez, fn.ramirez],
-                    },
-                    {
-                      name: ["David"],
-                      familyName: [fn.nunez, fn.ramirez],
-                    },
-                  ]
-                }
-              ]
-            },
-            {
-              name: ["America", "Ana"],
-              familyName: [fn.ramirez, fn.mendoza],
-              nickname: "Queca",
-              children: [
-                {
-                  group: "pareja",
-                  name: ["Juan", "Ramon"],
-                  familyName: [fn.santos, fn.jimenez],
-                  children: [
-                    {
-                      ...rp.carmenSantos,
-                      children: [
-                        {
-                          group: "pareja",
-                          ...rp.fernandoRivas,
-                          children: fernandoRivasChildren,
-                        }
-                      ]
-                    },
-                    {
-                      name: ["Maria", "Teresa"],
-                      familyName: [fn.santos, fn.ramirez],
-                      children: [
-                        {
-                          group: "pareja",
-                          name: ["Mario", "Antonio"],
-                          familyName: [fn.martinez],
-                          children: [
-                            {
-                              name: ["Marioly", "Altagracia"],
-                              familyName: [fn.martinez, fn.santos],
-                              children: [
-                                {
-                                  group: "pareja",
-                                  name: ["Carlos", "Manuel"],
-                                  familyName: [fn.dominguez, fn.marte],
-                                  children: [
-                                    {
-                                      name: ["Laura"],
-                                      familyName: [fn.dominguez, fn.martinez]
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              name: ["Jorge", "Luis"],
-                              familyName: [fn.martinez, fn.santos],
+                              name: ["Pedro"],
+                              familyName: [fn.ramirez, fn.perez],
                               children: [
                                 {
                                   group: "pareja",
@@ -656,307 +589,205 @@ export default {
                                   familyName: [],
                                   children: [
                                     {
-                                      name: ["Jayliz"],
-                                      familyName: [fn.martinez],
+                                      name: ["Liza"],
+                                      familyName: [fn.ramirez],
                                     },
                                     {
-                                      name: ["Jacob"],
-                                      familyName: [fn.martinez],
-                                    }
-                                  ]
+                                      name: ["Miguel"],
+                                      familyName: [fn.ramirez],
+                                    },
+                                    {
+                                      name: ["Eric"],
+                                      familyName: [fn.ramirez],
+                                    },
+                                  ],
                                 }
-                              ]
-                            }
-                          ]
+                              ],
+                            },
+                            {
+                              name: ["Angela", "Altagracia"],
+                              familyName: [fn.ramirez, fn.perez],
+                            },
+                            {
+                              name: ["Ursinio", "De Jesus"],
+                              familyName: [fn.ramirez, fn.perez],
+                            },
+                          ],
                         }
-                      ]
+                      ],
                     },
                     {
-                      name: ["Jose", "Ricardo"],
-                      familyName: [fn.santos, fn.ramirez],
+                      name: ["Maria"],
+                      familyName: [fn.ramirez, fn.mendoza],
+                      nickname: "Maro",
                       children: [
                         {
                           group: "pareja",
-                          name: ["Isis"],
-                          familyName: [fn.santos],
+                          name: ["Nicolas"],
+                          familyName: [fn.nunez, fn.escobosa],
                           children: [
                             {
-                              name: ["Juan", "Anibal"],
-                              familyName: [fn.santos, fn.santos],
-                            },
-                            {
-                              name: ["Abel", "Ricardo"],
-                              familyName: [fn.santos, fn.santos],
-                            },
-                          ]
-                        },
-                        {
-                          group: "pareja",
-                          name: [],
-                          familyName: [],
-                          children: [
-                            {
-                              name: [],
-                              familyName: [fn.santos]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      name: ["Faustino"],
-                      familyName: [fn.santos, fn.ramirez],
-                      children: [
-                        {
-                          group: "pareja",
-                          name: ["Rosa", "Delia"],
-                          familyName: [fn.sanchez],
-                          children: [
-                            {
-                              name: ["Ana", "Bertilia"],
-                              familyName: [fn.santos, fn.sanchez],
+                              name: ["Eunice", "Del Carmen"],
+                              familyName: [fn.nunez, fn.ramirez],
                               children: [
                                 {
                                   group: "pareja",
-                                  name: ["Ricardo"],
-                                  familyName: [fn.mejia],
+                                  name: [],
+                                  familyName: [fn.contreras],
                                   children: [
                                     {
-                                      name: ["Cesar", "Ricardo"],
-                                      familyName: [fn.mejia, fn.santos],
-                                    }
-                                  ]
-                                },
-                                {
-                                  group: "pareja",
-                                  name: ["Luis", "Antonio"],
-                                  familyName: [fn.pina],
-                                  children: [
-                                    {
-                                      name: ["Luis", "Antonio"],
-                                      familyName: [fn.pina, fn.santos],
+                                      name: ["Geraldine"],
+                                      familyName: [fn.contreras, fn.nunez],
                                     },
                                     {
-                                      name: ["Montserrat"],
-                                      familyName: [fn.pina, fn.santos],
-                                    }
-                                  ],
+                                      name: ["Anderis"],
+                                      familyName: [fn.contreras, fn.nunez],
+                                    },
+                                    {
+                                      name: ["Endira"],
+                                      familyName: [fn.contreras, fn.nunez],
+                                    },
+                                  ]
                                 }
                               ]
-                            }
-                          ]
-                        },
-                        {
-                          group: "pareja",
-                          name: ["Maritza"],
-                          familyName: [],
-                          children: [
-                            {
-                              name: ["Rosemary"],
-                              familyName: [fn.santos],
-                            }
-                          ]
-                        },
-                        {
-                          group: "pareja",
-                          name: [],
-                          familyName: [],
-                          children: [
-                            {
-                              name: ["Anabel"],
-                              familyName: [fn.santos],
-                            }
-                          ]
-                        },
-                        {
-                          group: "pareja",
-                          name: ["Doraluz"],
-                          familyName: [fn.lespin],
-                          children: [
-                            {
-                              name: ["Fausto", "Danel"],
-                              familyName: [fn.santos, fn.lespin],
-                            },
-                            {
-                              name: ["Sandy", "Noel"],
-                              familyName: [fn.santos, fn.lespin],
                             },
                             {
                               name: ["Jose", "Luis"],
-                              familyName: [fn.santos, fn.lespin],
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                    {
-                      name: ["Maria", "Elena"],
-                      familyName: [fn.santos, fn.ramirez],
-                      children: [
-                        {
-                          group: "pareja",
-                          name: ["Sócrates", "Francisco"],
-                          familyName: [fn.hernandez, fn.polanco],
-                          children: [
-                            {
-                              name: ["Cinthya", "Leticia"],
-                              familyName: [fn.hernandez, fn.santos],
+                              familyName: [fn.nunez, fn.ramirez],
                               children: [
                                 {
                                   group: "pareja",
-                                  name: ["Sergio"],
-                                  familyName: [fn.delafuente, fn.chimalpopoca],
+                                  name: [],
+                                  familyName: [],
                                   children: [
                                     {
-                                      name: ["Sofia", 'Elena'],
-                                      familyName: [fn.delafuente, fn.hernandez]
+                                      name: ["Jocelyn"],
+                                      familyName: [fn.nunez],
                                     }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              name: ["Juan", "Francisco"],
-                              familyName: [fn.hernandez, fn.santos],
-                              children: [
-                                {
-                                  group: "pareja",
-                                  name: ["Dayanna"],
-                                  familyName: [fn.fabian],
-                                  children: [
-                                    {
-                                      name: ["Juan", "David"],
-                                      familyName: [fn.hernandez, fn.fabian],
-                                    },
-                                  ]
+                                  ],
                                 },
                                 {
                                   group: "pareja",
-                                  name: ["Suleydi", "Del Carmen"],
-                                  familyName: [fn.gutierrez, fn.colon],
+                                  name: [],
+                                  familyName: [],
+                                  nickname: "Cruzita",
                                   children: [
                                     {
-                                      name: ["Francisco", "Zavier"],
-                                      familyName: [fn.hernandez, fn.gutierrez],
+                                      group: "asociado",
+                                      name: ["Elizabeth"],
+                                      familyName: [fn.nunez],
                                     },
                                     {
-                                      name: ["Juan", "Ramon"],
-                                      familyName: [fn.hernandez, fn.gutierrez],
+                                      name: ["Denisse"],
+                                      familyName: [fn.nunez],
+                                    },
+                                    {
+                                      name: ["Michelle"],
+                                      familyName: [fn.nunez],
                                     },
                                   ]
                                 }
                               ]
                             },
-                          ]
-                        },
-                        {
-                          group: "pareja",
-                          name: ["Olegario", "Carmen"],
-                          familyName: [fn.villar],
-                          children: [
                             {
-                              name: ["Ramon", "Anibal"],
-                              familyName: [fn.villar, fn.santos],
-                            }
+                              name: ["Rosa", "Virginia"],
+                              familyName: [fn.nunez, fn.ramirez],
+                            },
+                            {
+                              name: ["David"],
+                              familyName: [fn.nunez, fn.ramirez],
+                            },
                           ]
                         }
                       ]
                     },
                     {
-                      name: ["Maria", "del Rosario"],
-                      familyName: [fn.santos, fn.ramirez],
+                      name: ["America", "Ana"],
+                      familyName: [fn.ramirez, fn.mendoza],
+                      nickname: "Queca",
                       children: [
                         {
                           group: "pareja",
-                          name: ["Victoriano"],
-                          familyName: [fn.luna, fn.abreu],
+                          name: ["Juan", "Ramon"],
+                          familyName: [fn.santos, fn.jimenez],
                           children: [
                             {
-                              name: ["Carolyn"],
-                              familyName: [fn.luna, fn.santos],
+                              ...rp.carmenSantos,
                               children: [
                                 {
                                   group: "pareja",
-                                  name: [],
-                                  familyName: [fn.parra],
+                                  ...rp.fernandoRivas,
+                                  children: fernandoRivasChildren,
+                                }
+                              ]
+                            },
+                            {
+                              name: ["Maria", "Teresa"],
+                              familyName: [fn.santos, fn.ramirez],
+                              children: [
+                                {
+                                  group: "pareja",
+                                  name: ["Mario", "Antonio"],
+                                  familyName: [fn.martinez],
                                   children: [
                                     {
-                                      name: ["Gabriela"],
-                                      familyName: [fn.parra, fn.luna],
+                                      name: ["Marioly", "Altagracia"],
+                                      familyName: [fn.martinez, fn.santos],
+                                      children: [
+                                        {
+                                          group: "pareja",
+                                          name: ["Carlos", "Manuel"],
+                                          familyName: [fn.dominguez, fn.marte],
+                                          children: [
+                                            {
+                                              name: ["Laura"],
+                                              familyName: [fn.dominguez, fn.martinez]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      name: ["Jorge", "Luis"],
+                                      familyName: [fn.martinez, fn.santos],
+                                      children: [
+                                        {
+                                          group: "pareja",
+                                          name: [],
+                                          familyName: [],
+                                          children: [
+                                            {
+                                              name: ["Jayliz"],
+                                              familyName: [fn.martinez],
+                                            },
+                                            {
+                                              name: ["Jacob"],
+                                              familyName: [fn.martinez],
+                                            }
+                                          ]
+                                        }
+                                      ]
                                     }
                                   ]
                                 }
                               ]
                             },
                             {
-                              name: ["Jennifer", "Altagracia"],
-                              familyName: [fn.luna, fn.santos],
+                              name: ["Jose", "Ricardo"],
+                              familyName: [fn.santos, fn.ramirez],
                               children: [
                                 {
                                   group: "pareja",
-                                  name: ["Alexander", "Javier"],
-                                  familyName: [fn.rivas, fn.taveras],
+                                  name: ["Isis"],
+                                  familyName: [fn.santos],
                                   children: [
                                     {
-                                      name: ["Yuliani", "Del Rosario"],
-                                      familyName: [fn.rivas, fn.luna],
+                                      name: ["Juan", "Anibal"],
+                                      familyName: [fn.santos, fn.santos],
                                     },
                                     {
-                                      name: ["Yulian", "Manuel"],
-                                      familyName: [fn.rivas, fn.luna],
-                                    },
-                                    {
-                                      name: ["Juliette", "Altagracia"],
-                                      familyName: [fn.rivas, fn.luna],
-                                    },
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              name: ["Victor", "Manuel"],
-                              familyName: [fn.luna, fn.santos],
-                              children: [
-                                {
-                                  group: "pareja",
-                                  name: [],
-                                  familyName: [fn.sabino],
-                                  children: [
-                                    {
-                                      name: ["Nashla", "Marie"],
-                                      familyName: [fn.luna, fn.sabino],
-                                    },
-                                    {
-                                      name: ["Yenevieth", "Del Rosario"],
-                                      familyName: [fn.luna, fn.sabino],
-                                    },
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              name: ["Stalin"],
-                              familyName: [fn.luna, fn.santos],
-                            },
-                          ],
-                        },
-                        {
-                          group: "pareja",
-                          name: ["Felix"],
-                          familyName: [fn.segura],
-                          children: [
-                            {
-                              name: ["Leanny", "Maria"],
-                              familyName: ['-' + fn.segura, fn.santos],
-                              children: [
-                                {
-                                  group: "pareja",
-                                  name: [],
-                                  familyName: [fn.sanchez],
-                                  children: [
-                                    {
-                                      name: ["Ashley"],
-                                      familyName: [fn.sanchez],
+                                      name: ["Abel", "Ricardo"],
+                                      familyName: [fn.santos, fn.santos],
                                     },
                                   ]
                                 },
@@ -966,576 +797,1553 @@ export default {
                                   familyName: [],
                                   children: [
                                     {
-                                      name: ["Alejandro"],
-                                      familyName: [fn.santos],
+                                      name: [],
+                                      familyName: [fn.santos]
                                     }
                                   ]
                                 }
                               ]
                             },
-                          ],
-                        }
-                      ]
-                    },
-                  ]
-                }
-              ]
-            },
-            {
-              ...rp.virgiliaRamirez,
-              children: [
-                {
-                  group: "pareja",
-                  ...rp.pedroRivas,
-                  children: virgiliaRamirezChildren,
-                }
-              ]
-
-            },
-            {
-              name: ["Ana", "Elvira"],
-              familyName: [fn.ramirez, fn.mendoza],
-              nickname: "Milita",
-              children: [
-                {
-                  group: "pareja",
-                  name: ["Jose", "Rafael"],
-                  familyName: [fn.acosta],
-                  children: [
-                    {
-                      name: ["Jose", "Rafael"],
-                      familyName: ['-' + fn.acosta, fn.ramirez],
-                      nickname: "Muma"
-                    },
-                    {
-                      name: ["Humberto"],
-                      familyName: [fn.acosta, fn.ramirez],
-                    },
-                  ]
-                },
-                {
-                  group: "pareja",
-                  name: ["Patricio"],
-                  familyName: [fn.minaya],
-                  children: [
-                    {
-                      name: ["Lucía", "del Carmen"],
-                      familyName: [fn.minaya, fn.ramirez],
-                      children: [
-                        {
-                          group: "pareja",
-                          name: ["Antonio"],
-                          familyName: [fn.molina],
-                          children: [
                             {
-                              name: ["Emely", "Del Rosario"],
-                              familyName: [fn.molina, fn.minaya],
-                            },
-                            {
-                              name: ["Luanny"],
-                              familyName: [fn.molina, fn.minaya],
-                            },
-                            {
-                              name: ["Annie", "Carolina"],
-                              familyName: [fn.molina, fn.minaya],
+                              name: ["Faustino"],
+                              familyName: [fn.santos, fn.ramirez],
                               children: [
                                 {
                                   group: "pareja",
-                                  name: ["Omar"],
-                                  familyName: [fn.nova],
+                                  name: ["Rosa", "Delia"],
+                                  familyName: [fn.sanchez],
                                   children: [
+                                    {
+                                      name: ["Ana", "Bertilia"],
+                                      familyName: [fn.santos, fn.sanchez],
+                                      children: [
+                                        {
+                                          group: "pareja",
+                                          name: ["Ricardo"],
+                                          familyName: [fn.mejia],
+                                          children: [
+                                            {
+                                              name: ["Cesar", "Ricardo"],
+                                              familyName: [fn.mejia, fn.santos],
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          group: "pareja",
+                                          name: ["Luis", "Antonio"],
+                                          familyName: [fn.pina],
+                                          children: [
+                                            {
+                                              name: ["Luis", "Antonio"],
+                                              familyName: [fn.pina, fn.santos],
+                                            },
+                                            {
+                                              name: ["Montserrat"],
+                                              familyName: [fn.pina, fn.santos],
+                                            }
+                                          ],
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  group: "pareja",
+                                  name: ["Maritza"],
+                                  familyName: [],
+                                  children: [
+                                    {
+                                      name: ["Rosemary"],
+                                      familyName: [fn.santos],
+                                    }
+                                  ]
+                                },
+                                {
+                                  group: "pareja",
+                                  name: [],
+                                  familyName: [],
+                                  children: [
+                                    {
+                                      name: ["Anabel"],
+                                      familyName: [fn.santos],
+                                    }
+                                  ]
+                                },
+                                {
+                                  group: "pareja",
+                                  name: ["Doraluz"],
+                                  familyName: [fn.lespin],
+                                  children: [
+                                    {
+                                      name: ["Fausto", "Danel"],
+                                      familyName: [fn.santos, fn.lespin],
+                                    },
+                                    {
+                                      name: ["Sandy", "Noel"],
+                                      familyName: [fn.santos, fn.lespin],
+                                    },
+                                    {
+                                      name: ["Jose", "Luis"],
+                                      familyName: [fn.santos, fn.lespin],
+                                    },
+                                  ],
+                                },
+                              ],
+                            },
+                            {
+                              name: ["Maria", "Elena"],
+                              familyName: [fn.santos, fn.ramirez],
+                              children: [
+                                {
+                                  group: "pareja",
+                                  name: ["Sócrates", "Francisco"],
+                                  familyName: [fn.hernandez, fn.polanco],
+                                  children: [
+                                    {
+                                      name: ["Cinthya", "Leticia"],
+                                      familyName: [fn.hernandez, fn.santos],
+                                      children: [
+                                        {
+                                          group: "pareja",
+                                          name: ["Sergio"],
+                                          familyName: [fn.delafuente, fn.chimalpopoca],
+                                          children: [
+                                            {
+                                              name: ["Sofia", 'Elena'],
+                                              familyName: [fn.delafuente, fn.hernandez]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      name: ["Juan", "Francisco"],
+                                      familyName: [fn.hernandez, fn.santos],
+                                      children: [
+                                        {
+                                          group: "pareja",
+                                          name: ["Dayanna"],
+                                          familyName: [fn.fabian],
+                                          children: [
+                                            {
+                                              name: ["Juan", "David"],
+                                              familyName: [fn.hernandez, fn.fabian],
+                                            },
+                                          ]
+                                        },
+                                        {
+                                          group: "pareja",
+                                          name: ["Suleydi", "Del Carmen"],
+                                          familyName: [fn.gutierrez, fn.colon],
+                                          children: [
+                                            {
+                                              name: ["Francisco", "Zavier"],
+                                              familyName: [fn.hernandez, fn.gutierrez],
+                                            },
+                                            {
+                                              name: ["Juan", "Ramon"],
+                                              familyName: [fn.hernandez, fn.gutierrez],
+                                            },
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                  ]
+                                },
+                                {
+                                  group: "pareja",
+                                  name: ["Olegario", "Carmen"],
+                                  familyName: [fn.villar],
+                                  children: [
+                                    {
+                                      name: ["Ramon", "Anibal"],
+                                      familyName: [fn.villar, fn.santos],
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              name: ["Maria", "Del Rosario"],
+                              familyName: [fn.santos, fn.ramirez],
+                              children: [
+                                {
+                                  group: "pareja",
+                                  name: ["Victoriano"],
+                                  familyName: [fn.luna, fn.abreu],
+                                  children: [
+                                    {
+                                      name: ["Carolyn"],
+                                      familyName: [fn.luna, fn.santos],
+                                      children: [
+                                        {
+                                          group: "pareja",
+                                          name: [],
+                                          familyName: [fn.parra],
+                                          children: [
+                                            {
+                                              name: ["Gabriela"],
+                                              familyName: [fn.parra, fn.luna],
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      name: ["Jennifer", "Altagracia"],
+                                      familyName: [fn.luna, fn.santos],
+                                      children: [
+                                        {
+                                          group: "pareja",
+                                          name: ["Alexander", "Javier"],
+                                          familyName: [fn.rivas, fn.taveras],
+                                          children: [
+                                            {
+                                              name: ["Yuliani", "Del Rosario"],
+                                              familyName: [fn.rivas, fn.luna],
+                                            },
+                                            {
+                                              name: ["Yulian", "Manuel"],
+                                              familyName: [fn.rivas, fn.luna],
+                                            },
+                                            {
+                                              name: ["Juliette", "Altagracia"],
+                                              familyName: [fn.rivas, fn.luna],
+                                            },
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      name: ["Victor", "Manuel"],
+                                      familyName: [fn.luna, fn.santos],
+                                      children: [
+                                        {
+                                          group: "pareja",
+                                          name: [],
+                                          familyName: [fn.sabino],
+                                          children: [
+                                            {
+                                              name: ["Nashla", "Marie"],
+                                              familyName: [fn.luna, fn.sabino],
+                                            },
+                                            {
+                                              name: ["Yenevieth", "Del Rosario"],
+                                              familyName: [fn.luna, fn.sabino],
+                                            },
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      name: ["Stalin"],
+                                      familyName: [fn.luna, fn.santos],
+                                    },
+                                  ],
+                                },
+                                {
+                                  group: "pareja",
+                                  name: ["Felix"],
+                                  familyName: [fn.segura],
+                                  children: [
+                                    {
+                                      name: ["Leanny", "Maria"],
+                                      familyName: ['-' + fn.segura, fn.santos],
+                                      children: [
+                                        {
+                                          group: "pareja",
+                                          name: [],
+                                          familyName: [fn.sanchez],
+                                          children: [
+                                            {
+                                              name: ["Ashley"],
+                                              familyName: [fn.sanchez],
+                                            },
+                                          ]
+                                        },
+                                        {
+                                          group: "pareja",
+                                          name: [],
+                                          familyName: [],
+                                          children: [
+                                            {
+                                              name: ["Alejandro"],
+                                              familyName: [fn.santos],
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                  ],
+                                }
+                              ]
+                            },
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      ...rp.virgiliaRamirez,
+                      children: [
+                        {
+                          group: "pareja",
+                          ...rp.pedroRivas,
+                          children: virgiliaRamirezChildren,
+                        }
+                      ]
 
+                    },
+                    {
+                      name: ["Ana", "Elvira"],
+                      familyName: [fn.ramirez, fn.mendoza],
+                      nickname: "Milita",
+                      children: [
+                        {
+                          group: "pareja",
+                          name: ["Jose", "Rafael"],
+                          familyName: [fn.acosta],
+                          children: [
+                            {
+                              name: ["Jose", "Rafael"],
+                              familyName: ['-' + fn.acosta, fn.ramirez],
+                              nickname: "Muma"
+                            },
+                            {
+                              name: ["Humberto"],
+                              familyName: [fn.acosta, fn.ramirez],
+                            },
+                          ]
+                        },
+                        {
+                          group: "pareja",
+                          name: ["Patricio"],
+                          familyName: [fn.minaya],
+                          children: [
+                            {
+                              name: ["Lucía", "Del Carmen"],
+                              familyName: [fn.minaya, fn.ramirez],
+                              children: [
+                                {
+                                  group: "pareja",
+                                  name: ["Antonio"],
+                                  familyName: [fn.molina],
+                                  children: [
+                                    {
+                                      name: ["Emely", "Del Rosario"],
+                                      familyName: [fn.molina, fn.minaya],
+                                    },
+                                    {
+                                      name: ["Luanny"],
+                                      familyName: [fn.molina, fn.minaya],
+                                    },
+                                    {
+                                      name: ["Annie", "Carolina"],
+                                      familyName: [fn.molina, fn.minaya],
+                                      children: [
+                                        {
+                                          group: "pareja",
+                                          name: [],
+                                          familyName: [],
+                                          children: [
+                                            {
+                                              name: [],
+                                              familyName: [],
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                  ]
+                                }
+                              ],
+                            },
+                            {
+                              name: ["Lina", "Del Carmen"],
+                              familyName: [fn.minaya, fn.ramirez],
+                              children: [
+                                {
+                                  group: "pareja",
+                                  name: ["Ramon"],
+                                  familyName: [fn.solis],
+                                  children: [
+                                    {
+                                      name: ["Esmeralda"],
+                                      familyName: [fn.solis, fn.minaya],
+                                    },
+                                    {
+                                      name: ["Rubi"],
+                                      familyName: [fn.solis, fn.minaya],
+                                    },
+                                    {
+                                      name: ["Coral"],
+                                      familyName: [fn.solis, fn.minaya],
+                                    },
+                                  ]
+                                }
+                              ],
+                            },
+                            {
+                              name: ["Arturo"],
+                              familyName: [fn.minaya, fn.ramirez],
+                              children: [
+                                {
+                                  group: "pareja",
+                                  name: ["Ana", "Isabel"],
+                                  familyName: [fn.molina, fn.diaz],
+                                  nickname: "Chabela",
+                                  children: [
+                                    {
+                                      name: ["Chabely"],
+                                      familyName: [fn.minaya, fn.molina],
+                                    },
+                                    {
+                                      name: ["Anabel"],
+                                      familyName: [fn.minaya, fn.molina],
+                                    },
+                                    {
+                                      name: ["Arturo"],
+                                      familyName: [fn.minaya, fn.molina],
+                                    },
+                                    {
+                                      name: ["Tommy"],
+                                      familyName: [fn.minaya, fn.molina],
+                                    },
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              group: "asociado",
+                              name: ["Gabriel"],
+                              familyName: [fn.minaya],
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      name: ["Ana", "de las Nieves"],
+                      familyName: [fn.ramirez, fn.mendoza],
+                      nickname: "Nieves",
+                      children: [
+                        {
+                          group: "pareja",
+                          name: ["Radames"],
+                          familyName: [fn.castillo],
+                          children: [
+                            {
+                              name: ["Annie", "Maryem"],
+                              familyName: [fn.castillo, fn.ramirez],
+                            },
+                            {
+                              name: ["Niyra", "Raydhiris"],
+                              preferedName: "Niyra",
+                              familyName: [fn.castillo, fn.ramirez],
+                              children: [
+                                {
+                                  group: "pareja",
+                                  name: ["José", "Manuel"],
+                                  familyName: [fn.lescay, fn.tejeda],
+                                  children: [
+                                    {
+                                      name: ["Emmanuel", "Alberto"],
+                                      familyName: [fn.lescay, fn.castillo],
+                                    }
                                   ]
                                 }
                               ]
                             },
                           ]
                         }
-                      ],
+                      ]
                     },
                     {
-                      name: ["Lina", "del Carmen"],
-                      familyName: [fn.minaya, fn.ramirez],
+                      name: ["Antonio"],
+                      familyName: [fn.ramirez, fn.mendoza],
+                      nickname: "Antonito",
                       children: [
                         {
                           group: "pareja",
-                          name: ["Ramon"],
-                          familyName: [fn.solis],
+                          name: ["Ana", "Mercedez"],
+                          familyName: [fn.difo],
                           children: [
                             {
-                              name: ["Esmeralda"],
-                              familyName: [fn.solis, fn.minaya],
+                              name: ["Joanna"],
+                              familyName: [fn.ramirez, fn.difo],
                             },
                             {
-                              name: ["Rubi"],
-                              familyName: [fn.solis, fn.minaya],
+                              name: ["Pascal"],
+                              familyName: [fn.ramirez, fn.difo],
                             },
                             {
-                              name: ["Coral"],
-                              familyName: [fn.solis, fn.minaya],
-                            },
-                          ]
-                        }
-                      ],
-                    },
-                    {
-                      name: ["Arturo"],
-                      familyName: [fn.minaya, fn.ramirez],
-                      children: [
-                        {
-                          group: "pareja",
-                          name: ["Ana", "Isabel"],
-                          familyName: [fn.molina, fn.diaz],
-                          nickname: "Chabela",
-                          children: [
-                            {
-                              name: ["Chabely"],
-                              familyName: [fn.minaya, fn.molina],
-                            },
-                            {
-                              name: ["Anabel"],
-                              familyName: [fn.minaya, fn.molina],
-                            },
-                            {
-                              name: ["Arturo"],
-                              familyName: [fn.minaya, fn.molina],
-                            },
-                            {
-                              name: ["Tommy"],
-                              familyName: [fn.minaya, fn.molina],
+                              name: ["Lizandro"],
+                              familyName: [fn.ramirez, fn.difo],
                             },
                           ]
                         }
                       ]
                     },
                     {
-                      group: "asociado",
-                      name: ["Gabriel"],
-                      familyName: [fn.minaya],
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              name: ["Ana", "de las Nieves"],
-              familyName: [fn.ramirez, fn.mendoza],
-              nickname: "Nieves",
-              children: [
-                {
-                  group: "pareja",
-                  name: ["Radames"],
-                  familyName: [fn.castillo],
-                  children: [
-                    {
-                      name: ["Annie", "Maryem"],
-                      familyName: [fn.castillo, fn.ramirez],
-                    },
-                    {
-                      name: ["Niyra", "Raydhiris"],
-                      preferedName: "Niyra",
-                      familyName: [fn.castillo, fn.ramirez],
+                      ...rp.trinaRamirez,
                       children: [
                         {
                           group: "pareja",
-                          name: ["José", "Manuel"],
-                          familyName: [fn.lescay, fn.tejeda],
+                          ...rp.amableRamirez,
+                          children: trinaRamirezChildren,
+                        }
+                      ]
+                    },
+                    {
+                      name: ["Porfirio", "Antonio"],
+                      familyName: [fn.ramirez, fn.mendoza],
+                      children: [
+                        {
+                          group: "pareja",
+                          name: ["Esperanza"],
                           children: [
                             {
-                              name: ["Emmanuel", "Alberto"],
-                              familyName: [fn.lescay, fn.castillo],
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                  ]
-                }
-              ]
-            },
-            {
-              name: ["Antonio"],
-              familyName: [fn.ramirez, fn.mendoza],
-              nickname: "Antonito",
-              children: [
-                {
-                  group: "pareja",
-                  name: ["Ana", "Mercedez"],
-                  familyName: [fn.difo],
-                  children: [
-                    {
-                      name: ["Joanna"],
-                      familyName: [fn.ramirez, fn.difo],
-                    },
-                    {
-                      name: ["Pascal"],
-                      familyName: [fn.ramirez, fn.difo],
-                    },
-                    {
-                      name: ["Lizandro"],
-                      familyName: [fn.ramirez, fn.difo],
-                    },
-                  ]
-                }
-              ]
-            },
-            {
-              name: ["Ana", "Trinidad"],
-              familyName: [fn.ramirez, fn.mendoza],
-              nickname: "Trina",
-              children: [
-                {
-                  group: "pareja",
-                  name: ["Amable"],
-                  familyName: [fn.ramirez],
-                  children: [
-                    {
-                      name: ["Amaury"],
-                      familyName: [fn.ramirez, fn.ramirez],
-                      children: [
-                        {
-                          group: "pareja",
-                          name: [],
-                          familyName: [],
-                          children: [
-
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      name: ["Lissette"],
-                      familyName: [fn.ramirez, fn.ramirez],
-                      children: [
-                        {
-                          group: "pareja",
-                          name: [],
-                          familyName: [],
-                          children: [
-
-                          ]
-                        }
-                      ]
-                    },
-                  ]
-                }
-              ]
-            },
-            {
-              name: ["Porfirio", "Antonio"],
-              familyName: [fn.ramirez, fn.mendoza],
-              children: [
-                {
-                  group: "pareja",
-                  name: ["Esperanza"],
-                  children: [
-                    {
-                      name: ["Jasmin"],
-                      familyName: [fn.ramirez],
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              name: ["Jose", "Rafael"],
-              familyName: [fn.ramirez, fn.mendoza],
-              nickname: "Chepe",
-              children: [
-                {
-                  group: "pareja",
-                  name: ["Sonia"],
-                  familyName: [],
-                  children: [
-                    {
-                      name: ["Marianne"],
-                      familyName: [fn.ramirez],
-                      children: [
-                        {
-                          group: "pareja",
-                          name: [],
-                          familyName: [],
-                          children: [
-                            {
-                              name: [],
-                              familyName: []
+                              name: ["Jasmin"],
+                              familyName: [fn.ramirez],
                             }
                           ]
                         }
                       ]
                     },
                     {
-                      name: ["Loly", "Anny"],
-                      familyName: [fn.ramirez],
+                      name: ["Jose", "Rafael"],
+                      familyName: [fn.ramirez, fn.mendoza],
+                      nickname: "Chepe",
+                      children: [
+                        {
+                          group: "pareja",
+                          name: ["Sonia"],
+                          familyName: [],
+                          children: [
+                            {
+                              name: ["Marianne"],
+                              familyName: [fn.ramirez],
+                              children: [
+                                {
+                                  group: "pareja",
+                                  name: [],
+                                  familyName: [],
+                                  children: [
+                                    {
+                                      name: [],
+                                      familyName: []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              name: ["Loly", "Anny"],
+                              familyName: [fn.ramirez],
+                            },
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      name: ["Sergio"],
+                      familyName: [fn.ramirez, fn.mendoza],
+                    },
+                  ]
+                }
+              ],
+            },
+            {
+              name: ["Juan", "De Jesús"],
+              familyName: [fn.ramirez, fn.grullon],
+              children: [
+                {
+                  group: "pareja",
+                  name: ["Merenciana"],
+                  familyName: [fn.rivas, fn.perez],
+                  children: [
+                    {
+                      name: ["Persio"],
+                      familyName: [fn.ramirez, fn.rivas],
+                    },
+                    {
+                      ...rp.antoniaRamirez,
+                      children: [
+                        {
+                          group: "pareja",
+                          ...rp.alcidesRamirez,
+                          children: alcidesRamirezChildren,
+                        }
+                      ]
+                    },
+                    {
+                      name: ["Ana", "Consuelo"],
+                      familyName: [fn.ramirez, fn.rivas],
+                    },
+                    {
+                      name: ["Luz", "Del Alba"],
+                      familyName: [fn.ramirez, fn.rivas],
+                    },
+                    {
+                      name: ["Juan", "Antonio"],
+                      familyName: [fn.ramirez, fn.rivas],
+                    },
+                    {
+                      name: ["Gladis"],
+                      familyName: [fn.ramirez, fn.rivas],
+                    },
+                    {
+                      ...rp.amableRamirez,
+                      children: [
+                        {
+                          group: "pareja",
+                          ...rp.trinaRamirez,
+                          children: trinaRamirezChildren,
+                        }
+                      ]
                     },
                   ]
                 }
               ]
             },
             {
-              name: ["Sergio"],
-              familyName: [fn.ramirez, fn.mendoza],
-            },
-          ]
-        }
-      ],
-    },
-    {
-      name: ["Fernando"],
-      familyName: [fn.rivas, fn.perez],
-      children: [
-        {
-          group: "pareja",
-          name: ["Ana", "Julia"],
-          familyName: [fn.ramirez],
-          nickname: "Mama Julia",
-          children: [
-            {
-              name: ["Ramon", "Antonio"],
-              familyName: [fn.rivas, fn.ramirez],
-              nickname: "Ramon Chiquito",
+              name: ["Ana", "Julia"],
+              familyName: [fn.ramirez, fn.grullon],
+              nickname: "Mama Julia",
               children: [
                 {
                   group: "pareja",
-                  name: ["Santos"],
-                  familyName: [fn.jimenez],
+                  name: ["Fernando"],
+                  familyName: [fn.rivas, fn.perez],
+                  nickname: "Papá Nando",
                   children: [
                     {
-                      group: "asociado",
-                      name: ["Águeda"],
-                      familyName: [fn.batista],
+                      name: ["Ramon", "Antonio"],
+                      familyName: [fn.rivas, fn.ramirez],
+                      nickname: "Ramon Chiquito",
+                      children: [
+                        {
+                          group: "pareja",
+                          name: ["Santos"],
+                          familyName: [fn.jimenez],
+                          children: [
+                            {
+                              group: "asociado",
+                              name: ["Águeda"],
+                              familyName: [fn.batista],
+                            },
+                            {
+                              name: ["Máximo", "Alexis"],
+                              familyName: [fn.rivas, fn.jimenez],
+                              children: [
+                                {
+                                  group: "pareja",
+                                  name: [],
+                                  familyName: [fn.perez],
+                                  children: [
+                                    {
+                                      name: ["Elaine"],
+                                      familyName: [fn.perez, fn.contreras]
+                                    },
+                                    {
+                                      name: ["Denisse"],
+                                      familyName: [fn.perez, fn.contreras]
+                                    },
+                                    {
+                                      name: ["Jorge", "Máximo"],
+                                      familyName: [fn.perez, fn.contreras]
+                                    },
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              name: ["Fernando", "Donato"],
+                              familyName: [fn.rivas, fn.jimenez],
+                              children: [
+                                {
+                                  group: "pareja",
+                                  name: [],
+                                  familyName: [fn.alvarez],
+                                  children: [
+                                    {
+                                      name: ["Máximo", "Argenis"],
+                                      familyName: [fn.rivas, fn.alvarez],
+                                      children: [
+                                        {
+                                          group: "pareja",
+                                          name: [],
+                                          familyName: [fn.mueses],
+                                          children: [
+                                            {
+                                              name: ["Evaluna"],
+                                              familyName: [fn.rivas, fn.mueses],
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      name: ["Diana", "Leonor"],
+                                      familyName: [fn.rivas, fn.alvarez],
+                                      children: [
+                                        {
+                                          group: "pareja",
+                                          name: [],
+                                          familyName: [fn.cruz],
+                                          children: [
+                                            {
+                                              name: ["Owen"],
+                                              familyName: [fn.cruz, fn.rivas],
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      name: ["Isis", "Orquídea"],
+                                      familyName: [fn.rivas, fn.alvarez],
+                                      children: [
+                                        {
+                                          group: "pareja",
+                                          name: [],
+                                          familyName: [fn.sanchez],
+                                          children: [
+                                            {
+                                              name: ["Junior", "David"],
+                                              familyName: [fn.sanchez, fn.rivas],
+                                            },
+                                            {
+                                              name: ["Liam", "Xavier"],
+                                              familyName: [fn.sanchez, fn.rivas],
+                                            },
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                  ]
+                                },
+                                {
+                                  group: "pareja",
+                                  name: [],
+                                  familyName: [fn.rosario],
+                                  children: [
+                                    {
+                                      name: ["Fernando", "Alexis"],
+                                      familyName: [fn.rivas, fn.rosario],
+                                    },
+                                    {
+                                      name: ["Aldo", "Leonardo"],
+                                      familyName: [fn.rivas, fn.rosario],
+                                    },
+                                    {
+                                      name: ["Samantha", "Eileen"],
+                                      familyName: [fn.rivas, fn.rosario],
+                                    },
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              name: ["María", "Verónica"],
+                              familyName: [fn.rivas, fn.jimenez],
+                              children: [
+                                {
+                                  group: "pareja",
+                                  name: [],
+                                  familyName: [fn.liz],
+                                  children: [
+                                    {
+                                      name: ["Lenny", "Verónica"],
+                                      familyName: [fn.liz, fn.rivas]
+                                    },
+                                    {
+                                      name: ["Nathalie", "Francheska"],
+                                      familyName: [fn.liz, fn.rivas]
+                                    },
+                                    {
+                                      name: ["Elvis", "Valentín"],
+                                      familyName: [fn.liz, fn.rivas]
+                                    },
+                                  ]
+                                }
+
+                              ]
+                            },
+                            {
+                              name: ["Juana", "Ramona"],
+                              familyName: [fn.rivas, fn.jimenez],
+                              children: [
+                                {
+                                  group: "pareja",
+                                  name: ["Antonio"],
+                                  familyName: [fn.matias],
+                                  children: [
+                                    {
+                                      name: ["Navila", "Idermis"],
+                                      familyName: [fn.matias, fn.rivas],
+                                      children: [
+                                        {
+                                          group: "pareja",
+                                          name: ["Jarol"],
+                                          familyName: [fn.tuletta, fn.arias],
+                                          children: [
+                                            {
+                                              name: ["Luca"],
+                                              familyName: [fn.tuletta, fn.matias],
+                                            },
+                                            {
+                                              name: ["Sael"],
+                                              familyName: [fn.tuletta, fn.matias],
+                                            },
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      name: ["Hansell", "Antonio"],
+                                      familyName: [fn.matias, fn.rivas],
+                                      children: [
+                                        {
+                                          group: "pareja",
+                                          name: [],
+                                          familyName: [],
+                                          children: [
+                                            {
+                                              name: [],
+                                              familyName: [fn.matias],
+                                            }
+                                          ],
+                                        }
+                                      ],
+                                    },
+                                    {
+                                      name: ["Laura", "Massiel"],
+                                      familyName: [fn.matias, fn.rivas],
+                                      children: [
+                                        {
+                                          group: "pareja",
+                                          name: [],
+                                          familyName: [],
+                                          children: [
+                                            {
+                                              name: [],
+                                              familyName: [],
+                                            }
+                                          ],
+                                        }
+                                      ],
+                                    },
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              name: ["Eleonora", "Del Carmen"],
+                              familyName: [fn.rivas, fn.jimenez],
+                              children: [
+                                {
+                                  group: "pareja",
+                                  name: [],
+                                  familyName: [fn.laureano],
+                                  children: [
+                                    {
+                                      name: ["Katherine"],
+                                      familyName: [fn.laureano, fn.rivas],
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                          ]
+                        }
+                      ]
                     },
                     {
-                      name: ["Máximo", "Alexis"],
-                      familyName: [fn.rivas, fn.jimenez],
+                      name: ["María", "Eleonora"],
+                      familyName: [fn.rivas, fn.ramirez],
+                      nickname: "Norita",
+                    },
+                    {
+                      name: ["Ana", "Virgilia"],
+                      familyName: [fn.rivas, fn.ramirez],
                       children: [
+                        {
+                          group: "pareja",
+                          name: [],
+                          familyName: [fn.grullon],
+                          children: [
+                            {
+                              name: ["Socorro"],
+                              familyName: [fn.grullon],
+                              children: [
+                                {
+                                  group: "pareja",
+                                  name: [],
+                                  familyName: [fn.molina],
+                                  children: [
+                                    {
+                                      name: ["Hugo"],
+                                      familyName: [fn.molina, fn.grullon],
+                                    },
+                                    {
+                                      name: ["Franchi"],
+                                      familyName: [fn.molina, fn.grullon],
+                                    },
+                                  ]
+                                }
+                              ]
+                            },
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      name: ["Ana", "Rosa"],
+                      familyName: [fn.rivas, fn.ramirez],
+                    },
+                    {
+                      name: ["Ana", "Rita"],
+                      familyName: [fn.rivas, fn.ramirez],
+                    },
+                    {
+                      name: ["Juan", "Antonio"],
+                      familyName: [fn.rivas, fn.ramirez],
+                    },
+                    {
+                      name: ["Ana", "Mercedes"],
+                      familyName: [fn.rivas, fn.ramirez],
+                      children: [
+                        {
+                          group: "pareja",
+                          name: ["Juan"],
+                          familyName: [fn.lugo],
+                          children: [
+                            {
+                              name: ["Francia"],
+                              familyName: [fn.lugo, fn.rivas],
+                              children: [
+                                {
+                                  group: "pareja",
+                                  name: ["Máximo"],
+                                  familyName: [],
+                                  children: []
+                                },
+                              ],
+                            },
+                            {
+                              name: ["Lupe"],
+                              familyName: [fn.lugo, fn.rivas],
+                              children: [
+                                {
+                                  group: "pareja",
+                                  name: ["Percio"],
+                                  familyName: [],
+                                  children: [
+                                    {
+                                      name: ["Lupercio"],
+                                      familyName: [],
+                                    },
+                                    {
+                                      name: ["Arnoldo"],
+                                      familyName: [],
+                                    },
+                                    {
+                                      name: ["Larry"],
+                                      familyName: [],
+                                    },
+                                    {
+                                      name: ["Nixaliz"],
+                                      familyName: [],
+                                    },
+                                  ]
+                                },
+                              ],
+                            },
+                            {
+                              name: ["Juan"],
+                              familyName: [fn.lugo, fn.rivas],
+                              children: [
+                                {
+                                  group: "pareja",
+                                  name: ["Hilda"],
+                                  familyName: [],
+                                  children: [
+                                    {
+                                      name: ["Wanda"],
+                                      familyName: [fn.lugo],
+                                      children: [
+                                        {
+                                          group: "pareja",
+                                          name: [],
+                                          familyName: [],
+                                          children: [
+                                            {
+                                              name: ["Matthew"],
+                                              familyName: [],
+                                            },
+                                            {
+                                              name: ["Olivia"],
+                                              familyName: [],
+                                            },
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      name: ["Janisse"],
+                                      familyName: [fn.lugo],
+                                      children: [
+                                        {
+                                          group: "pareja",
+                                          name: [],
+                                          familyName: [],
+                                          children: [
+                                            {
+                                              name: ["Jacob"],
+                                              familyName: [],
+                                            },
+                                            {
+                                              name: ["Jack"],
+                                              familyName: [],
+                                            },
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      name: ["Stephanie"],
+                                      familyName: [fn.lugo],
+                                      children: [
+                                        {
+                                          group: "pareja",
+                                          name: [],
+                                          familyName: [],
+                                          children: [
+                                            {
+                                              name: ["Eliany"],
+                                              familyName: [],
+                                            },
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      name: ["Emmanuel"],
+                                      familyName: [fn.lugo],
+                                    },
+                                  ]
+                                },
+                              ],
+                            },
+                            {
+                              name: ["Pilar"],
+                              familyName: [fn.lugo, fn.rivas],
+                              children: [
+                                {
+                                  group: "pareja",
+                                  name: ["Juan"],
+                                  familyName: [],
+                                  children: [
+                                    {
+                                      name: ["Mercedes"],
+                                      familyName: [],
+                                      children: [
+                                        {
+                                          group: "pareja",
+                                          children: [
+                                            {
+                                              name: ["Oseas"],
+                                              familyName: [],
+                                            },
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      name: ["Angie"],
+                                      familyName: [],
+                                      children: [
+                                        {
+                                          group: "pareja",
+                                          children: [
+                                            {
+                                              name: ["Lyangilee"],
+                                              familyName: [],
+                                            },
+                                            {
+                                              name: ["Maddox"],
+                                              familyName: [],
+                                            },
+                                            {
+                                              name: ["Harper"],
+                                              familyName: [],
+                                            },
+                                            {
+                                              name: ["Hunter"],
+                                              familyName: [],
+                                            },
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      name: ["Juan"],
+                                      familyName: [],
+                                    },
+                                  ]
+                                },
+                              ],
+                            },
+                            {
+                              name: ["Paulina"],
+                              familyName: [fn.lugo, fn.rivas],
+                              children: [
+                                {
+                                  group: "pareja",
+                                  name: ["Pedro"],
+                                  familyName: [],
+                                  children: [
+                                    {
+                                      name: ["Many"],
+                                      familyName: [],
+                                    },
+                                    {
+                                      name: ["Paola"],
+                                      familyName: [],
+                                      children: [
+                                        {
+                                          group: "pareja",
+                                          name: [],
+                                          familyName: [],
+                                          children: [
+                                            {
+                                              name: ["Esme"],
+                                              familyName: [],
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                  ]
+                                },
+                              ],
+                            },
+                            {
+                              name: ["Elba"],
+                              familyName: [fn.lugo, fn.rivas],
+                              children: [
+                                {
+                                  group: "pareja",
+                                  name: ["Gilberto"],
+                                  familyName: [],
+                                  children: [
+                                    {
+                                      name: ["Shayanne"],
+                                      familyName: [],
+                                      children: [
+                                        {
+                                          group: "pareja",
+                                          name: [],
+                                          familyName: [],
+                                          children: [
+                                            {
+                                              name: ["Kenji"],
+                                              familyName: [],
+                                            },
+                                            {
+                                              name: ["Jaxler"],
+                                              familyName: [],
+                                            },
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      name: ["Gilbert"],
+                                      familyName: [],
+                                    },
+                                  ]
+                                },
+                              ],
+                            },
+                            {
+                              name: ["Daniela"],
+                              familyName: [fn.lugo, fn.rivas],
+                              children: [
+                                {
+                                  group: "pareja",
+                                  name: ["Félix"],
+                                  familyName: [],
+                                  children: [
+                                    {
+                                      name: ["Darlene"],
+                                      familyName: [],
+                                      children: [
+                                        {
+                                          group: "pareja",
+                                          name: [],
+                                          familyName: [],
+                                          children: [
+                                            {
+                                              name: ["Isabela"],
+                                              familyName: [],
+                                            },
+                                            {
+                                              name: ["Aria"],
+                                              familyName: [],
+                                            },
+                                          ]
+
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      name: ["Lixdania"],
+                                      familyName: [],
+                                      children: [
+                                        {
+                                          group: "pareja",
+                                          name: [],
+                                          familyName: [],
+                                          children: [
+                                            {
+                                              name: ["Noah"],
+                                              familyName: [],
+                                            },
+                                          ]
+
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      name: ["Félix"],
+                                      familyName: [],
+                                    },
+                                  ]
+                                },
+                              ],
+                            },
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      name: ["Romelia", "Antonia"],
+                      familyName: [fn.rivas, fn.ramirez],
+                    },
+                    {
+                      ...rp.pedroRivas,
+                      children: [
+                        {
+                          group: "pareja",
+                          ...rp.virgiliaRamirez,
+                          children: virgiliaRamirezChildren,
+                        },
+                      ],
+                    },
+                    {
+                      name: ["Digna", "María"],
+                      familyName: [fn.rivas, fn.ramirez],
+                      children: [
+                        {
+                          group: "pareja",
+                          name: [],
+                          familyName: [fn.abreu],
+                          children: [
+                            {
+                              name: ["Altagracia"],
+                              familyName: [fn.abreu, fn.rivas],
+                            },
+                            {
+                              name: ["Juan", "Felix"],
+                              familyName: [fn.abreu, fn.rivas],
+                            },
+                            {
+                              name: ["Juana", "Margarita"],
+                              familyName: [fn.abreu, fn.rivas],
+                              children: [
+                                {
+                                  group: "pareja",
+                                  name: [],
+                                  familyName: [],
+                                  children: [
+                                    {
+                                      name: [],
+                                      familyName: [fn.null, fn.abreu],
+                                    },
+                                    {
+                                      name: [],
+                                      familyName: [fn.null, fn.abreu],
+                                    },
+                                    {
+                                      name: [],
+                                      familyName: [fn.null, fn.abreu],
+                                    },
+                                  ],
+                                }
+                              ],
+                            },
+                            {
+                              name: ["Rosa"],
+                              familyName: [fn.abreu, fn.rivas],
+                              children: [
+                                {
+                                  group: "pareja",
+                                  name: [],
+                                  familyName: [],
+                                  children: [
+                                    {
+                                      name: ["Shanerlyn"],
+                                      familyName: [fn.null, fn.abreu],
+                                    },
+                                  ],
+                                }
+                              ],
+                            },
+                            {
+                              name: ["Osiris"],
+                              familyName: [fn.abreu, fn.rivas],
+                              children: [
+                                {
+                                  group: "pareja",
+                                  name: [],
+                                  familyName: [],
+                                  children: [
+                                    {
+                                      name: ["Raúl"],
+                                      familyName: [],
+                                    },
+                                    {
+                                      name: ["Elisa"],
+                                      familyName: [],
+                                    },
+                                  ],
+                                }
+                              ],
+                            },
+                            {
+                              name: ["Martin"],
+                              familyName: [fn.abreu, fn.rivas],
+                              children: [
+                                {
+                                  group: "pareja",
+                                  name: [],
+                                  familyName: [],
+                                  children: [
+                                    {
+                                      name: ["Damiani"],
+                                      familyName: [fn.abreu, fn.null],
+                                      children: [
+                                        {
+                                          group: "pareja",
+                                          children: [
+                                            {
+                                              name: ["Fernández"],
+                                              familyName: [],
+                                            },
+                                            {
+                                              name: ["Benjamin"],
+                                              familyName: [],
+                                            },
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      name: ["Angel"],
+                                      familyName: [fn.abreu, fn.null],
+                                      children: [
+                                        {
+                                          group: "pareja",
+                                          children: [
+                                            {
+                                              name: ["Josue"],
+                                              familyName: [fn.abreu, fn.null],
+                                            },
+                                            {
+                                              name: ["Jael"],
+                                              familyName: [fn.abreu, fn.null],
+                                            },
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      name: ["Mercedes"],
+                                      familyName: [fn.abreu, fn.null],
+                                    },
+                                  ],
+                                }
+                              ],
+                            },
+                            {
+                              name: ["Andres", "Santiago"],
+                              familyName: [fn.abreu, fn.rivas],
+                              children: [
+                                {
+                                  group: "pareja",
+                                  name: [],
+                                  familyName: [fn.grullon],
+                                  children: [
+                                    {
+                                      name: ["Julia", "Bellamil"],
+                                      familyName: [fn.abreu, fn.grullon],
+                                      children: [
+                                        {
+                                          group: "pareja",
+                                          name: [],
+                                          familyName: [],
+                                          children: [
+                                            {
+                                              name: ["Junior", "Andrés"],
+                                              familyName: [fn.null, fn.abreu],
+                                            },
+                                            {
+                                              name: ["Junibel", "Escarlet"],
+                                              familyName: [fn.null, fn.abreu],
+                                            },
+                                            {
+                                              name: ["Juliany"],
+                                              familyName: [fn.null, fn.abreu],
+                                            },
+                                          ],
+                                        }
+                                      ],
+                                    },
+                                    {
+                                      name: ["Claudia", "Yohanny"],
+                                      familyName: [fn.abreu, fn.grullon],
+                                      children: [
+                                        {
+                                          group: "pareja",
+                                          name: [],
+                                          familyName: [],
+                                          children: [
+                                            {
+                                              name: ["Ryan", "Miguel"],
+                                              familyName: [fn.null, fn.abreu],
+                                            },
+                                            {
+                                              name: ["Camila", "Aurora"],
+                                              familyName: [fn.null, fn.abreu],
+                                            },
+                                          ],
+                                        }
+                                      ],
+                                    },
+                                    {
+                                      name: ["Luis", "Andres"],
+                                      familyName: [fn.abreu, fn.grullon],
+                                      children: [
+                                        {
+                                          group: "pareja",
+                                          name: [],
+                                          familyName: [],
+                                          children: [
+                                            {
+                                              name: ["Sophia"],
+                                              familyName: [fn.abreu, fn.null],
+                                            },
+                                            {
+                                              name: ["Andrés", "Santiago"],
+                                              familyName: [fn.abreu, fn.null],
+                                            },
+                                          ],
+                                        }
+                                      ],
+                                    },
+                                  ],
+                                },
+                                {
+                                  group: "pareja",
+                                  name: [],
+                                  familyName: [fn.nunez],
+                                  children: [
+                                    {
+                                      name: ["Joel", "Sebastián"],
+                                      familyName: [fn.abreu, fn.nunez],
+                                    },
+                                  ]
+                                },
+                              ],
+                            },
+                          ]
+                        },
                         {
                           group: "pareja",
                           name: [],
                           familyName: [fn.perez],
                           children: [
                             {
-                              name: ["Elaine"],
-                              familyName: [fn.perez, fn.contreras]
-                            },
-                            {
-                              name: ["Denisse"],
-                              familyName: [fn.perez, fn.contreras]
-                            },
-                            {
-                              name: ["Jorge", "Máximo"],
-                              familyName: [fn.perez, fn.contreras]
-                            },
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      name: ["Fernando", "Donato"],
-                      familyName: [fn.rivas, fn.jimenez],
-                      children: [
-                        {
-                          group: "pareja",
-                          name: [],
-                          familyName: [fn.alvarez],
-                          children: [
-                            {
-                              name: ["Máximo", "Argenis"],
-                              familyName: [fn.rivas, fn.alvarez],
+                              name: ["Felix"],
+                              familyName: [fn.perez, fn.rivas],
                               children: [
                                 {
                                   group: "pareja",
                                   name: [],
-                                  familyName: [fn.mueses],
+                                  familyName: [],
                                   children: [
                                     {
-                                      name: ["Evaluna"],
-                                      familyName: [fn.rivas, fn.mueses],
-                                    }
+                                      name: ["Pierre"],
+                                      familyName: [fn.perez, fn.null],
+                                    },
+                                    {
+                                      name: ["Fenely"],
+                                      familyName: [fn.perez, fn.null],
+                                    },
                                   ]
                                 }
-                              ]
+                              ],
                             },
                             {
-                              name: ["Diana", "Leonor"],
-                              familyName: [fn.rivas, fn.alvarez],
+                              name: ["Juan", "Antonio"],
+                              familyName: [fn.perez, fn.rivas],
                               children: [
                                 {
                                   group: "pareja",
                                   name: [],
-                                  familyName: [fn.cruz],
+                                  familyName: [],
                                   children: [
                                     {
-                                      name: ["Owen"],
-                                      familyName: [fn.cruz, fn.rivas],
-                                    }
+                                      name: ["Edily"],
+                                      familyName: [fn.perez, fn.null],
+                                    },
+                                    {
+                                      name: ["Norbelis"],
+                                      familyName: [fn.perez, fn.null],
+                                    },
+                                    {
+                                      name: ["Juan", "Antonio"],
+                                      familyName: [fn.perez, fn.null],
+                                    },
                                   ]
                                 }
-                              ]
+                              ],
                             },
                             {
-                              name: ["Isis", "Orquídea"],
-                              familyName: [fn.rivas, fn.alvarez],
+                              name: ["María", "Dolores"],
+                              familyName: [fn.perez, fn.rivas],
                               children: [
                                 {
                                   group: "pareja",
                                   name: [],
-                                  familyName: [fn.sanchez],
+                                  familyName: [],
                                   children: [
                                     {
-                                      name: ["Junior", "David"],
-                                      familyName: [fn.sanchez, fn.rivas],
+                                      name: ["Darwin"],
+                                      familyName: [fn.null, fn.perez],
                                     },
                                     {
-                                      name: ["Liam", "Xavier"],
-                                      familyName: [fn.sanchez, fn.rivas],
+                                      name: ["Edwin"],
+                                      familyName: [fn.null, fn.perez],
+                                    },
+                                    {
+                                      name: ["Leury"],
+                                      familyName: [fn.null, fn.perez],
                                     },
                                   ]
                                 }
-                              ]
-                            },
-                          ]
-                        },
-                        {
-                          group: "pareja",
-                          name: [],
-                          familyName: [fn.rosario],
-                          children: [
-                            {
-                              name: ["Fernando", "Alexis"],
-                              familyName: [fn.rivas, fn.rosario],
-                            },
-                            {
-                              name: ["Aldo", "Leonardo"],
-                              familyName: [fn.rivas, fn.rosario],
-                            },
-                            {
-                              name: ["Samantha", "Eileen"],
-                              familyName: [fn.rivas, fn.rosario],
-                            },
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      name: ["María", "Verónica"],
-                      familyName: [fn.rivas, fn.jimenez],
-                      children: [
-                        {
-                          group: "pareja",
-                          name: [],
-                          familyName: [fn.liz],
-                          children: [
-                            {
-                              name: ["Lenny", "Verónica"],
-                              familyName: [fn.liz, fn.rivas]
-                            },
-                            {
-                              name: ["Nathalie", "Francheska"],
-                              familyName: [fn.liz, fn.rivas]
-                            },
-                            {
-                              name: ["Elvis", "Valentín"],
-                              familyName: [fn.liz, fn.rivas]
-                            },
-                          ]
-                        }
-
-                      ]
-                    },
-                    {
-                      name: ["Juana", "Ramona"],
-                      familyName: [fn.rivas, fn.jimenez],
-                      children: [
-                        {
-                          group: "pareja",
-                          name: ["Antonio"],
-                          familyName: [fn.matias],
-                          children: [
-                            {
-                              name: ["Navila", "Idermis"],
-                              familyName: [fn.matias, fn.rivas],
-                              children: [
-                                {
-                                  group: "pareja",
-                                  name: ["Jarol"],
-                                  familyName: [fn.tuletta, fn.arias],
-                                  children: [
-                                    {
-                                      name: ["Luca"],
-                                      familyName: [fn.tuletta, fn.matias],
-                                    },
-                                    {
-                                      name: ["Sael"],
-                                      familyName: [fn.tuletta, fn.matias],
-                                    },
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              name: ["Hansell", "Antonio"],
-                              familyName: [fn.matias, fn.rivas],
-                            },
-                            {
-                              name: ["Laura", "Massiel"],
-                              familyName: [fn.matias, fn.rivas],
-                            },
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      name: ["Eleonora", "del Carmen"],
-                      familyName: [fn.rivas, fn.jimenez],
-                      children: [
-                        {
-                          group: "pareja",
-                          name: [],
-                          familyName: [fn.laureano],
-                          children: [
-                            {
-                              name: ["Katherine"],
-                              familyName: [fn.laureano, fn.rivas],
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                  ]
-                }
-              ]
-            },
-            {
-              name: ["María", "Eleonora"],
-              familyName: [fn.rivas, fn.ramirez],
-              nickname: "Norita",
-            },
-            {
-              name: ["Ana", "Virgilia"],
-              familyName: [fn.rivas, fn.ramirez],
-              children: [
-                {
-                  group: "pareja",
-                  name: [],
-                  familyName: [fn.grullon],
-                  children: [
-                    {
-                      name: ["Socorro"],
-                      familyName: [fn.grullon],
-                      children: [
-                        {
-                          group: "pareja",
-                          name: [],
-                          familyName: [fn.molina],
-                          children: [
-                            {
-                              name: ["Hugo"],
-                              familyName: [fn.molina, fn.grullon],
-                            },
-                            {
-                              name: ["Franchi"],
-                              familyName: [fn.molina, fn.grullon],
+                              ],
                             },
                           ]
                         }
@@ -1543,426 +2351,993 @@ export default {
                     },
                   ]
                 }
-              ]
-            },
-            {
-              name: ["Ana", "Rosa"],
-              familyName: [fn.rivas, fn.ramirez],
-            },
-            {
-              ...rp.anaRita,
-              children: [
-                {
-                  group: "pareja",
-                  ...rp.pedroRamirezGrullon,
-                  children: anaRitaChildren,
-                }
-              ]
-            },
-            {
-              name: ["Juan", "Antonio"],
-              familyName: [fn.rivas, fn.ramirez],
-            },
-            {
-              name: ["Ana", "Mercedes"],
-              familyName: [fn.rivas, fn.ramirez],
-              children: [
-                {
-                  group: "pareja",
-                  name: ["Juan"],
-                  familyName: [fn.lugo],
-                  children: [
-                    {
-                      name: ["Francia"],
-                      familyName: [fn.lugo, fn.rivas],
-                      children: [
-                        {
-                          group: "pareja",
-                          name: ["Máximo"],
-                          familyName: [],
-                          children: []
-                        },
-                      ],
-                    },
-                    {
-                      name: ["Lupe"],
-                      familyName: [fn.lugo, fn.rivas],
-                      children: [
-                        {
-                          group: "pareja",
-                          name: ["Percio"],
-                          familyName: [],
-                          children: [
-                            {
-                              name: ["Lupercio"],
-                              familyName: [],
-                            },
-                            {
-                              name: ["Arnoldo"],
-                              familyName: [],
-                            },
-                            {
-                              name: ["Larry"],
-                              familyName: [],
-                            },
-                            {
-                              name: ["Nixaliz"],
-                              familyName: [],
-                            },
-                          ]
-                        },
-                      ],
-                    },
-                    {
-                      name: ["Juan"],
-                      familyName: [fn.lugo, fn.rivas],
-                      children: [
-                        {
-                          group: "pareja",
-                          name: ["Hilda"],
-                          familyName: [],
-                          children: [
-                            {
-                              name: ["Wanda"],
-                              familyName: [fn.lugo],
-                              children: [
-                                {
-                                  group: "pareja",
-                                  name: [],
-                                  familyName: [],
-                                  children: [
-                                    {
-                                      name: ["Matthew"],
-                                      familyName: [],
-                                    },
-                                    {
-                                      name: ["Olivia"],
-                                      familyName: [],
-                                    },
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              name: ["Janisse"],
-                              familyName: [fn.lugo],
-                              children: [
-                                {
-                                  group: "pareja",
-                                  name: [],
-                                  familyName: [],
-                                  children: [
-                                    {
-                                      name: ["Jacob"],
-                                      familyName: [],
-                                    },
-                                    {
-                                      name: ["Jack"],
-                                      familyName: [],
-                                    },
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              name: ["Stephanie"],
-                              familyName: [fn.lugo],
-                              children: [
-                                {
-                                  group: "pareja",
-                                  name: [],
-                                  familyName: [],
-                                  children: [
-                                    {
-                                      name: ["Eliany"],
-                                      familyName: [],
-                                    },
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              name: ["Emmanuel"],
-                              familyName: [fn.lugo],
-                            },
-                          ]
-                        },
-                      ],
-                    },
-                    {
-                      name: ["Pilar"],
-                      familyName: [fn.lugo, fn.rivas],
-                      children: [
-                        {
-                          group: "pareja",
-                          name: ["Juan"],
-                          familyName: [],
-                          children: [
-                            {
-                              name: ["Mercedes"],
-                              familyName: [],
-                              children: [
-                                {
-                                  group: "pareja",
-                                  children: [
-                                    {
-                                      name: ["Oseas"],
-                                      familyName: [],
-                                    },
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              name: ["Angie"],
-                              familyName: [],
-                              children: [
-                                {
-                                  group: "pareja",
-                                  children: [
-                                    {
-                                      name: ["Lyangilee"],
-                                      familyName: [],
-                                    },
-                                    {
-                                      name: ["Maddox"],
-                                      familyName: [],
-                                    },
-                                    {
-                                      name: ["Harper"],
-                                      familyName: [],
-                                    },
-                                    {
-                                      name: ["Hunter"],
-                                      familyName: [],
-                                    },
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              name: ["Juan"],
-                              familyName: [],
-                            },
-                          ]
-                        },
-                      ],
-                    },
-                    {
-                      name: ["Paulina"],
-                      familyName: [fn.lugo, fn.rivas],
-                      children: [
-                        {
-                          group: "pareja",
-                          name: ["Pedro"],
-                          familyName: [],
-                          children: [
-                            {
-                              name: ["Many"],
-                              familyName: [],
-                            },
-                            {
-                              name: ["Paola"],
-                              familyName: [],
-                              children: [
-                                {
-                                  group: "pareja",
-                                  name: [],
-                                  familyName: [],
-                                  children: [
-                                    {
-                                      name: ["Esme"],
-                                      familyName: [],
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                          ]
-                        },
-                      ],
-                    },
-                    {
-                      name: ["Elba"],
-                      familyName: [fn.lugo, fn.rivas],
-                      children: [
-                        {
-                          group: "pareja",
-                          name: ["Gilberto"],
-                          familyName: [],
-                          children: [
-                            {
-                              name: ["Shayanne"],
-                              familyName: [],
-                              children: [
-                                {
-                                  group: "pareja",
-                                  name: [],
-                                  familyName: [],
-                                  children: [
-                                    {
-                                      name: ["Kenji"],
-                                      familyName: [],
-                                    },
-                                    {
-                                      name: ["Jaxler"],
-                                      familyName: [],
-                                    },
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              name: ["Gilbert"],
-                              familyName: [],
-                            },
-                          ]
-                        },
-                      ],
-                    },
-                    {
-                      name: ["Daniela"],
-                      familyName: [fn.lugo, fn.rivas],
-                      children: [
-                        {
-                          group: "pareja",
-                          name: ["Félix"],
-                          familyName: [],
-                          children: [
-                            {
-                              name: ["Darlene"],
-                              familyName: [],
-                              children: [
-                                {
-                                  group: "pareja",
-                                  name: [],
-                                  familyName: [],
-                                  children: [
-                                    {
-                                      name: ["Isabela"],
-                                      familyName: [],
-                                    },
-                                    {
-                                      name: ["Aria"],
-                                      familyName: [],
-                                    },
-                                  ]
-
-                                }
-                              ]
-                            },
-                            {
-                              name: ["Lixdania"],
-                              familyName: [],
-                              children: [
-                                {
-                                  group: "pareja",
-                                  name: [],
-                                  familyName: [],
-                                  children: [
-                                    {
-                                      name: ["Noah"],
-                                      familyName: [],
-                                    },
-                                  ]
-
-                                }
-                              ]
-                            },
-                            {
-                              name: ["Félix"],
-                              familyName: [],
-                            },
-                          ]
-                        },
-                      ],
-                    },
-                  ]
-                }
-              ]
-            },
-            {
-              name: ["Romelia", "Antonia"],
-              familyName: [fn.rivas, fn.ramirez],
-            },
-            {
-              ...rp.pedroRivas,
-              children: [
-                {
-                  group: "pareja",
-                  ...rp.virgiliaRamirez,
-                  children: virgiliaRamirezChildren,
-                },
               ],
             },
-            {
-              name: ["Digna", "María"],
-              familyName: [fn.rivas, fn.ramirez],
-              children: [
-                {
-                  group: "pareja",
-                  name: [],
-                  familyName: [],
-                  children: [
-                    {
-                      name: ["Altagracia"],
-                      familyName: [],
-                    },
-                    {
-                      name: ["Juan", "Felix"],
-                      familyName: [],
-                    },
-                    {
-                      name: ["Juana", "Margarita"],
-                      familyName: [fn.abreu],
-                    },
-                    {
-                      name: ["Rosa"],
-                      familyName: [],
-                    },
-                    {
-                      name: ["Osiris"],
-                      familyName: [],
-                    },
-                    {
-                      name: ["Martin"],
-                      familyName: [fn.abreu],
-                    },
-                    {
-                      name: ["Andres", "Santiago"],
-                      familyName: [fn.abreu, fn.rivas],
-                    },
-                    {
-                      name: ["Felix"],
-                      familyName: [fn.perez],
-                    },
-                    {
-                      name: ["Juan", "Antonio"],
-                      familyName: [fn.perez],
-                    },
-                    {
-                      name: ["María", "Dolores"],
-                      familyName: [fn.perez, fn.rivas],
-                    },
-                  ]
-                }
-              ]
-            },
-
           ]
         },
-        {
-          group: "pareja",
-          name: ["Martina"],
-          familyName: [fn.suero],
-          children: [
-            {
-              name: ["Felicia"],
-              familyName: [fn.rivas, fn.suero],
-            }
-          ]
-        }
       ]
-    }
+    },
+    // {
+    //   name: [],
+    //   familyName: [fn.rivas],
+    //   children: [
+    //     {
+    //       group: "pareja",
+    //       name: [],
+    //       familyName: [fn.perez],
+    //       children: [
+    //         {
+    //           name: ["Fernando"],
+    //           familyName: [fn.rivas, fn.perez],
+    //           nickname: "Papá Nando",
+    //           children: [
+    //             {
+    //               group: "pareja",
+    //               name: ["Ana", "Julia"],
+    //               familyName: [fn.ramirez],
+    //               nickname: "Mama Julia",
+    //               children: [
+    //                 {
+    //                   name: ["Ramon", "Antonio"],
+    //                   familyName: [fn.rivas, fn.ramirez],
+    //                   nickname: "Ramon Chiquito",
+    //                   children: [
+    //                     {
+    //                       group: "pareja",
+    //                       name: ["Santos"],
+    //                       familyName: [fn.jimenez],
+    //                       children: [
+    //                         {
+    //                           group: "asociado",
+    //                           name: ["Águeda"],
+    //                           familyName: [fn.batista],
+    //                         },
+    //                         {
+    //                           name: ["Máximo", "Alexis"],
+    //                           familyName: [fn.rivas, fn.jimenez],
+    //                           children: [
+    //                             {
+    //                               group: "pareja",
+    //                               name: [],
+    //                               familyName: [fn.perez],
+    //                               children: [
+    //                                 {
+    //                                   name: ["Elaine"],
+    //                                   familyName: [fn.perez, fn.contreras]
+    //                                 },
+    //                                 {
+    //                                   name: ["Denisse"],
+    //                                   familyName: [fn.perez, fn.contreras]
+    //                                 },
+    //                                 {
+    //                                   name: ["Jorge", "Máximo"],
+    //                                   familyName: [fn.perez, fn.contreras]
+    //                                 },
+    //                               ]
+    //                             }
+    //                           ]
+    //                         },
+    //                         {
+    //                           name: ["Fernando", "Donato"],
+    //                           familyName: [fn.rivas, fn.jimenez],
+    //                           children: [
+    //                             {
+    //                               group: "pareja",
+    //                               name: [],
+    //                               familyName: [fn.alvarez],
+    //                               children: [
+    //                                 {
+    //                                   name: ["Máximo", "Argenis"],
+    //                                   familyName: [fn.rivas, fn.alvarez],
+    //                                   children: [
+    //                                     {
+    //                                       group: "pareja",
+    //                                       name: [],
+    //                                       familyName: [fn.mueses],
+    //                                       children: [
+    //                                         {
+    //                                           name: ["Evaluna"],
+    //                                           familyName: [fn.rivas, fn.mueses],
+    //                                         }
+    //                                       ]
+    //                                     }
+    //                                   ]
+    //                                 },
+    //                                 {
+    //                                   name: ["Diana", "Leonor"],
+    //                                   familyName: [fn.rivas, fn.alvarez],
+    //                                   children: [
+    //                                     {
+    //                                       group: "pareja",
+    //                                       name: [],
+    //                                       familyName: [fn.cruz],
+    //                                       children: [
+    //                                         {
+    //                                           name: ["Owen"],
+    //                                           familyName: [fn.cruz, fn.rivas],
+    //                                         }
+    //                                       ]
+    //                                     }
+    //                                   ]
+    //                                 },
+    //                                 {
+    //                                   name: ["Isis", "Orquídea"],
+    //                                   familyName: [fn.rivas, fn.alvarez],
+    //                                   children: [
+    //                                     {
+    //                                       group: "pareja",
+    //                                       name: [],
+    //                                       familyName: [fn.sanchez],
+    //                                       children: [
+    //                                         {
+    //                                           name: ["Junior", "David"],
+    //                                           familyName: [fn.sanchez, fn.rivas],
+    //                                         },
+    //                                         {
+    //                                           name: ["Liam", "Xavier"],
+    //                                           familyName: [fn.sanchez, fn.rivas],
+    //                                         },
+    //                                       ]
+    //                                     }
+    //                                   ]
+    //                                 },
+    //                               ]
+    //                             },
+    //                             {
+    //                               group: "pareja",
+    //                               name: [],
+    //                               familyName: [fn.rosario],
+    //                               children: [
+    //                                 {
+    //                                   name: ["Fernando", "Alexis"],
+    //                                   familyName: [fn.rivas, fn.rosario],
+    //                                 },
+    //                                 {
+    //                                   name: ["Aldo", "Leonardo"],
+    //                                   familyName: [fn.rivas, fn.rosario],
+    //                                 },
+    //                                 {
+    //                                   name: ["Samantha", "Eileen"],
+    //                                   familyName: [fn.rivas, fn.rosario],
+    //                                 },
+    //                               ]
+    //                             }
+    //                           ]
+    //                         },
+    //                         {
+    //                           name: ["María", "Verónica"],
+    //                           familyName: [fn.rivas, fn.jimenez],
+    //                           children: [
+    //                             {
+    //                               group: "pareja",
+    //                               name: [],
+    //                               familyName: [fn.liz],
+    //                               children: [
+    //                                 {
+    //                                   name: ["Lenny", "Verónica"],
+    //                                   familyName: [fn.liz, fn.rivas]
+    //                                 },
+    //                                 {
+    //                                   name: ["Nathalie", "Francheska"],
+    //                                   familyName: [fn.liz, fn.rivas]
+    //                                 },
+    //                                 {
+    //                                   name: ["Elvis", "Valentín"],
+    //                                   familyName: [fn.liz, fn.rivas]
+    //                                 },
+    //                               ]
+    //                             }
+
+    //                           ]
+    //                         },
+    //                         {
+    //                           name: ["Juana", "Ramona"],
+    //                           familyName: [fn.rivas, fn.jimenez],
+    //                           children: [
+    //                             {
+    //                               group: "pareja",
+    //                               name: ["Antonio"],
+    //                               familyName: [fn.matias],
+    //                               children: [
+    //                                 {
+    //                                   name: ["Navila", "Idermis"],
+    //                                   familyName: [fn.matias, fn.rivas],
+    //                                   children: [
+    //                                     {
+    //                                       group: "pareja",
+    //                                       name: ["Jarol"],
+    //                                       familyName: [fn.tuletta, fn.arias],
+    //                                       children: [
+    //                                         {
+    //                                           name: ["Luca"],
+    //                                           familyName: [fn.tuletta, fn.matias],
+    //                                         },
+    //                                         {
+    //                                           name: ["Sael"],
+    //                                           familyName: [fn.tuletta, fn.matias],
+    //                                         },
+    //                                       ]
+    //                                     }
+    //                                   ]
+    //                                 },
+    //                                 {
+    //                                   name: ["Hansell", "Antonio"],
+    //                                   familyName: [fn.matias, fn.rivas],
+    //                                   children: [
+    //                                     {
+    //                                       group: "pareja",
+    //                                       name: [],
+    //                                       familyName: [],
+    //                                       children: [
+    //                                         {
+    //                                           name: [],
+    //                                           familyName: [fn.matias],
+    //                                         }
+    //                                       ],
+    //                                     }
+    //                                   ],
+    //                                 },
+    //                                 {
+    //                                   name: ["Laura", "Massiel"],
+    //                                   familyName: [fn.matias, fn.rivas],
+    //                                   children: [
+    //                                     {
+    //                                       group: "pareja",
+    //                                       name: [],
+    //                                       familyName: [],
+    //                                       children: [
+    //                                         {
+    //                                           name: [],
+    //                                           familyName: [],
+    //                                         }
+    //                                       ],
+    //                                     }
+    //                                   ],
+    //                                 },
+    //                               ]
+    //                             }
+    //                           ]
+    //                         },
+    //                         {
+    //                           name: ["Eleonora", "Del Carmen"],
+    //                           familyName: [fn.rivas, fn.jimenez],
+    //                           children: [
+    //                             {
+    //                               group: "pareja",
+    //                               name: [],
+    //                               familyName: [fn.laureano],
+    //                               children: [
+    //                                 {
+    //                                   name: ["Katherine"],
+    //                                   familyName: [fn.laureano, fn.rivas],
+    //                                 }
+    //                               ]
+    //                             }
+    //                           ]
+    //                         },
+    //                       ]
+    //                     }
+    //                   ]
+    //                 },
+    //                 {
+    //                   name: ["María", "Eleonora"],
+    //                   familyName: [fn.rivas, fn.ramirez],
+    //                   nickname: "Norita",
+    //                 },
+    //                 {
+    //                   name: ["Ana", "Virgilia"],
+    //                   familyName: [fn.rivas, fn.ramirez],
+    //                   children: [
+    //                     {
+    //                       group: "pareja",
+    //                       name: [],
+    //                       familyName: [fn.grullon],
+    //                       children: [
+    //                         {
+    //                           name: ["Socorro"],
+    //                           familyName: [fn.grullon],
+    //                           children: [
+    //                             {
+    //                               group: "pareja",
+    //                               name: [],
+    //                               familyName: [fn.molina],
+    //                               children: [
+    //                                 {
+    //                                   name: ["Hugo"],
+    //                                   familyName: [fn.molina, fn.grullon],
+    //                                 },
+    //                                 {
+    //                                   name: ["Franchi"],
+    //                                   familyName: [fn.molina, fn.grullon],
+    //                                 },
+    //                               ]
+    //                             }
+    //                           ]
+    //                         },
+    //                       ]
+    //                     }
+    //                   ]
+    //                 },
+    //                 {
+    //                   name: ["Ana", "Rosa"],
+    //                   familyName: [fn.rivas, fn.ramirez],
+    //                 },
+    //                 {
+    //                   name: ["Ana", "Rita"],
+    //                   familyName: [fn.rivas, fn.ramirez],
+    //                 },
+    //                 {
+    //                   name: ["Juan", "Antonio"],
+    //                   familyName: [fn.rivas, fn.ramirez],
+    //                 },
+    //                 {
+    //                   name: ["Ana", "Mercedes"],
+    //                   familyName: [fn.rivas, fn.ramirez],
+    //                   children: [
+    //                     {
+    //                       group: "pareja",
+    //                       name: ["Juan"],
+    //                       familyName: [fn.lugo],
+    //                       children: [
+    //                         {
+    //                           name: ["Francia"],
+    //                           familyName: [fn.lugo, fn.rivas],
+    //                           children: [
+    //                             {
+    //                               group: "pareja",
+    //                               name: ["Máximo"],
+    //                               familyName: [],
+    //                               children: []
+    //                             },
+    //                           ],
+    //                         },
+    //                         {
+    //                           name: ["Lupe"],
+    //                           familyName: [fn.lugo, fn.rivas],
+    //                           children: [
+    //                             {
+    //                               group: "pareja",
+    //                               name: ["Percio"],
+    //                               familyName: [],
+    //                               children: [
+    //                                 {
+    //                                   name: ["Lupercio"],
+    //                                   familyName: [],
+    //                                 },
+    //                                 {
+    //                                   name: ["Arnoldo"],
+    //                                   familyName: [],
+    //                                 },
+    //                                 {
+    //                                   name: ["Larry"],
+    //                                   familyName: [],
+    //                                 },
+    //                                 {
+    //                                   name: ["Nixaliz"],
+    //                                   familyName: [],
+    //                                 },
+    //                               ]
+    //                             },
+    //                           ],
+    //                         },
+    //                         {
+    //                           name: ["Juan"],
+    //                           familyName: [fn.lugo, fn.rivas],
+    //                           children: [
+    //                             {
+    //                               group: "pareja",
+    //                               name: ["Hilda"],
+    //                               familyName: [],
+    //                               children: [
+    //                                 {
+    //                                   name: ["Wanda"],
+    //                                   familyName: [fn.lugo],
+    //                                   children: [
+    //                                     {
+    //                                       group: "pareja",
+    //                                       name: [],
+    //                                       familyName: [],
+    //                                       children: [
+    //                                         {
+    //                                           name: ["Matthew"],
+    //                                           familyName: [],
+    //                                         },
+    //                                         {
+    //                                           name: ["Olivia"],
+    //                                           familyName: [],
+    //                                         },
+    //                                       ]
+    //                                     }
+    //                                   ]
+    //                                 },
+    //                                 {
+    //                                   name: ["Janisse"],
+    //                                   familyName: [fn.lugo],
+    //                                   children: [
+    //                                     {
+    //                                       group: "pareja",
+    //                                       name: [],
+    //                                       familyName: [],
+    //                                       children: [
+    //                                         {
+    //                                           name: ["Jacob"],
+    //                                           familyName: [],
+    //                                         },
+    //                                         {
+    //                                           name: ["Jack"],
+    //                                           familyName: [],
+    //                                         },
+    //                                       ]
+    //                                     }
+    //                                   ]
+    //                                 },
+    //                                 {
+    //                                   name: ["Stephanie"],
+    //                                   familyName: [fn.lugo],
+    //                                   children: [
+    //                                     {
+    //                                       group: "pareja",
+    //                                       name: [],
+    //                                       familyName: [],
+    //                                       children: [
+    //                                         {
+    //                                           name: ["Eliany"],
+    //                                           familyName: [],
+    //                                         },
+    //                                       ]
+    //                                     }
+    //                                   ]
+    //                                 },
+    //                                 {
+    //                                   name: ["Emmanuel"],
+    //                                   familyName: [fn.lugo],
+    //                                 },
+    //                               ]
+    //                             },
+    //                           ],
+    //                         },
+    //                         {
+    //                           name: ["Pilar"],
+    //                           familyName: [fn.lugo, fn.rivas],
+    //                           children: [
+    //                             {
+    //                               group: "pareja",
+    //                               name: ["Juan"],
+    //                               familyName: [],
+    //                               children: [
+    //                                 {
+    //                                   name: ["Mercedes"],
+    //                                   familyName: [],
+    //                                   children: [
+    //                                     {
+    //                                       group: "pareja",
+    //                                       children: [
+    //                                         {
+    //                                           name: ["Oseas"],
+    //                                           familyName: [],
+    //                                         },
+    //                                       ]
+    //                                     }
+    //                                   ]
+    //                                 },
+    //                                 {
+    //                                   name: ["Angie"],
+    //                                   familyName: [],
+    //                                   children: [
+    //                                     {
+    //                                       group: "pareja",
+    //                                       children: [
+    //                                         {
+    //                                           name: ["Lyangilee"],
+    //                                           familyName: [],
+    //                                         },
+    //                                         {
+    //                                           name: ["Maddox"],
+    //                                           familyName: [],
+    //                                         },
+    //                                         {
+    //                                           name: ["Harper"],
+    //                                           familyName: [],
+    //                                         },
+    //                                         {
+    //                                           name: ["Hunter"],
+    //                                           familyName: [],
+    //                                         },
+    //                                       ]
+    //                                     }
+    //                                   ]
+    //                                 },
+    //                                 {
+    //                                   name: ["Juan"],
+    //                                   familyName: [],
+    //                                 },
+    //                               ]
+    //                             },
+    //                           ],
+    //                         },
+    //                         {
+    //                           name: ["Paulina"],
+    //                           familyName: [fn.lugo, fn.rivas],
+    //                           children: [
+    //                             {
+    //                               group: "pareja",
+    //                               name: ["Pedro"],
+    //                               familyName: [],
+    //                               children: [
+    //                                 {
+    //                                   name: ["Many"],
+    //                                   familyName: [],
+    //                                 },
+    //                                 {
+    //                                   name: ["Paola"],
+    //                                   familyName: [],
+    //                                   children: [
+    //                                     {
+    //                                       group: "pareja",
+    //                                       name: [],
+    //                                       familyName: [],
+    //                                       children: [
+    //                                         {
+    //                                           name: ["Esme"],
+    //                                           familyName: [],
+    //                                         }
+    //                                       ]
+    //                                     }
+    //                                   ]
+    //                                 },
+    //                               ]
+    //                             },
+    //                           ],
+    //                         },
+    //                         {
+    //                           name: ["Elba"],
+    //                           familyName: [fn.lugo, fn.rivas],
+    //                           children: [
+    //                             {
+    //                               group: "pareja",
+    //                               name: ["Gilberto"],
+    //                               familyName: [],
+    //                               children: [
+    //                                 {
+    //                                   name: ["Shayanne"],
+    //                                   familyName: [],
+    //                                   children: [
+    //                                     {
+    //                                       group: "pareja",
+    //                                       name: [],
+    //                                       familyName: [],
+    //                                       children: [
+    //                                         {
+    //                                           name: ["Kenji"],
+    //                                           familyName: [],
+    //                                         },
+    //                                         {
+    //                                           name: ["Jaxler"],
+    //                                           familyName: [],
+    //                                         },
+    //                                       ]
+    //                                     }
+    //                                   ]
+    //                                 },
+    //                                 {
+    //                                   name: ["Gilbert"],
+    //                                   familyName: [],
+    //                                 },
+    //                               ]
+    //                             },
+    //                           ],
+    //                         },
+    //                         {
+    //                           name: ["Daniela"],
+    //                           familyName: [fn.lugo, fn.rivas],
+    //                           children: [
+    //                             {
+    //                               group: "pareja",
+    //                               name: ["Félix"],
+    //                               familyName: [],
+    //                               children: [
+    //                                 {
+    //                                   name: ["Darlene"],
+    //                                   familyName: [],
+    //                                   children: [
+    //                                     {
+    //                                       group: "pareja",
+    //                                       name: [],
+    //                                       familyName: [],
+    //                                       children: [
+    //                                         {
+    //                                           name: ["Isabela"],
+    //                                           familyName: [],
+    //                                         },
+    //                                         {
+    //                                           name: ["Aria"],
+    //                                           familyName: [],
+    //                                         },
+    //                                       ]
+
+    //                                     }
+    //                                   ]
+    //                                 },
+    //                                 {
+    //                                   name: ["Lixdania"],
+    //                                   familyName: [],
+    //                                   children: [
+    //                                     {
+    //                                       group: "pareja",
+    //                                       name: [],
+    //                                       familyName: [],
+    //                                       children: [
+    //                                         {
+    //                                           name: ["Noah"],
+    //                                           familyName: [],
+    //                                         },
+    //                                       ]
+
+    //                                     }
+    //                                   ]
+    //                                 },
+    //                                 {
+    //                                   name: ["Félix"],
+    //                                   familyName: [],
+    //                                 },
+    //                               ]
+    //                             },
+    //                           ],
+    //                         },
+    //                       ]
+    //                     }
+    //                   ]
+    //                 },
+    //                 {
+    //                   name: ["Romelia", "Antonia"],
+    //                   familyName: [fn.rivas, fn.ramirez],
+    //                 },
+    //                 {
+    //                   ...rp.pedroRivas,
+    //                   children: [
+    //                     {
+    //                       group: "pareja",
+    //                       ...rp.virgiliaRamirez,
+    //                       children: virgiliaRamirezChildren,
+    //                     },
+    //                   ],
+    //                 },
+    //                 {
+    //                   name: ["Digna", "María"],
+    //                   familyName: [fn.rivas, fn.ramirez],
+    //                   children: [
+    //                     {
+    //                       group: "pareja",
+    //                       name: [],
+    //                       familyName: [fn.abreu],
+    //                       children: [
+    //                         {
+    //                           name: ["Altagracia"],
+    //                           familyName: [fn.abreu, fn.rivas],
+    //                         },
+    //                         {
+    //                           name: ["Juan", "Felix"],
+    //                           familyName: [fn.abreu, fn.rivas],
+    //                         },
+    //                         {
+    //                           name: ["Juana", "Margarita"],
+    //                           familyName: [fn.abreu, fn.rivas],
+    //                           children: [
+    //                             {
+    //                               group: "pareja",
+    //                               name: [],
+    //                               familyName: [],
+    //                               children: [
+    //                                 {
+    //                                   name: [],
+    //                                   familyName: [fn.null, fn.abreu],
+    //                                 },
+    //                                 {
+    //                                   name: [],
+    //                                   familyName: [fn.null, fn.abreu],
+    //                                 },
+    //                                 {
+    //                                   name: [],
+    //                                   familyName: [fn.null, fn.abreu],
+    //                                 },
+    //                               ],
+    //                             }
+    //                           ],
+    //                         },
+    //                         {
+    //                           name: ["Rosa"],
+    //                           familyName: [fn.abreu, fn.rivas],
+    //                           children: [
+    //                             {
+    //                               group: "pareja",
+    //                               name: [],
+    //                               familyName: [],
+    //                               children: [
+    //                                 {
+    //                                   name: ["Shanerlyn"],
+    //                                   familyName: [fn.null, fn.abreu],
+    //                                 },
+    //                               ],
+    //                             }
+    //                           ],
+    //                         },
+    //                         {
+    //                           name: ["Osiris"],
+    //                           familyName: [fn.abreu, fn.rivas],
+    //                           children: [
+    //                             {
+    //                               group: "pareja",
+    //                               name: [],
+    //                               familyName: [],
+    //                               children: [
+    //                                 {
+    //                                   name: ["Raúl"],
+    //                                   familyName: [],
+    //                                 },
+    //                                 {
+    //                                   name: ["Elisa"],
+    //                                   familyName: [],
+    //                                 },
+    //                               ],
+    //                             }
+    //                           ],
+    //                         },
+    //                         {
+    //                           name: ["Martin"],
+    //                           familyName: [fn.abreu, fn.rivas],
+    //                           children: [
+    //                             {
+    //                               group: "pareja",
+    //                               name: [],
+    //                               familyName: [],
+    //                               children: [
+    //                                 {
+    //                                   name: ["Damiani"],
+    //                                   familyName: [fn.abreu, fn.null],
+    //                                   children: [
+    //                                     {
+    //                                       group: "pareja",
+    //                                       children: [
+    //                                         {
+    //                                           name: ["Fernández"],
+    //                                           familyName: [],
+    //                                         },
+    //                                         {
+    //                                           name: ["Benjamin"],
+    //                                           familyName: [],
+    //                                         },
+    //                                       ]
+    //                                     }
+    //                                   ]
+    //                                 },
+    //                                 {
+    //                                   name: ["Angel"],
+    //                                   familyName: [fn.abreu, fn.null],
+    //                                   children: [
+    //                                     {
+    //                                       group: "pareja",
+    //                                       children: [
+    //                                         {
+    //                                           name: ["Josue"],
+    //                                           familyName: [fn.abreu, fn.null],
+    //                                         },
+    //                                         {
+    //                                           name: ["Jael"],
+    //                                           familyName: [fn.abreu, fn.null],
+    //                                         },
+    //                                       ]
+    //                                     }
+    //                                   ]
+    //                                 },
+    //                                 {
+    //                                   name: ["Mercedes"],
+    //                                   familyName: [fn.abreu, fn.null],
+    //                                 },
+    //                               ],
+    //                             }
+    //                           ],
+    //                         },
+    //                         {
+    //                           name: ["Andres", "Santiago"],
+    //                           familyName: [fn.abreu, fn.rivas],
+    //                           children: [
+    //                             {
+    //                               group: "pareja",
+    //                               name: [],
+    //                               familyName: [fn.grullon],
+    //                               children: [
+    //                                 {
+    //                                   name: ["Julia", "Bellamil"],
+    //                                   familyName: [fn.abreu, fn.grullon],
+    //                                   children: [
+    //                                     {
+    //                                       group: "pareja",
+    //                                       name: [],
+    //                                       familyName: [],
+    //                                       children: [
+    //                                         {
+    //                                           name: ["Junior", "Andrés"],
+    //                                           familyName: [fn.null, fn.abreu],
+    //                                         },
+    //                                         {
+    //                                           name: ["Junibel", "Escarlet"],
+    //                                           familyName: [fn.null, fn.abreu],
+    //                                         },
+    //                                         {
+    //                                           name: ["Juliany"],
+    //                                           familyName: [fn.null, fn.abreu],
+    //                                         },
+    //                                       ],
+    //                                     }
+    //                                   ],
+    //                                 },
+    //                                 {
+    //                                   name: ["Claudia", "Yohanny"],
+    //                                   familyName: [fn.abreu, fn.grullon],
+    //                                   children: [
+    //                                     {
+    //                                       group: "pareja",
+    //                                       name: [],
+    //                                       familyName: [],
+    //                                       children: [
+    //                                         {
+    //                                           name: ["Ryan", "Miguel"],
+    //                                           familyName: [fn.null, fn.abreu],
+    //                                         },
+    //                                         {
+    //                                           name: ["Camila", "Aurora"],
+    //                                           familyName: [fn.null, fn.abreu],
+    //                                         },
+    //                                       ],
+    //                                     }
+    //                                   ],
+    //                                 },
+    //                                 {
+    //                                   name: ["Luis", "Andres"],
+    //                                   familyName: [fn.abreu, fn.grullon],
+    //                                   children: [
+    //                                     {
+    //                                       group: "pareja",
+    //                                       name: [],
+    //                                       familyName: [],
+    //                                       children: [
+    //                                         {
+    //                                           name: ["Sophia"],
+    //                                           familyName: [fn.abreu, fn.null],
+    //                                         },
+    //                                         {
+    //                                           name: ["Andrés", "Santiago"],
+    //                                           familyName: [fn.abreu, fn.null],
+    //                                         },
+    //                                       ],
+    //                                     }
+    //                                   ],
+    //                                 },
+    //                               ],
+    //                             },
+    //                             {
+    //                               group: "pareja",
+    //                               name: [],
+    //                               familyName: [fn.nunez],
+    //                               children: [
+    //                                 {
+    //                                   name: ["Joel", "Sebastián"],
+    //                                   familyName: [fn.abreu, fn.nunez],
+    //                                 },
+    //                               ]
+    //                             },
+    //                           ],
+    //                         },
+    //                       ]
+    //                     },
+    //                     {
+    //                       group: "pareja",
+    //                       name: [],
+    //                       familyName: [fn.perez],
+    //                       children: [
+    //                         {
+    //                           name: ["Felix"],
+    //                           familyName: [fn.perez, fn.rivas],
+    //                           children: [
+    //                             {
+    //                               group: "pareja",
+    //                               name: [],
+    //                               familyName: [],
+    //                               children: [
+    //                                 {
+    //                                   name: ["Pierre"],
+    //                                   familyName: [fn.perez, fn.null],
+    //                                 },
+    //                                 {
+    //                                   name: ["Fenely"],
+    //                                   familyName: [fn.perez, fn.null],
+    //                                 },
+    //                               ]
+    //                             }
+    //                           ],
+    //                         },
+    //                         {
+    //                           name: ["Juan", "Antonio"],
+    //                           familyName: [fn.perez, fn.rivas],
+    //                           children: [
+    //                             {
+    //                               group: "pareja",
+    //                               name: [],
+    //                               familyName: [],
+    //                               children: [
+    //                                 {
+    //                                   name: ["Edily"],
+    //                                   familyName: [fn.perez, fn.null],
+    //                                 },
+    //                                 {
+    //                                   name: ["Norbelis"],
+    //                                   familyName: [fn.perez, fn.null],
+    //                                 },
+    //                                 {
+    //                                   name: ["Juan", "Antonio"],
+    //                                   familyName: [fn.perez, fn.null],
+    //                                 },
+    //                               ]
+    //                             }
+    //                           ],
+    //                         },
+    //                         {
+    //                           name: ["María", "Dolores"],
+    //                           familyName: [fn.perez, fn.rivas],
+    //                           children: [
+    //                             {
+    //                               group: "pareja",
+    //                               name: [],
+    //                               familyName: [],
+    //                               children: [
+    //                                 {
+    //                                   name: ["Darwin"],
+    //                                   familyName: [fn.null, fn.perez],
+    //                                 },
+    //                                 {
+    //                                   name: ["Edwin"],
+    //                                   familyName: [fn.null, fn.perez],
+    //                                 },
+    //                                 {
+    //                                   name: ["Leury"],
+    //                                   familyName: [fn.null, fn.perez],
+    //                                 },
+    //                               ]
+    //                             }
+    //                           ],
+    //                         },
+    //                       ]
+    //                     }
+    //                   ]
+    //                 },
+    //               ]
+    //             },
+    //             {
+    //               group: "pareja",
+    //               name: ["Martina"],
+    //               familyName: [fn.suero],
+    //               children: [
+    //                 {
+    //                   name: ["Felicia"],
+    //                   familyName: [fn.rivas, fn.suero],
+    //                 }
+    //               ]
+    //             }
+    //           ]
+    //         },
+    //         {
+    //           ...rp.anaRita,
+    //           children: [
+    //             {
+    //               group: "pareja",
+    //               ...rp.pedroRamirezGrullon,
+    //               children: anaRitaChildren
+    //             }
+    //           ]
+    //         }
+    //       ]
+    //     }
+    //   ]
+    // }
   ]
 }

@@ -91,14 +91,12 @@ export default Vue.extend({
         targetY
       );
     },
-
     drawHierarchicalData(hierarchicalData) {
       this.root = d3.hierarchy(hierarchicalData);
       this.root.x0 = 0;
       this.root.y0 = 0;
       this.updateTidyTree(this.root);
     },
-
     expandChildren(datum) {
       datum.collapsed = false;
       if (datum._children) {
@@ -107,7 +105,6 @@ export default Vue.extend({
         datum._children = null;
       }
     },
-
     collapseChildren(datum) {
       datum.collapsed = true;
       if (datum.children) {
@@ -116,11 +113,9 @@ export default Vue.extend({
         datum.children = null;
       }
     },
-
     zoomed() {
       this.svgGroup.attr("transform", d3.event.transform);
     },
-
     personTreeHeight(root) {
       if (!root) return 0;
       if (!root.children || !root.children.length) return 1;
@@ -132,7 +127,6 @@ export default Vue.extend({
         )
       );
     },
-
     updateTidyTree(source) {
       this.datumId = 0;
       const vertical = this.selection.verticalOrientation;
@@ -276,9 +270,8 @@ export default Vue.extend({
       });
 
       [...this.svgGroup
-        .selectAll("g.person")
+        .selectAll("g.person[data-id]")
         ._groups[0]]
-        .filter(item => item.dataset.id)
         .forEach(item => {
           item.addEventListener('mouseover', function() {
             document.querySelectorAll(`[data-id="${this.dataset.id}"]`).forEach(item => item.classList.add('hover'));
