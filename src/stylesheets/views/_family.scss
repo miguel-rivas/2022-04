@@ -7,11 +7,6 @@
       font: 14px sans-serif;
       cursor: pointer;
 
-      &.hover {
-        fill: #9191c6;
-        stroke: #3A3885;
-      }
-
       &.asociado {
         rect {
           stroke: #2995ff;
@@ -40,9 +35,27 @@
         fill: #2A2A37;
         stroke: #393859;
         stroke-width: 1px;
+        transition: ease 250ms;
+        transition-property: fill, stroke;
+      }
+
+      &[data-id] {
+        rect {
+          stroke: #fff6a8;
+        }
+      }
+  
+      &.hover {
+        rect {
+          fill: #fff6a8;
+        }
+  
+        text {
+          fill: #2A2A37;
+        }
       }
     }
-
+    
     .link {
       fill: none;
       stroke: rgb(232, 100, 100);

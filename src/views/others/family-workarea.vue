@@ -163,7 +163,7 @@ export default Vue.extend({
       let nodesEnter = nodesUpdate
         .enter()
         .append("g")
-        .attr("id", (datum) => datum?.data?.id)
+        .attr("data-id", (datum) => datum?.data?.id)
         .attr("class", (datum) => {
           const classes = ["person"];
           if (datum?.data?.group) {
@@ -265,13 +265,6 @@ export default Vue.extend({
         .duration(this.duration)
         .attr("d", function (d, idx) {
           let position = { x: source.x, y: source.y };
-          console.log(
-            "link removed:",
-            idx,
-            d.source.data.name,
-            d.target.data.name,
-            position
-          );
           return buildLinkPath({ source: position, target: position });
         })
         .style("opacity", 0)
@@ -281,6 +274,19 @@ export default Vue.extend({
         person.x0 = person.x;
         person.y0 = person.y;
       });
+
+      [...this.svgGroup
+        .selectAll("g.person")
+        ._groups[0]]
+        .filter(item => item.dataset.id)
+        .forEach(item => {
+          item.addEventListener('mouseover', function() {
+            document.querySelectorAll(`[data-id="${this.dataset.id}"]`).forEach(item => item.classList.add('hover'));
+          });
+          item.addEventListener('mouseleave', function() {
+            document.querySelectorAll(`[data-id="${this.dataset.id}"]`).forEach(item => item.classList.remove('hover'));
+          });
+        });
     },
   },
   mounted() {

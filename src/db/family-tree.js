@@ -54,6 +54,7 @@ const fn = {
 
   parra: "Parra",
   perez: "Perez",
+  pena: "Peña",
   piantini: "Piantini",
   pina: "Piña",
   polanco: "Polanco",
@@ -78,29 +79,74 @@ const fn = {
   villar: "Villar",
 };
 
+let globalIDcount = 0;
+const assignID = () => {
+  globalIDcount++;
+  return `id-${globalIDcount}`;
+}
+
+const rp = {
+  fernandoRivas: {
+    id: assignID(),
+    name: ["Fernando", "Euclides"],
+    familyName: [fn.rivas, fn.ramirez],
+    nickname: "Nano",
+  },
+  carmenSantos: {
+    id: assignID(),
+    name: ["María", "del Carmen"],
+    familyName: [fn.santos, fn.ramirez],
+  },
+  virgiliaRamirez: {
+    id: assignID(),
+    name: ["Ana", "Virgilia"],
+    familyName: [fn.ramirez, fn.mendoza],
+    nickname: "Virginia",
+  },
+  pedroRivas: {
+    id: assignID(),
+    name: ["Pedro", "Antonio"],
+    familyName: [fn.rivas, fn.ramirez],
+  },
+  anaRita: {
+    id: assignID(),
+    name: ["Ana", "Rita"],
+    familyName: [fn.rivas, fn.ramirez],
+  },
+  pedroRamirezGrullon: {
+    id: assignID(),
+    name: ["Pedro", "Antonio"],
+    familyName: [fn.ramirez, fn.grullon],
+  }
+}
+
 const fernandoRivasChildren = [
   {
-    id: "s32",
+    id: assignID(),
     name: ["Rocio", "Cristal"],
     familyName: [fn.rivas, fn.santos],
     children: [
       {
+        id: assignID(),
         group: "pareja",
         name: ["Fernando",],
         familyName: [fn.estevez],
         children: [
           {
+            id: assignID(),
             name: ["Shadday"],
             familyName: [fn.estevez, fn.rivas],
           }
         ]
       },
       {
+        id: assignID(),
         group: "pareja",
         name: ["Juan", "Carlos"],
         familyName: [fn.ariza],
         children: [
           {
+            id: assignID(),
             name: ["Adrian", "Alejandro"],
             familyName: [fn.ariza, fn.rivas],
           }
@@ -109,16 +155,19 @@ const fernandoRivasChildren = [
     ]
   },
   {
+    id: assignID(),
     name: ["Angel", "Francisco"],
     familyName: [fn.rivas, fn.santos],
     children: [
       {
+        id: assignID(),
         group: "pareja",
         name: ["Yeimi", "del Carmen"],
         preferedName: "Yeimi",
         familyName: [fn.tejada],
         children: [
           {
+            id: assignID(),
             name: ["Ivette"],
             familyName: [fn.rivas, fn.tejada],
           }
@@ -127,6 +176,7 @@ const fernandoRivasChildren = [
     ]
   },
   {
+    id: assignID(),
     name: ["Jesus", "Miguel"],
     familyName: [fn.rivas, fn.santos],
   },
@@ -134,96 +184,57 @@ const fernandoRivasChildren = [
 
 const virgiliaRamirezChildren = [
   {
-    name: ["Fernando", "Euclides"],
-    familyName: [fn.rivas, fn.ramirez],
-    nickname: "Nano",
+    ...rp.fernandoRivas,
     children: [
       {
         group: "pareja",
-        name: ["María", "del Carmen"],
-        familyName: [fn.santos, fn.ramirez],
+        ...rp.carmenSantos,
         children: fernandoRivasChildren,
       }
     ]
   },
   {
-    name: ["Ana", "Virgilia"],
-    familyName: [fn.rivas, fn.ramirez],
-    nickname: "Estrella",
-    children: [
-      {
-        group: "pareja",
-        name: ["Roberto"],
-        familyName: [fn.roa],
-        children: [
-          {
-            group: "asociado",
-            name: ["Joseph"],
-            familyName: [fn.roa]
-          },
-          {
-            name: ["Annie"],
-            familyName: [fn.roa, fn.rivas],
-            children: [
-              {
-                group: "pareja",
-                name: ["Ben"],
-                familyName: [fn.albayaty],
-                children: [
-                  {
-                    name: ["Ellie"],
-                    familyName: [fn.albayaty, fn.roa],
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            name: ["Virginia"],
-            familyName: [fn.roa, fn.rivas],
-          },
-          {
-            name: ["Robert"],
-            familyName: [fn.roa, fn.rivas],
-          },
-        ]
-      },
-    ]
-  },
-  {
+    id: assignID(),
     name: ["Pedro", "Antonio"],
     familyName: [fn.rivas, fn.ramirez],
     children: [
       {
+        id: assignID(),
         group: "pareja",
         name: [],
         familyName: [],
         nickname: "Sobeyda",
         children: [
           {
+            id: assignID(),
             name: ["Alondra"],
             familyName: [fn.rivas],
           },
           {
+            id: assignID(),
             name: ["Miguel", "Angel"],
             familyName: [fn.rivas],
           },
           {
+            id: assignID(),
             name: ["Marc"],
             familyName: [fn.rivas],
           },
         ]
       },
       {
+        id: assignID(),
         group: "pareja",
         name: ["Judith"],
         familyName: ["Malony"],
         children: [
           {
+            id: assignID(),
             name: ["Angelina"],
             familyName: [fn.rivas],
           },
           {
+            id: assignID(),
             name: ["Samantha"],
             familyName: [fn.rivas],
           },
@@ -232,28 +243,91 @@ const virgiliaRamirezChildren = [
     ]
   },
   {
+    id: assignID(),
     name: ["David"],
     familyName: [fn.rivas, fn.ramirez],
     children: [
       {
+        id: assignID(),
         group: "pareja",
       }
     ]
   },
   {
+    id: assignID(),
+    name: ["Miguel", "Angel"],
+    familyName: [fn.rivas, fn.ramirez],
+  },
+  {
+    id: assignID(),
+    name: ["Ana", "Virgilia"],
+    familyName: [fn.rivas, fn.ramirez],
+    nickname: "Estrella",
+    children: [
+      {
+        id: assignID(),
+        group: "pareja",
+        name: ["Roberto"],
+        familyName: [fn.roa],
+        children: [
+          {
+            id: assignID(),
+            group: "asociado",
+            name: ["Joseph"],
+            familyName: [fn.roa]
+          },
+          {
+            id: assignID(),
+            name: ["Annie"],
+            familyName: [fn.roa, fn.rivas],
+            children: [
+              {
+                id: assignID(),
+                group: "pareja",
+                name: ["Ben"],
+                familyName: [fn.albayaty],
+                children: [
+                  {
+                    id: assignID(),
+                    name: ["Ellie"],
+                    familyName: [fn.albayaty, fn.roa],
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            id: assignID(),
+            name: ["Virginia"],
+            familyName: [fn.roa, fn.rivas],
+          },
+          {
+            id: assignID(),
+            name: ["Robert"],
+            familyName: [fn.roa, fn.rivas],
+          },
+        ]
+      },
+    ]
+  },
+  {
+    id: assignID(),
     name: ["Ana", "Violeta"],
     familyName: [fn.rivas, fn.ramirez],
     children: [
       {
+        id: assignID(),
         group: "pareja",
         name: ["Joan"],
         familyName: [fn.medrano],
         children: [
           {
+            id: assignID(),
             name: ["Naia"],
             familyName: [fn.medrano, fn.rivas],
           },
           {
+            id: assignID(),
             name: ["Alaia"],
             familyName: [fn.medrano, fn.rivas],
           },
@@ -262,33 +336,37 @@ const virgiliaRamirezChildren = [
     ]
   },
   {
-    name: ["Miguel", "Angel"],
-    familyName: [fn.rivas, fn.ramirez],
+    id: assignID(),
+    group: "asociado",
+    name: ["María", "de Los Angeles"],
+    familyName: [fn.pena],
   },
 ];
+
+const anaRitaChildren = [
+  {
+    id: assignID(),
+    name: ["Juan", "Alonzo"],
+    familyName: [fn.ramirez, fn.rivas],
+  },
+  {
+    id: assignID(),
+    name: ["Leonora"],
+    familyName: [fn.ramirez, fn.rivas],
+  },
+]
 
 export default {
   name: ["Family"],
   familyName: ["Tree"],
   children: [
     {
-      name: ["Pedro", "Antonio"],
-      familyName: [fn.ramirez, fn.grullon],
+      ...rp.pedroRamirezGrullon,
       children: [
         {
           group: "pareja",
-          name: ["Ana", "Rita"],
-          familyName: [fn.rivas, fn.ramirez],
-          children: [
-            {
-              name: ["Juan", "Alonzo"],
-              familyName: [fn.ramirez, fn.rivas],
-            },
-            {
-              name: ["Leonora"],
-              familyName: [fn.ramirez, fn.rivas],
-            },
-          ],
+          ...rp.anaRita,
+          children: anaRitaChildren,
         },
         {
           group: "pareja",
@@ -533,13 +611,11 @@ export default {
                   familyName: [fn.santos, fn.jimenez],
                   children: [
                     {
-                      name: ["Maria", "Del Carmen"],
-                      familyName: [fn.santos, fn.ramirez],
+                      ...rp.carmenSantos,
                       children: [
                         {
                           group: "pareja",
-                          name: ["Fernando", "Euclides"],
-                          familyName: [fn.rivas, fn.ramirez],
+                          ...rp.fernandoRivas,
                           children: fernandoRivasChildren,
                         }
                       ]
@@ -813,7 +889,6 @@ export default {
                               ]
                             },
                             {
-                              id: "jennifer",
                               name: ["Jennifer", "Altagracia"],
                               familyName: [fn.luna, fn.santos],
                               children: [
@@ -888,11 +963,11 @@ export default {
                                 {
                                   group: "pareja",
                                   name: [],
-                                  lastName: [],
+                                  familyName: [],
                                   children: [
                                     {
                                       name: ["Alejandro"],
-                                      lastName: [fn.santos],
+                                      familyName: [fn.santos],
                                     }
                                   ]
                                 }
@@ -907,14 +982,11 @@ export default {
               ]
             },
             {
-              name: ["Ana", "Virgilia"],
-              familyName: [fn.ramirez, fn.mendoza],
-              nickname: "Virginia",
+              ...rp.virgiliaRamirez,
               children: [
                 {
                   group: "pareja",
-                  name: ["Pedro", "Antonio"],
-                  familyName: [fn.rivas, fn.ramirez],
+                  ...rp.pedroRivas,
                   children: virgiliaRamirezChildren,
                 }
               ]
@@ -972,7 +1044,7 @@ export default {
                                   name: ["Omar"],
                                   familyName: [fn.nova],
                                   children: [
-                                    
+
                                   ]
                                 }
                               ]
@@ -1159,7 +1231,7 @@ export default {
                   children: [
                     {
                       name: ["Jasmin"],
-                      familyName: ["Ramirez"],
+                      familyName: [fn.ramirez],
                     }
                   ]
                 }
@@ -1478,8 +1550,14 @@ export default {
               familyName: [fn.rivas, fn.ramirez],
             },
             {
-              name: ["Ana", "Rita"],
-              familyName: [fn.rivas, fn.ramirez],
+              ...rp.anaRita,
+              children: [
+                {
+                  group: "pareja",
+                  ...rp.pedroRamirezGrullon,
+                  children: anaRitaChildren,
+                }
+              ]
             },
             {
               name: ["Juan", "Antonio"],
@@ -1546,7 +1624,7 @@ export default {
                           children: [
                             {
                               name: ["Wanda"],
-                              familyName: [],
+                              familyName: [fn.lugo],
                               children: [
                                 {
                                   group: "pareja",
@@ -1567,7 +1645,7 @@ export default {
                             },
                             {
                               name: ["Janisse"],
-                              familyName: [],
+                              familyName: [fn.lugo],
                               children: [
                                 {
                                   group: "pareja",
@@ -1588,7 +1666,7 @@ export default {
                             },
                             {
                               name: ["Stephanie"],
-                              familyName: [],
+                              familyName: [fn.lugo],
                               children: [
                                 {
                                   group: "pareja",
@@ -1605,7 +1683,7 @@ export default {
                             },
                             {
                               name: ["Emmanuel"],
-                              familyName: [],
+                              familyName: [fn.lugo],
                             },
                           ]
                         },
@@ -1808,13 +1886,11 @@ export default {
               familyName: [fn.rivas, fn.ramirez],
             },
             {
-              name: ["Pedro", "Antonio"],
-              familyName: [fn.rivas, fn.ramirez],
+              ...rp.pedroRivas,
               children: [
                 {
                   group: "pareja",
-                  name: ["Ana", "Virgilia"],
-                  familyName: [fn.ramirez, fn.mendoza],
+                  ...rp.virgiliaRamirez,
                   children: virgiliaRamirezChildren,
                 },
               ],
