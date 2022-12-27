@@ -7,6 +7,16 @@
       font: 14px sans-serif;
       cursor: pointer;
 
+      &:first-child {
+        rect {
+          fill: hsl(231deg 74% 65%);
+        }
+
+        text {
+          fill: #2B2B31;
+        }
+      }
+
       &.asociado {
         rect {
           stroke: #2995ff;
@@ -44,18 +54,18 @@
           stroke: #fff6a8;
         }
       }
-  
+
       &.hover {
         rect {
           fill: #fff6a8;
         }
-  
+
         text {
           fill: #2A2A37;
         }
       }
     }
-    
+
     .link {
       fill: none;
       stroke: rgb(232, 100, 100);
