@@ -5,7 +5,7 @@
 <script>
 import Vue from "vue";
 import * as d3 from "d3/dist/d3.min";
-import familyData from "@/db/family-tree";
+import { familyDB as familyData } from "@/db/family-tree";
 
 export default Vue.extend({
   data: () => ({
@@ -143,6 +143,7 @@ export default Vue.extend({
         .nodeSize(vertical ? nodeSize : nodeSize.reverse());
 
       let treeData = tree(this.root);
+
       let nodes = treeData.descendants(),
         links = treeData.links();
 
@@ -153,15 +154,17 @@ export default Vue.extend({
       let nodesEnter = nodesUpdate
         .enter()
         .append("g")
-        .attr("data-id", (datum) => datum?.data?.id)
+        .attr("data-id", (datum) => datum?.data?.data_id)
         .attr("class", (datum) => {
           const classes = ["person"];
           if (datum?.data?.group) {
             classes.push(datum.data.group);
           }
-          if(datum?.data?.name?.length && datum?.data?.familyName?.length) {
-            if(datum.data.name.indexOf("--") > -1
-            || datum.data.familyName.indexOf("--") > -1){
+          if (datum?.data?.name?.length && datum?.data?.familyName?.length) {
+            if (
+              datum.data.name.indexOf("--") > -1 ||
+              datum.data.familyName.indexOf("--") > -1
+            ) {
               classes.push("incompleto");
             }
           } else {

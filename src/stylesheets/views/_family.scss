@@ -7,16 +7,6 @@
       font: 14px sans-serif;
       cursor: pointer;
 
-      &:first-child {
-        rect {
-          fill: hsl(231deg 74% 65%);
-        }
-
-        text {
-          fill: #2B2B31;
-        }
-      }
-
       &.asociado {
         rect {
           stroke: #2995ff;
@@ -65,12 +55,6 @@
         stroke-width: 1px;
         transition: ease 250ms;
         transition-property: fill, stroke;
-      }
-
-      &[data-id] {
-        rect {
-          stroke: #fff6a8;
-        }
       }
 
       &.hover {
