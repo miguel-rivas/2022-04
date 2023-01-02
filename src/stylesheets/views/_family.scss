@@ -35,10 +35,28 @@
         }
       }
 
+      &.incompleto {
+        rect {
+          fill: #a34b4b;
+        } 
+      }
+
       text {
         font: 12px "Montserrat";
         font-weight: bold;
         fill: #BBBBBB;
+
+        &.nickname {
+          font-size: 16px;
+          opacity: 1;
+
+          &:not(:empty) {
+            ~ text {
+              opacity: 0;
+            }
+          }
+
+        }
       }
 
       rect {
@@ -62,6 +80,18 @@
 
         text {
           fill: #2A2A37;
+        }
+      }
+
+      &:hover {
+        text {
+          &.nickname:not(:empty) {
+            opacity: 0;
+
+            ~ text {
+              opacity: 1;
+            }
+          }
         }
       }
     }

@@ -16,7 +16,7 @@ export default Vue.extend({
     },
     svgGroup: undefined,
     root: undefined,
-    boxWidth: 250,
+    boxWidth: 200,
     boxHeight: 60,
     duration: 250,
     zoom: undefined,
@@ -130,9 +130,7 @@ export default Vue.extend({
     updateTidyTree(source) {
       this.datumId = 0;
       const vertical = this.selection.verticalOrientation;
-      let buildLinkPath = vertical
-        ? this.linkVertical
-        : this.elbow;
+      let buildLinkPath = vertical ? this.linkVertical : this.elbow;
       let nodeSize = [
         this.boxWidth + this.selection.nodeSpacing,
         this.boxHeight + this.selection.layerSpacing,
@@ -142,9 +140,7 @@ export default Vue.extend({
         .separation(function (a, b) {
           return 1;
         })
-        .nodeSize(
-          vertical ? nodeSize : nodeSize.reverse()
-        );
+        .nodeSize(vertical ? nodeSize : nodeSize.reverse());
 
       let treeData = tree(this.root);
       let nodes = treeData.descendants(),
@@ -163,6 +159,14 @@ export default Vue.extend({
           if (datum?.data?.group) {
             classes.push(datum.data.group);
           }
+          if(datum?.data?.name?.length && datum?.data?.familyName?.length) {
+            if(datum.data.name.indexOf("--") > -1
+            || datum.data.familyName.indexOf("--") > -1){
+              classes.push("incompleto");
+            }
+          } else {
+            classes.push("incompleto");
+          }
           return classes.join(" ");
         })
         .attr(
@@ -176,6 +180,16 @@ export default Vue.extend({
         .style("opacity", 0)
         .on("click", this.togglePerson);
       this.setNodeRectLayout(nodesEnter.append("rect"));
+
+      nodesEnter
+        .append("text")
+        .attr("dy", 6)
+        .attr("text-anchor", "middle")
+        .attr("class", "nickname")
+        .text(function (datum) {
+          return datum?.data?.nickname?.length ? datum.data.nickname : "";
+        });
+
       nodesEnter
         .append("text")
         .attr("dy", -4)
@@ -190,6 +204,7 @@ export default Vue.extend({
           }
           return name;
         });
+
       nodesEnter
         .append("text")
         .attr("dy", 14)
@@ -200,6 +215,7 @@ export default Vue.extend({
             ? datum.data.familyName.join(" ")
             : "--";
         });
+
       {
         nodesUpdate
           .merge(nodesEnter)
@@ -208,9 +224,7 @@ export default Vue.extend({
           .attr("transform", function (datum, index) {
             return (
               "translate(" +
-              (vertical
-                ? datum.x + "," + datum.y
-                : datum.y + "," + datum.x) +
+              (vertical ? datum.x + "," + datum.y : datum.y + "," + datum.x) +
               ")"
             );
           })
@@ -223,9 +237,7 @@ export default Vue.extend({
         .attr("transform", function (datum) {
           return (
             "translate(" +
-            (vertical
-              ? source.x + "," + source.y
-              : source.y + "," + source.x) +
+            (vertical ? source.x + "," + source.y : source.y + "," + source.x) +
             ")"
           );
         })
@@ -269,17 +281,20 @@ export default Vue.extend({
         person.y0 = person.y;
       });
 
-      [...this.svgGroup
-        .selectAll("g.person[data-id]")
-        ._groups[0]]
-        .forEach(item => {
-          item.addEventListener('mouseover', function() {
-            document.querySelectorAll(`[data-id="${this.dataset.id}"]`).forEach(item => item.classList.add('hover'));
+      [...this.svgGroup.selectAll("g.person[data-id]")._groups[0]].forEach(
+        (item) => {
+          item.addEventListener("mouseover", function () {
+            document
+              .querySelectorAll(`[data-id="${this.dataset.id}"]`)
+              .forEach((item) => item.classList.add("hover"));
           });
-          item.addEventListener('mouseleave', function() {
-            document.querySelectorAll(`[data-id="${this.dataset.id}"]`).forEach(item => item.classList.remove('hover'));
+          item.addEventListener("mouseleave", function () {
+            document
+              .querySelectorAll(`[data-id="${this.dataset.id}"]`)
+              .forEach((item) => item.classList.remove("hover"));
           });
-        });
+        }
+      );
     },
   },
   mounted() {
