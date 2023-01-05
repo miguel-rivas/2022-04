@@ -19,6 +19,7 @@ const fn = {
   cruz: "Cruz",
 
   deazua: "De Azua",
+  delacruz: "De La Cruz",
   delafuente: "De la Fuente",
   delain: "Delain",
   diaz: "Díaz",
@@ -34,7 +35,7 @@ const fn = {
   felix: "Félix",
   florentino: "Florentino",
 
-  grullon: "Grullon",
+  grullon: "Grullón",
   gutierrez: "Gutiérrez",
 
   hernandez: "Hernández",
@@ -52,7 +53,7 @@ const fn = {
 
   malony: "Malony",
   marte: "Marte",
-  martinez: "Martinez",
+  martinez: "Martínez",
   matias: "Matías",
   mejia: "Mejía",
   medrano: "Medrano",
@@ -494,12 +495,12 @@ const alcidesRamirezChildren = [
         ...ID(),
         group: "pareja",
         name: [],
-        familyName: [],
+        familyName: [fn.martinez],
         children: [
           {
             ...ID(),
             name: ["Danel"],
-            familyName: []
+            familyName: [fn.martinez, fn.ramirez],
           }
         ]
       }
@@ -565,7 +566,7 @@ const alcidesRamirezChildren = [
           },
           {
             ...ID(),
-            name: ["Monica"],
+            name: ["Mónica"],
             familyName: [fn.ramirez, fn.piantini],
           },
         ]
@@ -975,12 +976,12 @@ export let familyDB = {
                               ...ID(),
                               group: "pareja",
                               name: ["Maritza"],
-                              familyName: [],
+                              familyName: [fn.delacruz],
                               children: [
                                 {
                                   ...ID(),
                                   name: ["Rosemary"],
-                                  familyName: [fn.santos],
+                                  familyName: [fn.santos, fn.delacruz],
                                 }
                               ]
                             },
@@ -1313,7 +1314,8 @@ export let familyDB = {
                               ...ID(),
                               group: "pareja",
                               name: ["Antonio"],
-                              familyName: [fn.molina],
+                              nickname: "Tono",
+                              familyName: [fn.molina, fn.diaz],
                               children: [
                                 {
                                   ...ID(),
@@ -1333,13 +1335,13 @@ export let familyDB = {
                                     {
                                       ...ID(),
                                       group: "pareja",
-                                      name: [],
+                                      name: ["Edgar"],
                                       familyName: [fn.ramirez, fn.deazua],
                                       children: [
                                         {
                                           ...ID(),
-                                          name: [],
-                                          familyName: [],
+                                          name: ["Edgar", "Antonio"],
+                                          familyName: [fn.ramirez],
                                         }
                                       ]
                                     }
@@ -1400,6 +1402,26 @@ export let familyDB = {
                                   ...ID(),
                                   name: ["Anabel"],
                                   familyName: [fn.minaya, fn.molina],
+                                  children: [
+                                    {
+                                      ...ID(),
+                                      group: "pareja",
+                                      name: [],
+                                      familyName: [],
+                                      children: [
+                                        {
+                                          ...ID(),
+                                          name: ["Tobías"],
+                                          familyName: [fn.null, fn.molina],
+                                        },
+                                        {
+                                          ...ID(),
+                                          name: ["Matías"],
+                                          familyName: [fn.null, fn.molina],
+                                        },
+                                      ]
+                                    }
+                                  ]
                                 },
                                 {
                                   ...ID(),
@@ -1434,7 +1456,7 @@ export let familyDB = {
                     {
                       ...ID(),
                       group: "pareja",
-                      name: ["Radames"],
+                      name: ["Rhadames"],
                       familyName: [fn.castillo],
                       children: [
                         {
