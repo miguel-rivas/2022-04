@@ -488,8 +488,13 @@ const trinaRamirezChildren = [
 const alcidesRamirezChildren = [
   {
     ...ID(),
+    name: ["Arnaldo"],
+    familyName: [fn.ramirez, fn.ramirez],
+  },
+  {
+    ...ID(),
     name: ["Carmen", "Elsa"],
-    familyName: [fn.ramirez],
+    familyName: [fn.ramirez, fn.ramirez],
     children: [
       {
         ...ID(),
@@ -509,13 +514,13 @@ const alcidesRamirezChildren = [
   {
     ...ID(),
     name: ["Luz", "Del Alba"],
-    familyName: [fn.ramirez],
+    familyName: [fn.ramirez, fn.ramirez],
     nickname: "Muñeca",
   },
   {
     ...ID(),
     name: ["José", "Rafael"],
-    familyName: [fn.ramirez],
+    familyName: [fn.ramirez, fn.ramirez],
     nickname: "Felo",
     children: [
       {
@@ -1411,7 +1416,7 @@ export let familyDB = {
                                       children: [
                                         {
                                           ...ID(),
-                                          name: ["Tobías"],
+                                          name: ["Tobías", "Arturo"],
                                           familyName: [fn.null, fn.molina],
                                         },
                                         {
