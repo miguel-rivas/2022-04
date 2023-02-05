@@ -11,6 +11,7 @@ const fn = {
 
   batista: "Batista",
 
+  caba: "Caba",
   castillo: "Castillo",
   chimalpopoca: "Chimalpopoca",
   colon: "Colon",
@@ -42,6 +43,7 @@ const fn = {
 
   infante: "Infante",
 
+  jerez: "Jerez",
   jimenez: "Jimenez",
 
   laureano: "Laureano",
@@ -77,6 +79,7 @@ const fn = {
   ramirez: "Ramirez",
   rivas: "Rivas",
   roa: "Roa",
+  roman: "Roman",
   rodriguez: "Rodriguez",
   rosario: "Rosario",
 
@@ -493,6 +496,26 @@ const alcidesRamirezChildren = [
   },
   {
     ...ID(),
+    name: ["Sarah"],
+    familyName: [fn.ramirez, fn.ramirez],
+    children: [
+      {
+        familyName: [fn.caba],
+        children: [
+          {
+            name: ["Ernesto", "Ariel"],
+            familyName: [fn.caba, fn.ramirez]
+          },
+          {
+            name: ["Wendy", "Noelia"],
+            familyName: [fn.caba, fn.ramirez]
+          },
+        ]
+      }
+    ]
+  },
+  {
+    ...ID(),
     name: ["Carmen", "Elsa"],
     familyName: [fn.ramirez, fn.ramirez],
     children: [
@@ -714,6 +737,18 @@ export let familyDB = {
                                   ...ID(),
                                   name: ["Anderis"],
                                   familyName: [fn.contreras, fn.nunez],
+                                  children: [
+                                    {
+                                      name: ["Emmanuel", "Antonio"],
+                                      familyName: [fn.jerez, fn.rosario],
+                                      children: [
+                                        {
+                                          name: ["Valentina"],
+                                          familyName: [fn.jerez, fn.contreras]
+                                        }
+                                      ]
+                                    }
+                                  ]
                                 },
                                 {
                                   ...ID(),
@@ -1318,7 +1353,7 @@ export let familyDB = {
                             {
                               ...ID(),
                               group: "pareja",
-                              name: ["Antonio"],
+                              name: ["Antonio", "De Jesús"],
                               nickname: "Tono",
                               familyName: [fn.molina, fn.diaz],
                               children: [
@@ -1371,6 +1406,20 @@ export let familyDB = {
                                   ...ID(),
                                   name: ["Esmeralda"],
                                   familyName: [fn.solis, fn.minaya],
+                                  children: [
+                                    {
+                                      ...ID(),
+                                      name: [],
+                                      familyName: [fn.rodriguez],
+                                      children: [
+                                        {
+                                          ...ID(),
+                                          name: ["Linabel"],
+                                          familyName: [fn.rodriguez]
+                                        }
+                                      ]
+                                    }
+                                  ]
                                 },
                                 {
                                   ...ID(),
@@ -1402,6 +1451,30 @@ export let familyDB = {
                                   ...ID(),
                                   name: ["Chabely"],
                                   familyName: [fn.minaya, fn.molina],
+                                  children: [
+                                    {
+                                      ...ID(),
+                                      name: ["Miguel"],
+                                      familyName: [fn.roman],
+                                      children: [
+                                        {
+                                          ...ID(),
+                                          name: ["Alexa", "Marie"],
+                                          familyName: [fn.roman]
+                                        },
+                                        {
+                                          ...ID(),
+                                          name: ["Liam", "Alí"],
+                                          familyName: [fn.roman]
+                                        },
+                                        {
+                                          ...ID(),
+                                          name: ["Mía", "Sophia"],
+                                          familyName: [fn.roman]
+                                        },
+                                      ]
+                                    }
+                                  ]
                                 },
                                 {
                                   ...ID(),
@@ -1980,28 +2053,352 @@ export let familyDB = {
                     {
                       ...ID(),
                       group: "pareja",
-                      name: [],
+                      name: ["Americo"],
                       familyName: [fn.grullon],
                       children: [
                         {
                           ...ID(),
-                          name: ["Socorro"],
+                          name: ["Manuel", "S"],
+                          familyName: [fn.grullon],
+                          children: [
+                            {
+                              ...ID(),
+                              group: "pareja",
+                              name: ["Maria", "M"],
+                              familyName: [fn.jimenez],
+                              children: [
+                                // {
+                                //   ...ID(),
+                                //   name: [],
+                                //   familyName: [],
+                                // }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          ...ID(),
+                          name: ["Santiago", "Alberto"],
+                          familyName: [fn.grullon],
+                          children: [
+                            {
+                              ...ID(),
+                              group: "pareja",
+                              name: ["Sory"],
+                              familyName: [],
+                              children: [
+                                {
+                                  ...ID(),
+                                  name: ["Johan", "Manuel"],
+                                  familyName: [],
+                                  children: [
+                                    {
+                                      ...ID(),
+                                      group: "pareja",
+                                      name: [],
+                                      familyName: [],
+                                      children: [
+                                        {
+                                          ...ID(),
+                                          name: ["Johanly"],
+                                          familyName: [],
+                                        },
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  ...ID(),
+                                  name: ["Manuel", "Alberto"],
+                                  familyName: [],
+                                },
+                                {
+                                  ...ID(),
+                                  name: ["Eliot"],
+                                  familyName: [],
+                                },
+                                {
+                                  ...ID(),
+                                  name: ["Jennifer", "Maria"],
+                                  familyName: [],
+                                },
+                                {
+                                  ...ID(),
+                                  name: ["Yaribel"],
+                                  familyName: [],
+                                },
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          ...ID(),
+                          name: ["Americo", "Vladimir"],
+                          familyName: [fn.grullon],
+                          children: [
+                            {
+                              ...ID(),
+                              group: "pareja",
+                              name: ["Yajaira"],
+                              familyName: [],
+                              children: [
+                                {
+                                  ...ID(),
+                                  name: ["Amely"],
+                                  familyName: [],
+                                },
+                                {
+                                  ...ID(),
+                                  name: ["Yamely"],
+                                  familyName: [],
+                                },
+                                {
+                                  ...ID(),
+                                  name: ["Jamely"],
+                                  familyName: [],
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          ...ID(),
+                          name: ["Jose", "Manuel"],
+                          familyName: [fn.grullon],
+                          children: [
+                            {
+                              ...ID(),
+                              group: "pareja",
+                              name: ["Grecia"],
+                              familyName: [],
+                              children: [
+                                {
+                                  ...ID(),
+                                  name: ["Johan"],
+                                  familyName: [],
+                                  children: [
+                                    {
+                                      ...ID(),
+                                      group: "pareja",
+                                      name: [],
+                                      familyName: [],
+                                      children: [
+                                        {
+                                          ...ID(),
+                                          name: ["Dairelys"],
+                                          familyName: [],
+                                        },
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  ...ID(),
+                                  name: ["Victor"],
+                                  familyName: [],
+                                  children: [
+                                    {
+                                      ...ID(),
+                                      group: "pareja",
+                                      name: [],
+                                      familyName: [],
+                                      children: [
+                                        {
+                                          ...ID(),
+                                          name: ["Noemi"],
+                                          familyName: [],
+                                        },
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  ...ID(),
+                                  name: ["Yosmary"],
+                                  familyName: [],
+                                },
+                                {
+                                  ...ID(),
+                                  name: ["Elvin"],
+                                  familyName: [],
+                                },
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          ...ID(),
+                          name: ["Estervina"],
                           familyName: [fn.grullon],
                           children: [
                             {
                               ...ID(),
                               group: "pareja",
                               name: [],
+                              familyName: [],
+                              children: [
+                                {
+                                  ...ID(),
+                                  name: ["Fernando"],
+                                  familyName: [],
+                                },
+                                {
+                                  ...ID(),
+                                  name: ["Jose", "Yunior"],
+                                  familyName: [],
+                                },
+                                {
+                                  ...ID(),
+                                  name: ["Maria", "Degni"],
+                                  familyName: [],
+                                },
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          ...ID(),
+                          name: ["Gustavo"],
+                          familyName: [fn.grullon],
+                          children: [
+                            {
+                              ...ID(),
+                              group: "pareja",
+                              name: ["Agustina"],
+                              familyName: [],
+                              children: [
+                                {
+                                  ...ID(),
+                                  name: [],
+                                  familyName: [],
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          ...ID(),
+                          name: ["Cristian"],
+                          familyName: [fn.grullon],
+                          children: [
+                            {
+                              ...ID(),
+                              group: "pareja",
+                              name: [],
+                              familyName: [],
+                              children: [
+                                {
+                                  ...ID(),
+                                  name: ["Cristobel"],
+                                  familyName: [],
+                                  children: [
+                                    {
+                                      ...ID(),
+                                      group: "pareja",
+                                      name: [],
+                                      familyName: [],
+                                      children: [
+                                        {
+                                          ...ID(),
+                                          name: ["Paulette"],
+                                          familyName: [],
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  ...ID(),
+                                  name: ["Cristofer"],
+                                  familyName: [],
+                                },
+                                {
+                                  ...ID(),
+                                  name: ["Crisbel"],
+                                  familyName: [],
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          ...ID(),
+                          name: ["Elvira"],
+                          familyName: [fn.grullon],
+                          children: [
+                            {
+                              ...ID(),
+                              group: "pareja",
+                              name: ["Reinaldo"],
+                              familyName: [],
+                              children: [
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          ...ID(),
+                          name: ["Gleny"],
+                          familyName: [fn.grullon],
+                          children: [
+                            {
+                              ...ID(),
+                              group: "pareja",
+                              name: ["Manuel"],
+                              familyName: [],
+                              children: [
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          ...ID(),
+                          name: ["Elvira"],
+                          familyName: [fn.grullon],
+                          children: [
+                            {
+                              ...ID(),
+                              group: "pareja",
+                              name: ["Bryan"],
+                              familyName: [],
+                              children: [
+                                {
+                                  ...ID(),
+                                  name: ["Edgar"],
+                                  familyName: [],
+                                },
+                                {
+                                  ...ID(),
+                                  name: ["Bri-el"],
+                                  familyName: [],
+                                },
+                              ]
+                            }
+                          ]
+                        },
+
+
+                        
+                        {
+                          ...ID(),
+                          name: ["María", "Socorro"],
+                          familyName: [fn.grullon],
+                          children: [
+                            {
+                              ...ID(),
+                              group: "pareja",
+                              name: ["Francisco", "Javier"],
                               familyName: [fn.molina],
                               children: [
                                 {
                                   ...ID(),
-                                  name: ["Hugo"],
+                                  name: ["Hugo", "Francisco"],
                                   familyName: [fn.molina, fn.grullon],
                                 },
                                 {
                                   ...ID(),
-                                  name: ["Franchi"],
+                                  name: ["Francisco"],
+                                  nickname: "Franchi",
                                   familyName: [fn.molina, fn.grullon],
                                 },
                               ]
