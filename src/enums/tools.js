@@ -92,7 +92,6 @@ export const tool = {
   drupal: "Drupal",
   miva: "Miva",
   joomla: "Joomla",
-
   
   pencil: "Pencil",
   pascal: "Pascal",
@@ -112,6 +111,7 @@ export const tool = {
 
   storybook: "Storybook",
   figma: "Figma",
+  zeplin: "Zeplin",
 };
 
 export const toolR = Object.values(tool);

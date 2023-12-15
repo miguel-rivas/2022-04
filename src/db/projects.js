@@ -1528,7 +1528,7 @@ const pj = [
       new Children(client.miguelRivas, "2017/01/01"),
       new Children(client.miguelRivas, "2020/08/18"),
     ],
-    ["company"]
+    undefined
   ),
 
   new Project(

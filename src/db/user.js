@@ -4,20 +4,20 @@ const user = {
   "lastName": "Rivas",
   "title": "Frontend Developer",
   "website": "miguel-rivas.github.io",
-  "email": "miguel.nr273@aleeas.com",
+  "email": "miguelrivas.kkqym@simplelogin.fr",
   "phone": "(202) 983-0839",
   "phoneLink": "2029830839",
   "location": {
-    "city": "Washington",
-    "state": "DC"
+    "city": "Spokane",
+    "state": "WA"
   },
   "media": {
     "codepen": {
-      "user": "planetwurlex"
+      "user": "koturno"
     },
-    "issuu": {
-      "user": "jemiguelrivas"
-    },
+    // "issuu": {
+    //   "user": "jemiguelrivas"
+    // },
     "linkedin": {
       "user": "jemiguelrivas"
     },

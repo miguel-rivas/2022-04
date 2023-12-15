@@ -19,7 +19,7 @@ import StargazerPanelView from '@/views/others/stargazer-panel.vue';
 import ApapWorkareaView from '@/views/others/mineros.vue';
 import cssStudyView from '@/views/others/css-study.vue';
 import journeyView from '@/views/others/journey.vue';
-import homeView from '@/views/others/home.vue';
+// import homeView from '@/views/others/home.vue';
 
 import ColorsWorkareaView from '../views/popkern/colors-workarea.vue';
 import IconsWorkareaView from '../views/popkern/icons-workarea.vue';
@@ -112,8 +112,8 @@ import nanogridHomeView from '@/views/nanogrid/home.vue';
 import nanogridTestsView from '@/views/nanogrid/tests.vue';
 import nanogridDocumentationView from '@/views/nanogrid/documentation.vue';
 
-import familyWorkareaView from '@/views/others/family-workarea.vue';
-import familyPanelView from '@/views/others/family-panel.vue';
+// import familyWorkareaView from '@/views/others/family-workarea.vue';
+// import familyPanelView from '@/views/others/family-panel.vue';
 
 Vue.use(VueRouter);
 
@@ -122,23 +122,23 @@ const routes = [
     path: '/',
     redirect: '/map',
   },
-  {
-    name: 'family',
-    path: '/family',
-    components: {
-      workarea: familyWorkareaView,
-      panel: familyPanelView,
-      navbar: OthersNavbarView,
-    },
-  },
-  {
-    name: 'weather',
-    path: '/weather',
-    components: {
-      workarea: homeView,
-      navbar: OthersNavbarView,
-    },
-  },
+  // {
+  //   name: 'family',
+  //   path: '/family',
+  //   components: {
+  //     workarea: familyWorkareaView,
+  //     panel: familyPanelView,
+  //     navbar: OthersNavbarView,
+  //   },
+  // },
+  // {
+  //   name: 'weather',
+  //   path: '/weather',
+  //   components: {
+  //     workarea: homeView,
+  //     navbar: OthersNavbarView,
+  //   },
+  // },
   {
     name: 'hello',
     path: '/hello',
