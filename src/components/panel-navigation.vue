@@ -183,8 +183,8 @@ export default Vue.extend({
         tooltip: "Others",
         icon: "cubes",
         route: [
-          "family",
-          "weather",
+          // "family",
+          // "weather",
           "mineros",
           "descubria",
           "capital",
