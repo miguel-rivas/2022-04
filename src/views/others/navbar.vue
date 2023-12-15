@@ -10,14 +10,14 @@ export default Vue.extend({
   components: { navbar },
   data: () => ({
     links: [
-      {
-        route: "family",
-        caption: "Family",
-      },
-      {
-        route: "weather",
-        caption: "Weather",
-      },
+      // {
+      //   route: "family",
+      //   caption: "Family",
+      // },
+      // {
+      //   route: "weather",
+      //   caption: "Weather",
+      // },
       {
         route: "mineros",
         caption: "Mineros",

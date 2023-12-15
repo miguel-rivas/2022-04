@@ -82,7 +82,7 @@ export default Vue.extend({
     allDBObj,
   }),
   mounted() {
-    this.hasSlots = this.$slots.default?.length;
+    // this.hasSlots = this.$slots.default?.length;
   },
 });
 </script>
